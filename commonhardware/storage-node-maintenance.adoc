@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: commonhardware/storage-node-maintenance.html 
+keywords: stub, layered 
+summary: Mantenimiento del nodo de almacenamiento. 
+---
+= Mantenimiento del nodo de almacenamiento
+:allow-uri-read: 
+
+
+[role="lead"]
+Mantenimiento del nodo de almacenamiento. ¿Tiene sentido consolidar todo esto?
+
+(Nuevo tema de introducción)
+
+
+
+== Actualizar el sistema operativo SANtricity en las controladoras de almacenamiento (nodos de almacenamiento)
+
+(Recogida del tema de los dispositivos existentes; necesidad de combinar)
+
+
+
+=== Actualización del sistema operativo SANtricity en las controladoras de almacenamiento mediante Grid Manager
+
+(Recogida del tema de los dispositivos existentes; necesidad de combinar)
+
+
+
+=== Actualizar el sistema operativo SANtricity en las controladoras de almacenamiento mediante el modo de mantenimiento
+
+(Recogida del tema de los dispositivos existentes; necesidad de combinar)
+
+
+
+== Actualizar el firmware de la unidad mediante System Manager de SANtricity
+
+(Recogida del tema de los dispositivos existentes, ya combinado)

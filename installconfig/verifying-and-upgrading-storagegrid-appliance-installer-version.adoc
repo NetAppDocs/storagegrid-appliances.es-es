@@ -1,0 +1,53 @@
+---
+permalink: installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html 
+sidebar: sidebar 
+keywords: verifying, verify, upgrading, upgrade, update, updating, Appliance Installer, version, release 
+summary: La versión de instalador del dispositivo StorageGRID en el dispositivo debe coincidir con la versión de software instalada en el sistema StorageGRID para garantizar que todas las funciones de StorageGRID sean compatibles. 
+---
+= Comprobar y actualizar la versión de StorageGRID Appliance Installer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La versión de instalador del dispositivo StorageGRID en el dispositivo debe coincidir con la versión de software instalada en el sistema StorageGRID para garantizar que todas las funciones de StorageGRID sean compatibles.
+
+.Antes de empezar
+Ha accedido al instalador de dispositivos de StorageGRID.
+
+.Acerca de esta tarea
+Los dispositivos StorageGRID vienen de fábrica preinstalados con el instalador de dispositivos StorageGRID. Si va a añadir un dispositivo a un sistema StorageGRID actualizado recientemente, es posible que deba actualizar manualmente el instalador de dispositivos StorageGRID antes de instalar el dispositivo como un nodo nuevo.
+
+El instalador de dispositivos de StorageGRID se actualiza automáticamente cuando se actualiza a una nueva versión de StorageGRID. No es necesario que actualice el instalador de dispositivos StorageGRID en los nodos de dispositivos instalados. Este procedimiento sólo es necesario cuando se instala un dispositivo que contiene una versión anterior del instalador de dispositivos de StorageGRID.
+
+.Pasos
+. En el instalador del dispositivo StorageGRID, seleccione *Avanzado* > *Actualizar firmware*.
+. Compare la versión actual del firmware con la versión de software instalada en el sistema StorageGRID. (En la parte superior de Grid Manager, seleccione el icono de ayuda y seleccione *Acerca de*).
++
+El segundo dígito de las dos versiones debe coincidir. Por ejemplo, si el sistema StorageGRID está ejecutando la versión 11.*6*._x_._y_, la versión del instalador de dispositivos StorageGRID debe ser 3.*6*._z_.
+
+. Si el dispositivo tiene una versión de nivel inferior del instalador de dispositivos de StorageGRID, vaya a. https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^].
++
+Inicie sesión con el nombre de usuario y la contraseña de su cuenta de NetApp.
+
+. Descargue la versión adecuada del archivo *Soporte para dispositivos StorageGRID* y el archivo de suma de comprobación correspondiente.
++
+El archivo de soporte para los dispositivos StorageGRID es un `.zip` Fichero que contiene las versiones de firmware actual y anterior para todos los modelos de dispositivos StorageGRID.
+
++
+Después de descargar el archivo de soporte para dispositivos StorageGRID, extraiga el `.zip` archive y consulte el archivo README para obtener información importante sobre la instalación del instalador de dispositivos StorageGRID.
+
+. Siga las instrucciones de la página Actualizar firmware del instalador de dispositivos StorageGRID para realizar estos pasos:
++
+.. Cargue el archivo de soporte (imagen de firmware) adecuado para el tipo de controladora. Algunas versiones de firmware también requieren la carga de un archivo de suma de comprobación. Si se le solicita un archivo de suma de comprobación, también se puede encontrar en el archivo de soporte para dispositivos StorageGRID.
+.. Actualice la partición inactiva.
+.. Reiniciar e intercambiar particiones.
+.. Vuelva a cargar el archivo de soporte apropiado (imagen de firmware) para el tipo de controladora. Algunas versiones de firmware también requieren la carga de un archivo de suma de comprobación. Si se le solicita un archivo de suma de comprobación, también se puede encontrar en el archivo de soporte para dispositivos StorageGRID.
+.. Actualice la segunda partición (inactiva).
+
+
+
+
+.Información relacionada
+link:../installconfig/accessing-storagegrid-appliance-installer.html["Acceso al instalador de dispositivos de StorageGRID"]

@@ -1,0 +1,99 @@
+---
+permalink: sg6000/reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6000-cn, remove, removing, removal 
+summary: Quite la controladora SG6000-CN de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente; a continuación, vuelva a instalar la controladora en un armario o rack cuando haya finalizado el mantenimiento del hardware. 
+---
+= Reubique la controladora SG6000-CN en el armario o el rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quite la controladora SG6000-CN de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente; a continuación, vuelva a instalar la controladora en un armario o rack cuando haya finalizado el mantenimiento del hardware.
+
+
+
+== Retire el controlador SG6000-CN del armario o bastidor
+
+Retire el controlador SG6000-CN de un armario o rack para acceder a la cubierta superior o para mover el controlador a una ubicación diferente.
+
+.Antes de empezar
+* Tiene etiquetas para identificar cada cable que está conectado al controlador SG6000-CN.
+* Ha localizado físicamente el controlador SG6000-CN en el que realiza tareas de mantenimiento en el centro de datos.
++
+link:locating-controller-in-data-center.html["Ubique la controladora en el centro de datos"]
+
+* Ya tienes link:power-sg6000-cn-controller-off-on.html#shut-down-sg6000-cn-controller["Apague el controlador SG6000-CN"].
++
+
+CAUTION: No apague la controladora con el switch de alimentación.
+
+
+
+.Pasos
+. Etiquete y desconecte los cables de alimentación de la controladora.
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Etiquete y desconecte los cables de datos de la controladora y cualquier transceptor SFP+ o SFP28.
++
+
+NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+. Afloje los dos tornillos cautivos del panel frontal del controlador.
++
+image::../media/sg6060_rack_retaining_screws.png[Tornillos de sujeción del bastidor SG6060]
+
+. Deslice el controlador SG6000-CN hacia adelante para sacarlo del rack hasta que los raíles de montaje se extiendan completamente y oirá un clic en los pestillos de ambos lados.
++
+Se puede acceder a la cubierta superior del controlador.
+
+. Opcional: Si va a extraer completamente la controladora del armario o rack, siga las instrucciones del kit de raíl para quitar la controladora de los rieles.
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+
+
+
+== Vuelva a instalar el controlador SG6000-CN en el armario o bastidor
+
+Vuelva a instalar la controladora en un armario o rack cuando finalice el mantenimiento del hardware.
+
+.Antes de empezar
+Ha vuelto a instalar la cubierta del controlador.
+
+link:reinstalling-sg6000-cn-controller-cover.html["Vuelva a instalar la cubierta del controlador SG6000-CN"]
+
+.Pasos
+. Presione el riel azul para liberar ambos rieles de bastidor al mismo tiempo y deslice el controlador SG6000-CN en el rack hasta que esté completamente asentado.
++
+Cuando ya no pueda mover la controladora, tire de los pestillos azules de ambos lados del chasis para deslizar la controladora completamente hacia dentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 deslizamiento sobre rieles]
+
++
+
+NOTE: No conecte el panel frontal hasta que haya encendido la controladora.
+
+. Apriete los tornillos cautivos del panel frontal del controlador para fijar el controlador en el rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Tornillos de sujeción del bastidor SG6060]
+
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Vuelva a conectar los cables de datos de la controladora y cualquier transceptor SFP+ o SFP28.
++
+
+NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
++
+link:../installconfig/cabling-appliance.html["Aparato por cable"]
+
+. Vuelva a conectar los cables de alimentación de la controladora.
++
+link:../installconfig/connecting-power-cords-and-applying-power.html["Conexión de los cables de alimentación y alimentación (SG6000)"]
+
+
+
+.Después de terminar
+Se puede reiniciar la controladora link:power-sg6000-cn-controller-off-on.html#power-on-sg6000-cn-controller-and-verify-operation["reiniciado"].

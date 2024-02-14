@@ -1,0 +1,84 @@
+---
+permalink: sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6112, storage node, storage appliance, install, installing, installation, cabinet, rack 
+summary: Retire el SGF6112 de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente. A continuación, vuelva a instalarlo en un armario o rack cuando haya finalizado el mantenimiento del hardware. 
+---
+= Reubique SGF6112 en el armario o rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retire el SGF6112 de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente. A continuación, vuelva a instalarlo en un armario o rack cuando haya finalizado el mantenimiento del hardware.
+
+
+
+== Quite SGF6112 del armario o rack
+
+.Antes de empezar
+* Tiene etiquetas para identificar cada cable que está conectado al SGF6112.
+* Ya tienes link:locating-sgf6112-in-data-center.html["Físicamente ubicado el SGF6112"] dónde se realiza el mantenimiento en el centro de datos.
+* Ya tienes link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Apague el SGF6112"].
++
+
+CAUTION: No apague el aparato con el interruptor de alimentación.
+
+
+
+.Pasos
+. Etiquete y desconecte los cables de alimentación del aparato.
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Etiquete y desconecte los cables de datos del dispositivo y los transceptores SFP+ o SFP28.
++
+
+NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+. Afloje los dos tornillos cautivos del panel frontal del aparato.
++
+image::../media/sg6060_rack_retaining_screws.png[SGF6112 tornillos de retención del bastidor]
+
+. Deslice el SGF6112 hacia delante para sacarlo del rack hasta que los raíles de montaje estén completamente extendidos y oiga un clic en los pestillos de ambos lados.
++
+Se puede acceder a la cubierta superior del aparato.
+
+. Opcional: Si está retirando completamente el dispositivo del armario o rack, siga las instrucciones del kit de guías para quitar el aparato de los rieles.
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+
+
+
+== Vuelva a instalar SGF6112 en el armario o rack
+
+.Antes de empezar
+Ya tienes link:reinstalling-sgf6112-cover.html["vuelva a instalar la cubierta del aparato"].
+
+.Pasos
+. Presione el carril azul para soltar ambos rieles del bastidor al mismo tiempo y deslice el SGF6112 en el bastidor hasta que quede completamente asentado.
++
+Cuando ya no pueda mover la controladora, tire de los pestillos azules de ambos lados del chasis para deslizar la controladora completamente hacia dentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 deslizamiento sobre rieles]
+
++
+
+NOTE: No conecte el panel frontal hasta que haya encendido la controladora.
+
+. Apriete los tornillos cautivos del panel frontal del controlador para fijar el controlador en el rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Tornillos de sujeción del bastidor SG6060]
+
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. link:../installconfig/cabling-appliance.html["Vuelva a conectar los cables de datos de la controladora y todos los transceptores SFP+ o SFP28"].
++
+
+NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Vuelva a conectar los cables de alimentación de la controladora"].
+
+
+.Después de terminar
+link:powering-on-sgf6112-and-verifying-operation.html["Reinicie el aparato"].

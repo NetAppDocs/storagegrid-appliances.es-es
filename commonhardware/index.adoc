@@ -1,0 +1,45 @@
+---
+permalink: commonhardware/index.html 
+sidebar: sidebar 
+keywords: maintain overview, maintenance overview, about maintain, about maintenance 
+summary: Siga estas instrucciones para mantener su sistema StorageGRID. 
+---
+= Procedimientos comunes para el mantenimiento de nodos: Descripción general
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga estas instrucciones para mantener su sistema StorageGRID.
+
+
+
+== Acerca de estas instrucciones
+
+En estas instrucciones se describen procedimientos comunes a todos los nodos, como la aplicación de una revisión de software, la recuperación de nodos de grid, la recuperación de un sitio con fallos, la retirada de nodos de grid o de un sitio entero, el mantenimiento de la red, la realización de procedimientos de mantenimiento de middleware y de nivel de host y la realización de procedimientos de nodos de grid.
+
+
+NOTE: En estas instrucciones, “Linux” se refiere a una implementación de Red Hat® Enterprise Linux®, Ubuntu® o Debian®. Utilice la https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] para obtener una lista de las versiones compatibles.
+
+
+
+== Antes de empezar
+
+* Debe conocer en gran medida el sistema StorageGRID.
+* Ha revisado la topología del sistema StorageGRID y comprende la configuración de grid.
+* Usted entiende que usted debe seguir todas las instrucciones exactamente y tener en cuenta todas las advertencias.
+* Usted entiende que los procedimientos de mantenimiento no descritos no son compatibles o requieren un acuerdo de servicios.
+
+
+
+
+== Procedimientos de mantenimiento para aparatos
+
+Los procedimientos de mantenimiento específicos para cada tipo de dispositivo StorageGRID se encuentran en las secciones de mantenimiento del dispositivo:
+
+* link:../sg6100/index.html["Mantenimiento del dispositivo SG6100"]
+* link:../sg6000/index.html["Mantenimiento del dispositivo SG6000"]
+* link:../sg5700/index.html["Mantenga el dispositivo SG5700"]
+* link:../sg100-1000/index.html["Mantenimiento de los dispositivos SG100 y SG1000"]
+

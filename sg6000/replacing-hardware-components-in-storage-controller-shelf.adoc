@@ -1,0 +1,76 @@
+---
+permalink: sg6000/replacing-hardware-components-in-storage-controller-shelf.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, storage controller shelf, Battery, Drive, Power canister, power supply, Fan canister, fan, Drive drawer 
+summary: Si se produce un problema de hardware, es posible que deba sustituir un componente de la bandeja de controladoras de almacenamiento. 
+---
+= Reemplace los componentes de hardware de la bandeja de controladoras de almacenamiento SG6000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si se produce un problema de hardware, es posible que deba sustituir un componente de la bandeja de controladoras de almacenamiento.
+
+.Antes de empezar
+* Tiene el procedimiento de sustitución del hardware E-Series.
+* Ha localizado físicamente el dispositivo de almacenamiento en el que va a reemplazar componentes de hardware de la bandeja de almacenamiento en el centro de datos.
++
+link:locating-controller-in-data-center.html["Ubique la controladora en el centro de datos"]
+
+
+
+.Acerca de esta tarea
+Para sustituir la batería en el controlador de almacenamiento, consulte los pasos de las instrucciones para link:replacing-storage-controller-sg6000.html["reemplazar una controladora de almacenamiento"]. Estas instrucciones describen cómo extraer un controlador del aparato, extraer la batería del controlador, instalar la batería y sustituir el controlador.
+
+Para obtener instrucciones de las otras unidades reemplazables de campo (FRU) en las bandejas de controladoras, acceda a la http://mysupport.netapp.com/info/web/ECMP1658252.html["Procedimientos de E-Series para el mantenimiento del sistema"^].
+
+[cols="1a,3a"]
+|===
+| FRU | Consulte las instrucciones 
+
+
+ a| 
+Batería
+ a| 
+StorageGRID (estas instrucciones): Sustituir una controladora de almacenamiento
+
+
+
+ a| 
+Unidad
+ a| 
+E-Series:
+
+* Sustitución de unidad (60 unidades)
+* Sustitución de unidad (12 o 24 unidades)
+
+
+
+
+ a| 
+Contenedor de alimentación
+ a| 
+E-Series
+
+* Sustituir contenedor de alimentación (60 unidades)
+* Sustitución de la fuente de alimentación (12 o 24 unidades)
+
+
+
+
+ a| 
+Contenedor de ventilador (solo bandejas de 60 unidades)
+ a| 
+E-Series: Sustituir contenedor de ventilador (60 unidades)
+
+
+
+ a| 
+Cajón de unidades (solo bandejas de 60 unidades)
+ a| 
+E-Series: Sustitución del cajón de unidades (60 unidades)
+
+|===
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.

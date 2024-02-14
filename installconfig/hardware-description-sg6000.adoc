@@ -1,0 +1,626 @@
+---
+permalink: installconfig/hardware-description-sg6000.html 
+sidebar: sidebar 
+keywords: sg6000, sg6060, sg6060x, storage appliance 
+summary: Los dispositivos SG6060 y SG606060X de StorageGRID incluyen una controladora de computación y una bandeja de controladoras de almacenamiento con dos controladoras de almacenamiento y 60 unidades. 
+---
+= Dispositivos SG6060 y SG6060X: Información general
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los dispositivos SG6060 y SG606060X de StorageGRID incluyen una controladora de computación y una bandeja de controladoras de almacenamiento con dos controladoras de almacenamiento y 60 unidades.
+
+Opcionalmente, se pueden añadir bandejas de expansión de 60 unidades a ambos dispositivos. No existen diferencias funcionales ni de especificación entre el SG6060 y SG6060X, a excepción de la ubicación de los puertos de interconexión en el controlador de almacenamiento.
+
+
+
+== Componentes SG6060 y SG6060X
+
+Los dispositivos SG6060 y SG6060X incluyen los componentes siguientes:
+
+Controladora de computación:: La controladora SG6000-CN es un servidor con una unidad de rack (1U) que incluye:
++
+--
+* 40 núcleos (80 subprocesos)
+* 192 GB DE MEMORIA RAM
+* Hasta 4 × 25 Gbps de ancho de banda total de Ethernet
+* 4 × interconexión Fibre Channel (FC) de 16 Gbps
+* Controlador de administración en placa base (BMC) que simplifica la administración del hardware
+* Sistemas de alimentación redundantes
+
+
+--
+Bandeja de controladoras de almacenamiento:: La bandeja de controladoras E-Series E2860 (cabina de almacenamiento) es una bandeja 4U que incluye:
++
+--
+* Dos controladoras serie E2800 (configuración doble) para proporcionar compatibilidad con conmutación al nodo de respaldo de una controladora de almacenamiento
++
+** El E2800SG6060 contiene controladoras de almacenamiento
+** El SG606060X contiene controladoras de almacenamiento E2800B
+
+
+* Bandeja de unidades de cinco cajones que aloja sesenta unidades de 3.5 pulgadas (2 unidades de estado sólido o SSD y 58 unidades NL-SAS)
+* Sistemas de alimentación y ventiladores redundantes
+
+
+--
+Opcional: Bandejas de ampliación del almacenamiento:: Cada dispositivo SG6060 y SG6060X puede tener una o dos bandejas de expansión para un total de 180 unidades (dos de estas unidades se reservan para la caché de lectura E-Series).
++
+--
+*Nota:* las bandejas de expansión se pueden instalar durante la implementación inicial o agregar más adelante.
+
+El compartimento DE460C de E-Series es una bandeja 4U que incluye:
+
+* Dos módulos de entrada/salida (IOM)
+* Cinco cajones, cada uno de ellos tiene 12 unidades NL-SAS, para un total de 60 unidades
+* Sistemas de alimentación y ventiladores redundantes
+
+
+--
+
+
+
+
+== Diagramas SG6060 y SG6060X
+
+Los frentes del SG6060 y del SG6060X son idénticos.
+
+
+
+=== Vista frontal de SG6060 o SG6060X
+
+En esta figura, se muestra el frente de SG6060 o SG6060X, que incluye una controladora de computación 1U y una bandeja 4U que contiene dos controladoras de almacenamiento y 60 unidades en cinco cajones de unidades.
+
+image::../media/sg6060_front_view_with_and_without_bezels.gif[Vista frontal del SG6060]
+
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Controlador de computación SG6000-CN con marco frontal
+
+
+
+ a| 
+2
+ a| 
+Bandeja de controladoras E2860 con cubierta frontal (la bandeja de expansión opcional muestra idéntica)
+
+
+
+ a| 
+3
+ a| 
+Se ha eliminado el controlador informático SG6000-CN con marco frontal
+
+
+
+ a| 
+4
+ a| 
+Bandeja de controladoras E2860 con cubierta protectora frontal retirada (la bandeja de expansión opcional muestra idéntica)
+
+|===
+
+
+=== Vista posterior de SG6060
+
+Esta figura muestra la parte posterior del SG6060, incluidas las controladoras de almacenamiento y computación, los ventiladores y los suministros de alimentación.
+
+image::../media/sg6060_rear_view.gif[Vista posterior SG6060]
+
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Fuente de alimentación (1 de 2) para el controlador informático SG6000-CN
+
+
+
+ a| 
+2
+ a| 
+Conectores para el controlador de computación SG6000-CN
+
+
+
+ a| 
+3
+ a| 
+Ventilador (1 de 2) para bandeja de controladoras E2860
+
+
+
+ a| 
+4
+ a| 
+La controladora de almacenamiento E-Series E2800A (1 de 2) y sus conectores
+
+
+
+ a| 
+5
+ a| 
+Suministro de alimentación (1 de 2) para la bandeja de controladoras E2860
+
+|===
+
+
+=== Vista posterior de SG6060X
+
+Esta figura muestra la parte posterior del SG6060X.
+
+image::../media/sg6060x_rear_view.gif[Vista posterior de SG6060x]
+
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Fuente de alimentación (1 de 2) para el controlador informático SG6000-CN
+
+
+
+ a| 
+2
+ a| 
+Conectores para el controlador de computación SG6000-CN
+
+
+
+ a| 
+3
+ a| 
+Ventilador (1 de 2) para bandeja de controladoras E2860
+
+
+
+ a| 
+4
+ a| 
+La controladora de almacenamiento E2800B E-Series (1 de 2) y los conectores
+
+
+
+ a| 
+5
+ a| 
+Suministro de alimentación (1 de 2) para la bandeja de controladoras E2860
+
+|===
+
+
+=== Bandeja de expansión
+
+En esta figura, se muestra la parte posterior de la bandeja de expansión opcional para el SG6060 y SG6060X, incluidos los módulos de entrada/salida (IOM), los ventiladores y los suministros de alimentación. Cada SG6060 se puede instalar con una o dos bandejas de expansión, que se pueden incluir en la instalación inicial o añadir más adelante.
+
+image::../media/de460c_expansion_shelf_rear_view.gif[Bandeja de expansión trasera]
+
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Ventilador (1 de 2) para estante de expansión
+
+
+
+ a| 
+2
+ a| 
+Iom (1 de 2) para la bandeja de expansión
+
+
+
+ a| 
+3
+ a| 
+Fuente de alimentación (1 de 2) para la bandeja de expansión
+
+|===
+
+
+== SG6000 controladores
+
+Cada modelo del dispositivo SG6000 de StorageGRID incluye un controlador de computación SG6000-CN en un compartimento 1U y controladoras de almacenamiento E-Series dúplex en una carcasa 2U o 4U, según el modelo. Revise los diagramas para obtener más información sobre cada tipo de controladora.
+
+
+
+=== Controladora de computación SG6000-CN
+
+* Proporciona recursos de computación para el dispositivo.
+* Incluye el instalador de dispositivos StorageGRID.
++
+
+NOTE: El software StorageGRID no está preinstalado en el dispositivo. Este software se recupera del nodo de administración cuando se implementa el dispositivo.
+
+* Se puede conectar a las tres redes StorageGRID, incluidas la red de cuadrícula, la red de administración y la red de cliente.
+* Se conecta a las controladoras de almacenamiento E-Series y funciona como iniciador.
+
+
+
+
+==== Conectores SG6000-CN
+
+image::../media/sg6000_cn_rear_connectors.gif[Conectores posteriores SG6000-CN]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de interconexión 1-4
+ a| 
+Fibre Channel (FC) de 16 GB/s con óptica integrada
+ a| 
+Conecte la controladora SG6000-CN a las controladoras E2800 (dos conexiones a cada E2800).
+
+
+
+ a| 
+2
+ a| 
+Puertos de red 1-4
+ a| 
+10-GbE o 25-GbE, según el tipo de transceptor cable o SFP, la velocidad del switch y la velocidad de enlace configurada
+ a| 
+Conéctese a la red de red y a la red de cliente para StorageGRID.
+
+
+
+ a| 
+3
+ a| 
+Puerto de gestión de BMC
+ a| 
+1 GbE (RJ-45).
+ a| 
+Conéctese al controlador de administración de la placa base SG6000-CN.
+
+
+
+ a| 
+4
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* VGA
+* Serie, 115200 8-N-1
+* USB
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+5
+ a| 
+Puerto de red de administrador 1
+ a| 
+1 GbE (RJ-45).
+ a| 
+Conecte el SG6000-CN a la red de administración para StorageGRID.
+
+
+
+ a| 
+6
+ a| 
+Puerto de red de administración 2
+ a| 
+1 GbE (RJ-45).
+ a| 
+Opciones:
+
+* Bond con el puerto de gestión 1 para una conexión redundante con la red de administrador para StorageGRID.
+* Deje sin cables y disponible para acceso local temporal (IP 169.254.0.1).
+* Durante la instalación, use el puerto 2 para la configuración IP si las direcciones IP asignadas para DHCP no están disponibles.
+
+
+|===
+
+
+=== SGF6024: Controladores de almacenamiento EF570
+
+* Dos controladoras para admitir conmutación al nodo de respaldo.
+* Gestione el almacenamiento de datos en las unidades.
+* Funcionan como controladoras E-Series estándar en una configuración doble.
+* Incluya software de sistema operativo SANtricity (firmware de la controladora).
+* Incluir System Manager de SANtricity para supervisar hardware de almacenamiento y gestionar alertas, la función AutoSupport y la función Drive Security.
+* Conéctese al controlador SG6000-CN y proporcione acceso al almacenamiento flash.
+
+
+
+
+==== EF570 conectores
+
+image::../media/ef570_rear_connectors.gif[Conectores traseros de EF570]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de interconexión 1 y 2
+ a| 
+SFP óptico FC de 16 Gb/s.
+ a| 
+Conecte cada una de las controladoras EF570 al controlador SG6000-CN.
+
+Existen cuatro conexiones a la controladora SG6000-CN (dos de cada EF570).
+
+
+
+ a| 
+2
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* Puerto serie RJ-45
+* Puerto serie micro USB
+* Puerto USB
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+3
+ a| 
+Puertos de expansión de unidades
+ a| 
+SAS de 12 GB/s
+ a| 
+No se utiliza. El dispositivo SGF6024 no es compatible con bandejas de unidades de expansión.
+
+
+
+ a| 
+4
+ a| 
+Puertos de gestión 1 y 2
+ a| 
+Ethernet de 1 GB (RJ-45)
+ a| 
+* El puerto 1 se conecta a la red en la que se accede a System Manager de SANtricity en un explorador.
+* El puerto 2 está reservado para uso del soporte técnico.
+
+
+|===
+
+
+=== SG6060 y SG6060X: E2800 controladoras de almacenamiento
+
+* Dos controladoras para admitir conmutación al nodo de respaldo.
+* Gestione el almacenamiento de datos en las unidades.
+* Funcionan como controladoras E-Series estándar en una configuración doble.
+* Incluya software de sistema operativo SANtricity (firmware de la controladora).
+* Incluir System Manager de SANtricity para supervisar hardware de almacenamiento y gestionar alertas, la función AutoSupport y la función Drive Security.
+* Conéctese al controlador SG6000-CN y proporcione acceso al almacenamiento.
+
+
+SG6060 y SG6060X utilizan controladoras de almacenamiento E2800.
+
+[cols="1a,2a,2a"]
+|===
+| Dispositivo | Controladora | HIC de controladora 
+
+
+ a| 
+SG6060
+ a| 
+Dos controladoras de almacenamiento E2800A
+ a| 
+Ninguno
+
+
+
+ a| 
+SG606060X
+ a| 
+Dos controladoras de almacenamiento E2800B
+ a| 
+HIC de cuatro puertos
+
+|===
+Las controladoras de almacenamiento E2800A y E2800B son idénticas en las especificaciones y funcionan excepto la ubicación de los puertos de interconexión.
+
+
+CAUTION: No utilice un E2800A y un E2800B en el mismo dispositivo.
+
+
+
+==== E2800A conectores
+
+image::../media/e2800_controller_with_callouts.gif[Conectores en el controlador E2800A]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de interconexión 1 y 2
+ a| 
+SFP óptico FC de 16 Gb/s.
+ a| 
+Conecte cada uno de los controladores E2800A al controlador SG6000-CN.
+
+Hay cuatro conexiones al controlador SG6000-CN (dos de cada E2800A).
+
+
+
+ a| 
+2
+ a| 
+Puertos de gestión 1 y 2
+ a| 
+Ethernet de 1 GB (RJ-45)
+ a| 
+* Opciones del puerto 1:
++
+** Conéctese a una red de gestión para habilitar el acceso TCP/IP directo a System Manager de SANtricity
+** Deje sin cables para guardar un puerto del switch y una dirección IP.  Acceda a SANtricity System Manager usando las interfaces de usuario del instalador de Grid Manager o Storage Grid Appliance.
+
+
+
+
+*Nota*: Algunas funciones opcionales de SANtricity, como sincronización NTP para marcas de hora de registro precisas, no están disponibles cuando elige dejar el puerto 1 sin cable.
+
+*Nota*: Se requiere StorageGRID 11.5 o superior, y SANtricity 11.70 o superior, cuando salga del Puerto 1 sin cables.
+
+* El puerto 2 está reservado para uso del soporte técnico.
+
+
+
+
+ a| 
+3
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* Puerto serie RJ-45
+* Puerto serie micro USB
+* Puerto USB
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+4
+ a| 
+Puertos de expansión de unidad 1 y 2
+ a| 
+SAS de 12 GB/s
+ a| 
+Conecte los puertos con los puertos de expansión de unidades en los IOM de la bandeja de expansión.
+
+|===
+
+
+==== E2800B conectores
+
+image::../media/e2800B_controller_with_callouts.gif[Conectores en el controlador E2800B]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de interconexión 1 y 2
+ a| 
+SFP óptico FC de 16 Gb/s.
+ a| 
+Conecte cada una de las controladoras E2800B a la controladora SG6000-CN.
+
+Existen cuatro conexiones a la controladora SG6000-CN (dos de cada E2800B).
+
+
+
+ a| 
+2
+ a| 
+Puertos de gestión 1 y 2
+ a| 
+Ethernet de 1 GB (RJ-45)
+ a| 
+* Opciones del puerto 1:
++
+** Conéctese a una red de gestión para habilitar el acceso TCP/IP directo a System Manager de SANtricity
+** Deje sin cables para guardar un puerto del switch y una dirección IP.  Acceda a SANtricity System Manager usando las interfaces de usuario del instalador de Grid Manager o Storage Grid Appliance.
+
+
+
+
+*Nota*: Algunas funciones opcionales de SANtricity, como sincronización NTP para marcas de hora de registro precisas, no están disponibles cuando elige dejar el puerto 1 sin cable.
+
+*Nota*: Se requiere StorageGRID 11.5 o superior, y SANtricity 11.70 o superior, cuando salga del Puerto 1 sin cables.
+
+* El puerto 2 está reservado para uso del soporte técnico.
+
+
+
+
+ a| 
+3
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* Puerto serie RJ-45
+* Puerto serie micro USB
+* Puerto USB
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+4
+ a| 
+Puertos de expansión de unidad 1 y 2
+ a| 
+SAS de 12 GB/s
+ a| 
+Conecte los puertos con los puertos de expansión de unidades en los IOM de la bandeja de expansión.
+
+|===
+
+
+=== SG6060 y SG6060X: IOM para bandejas de expansión opcionales
+
+La bandeja de expansión contiene dos módulos de I/o (IOM) que se conectan a las controladoras de almacenamiento o a otras bandejas de expansión.
+
+
+
+==== Conectores de IOM
+
+image::../media/iom_connectors.gif[IOM parte trasera]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de expansión de unidades 1-4
+ a| 
+SAS de 12 GB/s
+ a| 
+Conecte cada puerto a las controladoras de almacenamiento o a la bandeja de expansión adicional (si la hubiera).
+
+|===

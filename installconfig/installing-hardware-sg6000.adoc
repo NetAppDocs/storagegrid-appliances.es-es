@@ -1,0 +1,55 @@
+---
+permalink: installconfig/installing-hardware-sg6000.html 
+sidebar: sidebar 
+keywords: install, sg6000, sg6060, sgf6024, expansion shelf, cabinet, rack, drives 
+summary: Para SG6060 y SGF6024, instale rieles en el armario o rack y deslice la bandeja de controladoras, las bandejas de expansión y la controladora de computación en los rieles. En el caso de SG6060, no instale las unidades en cada bandeja hasta que se hayan instalado las bandejas. 
+---
+= Instale en el armario o rack (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para SG6060 y SGF6024, instale rieles en el armario o rack y deslice la bandeja de controladoras, las bandejas de expansión y la controladora de computación en los rieles. En el caso de SG6060, no instale las unidades en cada bandeja hasta que se hayan instalado las bandejas.
+
+[cols="1a,2a,2a"]
+|===
+| Modelo | Instale | Para obtener más información 
+
+
+ a| 
+SG6060
+ a| 
+bandeja de controladoras de 60 unidades y cualquier bandeja de expansión de 60 unidades
+ a| 
+link:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html["Instale las bandejas de 60 unidades"]
+
+
+
+ a| 
+SG6060
+ a| 
+60 unidades en cada bandeja
+ a| 
+link:sg6060-installing-drives.html["Instale las unidades"]
+
+
+
+ a| 
+SGF6024
+ a| 
+bandeja de controladoras de 24 unidades
+ a| 
+link:sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html["Instale las bandejas de 24 unidades"]
+
+
+
+ a| 
+SG6060 y SGF6024
+ a| 
+Controladora de computación SG6000-CN
+ a| 
+link:sg6000-cn-installing-into-cabinet-or-rack.html["Instale el controlador SG6000-CN"]
+
+|===

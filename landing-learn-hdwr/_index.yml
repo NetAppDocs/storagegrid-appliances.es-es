@@ -1,0 +1,25 @@
+---
+indexpage:
+  tiles:
+  - title: Manos a la obra
+    links:
+    - title: Novedades de los dispositivos
+      url: "../whats-new-appliances.html"
+    - title: Más información sobre StorageGRID
+      url: https://docs.netapp.com/us-en/storagegrid-118/primer/index.html
+    - title: Inicio rápido de StorageGRID
+      url: https://docs.netapp.com/us-en/storagegrid-118/quick-start.html
+    - title: Inicio rápido para la instalación del dispositivo
+      url: "../installconfig/index.html"
+  - title: Obtenga más información sobre los dispositivos de almacenamiento
+    links:
+    - title: Dispositivos de almacenamiento SG5700
+      url: "../installconfig/hardware-description-sg5700.html"
+    - title: Dispositivos de almacenamiento SG6000
+      url: "../installconfig/hardware-description-sg6000.html"
+    - title: Dispositivos de almacenamiento SG6100
+      url: "../installconfig/hardware-description-sg6100.html"
+  - title: Obtenga información sobre los dispositivos de servicios
+    links:
+    - title: Servicios de aplicaciones SG100 y SG1000
+      url: "../installconfig/hardware-description-sg100-and-1000.html"

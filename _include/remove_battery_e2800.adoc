@@ -1,0 +1,92 @@
+= Mueva la batería a la nueva controladora
+:allow-uri-read: 
+
+
+
+
+== Mueva la batería a la nueva controladora
+
+.Pasos
+. Retire la batería de la controladora con errores e instálela en la controladora de reemplazo:
++
+.. Confirme que el LED verde dentro del controlador (entre la batería y los DIMM) está apagado.
++
+Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
+
++
+image::../media/e2800_internal_cache_active_led.gif[LED verde en E2800]
+
++
+[cols="1a,2a"]
+|===
+| Elemento | Descripción 
+
+
+ a| 
+1
+ a| 
+LED de caché interna activa
+
+
+
+ a| 
+2
+ a| 
+Batería
+
+|===
+.. Localice el pestillo de liberación azul de la batería.
+.. Para desenganchar la batería, presione el pestillo de liberación hacia abajo y hacia fuera del controlador.
++
+image::../media/e2800_remove_battery.gif[Pestillo de la batería]
+
++
+[cols="1a,2a"]
+|===
+| Elemento | Descripción 
+
+
+ a| 
+1
+ a| 
+Pestillo de liberación de la batería
+
+
+
+ a| 
+2
+ a| 
+Batería
+
+|===
+.. Levante la batería y deslícela fuera del controlador.
+.. Retire la cubierta del controlador de recambio.
+.. Oriente el controlador de repuesto de manera que la ranura de la batería quede orientada hacia usted.
+.. Inserte la batería en el controlador en un ángulo ligeramente descendente.
++
+Debe insertar la brida metálica de la parte frontal de la batería en la ranura de la parte inferior del controlador y deslizar la parte superior de la batería por debajo del pasador de alineación pequeño del lado izquierdo del controlador.
+
+.. Mueva el pestillo de la batería hacia arriba para fijar la batería.
++
+Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
+
+.. Dé la vuelta al controlador para confirmar que la batería está instalada correctamente.
++
+
+CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal de la batería debe estar completamente insertada en la ranura del controlador (como se muestra en la primera figura). Si la batería no está instalada correctamente (como se muestra en la segunda figura), la brida metálica podría entrar en contacto con la placa del controlador, causando daños.
+
++
+*** *Correcto -- la brida metálica de la batería está completamente insertada en la ranura del controlador:*
++
+image::../media/e2800_battery_flange_ok.gif[Brida de la batería correcta]
+
+*** *Incorrecto -- la brida metálica de la batería no está insertada en la ranura del controlador:*
++
+image::../media/e2800_battery_flange_not_ok.gif[Brida de la batería incorrecta]
+
+
+
+
+
+. Vuelva a colocar la cubierta del controlador.
+

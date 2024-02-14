@@ -1,0 +1,21 @@
+---
+indexpage:
+  tiles:
+  - title: Puesta en marcha del dispositivo
+    links:
+    - title: Ponga en marcha el nodo de almacenamiento del dispositivo
+      url: "../installconfig/deploying-appliance-storage-node.html"
+    - title: Implemente el nodo del dispositivo de servicios
+      url: "../installconfig/deploying-services-appliance-node.html"
+    - title: Supervise la instalación del dispositivo
+      url: "../installconfig/monitoring-appliance-installation.html"
+    - title: Reinicie el dispositivo mientras el instalador está en ejecución
+      url: "../installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html"
+  - title: Solucione los problemas de instalación del dispositivo
+    links:
+    - title: SG100 y SG1000
+      url: "../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html"
+    - title: SG5700 y SG6000
+      url: "../installconfig/troubleshooting-hardware-installation.html"
+    - title: SG6100
+      url: "../installconfig/troubleshooting-hardware-installation-sg6100.html"

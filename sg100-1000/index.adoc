@@ -1,0 +1,20 @@
+---
+permalink: sg100-1000/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, maintain, maintaining, hardware, procedures, tasks 
+summary: Es posible que deba realizar procedimientos de mantenimiento en el dispositivo. En los procedimientos de esta sección se asume que el dispositivo ya se ha implementado como nodo de puerta de enlace o como nodo de administración en un sistema StorageGRID. 
+---
+= Mantenimiento de los dispositivos SG100 y SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que deba realizar procedimientos de mantenimiento en el dispositivo. En los procedimientos de esta sección se asume que el dispositivo ya se ha implementado como nodo de puerta de enlace o como nodo de administración en un sistema StorageGRID.
+
+Los procedimientos específicos para el mantenimiento de su aparato SG100 o SG1000 se encuentran en esta sección.
+
+Consulte link:../commonhardware/index.html["Procedimientos comunes"] para los procedimientos de mantenimiento que utilizan todos los aparatos.
+
+Consulte link:../installconfig/configuring-hardware.html["Configure el hardware"] para los procedimientos de mantenimiento que también se realizan durante la instalación y configuración inicial del dispositivo.

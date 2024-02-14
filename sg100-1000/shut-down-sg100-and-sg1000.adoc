@@ -1,0 +1,54 @@
+---
+permalink: sg100-1000/shut-down-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg1000, SG100, power off, turn off, shut off, shutdown, shut down, 
+summary: Apague el dispositivo de servicios para realizar el mantenimiento del hardware. 
+---
+= Apague el SG100 o el SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Apague el dispositivo de servicios para realizar el mantenimiento del hardware.
+
+.Antes de empezar
+* Usted tiene físicamente link:locating-controller-in-data-center.html["se encuentra el dispositivo de servicios"] necesidad de mantenimiento en el centro de datos.
+
+
+.Acerca de esta tarea
+Para evitar interrupciones del servicio, apague el dispositivo de servicios durante un período de mantenimiento programado cuando se acepten períodos de interrupción del servicio.
+
+.Pasos
+. Apague el aparato:
++
+
+CAUTION: Debe realizar un apagado controlado del dispositivo introduciendo los comandos especificados a continuación. Se recomienda realizar un apagado controlado cuando sea posible para evitar alertas innecesarias, garantizar que haya logs completos disponibles y evitar interrupciones del servicio.
+
++
+.. Si aún no ha iniciado sesión en el nodo de grid, inicie sesión con PuTTY u otro cliente ssh:
++
+... Introduzca el siguiente comando: `ssh admin@_grid_node_IP_`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+... Introduzca el siguiente comando para cambiar a la raíz: `su -`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
++
+Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para `#`.
+
+
+
+.. Apague el aparato de servicios: +
+`*shutdown -h now*`
++
+Este comando puede tardar hasta 10 minutos en completarse.
+
+
+
+. Utilice uno de los siguientes métodos para verificar que el aparato está apagado:
++
+** Observe el LED de alimentación de la parte frontal del aparato y confirme que está apagado.
+** Compruebe la página Power Control de la interfaz del BMC para confirmar que el aparato está apagado.
+
+
+

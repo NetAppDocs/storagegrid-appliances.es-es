@@ -1,0 +1,71 @@
+---
+permalink: sg6100/verify-component-to-replace.html 
+sidebar: sidebar 
+keywords: sgf6112 
+summary: Si no está seguro de qué componente de hardware debe sustituir en el dispositivo, complete este procedimiento para identificar el componente y la ubicación del dispositivo en el centro de datos. 
+---
+= Verifique el componente que se va a sustituir en el SGF6112
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si no está seguro de qué componente de hardware debe sustituir en el dispositivo, complete este procedimiento para identificar el componente y la ubicación del dispositivo en el centro de datos.
+
+.Antes de empezar
+* Tiene el número de serie del dispositivo de almacenamiento donde se tiene que reemplazar el componente.
+* Ha iniciado sesión en Grid Manager mediante un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+
+
+.Acerca de esta tarea
+Utilice este procedimiento para identificar el dispositivo con hardware defectuoso y cuáles de los componentes de hardware reemplazables no funcionan correctamente. Los componentes que se pueden identificar para el reemplazo incluyen:
+
+* Fuentes de alimentación
+* Ventiladores
+* Unidades de estado sólido (SSD)
+* Tarjetas de interfaz de red (NIC)
+* Batería CMOS
+
+
+.Pasos
+. Identifique el componente fallido y el nombre del dispositivo en el que está instalado.
++
+.. En Grid Manager, selecciona *ALERTS* > *current*.
++
+Aparece la página Alertas.
+
+.. Seleccione la alerta para ver los detalles de la alerta.
++
+
+NOTE: Seleccione la alerta, no el encabezado de un grupo de alertas.
+
+.. Registre el nombre del nodo y la etiqueta de identificación única del componente que ha fallado.
++
+image::../media/nic-alert-sgf6112.jpg[Alerta con ID de componente]
+
+
+
+. Identifique el chasis con el componente que se debe reemplazar.
++
+.. En Grid Manager, seleccione *NODES*.
+.. En la tabla de la página Nodes, seleccione el nombre del nodo de almacenamiento del dispositivo con el componente con errores.
+.. Seleccione la ficha *hardware*.
++
+Compruebe el *Número de serie del controlador de cómputo* en la sección del dispositivo StorageGRID. Compruebe si el número de serie coincide con el número de serie del dispositivo de almacenamiento en el que va a sustituir el componente. Si el número de serie coincide, ha encontrado el aparato correcto.
+
++
+*** Si la sección StorageGRID Appliance en Grid Manager no se muestra, el nodo seleccionado no es un dispositivo StorageGRID. Seleccione un nodo diferente en la vista de árbol.
+*** Si los números de serie no coinciden, seleccione un nodo diferente en la vista de árbol.
+
+
+
+
+. Una vez que haya localizado el nodo donde se debe reemplazar el componente, anote la dirección IP de BMC del dispositivo que aparece en la sección Aplicación StorageGRID.
++
+Para ayudarle a localizar el dispositivo en el centro de datos, puede utilizar la dirección IP de BMC para encender el LED de identificación del dispositivo.
+
+
+
+.Información relacionada
+link:turning-sgf6112-identify-led-on-and-off.html["Encienda el LED de identificación del aparato"]

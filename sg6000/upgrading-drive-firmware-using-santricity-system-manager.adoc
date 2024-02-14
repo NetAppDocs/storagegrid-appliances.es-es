@@ -1,0 +1,252 @@
+---
+permalink: sg6000/upgrading-drive-firmware-using-santricity-system-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, upgrade, firmware, drive, disk, SANtricity System Manager, SANtricity 
+summary: El firmware de la unidad se actualiza para asegurarse de tener todas las funciones y correcciones de errores más recientes. 
+---
+= Actualice el firmware de la unidad SG6000 mediante SANtricity System Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Actualice el firmware en las unidades del dispositivo para asegurarse de tener todas las funciones y correcciones de errores más recientes.
+
+.Antes de empezar
+* El dispositivo de almacenamiento tiene el estado Optimal.
+* Todas las unidades tienen el estado Optimal.
+* Tiene instalada la última versión de System Manager de SANtricity que es compatible con la versión de StorageGRID.
+* Si está realizando una actualización sin conexión, es necesario link:../commonhardware/placing-appliance-into-maintenance-mode.html["Puso el dispositivo StorageGRID en modo de mantenimiento"].
++
+
+NOTE: Mientras el dispositivo está en modo de mantenimiento, se detiene la actividad de I/O (entrada/salida) en la controladora de almacenamiento para que las operaciones de almacenamiento disruptivas sean seguras.
+
+
+
+
+CAUTION: No actualice el firmware de la unidad en más de un dispositivo StorageGRID a la vez. De este modo, se puede provocar la falta de disponibilidad de los datos, dependiendo del modelo de puesta en marcha y la política del ciclo de vida de la información.
+
+.Acerca de esta tarea
+Puede actualizar el firmware de la unidad del dispositivo mediante dos métodos:
+
+*En línea*: Las unidades se actualizan de una en una mientras el aparato está realizando E/S. Este método no requiere que se ponga el dispositivo en modo de mantenimiento. Sin embargo, el rendimiento del sistema puede verse afectado y la actualización puede tardar varias horas más que el método sin conexión.
+
+
+NOTE: Las unidades que pertenecen a volúmenes que no tienen redundancia deben actualizarse con el método sin conexión. El método sin conexión debe usarse para cualquier unidad asociada con una caché de lectura flash (por ejemplo, las unidades SSD en SG6060) o cualquier pool o grupo de volúmenes que esté actualmente degradado.
+
+*Fuera de línea*:
+Las unidades se actualizan en paralelo mientras el dispositivo está en modo de mantenimiento. Si el pool o el grupo de volúmenes no es compatible con la redundancia o se degrada, se debe utilizar el método sin conexión para actualizar el firmware de la unidad. El método sin conexión actualiza el firmware solo cuando se detiene toda la actividad de I/O en las unidades para actualizarse. Para detener la actividad de I/O, coloque el nodo en modo de mantenimiento.
+
+El método sin conexión es más rápido que el método en línea y será significativamente más rápido cuando muchas unidades de un mismo dispositivo necesiten actualizaciones. Sin embargo, requiere que los nodos se retiren de servicio, lo que puede requerir programar una ventana de mantenimiento y supervisar el progreso. Elija el método que mejor se adapte a sus procedimientos operativos y la cantidad de unidades que deben actualizarse.
+
+
+CAUTION: Existen dos tipos de unidades: SSD y HDD. Debe utilizar el método sin conexión para actualizar el firmware de los SSD (por ejemplo, unidades SSD en SG6060). Puede utilizar el método en línea o sin conexión para actualizar el firmware en unidades de disco duro.
+
+.Pasos
+. Si está realizando una actualización sin conexión, confirme que el dispositivo está en link:../commonhardware/placing-appliance-into-maintenance-mode.html["modo de mantenimiento"].
++
+
+NOTE: Si va a actualizar el firmware en unidades SSD que son parte de un grupo de caché, debe asegurarse de que no se envíen I/O a los volúmenes almacenados en caché mientras la actualización está en curso. Cuando el dispositivo está en modo de mantenimiento, no se envían I/O a ningún volumen mientras la actualización está en curso.
+
+. Acceda a System Manager de SANtricity mediante uno de estos métodos:
++
+** Utilice el instalador del dispositivo StorageGRID y seleccione *Avanzado* > *Administrador del sistema SANtricity*
+** Utilice Grid Manager y seleccione *NODOS* > *_Nodo de almacenamiento_* > *Administrador del sistema de SANtricity*
+** Utilice SANtricity System Manager para acceder a la dirección IP de la controladora de almacenamiento: +
+`*https://_Storage_Controller_IP_*`
+
+
+. Si es necesario, introduzca el nombre de usuario y la contraseña del administrador del sistema SANtricity.
+. Compruebe la versión de firmware de la unidad instalada actualmente en el dispositivo de almacenamiento:
++
+.. En el Administrador del sistema de SANtricity, seleccione *SOPORTE* > *Centro de actualización*.
+.. En actualización del firmware de la unidad, seleccione *Iniciar actualización*.
++
+En la página Actualizar firmware de la unidad, se muestran los archivos de firmware de la unidad actualmente instalados.
+
+.. Tenga en cuenta las revisiones de firmware de la unidad actuales y los identificadores de unidades en la columna firmware de la unidad actual.
++
+image::../media/storagegrid_update_drive_firmware.png[Actualizar el firmware de la unidad]
+
++
+En este ejemplo:
+
++
+*** La revisión del firmware de la unidad es *MS02*.
+*** El identificador de la unidad es *KPM51VUG800G*.
+
+
+.. Seleccione *Ver unidades* en la columna unidades asociadas para mostrar dónde están instaladas estas unidades en el dispositivo de almacenamiento.
+.. Cierre la ventana Actualizar firmware de la unidad.
+
+
+. Descargue y prepare la actualización del firmware de la unidad disponible:
++
+.. En actualización del firmware de la unidad, seleccione *Soporte de NetApp*.
+.. En el sitio de soporte de NetApp, seleccione la pestaña *Descargas* y, a continuación, seleccione *Firmware de unidad de disco E-Series*.
++
+Se muestra la página firmware del disco E-Series.
+
+.. Busque cada *Identificador de unidad* instalado en el dispositivo de almacenamiento y compruebe que cada identificador de unidad tiene la última revisión de firmware.
++
+*** Si la revisión del firmware no es un enlace, este identificador de unidad tiene la revisión de firmware más reciente.
+*** Si se enumeran uno o varios números de pieza de unidad para un identificador de unidad, estas unidades tienen disponible una actualización de firmware. Puede seleccionar cualquier enlace para descargar el archivo de firmware.
++
+image::../media/storagegrid_drive_firmware_download.png[Página firmware del disco E-Series]
+
+
+
+.. Si aparece una revisión posterior del firmware, seleccione el enlace en la revisión del firmware (Descargar) para descargar una `.zip` archivo que contiene el archivo de firmware.
+.. Extraiga (descomprima) los archivos de almacenamiento del firmware de la unidad que descargó del sitio de soporte.
+
+
+. Instale la actualización del firmware de la unidad:
++
+.. En el Administrador del sistema de SANtricity, en actualización del firmware de la unidad, seleccione *comenzar actualización*.
+.. Seleccione *examinar* y seleccione los nuevos archivos de firmware de la unidad que descargó del sitio de soporte.
++
+Los archivos de firmware de la unidad tienen un nombre de archivo similar a +
+`D_HUC101212CSS600_30602291_MS01_2800_0002.dlp`.
+
++
+Es posible seleccionar hasta cuatro archivos de firmware de la unidad, uno por vez. Si más de un archivo de firmware de la unidad es compatible con la misma unidad, se muestra un error de conflicto de archivo. Decida qué archivo de firmware de la unidad desea usar para la actualización y elimine el otro.
+
+.. Seleccione *Siguiente*.
++
+*Select Drives* enumera las unidades que se pueden actualizar con los archivos de firmware seleccionados.
+
++
+Solo se muestran las unidades que son compatibles.
+
++
+El firmware seleccionado para la unidad aparece en la columna *Propuesto Firmware*. Si debe cambiar este firmware, seleccione *Atrás*.
+
+.. Seleccione el tipo de actualización que desea realizar:
++
+
+CAUTION: Debe utilizar el método sin conexión cuando se actualizan unidades SSD.
+
++
+*** *Actualizar todas las unidades en línea* — Actualiza las unidades que pueden admitir una descarga de firmware mientras la cabina de almacenamiento procesa E/S. No se deben detener las operaciones de I/O de los volúmenes asociados mediante estas unidades cuando se selecciona este método de actualización.
++
+
+NOTE: Una actualización en línea puede tardar varias horas más que una actualización sin conexión.
+
+*** *Actualizar todas las unidades sin conexión (paralelo)* — Actualiza las unidades que pueden admitir una descarga de firmware solo mientras se detiene toda la actividad de E/S en cualquier volumen que utilice las unidades.
++
+
+CAUTION: Antes de utilizar este método, debe poner el aparato en modo de mantenimiento. Debe utilizar el método *Offline* para actualizar el firmware de la unidad.
+
++
+
+CAUTION: Si desea utilizar la actualización sin conexión (paralelo), no continúe a menos que esté seguro de que el dispositivo está en modo de mantenimiento. Si no se coloca el dispositivo en modo de mantenimiento antes de iniciar una actualización de firmware de la unidad sin conexión, se podría perder datos.
+
+
+
+.. En la primera columna de la tabla, seleccione la o las unidades que desea actualizar.
++
+La práctica recomendada es actualizar todas las unidades del mismo modelo a la misma revisión de firmware.
+
+.. Seleccione *Inicio* y confirme que desea realizar la actualización.
++
+Si necesita detener la actualización, seleccione *Detener*. Se completa cualquier descarga de firmware actualmente en curso. Se cancela cualquier descarga de firmware que no haya comenzado.
+
++
+
+CAUTION: Si se detiene la actualización del firmware de la unidad, podrían producirse la pérdida de datos o la falta de disponibilidad de las unidades.
+
+.. (Opcional) para ver una lista de los elementos actualizados, seleccione *Guardar registro*.
++
+El archivo de registro se guarda en la carpeta de descargas del explorador con el nombre `latest-upgrade-log-timestamp.txt`.
+
++
+Si se produce alguno de los siguientes errores durante el procedimiento de actualización, realice la acción recomendada.
+
++
+*** *Unidades asignadas con errores*
++
+La causa de este error puede ser que la unidad no tenga la firma apropiada. Asegúrese de que la unidad afectada sea una unidad autorizada. Póngase en contacto con el soporte técnico para obtener más información.
+
++
+Al reemplazar una unidad, asegúrese de que la capacidad de la unidad de reemplazo sea igual o mayor que la de la unidad con error que desea reemplazar.
+
++
+Puede reemplazar la unidad con error mientras la cabina de almacenamiento recibe I/O.
+
+*** *Compruebe la matriz de almacenamiento*
++
+**** Asegúrese de que se haya asignado una dirección IP a cada controladora.
+**** Asegúrese de que ninguno de los cables conectados a la controladora esté dañado.
+**** Asegúrese de que todos los cables estén conectados firmemente.
+
+
+*** *Unidades de repuesto en caliente integradas*
++
+Es necesario corregir esta condición de error para poder actualizar el firmware.
+
+*** *Grupos de volúmenes incompletos*
++
+Si uno o varios grupos de volúmenes o pools de discos se muestran incompletos, es necesario corregir esta condición de error para poder actualizar el firmware.
+
+*** *Operaciones exclusivas (que no sean análisis de medios en segundo plano/paridad) que se estén ejecutando actualmente en cualquier grupo de volúmenes*
++
+Si existe una o varias operaciones exclusivas en curso, es necesario completarlas para poder actualizar el firmware. Utilice System Manager para supervisar el progreso de las operaciones.
+
+*** *Volúmenes que faltan*
++
+Es necesario corregir la condición de volumen ausente para poder actualizar el firmware.
+
+*** *Cualquiera de los controladores en un estado distinto al óptimo*
++
+Se requiere atención en una de las controladoras de la cabina de almacenamiento. Es necesario corregir esta condición para poder actualizar el firmware.
+
+*** *La información de partición de almacenamiento no coincide entre los gráficos de objetos del controlador*
++
+Se produjo un error durante la validación de los datos en las controladoras. Póngase en contacto con el soporte técnico para resolver este problema.
+
+*** *La verificación del controlador de base de datos de SPM falla*
++
+Se produjo un error en la base de datos de asignación de particiones de almacenamiento de una controladora. Póngase en contacto con el soporte técnico para resolver este problema.
+
+*** *Validación de la base de datos de configuración (si es compatible con la versión del controlador de la matriz de almacenamiento)*
++
+Se produjo un error en la base de datos de configuración de una controladora. Póngase en contacto con el soporte técnico para resolver este problema.
+
+*** *Comprobaciones relacionadas con MEL*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+*** *Se notificaron más de 10 eventos críticos MEL o informativos DDE en los últimos 7 días*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+*** *Se notificaron más de 2 Eventos críticos MEL de página 2C en los últimos 7 días*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+*** *Se notificaron más de 2 eventos críticos MEL del canal de unidad degradado en los últimos 7 días*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+*** * Más de 4 entradas cruciales MEL en los últimos 7 días*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+
+
+
+
+. Si estaba utilizando la actualización *Offline* y este procedimiento se completó correctamente, realice cualquier procedimiento de mantenimiento adicional mientras el nodo está en modo de mantenimiento. Cuando haya terminado, o si ha experimentado algún fallo y desea volver a empezar, vaya al instalador de dispositivos StorageGRID y seleccione * Avanzado * > * Controlador de reinicio *. A continuación, seleccione una de estas opciones:
++
+** *Reiniciar en StorageGRID*.
+** *Reiniciar en el modo de mantenimiento*. Reinicie la controladora y mantenga el nodo en modo de mantenimiento. Seleccione esta opción si se ha producido algún fallo durante el procedimiento y desea volver a empezar. Cuando el nodo termine de reiniciarse en el modo de mantenimiento, reinicie desde el paso adecuado del procedimiento en que falló.
++
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página Nodos debe mostrar el estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo) del nodo del dispositivo, lo que indica que no hay ninguna alerta activa y que el nodo está conectado a la cuadrícula.
+
++
+image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
+
+
+
+

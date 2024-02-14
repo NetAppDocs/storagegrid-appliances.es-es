@@ -1,0 +1,244 @@
+---
+permalink: installconfig/accessing-and-configuring-santricity-system-manager.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, SANtricity System Manager, SANtricity, System Manager, configure, configuring, setup, set up, setting up, access, accessing, E-Series AutoSupport, autosupport, configure, configuring, setup, set up, setting up, access, accessing, hardware, status, diagnostic, environment drives, drive, temperature, IP, IP address, management port, Appliance Installer 
+summary: Puede usar System Manager de SANtricity para supervisar el estado de las controladoras de almacenamiento, los discos de almacenamiento y otros componentes de hardware en la bandeja de controladoras de almacenamiento. También puede configurar un proxy para AutoSupport E-Series que permite enviar mensajes de AutoSupport desde el dispositivo sin utilizar el puerto de gestión. 
+---
+= Configuración del administrador del sistema de SANtricity (SG6000 y SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar System Manager de SANtricity para supervisar el estado de las controladoras de almacenamiento, los discos de almacenamiento y otros componentes de hardware en la bandeja de controladoras de almacenamiento. También puede configurar un proxy para AutoSupport E-Series que permite enviar mensajes de AutoSupport desde el dispositivo sin utilizar el puerto de gestión.
+
+
+
+== Configuración y acceso a System Manager de SANtricity
+
+Es posible que tenga que acceder a System Manager de SANtricity en la controladora de almacenamiento para supervisar el hardware de la bandeja de controladoras de almacenamiento o configurar AutoSupport de E-Series.
+
+.Antes de empezar
+* Está utilizando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Para acceder a SANtricity System Manager a través de Grid Manager, instaló StorageGRID y tiene los permisos de administrador o de acceso raíz de la aplicación de almacenamiento.
+* Para acceder a System Manager de SANtricity mediante el instalador de dispositivos de StorageGRID, tiene el nombre de usuario y la contraseña de administrador de SANtricity.
+* Para acceder a SANtricity System Manager directamente mediante un explorador web, tiene el nombre de usuario y la contraseña de administrador de SANtricity System Manager.
+
+
+
+NOTE: Debe tener firmware de SANtricity 8.70 o superior para acceder a System Manager de SANtricity mediante Grid Manager o el instalador de dispositivos de StorageGRID. Puede comprobar su versión de firmware mediante el instalador del dispositivo StorageGRID y seleccionando *Ayuda* > *Acerca de*.
+
+
+NOTE: Acceder a SANtricity System Manager desde Grid Manager o desde el instalador de dispositivos generalmente se realiza solo para supervisar el hardware y configurar E-Series AutoSupport. Muchas funciones y operaciones de SANtricity System Manager, como la actualización del firmware, no se aplican a la supervisión de su dispositivo StorageGRID. Para evitar problemas, siga siempre las instrucciones de instalación y mantenimiento del hardware del dispositivo.
+
+.Acerca de esta tarea
+Existen tres formas de acceder a System Manager de SANtricity, en función de la fase del proceso de instalación y configuración en la que se encuentre:
+
+* Si el dispositivo aún no se ha puesto en marcha como nodo en su sistema StorageGRID, debe usar la pestaña Avanzada del instalador de dispositivos de StorageGRID.
++
+
+NOTE: Una vez que el nodo se pone en marcha, ya no podrá utilizar el instalador de dispositivos de StorageGRID para acceder a System Manager de SANtricity.
+
+* Si el dispositivo se ha implementado como nodo en el sistema StorageGRID, use la pestaña SANtricity System Manager de la página Nodes de Grid Manager.
+* Si no puede usar el instalador o Grid Manager de StorageGRID, puede acceder a System Manager de SANtricity directamente mediante un explorador web conectado al puerto de gestión.
+
+
+Este procedimiento incluye los pasos para su acceso inicial a System Manager de SANtricity. Si ya ha configurado SANtricity System Manager, vaya a la  <<config_hardware_alerts_sg6000,configure el paso de alertas de hardware>>.
+
+
+NOTE: Utilizar Grid Manager o el instalador de dispositivos de StorageGRID le permite acceder a SANtricity System Manager sin necesidad de configurar ni conectar el puerto de gestión del dispositivo.
+
+Utilice System Manager de SANtricity para supervisar lo siguiente:
+
+* Datos de rendimiento como el rendimiento en cabinas de almacenamiento, la latencia de I/o, el uso de CPU y el rendimiento
+* Estado de los componentes de hardware
+* Entre las funciones de soporte se incluyen la visualización de datos de diagnóstico
+
+
+Puede usar System Manager de SANtricity para configurar las siguientes opciones:
+
+* Alertas por correo electrónico, alertas SNMP o alertas de syslog para los componentes de la bandeja de controladoras de almacenamiento
+* Configuración de AutoSupport de E-Series para los componentes de la bandeja de la controladora de almacenamiento.
++
+Si quiere más información sobre E-Series AutoSupport, consulte http://mysupport.netapp.com/info/web/ECMP1658252.html["Sitio de documentación para sistemas E-Series y EF-Series de NetApp"^].
+
+* Claves Drive Security, que se necesitan para desbloquear unidades seguras (este paso es necesario si la función Drive Security está habilitada)
+* Contraseña de administrador para acceder a System Manager de SANtricity
+
+
+.Pasos
+. Debe realizar una de las siguientes acciones:
++
+** Utilice el instalador del dispositivo StorageGRID y seleccione *Avanzado* > *Administrador del sistema SANtricity*
+** Utilice Grid Manager y seleccione *NODOS* > `*_appliance Storage Node_*` > *Administrador del sistema SANtricity*
+
+
++
+
+NOTE: Si estas opciones no están disponibles o la página de inicio de sesión no aparece, utilice <<Establezca las direcciones IP para las controladoras de almacenamiento mediante el instalador de dispositivos de StorageGRID,Las direcciones IP para las controladoras de almacenamiento>>. Para acceder a SANtricity System Manager, vaya a la IP de la controladora de almacenamiento.
+
+. Defina o introduzca la contraseña del administrador.
++
+SANtricity System Manager utiliza una única contraseña de administrador que comparten todos los usuarios.
+
++
+image::../media/san_setup_wizard.gif[Captura de pantalla que muestra el botón Cancelar para el asistente de configuración]
+
+. Seleccione *Cancelar* para cerrar el asistente.
++
+
+NOTE: No complete el asistente de configuración para un dispositivo StorageGRID.
+
++
+image::../media/sam_home_page.gif[Captura de pantalla de la página de inicio de SANtricity System Manager]
+
+. [[config_hardware_alerts_sg6000, start=4]]Configurar las alertas de hardware.
++
+.. Seleccione *Ayuda* para acceder a la ayuda en línea del Administrador del sistema de SANtricity.
+.. Utilice la sección *Configuración* > *Alertas* de la ayuda en línea para obtener información sobre las alertas.
+.. Siga las instrucciones de configuración para configurar alertas por correo electrónico, alertas SNMP o alertas syslog.
+
+
+. Gestione AutoSupport para los componentes de la bandeja de controladoras de almacenamiento.
++
+.. Seleccione *Ayuda* para acceder a la ayuda en línea del Administrador del sistema de SANtricity.
+.. Utilice la sección *SUPPORT* > *Support Center* de la ayuda en línea para obtener más información sobre la función AutoSupport.
+.. Siga las instrucciones «¿Cómo?» para gestionar AutoSupport.
++
+Para obtener instrucciones específicas sobre cómo configurar un proxy de StorageGRID para enviar mensajes de AutoSupport de E-Series sin utilizar el puerto de gestión, vaya a la https://docs.netapp.com/us-en/storagegrid-118/admin/configuring-storage-proxy-settings.html["instrucciones para configurar la configuración del proxy de almacenamiento"^].
+
+
+
+. Si la función Drive Security está habilitada para el dispositivo, cree y gestione la clave de seguridad.
++
+.. Seleccione *Ayuda* para acceder a la ayuda en línea del Administrador del sistema de SANtricity.
+.. Utilice la sección *Configuración* > *sistema* > *Gestión de claves de seguridad* de la ayuda en línea para obtener información sobre Drive Security.
+.. Siga las instrucciones de «Cómo» para crear y gestionar la clave de seguridad.
+
+
+. Si lo desea, puede cambiar la contraseña del administrador.
++
+.. Seleccione *Ayuda* para acceder a la ayuda en línea del Administrador del sistema de SANtricity.
+.. Utilice la sección *Inicio* > *Administración de matrices de almacenamiento* de la ayuda en línea para obtener información sobre la contraseña de administrador.
+.. Siga las instrucciones de "'Cómo'" para cambiar la contraseña.
+
+
+
+
+
+
+== Revisar el estado del hardware en System Manager de SANtricity
+
+Puede usar System Manager de SANtricity para supervisar y gestionar componentes de hardware individuales de la bandeja de controladoras de almacenamiento y para revisar la información medioambiental y los diagnósticos de hardware, como la temperatura de los componentes, así como los problemas relacionados con las unidades.
+
+.Antes de empezar
+* Está utilizando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Para acceder a SANtricity System Manager mediante Grid Manager, tiene el permiso de administrador de dispositivos de almacenamiento o permiso de acceso de raíz.
+* Para acceder a System Manager de SANtricity mediante el instalador de dispositivos de StorageGRID, tiene el nombre de usuario y la contraseña de administrador de SANtricity.
+* Para acceder a SANtricity System Manager directamente mediante un explorador web, tiene el nombre de usuario y la contraseña de administrador de SANtricity System Manager.
+
+
+
+NOTE: Debe tener firmware de SANtricity 8.70 o superior para acceder a System Manager de SANtricity mediante Grid Manager o el instalador de dispositivos de StorageGRID.
+
+
+NOTE: Acceder a SANtricity System Manager desde Grid Manager o desde el instalador de dispositivos generalmente se realiza solo para supervisar el hardware y configurar E-Series AutoSupport. Muchas funciones y operaciones de SANtricity System Manager, como la actualización del firmware, no se aplican a la supervisión de su dispositivo StorageGRID. Para evitar problemas, siga siempre las instrucciones de instalación y mantenimiento del hardware del dispositivo.
+
+.Pasos
+. <<Configuración y acceso a System Manager de SANtricity,Acceda a SANtricity System Manager>>.
+. Introduzca el nombre de usuario y la contraseña del administrador si es necesario.
+. Haga clic en *Cancelar* para cerrar el asistente de configuración y mostrar la página de inicio del Administrador del sistema de SANtricity.
++
+Se mostrará la página de inicio de SANtricity System Manager. En SANtricity System Manager, la bandeja de controladoras se denomina cabina de almacenamiento.
+
++
+image::../media/sam_home_page.gif[Captura de pantalla de la página de inicio de SANtricity System Manager]
+
+. Revise la información mostrada para el hardware del dispositivo y confirme que todos los componentes de hardware tienen un estado óptimo.
++
+.. Haga clic en la ficha *hardware*.
+.. Haga clic en *Mostrar parte posterior de la bandeja*.
++
+image::../media/sam_hardware_controllers_a_and_b.gif[Pestaña de estado de hardware en SANtricity System Manager]
+
++
+Desde la parte posterior de la bandeja, puede ver ambas controladoras de almacenamiento, la batería de cada controladora de almacenamiento, los dos contenedores de alimentación, los dos compartimentos de ventiladores y las bandejas de expansión (si los hubiera). También puede ver las temperaturas de los componentes.
+
+.. Para ver los ajustes de cada controlador de almacenamiento, seleccione el controlador y seleccione *Ver ajustes* en el menú contextual.
+.. Para ver la configuración de otros componentes de la parte posterior de la bandeja, seleccione el componente que desea ver.
+.. Haga clic en *Mostrar frente de la bandeja* y seleccione el componente que desea ver.
++
+Desde el frente de la bandeja, es posible ver las unidades y los cajones de unidades de la bandeja de controladoras de almacenamiento o las bandejas de expansión (si las hubiera).
+
+
+
+
+
+Si el estado de cualquier componente es necesita atención, siga los pasos de Recovery Guru para resolver el problema o póngase en contacto con el soporte técnico.
+
+
+
+== Establezca las direcciones IP para las controladoras de almacenamiento mediante el instalador de dispositivos de StorageGRID
+
+El puerto de gestión 1 de cada controladora de almacenamiento conecta el dispositivo a la red de gestión para SANtricity System Manager. Si no puede acceder a System Manager de SANtricity desde el instalador de dispositivos de StorageGRID, establezca una dirección IP estática para cada controladora de almacenamiento para garantizar que no se pierda la conexión de gestión con el hardware y el firmware de la controladora de la bandeja de controladoras.
+
+.Antes de empezar
+* Está utilizando cualquier cliente de gestión que pueda conectarse a la red de administración de StorageGRID o que tenga un portátil de servicio.
+* El cliente o el portátil de servicio tienen un navegador web compatible.
+
+
+.Acerca de esta tarea
+Las direcciones asignadas por DHCP pueden cambiar en cualquier momento. Asigne direcciones IP estáticas a las controladoras para garantizar una accesibilidad constante.
+
+
+NOTE: Siga este procedimiento solo si no tiene acceso al Administrador del sistema de SANtricity desde el Instalador de dispositivos de StorageGRID (*Avanzado* > *Administrador del sistema de SANtricity*) o Administrador de grid (*NODOS* > *Administrador del sistema de SANtricity*).
+
+.Pasos
+. Desde el cliente, introduzca la URL del instalador de dispositivos de StorageGRID: +
+`*https://_Appliance_Controller_IP_:8443*`
++
+Para `_Appliance_Controller_IP_`, Utilice la dirección IP del dispositivo en cualquier red StorageGRID.
+
++
+Aparece la página de inicio del instalador de dispositivos de StorageGRID.
+
+. Seleccione *Configurar hardware* > *Configuración de red del controlador de almacenamiento*.
++
+Aparece la página Storage Controller Network Configuration.
+
+. En función de la configuración de la red, seleccione *habilitado* para IPv4, IPv6 o ambos.
+. Anote la dirección IPv4 que se muestra automáticamente.
++
+DHCP es el método predeterminado para asignar una dirección IP al puerto de gestión de la controladora de almacenamiento.
+
++
+
+NOTE: Puede que los valores de DHCP deban tardar varios minutos en aparecer.
+
++
+image::../media/storage_controller_network_config_ipv4.gif[IPv4 de configuración de red de la controladora de almacenamiento]
+
+. De manera opcional, configurar una dirección IP estática para el puerto de gestión de la controladora de almacenamiento.
++
+
+NOTE: Debe asignar una IP estática al puerto de gestión o una concesión permanente para la dirección en el servidor DHCP.
+
++
+.. Seleccione *estático*.
+.. Introduzca la dirección IPv4 mediante la notación CIDR.
+.. Introduzca la pasarela predeterminada.
++
+image::../media/storage_controller_ipv4_and_def_gateway.gif[Configuración de red de la controladora de almacenamiento IPv4 y puerta de enlace predeterminada]
+
+.. Haga clic en *Guardar*.
++
+Puede que los cambios se apliquen en unos minutos.
+
++
+Cuando se conecta a SANtricity System Manager, utilizará la nueva dirección IP estática como la URL: +
+`*https://_Storage_Controller_IP_*`
+
+
+
+

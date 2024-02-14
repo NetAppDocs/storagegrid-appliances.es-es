@@ -1,0 +1,54 @@
+---
+permalink: installconfig/sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, drive shelf, drive shelves, 24-drive, shelf, shelves, rail, rails 
+summary: Instale un conjunto de rieles para la bandeja de controladoras EF570 en el armario o rack y, a continuación, deslice la cabina sobre los rieles. 
+---
+= Instalación de las bandejas de 24 unidades (SGF6024)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instale un conjunto de rieles para la bandeja de controladoras EF570 en el armario o rack y, a continuación, deslice la cabina sobre los rieles.
+
+.Antes de empezar
+* Ha revisado el documento de avisos de seguridad que se incluye en la caja y comprende las precauciones para mover e instalar el hardware.
+* Tiene las instrucciones incluidas en el kit de raíl.
+
+
+.Pasos
+. Siga con cuidado las instrucciones del kit de raíl para instalar los rieles en su armario o rack.
++
+Para armarios con orificios cuadrados, instale primero las tuercas de jaula proporcionadas para fijar la parte delantera y trasera del estante con tornillos.
+
+. Retire la caja de embalaje exterior del aparato. A continuación, pliegue las solapas de la caja interior.
+. Coloque la parte posterior de la bandeja (el extremo con los conectores) en los rieles.
++
+
+CAUTION: Una balda totalmente cargada pesa aproximadamente 24 kg (52 lb). Se necesitan dos personas para mover el recinto de forma segura.
+
+. Deslice con cuidado la caja completamente sobre los rieles.
++
+
+CAUTION: Es posible que tenga que ajustar los rieles para asegurarse de que el alojamiento se desliza completamente sobre los rieles.
+
++
+
+CAUTION: No coloque equipos adicionales en los rieles después de terminar de instalar el gabinete. Los rieles no están diseñados para soportar peso adicional.
+
++
+
+NOTE: Si corresponde, puede que deba retirar las tapas de extremo de la bandeja o el panel frontal del sistema para fijar el compartimento a la poste del rack; si es así, debe sustituir las tapas de extremo o el bisel cuando haya terminado.
+
+. Fije el compartimento a la parte frontal del armario o rack y los rieles introduciendo dos tornillos M5 a través de los soportes de montaje (preinstalados en ambos lados de la parte frontal del gabinete), los orificios en el rack o armario del sistema y los orificios en la parte frontal de los rieles.
++
+image::../media/secure_shelf.png[Fije una bandeja a la parte frontal del armario]
+
+. Fije la carcasa a la parte posterior de los rieles insertando dos tornillos M5 por los soportes de la carcasa y el soporte del kit de rieles.
+. Si procede, sustituya las tapas del extremo de la bandeja o el embellecedor del sistema.
++
+image::../media/install_endcaps.png[Reemplace las tapas de cierre de la bandeja]
+
+

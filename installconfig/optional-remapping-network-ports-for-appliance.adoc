@@ -1,0 +1,38 @@
+---
+permalink: installconfig/optional-remapping-network-ports-for-appliance.html 
+sidebar: sidebar 
+keywords: remap appliance ports, network, internal to external port mapping 
+summary: Opcionalmente, puede volver a asignar los puertos internos de un nodo de dispositivo a diferentes puertos externos. Por ejemplo, es posible que tenga que reasignar puertos debido a un problema de firewall. 
+---
+= Opcional: Reasignar puertos de red para el dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Opcionalmente, puede volver a asignar los puertos internos de un nodo de dispositivo a diferentes puertos externos. Por ejemplo, es posible que tenga que reasignar puertos debido a un problema de firewall.
+
+.Antes de empezar
+* Ya ha accedido anteriormente al instalador de dispositivos de StorageGRID.
+
+
+.Acerca de esta tarea
+No puede utilizar puertos reasignados para puntos finales de equilibrio de carga. Si necesita quitar un puerto reasignado, siga los pasos de https://docs.netapp.com/us-en/storagegrid-118/maintain/removing-port-remaps.html["Eliminar reasignaciones de puertos"^].
+
+.Pasos
+. En el instalador de dispositivos StorageGRID, seleccione *Configurar red* > *Puertos de reinstalación*.
++
+Aparecerá la página Remap Port.
+
+. En el cuadro desplegable *Red*, seleccione la red para el puerto que desea reasignar: Grid, Admin o Client.
+. En el cuadro desplegable *Protocolo*, seleccione el protocolo IP: TCP o UDP.
+. En el cuadro desplegable *Dirección de salida*, seleccione la dirección de tráfico que desea reasignar para este puerto: Entrante, saliente o bidireccional.
+. Para *Puerto original*, introduzca el número del puerto que desea reasignar.
+. En *Puerto asignado a*, introduzca el número del puerto que desea utilizar en su lugar.
+. Selecciona *Añadir regla*.
++
+La nueva asignación de puertos se agrega a la tabla y la reasignación tiene efecto inmediatamente.
+
+. Para eliminar una asignación de puertos, seleccione el botón de opción de la regla que desea eliminar y seleccione * Eliminar regla seleccionada *.
+

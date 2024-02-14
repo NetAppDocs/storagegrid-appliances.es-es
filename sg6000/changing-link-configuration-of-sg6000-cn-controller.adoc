@@ -1,0 +1,69 @@
+---
+permalink: sg6000/changing-link-configuration-of-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, admin node, link configuration, link, configure, configuring, ethernet, port bond mode, port bond, network bond mode, network bond, link speed, vlan tagging, vlan tag 
+summary: Puede cambiar la configuración del enlace Ethernet del controlador SG6000-CN. Puede cambiar el modo de enlace de puerto, el modo de enlace de red y la velocidad del enlace. 
+---
+= Cambiar la configuración del enlace del controlador SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede cambiar la configuración del enlace Ethernet del controlador SG6000-CN. Puede cambiar el modo de enlace de puerto, el modo de enlace de red y la velocidad del enlace.
+
+.Antes de empezar
+El aparato se ha estado link:../commonhardware/placing-appliance-into-maintenance-mode.html["se colocó en modo de mantenimiento"].
+
+.Acerca de esta tarea
+Las opciones para cambiar la configuración del enlace Ethernet del controlador SG6000-CN incluyen:
+
+* Cambiando *modo de enlace de puerto* de fijo a agregado, o de agregado a fijo
+* Cambio del *modo de enlace de red* de Active-Backup a LACP o de LACP a Active-Backup
+* Habilitar o deshabilitar el etiquetado de VLAN, o cambiar el valor de una etiqueta de VLAN
+* Cambio de la velocidad de enlace.
+
+
+.Pasos
+. En el instalador de dispositivos StorageGRID, seleccione *Configurar red* > *Configuración de enlace*.
++
+image::../media/link_configuration_option.gif[Configuración de enlace]
+
+. [[link_config_Changes, start=2]]realice los cambios deseados en la configuración del enlace.
++
+Para obtener más información sobre las opciones, consulte link:../installconfig/configuring-network-links.html["Configure los enlaces de red"].
+
+. Cuando esté satisfecho con sus selecciones, haga clic en *Guardar*.
++
+
+NOTE: Puede perder la conexión si ha realizado cambios en la red o el enlace que está conectado a través de. Si no se vuelve a conectar en 1 minuto, vuelva a introducir la URL del instalador de dispositivos de StorageGRID mediante una de las otras direcciones IP asignadas al dispositivo: +
+`*https://_Appliance_Controller_IP_:8443*`
+
++
+Si ha realizado cambios en la configuración de VLAN, es posible que la subred del dispositivo haya cambiado. Si necesita cambiar las direcciones IP del dispositivo, siga el https://docs.netapp.com/us-en/storagegrid-118/maintain/configuring-ip-addresses.html["Configurar las direcciones IP"^] instrucciones.
+
++
+link:../installconfig/setting-ip-configuration.html["Configure las direcciones IP de StorageGRID"]
+
+. Seleccione *Configurar red* > *Prueba de ping* en el menú.
+. Utilice la herramienta Ping Test para comprobar la conectividad a las direcciones IP en cualquier red que pudiera haber sido afectada por los cambios de configuración de vínculos realizados en <<link_config_changes,cambios de configuración del enlace>> paso.
++
+Además de cualquier otra prueba que elija realizar, confirme que puede hacer ping a la dirección IP de red de cuadrícula del nodo de administración principal y a la dirección IP de red de cuadrícula de al menos otro nodo de almacenamiento. Si es necesario, vuelva al <<link_config_changes,cambios de configuración del enlace>> avance y corrija cualquier problema con la configuración de los enlaces.
+
+. Una vez satisfecho de que los cambios de configuración de los enlaces están funcionando y que se tienen que realizar procedimientos adicionales mientras el nodo se encuentra en modo de mantenimiento, estos deben realizarse ahora. Cuando haya terminado, o si ha experimentado algún fallo y desea volver a empezar, seleccione *Avanzado* > *Reiniciar controlador* y, a continuación, seleccione una de estas opciones:
++
+** Seleccione *Reiniciar en StorageGRID*
+** Seleccione *Reiniciar en el modo de mantenimiento* para reiniciar el controlador con el nodo restante en modo de mantenimiento.  Seleccione esta opción si ha experimentado algún error durante el procedimiento y desea volver a empezar.  Cuando el nodo termine de reiniciarse en el modo de mantenimiento, reinicie desde el paso adecuado del procedimiento en que falló.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
+
++
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página *NODES* debe mostrar un estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo) del nodo del dispositivo, lo que indica que no hay ninguna alerta activa y que el nodo está conectado a la cuadrícula.
+
++
+image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
+
+
+
+

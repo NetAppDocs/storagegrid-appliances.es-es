@@ -1,0 +1,99 @@
+---
+permalink: commonhardware/how-appliance-node-cloning-works.html 
+sidebar: sidebar 
+keywords: storagegrid, appliance node cloning, appliance node clone 
+summary: Puede clonar un nodo de dispositivo en StorageGRID para usar un dispositivo de diseño más reciente o más capacidades. La clonación transfiere toda la información sobre el nodo existente al nuevo dispositivo, proporciona un proceso de actualización de hardware fácil de llevar a cabo y ofrece una alternativa al decomisionado y la expansión para reemplazar dispositivos. 
+---
+= Clonación de nodos del dispositivo: Información general
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede clonar un nodo de dispositivo en StorageGRID para usar un dispositivo de diseño más reciente o más capacidades. La clonación transfiere toda la información sobre el nodo existente al nuevo dispositivo, proporciona un proceso de actualización de hardware fácil de llevar a cabo y ofrece una alternativa al decomisionado y la expansión para reemplazar dispositivos.
+
+El clonado de nodos de dispositivos le permite sustituir fácilmente un nodo de dispositivos (origen) existente en el grid por un dispositivo compatible (destino) que forma parte del mismo sitio lógico de StorageGRID. El proceso transfiere todos los datos al dispositivo nuevo, situándolos en servicio para sustituir el nodo de dispositivo antiguo y dejar el dispositivo antiguo en estado previo a la instalación.
+
+
+
+== ¿Por qué se debe clonar un nodo de dispositivo?
+
+Puede clonar un nodo de dispositivo si necesita:
+
+* Sustituya los aparatos que están llegando al final de su vida útil.
+* Actualice los nodos existentes para aprovechar la tecnología de dispositivos mejorada.
+* Aumente la capacidad de almacenamiento Grid sin cambiar el número de nodos de almacenamiento en el sistema StorageGRID.
+* Mejore la eficiencia del almacenamiento, como, por ejemplo, cambiando el modo RAID de DDP-8 a DDP-16 o a RAID-6.
+* Implementar de forma eficiente el cifrado de nodos para permitir el uso de servidores de gestión de claves externos (KMS).
+
+
+
+
+== ¿Qué red StorageGRID se utiliza?
+
+La clonación transfiere datos del nodo de origen directamente al dispositivo de destino mediante cualquiera de las tres redes de StorageGRID. La red de cuadrícula se utiliza normalmente, pero también puede utilizar la red de administración o la red de cliente si el dispositivo de origen está conectado a estas redes. Elija la red que se utilizará para clonar tráfico que ofrece el mejor rendimiento de transferencia de datos sin perjudicar el rendimiento de la red de StorageGRID y la disponibilidad de los datos.
+
+Al instalar el dispositivo de repuesto, debe especificar direcciones IP temporales para la conexión StorageGRID y la transferencia de datos. Como el dispositivo de reemplazo formará parte de las mismas redes que el nodo del dispositivo al que sustituye, debe especificar direcciones IP temporales para cada una de estas redes en el dispositivo de reemplazo.
+
+
+
+== Compatibilidad con el dispositivo de destino
+
+Los dispositivos de reemplazo deben ser del mismo tipo que el nodo origen que sustituyen y ambos deben formar parte del mismo sitio lógico de StorageGRID.
+
+* Un dispositivo de servicios de sustitución puede ser diferente al nodo de administración o al nodo de puerta de enlace que va a sustituir.
++
+** Puede clonar un dispositivo de nodo de origen SG100 a un dispositivo de destino de servicios SG1000 para que tenga mayor capacidad para el nodo de administración o el nodo de puerta de enlace.
+** Puede clonar un dispositivo de nodo fuente SG1000 en un dispositivo objetivo de servicios SG100 para volver a instalar el SG1000 para una aplicación más exigente.
++
+Por ejemplo, si un dispositivo de nodo de origen SG1000 se está utilizando como nodo de administración y desea utilizarlo como nodo de equilibrio de carga dedicado.
+
+** La sustitución de un dispositivo de nodo de origen SG1000 por un dispositivo de destino de servicios SG100 reduce la velocidad máxima de los puertos de red de 100-GbE a 25-GbE.
+** Los dispositivos de servicios tienen diferentes conectores de red. Puede que sea necesario cambiar el tipo de dispositivo reemplazando los cables o los módulos SFP.
+
+
+* Un dispositivo de almacenamiento de sustitución debe tener mayor capacidad que el nodo de almacenamiento que sustituye.
++
+** Si el dispositivo de almacenamiento objetivo tiene la misma cantidad de unidades que el nodo de origen, las unidades del dispositivo objetivo deben tener mayor capacidad (en TB).
+** Si tiene previsto utilizar el mismo modo RAID en el nodo de destino que se utilizó en el nodo de origen, O un modo RAID menos eficiente del almacenamiento (por ejemplo, cambiar de RAID 6 a DDP), las unidades del dispositivo de destino deben ser mayores (en TB) que las unidades del dispositivo de origen.
+** Si la cantidad de unidades estándar instaladas en un dispositivo de almacenamiento de destino es menor que la cantidad de unidades en el nodo de origen, debido a la instalación de unidades de estado sólido (SSD), la capacidad de almacenamiento general de las unidades estándar en el dispositivo de destino (en TB). Debe superar la capacidad total de la unidad funcional de todas las unidades en el nodo de almacenamiento de origen.
++
+Por ejemplo, al clonar un dispositivo con nodos de almacenamiento de origen de SG5760 TB con 60 unidades a un dispositivo de destino SG6060 con 58 unidades estándar, deben instalarse unidades más grandes en el dispositivo de destino SG6060 antes de clonar para mantener la capacidad de almacenamiento. (Las dos ranuras de unidad que contienen SSD en el dispositivo de destino no se incluyen en la capacidad total de almacenamiento del dispositivo).
+
++
+Sin embargo, si un dispositivo de nodo de origen SG5760 de 60 unidades está configurado con los pools de discos dinámicos SANtricity DDP-8, configurar un dispositivo de destino SG6060 de 58 unidades del mismo tamaño con DDP-16 podría convertir al dispositivo SG6060 en un destino clonado válido debido a la eficiencia mejorada del almacenamiento.
+
++
+Puede ver información acerca del modo RAID actual del nodo del dispositivo de origen en la página *NODES* de Grid Manager. Seleccione la ficha *almacenamiento* del dispositivo.
+
+
+
+
+
+
+
+== ¿Qué información no se clona?
+
+Las siguientes configuraciones de dispositivos no se transfieren al dispositivo de reemplazo durante el clonado. Debe configurarlos durante la configuración inicial del dispositivo de reemplazo.
+
+* Interfaz de BMC
+* Enlaces de red
+* Estado de cifrado de nodos
+* SANtricity System Manager (para nodos de almacenamiento)
+* Modo RAID (para nodos de almacenamiento)
+
+
+
+
+== ¿Qué problemas evitan la clonación?
+
+Si se encuentra alguno de los siguientes problemas durante la clonado, el proceso de clonado se detiene y se genera un mensaje de error:
+
+* Configuración de red incorrecta
+* Falta de conectividad entre los dispositivos de origen y de destino
+* Incompatibilidad de dispositivos de origen y de destino
+* Para los nodos de almacenamiento, un dispositivo de sustitución con capacidad insuficiente
+
+
+Debe resolver cada problema para que la clonación continúe.

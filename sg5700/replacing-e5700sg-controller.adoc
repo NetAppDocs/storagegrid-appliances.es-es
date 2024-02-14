@@ -1,0 +1,117 @@
+---
+permalink: sg5700/replacing-e5700sg-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, Replacing, replace, E5700sg, controller, remove, removing, removal, install, installing, installation 
+summary: Es posible que deba sustituir la controladora E5700SG si no funciona de forma óptima o si ha fallado. 
+---
+= Sustituya el controlador de computación E5700SG
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que deba sustituir la controladora E5700SG si no funciona de forma óptima o si ha fallado.
+
+.Antes de empezar
+* Tiene una controladora de sustitución con el mismo número de pieza que la controladora que desea sustituir.
+* Ha descargado las instrucciones de E-Series para reemplazar una controladora E5700 con errores.
++
+
+NOTE: Utilice las instrucciones E-Series como referencia solo si necesita más detalles para realizar un paso específico. No confíe en las instrucciones E-Series para sustituir una controladora con el dispositivo StorageGRID, ya que los procedimientos no son los mismos. Por ejemplo, las instrucciones de E-Series para la controladora E5700 describen cómo quitar la batería y la tarjeta de interfaz del host (HIC) de una controladora con errores e instalarlas en una controladora de reemplazo. Estos pasos no se aplican a la controladora E5700SG.
+
+* Tiene etiquetas para identificar cada cable conectado a la controladora.
+
+
+.Acerca de esta tarea
+No se podrá acceder al nodo de almacenamiento del dispositivo cuando se sustituye la controladora. Si el controlador E5700SG funciona lo suficiente, puede realizar un apagado controlado al inicio de este procedimiento.
+
+
+NOTE: Si va a sustituir la controladora antes de instalar el software StorageGRID, es posible que no pueda acceder al instalador de dispositivos de StorageGRID inmediatamente después de completar este procedimiento. Aunque puede acceder al instalador de dispositivos de StorageGRID desde otros hosts en la misma subred que el dispositivo, no puede acceder a él desde hosts en otras subredes. Esta condición debe resolverse dentro de los 15 minutos (cuando se agota cualquier entrada de caché ARP para el tiempo de espera original de la controladora); asimismo, puede borrar la condición de inmediato mediante la purga manual de todas las entradas antiguas de la caché ARP desde el enrutador o la puerta de enlace local.
+
+.Pasos
+. Apague el controlador E5700SG.
++
+.. Inicie sesión en el nodo de grid:
++
+... Introduzca el siguiente comando: `ssh admin@_grid_node_IP_`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+... Introduzca el siguiente comando para cambiar a la raíz: `su -`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
++
+Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para `#`.
+
+
+
+.. Apague el controlador E5700SG: +
+`*shutdown -h now*`
+.. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa en la parte posterior de la controladora E2800 está encendido cuando es necesario escribir datos en caché en las unidades. Debe esperar a que se apague este LED.
+
+
+
+. Apague la alimentación.
++
+.. En la página de inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+.. Confirmar que se han completado todas las operaciones.
+.. Apague los dos interruptores de alimentación del aparato.
+.. Espere a que se apagen todos los LED.
+
+
+. Si las redes StorageGRID conectadas a la controladora utilizan servidores DHCP:
++
+.. Tenga en cuenta las direcciones MAC de los puertos de la controladora de reemplazo (que se encuentran en las etiquetas de la controladora).
+.. Solicite al administrador de red que actualice la configuración de la dirección IP de la controladora original para reflejar las direcciones MAC de la controladora de reemplazo.
++
+
+CAUTION: Debe asegurarse de que las direcciones IP de la controladora original se hayan actualizado antes de aplicar alimentación a la controladora de reemplazo. De lo contrario, la controladora obtendrá nuevas direcciones IP de DHCP cuando se arranca y es posible que no pueda volver a conectarse a StorageGRID. Este paso se aplica a todas las redes StorageGRID conectadas a la controladora.
+
+
+
+. Retire el controlador del dispositivo:
++
+.. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+.. Etiquete los cables y desconecte los cables y SFP.
++
+
+NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+.. Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta que se suelte y, a continuación, abra el asa de leva a la derecha.
+.. Con dos manos y el mango de la leva, deslice el controlador para sacarlo del aparato.
++
+
+CAUTION: Utilice siempre dos manos para soportar el peso del controlador.
+
+
+
+. Instale el controlador de repuesto en el aparato.
++
+.. Dé la vuelta al controlador de modo que la cubierta extraíble quede orientada hacia abajo.
+.. Con el mango de la leva en la posición abierta, deslice el controlador completamente en el aparato.
+.. Mueva la palanca de leva hacia la izquierda para bloquear el controlador en su sitio.
+.. Sustituya los cables y SFP.
+
+
+. Encienda el dispositivo y supervise los LED del controlador y las pantallas de siete segmentos.
++
+Una vez que las controladoras se hayan iniciado correctamente, las pantallas de siete segmentos deberían mostrar lo siguiente:
+
++
+** Controladora de la serie E2800:
++
+El estado final es `99`.
+
+** Controladora E5700SG:
++
+El estado final es `HA`.
+
+
+
+. Confirme que el nodo de almacenamiento del dispositivo aparece en Grid Manager y que no aparece ninguna alarma.
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+
+.Información relacionada
+http://mysupport.netapp.com/info/web/ECMP1658252.html["Sitio de documentación para sistemas E-Series y EF-Series de NetApp"^]

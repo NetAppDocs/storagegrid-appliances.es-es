@@ -1,0 +1,558 @@
+---
+permalink: installconfig/gathering-installation-information-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance StorageGRID, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup 
+summary: En las tablas, registre la información necesaria para cada red que conecte al dispositivo. Estos valores son necesarios para instalar y configurar el hardware. 
+---
+= Recopilar información de red (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En las tablas, registre la información necesaria para cada red que conecte al dispositivo. Estos valores son necesarios para instalar y configurar el hardware.
+
+
+TIP: En lugar de utilizar las tablas, utilice el libro de trabajo proporcionado con ConfigBuilder. El uso del libro de trabajo de ConfigBuilder permite cargar información del sistema y generar un archivo JSON para completar automáticamente algunos pasos de configuración en el instalador de dispositivos de StorageGRID. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
+
+
+
+== La información necesaria para conectarse con System Manager de SANtricity en controladoras de almacenamiento
+
+Conecte las dos controladoras de almacenamiento del dispositivo (ya sea las controladoras de la serie E2800 o las controladoras EF570) a la red de gestión que utilizará para System Manager de SANtricity. Los controladores se encuentran en cada dispositivo de la siguiente manera:
+
+* SG6060 y SG606060X: El controlador A está en la parte superior y el controlador B en la parte inferior.
+* SGF6024: El controlador A está a la izquierda y el controlador B a la derecha.
+
+
+[cols="2a,1a,1a"]
+|===
+| Información necesaria | Su valor para la controladora A | Su valor para la controladora B. 
+
+
+ a| 
+Puerto del switch Ethernet que se conectará al puerto de gestión 1 (con la etiqueta P1 en la controladora)
+ a| 
+ a| 
+
+
+
+ a| 
+Dirección MAC del puerto de gestión 1 (impreso en una etiqueta cerca del puerto P1)
+ a| 
+ a| 
+
+
+
+ a| 
+Dirección IP asignada por DHCP para el puerto de gestión 1, si está disponible después de encenderse
+
+*Nota:* Si la red que va a conectar al controlador de almacenamiento incluye un servidor DHCP, el administrador de red puede utilizar la dirección MAC para determinar la dirección IP asignada por el servidor DHCP.
+ a| 
+ a| 
+
+
+
+ a| 
+Dirección IP estática que planea usar para el dispositivo en la red de gestión
+ a| 
+Para IPv4:
+
+* Dirección IPv4:
+* Máscara de subred:
+* Puerta de enlace:
+
+
+Para IPv6:
+
+* Dirección IPv6:
+* Dirección IP enrutable:
+* Dirección IP del enrutador de la controladora de almacenamiento:
+
+ a| 
+Para IPv4:
+
+* Dirección IPv4:
+* Máscara de subred:
+* Puerta de enlace:
+
+
+Para IPv6:
+
+* Dirección IPv6:
+* Dirección IP enrutable:
+* Dirección IP del enrutador de la controladora de almacenamiento:
+
+
+
+
+ a| 
+Formato de dirección IP
+ a| 
+Elija una opción:
+
+* IPv4
+* IPv6
+
+ a| 
+Elija una opción:
+
+* IPv4
+* IPv6
+
+
+
+
+ a| 
+Velocidad y modo doble
+
+*Nota:* debe asegurarse de que el conmutador Ethernet de la red de administración de SANtricity System Manager está establecido en Negotiate automático.
+ a| 
+Debe ser:
+
+* Autonegociar (predeterminado)
+
+ a| 
+Debe ser:
+
+* Autonegociar (predeterminado)
+
+
+|===
+
+
+== Información necesaria para conectar el controlador SG6000-CN a la red Admin
+
+La red de administración de StorageGRID es una red opcional que se utiliza para la administración y el mantenimiento del sistema. El dispositivo se conecta a la red Admin mediante los siguientes puertos de gestión de 1 GbE en el controlador SG6000-CN.
+
+image::../media/rj_45_ports_circled.png[Puertos RJ-45]
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+Red de administrador habilitada
+ a| 
+Elija una opción:
+
+* No
+* Sí (predeterminado)
+
+
+
+
+ a| 
+Modo de enlace de red
+ a| 
+Elija una opción:
+
+* Independiente (predeterminado)
+* Copia de seguridad activa
+
+
+
+
+ a| 
+Puerto de switch para el puerto izquierdo en el círculo rojo del diagrama (puerto activo predeterminado para el modo de enlace de red independiente)
+ a| 
+
+
+
+ a| 
+Puerto de switch para el puerto derecho en el círculo rojo del diagrama (sólo modo de enlace de red Active-Backup)
+ a| 
+
+
+
+ a| 
+Dirección MAC del puerto de red de administración
+
+*Nota:* la etiqueta de dirección MAC situada en la parte frontal del controlador SG6000-CN enumera la dirección MAC del puerto de administración del BMC. Para determinar la dirección MAC del puerto de red de administración, debe agregar *2* al número hexadecimal de la etiqueta. Por ejemplo, si la dirección MAC de la etiqueta termina en *09*, la dirección MAC del puerto de administración finalizará en *0B*. Si la dirección MAC de la etiqueta termina en *(_y_)FF*, la dirección MAC del puerto de administración finalizará en *(_y_+1)01*. Puede realizar este cálculo fácilmente abriendo Calculadora en Windows, establecerlo en modo Programador, seleccionando hex, escribiendo la dirección MAC y, a continuación, escribiendo *+ 2 =*.
+ a| 
+
+
+
+ a| 
+Dirección IP asignada por DHCP para el puerto de red de administración, si está disponible después del encendido
+
+*Nota:* puede determinar la dirección IP asignada por DHCP utilizando la dirección MAC para buscar la dirección IP asignada.
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Dirección IP estática que piensa usar para el nodo de almacenamiento del dispositivo en la red de administración
+
+*Nota:* Si su red no tiene una puerta de enlace, especifique la misma dirección IPv4 estática para la puerta de enlace.
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Subredes de red de administración (CIDR)
+ a| 
+
+|===
+
+
+== Información necesaria para conectar y configurar puertos 10/25-GbE en el controlador SG6000-CN
+
+Los cuatro puertos 10/25-GbE del controlador SG6000-CN se conectan a la red de red StorageGRID y a la red de cliente opcional.
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+Velocidad de enlace
+ a| 
+Elija una opción:
+
+* Automático (predeterminado)
+* 10 GbE
+* 25 GbE
+
+
+
+
+ a| 
+Modo de enlace de puerto
+ a| 
+Elija una opción:
+
+* Fijo (predeterminado)
+* Agregado
+
+
+
+
+ a| 
+Puerto de conmutador para el puerto 1 (red cliente para modo fijo)
+ a| 
+
+
+
+ a| 
+Puerto de conmutador para el puerto 2 (red de cuadrícula para modo fijo)
+ a| 
+
+
+
+ a| 
+Puerto de switch para el puerto 3 (red cliente para modo fijo)
+ a| 
+
+
+
+ a| 
+Puerto de switch para el puerto 4 (Red de red para el modo fijo)
+ a| 
+
+|===
+
+
+== Información necesaria para conectar el controlador SG6000-CN a la red Grid
+
+Grid Network para StorageGRID es una red necesaria que se utiliza para todo el tráfico interno de StorageGRID. El dispositivo se conecta a la red Grid mediante los puertos 10/25-GbE del controlador SG6000-CN.
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+Modo de enlace de red
+ a| 
+Elija una opción:
+
+* Active-Backup (predeterminado)
+* LACP (802,3ad)
+
+
+
+
+ a| 
+Etiquetado VLAN habilitado
+ a| 
+Elija una opción:
+
+* No (predeterminado)
+* Sí
+
+
+
+
+ a| 
+Etiqueta de VLAN (si el etiquetado de VLAN está habilitado)
+ a| 
+Introduzca un valor entre 0 y 4095:
+
+
+
+ a| 
+Dirección IP asignada por DHCP para la red de cuadrícula, si está disponible después del encendido
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Dirección IP estática que tiene previsto usar para el nodo de almacenamiento del dispositivo en la red de grid
+
+*Nota:* Si su red no tiene una puerta de enlace, especifique la misma dirección IPv4 estática para la puerta de enlace.
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Subredes de red de cuadrícula (CIDR)
+ a| 
+
+|===
+
+
+== La información necesaria para conectar el controlador SG6000-CN a la red cliente
+
+La red de cliente para StorageGRID es una red opcional que se suele utilizar para proporcionar acceso al protocolo de cliente al grid. El dispositivo se conecta a la red cliente mediante los puertos 10/25-GbE del controlador SG6000-CN.
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+Red de cliente habilitada
+ a| 
+Elija una opción:
+
+* No (predeterminado)
+* Sí
+
+
+
+
+ a| 
+Modo de enlace de red
+ a| 
+Elija una opción:
+
+* Active-Backup (predeterminado)
+* LACP (802,3ad)
+
+
+
+
+ a| 
+Etiquetado VLAN habilitado
+ a| 
+Elija una opción:
+
+* No (predeterminado)
+* Sí
+
+
+
+
+ a| 
+Etiqueta de VLAN (si el etiquetado de VLAN está habilitado)
+ a| 
+Introduzca un valor entre 0 y 4095:
+
+
+
+ a| 
+Dirección IP asignada por DHCP para la red cliente, si está disponible después del encendido
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Dirección IP estática que tiene previsto usar para el nodo de almacenamiento del dispositivo en la red cliente
+
+*Nota:* Si la red de cliente está activada, la ruta predeterminada del controlador utilizará la puerta de enlace especificada aquí.
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+|===
+
+
+== Información necesaria para conectar el controlador SG6000-CN a la red de gestión BMC
+
+Puede acceder a la interfaz del BMC en el controlador SG6000-CN utilizando el siguiente puerto de gestión de 1 GbE. Este puerto admite la gestión remota del hardware de la controladora a través de Ethernet mediante el estándar de interfaz de gestión de plataforma inteligente (IPMI).
+
+image::../media/bmc_management_port.gif[Puerto de gestión de BMC]
+
+
+NOTE: Es posible habilitar o deshabilitar el acceso IPMI remoto para todos los dispositivos que contengan un BMC. La interfaz de IPMI remota permite que cualquier persona que tenga una cuenta y una contraseña de BMC acceda al hardware de bajo nivel a sus dispositivos StorageGRID. Si no necesita acceso remoto de IPMI a BMC, deshabilite esta opción mediante uno de los siguientes métodos: +
+En Grid Manager, vaya a *CONFIGURACIÓN* > *SEGURIDAD* > *CONFIGURACIÓN DE SEGURIDAD* > *Electrodomésticos* y desactive la casilla de verificación *Habilitar acceso remoto a IPMI*. +
+En la API de administración de grid, utilice el extremo privado: `PUT /private/bmc`.
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+Puerto del switch Ethernet se conectará al puerto de administración del BMC (con un círculo en el diagrama)
+ a| 
+
+
+
+ a| 
+Dirección IP asignada por DHCP para la red de gestión de BMC, si está disponible después del encendido
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+La dirección IP estática que planea usar para el puerto de gestión de BMC
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+|===
+
+
+== Modos de enlace de puerto
+
+Cuando link:configuring-network-links.html["configurar enlaces de red"] Para el controlador SG6000-CN, puede utilizar la unión de puertos para los puertos 10/25 GbE que se conectan a la red de grid y la red cliente opcional, y los puertos de administración de 1 GbE que se conectan a la red de administración opcional. El enlace de puertos ayuda a proteger los datos proporcionando rutas redundantes entre las redes StorageGRID y el dispositivo.
+
+
+
+=== Modos de enlace de red para puertos 10/25-GbE
+
+Los puertos de red de 10/25 GbE del controlador SG6000-CN admiten el modo de enlace de puerto fijo o el modo de enlace de puerto agregado para las conexiones de red de red de Grid y de red de cliente.
+
+
+
+==== Modo de enlace de puerto fijo
+
+El modo fijo es la configuración predeterminada para los puertos de red de 10/25-GbE.
+
+image::../media/sg6000_cn_fixed_port.gif[Modo de enlace de puerto fijo]
+
+[cols="1a,3a"]
+|===
+| Llamada | Qué puertos están Unidos 
+
+
+ a| 
+C
+ a| 
+Los puertos 1 y 3 se unen para la red cliente, si se utiliza esta red.
+
+
+
+ a| 
+G
+ a| 
+Los puertos 2 y 4 están Unidos para la red de cuadrícula.
+
+|===
+Cuando se utiliza el modo de enlace de puerto fijo, los puertos se pueden enlazar mediante el modo de copia de seguridad activa o el modo de protocolo de control de agregación de enlaces (LACP 802.3ad).
+
+* En el modo activo-backup (predeterminado), solo hay un puerto activo a la vez. Si se produce un error en el puerto activo, su puerto de backup proporciona automáticamente una conexión de conmutación por error. El puerto 4 proporciona una ruta de copia de seguridad para el puerto 2 (red de red de cuadrícula) y el puerto 3 proporciona una ruta de copia de seguridad para el puerto 1 (red de cliente).
+* En el modo LACP, cada par de puertos forma un canal lógico entre la controladora y la red, lo que permite un mayor rendimiento. Si un puerto falla, el otro continúa proporcionando el canal. El rendimiento se reduce, pero la conectividad no se ve afectada.
+
+
+
+NOTE: Si no necesita conexiones redundantes, puede utilizar solo un puerto para cada red. No obstante, tenga en cuenta que se activará una alerta en el Administrador de grid después de instalar StorageGRID, lo que indica que el enlace está inactivo. Dado que este puerto está desconectado por propósito, puede deshabilitar esta alerta de forma segura.
+
+En Grid Manager, selecciona *Alerta* > *Reglas*, selecciona la regla y haz clic en *Editar regla*. A continuación, desmarque la casilla de verificación *enabled*.
+
+
+
+==== Modo de enlace de puerto agregado
+
+El modo de enlace de puerto de agregado aumenta de forma significativa las mejoras en cada red StorageGRID y proporciona rutas de conmutación al nodo de respaldo adicionales.
+
+image::../media/sg6000_cn_aggregate_port.gif[Modo de enlace de puerto agregado]
+
+[cols="1a,3a"]
+|===
+| Llamada | Qué puertos están Unidos 
+
+
+ a| 
+1
+ a| 
+Todos los puertos conectados se agrupan en un único enlace LACP, lo que permite que todos los puertos se usen para el tráfico de red de grid y de red de cliente.
+
+|===
+Si tiene pensado utilizar el modo de enlace de puerto agregado:
+
+* Debe usar el modo de enlace de red LACP.
+* Debe especificar una etiqueta de VLAN exclusiva para cada red. Esta etiqueta VLAN se añadirá a cada paquete de red para garantizar que el tráfico de red se dirija a la red correcta.
+* Los puertos deben estar conectados a switches que sean compatibles con VLAN y LACP. Si varios switches participan en el enlace LACP, los switches deben ser compatibles con los grupos de agregación de enlaces de varios chasis (MLAG), o equivalentes.
+* Comprenderá cómo configurar los switches para usar VLAN, LACP, y MLAG, o equivalente.
+
+
+Si no desea utilizar los cuatro puertos de 10/25 GbE, puede usar uno, dos o tres puertos. El uso de más de un puerto maximiza la posibilidad de que cierta conectividad de red permanezca disponible si falla uno de los puertos 10/25-GbE.
+
+
+NOTE: Si decide utilizar menos de cuatro puertos, tenga en cuenta que una o más alarmas se levantarán en el Gestor de grid después de instalar StorageGRID, lo que indica que los cables están desconectados. Puede reconocer de forma segura las alarmas para borrarlas.
+
+
+
+=== Modos de enlace de red para puertos de gestión de 1 GbE
+
+Para los dos puertos de gestión de 1 GbE del controlador SG6000-CN, puede elegir el modo de enlace de red independiente o el modo de enlace de red Active-Backup para conectarse a la red de administración opcional.
+
+En modo independiente, solo el puerto de gestión de la izquierda está conectado a la red del administrador. Este modo no proporciona una ruta de acceso redundante. El puerto de gestión de la derecha no está conectado y está disponible para conexiones locales temporales (utiliza la dirección IP 169.254.0.1)
+
+En el modo Active-Backup, ambos puertos de gestión están conectados a la red Admin. Solo hay un puerto activo a la vez. Si se produce un error en el puerto activo, su puerto de backup proporciona automáticamente una conexión de conmutación por error. La vinculación de estos dos puertos físicos en un puerto de gestión lógica proporciona una ruta redundante a la red de administración.
+
+
+NOTE: Si necesita realizar una conexión local temporal al controlador SG6000-CN cuando los puertos de gestión de 1 GbE están configurados para el modo Active-Backup, retire los cables de ambos puertos de gestión, conecte el cable temporal al puerto de gestión de la derecha y acceda al dispositivo con la dirección IP 169.254.0.1.
+
+image::../media/sg6000_cn_bonded_managemente_ports.png[Puertos de 1 GbE]
+
+[cols="1a,3a"]
+|===
+| Llamada | Modo de enlace de red 
+
+
+ a| 
+A.
+ a| 
+Ambos puertos de gestión están Unidos en un puerto de gestión lógico conectado a la red administrativa.
+
+
+
+ a| 
+YO
+ a| 
+El puerto de la izquierda está conectado a la red de administración. El puerto de la derecha está disponible para conexiones locales temporales (dirección IP 169.254.0.1).
+
+|===
+.Información relacionada
+* link:../installconfig/hardware-description-sg6000.html#sg6000-controllers["SG6000 controladores"]
+* link:../installconfig/reviewing-appliance-network-connections.html["Determine las conexiones de red del dispositivo"]
+* link:../installconfig/gathering-installation-information-sg6000.html#port-bond-modes["Modos de enlace de puertos (controladora SG6000-CN)"]
+* link:cabling-appliance.html["Aparato por cable"]
+* link:../installconfig/setting-ip-configuration.html["Configure las direcciones IP de StorageGRID"]
+

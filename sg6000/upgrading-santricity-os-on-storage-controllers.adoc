@@ -1,0 +1,33 @@
+---
+permalink: sg6000/upgrading-santricity-os-on-storage-controllers.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
+summary: Para garantizar el funcionamiento óptimo de la controladora de almacenamiento, debe actualizarse a la versión de mantenimiento más reciente del sistema operativo SANtricity que esté cualificado para su dispositivo StorageGRID. 
+---
+= Actualice el sistema operativo SANtricity en controladoras de almacenamiento SG6000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantizar el funcionamiento óptimo de la controladora de almacenamiento, debe actualizarse a la versión de mantenimiento más reciente del sistema operativo SANtricity que esté cualificado para su dispositivo StorageGRID.
+
+Consulte la https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] para determinar qué versión debe usar.
+
+Descargue el nuevo archivo de software de sistema operativo SANtricity desde https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^].
+
+Siga uno de los siguientes procedimientos según la versión de SANtricity OS instalada actualmente:
+
+* Si la controladora de almacenamiento utiliza el sistema operativo SANtricity 08.42.20.00 (11.42) o una versión posterior, use Grid Manager para llevar a cabo la actualización.
++
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html["Actualizar el sistema operativo SANtricity en controladoras de almacenamiento mediante Grid Manager"]
+
+* Si la controladora de almacenamiento utiliza una versión de sistema operativo SANtricity anterior a 08.42.20.00 (11.42), use el modo de mantenimiento para realizar la actualización.
++
+link:upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html["Actualizar el sistema operativo SANtricity en controladoras de almacenamiento mediante el modo de mantenimiento"]
+
+
+
+
+CAUTION: Al actualizar el sistema operativo SANtricity para el dispositivo de almacenamiento, debe seguir las instrucciones de la documentación de StorageGRID. Si usa otras instrucciones, el aparato podría quedar inoperativo.

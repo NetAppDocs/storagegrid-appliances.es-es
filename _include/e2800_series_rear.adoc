@@ -1,0 +1,47 @@
+= 
+:allow-uri-read: 
+
+
+Estas cifras muestran el controlador E2800A y el controlador E2800B. El procedimiento para sustituir las controladoras de la serie E2800 y la controladora EF570 es idéntico.
+
+Controladora de almacenamiento E2800A:
+
+image::../media/e2800_labels_on_controller.gif[Etiquetas MAC y FRU en el controlador E2800A]
+
+Controladora de almacenamiento E2800B:
+
+image::../media/e2800B_labels_on_controller.gif[Etiquetas MAC y FRU en el controlador E2800A]
+
+[cols="1a,2a,4a"]
+|===
+| Etiqueta | componente | Descripción 
+
+
+ a| 
+1
+ a| 
+Dirección MAC
+ a| 
+La dirección MAC para el puerto de gestión 1 ("'P1 en el E2800A y 0a en la E2800B'"). Si utilizó DHCP para obtener la dirección IP de la controladora original, necesitará esta dirección para conectarse a la nueva controladora.
+
+
+
+ a| 
+2
+ a| 
+Número de pieza de FRU
+ a| 
+El número de pieza de FRU. Este número debe coincidir con el número de pieza de repuesto de la controladora instalada actualmente.
+
+
+
+ a| 
+3
+ a| 
+HIC de 4 puertos
+ a| 
+La tarjeta de interfaz del host (HIC) de 4 puertos. Esta tarjeta se debe mover al nuevo controlador cuando realice la sustitución.
+
+*Nota*: El controlador E2800A no tiene HIC.
+
+|===

@@ -1,0 +1,167 @@
+---
+permalink: installconfig/obtaining-additional-equipment-and-tools.html 
+sidebar: sidebar 
+keywords: equipment to install appliance, tools for installation 
+summary: Antes de instalar un dispositivo StorageGRID, confirme que dispone de todos los equipos y herramientas adicionales que necesita. 
+---
+= Obtenga equipos y herramientas adicionales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar un dispositivo StorageGRID, confirme que dispone de todos los equipos y herramientas adicionales que necesita.
+
+
+
+== Todos los dispositivos
+
+Necesita el siguiente equipo para instalar y configurar todos los dispositivos.
+
+Destornilladores::
++
+--
+* Phillips no 2 destornillador
+* Destornillador plano medio
+
+
+--
+Muñequera ESD::
++
+--
+* https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Navegador web compatible"^]
+* Cliente SSH, como PuTTY
+* Puerto 1-GbE (RJ-45)
+
+
+--
+
+
+
+NOTE: Es posible que algunos puertos no admitan 10/100 velocidades Ethernet.
+
+Herramientas opcionales::
++
+--
+* Taladro eléctrico con punta Phillips
+* Linterna
+
+
+--
+
+
+
+
+== Equipos y herramientas específicos para dispositivos
+
+[role="tabbed-block"]
+====
+.SG100 y SG1000
+--
+Necesita el siguiente equipo adicional para instalar y configurar el hardware de SG100 y SG1000.
+
+Cables ópticos y transmisores::
++
+--
+* Cables, de 1 a 4 de cualquiera de los dos:
++
+** Twinax/Cobre
+** Fibra óptica
+
+
+* Transceptores/adaptadores, de 1 a 4 de cada uno, según la velocidad del enlace (no se admiten velocidades mixtas):
++
+** SG100:
++
+*** 10 GbE SFP+
+*** 25 GbE SFP28
+
+
+** SG1000 GBE:
++
+*** Adaptador 10 GbE QSFP-a-SFP (QSA) y SFP+
+*** Adaptador 25 GbE QSFP a SFP (QSA) y SFP28
+*** QSFP+ de 40 GbE
+*** 100 GbE QFSP28
+
+
+
+
+
+
+--
+Cables Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+
+
+--
+.SG5700
+--
+Necesita el siguiente equipo adicional para instalar y configurar el hardware de SG5700.
+
+Cables ópticos y transceptores SFP::
++
+--
+* Cables ópticos para los puertos 10/25-GbE que tiene previsto utilizar
+* Opcional: Transceptores SFP28 si desea utilizar velocidad de enlace 25-GbE
+
+
+--
+Cables Ethernet:: Elevación mecanizada para SG5760
+
+
+--
+.SG6000
+--
+Necesita el siguiente equipo adicional para instalar y configurar el hardware de SG6000.
+
+Cables ópticos y transceptores SFP::
++
+--
+* Cables, de 1 a 4 de cualquiera de los dos:
++
+** Twinax/Cobre
+** Fibra óptica
+
+
+* Transceptores/adaptadores, de 1 a 4 de cada uno, según la velocidad del enlace (no se admiten velocidades mixtas):
++
+** 10 GbE SFP+
+** 25 GbE SFP28
+
+
+
+
+--
+Cables Ethernet:: RJ-45 (Cat5/Cat5e/Cat6)
+Herramientas opcionales:: Elevación mecanizada para estantes de 60 unidades
+
+
+--
+.SG6100
+--
+Necesita el siguiente equipo adicional para instalar y configurar el hardware de SGF6112.
+
+Cables ópticos y transmisores::
++
+--
+* Cables, de 1 a 4 de cualquiera de los dos:
++
+** Twinax/Cobre
+** Fibra óptica
+
+
+* Transceptores/adaptadores, de 1 a 4 de cada uno, según la velocidad del enlace (no se admiten velocidades mixtas):
++
+** 10 GbE SFP+
+** 25 GbE SFP28
+
+
+
+
+--
+Cables Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+
+
+--
+====

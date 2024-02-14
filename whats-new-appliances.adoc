@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: whats-new-appliances.html 
+keywords: storagegrid, appliance, whats new 
+summary: Conozca las novedades de este sitio de documentación. 
+---
+= Novedades para los dispositivos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Descubra las novedades de los dispositivos StorageGRID.
+
+
+
+== Dispositivo all-flash SGF6112
+
+El nuevo dispositivo de almacenamiento StorageGRID SGF6112 cuenta con un diseño compacto con controladora de computación y controladora de almacenamiento integrada en un chasis 1U. El dispositivo admite 12 unidades SSD NVMe con una capacidad de almacenamiento de hasta 15,3 TB por unidad. Las unidades SSD están en un RAID que proporciona un almacenamiento de objetos resiliente. Consulte link:installconfig/hardware-description-sg6100.html["Dispositivo SGF6112: Información general"].

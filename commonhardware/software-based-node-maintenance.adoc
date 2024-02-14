@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+permalink: commonhardware/software-based-node-maintenance.html 
+keywords: software based node maintenance 
+summary: Mantenimiento de nodos basados en software. 
+---
+= Mantenimiento de nodos basados en software
+:allow-uri-read: 
+
+
+[role="lead"]
+Mantenimiento de nodos basados en software. ¿Hay algo que vaya aquí?

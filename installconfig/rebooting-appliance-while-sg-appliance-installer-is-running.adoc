@@ -1,0 +1,32 @@
+---
+permalink: installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, service appliance, services appliance, gateway Node, admin node, reboot, restart 
+summary: Es posible que deba reiniciar el dispositivo mientras el instalador del dispositivo StorageGRID está en ejecución. Por ejemplo, puede que necesite reiniciar el dispositivo si la instalación falla. 
+---
+= Reinicie el dispositivo mientras el instalador del dispositivo StorageGRID esté en ejecución
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que deba reiniciar el dispositivo mientras el instalador del dispositivo StorageGRID está en ejecución. Por ejemplo, puede que necesite reiniciar el dispositivo si la instalación falla.
+
+.Acerca de esta tarea
+Este procedimiento solo se aplica cuando el dispositivo ejecuta el instalador de dispositivos StorageGRID. Una vez finalizada la instalación, este paso ya no funciona porque el instalador de dispositivos StorageGRID ya no está disponible.
+
+.Pasos
+. En el instalador del dispositivo StorageGRID, haga clic en *Avanzado* > *Reiniciar controlador* y, a continuación, seleccione una de estas opciones:
++
+** Seleccione *Reiniciar en StorageGRID* para reiniciar el controlador con el nodo que vuelve a unir la cuadrícula. Seleccione esta opción si hizo trabajo en modo de mantenimiento y está listo para devolver el nodo a su funcionamiento normal.
+** Seleccione *Reiniciar en el modo de mantenimiento* para reiniciar el controlador con el nodo restante en modo de mantenimiento. (Esta opción solo está disponible si la controladora se encuentra en modo de mantenimiento). Seleccione esta opción si hay otras operaciones de mantenimiento que debe realizar en el nodo antes de volver a unir la cuadrícula.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
+
++
+El dispositivo se reinicia.
+
+
+
+

@@ -1,0 +1,112 @@
+---
+permalink: installconfig/connecting-power-cords-and-applying-power.html 
+sidebar: sidebar 
+keywords: storagegrid, wire, wiring, cabling, cable, Connecting, connect, power cords, power, applying power, apply power, turn on, power up, ac, ac power 
+summary: Después de conectar los cables de red, estará preparado para alimentar el aparato. 
+---
+= Conecte los cables de alimentación y aplique alimentación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de conectar los cables de red, ya está listo para aplicar energía a un dispositivo, controlador o bandeja de expansión.
+
+[role="tabbed-block"]
+====
+.SG100 y SG1000
+--
+.Pasos
+. Conecte un cable de alimentación a cada una de las dos unidades de alimentación del aparato.
+. Conecte estos dos cables de alimentación a dos unidades de distribución de alimentación (PDU) diferentes en el armario o rack.
+. Si el botón de encendido de la parte frontal del aparato no está iluminado en azul actualmente, pulse el botón para encender el aparato.
++
+No vuelva a pulsar el botón de encendido durante el proceso de encendido.
+
+. Si se producen errores, corrija los problemas.
+. Coloque el bisel frontal en el aparato si lo ha extraído.
+
+
+--
+.SG5700
+--
+.Antes de empezar
+Ambos interruptores de alimentación del aparato deben estar apagados antes de conectar la alimentación.
+
+
+CAUTION: *Riesgo de descarga eléctrica* -- antes de conectar los cables de alimentación, asegúrese de que los dos interruptores de alimentación del aparato están apagados.
+
+.Pasos
+. Confirme que los dos interruptores de alimentación del aparato están apagados.
+. Conecte los dos cables de alimentación al aparato.
+. Conecte los dos cables de alimentación a diferentes unidades de distribución de alimentación (PDU) en el armario o rack.
+. Encienda los dos interruptores de alimentación del aparato.
++
+** No apague los interruptores de alimentación durante el proceso de encendido.
+** Los ventiladores son muy ruidosos cuando se ponen en marcha por primera vez. El ruido fuerte durante el arranque es normal.
+
+
+. Una vez arrancados las controladoras, compruebe sus pantallas de siete segmentos.
+
+
+--
+.SG6000
+--
+.Pasos
+. Confirmar que ambas controladoras de la bandeja de controladoras de almacenamiento están desactivadas.
++
+
+CAUTION: *Riesgo de descarga eléctrica* -- antes de conectar los cables de alimentación, asegúrese de que los interruptores de alimentación de cada uno de los dos controladores de almacenamiento están apagados.
+
+. Si tiene bandejas de expansión, confirme que ambos switches de alimentación de IOM están apagados.
++
+
+CAUTION: *Riesgo de descarga eléctrica* -- antes de conectar los cables de alimentación, asegúrese de que los dos interruptores de alimentación de cada uno de los estantes de expansión están apagados.
+
+. Conecte un cable de alimentación a cada una de las dos unidades de alimentación del controlador SG6000-CN.
+. Conecte estos dos cables de alimentación a dos unidades de distribución de alimentación (PDU) diferentes en el armario o rack.
+. Conecte un cable de alimentación a cada una de las dos unidades de alimentación de la bandeja del controlador de almacenamiento.
+. Si dispone de bandejas de expansión, conecte un cable de alimentación a cada una de las dos unidades de alimentación de cada bandeja de expansión.
+. Conecte los dos cables de alimentación de cada bandeja de almacenamiento (incluidas las bandejas de expansión opcionales) a dos PDU diferentes en el armario o rack.
+. Si el botón de encendido de la parte frontal del controlador SG6000-CN no está iluminado en azul actualmente, pulse el botón para encender el controlador.
++
+No vuelva a pulsar el botón de encendido durante el proceso de encendido.
+
+. Encienda los dos switches de alimentación en la parte posterior de la bandeja de controladoras de almacenamiento. Si tiene bandejas de expansión, encienda los dos switches de alimentación de cada bandeja.
++
+** No apague los interruptores de alimentación durante el proceso de encendido.
+** Es posible que los ventiladores de la bandeja de controladoras de almacenamiento y las bandejas de expansión opcionales sean muy ruidosos cuando se inician por primera vez. El ruido fuerte durante el arranque es normal.
+
+
+. Una vez arrancados los componentes, compruebe su estado.
++
+** Revise la visualización de siete segmentos en la parte posterior de cada controladora de almacenamiento. Consulte el artículo sobre la visualización de los códigos de estado de inicio para obtener más información.
+** Compruebe que el botón de encendido situado en la parte frontal del controlador SG6000-CN está encendido.
+
+
+. Si se producen errores, corrija los problemas.
+. Fije el bisel frontal al controlador SG6000-CN si se ha retirado.
+
+
+--
+.SG6100
+--
+.Pasos
+. Conecte un cable de alimentación a cada una de las dos unidades de alimentación del aparato.
+. Conecte estos dos cables de alimentación a dos unidades de distribución de alimentación (PDU) diferentes en el armario o rack.
+. Si el botón de encendido de la parte frontal del aparato SG6100-CN no está iluminado en azul, pulse el botón para encender el aparato.
++
+No vuelva a pulsar el botón de encendido durante el proceso de encendido.
+
++
+El LED de la fuente de alimentación debe iluminarse en verde sin parpadear.
+
+. Si se producen errores, corrija los problemas.
+. Coloque el bisel frontal en el aparato si lo ha extraído.
+
+
+--
+====
+.Información relacionada
+link:viewing-status-indicators.html["Ver indicadores de estado"]

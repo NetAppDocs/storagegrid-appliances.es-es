@@ -1,0 +1,66 @@
+---
+permalink: commonhardware/considerations-and-requirements-for-appliance-node-cloning.html 
+sidebar: sidebar 
+keywords: storagegrid, clone appliance node, cloning appliance node 
+summary: Antes de clonar un nodo de dispositivo, debe comprender las consideraciones y los requisitos. 
+---
+= Consideraciones y requisitos para el clonado de nodos de dispositivos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de clonar un nodo de dispositivo, debe comprender las consideraciones y los requisitos.
+
+
+
+== Requisitos de hardware para el dispositivo de sustitución
+
+Asegúrese de que el aparato de sustitución cumple los siguientes criterios:
+
+* El nodo de origen (dispositivo que se va a reemplazar) y el dispositivo de destino (nuevo) deben ser del mismo tipo de dispositivo:
++
+** Solo puede clonar un dispositivo Admin Node o un dispositivo Gateway Node en un dispositivo de servicios nuevo.
+** Solo puede clonar un dispositivo Storage Node en un dispositivo de almacenamiento nuevo.
+
+
+* Para los dispositivos de nodo de administración o nodo de pasarela, el dispositivo de nodo de origen y el dispositivo de destino no necesitan ser del mismo tipo de dispositivo; sin embargo, si se cambia el tipo de dispositivo, puede que sea necesario sustituir los cables o los módulos SFP.
++
+Por ejemplo, puede sustituir un dispositivo de nodo SG1000 por un SG100 o sustituir un dispositivo SG100 por un dispositivo SG1000.
+
+* Para los dispositivos Storage Node, el dispositivo del nodo de origen y el dispositivo de destino no necesitan ser del mismo tipo de dispositivo; sin embargo, el dispositivo de destino debe tener una capacidad de almacenamiento mayor que el dispositivo de origen.
++
+Por ejemplo, puede reemplazar un dispositivo de nodos SG5700 por un dispositivo SG6000.
+
+
+
+Póngase en contacto con su representante de ventas de StorageGRID, para obtener ayuda a la hora de elegir dispositivos de reemplazo compatibles para clonar nodos de dispositivos específicos en la instalación de StorageGRID.
+
+
+
+== Prepare para clonar un nodo de dispositivo
+
+Debe tener la siguiente información antes de clonar un nodo de dispositivo:
+
+* Obtenga una dirección IP temporal para la red de red de su administrador de red para utilizarla con el dispositivo de destino durante la instalación inicial. Si el nodo de origen pertenece a una red de administrador o una red de cliente, obtenga direcciones IP temporales para estas redes.
++
+Las direcciones IP temporales suelen estar en la misma subred que el dispositivo de nodo de origen que se clona y no son necesarias una vez finalizada la clonación. Los dispositivos de origen y destino deben conectarse al nodo de administrador principal de la StorageGRID para establecer una conexión de clonado.
+
+* Determine qué red se utilizará para clonar tráfico de transferencia de datos que ofrezca el mejor rendimiento de transferencia de datos sin perjudicar el rendimiento de la red de StorageGRID ni la disponibilidad de los datos.
++
+
+NOTE: El uso de la red de administrador de 1 GbE para la transferencia de datos de clones provoca una clonación más lenta.
+
+* Determinar si se usará el cifrado de nodos con un servidor de gestión de claves (KMS) en el dispositivo de destino, de manera que pueda habilitar el cifrado de nodos durante la instalación inicial del dispositivo de destino antes de realizar el clonado. Puede comprobar si el cifrado de nodo está activado en el nodo del dispositivo de origen como se describe en link:../installconfig/optional-enabling-node-encryption.html["habilitar el cifrado de nodo"].
++
+El nodo de origen y el dispositivo de destino pueden tener diferentes configuraciones de cifrado del nodo. El cifrado y el descifrado de datos se realizan automáticamente durante la transferencia de datos y cuando el nodo objetivo se reinicia y se une a la cuadrícula.
+
+* Determine si el modo RAID del dispositivo de destino debe cambiarse desde su configuración predeterminada, por lo que puede especificar esta información durante la instalación inicial del dispositivo de destino antes de realizar la clonación. Puede ver información acerca del modo RAID actual del nodo del dispositivo de origen en la página *NODES* de Grid Manager. Seleccione la ficha *almacenamiento* del dispositivo.
++
+El nodo de origen y el dispositivo de destino pueden tener diferentes ajustes de RAID.
+
+* Planifique el tiempo suficiente para completar el proceso de clonación de nodos. Es posible que se necesiten varios días para transferir datos desde un nodo de almacenamiento operativo a un dispositivo de destino. Programe la clonación en el momento que minimice el impacto en su negocio.
+* Solo debe clonar un nodo de dispositivo cada vez. La clonado puede evitar que ejecute otras funciones de mantenimiento de StorageGRID al mismo tiempo.
+* Después de clonar un nodo de dispositivo, puede usar el dispositivo de origen que volvió a su estado de instalación previa como destino para clonar otro dispositivo de nodo compatible.
+

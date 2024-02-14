@@ -1,0 +1,50 @@
+---
+permalink: sg6000/locating-controller-in-data-center.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, locate, find, locating, finding, identify, blue led, blue light 
+summary: Localice la controladora para que pueda realizar tareas de mantenimiento o actualizaciones del hardware. 
+---
+= Localice la controladora SG6000-CN en el centro de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Localice la controladora para que pueda realizar tareas de mantenimiento o actualizaciones del hardware.
+
+.Antes de empezar
+* Ha determinado qué controlador requiere mantenimiento.
++
+(Opcional) para localizar la controladora en el centro de datos, link:turning-controller-identify-led-on-and-off.html["Encienda el LED de identificación azul"].
+
+
+
+.Pasos
+. Encuentre la controladora que requiere mantenimiento en el centro de datos.
++
+** Busque un LED de identificación azul iluminado en la parte frontal o posterior de la controladora.
++
+El LED de identificación frontal se encuentra detrás del panel frontal de la controladora y puede ser difícil ver si el panel frontal está instalado.
+
++
+image::../media/sg6060_front_panel_service_led_on.jpg[LED de identificación frontal: Encendido]
+
+** Compruebe si las etiquetas adjuntas a la parte frontal de cada controlador tienen un número de pieza coincidente.
+
+
+. Retire el embellecedor frontal del controlador, si se ha instalado, para acceder a los controles e indicadores del panel frontal.
+. Opcional: link:turning-controller-identify-led-on-and-off.html["Apague el LED de identificación azul"] si lo utilizó para localizar la controladora.
++
+** Pulse el interruptor Identify LED del panel frontal del controlador.
+** Use la interfaz del BMC del controlador.
+
+
+
+
+.Información relacionada
+link:reinstalling-fibre-channel-hba.html#remove-fibre-channel-hba["Quite el HBA Fibre Channel"]
+
+link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html#remove-sg6000-cn-controller-from-cabinet-or-rack["Retire el controlador SG6000-CN del armario o bastidor"]
+
+link:power-sg6000-cn-controller-off-on.html#shut-down-sg6000-cn-controller["Apague el controlador SG6000-CN"]

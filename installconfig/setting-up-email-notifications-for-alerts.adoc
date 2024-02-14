@@ -1,0 +1,84 @@
+---
+permalink: installconfig/setting-up-email-notifications-for-alerts.html 
+sidebar: sidebar 
+keywords: email, notifications, alerts, set up, setup, configure, configuration, bmc 
+summary: Si desea que las notificaciones por correo electrónico se envíen cuando se produzcan alertas, utilice la interfaz de BMC para configurar los ajustes SMTP, los usuarios, los destinos LAN, las políticas de alertas y los filtros de eventos. 
+---
+= Configurar notificaciones por correo electrónico para las alertas de BMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si desea que las notificaciones por correo electrónico se envíen cuando se produzcan alertas, utilice la interfaz de BMC para configurar los ajustes SMTP, los usuarios, los destinos LAN, las políticas de alertas y los filtros de eventos.
+
+
+NOTE: Es posible que la configuración de BMC realizada con este procedimiento no se conserve si la controladora SG6000-CN o el dispositivo de servicios fallan y deben sustituirse. Asegúrese de que tiene un registro de todos los ajustes que ha aplicado, para que se puedan volver a aplicar fácilmente después de reemplazar el hardware si es necesario.
+
+.Antes de empezar
+Sabe cómo acceder al panel de BMC.
+
+.Acerca de esta tarea
+En la interfaz del BMC, utilice las opciones *Configuración SMTP*, *Administración de usuarios* y *Filtros de sucesos de plataforma* de la página Configuración para configurar notificaciones por correo electrónico.
+
+image::../media/bmc_settings_menu.png[Menú Configuración de BMC]
+
+.Pasos
+. link:configuring-snmp-settings-for-bmc.html["Configurar los ajustes de SNMP para BMC"].
++
+.. Selecciona *Ajustes* > *Ajustes SMTP*.
+.. Para el ID de correo electrónico del remitente, introduzca una dirección de correo electrónico válida.
++
+Esta dirección de correo electrónico se proporciona como dirección de origen cuando el BMC envía correo electrónico.
+
+
+
+. Configurar los usuarios para que reciban alertas.
++
+.. En el panel de control de BMC, seleccione *Configuración* > *Gestión de usuarios*.
+.. Añada al menos un usuario para recibir notificaciones de alerta.
++
+La dirección de correo electrónico que configure para un usuario es la dirección a la que el BMC envía notificaciones de alerta. Por ejemplo, puede agregar un usuario genérico, como «'usuario de notificación'» y utilizar la dirección de correo electrónico de una lista de distribución de correo electrónico del equipo de soporte técnico.
+
+
+
+. Configure el destino de LAN para las alertas.
++
+.. Selecciona *Ajustes* > *Filtros de eventos de plataforma* > *Destinos LAN*.
+.. Configure al menos un destino de LAN.
++
+*** Seleccione *correo electrónico* como tipo de destino.
+*** En Nombre de usuario de BMC, seleccione un nombre de usuario que haya añadido anteriormente.
+*** Si ha agregado varios usuarios y desea que todos ellos reciban correos electrónicos de notificación, agregue un destino LAN para cada usuario.
+
+
+.. Envía una alerta de prueba.
+
+
+. Configurar directivas de alerta para poder definir cuándo y dónde envía alertas el BMC.
++
+.. Selecciona *Ajustes* > *Filtros de eventos de plataforma* > *Políticas de alerta*.
+.. Configure al menos una directiva de alerta para cada destino de LAN.
++
+*** Para número de grupo de directivas, seleccione *1*.
+*** Para Acción de directiva, seleccione *siempre enviar alerta a este destino*.
+*** Para el canal LAN, seleccione *1*.
+*** En el Selector de destinos, seleccione el destino LAN de la directiva.
+
+
+
+
+. Configurar filtros de eventos para dirigir las alertas de diferentes tipos de eventos a los usuarios correspondientes.
++
+.. Selecciona *Ajustes* > *Filtros de eventos de plataforma* > *Filtros de eventos*.
+.. Para el número de grupo de políticas de alerta, introduzca *1*.
+.. Cree filtros para cada evento del que desee que se notifique al grupo de directivas de alerta.
++
+*** Puede crear filtros de eventos para acciones de alimentación, eventos de sensor específicos o todos los eventos.
+*** Si no está seguro de qué eventos debe supervisar, seleccione *todos los sensores* para el tipo de sensor y *todos los eventos* para las opciones de evento. Si recibe notificaciones no deseadas, puede cambiar sus selecciones más adelante.
+
+
+
+
+

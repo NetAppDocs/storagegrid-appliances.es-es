@@ -1,0 +1,185 @@
+= 
+:allow-uri-read: 
+
+
+.Antes de empezar
+* Ha consultado el https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] Para confirmar que la versión de sistema operativo SANtricity que utiliza para la actualización es compatible con el dispositivo.
+* Usted tiene la https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Permiso de mantenimiento o acceso raíz"^].
+* Ha iniciado sesión en Grid Manager mediante un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Tiene la clave de acceso de aprovisionamiento.
+* Tiene acceso a. https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^].
+
+
+.Acerca de esta tarea
+No puede realizar otras actualizaciones de software (actualización de software StorageGRID o una corrección urgente) hasta que haya completado el proceso de actualización de SANtricity OS. Si intenta iniciar una revisión o una actualización de software de StorageGRID antes de que haya finalizado el proceso de actualización de SANtricity OS, se le redirigirá a la página de actualización de SANtricity OS.
+
+No se completará el procedimiento hasta que la actualización del sistema operativo SANtricity se haya aplicado correctamente a todos los nodos aplicables seleccionados para la actualización. Es posible que tardar más de 30 minutos cargar el sistema operativo SANtricity en cada nodo (de forma secuencial) y hasta 90 minutos para reiniciar cada dispositivo de almacenamiento StorageGRID. Cualquier nodo del grid que no utilice SANtricity OS no se verá afectado por este procedimiento.
+
+
+CAUTION: Los siguientes pasos sólo son aplicables cuando se utiliza Grid Manager para realizar la actualización. Las controladoras de almacenamiento en el dispositivo no se pueden actualizar mediante Grid Manager cuando las controladoras utilizan un sistema operativo SANtricity anterior a 08.42.20.00 (11,42).
+
+
+NOTE: Este procedimiento actualizará automáticamente la NVSRAM a la versión más reciente asociada con la actualización del sistema operativo SANtricity. No es necesario aplicar un archivo de actualización de NVSRAM independiente.
+
+
+NOTE: Asegúrese de aplicar la revisión de StorageGRID más reciente antes de comenzar este procedimiento. Consulte https://docs.netapp.com/us-en/storagegrid-118/maintain/storagegrid-hotfix-procedure.html["Procedimiento de revisión de StorageGRID"^] para obtener más detalles.
+
+.Pasos
+. [[download-santricity-os]] Descargue el nuevo archivo de software de sistema operativo SANtricity de https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^].
++
+Asegúrese de elegir la versión de sistema operativo SANtricity para las controladoras de almacenamiento.
+
+. Seleccione *MANTENIMIENTO* > *sistema* > *actualización de software*.
++
+image::../media/software_update_landing.png[Página de destino de la actualización del software]
+
+. En la sección actualización del sistema operativo SANtricity, seleccione *Actualizar*.
++
+Aparece la página de actualización de SANtricity OS, donde se enumeran los detalles de cada nodo de dispositivo, incluidos los siguientes:
+
++
+** Nombre del nodo
+** Sitio
+** Modelo de dispositivo
+** Versión de SANtricity OS
+** Estado
+** Estado de la última actualización
+
+
+. Revise la información de la tabla para todos sus dispositivos actualizables. Confirme que todos los controladores de almacenamiento tienen el estado *nominal*. Si el estado de cualquier controlador es *Desconocido*, vaya a *NODOS* > *_NODO DEL DISPOSITIVO_* > *Hardware* para investigar y resolver el problema.
+. Seleccione el archivo de actualización del sistema operativo SANtricity que descargó del sitio de soporte de NetApp.
++
+.. Seleccione *examinar*.
+.. Localice y seleccione el archivo.
+.. Seleccione *Abrir*.
+
+
++
+El archivo se carga y se valida. Cuando se realiza el proceso de validación, el nombre del archivo se muestra con una marca de verificación verde junto al botón *Browse*. No cambie el nombre del archivo porque forma parte del proceso de verificación.
+
+. Introduzca la contraseña de aprovisionamiento y seleccione *Continuar*.
++
+Aparece un cuadro de advertencia que indica que es posible que se pierda temporalmente la conexión del explorador como se reinician los servicios de los nodos actualizados.
+
+. Seleccione *Sí* para almacenar en zona intermedia el archivo de actualización del sistema operativo SANtricity en el nodo de administración principal.
++
+Cuando se inicia la actualización del sistema operativo SANtricity:
+
++
+.. Se ejecuta la comprobación del estado. Este proceso comprueba que ningún nodo tenga el estado de necesita atención.
++
+
+NOTE: Si se informa de algún error, solucione y seleccione *Iniciar* de nuevo.
+
+.. Se muestra la tabla progreso de actualización de sistema operativo SANtricity. En esta tabla se muestran todos los nodos de almacenamiento del grid y la fase actual de la actualización de cada nodo.
++
+
+NOTE: La tabla muestra todos los nodos de almacenamiento del dispositivo. Los nodos de almacenamiento basados en software no se muestran. Seleccione *aprobar* para todos los nodos que requieran la actualización.
+
++
+image::../media/santricity_upgrade_progress_table.png[Captura de pantalla que muestra la parte del progreso de la actualización del sistema operativo SANtricity de la página actualización del sistema operativo SANtricity]
+
+
+
+. Opcionalmente, ordene la lista de nodos en orden ascendente o descendente por:
++
+** Nombre del nodo
+** Versión actual
+** Progreso
+** Etapa
+** Estado
+
+
++
+También puede introducir un término en el cuadro Buscar para buscar nodos específicos.
+
+. Apruebe los nodos de cuadrícula que está listo para agregar a la cola de actualización. Los nodos aprobados se actualizan de uno en uno.
++
+
+CAUTION: No apruebe la actualización del sistema operativo SANtricity para un nodo de almacenamiento de dispositivos a menos que esté seguro de que el nodo está listo para detenerse y reiniciarse. Cuando la actualización de SANtricity OS se aprueba en un nodo, los servicios de ese nodo se detienen y comienza el proceso de actualización. Más tarde, cuando el nodo finaliza la actualización, el nodo del dispositivo se reinicia. Estas operaciones pueden provocar interrupciones del servicio en los clientes que se comunican con el nodo.
+
++
+** Seleccione el botón *Aprobar todo* para agregar todos los nodos de almacenamiento a la cola de actualización del sistema operativo SANtricity.
++
+
+NOTE: Si es importante el orden en el que se actualizan los nodos, apruebe los nodos o grupos de nodos de uno en uno y espere hasta que se complete la actualización en cada nodo antes de aprobar el siguiente.
+
+** Seleccione uno o más botones *aprobar* para agregar uno o más nodos a la cola de actualización de SANtricity OS. El botón *Aprobar* está desactivado si el estado no es nominal.
++
+Después de seleccionar *aprobar*, el proceso de actualización determina si se puede actualizar el nodo. Si se puede actualizar un nodo, se agrega a la cola de actualización.
+
++
+En algunos nodos, el archivo de actualización seleccionado no se aplica de forma intencional, y se puede completar el proceso de actualización sin actualizar estos nodos específicos. Los nodos no actualizados intencionalmente muestran una etapa de completado (intento de actualización) y muestran el motivo por el que el nodo no se actualizó en la columna Details.
+
+
+
+. Si necesita eliminar un nodo o todos los nodos de la cola de actualización de SANtricity OS, seleccione *Quitar* o *Quitar todo*.
++
+Cuando la etapa avanza más allá de la cola, el botón *Quitar* está oculto y ya no puede quitar el nodo del proceso de actualización de SANtricity OS.
+
+. Espere mientras la actualización del SO SANtricity se aplica a cada nodo de grid aprobado.
++
+** Si algún nodo muestra una etapa de error mientras se aplica la actualización del sistema operativo SANtricity, se produjo un error en la actualización del nodo. Con la ayuda del soporte técnico, es posible que deba colocar el dispositivo en modo de mantenimiento para recuperarlo.
+** Si el firmware del nodo es demasiado antiguo para actualizarse con Grid Manager, el nodo muestra una etapa de Error con los detalles que debe utilizar el modo de mantenimiento para actualizar el sistema operativo SANtricity en el nodo. Para resolver el error, haga lo siguiente:
++
+... Utilice el modo de mantenimiento para actualizar SANtricity OS en el nodo que muestre una etapa de error.
+... Utilice el Administrador de grid para reiniciar y completar la actualización de SANtricity OS.
+
+
+
+
++
+Cuando la actualización de SANtricity OS se completa en todos los nodos aprobados, la tabla de progreso de actualización de SANtricity OS se cierra y un banner verde muestra el número de nodos actualizados, así como la fecha y la hora en que finalizó la actualización.
+
+. Si un nodo no se puede actualizar, observe el motivo que se muestra en la columna Detalles y realice la acción adecuada.
++
+
+NOTE: El proceso de actualización del sistema operativo SANtricity no se completará hasta que apruebe la actualización del sistema operativo SANtricity en todos los nodos de almacenamiento enumerados.
+
++
+[cols="1a,2a"]
+|===
+| Razón | Acción recomendada 
+
+
+ a| 
+El nodo de almacenamiento ya se actualizó.
+ a| 
+No es necesario realizar ninguna otra acción.
+
+
+
+ a| 
+La actualización de SANtricity OS no es aplicable a este nodo.
+ a| 
+El nodo no tiene una controladora de almacenamiento que pueda gestionar el sistema StorageGRID. Complete el proceso de actualización sin actualizar el nodo que muestra este mensaje.
+
+
+
+ a| 
+El archivo del sistema operativo SANtricity no es compatible con este nodo.
+ a| 
+El nodo requiere un archivo de sistema operativo SANtricity diferente al que seleccionó.
+Después de completar la actualización actual, descargue el archivo de sistema operativo SANtricity correcto para el nodo y repita el proceso de actualización.
+
+|===
+. Si desea finalizar la aprobación de nodos y volver a la página de SANtricity OS para permitir la carga de un nuevo archivo de SANtricity OS, haga lo siguiente:
++
+.. Seleccione *Omitir nodos y Finalizar*.
++
+Aparecerá una advertencia que le preguntará si está seguro de que desea finalizar el proceso de actualización sin actualizar todos los nodos aplicables.
+
+.. Seleccione *Aceptar* para volver a la página *SANtricity OS*.
+.. Cuando esté listo para continuar aprobando nodos, <<download-santricity-os,Descargue el sistema operativo SANtricity>> para reiniciar el proceso de actualización.
++
+
+NOTE: Los nodos ya aprobados y actualizados sin errores siguen actualizando.
+
+
+
+. Repita este procedimiento de actualización para todos los nodos con una etapa de finalización que requieran un archivo de actualización de sistema operativo SANtricity diferente.
++
+
+NOTE: Para cualquier nodo con el estado necesita atención, utilice el modo de mantenimiento para realizar la actualización.
+
+

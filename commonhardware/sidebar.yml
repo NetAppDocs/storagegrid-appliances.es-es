@@ -1,0 +1,17 @@
+---
+section: commonhardware
+title: Mantener la configuración del dispositivo
+entries:
+- title: Descripción general
+  pdf-filename: Mantenimiento de la configuración del dispositivo (todos los nodos)
+  url: "/commonhardware/index.html"
+- title: Coloque el dispositivo en modo de mantenimiento
+  url: "/commonhardware/placing-appliance-into-maintenance-mode.html"
+- title: Cambie la configuración de MTU
+  url: "/commonhardware/changing-mtu-setting.html"
+- title: Comprobar la configuración del servidor DNS
+  url: "/commonhardware/checking-dns-server-configuration.html"
+- title: Actualizar referencias de direcciones MAC
+  url: "/commonhardware/locate-mac-address.html"
+- title: Supervise el cifrado del nodo en modo de mantenimiento
+  url: "/commonhardware/monitoring-node-encryption-in-maintenance-mode.html"

@@ -1,0 +1,52 @@
+---
+permalink: sg6000/replacing-power-supply-in-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, power supply, remove, removing, removal, install, installing, installation 
+summary: El controlador SG6000-CN tiene dos fuentes de alimentación para redundancia. Si uno de los suministros de alimentación falla, debe reemplazarla por Lo antes posible. para garantizar que la controladora de computación tenga alimentación redundante. 
+---
+= Sustituya la fuente de alimentación del controlador SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El controlador SG6000-CN tiene dos fuentes de alimentación para redundancia. Si uno de los suministros de alimentación falla, debe reemplazarla por Lo antes posible. para garantizar que la controladora de computación tenga alimentación redundante.
+
+
+NOTE: Ambas fuentes de alimentación deben tener la misma potencia. Si necesita sustituir ambas fuentes de alimentación, consulte link:replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html["Reemplazar ambas fuentes de alimentación en la controladora SG6000-CN"].
+
+.Antes de empezar
+* Ha desembalado la unidad de suministro de alimentación de repuesto.
+* Localizó físicamente la controladora en la que va a reemplazar el suministro de alimentación en el centro de datos.
++
+link:locating-controller-in-data-center.html["Ubique la controladora en el centro de datos"]
+
+* Ha confirmado que la otra fuente de alimentación está instalada y en funcionamiento.
+
+
+.Acerca de esta tarea
+La figura muestra las dos unidades de alimentación del controlador SG6000-CN, a las que se puede acceder desde la parte posterior del controlador.
+
+image::../media/sg6000_cn_power_supplies.gif[Parte posterior de SG6000-CN con dos fuentes de alimentación]
+
+.Pasos
+. Desconecte el cable de alimentación de la fuente de alimentación.
+. Levante la palanca de leva.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Levante la manija de la leva para extraer la PSU SG6000-CN]
+
+. Presione el pestillo azul y saque la fuente de alimentación.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Retire la fuente de alimentación SG6000-CN]
+
+. Inserte la fuente de alimentación de repuesto en el chasis.
++
+Asegúrese de que el pestillo azul está en el lado derecho cuando deslice la unidad hacia adentro.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Deslice la fuente de alimentación en SG6000-CN]
+
+. Empuje la palanca de leva hacia abajo para fijar la fuente de alimentación.
+. Conecte el cable de alimentación a la fuente de alimentación y asegúrese de que el LED verde se enciende.
+

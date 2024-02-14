@@ -1,0 +1,25 @@
+---
+indexpage:
+  tiles:
+  - title: Procedimientos realizados con frecuencia
+    links:
+    - title: Enciende o apaga el LED de ubicación
+      url: "../sg100-1000/turning-controller-identify-led-on-and-off.html"
+    - title: Localice el dispositivo en el centro de datos
+      url: "../sg100-1000/locating-controller-in-data-center.html"
+    - title: Apague el aparato
+      url: "../sg100-1000/shut-down-sg100-and-sg1000.html"
+    - title: Cambiar la configuración del enlace
+      url: "../sg100-1000/changing-link-configuration-of-services-appliance.html"
+  - title: Procedimientos de bastidor
+    links:
+    - title: Sustituya el aparato
+      url: "../sg100-1000/replacing-services-appliance.html"
+  - title: Procedimientos de hardware
+    links:
+    - title: Sustituya el suministro de alimentación
+      url: "../sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
+    - title: Sustituya el ventilador
+      url: "../sg100-1000/replacing-fan-in-services-appliance.html"
+    - title: Sustituya la unidad
+      url: "../sg100-1000/replacing-drive-in-services-appliance.html"

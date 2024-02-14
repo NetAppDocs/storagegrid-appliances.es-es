@@ -1,0 +1,196 @@
+---
+permalink: installconfig/deploying-services-appliance-node.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, deploy node, deploying node, node, deploy, deploying, primary, primary admin node, non-primary admin node, non-primary 
+summary: 'Puede implementar un dispositivo de servicios como un nodo de administrador principal, un nodo de administrador que no sea primario o un nodo de puerta de enlace. Todos los dispositivos de servicios pueden funcionar como nodos de puerta de enlace y nodos de administración \(primary o non-primary\) al mismo tiempo.' 
+---
+= Implemente el nodo del dispositivo de servicios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede implementar un dispositivo de servicios como un nodo de administrador principal, un nodo de administrador que no sea primario o un nodo de puerta de enlace. Todos los dispositivos de servicios pueden funcionar como nodos de gateway y nodos de administración (primarios o no primarios) al mismo tiempo.
+
+
+
+== Ponga en marcha el dispositivo de servicios como nodo de administración principal
+
+Al poner en marcha un dispositivo de servicios como nodo administrador principal, utiliza el instalador de dispositivos StorageGRID incluido en el dispositivo para instalar el software StorageGRID o carga la versión de software que desea instalar. Debe instalar y configurar el nodo de administración principal antes de instalar cualquier otro tipo de nodos de dispositivos. Un nodo de administración principal puede conectarse a la red de grid y a la red de administración y la red de cliente opcionales, si se han configurado uno o ambos.
+
+.Antes de empezar
+* El dispositivo se ha instalado en un rack o armario, conectado a las redes y encendido.
+* Se han configurado los enlaces de red, las direcciones IP y la reasignación de puertos (si fuera necesario) para el dispositivo con el instalador de dispositivos de StorageGRID.
+* Tiene un ordenador portátil de servicio con un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Conoce una de las direcciones IP asignadas al dispositivo. Puede usar la dirección IP para cualquier red StorageGRID conectada.
+
+
+.Acerca de esta tarea
+Para instalar StorageGRID en un nodo de administrador principal de un dispositivo:
+
+* Utilice el instalador de dispositivos de StorageGRID para instalar el software de StorageGRID. Si desea instalar una versión diferente del software, primero lo cargue con el instalador de dispositivos de StorageGRID.
+* Espera a que el software esté instalado.
+* Cuando se ha instalado el software, el dispositivo se reinicia automáticamente.
+
+
+.Pasos
+. Abra un explorador e introduzca la dirección IP del dispositivo. +
+`*https://_services_appliance_IP_:8443*`
++
+Aparece la página de inicio del instalador de dispositivos de StorageGRID.
+
+. En la sección *este nodo*, seleccione *Administración primaria*.
+. En el campo *Nombre de nodo*, introduzca el nombre que desea utilizar para este nodo de dispositivo y haga clic en *Guardar*.
++
+El nombre del nodo está asignado a este nodo del dispositivo en el sistema StorageGRID. Se muestra en la página Grid Nodes del Grid Manager.
+
+. Opcionalmente, para instalar una versión diferente del software StorageGRID, siga estos pasos:
++
+.. Descargue el archivo de instalación:
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^]
+
+.. Extraiga el archivo.
+.. En el instalador de dispositivos StorageGRID, seleccione *Avanzado* > *Cargar software StorageGRID*.
+.. Haga clic en *Eliminar* para eliminar el paquete de software actual.
++
+image::../media/appliance_installer_rmv_current_software.png[Instalador del dispositivo: Eliminar el software actual]
+
+.. Haga clic en *examinar* para ver el paquete de software que descargó y extrajo y, a continuación, haga clic en *examinar* para ver el archivo de suma de comprobación.
++
+image::../media/appliance_installer_upload_sg_software.png[Instalador del dispositivo: Carga del software de SG]
+
+.. Seleccione *Inicio* para volver a la página de inicio.
+
+
+. Confirme que el estado actual es "'preparado para iniciar la instalación del nombre del nodo de administración principal con la versión de software x.y'" y que el botón *Iniciar instalación* está activado.
++
+
+NOTE: Si va a implementar el dispositivo del nodo de administración como destino de clonación de nodos, detenga el proceso de despliegue aquí y continúe con el link:../commonhardware/appliance-node-cloning-procedure.html["procedimiento de clonación de nodos"].
+
+. En la página de inicio del instalador de dispositivos StorageGRID, haga clic en *Iniciar instalación*.
++
+image::../media/appliance_installer_home_start_installation_enabled_primary_an.png[Instalación del nodo de administración principal del dispositivo]
+
++
+El estado actual cambia a "'instalación en curso'" y se muestra la página de instalación del monitor.
+
++
+
+NOTE: Si necesita acceder a la página de instalación del monitor manualmente, haga clic en *instalación del monitor* en la barra de menús.
+
+
+
+
+
+== Implemente el dispositivo de servicios como puerta de enlace o un nodo administrador que no sea el principal
+
+Cuando se implementa un dispositivo de servicios como nodo de puerta de enlace o nodo de administración no primario, se usa el instalador de dispositivos StorageGRID incluido en el dispositivo.
+
+.Antes de empezar
+* El dispositivo se ha instalado en un rack o armario, conectado a las redes y encendido.
+* Se han configurado los enlaces de red, las direcciones IP y la reasignación de puertos (si fuera necesario) para el dispositivo con el instalador de dispositivos de StorageGRID.
+* Se puso en marcha el nodo de administración principal del sistema StorageGRID.
+* Todas las subredes de red de cuadrícula que aparecen en la página Configuración de IP del instalador de dispositivos StorageGRID se definieron en la lista de subredes de redes de cuadrícula del nodo de administración principal.
+* Tiene un ordenador portátil de servicio con un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Conoce la dirección IP asignada al dispositivo. Puede usar la dirección IP para cualquier red StorageGRID conectada.
+
+
+.Acerca de esta tarea
+Para instalar StorageGRID en un nodo del dispositivo de servicios:
+
+* Especifique o confirme la dirección IP del nodo de administración principal y el nombre del nodo de dispositivo.
+* Se inicia la instalación y se espera a medida que se instala el software.
++
+Paso a través de las tareas de instalación del nodo de puerta de enlace del dispositivo, la instalación se detiene. Para reanudar la instalación, inicia sesión en el Gestor de grid, aprueba todos los nodos de cuadrícula y completa el proceso de instalación de StorageGRID. La instalación de un nodo de administración no primario no requiere su aprobación.
+
+
+
+
+NOTE: No ponga en marcha dispositivos de servicio SG100 y SG1000 en el mismo sitio. El rendimiento puede ser impredecible.
+
+
+NOTE: Si necesita poner en marcha varios nodos de dispositivos a la vez, puede automatizar el proceso de instalación. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
+
+.Pasos
+. Abra un explorador e introduzca la dirección IP del dispositivo.
++
+`*https://_Controller_IP_:8443*`
+
++
+Aparece la página de inicio del instalador de dispositivos de StorageGRID.
+
+. En la sección Conexión del nodo de administración principal, determine si necesita especificar la dirección IP para el nodo de administración principal.
++
+Si ha instalado anteriormente otros nodos en este centro de datos, el instalador de dispositivos de StorageGRID puede detectar esta dirección IP automáticamente, suponiendo que el nodo de administración principal o, al menos, otro nodo de grid con una configuración ADMIN_IP, esté presente en la misma subred.
+
+. Si no se muestra esta dirección IP o es necesario modificarla, especifique la dirección:
++
+[cols="1a,2a"]
+|===
+| Opción | Descripción 
+
+
+ a| 
+Entrada IP manual
+ a| 
+.. Desactive la casilla de verificación *Enable Admin Node discovery*.
+.. Introduzca la dirección IP de forma manual.
+.. Haga clic en *Guardar*.
+.. Espere a que el estado de la conexión para que la nueva dirección IP se prepare.
+
+
+
+
+ a| 
+Detección automática de todos los nodos principales de administración conectados
+ a| 
+.. Seleccione la casilla de verificación *Enable Admin Node discovery*.
+.. Espere a que se muestre la lista de direcciones IP detectadas.
+.. Seleccione el nodo de administrador principal para la cuadrícula en la que se pondrá en marcha este nodo de almacenamiento del dispositivo.
+.. Haga clic en *Guardar*.
+.. Espere a que el estado de la conexión para que la nueva dirección IP se prepare.
+
+
+|===
+. En el campo *Nombre del nodo*, proporcione el nombre del sistema que desea utilizar para este nodo del dispositivo y haga clic en *Guardar*.
++
+El nombre que aparece aquí será el nombre del sistema del nodo del dispositivo. Los nombres del sistema son necesarios para las operaciones internas de StorageGRID y no se pueden cambiar.
+
+. Opcionalmente, para instalar una versión diferente del software StorageGRID, siga estos pasos:
++
+.. Descargue el archivo de instalación:
++
+https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^]
+
+.. Extraiga el archivo.
+.. En el instalador de dispositivos StorageGRID, seleccione *Avanzado* > *Cargar software StorageGRID*.
+.. Haga clic en *Eliminar* para eliminar el paquete de software actual.
++
+image::../media/appliance_installer_rmv_current_software.png[Instalador del dispositivo: Eliminar el software actual]
+
+.. Haga clic en *examinar* para ver el paquete de software que descargó y extrajo y, a continuación, haga clic en *examinar* para ver el archivo de suma de comprobación.
++
+image::../media/appliance_installer_upload_sg_software.png[Instalador del dispositivo: Carga del software de SG]
+
+.. Seleccione *Inicio* para volver a la página de inicio.
+
+
+. En la sección instalación, confirme que el estado actual es "Listo para iniciar la instalación de `_node name_` En el grid con el nodo de administrador principal `_admin_ip_` " Y que el botón *Iniciar instalación* está activado.
++
+Si el botón *Iniciar instalación* no está activado, es posible que deba cambiar la configuración de red o la configuración del puerto. Para obtener instrucciones, consulte las instrucciones de mantenimiento de su aparato.
+
+. En la página de inicio del instalador de dispositivos StorageGRID, haga clic en *Iniciar instalación*.
++
+image::../media/appliance_installer_services_appliance_non_pan.png[Inicio del instalador de dispositivos: Instale un nodo de administración no primario]
+
++
+El estado actual cambia a "'instalación en curso'" y se muestra la página de instalación del monitor.
+
++
+
+NOTE: Si necesita acceder a la página de instalación del monitor manualmente, haga clic en *instalación del monitor* en la barra de menús.
+
+. Si el grid incluye varios nodos de dispositivo, repita los pasos anteriores con cada dispositivo.
+

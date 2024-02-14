@@ -1,0 +1,99 @@
+---
+permalink: installconfig/setting-ip-address-for-bmc-management-port.html 
+sidebar: sidebar 
+keywords: BMC, baseboard management controller, configure, setup, set up, IP, IP address. management port 
+summary: Para poder acceder a la interfaz de BMC, debe configurar la dirección IP del puerto de gestión BMC en la controladora SG6000-CN o el dispositivo Services. 
+---
+= Establezca la dirección IP para el puerto de administración de BMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para poder acceder a la interfaz de BMC, configure la dirección IP para el puerto de gestión BMC en las aplicaciones SGF6112, SG6000-CN o de servicios.
+
+Si utiliza ConfigBuilder para generar un archivo JSON, puede configurar direcciones IP automáticamente. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
+
+.Antes de empezar
+* El cliente de gestión está usando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Está usando cualquier cliente de gestión que pueda conectarse a una red StorageGRID.
+* El puerto de gestión del BMC está conectado a la red de gestión que tiene previsto utilizar.
++
+[role="tabbed-block"]
+====
+.SG100
+--
+image::../media/sg100_bmc_management_port.png[SG100 Puerto de administración de BMC]
+
+--
+.SG1000
+--
+image::../media/sg1000_bmc_management_port.png[Puerto de administración de BMC SG1000]
+
+--
+.SG6000
+--
+image::../media/sg6000_cn_bmc_management_port.gif[Puerto de gestión de BMC en el controlador SG6000-CN]
+
+--
+.SG6100
+--
+image::../media/sgf6112_cn_bmc_management_port.png[Puerto de gestión SGF6112 de BMC]
+
+--
+====
+
+
+.Acerca de esta tarea
+Para fines de soporte, el puerto de gestión del BMC permite un acceso bajo al hardware.
+
+
+NOTE: Solo debe conectar este puerto a una red de gestión interna segura y de confianza. Si no hay ninguna red disponible, deje el puerto BMC desconectado o bloqueado, a menos que el soporte técnico solicite una conexión a BMC.
+
+.Pasos
+. Desde el cliente, introduzca la URL del instalador de dispositivos de StorageGRID: +
+`*https://_Appliance_IP_:8443*`
++
+Para `Appliance_IP`, Utilice la dirección IP del dispositivo en cualquier red StorageGRID.
+
++
+Aparece la página de inicio del instalador de dispositivos de StorageGRID.
+
+. Seleccione *Configurar hardware* > *Configuración BMC*.
++
+image::../media/bmc_configuration_page.gif[Captura de pantalla que muestra la opción Avanzada > Configuración de BMC]
+
++
+Aparece la página Configuración de la controladora de gestión de placa base.
+
+. Anote la dirección IPv4 que se muestra automáticamente.
++
+DHCP es el método predeterminado para asignar una dirección IP a este puerto.
+
++
+
+NOTE: Puede que los valores de DHCP deban tardar varios minutos en aparecer.
+
++
+image::../media/bmc_configuration_dhcp_address.gif[Página de configuración del controlador de administración del sótano que muestra la dirección DHCP]
+
+. De manera opcional, establezca una dirección IP estática para el puerto de gestión del BMC.
++
+
+NOTE: Debe asignar una IP estática al puerto de gestión de BMC o una concesión permanente para la dirección en el servidor DHCP.
+
++
+.. Seleccione *estático*.
+.. Introduzca la dirección IPv4 mediante la notación CIDR.
+.. Introduzca la pasarela predeterminada.
++
+image::../media/bmc_configuration_static_ip.gif[Opción de configuración estática del controlador de administración de la placa base]
+
+.. Haga clic en *Guardar*.
++
+Puede que los cambios se apliquen en unos minutos.
+
+
+
+

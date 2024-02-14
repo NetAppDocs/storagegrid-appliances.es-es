@@ -1,0 +1,63 @@
+---
+permalink: sg6000/reinstalling-sg6000-cn-controller-cover.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, sg6000-cn, controller, cover, install, installing, installation, reinstall, reinstalling, reinstallation, remove, removing, removal 
+summary: Retire la cubierta del aparato para acceder a los componentes internos para realizar tareas de mantenimiento y vuelva a colocarla cuando haya terminado. 
+---
+= Vuelva a colocar la cubierta del controlador SG6000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retire la cubierta del aparato para acceder a los componentes internos para realizar tareas de mantenimiento y vuelva a colocarla cuando haya terminado.
+
+
+
+== Retire la cubierta del controlador SG6000-CN
+
+Retire la cubierta del controlador para acceder a los componentes internos para realizar tareas de mantenimiento.
+
+.Antes de empezar
+Retire el controlador del armario o rack para acceder a la cubierta superior.
+
+link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html#remove-sg6000-cn-controller-from-cabinet-or-rack["Retire el controlador SG6000-CN del armario o bastidor"]
+
+.Pasos
+. Asegúrese de que el pestillo de la cubierta del controlador SG6000-CN no esté bloqueado. Si es necesario, gire un cuarto de vuelta el cierre de plástico azul en la dirección de desbloqueo, como se muestra en el bloqueo del pestillo.
+. Gire el pestillo hacia arriba y hacia atrás hacia la parte trasera del chasis del controlador SG6000-CN hasta que se detenga; a continuación, levante con cuidado la cubierta del chasis y déjela a un lado.
++
+image::../media/sg6060_cover_latch_open.jpg[Pestillo de la cubierta SG6060 abierto]
+
++
+
+CAUTION: Envuelva el extremo de la correa de una muñequera ESD alrededor de la muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas al trabajar en el interior del controlador SG6000-CN.
+
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+
+
+
+== Vuelva a instalar la cubierta del controlador SG6000-CN
+
+Vuelva a instalar la cubierta del controlador cuando finalice el mantenimiento interno del hardware.
+
+.Antes de empezar
+Completó todos los procedimientos de mantenimiento dentro del controlador.
+
+.Pasos
+. Con el pestillo de la cubierta abierto, sujete la cubierta por encima del chasis y alinee el orificio del pestillo de la cubierta superior con el pasador del chasis. Cuando la cubierta esté alineada, bájela en el chasis.
++
+image::../media/sg6060_cover_latch_alignment_pin.jpg[Pasador de alineación del pestillo de la cubierta SG6060]
+
+. Gire el pestillo de la cubierta hacia adelante y hacia abajo hasta que se detenga y la cubierta se asiente completamente en el chasis. Compruebe que no hay separaciones a lo largo del borde delantero de la cubierta.
++
+Si la cubierta no está completamente asentada, es posible que no pueda deslizar el controlador SG6000-CN en el rack.
+
+. Opcional: Gire un cuarto de vuelta el cierre de plástico azul en el sentido de bloqueo, como se muestra en el bloqueo del pestillo, para bloquearlo.
+
+
+.Después de terminar
+link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html["Vuelva a instalar la controladora en el armario o rack."]

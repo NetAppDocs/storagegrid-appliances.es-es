@@ -1,0 +1,51 @@
+---
+permalink: installconfig/sg6060-installing-drives.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, drives, drive, disk, disks, install, installing, installation 
+summary: Después de instalar la bandeja de 60 unidades en un armario o rack, instale todas las unidades 60 en la bandeja. El envío para la bandeja de controladoras E2860 incluye dos unidades SSD, que debe instalarse en el cajón superior de la bandeja de controladoras. Cada bandeja de expansión opcional incluye 60 unidades de disco duro y sin unidades SSD. 
+---
+= Instalar las unidades (SG6060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de instalar la bandeja de 60 unidades en un armario o rack, instale todas las unidades 60 en la bandeja. El envío para la bandeja de controladoras E2860 incluye dos unidades SSD, que debe instalarse en el cajón superior de la bandeja de controladoras. Cada bandeja de expansión opcional incluye 60 unidades de disco duro y sin unidades SSD.
+
+.Antes de empezar
+Instaló la bandeja de controladoras E2860 o bandejas de expansión opcionales (uno o dos) en el armario o rack.
+
+
+CAUTION: Para evitar que se dañe el hardware, no mueva nunca la bandeja si hay unidades instaladas. Debe quitar todas las unidades antes de mover la bandeja.
+
+.Pasos
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Quite las unidades de su embalaje.
+. Suelte las palancas del cajón de mando superior y deslice el cajón hacia fuera con las palancas.
+. Busque las dos unidades SSD.
++
+
+NOTE: Las bandejas de expansión no usan unidades SSD.
+
+. Levante cada palanca de mando a una posición vertical.
+. Instale las dos unidades SSD en las ranuras 0 y 1 (las primeras dos ranuras a lo largo del lado izquierdo del cajón).
+. Coloque con cuidado cada unidad en su ranura y baje el asa de la unidad levantada hasta que encaje en su lugar.
++
+image::../media/install_drives_in_e2860.gif[Instale las unidades]
+
+. Instale 10 unidades de disco duro en el cajón superior.
+. Deslice el cajón hacia atrás presionando el centro y cerrando ambas palancas con cuidado.
++
+
+CAUTION: Deje de empujar el cajón si siente que está agarrotado. Utilice las palancas de liberación de la parte delantera del cajón para desdeslizar el cajón hacia atrás. A continuación, vuelva a insertar con cuidado el cajón en la ranura.
+
+. Repita estos pasos para instalar unidades de disco duro en los otros cuatro cajones.
++
+
+NOTE: Debe instalar las 60 unidades para garantizar que su funcionamiento es correcto.
+
+. Coloque el panel frontal en la bandeja.
+. Si tiene bandejas de ampliación, repita estos pasos para instalar 12 unidades de disco duro en cada cajón de cada bandeja de ampliación.
+. Siga las instrucciones de instalación del SG6000-CN en un armario o bastidor.
+

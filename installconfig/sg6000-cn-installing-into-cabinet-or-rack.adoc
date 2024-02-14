@@ -1,0 +1,44 @@
+---
+permalink: installconfig/sg6000-cn-installing-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6000-cn, rail, rails 
+summary: Instale un conjunto de rieles para la controladora SG6000-CN en el armario o rack y, a continuación, deslice la controladora en los rieles. 
+---
+= Instalación del controlador SG6000-CN (SG6060 y SG6024)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instale un conjunto de rieles para la controladora SG6000-CN en el armario o rack y, a continuación, deslice la controladora en los rieles.
+
+.Antes de empezar
+* Ha revisado el documento de avisos de seguridad que se incluye en la caja y comprende las precauciones para mover e instalar el hardware.
+* Tiene las instrucciones incluidas en el kit de raíl.
+* Instaló la bandeja de controladoras E2860 y unidades o la bandeja de controladoras EF570.
+
+
+.Pasos
+. Siga con cuidado las instrucciones del kit de raíl para instalar los rieles en su armario o rack.
+. En los dos rieles instalados en el armario o rack, extienda las partes móviles de los rieles hasta que oiga un clic.
++
+image::../media/rails_extended_out.gif[Guías SG6000]
+
+. Inserte el controlador SG6000-CN en los rieles.
+. Deslice el controlador en el armario o rack.
++
+Cuando ya no pueda mover la controladora, tire de los pestillos azules de ambos lados del chasis para deslizar la controladora completamente hacia dentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 deslizamiento sobre rieles]
+
++
+
+NOTE: No conecte el panel frontal hasta que haya encendido la controladora.
+
+. Apriete los tornillos cautivos del panel frontal del controlador para fijar el controlador en el rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Tornillos de sujeción del bastidor SG6060]
+
+

@@ -1,0 +1,77 @@
+---
+permalink: installconfig/index.html 
+sidebar: sidebar 
+keywords: Installation, deployment, Install, deploy, Installing, deploying 
+summary: Siga estos pasos de alto nivel para instalar y configurar un dispositivo StorageGRID e implementarlo como nodo en su sistema StorageGRID. 
+---
+= Inicio rápido para la instalación del dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga estos pasos de alto nivel para instalar y configurar un dispositivo StorageGRID e implementarlo como nodo en su sistema StorageGRID.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Preparación de la instalación
+[role="quick-margin-list"]
+. Trabaje con su consultor de Servicios profesionales de NetApp para automatizar la instalación y la configuración. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
++
+Este paso es opcional. Sin embargo, la optimización y automatización de los pasos de configuración pueden ahorrar tiempo y proporcionar coherencia en la configuración de varios dispositivos.
+
+. link:preparing-site.html["Prepare el sitio"]
+. link:unpacking-boxes.html["Desempaquetar cajas"]
+. link:obtaining-additional-equipment-and-tools.html["Obtenga equipos y herramientas adicionales"]
+. https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Revise los requisitos del explorador web"^]
+. link:reviewing-appliance-network-connections.html["Recopile información de red"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Instale el hardware
+[role="quick-margin-list"]
+. link:registering-hardware.html["Registre el hardware"]
+. Instale en el armario o rack
++
+** link:installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html["SG100 y SG1000"]
+** link:installing-appliance-in-cabinet-or-rack-sg5700.html["SG5700"]
+** link:installing-hardware-sg6000.html["SG6000"]
+** link:installing-appliance-in-cabinet-or-rack-sgf6112.html["SG6100"]
+
+
+. link:cabling-appliance.html["Aparato por cable"]
+. link:connecting-power-cords-and-applying-power.html["Conecte los cables de alimentación y aplique alimentación"]
+. link:viewing-status-indicators.html["Ver códigos e indicadores de estado"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Configure el hardware
+[role="quick-margin-para"]
+Si va a configurar y poner en marcha más de un dispositivo, utilice la herramienta ConfigBuilder de NetApp para automatizar los siguientes pasos de configuración y puesta en marcha. Si desea obtener ayuda, póngase en contacto con su asesor de servicios profesionales de NetApp. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
+
+[role="quick-margin-list"]
+. Configure las conexiones StorageGRID
++
+** link:accessing-storagegrid-appliance-installer.html["Acceda al instalador de dispositivos de StorageGRID"] y compruebe que está ejecutando la versión más reciente
+** link:configuring-network-links.html["Configure los enlaces de red"]
+** link:setting-ip-configuration.html["Configure las direcciones IP de StorageGRID"]
+** link:verifying-network-connections.html["Compruebe las conexiones de red"]
+** link:verifying-port-level-network-connections.html["Verifique las conexiones de red a nivel de puerto"]
+
+
+. link:accessing-and-configuring-santricity-system-manager.html["Acceda y configure SANtricity System Manager"] (SG6000 y SG5700)
+. link:configuring-bmc-interface.html["Configure la interfaz de BMC"] (SG100, SG1000, SG6000 Y SG6100)
+. Realice los pasos de configuración opcionales
++
+** link:optional-enabling-node-encryption.html["Habilite el cifrado de nodos o unidades"]
+** link:optional-changing-raid-mode.html["Cambio del modo RAID (SG6000 y SG5700)"]
+** link:optional-remapping-network-ports-for-appliance.html["Reasignar puertos de red"]
+
+
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"] Ponga en marcha el nodo del dispositivo
+[role="quick-margin-para"]
+Ponga en marcha el dispositivo como nodo nuevo en su sistema StorageGRID.
+
+[role="quick-margin-list"]
+* link:deploying-appliance-storage-node.html["Ponga en marcha el nodo de almacenamiento del dispositivo"]
+* link:deploying-services-appliance-node.html["Implemente el nodo del dispositivo de servicios"]
+

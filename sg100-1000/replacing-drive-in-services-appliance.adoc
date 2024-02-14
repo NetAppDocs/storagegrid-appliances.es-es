@@ -1,0 +1,71 @@
+---
+permalink: sg100-1000/replacing-drive-in-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Los SSD del dispositivo de servicios contienen el sistema operativo StorageGRID. Además, cuando el dispositivo se configura como un nodo de administración, los SSD también contienen registros de auditoría, métricas y tablas de bases de datos. Las unidades se reflejan con RAID1 para redundancia. Si una de las unidades falla, es necesario reemplazarla por Lo antes posible. para garantizar la redundancia. 
+---
+= Reemplace la unidad en SG100 o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los SSD del dispositivo de servicios contienen el sistema operativo StorageGRID. Además, cuando el dispositivo se configura como un nodo de administración, los SSD también contienen registros de auditoría, métricas y tablas de bases de datos. Las unidades se reflejan con RAID1 para redundancia. Si una de las unidades falla, es necesario reemplazarla por Lo antes posible. para garantizar la redundancia.
+
+.Antes de empezar
+* Ya tienes link:locating-controller-in-data-center.html["ubicación física del aparato"].
+* Ha comprobado qué unidad ha fallado, teniendo en cuenta que el LED izquierdo parpadea en color ámbar.
++
+Los dos SSD se colocan en las ranuras tal como se muestra en el diagrama siguiente:
+
++
+image::../media/drive_locations_sg1000_front_with_ssds.png[Ubicaciones de unidades]
+
++
+
+CAUTION: Si elimina la unidad de trabajo, descerá el nodo del dispositivo. Consulte la información sobre la visualización de los indicadores de estado para verificar el fallo.
+
+* Ha obtenido la unidad de reemplazo.
+* Ha obtenido la protección ESD adecuada.
+
+
+.Pasos
+. Compruebe que el LED izquierdo parpadea en ámbar en la unidad que se va a sustituir. Si se notificó un problema de unidad en los interfaces de usuario de Grid Manager o BMC, HDD02 o HDD2 se refieren a la unidad en la ranura superior y HDD03 o HDD3 se refieren a la unidad en la ranura inferior.
++
+También puede utilizar Grid Manager para supervisar el estado de los SSD. Selecciona *NODOS*. A continuación, seleccione `*Appliance Node*` > *Hardware*. Si se produce un error en una unidad, el campo Storage RAID Mode contiene un mensaje acerca de qué unidad ha fallado.
+
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Desembale la unidad de repuesto y configúrela en una superficie nivelada y sin estática cerca del aparato.
++
+Guarde todos los materiales de embalaje.
+
+. Pulse el botón de liberación de la unidad con error.
++
+image::../media/h600s_driveremoval.gif[Extracción de la unidad]
+
++
+La palanca de los muelles de accionamiento se abre parcialmente y la unidad se libera de la ranura.
+
+. Abra el asa, deslice la unidad hacia fuera y colóquela en una superficie nivelada y sin estática.
+. Presione el botón de liberación de la unidad de reemplazo antes de insertarla en la ranura de la unidad.
++
+Los muelles de pestillo se abren.
+
++
+image::../media/h600s_driveinstall.gif[Instalación de la unidad]
+
+. Inserte la unidad de reemplazo en la ranura y, a continuación, cierre el asa de la unidad.
++
+
+CAUTION: No ejerza demasiada fuerza al cerrar el mango.
+
++
+Cuando la unidad se inserta por completo, se oye un clic.
+
++
+La unidad se reconstruye automáticamente con datos reflejados de la unidad en funcionamiento. Puede comprobar el estado de la reconstrucción mediante Grid Manager. Selecciona *NODOS*. A continuación, seleccione `*Appliance Node*` > *Hardware*. El campo Storage RAID Mode contiene un mensaje de «reforma» hasta que la unidad se reconstruya por completo.
+
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.

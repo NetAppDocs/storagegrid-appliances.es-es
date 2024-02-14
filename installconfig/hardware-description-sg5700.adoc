@@ -1,0 +1,463 @@
+---
+permalink: installconfig/hardware-description-sg5700.html 
+sidebar: sidebar 
+keywords: sg5700, sg5712, sg5712x, sg5760, sg5760x, storage appliance 
+summary: 'El dispositivo SG5700 StorageGRID es una plataforma informática y de almacenamiento integrada que funciona como nodo de almacenamiento en un grid StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales \(basados en software\).' 
+---
+= Dispositivos SG5700: Información general
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El dispositivo SG5700 StorageGRID es una plataforma informática y de almacenamiento integrada que funciona como nodo de almacenamiento en un grid StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales (basados en software).
+
+El dispositivo de la serie SG5700 de StorageGRID proporciona las siguientes funciones:
+
+* Integre los elementos de computación y almacenamiento para un nodo de almacenamiento de StorageGRID.
+* Incluya el instalador de dispositivos StorageGRID para simplificar la puesta en marcha y la configuración del nodo de almacenamiento.
+* Incluye System Manager de la serie E-Series SANtricity para la gestión y supervisión del hardware.
+* Admite hasta cuatro conexiones de 10 GbE o 25 GbE a la red Grid y a la red cliente de StorageGRID.
+* Compatible con unidades de cifrado de disco completo (FDE) o FIPS. Cuando estas unidades se usan con la función Drive Security en SANtricity System Manager, se evita el acceso no autorizado a los datos.
+
+
+El dispositivo SG5700 está disponible en cuatro modelos: SG5712 y SG5712X, así como SG5760 y SG5760X. No existen diferencias de especificación o funcionamiento entre el SG5712 y el SG5712X, excepto la ubicación de los puertos de interconexión de la controladora de almacenamiento. Del mismo modo, no hay especificaciones o diferencias funcionales entre el SG5760 y el SG5760X excepto en lo que respecta a la ubicación de los puertos de interconexión en la controladora de almacenamiento.
+
+
+
+== SG5700 componentes
+
+Los modelos SG5700 incluyen los siguientes componentes:
+
+[role="tabbed-block"]
+====
+.SG5712
+--
+Controladora de computación:: Controladora E5700SG
+Controladora de almacenamiento:: Controlador E2800A
+Chasis:: E-Series DE212C, un compartimento de dos unidades rack (2U)
+Unidades:: 12 unidades NL-SAS (3.5 pulgadas)
+Sistemas de alimentación y ventiladores redundantes:: Dos contenedores de alimentación/ventilador
+
+
+--
+.SG5712X
+--
+Controladora de computación:: Controladora E5700SG
+Controladora de almacenamiento:: Controlador E2800B
+Chasis:: E-Series DE212C, un compartimento de dos unidades rack (2U)
+Unidades:: 12 unidades NL-SAS (3.5 pulgadas)
+Sistemas de alimentación y ventiladores redundantes:: Dos contenedores de alimentación/ventilador
+
+
+--
+.SG5760
+--
+Controladora de computación:: Controladora E5700SG
+Controladora de almacenamiento:: Controlador E2800A
+Chasis:: Compartimento DE460C E-Series, un compartimento de cuatro unidades de rack (4U)
+Unidades:: Unidades de NL-SAS de 60 TB (3,5 pulgadas)
+Sistemas de alimentación y ventiladores redundantes:: Dos contenedores de alimentación y dos contenedores de ventilador
+
+
+--
+.SG5760X
+--
+Controladora de computación:: Controladora E5700SG
+Controladora de almacenamiento:: Controlador E2800B
+Chasis:: Compartimento DE460C E-Series, un compartimento de cuatro unidades de rack (4U)
+Unidades:: Unidades de NL-SAS de 60 TB (3,5 pulgadas)
+Sistemas de alimentación y ventiladores redundantes:: Dos contenedores de alimentación y dos contenedores de ventilador
+
+
+--
+====
+El almacenamiento bruto máximo disponible en el dispositivo StorageGRID es fijo, en función del número de unidades de cada compartimento. No es posible ampliar el almacenamiento disponible añadiendo una bandeja con unidades adicionales.
+
+
+
+== SG5700 diagramas
+
+
+
+=== Vistas frontal y trasera de SG5712
+
+Las cifras muestran la parte frontal y posterior del SG5712, un compartimento 2U con capacidad para 12 unidades.
+
+image::../media/sg5712_front_and_back_views.gif[La parte frontal y posterior del dispositivo SG5712]
+
+
+
+=== SG5712 componentes
+
+El SG5712 incluye dos controladoras y dos contenedores de alimentación/ventilador.
+
+image::../media/sg5712_with_callouts.gif[Controladoras y contenedores de alimentación/ventilador en el dispositivo SG5712]
+
+[cols="1a,3a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Controladora E2800A (controladora de almacenamiento)
+
+
+
+ a| 
+2
+ a| 
+Controladora E5700SG (controladora de computación)
+
+
+
+ a| 
+3
+ a| 
+Contenedores de alimentación/ventilador
+
+|===
+
+
+=== Vistas frontal y trasera de SG5712X
+
+Las cifras muestran la parte frontal y posterior del SG5712X, un compartimento 2U con capacidad para 12 unidades.
+
+image::../media/sg5712x_front_and_back_views.gif[La parte frontal y posterior del aparato SG5712X]
+
+
+
+=== SG5712X componentes
+
+SG5712X incluye dos controladoras y dos contenedores de alimentación/ventiladores.
+
+image::../media/sg5712x_with_callouts.gif[Las controladoras y los contenedores de alimentación/ventilador del dispositivo SG5712X]
+
+[cols="1a,3a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Controladora E2800B (controladora de almacenamiento)
+
+
+
+ a| 
+2
+ a| 
+Controladora E5700SG (controladora de computación)
+
+
+
+ a| 
+3
+ a| 
+Contenedores de alimentación/ventilador
+
+|===
+
+
+=== Vistas frontal y trasera de SG5760
+
+Las cifras muestran la parte frontal y posterior del modelo SG5760, un compartimento 4U con capacidad para 60 unidades en 5 cajones de unidades.
+
+image::../media/sg5760_front_and_back_views.gif[Parte delantera y trasera del dispositivo SG5760]
+
+
+
+=== SG5760 componentes
+
+El SG5760 incluye dos controladoras, dos contenedores de ventilador y dos contenedores de alimentación.
+
+image::../media/sg5760_with_callouts.gif[Controladoras,fan canisters,and power canisters in SG5760 appliance]
+
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Controladora E2800A (controladora de almacenamiento)
+
+
+
+ a| 
+2
+ a| 
+Controladora E5700SG (controladora de computación)
+
+
+
+ a| 
+3
+ a| 
+Contenedor de ventilador (1 de 2)
+
+
+
+ a| 
+4
+ a| 
+Contenedor de alimentación (1 de 2)
+
+|===
+
+
+=== Vistas frontal y trasera de SG5760X
+
+Las cifras muestran la parte frontal y posterior del modelo SG5760X, un compartimento 4U con capacidad para 60 unidades en 5 cajones de unidades.
+
+image::../media/sg5760x_front_and_back_views.gif[Parte delantera y trasera del dispositivo SG5760X]
+
+
+
+=== SG5760X componentes
+
+SG5760X incluye dos controladoras, dos contenedores de ventilador y dos contenedores de alimentación.
+
+image::../media/sg5760x_with_callouts.gif[Controladoras,fan canisters,and power canisters in SG5760X appliance]
+
+[cols="1a,3a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Controladora E2800B (controladora de almacenamiento)
+
+
+
+ a| 
+2
+ a| 
+Controladora E5700SG (controladora de computación)
+
+
+
+ a| 
+3
+ a| 
+Contenedor de ventilador (1 de 2)
+
+
+
+ a| 
+4
+ a| 
+Contenedor de alimentación (1 de 2)
+
+|===
+
+
+== SG5700 controladores
+
+Los modelos SG5712 y SG5712X de 12 unidades, así como los modelos SG5760 y SG5760X de 60 unidades del dispositivo StorageGRID, incluyen una controladora de computación E5700SG y una controladora de almacenamiento E2800 E-Series.
+
+* SG5712 y SG5760 utilizan controladoras E2800A.
+* SG5712X y SG5760X utilizan una controladora E2800B.
+
+
+Las controladoras E2800A y E2800B son idénticas en especificación y funcionamiento, excepto en cuanto a la ubicación de los puertos de interconexión.
+
+
+
+=== Controladora de computación de E5700SG
+
+* Funciona como servidor de computación del dispositivo.
+* Incluye el instalador de dispositivos StorageGRID.
++
+
+NOTE: El software StorageGRID no está preinstalado en el dispositivo. A este software se accede desde el nodo de administración cuando se implementa el dispositivo.
+
+* Se puede conectar a las tres redes StorageGRID, incluidas la red de cuadrícula, la red de administración y la red de cliente.
+* Se conecta a la controladora E2800 y funciona como iniciador.
+
+
+
+
+==== E5700SG conectores
+
+image::../media/e5700sg_controller_with_callouts.gif[Conectores en el controlador E5700SG]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de interconexión 1 y 2
+ a| 
+Fibre Channel (FC) de 16GB Gb/s, SFP óptico
+ a| 
+Conecte la controladora E5700SG a la controladora E2800.
+
+
+
+ a| 
+2
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* Puerto serie RJ-45
+* Puerto serie micro USB
+* Puerto USB
+
+ a| 
+Reservado para soporte técnico.
+
+
+
+ a| 
+3
+ a| 
+Puertos de expansión de unidades
+ a| 
+SAS de 12 GB/s
+ a| 
+No se utiliza. Los dispositivos StorageGRID no admiten bandejas de unidades de ampliación.
+
+
+
+ a| 
+4
+ a| 
+Puertos de red 1-4
+ a| 
+10-GbE o 25-GbE, según el tipo de transceptor SFP, la velocidad del switch y la velocidad de enlace configurada
+ a| 
+Conéctese a la red de red y a la red de cliente para StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Puerto de gestión 1
+ a| 
+Ethernet de 1 GB (RJ-45)
+ a| 
+Conéctese a la red de administración para StorageGRID.
+
+
+
+ a| 
+6
+ a| 
+Puerto de gestión 2
+ a| 
+Ethernet de 1 GB (RJ-45)
+ a| 
+Opciones:
+
+* Bond con el puerto de gestión 1 para una conexión redundante con la red de administrador para StorageGRID.
+* Deje sin cables y disponible para acceso local temporal (IP 169.254.0.1).
+* Durante la instalación, use el puerto 2 para la configuración IP si las direcciones IP asignadas para DHCP no están disponibles.
+
+
+|===
+
+
+=== Controladora de almacenamiento E2800
+
+Existen dos versiones de la controladora de almacenamiento E2800 que se utilizan en los dispositivos SG5700: E2800A y E2800B. El E2800A no tiene HIC, y el E2800B tiene una HIC de cuatro puertos. Las dos versiones de controlador tienen especificaciones y funciones idénticas a excepción de la ubicación de los puertos de interconexión.
+
+La controladora de almacenamiento de la serie E2800 tiene las siguientes especificaciones:
+
+* Funciona como controladora de almacenamiento del dispositivo.
+* Gestiona el almacenamiento de datos en las unidades.
+* Funciona como controladora E-Series estándar en modo simple.
+* Incluye software de sistema operativo SANtricity (firmware de la controladora).
+* Incluye System Manager de SANtricity para supervisar el hardware del dispositivo y gestionar alertas, la función AutoSupport y la función Drive Security.
+* Se conecta a la controladora E5700SG y funciona como objetivo.
+
+
+
+
+==== E2800A conectores
+
+image::../media/e2800_controller_with_callouts.gif[Conectores en el controlador E2800A]
+
+
+
+==== E2800B conectores
+
+image::../media/e2800B_controller_with_callouts.gif[Conectores en el controlador E2800B]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de interconexión 1 y 2
+ a| 
+SFP óptico FC de 16GB Gb/s.
+ a| 
+Conecte el controlador E2800 al controlador E5700SG.
+
+
+
+ a| 
+2
+ a| 
+Puertos de gestión 1 y 2
+ a| 
+Ethernet de 1 GB (RJ-45)
+ a| 
+* Opciones del puerto 1:
++
+** Conéctese a una red de gestión para habilitar el acceso TCP/IP directo a System Manager de SANtricity
+** Deje sin cables para guardar un puerto del switch y una dirección IP.  Acceda a SANtricity System Manager usando las interfaces de usuario del instalador de Grid Manager o Storage Grid Appliance.
+
+
+
+
+*Nota*: Algunas funciones opcionales de SANtricity, como sincronización NTP para marcas de hora de registro precisas, no están disponibles cuando elige dejar el puerto 1 sin cable.
+
+*Nota*: Se requiere StorageGRID 11.5 o superior, y SANtricity 11.70 o superior, cuando salga del Puerto 1 sin cables.
+
+* El puerto 2 está reservado para uso del soporte técnico.
+
+
+
+
+ a| 
+3
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* Puerto serie RJ-45
+* Puerto serie micro USB
+* Puerto USB
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+4
+ a| 
+Puertos de expansión de unidades.
+ a| 
+SAS de 12 GB/s
+ a| 
+No se utiliza.
+
+|===
+.Información relacionada
+http://mysupport.netapp.com/info/web/ECMP1658252.html["Sitio de documentación para sistemas E-Series y EF-Series de NetApp"^]

@@ -1,0 +1,65 @@
+---
+permalink: commonhardware/changing-mtu-setting.html 
+sidebar: sidebar 
+keywords: mtu, change, changing 
+summary: Puede cambiar la configuración de MTU que asigne al configurar las direcciones IP para el nodo del dispositivo. 
+---
+= Cambie la configuración de MTU
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede cambiar la configuración de MTU que asigne al configurar las direcciones IP para el nodo del dispositivo.
+
+.Acerca de esta tarea
+
+CAUTION: El valor de MTU de la red debe coincidir con el valor configurado en el puerto del switch al que está conectado el nodo. De lo contrario, pueden ocurrir problemas de rendimiento de red o pérdida de paquetes.
+
+
+NOTE: Para obtener el mejor rendimiento de red, todos los nodos deben configurarse con valores MTU similares en sus interfaces de Grid Network. La alerta *Red de cuadrícula MTU* se activa si hay una diferencia significativa en la configuración de MTU para la Red de cuadrícula en nodos individuales. No es necesario que los valores de MTU sean los mismos para todos los tipos de red.
+
+Para cambiar la configuración de MTU sin reiniciar el nodo del dispositivo, <<Cambie la configuración de MTU mediante la herramienta Cambiar IP,Utilice la herramienta Cambiar IP>>.
+
+Si la red de cliente o administrador no se configuró en el instalador de dispositivos de StorageGRID durante la instalación inicial, <<Cambie la configuración de MTU con el modo de mantenimiento,Cambie la configuración de MTU con el modo de mantenimiento>>.
+
+
+
+== Cambie la configuración de MTU mediante la herramienta Cambiar IP
+
+.Antes de empezar
+Usted tiene la `Passwords.txt` Archivo para utilizar la herramienta Cambiar IP.
+
+.Pasos
+Acceda a la herramienta Cambiar IP y actualice la configuración de MTU como se describe en https://docs.netapp.com/us-en/storagegrid-118/maintain/changing-nodes-network-configuration.html["Cambie la configuración de red de los nodos"^].
+
+
+
+== Cambie la configuración de MTU con el modo de mantenimiento
+
+Cambie la configuración de MTU mediante el modo de mantenimiento si no puede acceder a estas opciones con la herramienta Cambiar IP.
+
+.Antes de empezar
+El aparato se ha estado link:../commonhardware/placing-appliance-into-maintenance-mode.html["se colocó en modo de mantenimiento"].
+
+.Pasos
+. En el instalador del dispositivo StorageGRID, seleccione *Configurar redes* > *Configuración IP*.
+. Realice los cambios deseados en la configuración de MTU para la red de grid, la red de administración y la red de cliente.
+. Cuando esté satisfecho con los ajustes, seleccione *Guardar*.
+. Si este procedimiento se completó correctamente y tiene procedimientos adicionales que realizar mientras el nodo se encuentra en modo de mantenimiento, realice ahora. Cuando haya terminado, o si ha experimentado algún fallo y desea volver a empezar, seleccione *Avanzado* > *Reiniciar controlador* y, a continuación, seleccione una de estas opciones:
++
+** Seleccione *Reiniciar en StorageGRID*
+** Seleccione *Reiniciar en el modo de mantenimiento* para reiniciar el controlador con el nodo restante en modo de mantenimiento.  Seleccione esta opción si ha experimentado algún error durante el procedimiento y desea volver a empezar. Cuando el nodo termine de reiniciarse en el modo de mantenimiento, reinicie desde el paso adecuado del procedimiento en que falló.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
+
++
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página *NODES* debe mostrar un estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo) del nodo del dispositivo, lo que indica que no hay ninguna alerta activa y que el nodo está conectado a la cuadrícula.
+
++
+image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
+
+
+
+

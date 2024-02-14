@@ -1,0 +1,23 @@
+---
+indexpage:
+  tiles:
+  - title: Instale el dispositivo de almacenamiento en un armario o rack
+    links:
+    - title: SG5700
+      url: "../installconfig/installing-appliance-in-cabinet-or-rack-sg5700.html"
+    - title: SG6000
+      url: "../installconfig/installing-hardware-sg6000.html"
+    - title: SG6100
+      url: "../installconfig/installing-appliance-in-cabinet-or-rack-sgf6112.html"
+  - title: Instale el dispositivo de servicios en el armario o el rack
+    links:
+    - title: SG100 y SG1000
+      url: "../installconfig/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html"
+  - title: Conecte el cable y conecte la alimentación
+    links:
+    - title: Conectar los cables
+      url: "../installconfig/cabling-appliance.html"
+    - title: Conecte y conecte la alimentación
+      url: "../installconfig/connecting-power-cords-and-applying-power.html"
+    - title: Ver códigos e indicadores de estado
+      url: "../installconfig/viewing-status-indicators.html"

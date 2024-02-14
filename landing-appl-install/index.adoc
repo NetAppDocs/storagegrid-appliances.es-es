@@ -1,0 +1,13 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+permalink: landing-appl-install/index.html 
+summary: Para añadir un dispositivo de almacenamiento o servicios a su sistema StorageGRID, se debe instalar y configurar el hardware del dispositivo. A continuación, debe instalar el software StorageGRID en cada dispositivo y conectar el nodo del dispositivo al grid. 
+---
+= Instale el hardware del dispositivo StorageGRID
+:hardbreaks:
+:allow-uri-read: 
+:linkattrs: 
+:imagesdir: ./media/
+
+

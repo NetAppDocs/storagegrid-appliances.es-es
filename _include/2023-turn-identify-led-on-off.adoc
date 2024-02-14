@@ -1,0 +1,29 @@
+= 
+:allow-uri-read: 
+
+
+.Antes de empezar
+Tiene la dirección IP de BMC del dispositivo que desea identificar.
+
+.Pasos
+. link:../installconfig/accessing-bmc-interface.html["Acceda a la interfaz de BMC del dispositivo"].
+. Seleccione *Server Identify*.
++
+Se selecciona el estado actual del LED Identify.
+
+. Seleccione *ON* o *OFF* y luego seleccione *Realizar acción*.
++
+Al seleccionar *ON*, los LED azules de identificación se iluminan en la parte delantera (se muestra la típica) y en la parte trasera del aparato.
+
++
+image::../media/sgf6112_front_panel_service_led_on.png[LED de identificación frontal: Encendido]
+
++
+
+NOTE: Si hay un panel frontal instalado en la controladora, es posible que le resulte difícil ver el LED de identificación frontal.
+
++
+El LED de identificación posterior se encuentra en el centro del aparato, debajo de la ranura Micro-SD.
+
+. Encienda y apague los LED de identificación según sea necesario.
+

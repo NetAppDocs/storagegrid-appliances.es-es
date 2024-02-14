@@ -1,0 +1,115 @@
+---
+permalink: installconfig/deploying-appliance-storage-node.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, deploy node, deploying node, node, deploy, deploying 
+summary: Después de instalar y configurar el dispositivo de almacenamiento, puede ponerlo en marcha como un nodo de almacenamiento en un sistema StorageGRID. Al poner en marcha un dispositivo como nodo de almacenamiento, utiliza el instalador de dispositivos de StorageGRID que se incluye en el dispositivo. 
+---
+= Ponga en marcha el nodo de almacenamiento del dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de instalar y configurar el dispositivo de almacenamiento, puede ponerlo en marcha como un nodo de almacenamiento en un sistema StorageGRID. Al poner en marcha un dispositivo como nodo de almacenamiento, utiliza el instalador de dispositivos de StorageGRID que se incluye en el dispositivo.
+
+.Antes de empezar
+* Si clona un nodo de dispositivo, continúe siguiendo el link:../commonhardware/appliance-node-cloning-procedure.html["clonado de nodos de dispositivos"] proceso.
+* El dispositivo se ha instalado en un rack o armario, conectado a las redes y encendido.
+* Se han configurado los enlaces de red, las direcciones IP y la reasignación de puertos (si fuera necesario) para el dispositivo con el instalador de dispositivos de StorageGRID.
+* Conoce una de las direcciones IP asignadas a la controladora de computación del dispositivo. Puede usar la dirección IP para cualquier red StorageGRID conectada.
+* Se puso en marcha el nodo de administración principal del sistema StorageGRID.
+* Todas las subredes de red de cuadrícula que aparecen en la página Configuración de IP del instalador de dispositivos StorageGRID se definieron en la lista de subredes de redes de cuadrícula del nodo de administración principal.
+* Tiene un portátil de servicio con un navegador web compatible.
+
+
+.Acerca de esta tarea
+Cada dispositivo de almacenamiento funciona como un único nodo de almacenamiento. Cualquier dispositivo puede conectarse a la red de grid, a la red de administración y a la red de cliente
+
+Para implementar un nodo de almacenamiento de dispositivos en un sistema StorageGRID, debe acceder al instalador de dispositivos StorageGRID y realizar los siguientes pasos:
+
+* Debe especificar o confirmar la dirección IP del nodo de administrador principal y el nombre del nodo de almacenamiento.
+* Se inicia la puesta en marcha y se espera a medida que se hayan configurado los volúmenes y se haya instalado el software.
+* Cuando la instalación se detiene paso a paso a través de las tareas de instalación del dispositivo, se reanuda la instalación iniciando sesión en el Administrador de grid, aprobando todos los nodos de cuadrícula y completando los procesos de instalación e implementación de StorageGRID.
+
+
+
+NOTE: Si necesita implementar varios nodos de dispositivos a la vez, puede automatizar el proceso de instalación mediante el `configure-sga.py` Script de instalación del dispositivo.
+
+* Si va a realizar una operación de expansión o recuperación, siga las instrucciones correspondientes:
++
+** Para añadir un nodo de almacenamiento de dispositivo a un sistema StorageGRID existente, consulte las instrucciones de https://docs.netapp.com/us-en/storagegrid-118/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["adición de nodos de cuadrícula"^].
+** Para implementar un nodo de almacenamiento del dispositivo como parte de una operación de recuperación, consulte las instrucciones https://docs.netapp.com/us-en/storagegrid-118/maintain/recovering-storagegrid-appliance-storage-node.html["Recuperar un nodo de almacenamiento del dispositivo"^].
+
+
+
+
+.Pasos
+. Abra un explorador e introduzca una de las direcciones IP para la controladora de computación del dispositivo. +
+`*https://_Controller_IP_:8443*`
++
+Aparece la página de inicio del instalador de dispositivos de StorageGRID.
+
++
+image::../media/appliance_installer_home_start_installation_enabled.gif[Página de inicio de Appliance Installer para otros tipos de nodo (además de nodos de administración)]
+
+. En la sección *Conexión del nodo de administración principal*, determine si necesita especificar la dirección IP para el nodo de administración principal.
++
+Si ha instalado anteriormente otros nodos en este centro de datos, el instalador de dispositivos de StorageGRID puede detectar esta dirección IP automáticamente, suponiendo que el nodo de administración principal o, al menos, otro nodo de grid con una configuración ADMIN_IP, esté presente en la misma subred.
+
+. Si no se muestra esta dirección IP o es necesario modificarla, especifique la dirección:
++
+[cols="1a,2a"]
+|===
+| Opción | Descripción 
+
+
+ a| 
+Entrada IP manual
+ a| 
+.. Desactive la casilla de verificación *Enable Admin Node discovery*.
+.. Introduzca la dirección IP de forma manual.
+.. Haga clic en *Guardar*.
+.. Espere a que el estado de la conexión para que la nueva dirección IP se prepare.
+
+
+
+
+ a| 
+Detección automática de todos los nodos principales de administración conectados
+ a| 
+.. Seleccione la casilla de verificación *Enable Admin Node discovery*.
+.. Espere a que se muestre la lista de direcciones IP detectadas.
+.. Seleccione el nodo de administrador principal para la cuadrícula en la que se pondrá en marcha este nodo de almacenamiento del dispositivo.
+.. Haga clic en *Guardar*.
+.. Espere a que el estado de la conexión para que la nueva dirección IP se prepare.
+
+
+|===
+. En el campo *Nombre del nodo*, proporcione el nombre del sistema que desea utilizar para este nodo del dispositivo y haga clic en *Guardar*.
++
+El nombre que aparece aquí será el nombre del sistema del nodo del dispositivo. Los nombres del sistema son necesarios para las operaciones internas de StorageGRID y no se pueden cambiar.
+
+. En la sección *instalación*, confirme que el estado actual es "Listo para iniciar la instalación de `_node name_` En el grid con el nodo de administrador principal `_admin_ip_` " Y que el botón *Iniciar instalación* está activado.
++
+Si el botón *Iniciar instalación* no está activado, es posible que deba cambiar la configuración de red o la configuración del puerto. Para obtener instrucciones, consulte las instrucciones de mantenimiento de su aparato.
+
++
+
+NOTE: Si va a poner en marcha el dispositivo de nodos de almacenamiento como destino de clonación de nodos, detenga el proceso de puesta en marcha aquí y continúe con el
+link:../commonhardware/appliance-node-cloning-procedure.html["procedimiento de clonación de nodos"].
+
+. En la página de inicio del instalador de dispositivos StorageGRID, haga clic en *Iniciar instalación*.
++
+El estado actual cambia a "'instalación en curso'" y se muestra la página de instalación del monitor.
+
++
+
+NOTE: Si necesita acceder a la página de instalación del monitor manualmente, haga clic en *instalación del monitor*.
+
+. Si el grid incluye varios nodos de almacenamiento de dispositivos, repita estos pasos para cada dispositivo.
++
+
+NOTE: Si necesita implementar varios nodos de almacenamiento para dispositivos a la vez, puede automatizar el proceso de instalación mediante el `configure-sga.py` Script de instalación del dispositivo.
+
+

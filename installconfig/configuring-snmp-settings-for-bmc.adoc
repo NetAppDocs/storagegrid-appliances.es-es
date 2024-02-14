@@ -1,0 +1,40 @@
+---
+permalink: installconfig/configuring-snmp-settings-for-bmc.html 
+sidebar: sidebar 
+keywords: SNMP, configure, setup, set up 
+summary: Si está familiarizado con la configuración de SNMP para hardware, puede usar la interfaz de BMC para configurar los ajustes de SNMP de los dispositivos SG6100, SG6000 y servicios. Puede proporcionar cadenas de comunidad seguras, habilitar capturas SNMP y especificar hasta cinco destinos SNMP. 
+---
+= Configurar los ajustes de SNMP para BMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si está familiarizado con la configuración de SNMP para hardware, puede usar la interfaz de BMC para configurar los ajustes de SNMP de los dispositivos SG6100, SG6000 y servicios. Puede proporcionar cadenas de comunidad seguras, habilitar capturas SNMP y especificar hasta cinco destinos SNMP.
+
+.Antes de empezar
+* Sabe cómo acceder al panel de BMC.
+* Tiene experiencia en la configuración de la configuración de SNMP para el equipo SNMPv1-v2c.
+
+
+
+NOTE: Es posible que los ajustes del BMC realizados con este procedimiento no se conserven si el aparato falla y se tiene que sustituir.  Asegúrese de que tiene un registro de todos los ajustes que ha aplicado, para que se puedan volver a aplicar fácilmente después de reemplazar el hardware si es necesario.
+
+.Pasos
+. En el panel de control de BMC, selecciona *Configuración* > *Configuración SNMP*.
+. En la página SNMP Settings (Configuración SNMP), seleccione *Enable SNMP V1/V2* (Activar SNMP V1/V2*) y, a continuación, proporcione una cadena de comunidad de sólo lectura y una cadena de comunidad de lectura y escritura.
++
+La cadena de comunidad de sólo lectura es como un ID de usuario o una contraseña. Debe cambiar este valor para evitar que los intrusos obtengan información acerca de la configuración de la red. La cadena de comunidad de lectura y escritura protege el dispositivo contra cambios no autorizados.
+
+. Opcionalmente, seleccione *Activar solapamiento* e introduzca la información necesaria.
++
+
+NOTE: Introduzca la IP de destino para cada captura SNMP mediante una dirección IP. Los nombres DNS no son compatibles.
+
++
+Habilite traps si desea que el dispositivo envíe notificaciones inmediatas a una consola SNMP cuando se encuentra en un estado inusual. Dependiendo del dispositivo, las trampas pueden indicar fallos de hardware de varios componentes, condiciones de conexión activa/inactiva, umbrales de temperatura excedidos o tráfico alto.
+
+. Opcionalmente, haga clic en *Enviar captura de prueba* para probar la configuración.
+. Si la configuración es correcta, haga clic en *Guardar*.
+

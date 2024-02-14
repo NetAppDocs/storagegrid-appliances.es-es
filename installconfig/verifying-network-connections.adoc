@@ -1,0 +1,45 @@
+---
+permalink: installconfig/verifying-network-connections.html 
+sidebar: sidebar 
+keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, mtu, test, testing 
+summary: Debe confirmar que puede acceder a las redes StorageGRID que está utilizando desde el dispositivo. Para validar el enrutamiento mediante puertas de enlace de red, debe probar la conectividad entre el instalador de dispositivos de StorageGRID y las direcciones IP en subredes diferentes. También puede verificar la configuración de MTU. 
+---
+= Compruebe las conexiones de red
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe confirmar que puede acceder a las redes StorageGRID que está utilizando desde el dispositivo. Para validar el enrutamiento mediante puertas de enlace de red, debe probar la conectividad entre el instalador de dispositivos de StorageGRID y las direcciones IP en subredes diferentes. También puede verificar la configuración de MTU.
+
+.Pasos
+. En la barra de menús del instalador del dispositivo StorageGRID, haga clic en *Configurar redes* > *Ping y prueba de MTU*.
++
+Aparece la página pruebas de ping y MTU.
+
++
+image::../media/ping_test_start.png[Captura de pantalla de la opción de prueba de ping y MTU en el instalador de dispositivos StorageGRID]
+
+. En el cuadro desplegable *Red*, seleccione la red que desea probar: Grid, Admin o Client.
+. Introduzca la dirección IPv4 o el nombre de dominio completo (FQDN) correspondiente a un host en esa red.
++
+Por ejemplo, puede hacer ping a la puerta de enlace de la red o al nodo de administración principal.
+
+. Opcionalmente, seleccione la casilla de verificación *Probar MTU* para verificar la configuración de MTU para toda la ruta a través de la red hasta el destino.
++
+Por ejemplo, puede probar la ruta entre el nodo del dispositivo y un nodo en un sitio diferente.
+
+. Haga clic en *probar conectividad*.
++
+Si la conexión de red es válida, aparece el mensaje "Ping test pased", con la salida del comando ping en la lista.
+
++
+image::../media/ping_test_passed.png[Captura de pantalla de los resultados de la prueba de ping en el instalador de dispositivos de StorageGRID Webscale]
+
+
+
+.Información relacionada
+* link:configuring-network-links.html["Configure los enlaces de red"]
+* link:../commonhardware/changing-mtu-setting.html["Cambie la configuración de MTU"]
+

@@ -1,0 +1,222 @@
+---
+permalink: sg6100/replacing-sgf6112-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6112, Replacing, replace, remove, removing, removal, install, installing, installation 
+summary: Es posible que deba sustituir el aparato si no funciona de forma óptima o si ha fallado. 
+---
+= Sustituya el dispositivo SGF6112
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que deba sustituir el aparato si no funciona de forma óptima o si ha fallado.
+
+.Antes de empezar
+* Tiene un aparato de repuesto con el mismo número de pieza que el aparato que va a sustituir.
+* Tiene etiquetas para identificar cada cable que está conectado al dispositivo.
+* Ya tienes link:locating-sgf6112-in-data-center.html["ubicación física del aparato"].
+
+
+.Acerca de esta tarea
+No se podrá acceder al nodo StorageGRID mientras sustituye el dispositivo. Si el aparato funciona lo suficiente, puede realizar un apagado controlado al inicio de este procedimiento.
+
+
+NOTE: Si va a sustituir el dispositivo antes de instalar el software StorageGRID, es posible que no pueda acceder al instalador de dispositivos StorageGRID inmediatamente después de completar este procedimiento. Aunque puede acceder al instalador de dispositivos de StorageGRID desde otros hosts en la misma subred que el dispositivo, no puede acceder a él desde hosts en otras subredes. Esta condición debe resolverse dentro de los 15 minutos (cuando se agota cualquier entrada de caché ARP para el tiempo original del dispositivo) o puede borrar la condición de inmediato mediante la purga manual de todas las entradas antiguas de la caché ARP desde el enrutador o la puerta de enlace local.
+
+.Pasos
+. Muestre las configuraciones actuales del aparato y regístrelas.
++
+.. Inicie sesión en el dispositivo que se va a sustituir:
++
+... Introduzca el siguiente comando: `ssh admin@_grid_node_IP_`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+... Introduzca el siguiente comando para cambiar a la raíz: `su -`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
++
+Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para `#`.
+
+
+
+.. Introduzca: `*run-host-command ipmitool lan print*` Para mostrar las configuraciones actuales de BMC del dispositivo.
+
+
+. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Apague el aparato"].
+. Si alguna de las interfaces de red de este dispositivo StorageGRID está configurada para DHCP, debe actualizar las asignaciones de permisos DHCP permanentes en los servidores DHCP para hacer referencia a las direcciones MAC del dispositivo de reemplazo. Esto garantiza que el dispositivo tenga asignadas las direcciones IP esperadas.
++
+Póngase en contacto con el administrador de la red o del servidor DHCP para actualizar las asignaciones de concesión DHCP permanentes. El administrador puede determinar las direcciones MAC del dispositivo de reemplazo desde los registros del servidor DHCP o inspeccionando las tablas de direcciones MAC en los switches a los que están conectados los puertos Ethernet del dispositivo.
+
+. Retire y sustituya el aparato:
++
+.. Etiquete los cables y desconecte los cables y cualquier transceptor de red.
++
+
+NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Retire el dispositivo defectuoso del armario o el rack"].
+.. Tenga en cuenta la posición de los componentes reemplazables (dos fuentes de alimentación, tres NIC y doce SSD) en el dispositivo con error.
++
+Las doce unidades se encuentran en las siguientes posiciones del chasis (se muestra la parte frontal del chasis con el panel frontal quitado):
+
++
+image::../media/sgf6112_ssds_locations.png[Ubicaciones de los ventiladores]
+
++
+|===
+|  | Unidad 
+
+
+ a| 
+1
+ a| 
+HDD00
+
+
+
+ a| 
+2
+ a| 
+HDD01
+
+
+
+ a| 
+3
+ a| 
+HDD02
+
+
+
+ a| 
+4
+ a| 
+HDD03
+
+
+
+ a| 
+5
+ a| 
+HDD04
+
+
+
+ a| 
+6
+ a| 
+HDD05
+
+
+
+ a| 
+7
+ a| 
+HDD06
+
+
+
+ a| 
+8
+ a| 
+HDD07
+
+
+
+ a| 
+9
+ a| 
+HDD08
+
+
+
+ a| 
+10
+ a| 
+HDD09
+
+
+
+ a| 
+11
+ a| 
+HDD10
+
+
+
+ a| 
+12
+ a| 
+HDD11
+
+|===
+.. Transfiera los componentes reemplazables al aparato de repuesto.
++
+Siga las instrucciones de mantenimiento suministradas para volver a instalar los componentes reemplazables.
+
++
+
+CAUTION: Si desea conservar los datos en las unidades, asegúrese de insertar las unidades SSD en las mismas ranuras de la unidad que ocupaban en el dispositivo con error. Si no lo hace, el instalador de dispositivos mostrará un mensaje de advertencia y deberá colocar las unidades en las ranuras correctas y reiniciar el dispositivo para que el dispositivo pueda volver a unirse a la cuadrícula.
+
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Instale el dispositivo de reemplazo en el armario o rack"].
+.. Reemplace los cables y cualquier transceptor óptico.
+
+
+. Encienda el aparato.
+. Si el dispositivo que sustituyó tenía activado el cifrado de unidades de hardware para las unidades SED, debe hacerlo link:optional-enabling-node-encryption.html#access-an-encrypted-drive["introduzca la clave de acceso de cifrado de la unidad"] para acceder a las unidades cifradas cuando se inicia el dispositivo de sustitución por primera vez.
+. Espere a que el aparato vuelva a unirse a la red. Si el dispositivo no se vuelve a unir a la cuadrícula, siga las instrucciones de la página de inicio del instalador de dispositivos de StorageGRID para solucionar cualquier problema.
++
+
+WARNING: Para evitar la pérdida de datos si el instalador del dispositivo indica que se requieren cambios de hardware físicos, como mover unidades de disco a diferentes ranuras, apague el dispositivo antes de realizar cambios de hardware.
+
+. Si el dispositivo que sustituyó utilizó un servidor de gestión de claves (KMS) para gestionar claves de cifrado para el cifrado de nodos, es posible que se necesite una configuración adicional para que el nodo pueda unirse al grid. Si el nodo no se une automáticamente a la cuadrícula, asegúrese de que estas opciones de configuración se hayan transferido al nuevo dispositivo y configure manualmente cualquier configuración que no tenga la configuración esperada:
++
+** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configure las conexiones StorageGRID"]
+** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure el cifrado de nodo para el dispositivo"^]
+
+
+. Inicie sesión en el dispositivo sustituido:
++
+.. Introduzca el siguiente comando: `ssh admin@_grid_node_IP_`
+.. Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+.. Introduzca el siguiente comando para cambiar a la raíz: `su -`
+.. Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+
+
+. Restaure la conectividad de red BMC para el dispositivo sustituido. Existen dos opciones:
++
+** Utilice IP estáticas, máscara de red y puerta de enlace
+** Utilice DHCP para obtener una IP, una máscara de red y una puerta de enlace
++
+... Para restaurar la configuración de BMC para utilizar una IP estática, una máscara de red y una puerta de enlace, escriba los siguientes comandos:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Para restaurar la configuración de BMC a fin de utilizar DHCP a fin de obtener una IP, una máscara de red y una puerta de enlace, introduzca el siguiente comando:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Después de restaurar la conectividad de red de BMC, conéctese a la interfaz de BMC para auditar y restaurar cualquier configuración de BMC personalizada adicional que pueda haber aplicado. Por ejemplo, se debe confirmar la configuración de los destinos de capturas SNMP y las notificaciones por correo electrónico. Consulte link:../installconfig/configuring-bmc-interface.html["Configurar la interfaz de BMC"].
+. Confirme que el nodo del dispositivo aparece en Grid Manager y que no aparece ninguna alerta.
+
+
+.Después de terminar
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+
+.Información relacionada
+link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+
+link:../installconfig/troubleshooting-hardware-installation-sg6100.html#view-error-codes["Ver los códigos de arranque del dispositivo"]

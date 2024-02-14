@@ -1,0 +1,133 @@
+---
+permalink: commonhardware/monitoring-node-encryption-in-maintenance-mode.html 
+sidebar: sidebar 
+keywords: kms, key management server, monitor, monitoring, status, encryption 
+summary: 'Si habilitó el cifrado de nodos para el dispositivo durante la instalación, puede supervisar el estado de cifrado del nodo de cada nodo de dispositivo, incluidos el estado del cifrado del nodo y los detalles del servidor de gestión de claves \(KMS\).' 
+---
+= Supervise el cifrado del nodo en modo de mantenimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si habilitó el cifrado de nodos para el dispositivo durante la instalación, puede supervisar el estado de cifrado del nodo de cada nodo de dispositivo, incluidos el estado del cifrado del nodo y detalles del servidor de gestión de claves (KMS).
+
+Consulte https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configuración de servidores de gestión de claves"^] Para obtener información sobre la implementación de KMS para dispositivos StorageGRID.
+
+.Antes de empezar
+* Ha habilitado el cifrado de nodos para el dispositivo durante la instalación. No se puede habilitar el cifrado de nodo después de instalar el dispositivo.
+* Ya tienes link:../commonhardware/placing-appliance-into-maintenance-mode.html["puso el aparato en modo de mantenimiento"].
+
+
+.Pasos
+. En el instalador del dispositivo StorageGRID, seleccione *Configurar hardware* > *cifrado de nodos*.
++
+image::../media/fde_monitor_in_maint_mode.png[Configuración de KMS Borrar]
+
++
+La página cifrado de nodos incluye tres secciones:
+
++
+** El estado de cifrado muestra si el cifrado de nodos está habilitado o deshabilitado para el dispositivo.
+** Detalles del servidor de gestión de claves muestra información sobre el KMS que se utiliza para cifrar el dispositivo. Puede expandir las secciones de certificados de servidor y cliente para ver los detalles y el estado del certificado.
++
+*** Para solucionar problemas con los propios certificados, como renovar certificados caducados, consulte https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Instrucciones para configurar KMS"^].
+*** Si hay problemas inesperados al conectarse a los hosts KMS, compruebe que link:../commonhardware/checking-dns-server-configuration.html["Los servidores DNS son correctos"] y eso link:../installconfig/configuring-network-links.html["la red del dispositivo está configurada correctamente"].
+*** Si no puede resolver problemas de certificado, póngase en contacto con el soporte técnico.
+
+
+** Clear KMS Key deshabilita el cifrado de nodos para el dispositivo, elimina la asociación entre el dispositivo y el servidor de gestión de claves configurado para el sitio StorageGRID y elimina todos los datos del dispositivo. Debe <<Borrar configuración de servidor de gestión de claves,Borre la clave KMS>> Antes de poder instalar el dispositivo en otro sistema StorageGRID.
++
+
+CAUTION: Al borrar la configuración de KMS se eliminan los datos del dispositivo, lo que hace que no se pueda acceder a ellos de forma permanente. Estos datos no se pueden recuperar.
+
+
+
+. Cuando haya terminado de comprobar el estado de cifrado de nodo, reinicie el nodo. En el instalador del dispositivo StorageGRID, seleccione *Avanzado* > *Reiniciar controlador* y, a continuación, seleccione una de estas opciones:
++
+** Seleccione *Reiniciar en StorageGRID* para reiniciar el controlador con el nodo que vuelve a unir la cuadrícula. Seleccione esta opción si hizo trabajo en modo de mantenimiento y está listo para devolver el nodo a su funcionamiento normal.
+** Seleccione *Reiniciar en el modo de mantenimiento* para reiniciar el controlador con el nodo restante en modo de mantenimiento. (Esta opción solo está disponible si la controladora se encuentra en modo de mantenimiento). Seleccione esta opción si hay otras operaciones de mantenimiento que debe realizar en el nodo antes de volver a unir la cuadrícula.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
+
++
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página *NODES* debe mostrar un estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo) del nodo del dispositivo, lo que indica que no hay ninguna alerta activa y que el nodo está conectado a la cuadrícula.
+
++
+image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
+
+
+
+
+
+
+
+== Borrar configuración de servidor de gestión de claves
+
+Al borrar la configuración del servidor de gestión de claves (KMS), se deshabilita el cifrado de nodos en el dispositivo. Tras borrar la configuración de KMS, los datos del dispositivo se eliminan de forma permanente y ya no se puede acceder a ellos. Estos datos no se pueden recuperar.
+
+.Antes de empezar
+Si necesita conservar datos en el dispositivo, debe realizar un procedimiento de retirada del nodo o clonar el nodo antes de borrar la configuración de KMS.
+
+
+CAUTION: Cuando se borra KMS, los datos del dispositivo se eliminan de forma permanente y ya no se puede acceder a ellos. Estos datos no se pueden recuperar.
+
+https://docs.netapp.com/us-en/storagegrid-118/maintain/grid-node-decommissioning.html["Retire el nodo"^] Para mover los datos que contiene a otros nodos en StorageGRID.
+
+.Acerca de esta tarea
+Al borrar la configuración de KMS del dispositivo, se deshabilita el cifrado de nodos y se elimina la asociación entre el nodo del dispositivo y la configuración de KMS del sitio StorageGRID. Los datos del dispositivo se eliminan y el dispositivo se deja en estado previo a la instalación. Este proceso no se puede revertir.
+
+Debe borrar la configuración de KMS:
+
+* Antes de poder instalar el dispositivo en otro sistema StorageGRID, que no utiliza un KMS o que utiliza un KMS diferente.
++
+
+CAUTION: No borre la configuración de KMS si planea reinstalar un nodo de dispositivo en un sistema StorageGRID que utilice la misma clave de KMS.
+
+* Antes de poder recuperar y volver a instalar un nodo en el que se perdió la configuración de KMS y la clave KMS no se puede recuperar.
+* Antes de devolver cualquier aparato que se haya utilizado anteriormente en su centro.
+* Después de retirar un dispositivo con el cifrado de nodos habilitado.
+
+
+
+CAUTION: Retire el dispositivo antes de borrar KMS para mover sus datos a otros nodos del sistema StorageGRID. La eliminación de KMS antes de retirar el dispositivo provocará la pérdida de datos y podría hacer que el dispositivo deje de funcionar.
+
+.Pasos
+. Abra un explorador e introduzca una de las direcciones IP para la controladora de computación del dispositivo.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` Es la dirección IP de la controladora de computación (no la controladora de almacenamiento) en cualquiera de las tres redes StorageGRID.
+
++
+Aparece la página de inicio del instalador de dispositivos de StorageGRID.
+
+. Seleccione *Configurar hardware* > *cifrado de nodos*.
++
+
+CAUTION: Si se borra la configuración de KMS, los datos del dispositivo se eliminarán permanentemente. Estos datos no se pueden recuperar.
+
+. En la parte inferior de la ventana, seleccione *Borrar clave KMS y Eliminar datos*.
+. Si está seguro de que desea borrar la configuración de KMS, escriba `*clear*` En el cuadro de diálogo de advertencia y seleccione *Borrar clave KMS y Eliminar datos*.
++
+La clave de cifrado KMS y todos los datos se eliminan del nodo y el dispositivo se reinicia. Esto puede tardar hasta 20 minutos.
+
+. Abra un explorador e introduzca una de las direcciones IP para la controladora de computación del dispositivo. +
+`*https://_Controller_IP_:8443*`
++
+`_Controller_IP_` Es la dirección IP de la controladora de computación (no la controladora de almacenamiento) en cualquiera de las tres redes StorageGRID.
+
++
+Aparece la página de inicio del instalador de dispositivos de StorageGRID.
+
+. Seleccione *Configurar hardware* > *cifrado de nodos*.
+. Compruebe que el cifrado de nodos está desactivado y que la información de claves y certificados de *Detalles del servidor de administración de claves* y el control *Borrar clave KMS y Eliminar datos* se eliminan de la ventana.
++
+El cifrado de nodos no se puede volver a habilitar en el dispositivo hasta que se vuelva a instalar en un grid.
+
+
+
+.Después de terminar
+Una vez que el dispositivo se haya reiniciado y haya verificado que se ha borrado KMS y que el dispositivo está en estado previo a la instalación, puede quitar físicamente el dispositivo del sistema de StorageGRID. Consulte https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["instrucciones para preparar el aparato para su reinstalación"^].

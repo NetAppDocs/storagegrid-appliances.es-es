@@ -1,0 +1,45 @@
+---
+indexpage:
+  tiles:
+  - title: Inicio rápido
+    links:
+    - title: Inicio rápido para la instalación del dispositivo
+      url: "../installconfig/index.html"
+    - title: Automatice la instalación y configuración de los dispositivos
+      url: "../installconfig/automating-appliance-installation-and-configuration.html"
+    - title: Automatice la configuración de StorageGRID
+      url: "../installconfig/automating-configuration-of-storagegrid.html"
+    - title: API de REST DE instalación (usuarios avanzados)
+      url: "../installconfig/overview-of-installation-rest-apis.html"
+  - title: Preparación de la instalación
+    links:
+    - title: Prepare el sitio
+      url: "../installconfig/preparing-site.html"
+    - title: Desempaquetar cajas
+      url: "../installconfig/unpacking-boxes.html"
+    - title: Obtenga equipos y herramientas adicionales
+      url: "../installconfig/obtaining-additional-equipment-and-tools.html"
+  - title: Recopile información de red
+    links:
+    - title: Tipos de red StorageGRID
+      url: "../installconfig/reviewing-appliance-network-connections.html"
+    - title: SG100 y SG1000
+      url: "../installconfig/gathering-installation-information-sg100-and-sg1000.html"
+    - title: SG5700
+      url: "../installconfig/gathering-installation-information-sg5700.html"
+    - title: SG6000
+      url: "../installconfig/gathering-installation-information-sg6000.html"
+    - title: SG6100
+      url: "../installconfig/gathering-installation-information-sg6100.html"
+  - title: Instale el hardware
+    links:
+    - title: Registre el hardware
+      url: "../installconfig/registering-hardware.html"
+    - title: Instale el aparato
+      url: "../landing-install-hdwr/index.html"
+    - title: Configure el hardware
+      url: "../installconfig/configuring-hardware.html"
+    - title: Ponga en marcha el nodo de almacenamiento del dispositivo
+      url: "../installconfig/deploying-appliance-storage-node.html"
+    - title: Implemente el nodo del dispositivo de servicios
+      url: "../installconfig/deploying-services-appliance-node.html"

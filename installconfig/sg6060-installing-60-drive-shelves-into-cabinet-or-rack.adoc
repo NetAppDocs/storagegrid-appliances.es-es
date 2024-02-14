@@ -1,0 +1,63 @@
+---
+permalink: installconfig/sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
+summary: Instale un conjunto de rieles para la bandeja de controladoras E2860 en el armario o rack y, a continuación, deslice la bandeja de controladoras sobre los rieles. Si va a instalar bandejas de expansión de 60 unidades, aplica el mismo procedimiento. 
+---
+= Instalación de las bandejas de 60 unidades (SG6060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instale un conjunto de rieles para la bandeja de controladoras E2860 en el armario o rack y, a continuación, deslice la bandeja de controladoras sobre los rieles. Si va a instalar bandejas de expansión de 60 unidades, aplica el mismo procedimiento.
+
+.Antes de empezar
+* Ha revisado el documento de avisos de seguridad que se incluye en la caja y comprende las precauciones para mover e instalar el hardware.
+* Tiene las instrucciones incluidas en el kit de raíl.
+
+
+
+CAUTION: Cada bandeja de 60 unidades pesa aproximadamente 132 lb (60 kg) sin unidades instaladas. Se necesitan cuatro personas o un elevador mecánico para mover el estante de forma segura.
+
+
+CAUTION: Para evitar que se dañe el hardware, no mueva nunca la bandeja si hay unidades instaladas. Debe quitar todas las unidades antes de mover la bandeja.
+
+
+CAUTION: Al instalar la bandeja de controladoras E2860 o las bandejas de expansión opcionales, instale el hardware desde la parte inferior hasta la parte superior del rack o armario para evitar que el equipo se vuelque. Para garantizar que el equipo más pesado se encuentra en la parte inferior del armario o bastidor, instale el controlador SG6000-CN encima de la bandeja de controladores E2860 y las bandejas de expansión.
+
+
+NOTE: Antes de realizar la instalación, compruebe que los cables ópticos de 0,5 m que se suministran con el aparato o los cables que suministra, tienen la longitud suficiente para el diseño planificado.
+
+.Pasos
+. Siga con cuidado las instrucciones del kit de raíl para instalar los rieles en su armario o rack.
++
+Para armarios con orificios cuadrados, instale primero las tuercas de jaula proporcionadas para fijar la parte delantera y trasera del estante con tornillos.
+
+. Retire la caja de embalaje exterior del aparato. A continuación, pliegue las solapas de la caja interior.
+. Si está levantando el aparato a mano, fije las cuatro asas a los lados del chasis.
++
+Empuje cada asa hasta que encaje en su sitio.
+
++
+image::../media/lift_handles.gif[Levante las asas]
+
+. Coloque la parte posterior de la bandeja (el extremo con los conectores) en los rieles.
+. Apoye la estantería desde la parte inferior y deslícela en el armario. Si está utilizando las asas, utilice los cierres para separar un asa a la vez mientras desliza el estante en.
++
+Para quitar las asas, tire hacia atrás del pestillo de liberación, empuje hacia abajo y tire hacia fuera de la bandeja.
+
+. Fije la bandeja a la parte frontal del armario.
++
+Inserte los tornillos en el primer y tercer orificio de la parte superior de la bandeja en ambos lados.
+
+. Fije la bandeja a la parte posterior del armario.
++
+Coloque dos soportes traseros a cada lado de la parte superior trasera del estante. Inserte los tornillos en el primer y tercer orificio de cada soporte.
+
++
+image::../media/mount_hardware.gif[Monte hardware]
+
+. Repita estos pasos para todas las bandejas de ampliación.
+

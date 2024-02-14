@@ -1,0 +1,33 @@
+---
+permalink: installconfig/configuring-bmc-interface.html 
+sidebar: sidebar 
+keywords: BMC, baseboard management controller, configure, setup, set up 
+summary: 'La interfaz de usuario del controlador de gestión de placa base \(BMC\) en el dispositivo de servicios SG6100, SG6000 proporciona información de estado sobre el hardware y permite configurar los ajustes de SNMP y otras opciones para los dispositivos.' 
+---
+= Interfaz BMC: Descripción general (SG100, SG1000, SG6000 y SG6100)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La interfaz de usuario del controlador de gestión de placa base (BMC) en el dispositivo de servicios SG6100, SG6000 o proporciona información de estado sobre el hardware y permite configurar los ajustes de SNMP y otras opciones para los dispositivos.
+
+Utilice los siguientes procedimientos en esta sección para configurar BMC al instalar el dispositivo:
+
+* link:../installconfig/changing-root-password-for-bmc-interface.html["Cambie la contraseña de administrador o de raíz de la interfaz de BMC"]
+* link:../installconfig/setting-ip-address-for-bmc-management-port.html["Establezca la dirección IP para el puerto de administración de BMC"]
+* link:../installconfig/accessing-bmc-interface.html["Acceda a la interfaz de BMC"]
+* link:../installconfig/configuring-snmp-settings-for-bmc.html["Configure los ajustes de SNMP"]
+* link:../installconfig/setting-up-email-notifications-for-alerts.html["Configurar notificaciones por correo electrónico para las alertas de BMC"]
+
+
+[NOTE]
+====
+Si el dispositivo ya se ha instalado en un grid y está ejecutando el software StorageGRID, siga estos procedimientos:
+
+* link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque el dispositivo en modo de mantenimiento"] Para acceder al instalador del dispositivo StorageGRID.
+* Consulte link:../installconfig/setting-ip-address-for-bmc-management-port.html["Establezca la dirección IP para el puerto de administración de BMC"] Para obtener información sobre cómo acceder a la interfaz de BMC mediante el instalador de dispositivos StorageGRID.
+
+
+====

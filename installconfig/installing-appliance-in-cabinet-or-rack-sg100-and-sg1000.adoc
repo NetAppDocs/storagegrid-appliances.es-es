@@ -1,0 +1,39 @@
+---
+permalink: installconfig/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, installing, installation, cabinet, rack, rail, rails 
+summary: Instala un conjunto de rieles para el dispositivo en el armario o rack y, a continuación, desliza el dispositivo sobre los rieles. 
+---
+= Instale en el armario o rack (SG100 y SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instala un conjunto de rieles para el dispositivo en el armario o rack y, a continuación, desliza el dispositivo sobre los rieles.
+
+.Antes de empezar
+* Ha revisado el documento de avisos de seguridad que se incluye en la caja y comprende las precauciones para mover e instalar el hardware.
+* Tiene las instrucciones incluidas en el kit de raíl.
+
+
+.Pasos
+. Siga con cuidado las instrucciones del kit de raíl para instalar los rieles en su armario o rack.
+. En los dos rieles instalados en el armario o rack, extienda las partes móviles de los rieles hasta que oiga un clic.
++
+image::../media/rails_extended_out.gif[Guías SG100 y SG 1000]
+
+. Inserte el aparato en los rieles.
+. Deslice el aparato en el armario o rack.
++
+Cuando no pueda mover el aparato más, tire de los pestillos azules de ambos lados del chasis para deslizar el aparato completamente hacia adentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG 100 y SG1000 deslizamiento sobre rieles]
+
++
+
+NOTE: No conecte el panel frontal hasta que haya encendido el aparato.
+
+

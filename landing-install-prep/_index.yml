@@ -1,0 +1,23 @@
+---
+indexpage:
+  tiles:
+  - title: Prepare
+    links:
+    - title: Prepare el sitio
+      url: "../installconfig/preparing-site.html"
+    - title: Desempaquetar cajas
+      url: "../installconfig/unpacking-boxes.html"
+    - title: Obtenga equipos y herramientas adicionales
+      url: "../installconfig/obtaining-additional-equipment-and-tools.html"
+  - title: Recopile información de red
+    links:
+    - title: Obtenga más información sobre los tipos de red StorageGRID
+      url: "../installconfig/reviewing-appliance-network-connections.html"
+    - title: Información de la red SG100 y SG1000
+      url: "../installconfig/gathering-installation-information-sg100-and-sg1000.html"
+    - title: SG5700 información de la red
+      url: "../installconfig/gathering-installation-information-sg5700.html"
+    - title: SG6000 información de la red
+      url: "../installconfig/gathering-installation-information-sg6000.html"
+    - title: SG6100 información de la red
+      url: "../installconfig/gathering-installation-information-sg6100.html"

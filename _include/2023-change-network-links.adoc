@@ -1,0 +1,51 @@
+= 
+:allow-uri-read: 
+
+
+.Antes de empezar
+* Ya tienes link:../commonhardware/placing-appliance-into-maintenance-mode.html["puso el aparato en modo de mantenimiento"].
+
+
+
+NOTE: En raras ocasiones, una vez que se coloca un dispositivo StorageGRID en modo de mantenimiento puede hacer que el dispositivo no esté disponible para el acceso remoto.
+
+.Pasos
+. En el instalador de dispositivos StorageGRID, seleccione *Configurar red* > *Configuración de enlace*.
+. Realice los cambios deseados en la configuración del enlace.
++
+Para obtener más información sobre las opciones, consulte link:../installconfig/configuring-network-links.html["Configure los enlaces de red"].
+
++
+
+NOTE: Los cambios de configuración IP realizados mientras el dispositivo está en modo de mantenimiento no se aplican al entorno de StorageGRID instalado. Ejecute el enlace:../maintain/changing-nodes-network-configuration.html[`change-ip` Comando] Después de reiniciar el dispositivo en StorageGRID.
+
+. Cuando esté satisfecho con sus selecciones, haga clic en *Guardar*.
++
+
+NOTE: Puede perder la conexión si ha realizado cambios en la red o el enlace que está conectado a través de. Si no se vuelve a conectar en 1 minuto, vuelva a introducir la URL del instalador de dispositivos de StorageGRID mediante una de las otras direcciones IP asignadas al dispositivo: `*https://_appliance_IP_:8443*`
+
+. Realice los cambios necesarios en las direcciones IP del dispositivo.
++
+Si ha realizado cambios en la configuración de VLAN, es posible que la subred del dispositivo haya cambiado. Si necesita cambiar las direcciones IP del dispositivo, consulte link:../installconfig/setting-ip-configuration.html["Configure las direcciones IP de StorageGRID"].
+
+. Seleccione *Configurar red* > *Prueba de ping* en el menú.
+. Utilice la herramienta Ping Test para comprobar la conectividad a las direcciones IP en cualquier red que pudiera haber sido afectada por los cambios de configuración de vínculos que haya realizado al configurar el dispositivo.
++
+Además de cualquier otra prueba que elija realizar, confirme que puede hacer ping a la dirección IP de red de cuadrícula del nodo de administración principal y a la dirección IP de red de cuadrícula de al menos otro nodo. Si es necesario, consulte las instrucciones para configurar los enlaces de red y corrija los problemas.
+
+. Una vez que esté satisfecho de que los cambios de configuración del enlace están funcionando, reinicie el nodo. En el instalador del dispositivo StorageGRID, seleccione *Avanzado* > *Reiniciar controlador* y, a continuación, seleccione una de estas opciones:
++
+** Seleccione *Reiniciar en StorageGRID* para reiniciar el controlador de computación con el nodo que se vuelve a unir a la red. Seleccione esta opción si hizo trabajo en modo de mantenimiento y está listo para devolver el nodo a su funcionamiento normal.
+** Seleccione *Reiniciar en el modo de mantenimiento* para reiniciar el controlador de computación con el nodo restante en modo de mantenimiento. (Esta opción solo está disponible cuando la controladora está en modo de mantenimiento.) Seleccione esta opción si hay operaciones de mantenimiento adicionales que necesita realizar en el nodo antes de volver a unirse al grid.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
+
++
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página Nodos debe mostrar el estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo) del nodo del dispositivo, lo que indica que no hay ninguna alerta activa y que el nodo está conectado a la cuadrícula.
+
++
+image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
+
+
+
+

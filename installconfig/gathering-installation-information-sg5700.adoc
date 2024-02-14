@@ -1,0 +1,469 @@
+---
+permalink: installconfig/gathering-installation-information-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10/25-gbe, 10/25 gbe, e5700sg, independent, active-backup, active backup, 1-gbe, 1 gbe 
+summary: En las tablas, registre la información necesaria para cada red que conecte al dispositivo. Estos valores son necesarios para instalar y configurar el hardware. 
+---
+= Recopilar información de red (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En las tablas, registre la información necesaria para cada red que conecte al dispositivo. Estos valores son necesarios para instalar y configurar el hardware.
+
+
+TIP: En lugar de utilizar las tablas, utilice el libro de trabajo proporcionado con ConfigBuilder. El uso del libro de trabajo de ConfigBuilder permite cargar información del sistema y generar un archivo JSON para completar automáticamente algunos pasos de configuración en el instalador de dispositivos de StorageGRID. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
+
+
+
+== La información necesaria para conectarse a System Manager de SANtricity en la controladora E2800
+
+Se conecta la controladora de la serie E2800 a la red de gestión que se utilizará para SANtricity System Manager.
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+El puerto del switch Ethernet se conectará al puerto de gestión 1
+ a| 
+
+
+
+ a| 
+Dirección MAC del puerto de gestión 1 (impreso en una etiqueta cerca del puerto P1)
+ a| 
+
+
+
+ a| 
+Dirección IP asignada por DHCP para el puerto de gestión 1, si está disponible después de encenderse
+
+*Nota:* Si la red que va a conectar al controlador E2800 incluye un servidor DHCP, el administrador de red puede utilizar la dirección MAC para determinar la dirección IP asignada por el servidor DHCP.
+ a| 
+
+
+
+ a| 
+Velocidad y modo doble
+
+*Nota:* debe asegurarse de que el conmutador Ethernet de la red de administración de SANtricity System Manager está establecido en Negotiate automático.
+ a| 
+Debe ser:
+
+* Autonegociar (predeterminado)
+
+
+
+
+ a| 
+Formato de dirección IP
+ a| 
+Elija una opción:
+
+* IPv4
+* IPv6
+
+
+
+
+ a| 
+Dirección IP estática que planea usar para el dispositivo en la red de gestión
+ a| 
+Para IPv4:
+
+* Dirección IPv4:
+* Máscara de subred:
+* Puerta de enlace:
+
+
+Para IPv6:
+
+* Dirección IPv6:
+* Dirección IP enrutable:
+* Dirección IP del enrutador de la controladora E2800:
+
+
+|===
+
+
+== Información necesaria para conectar el controlador E5700SG a la red de administración
+
+La red de administración de StorageGRID es una red opcional que se utiliza para la administración y el mantenimiento del sistema. El dispositivo se conecta a la red de administrador mediante los puertos de gestión de 1-GbE en la controladora E5700SG.
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+Red de administrador habilitada
+ a| 
+Elija una opción:
+
+* No
+* Sí (predeterminado)
+
+
+
+
+ a| 
+Modo de enlace de red
+ a| 
+Elija una opción:
+
+* Independiente
+* Copia de seguridad activa
+
+
+
+
+ a| 
+Puerto del switch para el puerto 1
+ a| 
+
+
+
+ a| 
+Puerto del switch para el puerto 2 (únicamente modo de enlace de red Active-Backup)
+ a| 
+
+
+
+ a| 
+Dirección IP asignada por DHCP para el puerto de gestión 1, si está disponible después de encenderse
+
+*Nota:* Si la red Admin incluye un servidor DHCP, el controlador E5700SG muestra la dirección IP asignada por DHCP en su pantalla de siete segmentos después de que se inicie. También puede determinar la dirección IP asignada por DHCP utilizando la dirección MAC para buscar la IP asignada.
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Dirección IP estática que piensa usar para el nodo de almacenamiento del dispositivo en la red de administración
+
+*Nota:* Si su red no tiene una puerta de enlace, especifique la misma dirección IPv4 estática para la puerta de enlace.
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Subredes de red de administración (CIDR)
+ a| 
+
+|===
+
+
+== La información necesaria para conectar y configurar puertos 10/25-GbE en la controladora E5700SG
+
+Los cuatro puertos 10/25-GbE del controlador E5700SG se conectan a la red de grid y la red de cliente de StorageGRID.
+
+
+NOTE: Consulte link:gathering-installation-information-sg5700.html#port-bond-modes["Modos de enlace de puertos (controladora E5700SG)"].
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+Velocidad de enlace
+
+*Nota:* Si selecciona 25 GbE, instale SPF28 transceptores. No se admite la autonegociación, por lo que también debe configurar los puertos y los switches conectados para 25GbE.
+ a| 
+Elija una opción:
+
+* 10 GbE (predeterminado)
+* 25 GbE
+
+
+
+
+ a| 
+Modo de enlace de puerto
+ a| 
+Elija una opción:
+
+* Fijo (predeterminado)
+* Agregado
+
+
+
+
+ a| 
+Puerto del switch para el puerto 1 (red cliente)
+ a| 
+
+
+
+ a| 
+Puerto del switch para el puerto 2 (red de cuadrícula)
+ a| 
+
+
+
+ a| 
+Puerto del switch para el puerto 3 (red cliente)
+ a| 
+
+
+
+ a| 
+Puerto del switch para el puerto 4 (red Grid)
+ a| 
+
+|===
+
+
+== Información necesaria para conectar el controlador E5700SG a Grid Network
+
+Grid Network para StorageGRID es una red necesaria que se utiliza para todo el tráfico interno de StorageGRID. El dispositivo se conecta a la red Grid mediante los puertos 10/25-GbE en la controladora E5700SG.
+
+
+NOTE: Consulte link:gathering-installation-information-sg5700.html#port-bond-modes["Modos de enlace de puertos (controladora E5700SG)"].
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+Modo de enlace de red
+ a| 
+Elija una opción:
+
+* Active-Backup (predeterminado)
+* LACP (802,3ad)
+
+
+
+
+ a| 
+Etiquetado VLAN habilitado
+ a| 
+Elija una opción:
+
+* No (predeterminado)
+* Sí
+
+
+
+
+ a| 
+Etiqueta de VLAN (si el etiquetado de VLAN está habilitado)
+ a| 
+Introduzca un valor entre 0 y 4095:
+
+
+
+ a| 
+Dirección IP asignada por DHCP para la red de cuadrícula, si está disponible después del encendido
+
+*Nota:* Si Grid Network incluye un servidor DHCP, el controlador E5700SG muestra la dirección IP asignada por DHCP para la Red de cuadrícula en su pantalla de siete segmentos después de que se inicie.
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Dirección IP estática que tiene previsto usar para el nodo de almacenamiento del dispositivo en la red de grid
+
+*Nota:* Si su red no tiene una puerta de enlace, especifique la misma dirección IPv4 estática para la puerta de enlace.
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Subredes de red de cuadrícula (CIDR)
+
+*Nota:* Si la red de cliente no está activada, la ruta predeterminada del controlador utilizará la puerta de enlace especificada aquí.
+ a| 
+
+|===
+
+
+== Información necesaria para conectar el controlador E5700SG a la red cliente
+
+La red de cliente para StorageGRID es una red opcional que se suele utilizar para proporcionar acceso al protocolo de cliente al grid. El dispositivo se conecta a la red cliente mediante los puertos 10/25-GbE en la controladora E5700SG.
+
+
+NOTE: Consulte link:gathering-installation-information-sg5700.html#port-bond-modes["Modos de enlace de puertos (controladora E5700SG)"].
+
+[cols="2a,1a"]
+|===
+| Información necesaria | Su valor 
+
+
+ a| 
+Red de cliente habilitada
+ a| 
+Elija una opción:
+
+* No (predeterminado)
+* Sí
+
+
+
+
+ a| 
+Modo de enlace de red
+ a| 
+Elija una opción:
+
+* Active-Backup (predeterminado)
+* LACP (802,3ad)
+
+
+
+
+ a| 
+Etiquetado VLAN habilitado
+ a| 
+Elija una opción:
+
+* No (predeterminado)
+* Sí
+
+
+
+
+ a| 
+Etiqueta de VLAN
+
+(Si el etiquetado de VLAN está habilitado)
+ a| 
+Introduzca un valor entre 0 y 4095:
+
+
+
+ a| 
+Dirección IP asignada por DHCP para la red cliente, si está disponible después del encendido
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+
+
+ a| 
+Dirección IP estática que tiene previsto usar para el nodo de almacenamiento del dispositivo en la red cliente
+
+*Nota:* Si la red de cliente está activada, la ruta predeterminada del controlador utilizará la puerta de enlace especificada aquí.
+ a| 
+* Dirección IPv4 (CIDR):
+* Puerta de enlace:
+
+
+|===
+
+
+== Modos de enlace de puerto
+
+Cuando link:configuring-network-links.html["configurar enlaces de red"] Para el controlador E5700SG, puede utilizar unión de puertos para los puertos 10/25 GbE que se conectan a la red de grid y la red cliente opcional, y los puertos de gestión de 1 GbE que se conectan a la red de administración opcional. El enlace de puertos ayuda a proteger los datos proporcionando rutas redundantes entre las redes StorageGRID y el dispositivo.
+
+
+
+=== Modos de enlace de red para puertos 10/25-GbE
+
+Los puertos de red 10/25-GbE de la controladora E5700SG admiten el modo de enlace de puerto fijo o el modo de enlace de puerto agregado para las conexiones de red de Grid y de cliente.
+
+
+
+==== Modo de enlace de puerto fijo
+
+El modo fijo es la configuración predeterminada para los puertos de red de 10/25-GbE.
+
+image::../media/e5700sg_fixed_port.gif[Puertos que se utilizan para el modo de enlace de puerto fijo]
+
+[cols="1a,3a"]
+|===
+| Llamada | Qué puertos están Unidos 
+
+
+ a| 
+C
+ a| 
+Los puertos 1 y 3 se unen para la red cliente, si se utiliza esta red.
+
+
+
+ a| 
+G
+ a| 
+Los puertos 2 y 4 están Unidos para la red de cuadrícula.
+
+|===
+Cuando se utiliza el modo de enlace de puerto fijo, se puede utilizar uno de los dos modos de enlace de red: Active-Backup o el protocolo de control de agregación de enlaces (LACP).
+
+* En el modo Active-Backup (predeterminado), sólo hay un puerto activo a la vez. Si se produce un error en el puerto activo, su puerto de backup proporciona automáticamente una conexión de conmutación por error. El puerto 4 proporciona una ruta de copia de seguridad para el puerto 2 (red de red de cuadrícula) y el puerto 3 proporciona una ruta de copia de seguridad para el puerto 1 (red de cliente).
+* En el modo LACP, cada par de puertos forma un canal lógico entre la controladora y la red, lo que permite un mayor rendimiento. Si un puerto falla, el otro continúa proporcionando el canal. El rendimiento se reduce, pero la conectividad no se ve afectada.
+
+
+
+NOTE: Si no necesita conexiones redundantes, puede utilizar solo un puerto para cada red. Sin embargo, tenga en cuenta que se generará una alarma en el administrador de grid después de instalar StorageGRID, lo que indica que se ha desenchufado un cable. Puede reconocer esta alarma de forma segura para borrarla.
+
+
+
+==== Modo de enlace de puerto agregado
+
+El modo de enlace de puerto de agregado aumenta de forma significativa las mejoras en cada red StorageGRID y proporciona rutas de conmutación al nodo de respaldo adicionales.
+
+image::../media/e5700sg_aggregate_port.gif[Puertos que se utilizan para el modo de enlace de puerto agregado]
+
+[cols="1a,3a"]
+|===
+| Llamada | Qué puertos están Unidos 
+
+
+ a| 
+1
+ a| 
+Todos los puertos conectados se agrupan en un único enlace LACP, lo que permite que todos los puertos se usen para el tráfico de red de grid y de red de cliente.
+
+|===
+Si tiene pensado utilizar el modo de enlace de puerto agregado:
+
+* Debe usar el modo de enlace de red LACP.
+* Debe especificar una etiqueta de VLAN exclusiva para cada red. Esta etiqueta VLAN se añadirá a cada paquete de red para garantizar que el tráfico de red se dirija a la red correcta.
+* Los puertos deben estar conectados a switches que sean compatibles con VLAN y LACP. Si varios switches participan en el enlace LACP, los switches deben ser compatibles con los grupos de agregación de enlaces de varios chasis (MLAG), o equivalentes.
+* Comprenderá cómo configurar los switches para usar VLAN, LACP, y MLAG, o equivalente.
+
+
+Si no desea utilizar los cuatro puertos de 10/25 GbE, puede usar uno, dos o tres puertos. El uso de más de un puerto maximiza la posibilidad de que cierta conectividad de red permanezca disponible si falla uno de los puertos 10/25-GbE.
+
+
+NOTE: Si decide utilizar menos de cuatro puertos, tenga en cuenta que una o más alarmas se levantarán en el Gestor de grid después de instalar StorageGRID, lo que indica que los cables están desconectados. Puede reconocer de forma segura las alarmas para borrarlas.
+
+
+
+=== Modos de enlace de red para puertos de gestión de 1 GbE
+
+Para los dos puertos de gestión de 1 GbE en la controladora E5700SG, puede elegir el modo de enlace de red independiente o el modo de enlace de red Active-Backup para conectarse a la red opcional Admin Network.
+
+En modo independiente, solo el puerto de gestión 1 está conectado a la red del administrador. Este modo no proporciona una ruta de acceso redundante. El puerto de administración 2 no tiene cables y está disponible para las conexiones locales temporales (utilice la dirección IP 169.254.0.1)
+
+En el modo Active-Backup, los puertos de gestión 1 y 2 están conectados a la red Admin. Solo hay un puerto activo a la vez. Si se produce un error en el puerto activo, su puerto de backup proporciona automáticamente una conexión de conmutación por error. La vinculación de estos dos puertos físicos en un puerto de gestión lógica proporciona una ruta redundante a la red de administración.
+
+
+NOTE: Si necesita establecer una conexión local temporal con la controladora E5700SG cuando los puertos de gestión de 1-GbE están configurados para el modo Active-Backup, quite los cables de ambos puertos de gestión, conecte el cable temporal al puerto de gestión 2 y acceda al dispositivo con la dirección IP 169.254.0.1.
+
+image::../media/e5700sg_bonded_management_ports.gif[Puerto de gestión con enlace E5700SG]
+
+.Información relacionada
+* link:cabling-appliance-sg5700.html["Dispositivo de cable (SG5700)"]
+* link:gathering-installation-information-sg5700.html#port-bond-modes["Modos de enlace de puertos (controladora E5700SG)"]
+* link:configuring-hardware.html["Configurar hardware (SG5700)"]
+
