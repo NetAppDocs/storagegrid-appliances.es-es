@@ -4229,4 +4229,5 @@ Consulte la información sobre la gestión de objetos con la gestión del ciclo 
   <block id="36312847d9ed62c091364066df9b573f" category="sidebar">Sustituya los componentes de hardware en la bandeja de controladoras de almacenamiento</block>
   <block id="297057bf431ff214cf5fb064c5a836ac" category="sidebar">Sustituya los componentes de hardware en la bandeja de expansión de 60 unidades opcional</block>
   <block id="6e59386fb6d09c0b4945ad4afa8a4092" category="sidebar">Sustituya el HBA Fibre Channel en el controlador SG6000-CN</block>
+  <block id="46621f49f52b2e7735202aeadc8627bc" category="paragraph"><block ref="46621f49f52b2e7735202aeadc8627bc" category="inline-link-rx"></block></block>
 </blocks>
