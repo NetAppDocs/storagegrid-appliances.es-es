@@ -14,11 +14,11 @@ summary: Puede usar la pestaña Gestionar unidades en Grid Manager para realizar
 Puede usar la pestaña Gestionar unidades en Grid Manager para realizar tareas de solución de problemas y mantenimiento en las unidades del dispositivo SGF6112.
 
 .Antes de empezar
-* Ha iniciado sesión en Grid Manager mediante un https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/web-browser-requirements.html["navegador web compatible"^].
+* Ha iniciado sesión en Grid Manager mediante un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
 
 
 .Acerca de esta tarea
-Si tiene un dispositivo SGF6112 y el https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/admin-group-permissions.html["Permiso de acceso de administrador o de dispositivo de almacenamiento"], Aparece una pestaña Administrar unidades en la página de detalles del dispositivo.
+Si tiene un dispositivo SGF6112 y el https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Permiso de acceso de administrador o de dispositivo de almacenamiento"], Aparece una pestaña Administrar unidades en la página de detalles del dispositivo.
 
 La pestaña Gestionar unidades contiene las siguientes vistas:
 

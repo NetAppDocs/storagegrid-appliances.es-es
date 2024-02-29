@@ -19,7 +19,7 @@ Puede habilitar el cifrado en los niveles de nodo y disco para proteger los disc
 
 Es posible realizar ambos niveles de cifrado en las unidades compatibles para mayor seguridad.
 
-Consulte https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/reviewing-storagegrid-encryption-methods.html["Métodos de cifrado de StorageGRID"^] Para obtener información sobre todos los métodos de cifrado disponibles para los dispositivos StorageGRID.
+Consulte https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Métodos de cifrado de StorageGRID"^] Para obtener información sobre todos los métodos de cifrado disponibles para los dispositivos StorageGRID.
 
 
 
@@ -100,7 +100,7 @@ El cifrado de unidades no se aplica a las unidades gestionadas por SANtricity. S
 Puede habilitar el cifrado de unidades durante la instalación inicial del dispositivo antes de cargar Grid Manager. También puede habilitar el cifrado de nodo o cambiar su clave de acceso si coloca el dispositivo en modo de mantenimiento.
 
 .Antes de empezar
-Revise la información acerca de https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/reviewing-storagegrid-encryption-methods.html["Métodos de cifrado de StorageGRID"^].
+Revise la información acerca de https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Métodos de cifrado de StorageGRID"^].
 
 .Acerca de esta tarea
 Una clave de acceso se configura cuando el cifrado de unidad se habilita inicialmente. Si se reemplaza un nodo de computación o se mueve un SED cifrado a un nuevo nodo de computación, debe volver a introducir manualmente la frase de contraseña.
