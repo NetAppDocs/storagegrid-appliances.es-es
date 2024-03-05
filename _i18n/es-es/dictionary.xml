@@ -2773,8 +2773,6 @@ Las unidades se actualizan en paralelo mientras el dispositivo está en modo de 
   <block id="bba366c7647bbe1d5257439c4c705de2" category="list-text">Si los números de serie no coinciden, seleccione un nodo diferente en la vista de árbol.</block>
   <block id="b5ede840d77243156ecf58a68049831a" category="list-text">Una vez que haya localizado el nodo donde se debe reemplazar el componente, anote la dirección IP de BMC del dispositivo que aparece en la sección Aplicación StorageGRID.</block>
   <block id="ed14a9b16ba1bf2269212f09e6a7d6d2" category="paragraph">Para ayudarle a localizar el dispositivo en el centro de datos, puede utilizar la dirección IP de BMC para encender el LED de identificación del dispositivo.</block>
-  <block id="3265f1a32d767d5d4a8eee12e6317c69" category="doc">Mueva la batería a la nueva controladora</block>
-  <block id="d708815fa74d85cd087786cef2ab1cd6" category="list-text">Retire la batería de la controladora con errores e instálela en la controladora de reemplazo:</block>
   <block id="e764e0e5854c6f45b3f893be8ea63ed7" category="list-text">Confirme que el LED verde dentro del controlador (entre la batería y los DIMM) está apagado.</block>
   <block id="997a0d6eac5c38e607fa8951b2a2b74c" category="paragraph">Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.</block>
   <block id="8fea29345b9eb8aa445923cdf359f5ba" category="image-alt">LED verde en E2800</block>
@@ -2999,7 +2997,6 @@ Después de completar la actualización actual, descargue el archivo de sistema 
   <block id="94a49ae35398530df80646bb544513f0" category="paragraph">Al seleccionar *ON*, los LED azules de identificación se iluminan en la parte delantera (se muestra la típica) y en la parte trasera del aparato.</block>
   <block id="9004fc2719e98443b495c432e10ffb2e" category="paragraph">El LED de identificación posterior se encuentra en el centro del aparato, debajo de la ranura Micro-SD.</block>
   <block id="f57d0dae24c14fe0b57a6cf0e4aa9b52" category="list-text">Encienda y apague los LED de identificación según sea necesario.</block>
-  <block id="a3c54240889d795a785f54b21112d1b7" category="doc">Quite la controladora</block>
   <block id="b45afbec52f534783a03eff995ab7c60" category="list-text">Retire el controlador del dispositivo:</block>
   <block id="cf53429bbb1adc08633a9a45088a58f5" category="list-text">Coloque una muñequera ESD o tome otras precauciones antiestáticas.</block>
   <block id="901be424bced93384bed30ffebbad97d" category="list-text">Etiquete los cables y desconecte los cables y SFP.</block>
@@ -3021,13 +3018,8 @@ Después de completar la actualización actual, descargue el archivo de sistema 
   <block id="91c692d2e5b928a44446baeb67e25a50" category="paragraph">HIC de 4 puertos</block>
   <block id="52748a4020101685ab95f44d89b7ce8c" category="paragraph">La tarjeta de interfaz del host (HIC) de 4 puertos. Esta tarjeta se debe mover al nuevo controlador cuando realice la sustitución.</block>
   <block id="8028710d01a41ca2ea84072e77d7385b" category="paragraph">*Nota*: El controlador E2800A no tiene HIC.</block>
-  <block id="67d5b6933ccbaf5b0a5fbedd2e53d3c4" category="doc">Si es necesario, mueva HIC a una nueva controladora</block>
-  <block id="f98925abc6cb4377ae64ff1ac4820659" category="list-text">Si la controladora con errores incluye una tarjeta de interfaz del host (HIC), mueva la HIC de la controladora con error a la controladora de reemplazo.</block>
   <block id="c8efe06bb7eee5e4d90e049e86bf65dc" category="paragraph">Una HIC independiente se utiliza únicamente para la controladora E2800B. La HIC se monta en la placa del controlador principal e incluye dos conectores SPF.</block>
   <block id="3974b35b2cf021e8db213f0104048701" category="admonition">Las ilustraciones de este procedimiento muestran una HIC de 2 puertos. La HIC de la controladora puede tener una cantidad de puertos diferente.</block>
-  <block id="269cafd6c8073deeb85a9bd332a74947" category="inline-xref">Mueva la HIC de la controladora con errores a la controladora de reemplazo</block>
-  <block id="963c2eb9efcfeefa0eda5318bcdf4900" category="list-text">Si la controladora no tiene una HIC (E2800A), reemplace la cubierta de la controladora. Si la controladora tiene una HIC (E2800B), continúe a. <block ref="45559081ecf57b0c388c65e5f8f80079" category="inline-xref-macro-rx"></block>.</block>
-  <block id="35b8298e26bba9285059b47bb9a4eeab" category="list-text">[[Move_the_HIC_to_the_RETUDY_Controller]]Si está equipado con una HIC, mueva la HIC de la controladora con error a la controladora de reemplazo.</block>
   <block id="1abae1b2ca77419d27f9d38b1a5ce79e" category="list-text">Quite todos los SFP de la HIC.</block>
   <block id="260b692edc8c35ec0a94e0a66944afbf" category="list-text">Con un destornillador Phillips del número 1, quite los tornillos que conectan la placa frontal de HIC a la controladora.</block>
   <block id="c1191295734430664731c130f36d12d6" category="paragraph">Hay cuatro tornillos: Uno en la parte superior, uno en el lateral y dos en la parte delantera.</block>
@@ -3591,7 +3583,6 @@ Para reiniciar la clonación del nodo de origen, inicie de nuevo el proceso de c
   <block id="65499790690d2c454fcef420d0986cd2" category="list-text">Tiene una controladora de sustitución con el mismo número de pieza que la controladora que desea sustituir.</block>
   <block id="6df8f1985e7a6f402e722600a5f522af" category="admonition">No confíe en las instrucciones E-Series para sustituir una controladora con el dispositivo StorageGRID, ya que los procedimientos no son los mismos.</block>
   <block id="2bb86ccc72619207d683e45635d07991" category="list-text">Tiene etiquetas para identificar cada cable conectado a la controladora.</block>
-  <block id="fe4e9e2834367a1bf8d2c51578f417e3" category="list-text">Si todas las unidades están protegidas, se revisaron los pasos en el procedimiento de sustitución de controladoras de la serie simple E2800, Lo que incluye descargar e instalar E-Series SANtricity System Manager desde el sitio de soporte de NetApp y, a continuación, utilizar Enterprise Management Window (EMW) para desbloquear las unidades seguras después de reemplazar la controladora.</block>
   <block id="822f3e8582776cbafa8007c1adb5ec11" category="admonition">No podrá utilizar el aparato hasta que desbloquee las unidades con la tecla guardada.</block>
   <block id="b865bb98d9b0550e0a993612bafda00d" category="list-text">Debe tener permisos de acceso específicos.</block>
   <block id="8ff1ab4da14b392126e0be753ff139ad" category="list-text">Debe iniciar sesión en Grid Manager mediante un<block ref="a18f1d7592d98ae161543980d36b8697" category="inline-link-rx"></block>.</block>
@@ -3602,14 +3593,8 @@ Para reiniciar la clonación del nodo de origen, inicie de nuevo el proceso de c
   <block id="94f8e078397fb87116b6f9abde423938" category="paragraph">No se podrá acceder al nodo de almacenamiento del dispositivo cuando se sustituye la controladora. Si la controladora de la serie E2800 funciona lo suficiente, puede hacerlo <block ref="b3dcbd550feb67c7e16c70bc63f72e18" category="inline-link-macro-rx"></block>.</block>
   <block id="752e2b22735dd0a3dc51389142f82b7a" category="paragraph">Al sustituir una controladora, debe quitar la batería de la controladora original e instalarla en la controladora de reemplazo. En algunos casos, es posible que también necesite quitar la tarjeta de interfaz del host de la controladora original e instalarla en la controladora de reemplazo.</block>
   <block id="9ce903ec97f42a702063374b8f9558b5" category="admonition">Las controladoras de almacenamiento en la mayoría de los modelos de dispositivos no incluyen tarjetas de interfaz del host (HIC).</block>
-  <block id="74ddc706cc279e81e96ba2d0f0b7e327" category="paragraph">Esta tarea consta de las siguientes partes:</block>
   <block id="f8199556cf6a62ca9268aa50c99b34a1" category="list-text">Prepare</block>
-  <block id="db138738f11a6c56c06b54240b38df1d" category="list-text">Desconectar la controladora</block>
-  <block id="abf8f13bdb84c7122ff9a72d14501969" category="list-text">Quite la controladora</block>
-  <block id="176958306106ed587f1ed281973576da" category="list-text">Mueva la batería a la nueva controladora</block>
-  <block id="44f0502a4e12ff4c7b2a8e29ddf1240f" category="list-text">Sustituya la controladora</block>
   <block id="c1873ea87bdf996ede9990c97f3270e4" category="list-text">Siga las instrucciones del procedimiento de reemplazo de controladora E2800 para preparar la extracción de la controladora.</block>
-  <block id="55c892922ea20ac558136aea5a263d6a" category="paragraph">SANtricity System Manager se utiliza para realizar estos pasos.</block>
   <block id="2ecfec7bfa276afdd11c54d5abaab7fa" category="list-text">Anote en qué versión del software de sistema operativo SANtricity está instalada actualmente en la controladora.</block>
   <block id="b8813be0069959617e6f40c3a22df0fc" category="list-text">Anote en qué versión de NVSRAM está instalada actualmente.</block>
   <block id="ba155e9172d5994c57e93fb656141227" category="list-text">Si la función Drive Security está habilitada, asegúrese de que existe una clave guardada y de que conoce la frase de contraseña necesaria para instalarla.</block>
@@ -3618,7 +3603,6 @@ Para reiniciar la clonación del nodo de origen, inicie de nuevo el proceso de c
   <block id="7a96ab4cc5d58598488f7e2fdcea9df9" category="paragraph">Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración.</block>
   <block id="fd4061a4924f1e0bf98462757a83fc33" category="list-text">Recopile datos de soporte del dispositivo.</block>
   <block id="d5b7c4e4db51ddcf44d5c764d7d12dec" category="admonition">La recogida de datos de soporte antes y después de sustituir un componente, garantiza que pueda enviar un conjunto de registros completo al soporte técnico si el reemplazo no resuelve el problema.</block>
-  <block id="da397caaa5e3712e133c0d13d60aa55f" category="section-title">Desconectar la controladora</block>
   <block id="1c473716429e7b086c508d4d989b6460" category="list-text">Si el dispositivo StorageGRID se ejecuta en un sistema StorageGRID, <block ref="b3dcbd550feb67c7e16c70bc63f72e18" category="inline-link-macro-rx"></block>.</block>
   <block id="b479d08d9995967f3e39eb8f8dda7580" category="list-text">Si la controladora E2800 funciona lo suficiente como para permitir un apagado controlado, confirme que todas las operaciones han finalizado.</block>
   <block id="01d4dba33c39acfee6527a2ef4d297b1" category="list-text">En la página de inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.</block>
@@ -4228,5 +4212,29 @@ Consulte la información sobre la gestión de objetos con la gestión del ciclo 
   <block id="46621f49f52b2e7735202aeadc8627bc" category="paragraph"><block ref="46621f49f52b2e7735202aeadc8627bc" category="inline-link-rx"></block></block>
   <block id="39822573479d4d01c9fc52445e6f90d4" category="paragraph">Consulte<block ref="182f5524fe0d353d40aacb3022a6d00c" category="inline-link-rx"></block> Para obtener información sobre todos los métodos de cifrado disponibles para los dispositivos StorageGRID.</block>
   <block id="38863f5650b2800fa51be4d3a390b203" category="paragraph">Revise la información acerca de<block ref="182f5524fe0d353d40aacb3022a6d00c" category="inline-link-rx"></block>.</block>
-  <block id="00480567d9c91f7b7ba44e21f754f737" category="paragraph">Si tiene un dispositivo SGF6112 y el<block ref="646dc3cd3bd62a6be1690aac96e1dd08" category="inline-link-rx"></block>, Aparece una pestaña Administrar unidades en la página de detalles del dispositivo.</block>
+  <block id="8982aaa194b18d24402b49fbe219e3e5" category="list-text">Deje sin cables para guardar un puerto del switch y una dirección IP. Acceda a SANtricity System Manager usando las interfaces de usuario del instalador de Grid Manager o Storage Grid Appliance.</block>
+  <block id="c114b6896b71306b6ff5217eebf1d7eb" category="doc">Paso 4: Mueva la batería al nuevo controlador</block>
+  <block id="eed22a946ecb2d3652178906c8adb5c5" category="paragraph">Retire la batería de la controladora que ha fallado e instálela en la controladora de reemplazo.</block>
+  <block id="a9c0cea0fa970dd78f5c9b732ed7af82" category="doc">Paso 3: Retire el controlador</block>
+  <block id="73c449311895c44cdc2cb9f82f1d86a8" category="paragraph">Retire el controlador que ha fallado del dispositivo.</block>
+  <block id="41cead6208beaab4753fef7eb16b7b3d" category="doc">Paso 5: Mueva HIC a una nueva controladora, si es necesario</block>
+  <block id="52cea5d7c14ce5a1a352ae36b02fc89c" category="paragraph">Si la controladora con error incluye una HIC, mueva la HIC de la controladora con errores a la controladora de reemplazo.</block>
+  <block id="f2323bfac4b2b6c0bed61a2782d7b2a3" category="open-title">E2800A</block>
+  <block id="c7c61e2e49b4848eb04ef9166c62112e" category="paragraph">Una controladora E2800A no tiene una HIC.</block>
+  <block id="66e02a6be1542a6c5ab5b6e835ace031" category="inline-xref">Paso 6: Reemplace el controlador</block>
+  <block id="bee477a851e07f638eb69240b1b317bc" category="paragraph">Vuelva a colocar la cubierta del controlador E2800A y vaya a. <block ref="4bd98407e7ac018ef33f15dc5a2ef6d6" category="inline-xref-macro-rx"></block></block>
+  <block id="b186f28a62d42b7cdd50516610c1e839" category="open-title">E2800B</block>
+  <block id="477f610d0d161e316a6f06600c56252b" category="paragraph">Mueva la HIC de la controladora E2800B con errores a la controladora de reemplazo.</block>
+  <block id="bfc87e4ee97496c70a38995efddf5be3" category="paragraph">Si tiene un dispositivo SGF6112 y el<block ref="5540729631f9c458d692d5b76bbc9b38" category="inline-link-rx"></block>, Aparece una pestaña Administrar unidades en la página de detalles del dispositivo.</block>
+  <block id="b8325740c6f1fdf42bd83d726c080c9a" category="inline-link">Procedimiento de sustitución de controladora de la serie E2800 simple</block>
+  <block id="0f31bf890cf0f06d20912d7da5d50990" category="list-text">Si todas las unidades están protegidas, revisó los pasos de la<block ref="ab9bcc1613fce025138f2bd863db4580" category="inline-link-rx"></block>, Que incluyen la descarga e instalación de E-Series SANtricity System Manager desde el sitio de soporte de NetApp y, a continuación, utilizar Enterprise Management Window (EMW) para desbloquear las unidades seguras después de reemplazar la controladora.</block>
+  <block id="16cd89923af48ed14de009bdd8e2993f" category="section-title">Paso 1: Prepárese para quitar el controlador</block>
+  <block id="f187670d0aad1013a9fbfc3c71bf760e" category="paragraph">Utilice SANtricity System Manager para realizar los pasos siguientes.</block>
+  <block id="c5a54dca8b6ca77546f4cc165d0d11a4" category="section-title">Paso 2: Desconecte la controladora</block>
+  <block id="89fb5d48855149ae02912143426f3adc" category="paragraph">Desconecte la controladora y confirme que se hayan completado todas las operaciones.</block>
+  <block id="14dc8bb572f0f111ffb3d882de64812c" category="list-text">Apague la bandeja de controladoras.</block>
+  <block id="b2f9b08b9c77fd0d4c43b02ecac55483" category="paragraph">Instale el controlador de sustitución y compruebe que se ha vuelto a unir a la cuadrícula.</block>
+  <block id="2afc7927e5f45cc2a3ef83b60ea186cd" category="list-text">Encienda la bandeja de controladoras.</block>
+  <block id="944f002f126d9f60a7abfb7abb8b19a6" category="section-title">Paso 1: Prepare el controlador de reemplazo</block>
+  <block id="7dc8820948fbd0653bf70cd43dd02d4c" category="paragraph">Prepare para extraer la controladora que ha fallado y desconectarla.</block>
 </blocks>

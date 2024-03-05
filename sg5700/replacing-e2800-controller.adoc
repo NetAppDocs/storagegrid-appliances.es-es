@@ -20,7 +20,7 @@ Es posible que deba sustituir la controladora serie E2800 si no funciona de form
 NOTE: No confíe en las instrucciones E-Series para sustituir una controladora con el dispositivo StorageGRID, ya que los procedimientos no son los mismos.
 
 * Tiene etiquetas para identificar cada cable conectado a la controladora.
-* Si todas las unidades están protegidas, se revisaron los pasos en el procedimiento de sustitución de controladoras de la serie simple E2800, Lo que incluye descargar e instalar E-Series SANtricity System Manager desde el sitio de soporte de NetApp y, a continuación, utilizar Enterprise Management Window (EMW) para desbloquear las unidades seguras después de reemplazar la controladora.
+* Si todas las unidades están protegidas, revisó los pasos de la https://docs.netapp.com/us-en/e-series/maintenance-e2800/controllers-simplex-supertask-task.html#step-1-prepare-to-replace-controller-simplex["Procedimiento de sustitución de controladora de la serie E2800 simple"^], Que incluyen la descarga e instalación de E-Series SANtricity System Manager desde el sitio de soporte de NetApp y, a continuación, utilizar Enterprise Management Window (EMW) para desbloquear las unidades seguras después de reemplazar la controladora.
 +
 
 CAUTION: No podrá utilizar el aparato hasta que desbloquee las unidades con la tecla guardada.
@@ -43,19 +43,9 @@ Al sustituir una controladora, debe quitar la batería de la controladora origin
 
 NOTE: Las controladoras de almacenamiento en la mayoría de los modelos de dispositivos no incluyen tarjetas de interfaz del host (HIC).
 
-Esta tarea consta de las siguientes partes:
-
-. Prepare
-. Desconectar la controladora
-. Quite la controladora
-. Mueva la batería a la nueva controladora
-. Si es necesario, mueva HIC a una nueva controladora
-. Sustituya la controladora
 
 
-
-
-== Prepare
+== Paso 1: Prepárese para quitar el controlador
 
 Estas cifras muestran el controlador E2800A y el controlador E2800B. El procedimiento para sustituir las controladoras de la serie E2800 y la controladora EF570 es idéntico.
 
@@ -100,24 +90,23 @@ La tarjeta de interfaz del host (HIC) de 4 puertos. Esta tarjeta se debe mover a
 *Nota*: El controlador E2800A no tiene HIC.
 
 |===
-.Pasos
-. Siga las instrucciones del procedimiento de reemplazo de controladora E2800 para preparar la extracción de la controladora.
-+
-SANtricity System Manager se utiliza para realizar estos pasos.
+Siga las instrucciones del procedimiento de reemplazo de controladora E2800 para preparar la extracción de la controladora.
 
-+
-.. Anote en qué versión del software de sistema operativo SANtricity está instalada actualmente en la controladora.
-.. Anote en qué versión de NVSRAM está instalada actualmente.
-.. Si la función Drive Security está habilitada, asegúrese de que existe una clave guardada y de que conoce la frase de contraseña necesaria para instalarla.
+Utilice SANtricity System Manager para realizar los pasos siguientes.
+
+.Pasos
+. Anote en qué versión del software de sistema operativo SANtricity está instalada actualmente en la controladora.
+. Anote en qué versión de NVSRAM está instalada actualmente.
+. Si la función Drive Security está habilitada, asegúrese de que existe una clave guardada y de que conoce la frase de contraseña necesaria para instalarla.
 +
 
 CAUTION: *Posible pérdida de acceso a los datos &#8212;* Si todas las unidades del dispositivo tienen la seguridad habilitada, el nuevo controlador no podrá acceder al dispositivo hasta que desbloquee las unidades seguras mediante la ventana de administración empresarial en el Administrador del sistema de SANtricity.
 
-.. Realice un backup de la base de datos de configuración.
+. Realice un backup de la base de datos de configuración.
 +
 Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración.
 
-.. Recopile datos de soporte del dispositivo.
+. Recopile datos de soporte del dispositivo.
 +
 
 NOTE: La recogida de datos de soporte antes y después de sustituir un componente, garantiza que pueda enviar un conjunto de registros completo al soporte técnico si el reemplazo no resuelve el problema.
@@ -126,9 +115,9 @@ NOTE: La recogida de datos de soporte antes y después de sustituir un component
 
 
 
+== Paso 2: Desconecte la controladora
 
-
-== Desconectar la controladora
+Desconecte la controladora y confirme que se hayan completado todas las operaciones.
 
 .Pasos
 . Si el dispositivo StorageGRID se ejecuta en un sistema StorageGRID, link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque la controladora E5700SG en modo de mantenimiento"].
@@ -138,41 +127,40 @@ NOTE: La recogida de datos de soporte antes y después de sustituir un component
 .. Confirmar que se han completado todas las operaciones.
 
 
+. Apague la bandeja de controladoras.
 
 
 
 
-== Quite la controladora
+== Paso 3: Retire el controlador
+
+Retire el controlador que ha fallado del dispositivo.
 
 .Pasos
-. Retire el controlador del dispositivo:
-+
-.. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
-.. Etiquete los cables y desconecte los cables y SFP.
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiquete los cables y desconecte los cables y SFP.
 +
 
 NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
 
-.. Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta que se suelte y, a continuación, abra el asa de leva a la derecha.
-.. Con dos manos y el mango de la leva, deslice el controlador para sacarlo del aparato.
+. Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta que se suelte y, a continuación, abra el asa de leva a la derecha.
+. Con dos manos y el mango de la leva, deslice el controlador para sacarlo del aparato.
 +
 
 CAUTION: Utilice siempre dos manos para soportar el peso del controlador.
 
-.. Coloque el controlador sobre una superficie plana y sin estática con la cubierta extraíble hacia arriba.
-.. Retire la cubierta presionando el botón y deslizando la cubierta hacia fuera.
+. Coloque el controlador sobre una superficie plana y sin estática con la cubierta extraíble hacia arriba.
+. Retire la cubierta presionando el botón y deslizando la cubierta hacia fuera.
 
 
 
 
+== Paso 4: Mueva la batería al nuevo controlador
 
-
-== Mueva la batería a la nueva controladora
+Retire la batería de la controladora que ha fallado e instálela en la controladora de reemplazo.
 
 .Pasos
-. Retire la batería de la controladora con errores e instálela en la controladora de reemplazo:
-+
-.. Confirme que el LED verde dentro del controlador (entre la batería y los DIMM) está apagado.
+. Confirme que el LED verde dentro del controlador (entre la batería y los DIMM) está apagado.
 +
 Si este LED verde está encendido, el controlador sigue utilizando la batería. Debe esperar a que este LED se apague antes de quitar los componentes.
 
@@ -198,8 +186,8 @@ LED de caché interna activa
 Batería
 
 |===
-.. Localice el pestillo de liberación azul de la batería.
-.. Para desenganchar la batería, presione el pestillo de liberación hacia abajo y hacia fuera del controlador.
+. Localice el pestillo de liberación azul de la batería.
+. Para desenganchar la batería, presione el pestillo de liberación hacia abajo y hacia fuera del controlador.
 +
 image::../media/e2800_remove_battery.gif[Pestillo de la batería]
 
@@ -222,32 +210,30 @@ Pestillo de liberación de la batería
 Batería
 
 |===
-.. Levante la batería y deslícela fuera del controlador.
-.. Retire la cubierta del controlador de recambio.
-.. Oriente el controlador de repuesto de manera que la ranura de la batería quede orientada hacia usted.
-.. Inserte la batería en el controlador en un ángulo ligeramente descendente.
+. Levante la batería y deslícela fuera del controlador.
+. Retire la cubierta del controlador de recambio.
+. Oriente el controlador de repuesto de manera que la ranura de la batería quede orientada hacia usted.
+. Inserte la batería en el controlador en un ángulo ligeramente descendente.
 +
 Debe insertar la brida metálica de la parte frontal de la batería en la ranura de la parte inferior del controlador y deslizar la parte superior de la batería por debajo del pasador de alineación pequeño del lado izquierdo del controlador.
 
-.. Mueva el pestillo de la batería hacia arriba para fijar la batería.
+. Mueva el pestillo de la batería hacia arriba para fijar la batería.
 +
 Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se engancha a una ranura metálica del chasis.
 
-.. Dé la vuelta al controlador para confirmar que la batería está instalada correctamente.
+. Dé la vuelta al controlador para confirmar que la batería está instalada correctamente.
 +
 
 CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal de la batería debe estar completamente insertada en la ranura del controlador (como se muestra en la primera figura). Si la batería no está instalada correctamente (como se muestra en la segunda figura), la brida metálica podría entrar en contacto con la placa del controlador, causando daños.
 
 +
-*** *Correcto -- la brida metálica de la batería está completamente insertada en la ranura del controlador:*
+** *Correcto -- la brida metálica de la batería está completamente insertada en la ranura del controlador:*
 +
 image::../media/e2800_battery_flange_ok.gif[Brida de la batería correcta]
 
-*** *Incorrecto -- la brida metálica de la batería no está insertada en la ranura del controlador:*
+** *Incorrecto -- la brida metálica de la batería no está insertada en la ranura del controlador:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Brida de la batería incorrecta]
-
-
 
 
 
@@ -256,31 +242,40 @@ image::../media/e2800_battery_flange_not_ok.gif[Brida de la batería incorrecta]
 
 
 
-== Si es necesario, mueva HIC a una nueva controladora
+== Paso 5: Mueva HIC a una nueva controladora, si es necesario
 
-.Pasos
-. Si la controladora con errores incluye una tarjeta de interfaz del host (HIC), mueva la HIC de la controladora con error a la controladora de reemplazo.
-+
+Si la controladora con error incluye una HIC, mueva la HIC de la controladora con errores a la controladora de reemplazo.
+
 Una HIC independiente se utiliza únicamente para la controladora E2800B. La HIC se monta en la placa del controlador principal e incluye dos conectores SPF.
 
-+
 
 NOTE: Las ilustraciones de este procedimiento muestran una HIC de 2 puertos. La HIC de la controladora puede tener una cantidad de puertos diferente.
 
-. Si la controladora no tiene una HIC (E2800A), reemplace la cubierta de la controladora. Si la controladora tiene una HIC (E2800B), continúe a. <<move_the_HIC_to_the_replacement_controller,Mueva la HIC de la controladora con errores a la controladora de reemplazo>>.
-+
-.. [[Move_the_HIC_to_the_RETUDY_Controller]]Si está equipado con una HIC, mueva la HIC de la controladora con error a la controladora de reemplazo.
-.. Quite todos los SFP de la HIC.
-.. Con un destornillador Phillips del número 1, quite los tornillos que conectan la placa frontal de HIC a la controladora.
+[role="tabbed-block"]
+====
+.E2800A
+--
+Una controladora E2800A no tiene una HIC.
+
+Vuelva a colocar la cubierta del controlador E2800A y vaya a. <<step6_replace_controller,Paso 6: Reemplace el controlador>>
+
+--
+.E2800B
+--
+Mueva la HIC de la controladora E2800B con errores a la controladora de reemplazo.
+
+.Pasos
+. Quite todos los SFP de la HIC.
+. Con un destornillador Phillips del número 1, quite los tornillos que conectan la placa frontal de HIC a la controladora.
 +
 Hay cuatro tornillos: Uno en la parte superior, uno en el lateral y dos en la parte delantera.
 
 +
 image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[Tornillos de la placa frontal E2800]
 
-.. Quite la placa frontal de HIC.
-.. Con los dedos o un destornillador Phillips, afloje los tres tornillos de ajuste manual que fijan la HIC a la tarjeta controladora.
-.. Retire con cuidado la tarjeta HIC de la tarjeta controladora levantando la tarjeta y deslizándola hacia atrás.
+. Quite la placa frontal de HIC.
+. Con los dedos o un destornillador Phillips, afloje los tres tornillos de ajuste manual que fijan la HIC a la tarjeta controladora.
+. Retire con cuidado la tarjeta HIC de la tarjeta controladora levantando la tarjeta y deslizándola hacia atrás.
 +
 
 CAUTION: Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
@@ -307,13 +302,13 @@ Tarjeta de interfaz del host
 Tornillos de apriete manual
 
 |===
-.. Coloque la HIC en una superficie sin estática.
-.. Con un destornillador Phillips del número 1, quite los cuatro tornillos que fijan la placa frontal vacía al controlador de repuesto y quite la placa frontal.
-.. Alinee los tres tornillos de apriete manual de la HIC con los orificios correspondientes de la controladora de reemplazo y alinee el conector de la parte inferior de la HIC con el conector de la interfaz HIC de la tarjeta controladora.
+. Coloque la HIC en una superficie sin estática.
+. Con un destornillador Phillips del número 1, quite los cuatro tornillos que fijan la placa frontal vacía al controlador de repuesto y quite la placa frontal.
+. Alinee los tres tornillos de apriete manual de la HIC con los orificios correspondientes de la controladora de reemplazo y alinee el conector de la parte inferior de la HIC con el conector de la interfaz HIC de la tarjeta controladora.
 +
 Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
 
-.. Baje con cuidado la HIC en su lugar y coloque el conector de la HIC presionando suavemente en la HIC.
+. Baje con cuidado la HIC en su lugar y coloque el conector de la HIC presionando suavemente en la HIC.
 +
 
 CAUTION: * Posible daño del equipo * -- Tenga cuidado de no pellizcar el conector de cinta de oro para los led del controlador entre la HIC y los tornillos de ajuste manual.
@@ -340,22 +335,24 @@ Tarjeta de interfaz del host
 Tornillos de apriete manual
 
 |===
-.. Apriete a mano los tornillos de mariposa HIC.
+. Apriete a mano los tornillos de mariposa HIC.
 +
 No utilice un destornillador, o puede apretar los tornillos en exceso.
 
-.. Con un destornillador Phillips del número 1, conecte la placa frontal de la HIC que quitó de la controladora original a la nueva controladora con cuatro tornillos.
+. Con un destornillador Phillips del número 1, conecte la placa frontal de la HIC que quitó de la controladora original a la nueva controladora con cuatro tornillos.
 +
 image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800A tornillos de la placa frontal]
 
-.. Vuelva a instalar todos los SFP que se hayan quitado en la HIC.
+. Vuelva a instalar todos los SFP que se hayan quitado en la HIC.
 
 
+--
+====
 
 
+== Paso 6: Reemplace el controlador
 
-
-== Sustituya la controladora
+Instale el controlador de sustitución y compruebe que se ha vuelto a unir a la cuadrícula.
 
 .Pasos
 . Instale el controlador de repuesto en el aparato.
@@ -364,6 +361,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800A tornill
 .. Con el mango de la leva en la posición abierta, deslice el controlador completamente en el aparato.
 .. Mueva la palanca de leva hacia la izquierda para bloquear el controlador en su sitio.
 .. Sustituya los cables y SFP.
+.. Encienda la bandeja de controladoras.
 .. Espere a que se reinicie la controladora E2800. Compruebe que la pantalla de siete segmentos muestra el estado de `99`.
 .. Determinar cómo se asignará una dirección IP a la controladora de reemplazo.
 +

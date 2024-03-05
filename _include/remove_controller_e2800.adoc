@@ -1,28 +1,26 @@
-= Quite la controladora
+= Paso 3: Retire el controlador
 :allow-uri-read: 
 
 
 
 
-== Quite la controladora
+== Paso 3: Retire el controlador
+
+Retire el controlador que ha fallado del dispositivo.
 
 .Pasos
-. Retire el controlador del dispositivo:
-+
-.. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
-.. Etiquete los cables y desconecte los cables y SFP.
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiquete los cables y desconecte los cables y SFP.
 +
 
 NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
 
-.. Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta que se suelte y, a continuación, abra el asa de leva a la derecha.
-.. Con dos manos y el mango de la leva, deslice el controlador para sacarlo del aparato.
+. Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta que se suelte y, a continuación, abra el asa de leva a la derecha.
+. Con dos manos y el mango de la leva, deslice el controlador para sacarlo del aparato.
 +
 
 CAUTION: Utilice siempre dos manos para soportar el peso del controlador.
 
-.. Coloque el controlador sobre una superficie plana y sin estática con la cubierta extraíble hacia arriba.
-.. Retire la cubierta presionando el botón y deslizando la cubierta hacia fuera.
-
-
+. Coloque el controlador sobre una superficie plana y sin estática con la cubierta extraíble hacia arriba.
+. Retire la cubierta presionando el botón y deslizando la cubierta hacia fuera.
 

@@ -1,34 +1,43 @@
-= Si es necesario, mueva HIC a una nueva controladora
+= Paso 5: Mueva HIC a una nueva controladora, si es necesario
 :allow-uri-read: 
 
 
 
 
-== Si es necesario, mueva HIC a una nueva controladora
+== Paso 5: Mueva HIC a una nueva controladora, si es necesario
 
-.Pasos
-. Si la controladora con errores incluye una tarjeta de interfaz del host (HIC), mueva la HIC de la controladora con error a la controladora de reemplazo.
-+
+Si la controladora con error incluye una HIC, mueva la HIC de la controladora con errores a la controladora de reemplazo.
+
 Una HIC independiente se utiliza únicamente para la controladora E2800B. La HIC se monta en la placa del controlador principal e incluye dos conectores SPF.
 
-+
 
 NOTE: Las ilustraciones de este procedimiento muestran una HIC de 2 puertos. La HIC de la controladora puede tener una cantidad de puertos diferente.
 
-. Si la controladora no tiene una HIC (E2800A), reemplace la cubierta de la controladora. Si la controladora tiene una HIC (E2800B), continúe a. <<move_the_HIC_to_the_replacement_controller,Mueva la HIC de la controladora con errores a la controladora de reemplazo>>.
-+
-.. [[Move_the_HIC_to_the_RETUDY_Controller]]Si está equipado con una HIC, mueva la HIC de la controladora con error a la controladora de reemplazo.
-.. Quite todos los SFP de la HIC.
-.. Con un destornillador Phillips del número 1, quite los tornillos que conectan la placa frontal de HIC a la controladora.
+[role="tabbed-block"]
+====
+.E2800A
+--
+Una controladora E2800A no tiene una HIC.
+
+Vuelva a colocar la cubierta del controlador E2800A y vaya a. <<step6_replace_controller,Paso 6: Reemplace el controlador>>
+
+--
+.E2800B
+--
+Mueva la HIC de la controladora E2800B con errores a la controladora de reemplazo.
+
+.Pasos
+. Quite todos los SFP de la HIC.
+. Con un destornillador Phillips del número 1, quite los tornillos que conectan la placa frontal de HIC a la controladora.
 +
 Hay cuatro tornillos: Uno en la parte superior, uno en el lateral y dos en la parte delantera.
 
 +
 image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[Tornillos de la placa frontal E2800]
 
-.. Quite la placa frontal de HIC.
-.. Con los dedos o un destornillador Phillips, afloje los tres tornillos de ajuste manual que fijan la HIC a la tarjeta controladora.
-.. Retire con cuidado la tarjeta HIC de la tarjeta controladora levantando la tarjeta y deslizándola hacia atrás.
+. Quite la placa frontal de HIC.
+. Con los dedos o un destornillador Phillips, afloje los tres tornillos de ajuste manual que fijan la HIC a la tarjeta controladora.
+. Retire con cuidado la tarjeta HIC de la tarjeta controladora levantando la tarjeta y deslizándola hacia atrás.
 +
 
 CAUTION: Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
@@ -55,13 +64,13 @@ Tarjeta de interfaz del host
 Tornillos de apriete manual
 
 |===
-.. Coloque la HIC en una superficie sin estática.
-.. Con un destornillador Phillips del número 1, quite los cuatro tornillos que fijan la placa frontal vacía al controlador de repuesto y quite la placa frontal.
-.. Alinee los tres tornillos de apriete manual de la HIC con los orificios correspondientes de la controladora de reemplazo y alinee el conector de la parte inferior de la HIC con el conector de la interfaz HIC de la tarjeta controladora.
+. Coloque la HIC en una superficie sin estática.
+. Con un destornillador Phillips del número 1, quite los cuatro tornillos que fijan la placa frontal vacía al controlador de repuesto y quite la placa frontal.
+. Alinee los tres tornillos de apriete manual de la HIC con los orificios correspondientes de la controladora de reemplazo y alinee el conector de la parte inferior de la HIC con el conector de la interfaz HIC de la tarjeta controladora.
 +
 Tenga cuidado de no arañar ni golpear los componentes en la parte inferior de la HIC o en la parte superior de la tarjeta de la controladora.
 
-.. Baje con cuidado la HIC en su lugar y coloque el conector de la HIC presionando suavemente en la HIC.
+. Baje con cuidado la HIC en su lugar y coloque el conector de la HIC presionando suavemente en la HIC.
 +
 
 CAUTION: * Posible daño del equipo * -- Tenga cuidado de no pellizcar el conector de cinta de oro para los led del controlador entre la HIC y los tornillos de ajuste manual.
@@ -88,15 +97,16 @@ Tarjeta de interfaz del host
 Tornillos de apriete manual
 
 |===
-.. Apriete a mano los tornillos de mariposa HIC.
+. Apriete a mano los tornillos de mariposa HIC.
 +
 No utilice un destornillador, o puede apretar los tornillos en exceso.
 
-.. Con un destornillador Phillips del número 1, conecte la placa frontal de la HIC que quitó de la controladora original a la nueva controladora con cuatro tornillos.
+. Con un destornillador Phillips del número 1, conecte la placa frontal de la HIC que quitó de la controladora original a la nueva controladora con cuatro tornillos.
 +
 image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800A tornillos de la placa frontal]
 
-.. Vuelva a instalar todos los SFP que se hayan quitado en la HIC.
+. Vuelva a instalar todos los SFP que se hayan quitado en la HIC.
 
 
-
+--
+====
