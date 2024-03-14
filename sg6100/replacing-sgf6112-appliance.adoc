@@ -163,7 +163,7 @@ CAUTION: Si desea conservar los datos en las unidades, asegúrese de insertar la
 
 
 . Encienda el aparato.
-. Si el dispositivo que sustituyó tenía activado el cifrado de unidades de hardware para las unidades SED, debe hacerlo link:optional-enabling-node-encryption.html#access-an-encrypted-drive["introduzca la clave de acceso de cifrado de la unidad"] para acceder a las unidades cifradas cuando se inicia el dispositivo de sustitución por primera vez.
+. Si el dispositivo que sustituyó tenía activado el cifrado de unidades de hardware para las unidades SED, debe hacerlo link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["introduzca la clave de acceso de cifrado de la unidad"] para acceder a las unidades cifradas cuando se inicia el dispositivo de sustitución por primera vez.
 . Espere a que el aparato vuelva a unirse a la red. Si el dispositivo no se vuelve a unir a la cuadrícula, siga las instrucciones de la página de inicio del instalador de dispositivos de StorageGRID para solucionar cualquier problema.
 +
 
