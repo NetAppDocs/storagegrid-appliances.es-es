@@ -6,7 +6,7 @@
 
 == Paso 5: Mueva HIC a una nueva controladora, si es necesario
 
-Si la controladora con error incluye una HIC, mueva la HIC de la controladora con errores a la controladora de reemplazo.
+Si la controladora con errores incluye una tarjeta de interfaz del host (HIC), mueva la HIC de la controladora con error a la controladora de reemplazo.
 
 Una HIC independiente se utiliza únicamente para la controladora E2800B. La HIC se monta en la placa del controlador principal e incluye dos conectores SPF.
 

@@ -59,6 +59,9 @@ NOTE: Las controladoras de almacenamiento en la mayoría de los modelos de dispo
 
 == Paso 1: Prepare el controlador de reemplazo
 
+Prepare el controlador E2800A o E2800B de reemplazo.
+
+.Pasos
 . Desembale el nuevo controlador y configúrelo en una superficie plana y sin estática.
 +
 Guarde los materiales de embalaje que se van a utilizar durante el envío del controlador que ha fallado.
@@ -255,7 +258,7 @@ image::../media/e2800_battery_flange_not_ok.gif[Brida de la batería incorrecta]
 
 == Paso 5: Mueva HIC a una nueva controladora, si es necesario
 
-Si la controladora con error incluye una HIC, mueva la HIC de la controladora con errores a la controladora de reemplazo.
+Si la controladora con errores incluye una tarjeta de interfaz del host (HIC), mueva la HIC de la controladora con error a la controladora de reemplazo.
 
 Una HIC independiente se utiliza únicamente para la controladora E2800B. La HIC se monta en la placa del controlador principal e incluye dos conectores SPF.
 

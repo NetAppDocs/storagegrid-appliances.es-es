@@ -90,7 +90,11 @@ SOL
 +
 .. Conéctese a IPMI sol mediante la dirección IP del BMC y las credenciales de inicio de sesión.
 +
-`ipmitool -I lanplus -H _BMC_Port_IP_ -U root -P _Password_ sol activate`
+`ipmitool -I lanplus -H _BMC_Port_IP_ -U admin -P _Password_ sol activate`
+
++
+
+NOTE: En algunos casos, el nombre de usuario predeterminado para un dispositivo SG6000 puede ser `root` en lugar de `admin`.
 
 .. Ver los códigos en el terminal de serie virtual.
 

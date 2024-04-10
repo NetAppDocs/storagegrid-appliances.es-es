@@ -1,0 +1,73 @@
+= 
+:allow-uri-read: 
+
+
+Solucione los errores que se pueden producir al usar SANtricity System Manager para actualizar el firmware en las unidades del dispositivo.
+
+* *Unidades asignadas con errores*
++
+** La causa de este error puede ser que la unidad no tenga la firma apropiada. Asegúrese de que la unidad afectada sea una unidad autorizada. Póngase en contacto con el soporte técnico para obtener más información.
+** Al reemplazar una unidad, asegúrese de que la capacidad de la unidad de reemplazo sea igual o mayor que la de la unidad con error que desea reemplazar.
+** Puede reemplazar la unidad con error mientras la cabina de almacenamiento recibe I/O.
+
+
+* *Compruebe la matriz de almacenamiento*
++
+** Asegúrese de que se haya asignado una dirección IP a cada controladora.
+** Asegúrese de que ninguno de los cables conectados a la controladora esté dañado.
+** Asegúrese de que todos los cables estén conectados firmemente.
+
+
+* *Unidades de repuesto en caliente integradas*
++
+Es necesario corregir esta condición de error para poder actualizar el firmware.
+
+* *Grupos de volúmenes incompletos*
++
+Si uno o varios grupos de volúmenes o pools de discos se muestran incompletos, es necesario corregir esta condición de error para poder actualizar el firmware.
+
+* *Operaciones exclusivas (que no sean análisis de medios en segundo plano/paridad) que se estén ejecutando actualmente en cualquier grupo de volúmenes*
++
+Si existe una o varias operaciones exclusivas en curso, es necesario completarlas para poder actualizar el firmware. Utilice System Manager para supervisar el progreso de las operaciones.
+
+* *Volúmenes que faltan*
++
+Es necesario corregir la condición de volumen ausente para poder actualizar el firmware.
+
+* *Cualquiera de los controladores en un estado distinto al óptimo*
++
+Se requiere atención en una de las controladoras de la cabina de almacenamiento. Es necesario corregir esta condición para poder actualizar el firmware.
+
+* *La información de partición de almacenamiento no coincide entre los gráficos de objetos del controlador*
++
+Se produjo un error durante la validación de los datos en las controladoras. Póngase en contacto con el soporte técnico para resolver este problema.
+
+* *La verificación del controlador de base de datos de SPM falla*
++
+Se produjo un error en la base de datos de asignación de particiones de almacenamiento de una controladora. Póngase en contacto con el soporte técnico para resolver este problema.
+
+* *Validación de la base de datos de configuración (si es compatible con la versión del controlador de la matriz de almacenamiento)*
++
+Se produjo un error en la base de datos de configuración de una controladora. Póngase en contacto con el soporte técnico para resolver este problema.
+
+* *Comprobaciones relacionadas con MEL*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+* *Se notificaron más de 10 eventos críticos MEL o informativos DDE en los últimos 7 días*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+* *Se notificaron más de 2 Eventos críticos MEL de página 2C en los últimos 7 días*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+* *Se notificaron más de 2 eventos críticos MEL del canal de unidad degradado en los últimos 7 días*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+* * Más de 4 entradas cruciales MEL en los últimos 7 días*
++
+Póngase en contacto con el soporte técnico para resolver este problema.
+
+
