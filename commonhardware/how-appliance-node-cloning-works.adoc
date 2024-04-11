@@ -69,6 +69,7 @@ Puede ver información acerca del modo RAID actual del nodo del dispositivo de o
 
 
 
+* La cantidad de volúmenes en un dispositivo de almacenamiento de destino debe ser mayor o igual que la cantidad de volúmenes en el nodo de origen. No se puede clonar un nodo de origen con volúmenes de almacenamiento de objetos 16 (rangedb) en un dispositivo de almacenamiento de destino con volúmenes de almacenamiento de objetos 12, incluso si el dispositivo de destino tiene más capacidad que el nodo de origen. La mayoría de los dispositivos de almacenamiento tienen volúmenes de almacenamiento de objetos de 16 TB, excepto el dispositivo de almacenamiento SGF6112 que solo tiene 12 volúmenes de almacenamiento de objetos.
 
 
 

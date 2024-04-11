@@ -25,13 +25,21 @@ Asegúrese de que el aparato de sustitución cumple los siguientes criterios:
 ** Solo puede clonar un dispositivo Storage Node en un dispositivo de almacenamiento nuevo.
 
 
-* Para los dispositivos de nodo de administración o nodo de pasarela, el dispositivo de nodo de origen y el dispositivo de destino no necesitan ser del mismo tipo de dispositivo; sin embargo, si se cambia el tipo de dispositivo, puede que sea necesario sustituir los cables o los módulos SFP.
+* Para los dispositivos de nodo de administración o nodo de pasarela, el dispositivo de nodo de origen y el dispositivo de destino no necesitan ser el mismo modelo de dispositivo; sin embargo, para cambiar el modelo de dispositivo, es posible que sea necesario sustituir los cables o los módulos SFP.
 +
 Por ejemplo, puede sustituir un dispositivo de nodo SG1000 por un SG100 o sustituir un dispositivo SG100 por un dispositivo SG1000.
 
-* Para los dispositivos Storage Node, el dispositivo del nodo de origen y el dispositivo de destino no necesitan ser del mismo tipo de dispositivo; sin embargo, el dispositivo de destino debe tener una capacidad de almacenamiento mayor que el dispositivo de origen.
+* Para los dispositivos Storage Node, el dispositivo del nodo de origen y el dispositivo de destino no necesitan ser del mismo tipo de dispositivo; sin embargo:
++
+** El dispositivo objetivo debe tener mayor capacidad de almacenamiento que el dispositivo de origen.
 +
 Por ejemplo, puede reemplazar un dispositivo de nodos SG5700 por un dispositivo SG6000.
+
+** El dispositivo objetivo debe tener una cantidad de volúmenes de almacenamiento de objetos igual o superior a la del dispositivo de origen.
++
+Por ejemplo, no se puede reemplazar un dispositivo de SG6000 nodos (volúmenes de almacenamiento de objetos 16) por un dispositivo SGF6112 (volúmenes de almacenamiento de objetos 12).
+
+
 
 
 
@@ -56,7 +64,7 @@ NOTE: El uso de la red de administrador de 1 GbE para la transferencia de datos 
 +
 El nodo de origen y el dispositivo de destino pueden tener diferentes configuraciones de cifrado del nodo. El cifrado y el descifrado de datos se realizan automáticamente durante la transferencia de datos y cuando el nodo objetivo se reinicia y se une a la cuadrícula.
 
-* Determine si el modo RAID del dispositivo de destino debe cambiarse desde su configuración predeterminada, por lo que puede especificar esta información durante la instalación inicial del dispositivo de destino antes de realizar la clonación. Puede ver información acerca del modo RAID actual del nodo del dispositivo de origen en la página *NODES* de Grid Manager. Seleccione la ficha *almacenamiento* del dispositivo.
+* Determine si el modo RAID del dispositivo de destino debe cambiarse desde su configuración predeterminada, por lo que puede especificar esta información durante la instalación inicial del dispositivo de destino antes de realizar la clonación. Puede ver información acerca del modo RAID actual del nodo del dispositivo de origen en la página *NODES* de Grid Manager. Seleccione la pestaña *Hardware* del aparato.
 +
 El nodo de origen y el dispositivo de destino pueden tener diferentes ajustes de RAID.
 

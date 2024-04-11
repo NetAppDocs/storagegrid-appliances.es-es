@@ -49,7 +49,7 @@ El nombre del nodo está asignado a este nodo del dispositivo en el sistema Stor
 +
 .. Descargue el archivo de instalación:
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Descargas de NetApp: StorageGRID"^]
 
 .. Extraiga el archivo.
 .. En el instalador de dispositivos StorageGRID, seleccione *Avanzado* > *Cargar software StorageGRID*.
@@ -57,10 +57,7 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/dow
 +
 image::../media/appliance_installer_rmv_current_software.png[Instalador del dispositivo: Eliminar el software actual]
 
-.. Haga clic en *examinar* para ver el paquete de software que descargó y extrajo y, a continuación, haga clic en *examinar* para ver el archivo de suma de comprobación.
-+
-image::../media/appliance_installer_upload_sg_software.png[Instalador del dispositivo: Carga del software de SG]
-
+.. Haga clic en *Browse* para ver el paquete de software que descargó y extrajo. Seleccione la `storagegrid-webscale-images-_version_.deb` paquete.
 .. Seleccione *Inicio* para volver a la página de inicio.
 
 
@@ -103,7 +100,7 @@ Para instalar StorageGRID en un nodo del dispositivo de servicios:
 * Especifique o confirme la dirección IP del nodo de administración principal y el nombre del nodo de dispositivo.
 * Se inicia la instalación y se espera a medida que se instala el software.
 +
-Paso a través de las tareas de instalación del nodo de puerta de enlace del dispositivo, la instalación se detiene. Para reanudar la instalación, inicia sesión en el Gestor de grid, aprueba todos los nodos de cuadrícula y completa el proceso de instalación de StorageGRID. La instalación de un nodo de administración no primario no requiere su aprobación.
+Paso a través de las tareas de instalación del nodo de puerta de enlace del dispositivo, la instalación se detiene. Para reanudar la instalación, inicia sesión en el Gestor de grid, aprueba todos los nodos de cuadrícula y completa el proceso de instalación de StorageGRID.
 
 
 
@@ -162,7 +159,7 @@ El nombre que aparece aquí será el nombre del sistema del nodo del dispositivo
 +
 .. Descargue el archivo de instalación:
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Descargas de NetApp: StorageGRID"^]
 
 .. Extraiga el archivo.
 .. En el instalador de dispositivos StorageGRID, seleccione *Avanzado* > *Cargar software StorageGRID*.
@@ -170,10 +167,7 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/dow
 +
 image::../media/appliance_installer_rmv_current_software.png[Instalador del dispositivo: Eliminar el software actual]
 
-.. Haga clic en *examinar* para ver el paquete de software que descargó y extrajo y, a continuación, haga clic en *examinar* para ver el archivo de suma de comprobación.
-+
-image::../media/appliance_installer_upload_sg_software.png[Instalador del dispositivo: Carga del software de SG]
-
+.. Haga clic en *Browse* para ver el paquete de software que descargó y extrajo. Seleccione la `storagegrid-webscale-images-_version_.deb` paquete.
 .. Seleccione *Inicio* para volver a la página de inicio.
 
 
@@ -183,10 +177,7 @@ Si el botón *Iniciar instalación* no está activado, es posible que deba cambi
 
 . En la página de inicio del instalador de dispositivos StorageGRID, haga clic en *Iniciar instalación*.
 +
-image::../media/appliance_installer_services_appliance_non_pan.png[Inicio del instalador de dispositivos: Instale un nodo de administración no primario]
-
-+
-El estado actual cambia a "'instalación en curso'" y se muestra la página de instalación del monitor.
+El estado actual cambia a “Instalación en curso”, y el link:../installconfig/monitoring-appliance-installation.html["Página de instalación del monitor"] aparece en pantalla.
 
 +
 

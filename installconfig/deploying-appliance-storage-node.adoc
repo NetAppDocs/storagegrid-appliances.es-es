@@ -34,7 +34,7 @@ Para implementar un nodo de almacenamiento de dispositivos en un sistema Storage
 
 
 
-NOTE: Si necesita implementar varios nodos de dispositivos a la vez, puede automatizar el proceso de instalación mediante el `configure-sga.py` Script de instalación del dispositivo.
+NOTE: Si necesita implementar varios nodos de dispositivos a la vez, puede automatizar el proceso de instalación mediante el enlace:./installconfig/automation-appliance-installation-and-configuration.html#Automate-with-configure-sga-py-script[`configure-sga.py` Script de instalación del dispositivo].
 
 * Si va a realizar una operación de expansión o recuperación, siga las instrucciones correspondientes:
 +
@@ -101,7 +101,7 @@ link:../commonhardware/appliance-node-cloning-procedure.html["procedimiento de c
 
 . En la página de inicio del instalador de dispositivos StorageGRID, haga clic en *Iniciar instalación*.
 +
-El estado actual cambia a "'instalación en curso'" y se muestra la página de instalación del monitor.
+El estado actual cambia a “Instalación en curso”, y el link:../installconfig/monitoring-appliance-installation.html["Página de instalación del monitor"] aparece en pantalla.
 
 +
 
@@ -110,6 +110,6 @@ NOTE: Si necesita acceder a la página de instalación del monitor manualmente, 
 . Si el grid incluye varios nodos de almacenamiento de dispositivos, repita estos pasos para cada dispositivo.
 +
 
-NOTE: Si necesita implementar varios nodos de almacenamiento para dispositivos a la vez, puede automatizar el proceso de instalación mediante el `configure-sga.py` Script de instalación del dispositivo.
+NOTE: Si necesita implementar varios nodos de almacenamiento de dispositivos a la vez, puede automatizar el proceso de instalación mediante el enlace:./installconfig/automation-appliance-installation-and-configuration.html#Automate-with-configure-sga-py-script[`configure-sga.py` Script de instalación del dispositivo].
 
 

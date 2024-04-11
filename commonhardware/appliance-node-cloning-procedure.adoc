@@ -63,7 +63,7 @@ Cuando se activa *Iniciar clonación*, el *estado actual* indica la red StorageG
 . Seleccione *Iniciar clonación* en el nodo de origen.
 . Supervise el progreso de la clonación con el instalador de dispositivos de StorageGRID en el nodo de origen o de destino.
 +
-El instalador de dispositivos StorageGRID en los nodos de origen y destino indica el mismo estado.
+El instalador de dispositivos StorageGRID en los nodos de origen y destino indica un estado similar.
 
 +
 image::../media/cloning_progress.png[Progreso del clonado]
@@ -102,9 +102,9 @@ Cuando finalice correctamente la clonación:
 
 
 
-NOTE: Si el dispositivo no se vuelve a unir a la cuadrícula, vaya a la página de inicio del instalador de dispositivos StorageGRID para el nodo de origen, seleccione * Avanzado * > * Reiniciar controlador * y, a continuación, seleccione * Reiniciar en modo de mantenimiento *. Cuando el nodo de origen se reinicie en modo de mantenimiento, repita el procedimiento de clonado del nodo.
+NOTE: Si el dispositivo de destino no se une a la cuadrícula, vaya a la página de inicio del instalador de dispositivos StorageGRID para el nodo de origen, seleccione *Avanzado* > *Reiniciar controlador* y, a continuación, seleccione *Reiniciar en modo de mantenimiento*. Cuando el nodo de origen se reinicie en modo de mantenimiento, repita el procedimiento de clonado del nodo.
 
-* Los datos de usuario permanecen en el dispositivo de origen como opción de recuperación si se produce un problema inesperado en el nodo de destino. Una vez que el nodo de destino se ha vuelto a unir correctamente a StorageGRID, los datos del usuario en el dispositivo de origen están obsoletos y ya no se necesitan.
+* Los datos de usuario permanecen en el dispositivo de origen como opción de recuperación si se produce un problema inesperado en el nodo de destino. Una vez que el nodo de destino se ha unido correctamente a StorageGRID, los datos de usuario del dispositivo de origen quedan obsoletos y ya no son necesarios.
 +
 Los datos de usuarios obsoletos se sobrescriben al instalar o expandir el dispositivo de origen como un nodo nuevo en otro grid.
 
