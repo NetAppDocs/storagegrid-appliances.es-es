@@ -203,6 +203,194 @@ Red Grid
 
 
 --
+.SG110 y SG1100
+--
+El puerto de gestión del dispositivo se conecta al portátil de servicio y los puertos de red del dispositivo a la red de grid y a la red de cliente opcional para StorageGRID.
+
+.Antes de empezar
+* Tiene un cable Ethernet RJ-45 para conectar el puerto de administración.
+* Tiene una de las siguientes opciones para los puertos de red. Estos elementos no se suministran con el aparato.
++
+** De uno a cuatro cables Twinax para conectar los cuatro puertos de red.
+** Para el SG110, de uno a cuatro transceptores SFP+ o SFP28 si planea utilizar cables ópticos para los puertos.
+** Para el SG1100, uno a cuatro transceptores QSFP+ o QSFP28 si planea utilizar cables ópticos para los puertos.
+
+
+
+
+
+CAUTION: *Riesgo de exposición a la radiación láser* -- No desmonte ni retire ninguna parte de un transceptor SFP o QSFP. Puede que esté expuesto a la radiación láser.
+
+.Acerca de esta tarea
+Las siguientes figuras muestran los puertos de la parte posterior del aparato.
+
+Conexiones de puerto SG110:
+
+image::../media/sgf6112_connections.png[SG110 conectores traseros]
+
+Conexiones de puerto SG1100:
+
+image::../media/sg1100_connections.png[Conexiones de puerto SG1000]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo de puerto | Uso 
+
+
+ a| 
+1
+ a| 
+Puerto de gestión BMC en el dispositivo
+ a| 
+1 GbE (RJ-45).
+ a| 
+Se conecta a la red en la que se accede a la interfaz del BMC.
+
+
+
+ a| 
+2
+ a| 
+Cuatro puertos de red en el dispositivo
+ a| 
+* Para SG110: 10/25-GbE
+* Para SG1100: 10/25/40/100-GbE
+
+ a| 
+Conéctese a la red de red y a la red de cliente para StorageGRID. Consulte link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Modos de enlace de puertos (SG110 y SG1100)"]
+
+
+
+ a| 
+3
+ a| 
+Puerto de red de administración en el dispositivo
+ a| 
+1 GbE (RJ-45).
+
+*Importante:* Este puerto funciona solo a 1/10-GbE (RJ-45) y no admite velocidades de 100 megabits.
+ a| 
+Conecta el dispositivo a la red de administración para StorageGRID.
+
+
+
+ a| 
+ a| 
+El puerto RJ-45 más a la derecha del aparato
+ a| 
+1 GbE (RJ-45).
+
+*Importante:* Este puerto funciona solo a 1/10-GbE (RJ-45) y no admite velocidades de 100 megabits.
+ a| 
+* Se puede unir al puerto de administración 1 si desea una conexión redundante a la red de administración.
+* Se puede dejar desconectado y disponible para acceso local temporal (IP 169.254.0.1).
+* Durante la instalación, se puede usar para conectar el dispositivo a un portátil de servicio si las direcciones IP asignadas por DHCP no están disponibles.
+
+
+|===
+.Pasos
+. Conecte el puerto de gestión BMC del dispositivo a la red de gestión mediante un cable Ethernet.
++
+Aunque esta conexión es opcional, se recomienda facilitar el soporte.
+
+. Conecte los puertos de red del dispositivo a los switches de red adecuados utilizando cables Twinax o cables ópticos y transceptores.
++
+Consulte la siguiente tabla para conocer el equipo necesario para su hardware y velocidad de enlace.
+
++
+[cols="2a,2a"]
+|===
+| Velocidad de enlace de SG110 GbE (GbE) | Equipo necesario 
+
+
+ a| 
+10
+ a| 
+Transceptor SFP+
+
+
+
+ a| 
+25
+ a| 
+Transceptor SFP28
+
+
+
+| Velocidad de enlace de SG1100 GbE (GbE) | Equipo necesario 
+
+
+ a| 
+10
+ a| 
+Transceptor QSA y SFP+
+
+
+
+ a| 
+25
+ a| 
+Transceptor QSA y SFP28
+
+
+
+ a| 
+40
+ a| 
+Transceptor QSFP+
+
+
+
+ a| 
+100
+ a| 
+Transceptor QFSP28
+
+|===
++
+** En los modelos que admiten autonegociación como opción de velocidad de puerto, si se selecciona el modo de enlace de puerto fijo, puede ejecutar los puertos dedicados a la red de red de StorageGRID a una velocidad diferente a la de los puertos dedicados a la red cliente.
+** En los modelos que no admiten autonegociación como opción de velocidad de puerto, los cuatro puertos de red deben usar la misma velocidad de enlace.
+** Si piensa utilizar el modo de enlace de puerto fijo (predeterminado), conecte los puertos a la red de StorageGRID y a las redes de cliente, como se muestra en la tabla.
++
+[cols="1a,2a"]
+|===
+| Puerto | Conecta a... 
+
+
+ a| 
+Puerto 1
+ a| 
+Red de cliente (opcional)
+
+
+
+ a| 
+Puerto 2
+ a| 
+Red Grid
+
+
+
+ a| 
+Puerto 3
+ a| 
+Red de cliente (opcional)
+
+
+
+ a| 
+Puerto 4
+ a| 
+Red Grid
+
+|===
+** Si planea utilizar el modo de enlace de puerto agregado, conecte uno o varios puertos de red a uno o varios switches. Debe conectar al menos dos de los cuatro puertos para evitar tener un único punto de error. Si utiliza más de un switch para un único vínculo LACP, los switches deben ser compatibles con MLAG o equivalente.
+
+
+. Si tiene previsto utilizar la Red de administración para StorageGRID, conecte el puerto Red de administración del dispositivo a la Red de administración mediante un cable Ethernet.
+
+
+--
 .SG5700
 --
 Debe conectar las dos controladoras entre sí, conectar los puertos de gestión de cada controladora y conectar los puertos de 10/25 GbE de la controladora E5700SG a la red de grid y red de cliente opcional para StorageGRID.
@@ -410,7 +598,7 @@ CAUTION: *Riesgo de exposición a la radiación láser* -- No desmonte ni retire
 
 
 .Acerca de esta tarea
-En las siguientes figuras, se muestran las tres controladoras incluidas en los dispositivos SG6060 y SG6060X, con la controladora de computación SG6000-CN en la parte superior y las dos controladoras de almacenamiento E2800 en la parte inferior. SG6060 utiliza E2800A controladoras, mientras que SG6060X utiliza E2800B.
+En las siguientes figuras, se muestran las tres controladoras incluidas en los dispositivos SG6060 y SG6060X, con la controladora de computación SG6000-CN en la parte superior y las dos controladoras de almacenamiento E2800 en la parte inferior. SG6060 usa E2800A controladoras y SG6060X utiliza una o dos versiones de controladora E2800B.
 
 
 NOTE: Ambas versiones de la controladora E2800 tienen especificaciones y funciones idénticas a excepción de la ubicación de los puertos de interconexión.
@@ -424,7 +612,19 @@ image::../media/sg6000_e2800_connections.png[SG6060 a E2800A conexiones]
 
 Conexiones SG6060X:
 
+* Versión 1
++
 image::../media/sg6000x_e2800B_connections.png[SG6060 a E2800B conexiones]
+
+* Versión 2
++
+
+NOTE: Si los transceptores FC de la controladora E2800B están instalados en los puertos de conexión FC superiores (6), muévalos a los puertos de conexión FC inferiores derechos (7).
+
++
+image::../media/sg6000x_e2800B2_connections.png[SG6060 a E2800B conexiones]
+
+
 
 La siguiente figura muestra las tres controladoras del dispositivo SGF6024, con el controlador de computación SG6000-CN en la parte superior y las dos controladoras de almacenamiento EF570 en paralelo debajo del controlador de computación.
 
@@ -570,7 +770,10 @@ Puerto 4
 Red Grid
 
 |===
-** Si planea utilizar el modo de enlace de puerto agregado, conecte uno o varios puertos de red a uno o varios switches. Debe conectar al menos dos de los cuatro puertos para evitar tener un único punto de error. Si utiliza más de un switch para un único vínculo LACP, los switches deben ser compatibles con MLAG o equivalente.
++
+*** Si planea utilizar el modo de enlace de puerto agregado, conecte uno o varios puertos de red a uno o varios switches. Debe conectar al menos dos de los cuatro puertos para evitar tener un único punto de error. Si utiliza más de un switch para un único vínculo LACP, los switches deben ser compatibles con MLAG o equivalente.
+
+
 
 
 . Si tiene previsto utilizar la Red de administración para StorageGRID, conecte el puerto Red de administración del controlador SG6000-CN a la Red de administración, mediante un cable Ethernet.

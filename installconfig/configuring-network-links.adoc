@@ -39,6 +39,7 @@ NOTE: La política hash de transmisión de LACP es layer2+3.
 En las figuras y las tablas se resumen las opciones del modo de enlace de puerto y el modo de enlace de red para cada dispositivo. En la siguiente sección, se ofrece más información:
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Modos de enlace de puertos (SG1000 y SG100)"]
+* link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Modos de enlace de puertos (SG1100 y SG110)"]
 * link:gathering-installation-information-sg5700.html#port-bond-modes["Modos de enlace de puertos (E5700SG)"]
 * link:gathering-installation-information-sg6000.html#port-bond-modes["Modos de enlace de puertos (SG6000-CN)"]
 * link:gathering-installation-information-sg6100.html#port-bond-modes["Modos de enlace de puertos (SGF6112)"]
@@ -172,6 +173,137 @@ image::../media/sg1000_bonded_management_ports.png[Puertos de red de administrac
 SG100:
 
 image::../media/sg100_bonded_management_ports.png[Puertos de red de administración con conexión SG100]
+
+--
+
+
+--
+.SG110 y SG1100
+--
+Modo de enlace de puerto fijo (predeterminado)::
++
+--
+Las cifras muestran cómo los cuatro puertos de red en SG1100 o SG110 están unidos en modo de enlace de puerto fijo (configuración predeterminada).
+
+SG1100 GBE:
+
+image::../media/sg1100_fixed_port.png[SG1100 Modo de enlace de puerto fijo]
+
+SG110 GBE:
+
+image::../media/sgf6112_fixed_port.png[SG110 Modo de enlace de puerto fijo]
+
+[cols="1a,3a"]
+|===
+| Llamada | Qué puertos están Unidos 
+
+
+ a| 
+C
+ a| 
+Los puertos 1 y 3 se unen para la red cliente, si se utiliza esta red.
+
+
+
+ a| 
+G
+ a| 
+Los puertos 2 y 4 están Unidos para la red de cuadrícula.
+
+|===
+La tabla resume las opciones para configurar los cuatro puertos de red. Sólo tiene que configurar los ajustes en la página Configuración de vínculos si desea utilizar un valor no predeterminado.
+
+[cols="1a,2a,2a"]
+|===
+| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+
+
+ a| 
+Active-Backup (predeterminado)
+ a| 
+* Los puertos 2 y 4 utilizan un vínculo de copia de seguridad activa para la red Grid.
+* Los puertos 1 y 3 no se utilizan.
+* Una etiqueta de VLAN es opcional.
+
+ a| 
+* Los puertos 2 y 4 utilizan un vínculo de copia de seguridad activa para la red Grid.
+* Los puertos 1 y 3 utilizan un vínculo de backup activo para la red cliente.
+* Las etiquetas de VLAN se pueden especificar para ambas redes, por conveniencia del administrador de red.
+
+
+
+
+ a| 
+LACP (802,3ad)
+ a| 
+* Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
+* Los puertos 1 y 3 no se utilizan.
+* Una etiqueta de VLAN es opcional.
+
+ a| 
+* Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
+* Los puertos 1 y 3 utilizan un enlace LACP para la red de cliente.
+* Las etiquetas de VLAN se pueden especificar para ambas redes, por conveniencia del administrador de red.
+
+
+|===
+--
+Modo de enlace de puerto agregado::
++
+--
+Estas cifras muestran cómo se unen los cuatro puertos de red en el modo de enlace de puertos agregados.
+
+SG1100 GBE:
+
+image::../media/sg1100_aggregate_ports.png[Modo de enlace de puerto agregado SG1100]
+
+SG110 GBE:
+
+image::../media/sgf6112_aggregate_ports.png[SG110 Modo de enlace de puertos agregados]
+
+[cols="1a,3a"]
+|===
+| Llamada | Qué puertos están Unidos 
+
+
+ a| 
+1
+ a| 
+Los cuatro puertos se agrupan en un enlace LACP único, lo que permite que se usen todos los puertos para el tráfico de red de grid y de red de cliente.
+
+|===
+La tabla resume las opciones para configurar los puertos de red. Sólo tiene que configurar los ajustes en la página Configuración de vínculos si desea utilizar un valor no predeterminado.
+
+[cols="1a,2a,2a"]
+|===
+| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+
+
+ a| 
+Solo LACP (802.3ad)
+ a| 
+* Los puertos 1-4 utilizan un enlace LACP único para la red de grid.
+* Una única etiqueta VLAN identifica los paquetes de red Grid.
+
+ a| 
+* Los puertos 1-4 utilizan un enlace LACP único para la red de grid y la red de cliente.
+* Dos etiquetas VLAN permiten que los paquetes de red de cuadrícula se separen de los paquetes de red de cliente.
+
+
+|===
+--
+Active-Backup: Modo de vinculación de red para los puertos de gestión::
++
+--
+Estas cifras muestran cómo los dos puertos de gestión de 1 GbE de los dispositivos se unen en el modo de enlace de red Active-Backup para la red de administración.
+
+SG1100 GBE:
+
+image::../media/sg1100_bonded_management_ports.png[Puertos de red de administración unidos SG1100]
+
+SG110 GBE:
+
+image::../media/sgf6112_bonded_management_ports.png[Puertos de red de administración unidos SG110]
 
 --
 

@@ -77,7 +77,7 @@ Instale la batería CMOS de repuesto en la toma de la placa del sistema.
 +
 image::../media/sgf6112_two-slot-riser_alignment_hole.png[Orificio de alineación del conjunto de elevador grande]
 
-. Localice el pasador guía en la placa del sistema.
+. Localice el pasador guía en la placa del sistema
 +
 image::../media/sgf6112_two-slot-riser_guide-pin.png[Pasador guía en la placa del sistema para el conjunto de elevador de dos ranuras]
 
@@ -99,7 +99,7 @@ image::../media/sgf6112_two-slot-riser_guide-pin.png[Pasador guía en la placa d
 .. Introduzca la contraseña que aparece en `Passwords.txt` archivo.
 
 
-. Restaure la conectividad de red de BMC para el dispositivo a través de una de estas opciones:
+. Restaure la conectividad de red de BMC para el dispositivo. Existen dos opciones:
 +
 ** Utilice IP estáticas, máscara de red y puerta de enlace
 ** Utilice DHCP para obtener una IP, una máscara de red y una puerta de enlace

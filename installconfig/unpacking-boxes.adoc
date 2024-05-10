@@ -50,6 +50,47 @@ image::../media/power_cords.gif[Cables de alimentación]
 
 
 --
+.SG110 y SG1100
+--
+* *Hardware*
++
+SG110 o SG1100::
++
+--
+image::../media/sgf6112_front_with_ssds.png[Unidades frontales: Dispositivos SG110 y SG1100]
+
+--
+Kit de rieles con instrucciones::
++
+--
+image::../media/rail_kit.gif[Kit de rieles]
+
+--
+Cubierta frontal::
++
+--
+image::../media/sgf_6112_front_bezel.png[Cubierta frontal]
+
+--
+
+
+* * Cables de alimentación *
++
+
+TIP: Es posible que el armario tenga cables de alimentación especiales que utilice en lugar de los cables de alimentación que se suministran con el aparato.
+
++
+Dos cables de alimentación para su país::
++
+--
+image::../media/power_cords.gif[Cables de alimentación]
+
+--
+
+
+
+
+--
 .SG5700
 --
 * *Hardware*

@@ -29,6 +29,23 @@ No vuelva a pulsar el botón de encendido durante el proceso de encendido.
 
 
 --
+.SG110 y SG1100
+--
+.Pasos
+. Conecte un cable de alimentación a cada una de las dos unidades de alimentación del aparato.
+. Conecte estos dos cables de alimentación a dos unidades de distribución de alimentación (PDU) diferentes en el armario o rack.
+. Si el botón de encendido de la parte frontal del aparato no está iluminado en azul actualmente, pulse el botón para encender el aparato.
++
+No vuelva a pulsar el botón de encendido durante el proceso de encendido.
+
++
+El LED de la fuente de alimentación debe iluminarse en verde sin parpadear.
+
+. Si se producen errores, corrija los problemas.
+. Coloque el bisel frontal en el aparato si lo ha extraído.
+
+
+--
 .SG5700
 --
 .Antes de empezar
@@ -95,7 +112,7 @@ No vuelva a pulsar el botón de encendido durante el proceso de encendido.
 .Pasos
 . Conecte un cable de alimentación a cada una de las dos unidades de alimentación del aparato.
 . Conecte estos dos cables de alimentación a dos unidades de distribución de alimentación (PDU) diferentes en el armario o rack.
-. Si el botón de encendido de la parte frontal del aparato SG6100-CN no está iluminado en azul, pulse el botón para encender el aparato.
+. Si el botón de encendido de la parte frontal del aparato no está iluminado en azul actualmente, pulse el botón para encender el aparato.
 +
 No vuelva a pulsar el botón de encendido durante el proceso de encendido.
 

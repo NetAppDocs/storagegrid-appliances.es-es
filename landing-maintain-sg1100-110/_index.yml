@@ -1,0 +1,33 @@
+---
+indexpage:
+  tiles:
+  - title: Procedimientos realizados con frecuencia
+    links:
+    - title: Enciende o apaga el LED de ubicación
+      url: "../sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html"
+    - title: Localice el dispositivo en el centro de datos
+      url: "../sg110-1100/locating-sg110-and-sg1100-in-data-center.html"
+    - title: Apague y encienda el aparato
+      url: "../sg110-1100/power-sg110-and-sg1100-off-on.html"
+    - title: Cambiar la configuración del enlace
+      url: "../sg110-1100/changing-link-configuration-of-sg110-and-sg1100-appliance.html"
+  - title: Procedimientos de bastidor
+    links:
+    - title: Reemplace el dispositivo SG110 o SG1100
+      url: "../sg110-1100/replacing-sg110-and-sg1100-appliance.html"
+    - title: Reubique SG110 o SG1100 en un rack
+      url: "../sg110-1100/reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html"
+  - title: Procedimientos de hardware
+    links:
+    - title: Vuelva a colocar la cubierta
+      url: "../sg110-1100/reinstalling-sg110-and-sg1100-cover.html"
+    - title: Sustituya el suministro de alimentación
+      url: "../sg110-1100/replacing-one-or-more-power-supplies-in-sg110-and-sg1100-appliance.html"
+    - title: Sustituya el ventilador
+      url: "../sg110-1100/replacing-fan-in-sg110-and-sg1100.html"
+    - title: Sustituya la unidad
+      url: "../sg110-1100/replacing-drive-in-sg110-and-sg1100.html"
+    - title: Sustituya la NIC
+      url: "../sg110-1100/replace-nic-in-sg110-and-sg1100.html"
+    - title: Reemplace la batería CMOS
+      url: "../sg110-1100/replace-cmos-in-sg110-and-sg1100.html"

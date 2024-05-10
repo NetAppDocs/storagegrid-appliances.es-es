@@ -44,11 +44,14 @@ Los dispositivos de reemplazo deben ser del mismo tipo que el nodo origen que su
 
 * Un dispositivo de servicios de sustitución puede ser diferente al nodo de administración o al nodo de puerta de enlace que va a sustituir.
 +
-** Puede clonar un dispositivo de nodo de origen SG100 a un dispositivo de destino de servicios SG1000 para que tenga mayor capacidad para el nodo de administración o el nodo de puerta de enlace.
-** Puede clonar un dispositivo de nodo fuente SG1000 en un dispositivo objetivo de servicios SG100 para volver a instalar el SG1000 para una aplicación más exigente.
+** Puede clonar un dispositivo de nodo de origen SG100 en un dispositivo de destino de servicios SG110, SG1000 o SG1100. La clonación del SG100 a un dispositivo de destino de servicios SG1000 o SG1100 proporciona al nodo de administración o al nodo de pasarela una mayor capacidad.
+** Puede clonar un dispositivo de nodo de origen SG110 en un destino de dispositivo de servicios SG1100 para dar mayor capacidad al nodo de administración o al nodo de pasarela.
+** Puede clonar un dispositivo de nodo de origen SG1000 en un dispositivo de destino de servicios SG100, SG110 o SG1100. Clonar SG1000 a un dispositivo objetivo de servicios SG100 o SG110 le permite volver a poner en marcha SG1000 para una aplicación más exigente.
+** Puede clonar un dispositivo de nodo de origen SG1100 en un dispositivo de destino de servicios SG110 para volver a poner en marcha SG1100 para una aplicación más exigente.
 +
-Por ejemplo, si un dispositivo de nodo de origen SG1000 se está utilizando como nodo de administración y desea utilizarlo como nodo de equilibrio de carga dedicado.
+Por ejemplo, si se usa un dispositivo de nodo de origen SG1100 o SG1000 como nodo de administración y se quiere usar como nodo de equilibrio de carga dedicado.
 
+** Reemplazar un dispositivo de nodo de origen SG1100 por un dispositivo de destino de servicios SG110 reduce la velocidad máxima de los puertos de red de 100 GbE a 25 GbE.
 ** La sustitución de un dispositivo de nodo de origen SG1000 por un dispositivo de destino de servicios SG100 reduce la velocidad máxima de los puertos de red de 100-GbE a 25-GbE.
 ** Los dispositivos de servicios tienen diferentes conectores de red. Puede que sea necesario cambiar el tipo de dispositivo reemplazando los cables o los módulos SFP.
 

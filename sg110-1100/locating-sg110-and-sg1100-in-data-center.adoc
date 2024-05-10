@@ -1,0 +1,43 @@
+---
+permalink: sg110-1100/locating-sg110-and-sg1100-in-data-center.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, appliance, locate, find, locating, finding, identify, blue led, blue light 
+summary: Busque el dispositivo para que pueda realizar tareas de mantenimiento o actualizaciones del hardware. 
+---
+= Localice SG110 o SG1100 en el centro de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Busque el dispositivo para que pueda realizar tareas de mantenimiento o actualizaciones del hardware.
+
+.Antes de empezar
+* Ha determinado qué aparato requiere mantenimiento.
+* Para ayudarle a localizar el dispositivo en su centro de datos, link:turning-sg110-and-sg1100-identify-led-on-and-off.html["Encienda el LED de identificación azul"].
+
+
+.Pasos
+. Encuentre el dispositivo en el centro de datos.
++
+** Busque un LED de identificación azul encendido en la parte frontal o trasera del aparato.
++
+El LED de identificación frontal está detrás del panel frontal y puede resultar difícil ver si se ha instalado el panel frontal.
+
++
+image::../media/sgf6112_front_panel_service_led_on.png[LED de identificación frontal: Encendido]
+
++
+El LED de identificación posterior se encuentra en el centro del aparato, debajo de la ranura Micro-SD.
+
+** Compruebe que las etiquetas de la parte frontal del aparato tengan el mismo número de pieza para confirmar que ha encontrado el aparato correcto.
+
+
+. Retire el marco frontal, si hay uno instalado, para acceder a los controles e indicadores del panel frontal.
+
+
+.Después de terminar
+link:turning-sg110-and-sg1100-identify-led-on-and-off.html["Apague el LED de identificación azul"] si lo ha utilizado para localizar el aparato.
+ ** Pulse el interruptor del LED Identify en el panel frontal del aparato.
+ ** Utilice la interfaz BMC del dispositivo.

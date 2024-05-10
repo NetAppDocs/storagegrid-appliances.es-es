@@ -81,4 +81,4 @@ NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pis
 
 
 .Después de terminar
-link:powering-on-sgf6112-and-verifying-operation.html["Reinicie el aparato"].
+link:power-sgf6112-off-on.html#power-on-sgf6112-and-verify-operation["Reinicie el aparato"].

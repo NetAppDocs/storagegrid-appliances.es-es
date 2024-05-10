@@ -533,7 +533,7 @@ Es posible que el instalador de dispositivos StorageGRID no esté disponible si 
 
 == Problemas de conexión
 
-Si no puede conectarse a la aplicación de servicios, es posible que haya un problema de red o que la instalación de hardware no se haya completado correctamente.
+Si no puede conectarse al dispositivo, es posible que haya un problema de red o que la instalación de hardware no se haya completado correctamente.
 
 .Pasos
 . Intente hacer ping al dispositivo con la dirección IP del dispositivo : +

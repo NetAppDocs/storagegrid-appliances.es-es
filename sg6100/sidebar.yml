@@ -6,8 +6,8 @@ entries:
 - title: Descripción general
   pdf-filename: SG6100 mantenimiento de hardware
   url: "/sg6100/index.html"
-- title: Procedimientos de mantenimiento de la configuración
-  pdf-filename: Procedimientos de mantenimiento de la configuración - SG6100
+- title: Procedimientos de configuración de mantenimiento
+  pdf-filename: Procedimientos de configuración de mantenimiento - SG6100
   entries:
   - title: Use la pestaña Gestionar unidades
     url: "/sg6100/manage-drives-tab.html"

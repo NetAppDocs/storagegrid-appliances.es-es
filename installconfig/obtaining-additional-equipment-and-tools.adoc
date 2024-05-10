@@ -95,6 +95,44 @@ Cables Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
 
 
 --
+.SG110 y SG1100
+--
+Necesita el siguiente equipo adicional para instalar y configurar el hardware de SG110 y SG1100.
+
+Cables ópticos y transmisores::
++
+--
+* Cables, de 1 a 4 de cualquiera de los dos:
++
+** Twinax/Cobre
+** Fibra óptica
+
+
+* Transceptores/adaptadores, de 1 a 4 de cada uno, según la velocidad del enlace (no se admiten velocidades mixtas):
++
+** SG110 GBE:
++
+*** 10 GbE SFP+
+*** 25 GbE SFP28
+
+
+** SG1100 GBE:
++
+*** Adaptador 10 GbE QSFP-a-SFP (QSA) y SFP+
+*** Adaptador 25 GbE QSFP a SFP (QSA) y SFP28
+*** QSFP+ de 40 GbE
+*** 100 GbE QFSP28
+
+
+
+
+
+
+--
+Cables Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+
+
+--
 .SG5700
 --
 Necesita el siguiente equipo adicional para instalar y configurar el hardware de SG5700.

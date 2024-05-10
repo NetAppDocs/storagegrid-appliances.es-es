@@ -16,6 +16,7 @@ Antes de instalar el dispositivo StorageGRID, debe comprender qué redes se pued
 Consulte las instrucciones de su aparato para determinar la información que necesita:
 
 * link:gathering-installation-information-sg100-and-sg1000.html["SG100 y SG1000"]
+* link:gathering-installation-information-sg110-and-sg1100.html["SG110 y SG1100"]
 * link:gathering-installation-information-sg5700.html["SG5700"]
 * link:gathering-installation-information-sg6000.html["SG6000"]
 * link:gathering-installation-information-sg6100.html["SG6100"]
@@ -29,7 +30,7 @@ Cuando implementa un dispositivo StorageGRID como nodo en un sistema StorageGRID
 * *Red de administración para StorageGRID*: La Red de administración es una red cerrada que se utiliza para la administración y el mantenimiento del sistema. La red de administración suele ser una red privada y no es necesario que se pueda enrutar entre sitios. La red administrativa es opcional.
 * *Red de clientes para StorageGRID:* la red de clientes es una red abierta que se utiliza para proporcionar acceso a las aplicaciones cliente, incluidos S3 y Swift. La red de cliente proporciona acceso de protocolo de cliente a la cuadrícula, de modo que la red de red de red pueda aislarse y protegerse. Puede configurar la red de cliente de modo que se pueda acceder al dispositivo a través de esta red utilizando sólo los puertos que elija abrir. La red cliente es opcional.
 * *Red de gestión para SANtricity* (opcional para dispositivos de almacenamiento, no necesario para el SG6100): Esta red proporciona acceso al Administrador del sistema de SANtricity, lo que le permite supervisar y gestionar los componentes de hardware en el dispositivo y el estante del controlador de almacenamiento. Esta red de gestión puede ser la misma que la Red de administración para StorageGRID, o bien puede ser una red de gestión independiente.
-* *Red de gestión BMC* (opcional para SG100, SG1000, SG6000 y SG6100): Esta red proporciona acceso al controlador de administración de placa base en los dispositivos SG100, SG1000, SG6000 y SG6100, lo que le permite supervisar y administrar los componentes de hardware en el dispositivo. Esta red de gestión puede ser la misma que la Red de administración para StorageGRID, o bien puede ser una red de gestión independiente.
+* * Red de gestión BMC* (opcional para SG100, SG110, SG1000, SG1100, SG6000, y SG6100): esta red proporciona acceso al controlador de administración de placa base en los dispositivos SG100, SG1000, SG6000 y SG6100, lo que le permite supervisar y gestionar los componentes de hardware del dispositivo. Esta red de gestión puede ser la misma que la Red de administración para StorageGRID, o bien puede ser una red de gestión independiente.
 +
 Si la red de administración opcional de BMC no está conectada, será más difícil realizar algunos procedimientos de soporte y mantenimiento. Puede dejar la red de gestión de BMC sin conexión excepto cuando sea necesario para fines de soporte.
 

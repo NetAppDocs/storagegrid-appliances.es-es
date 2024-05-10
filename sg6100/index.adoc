@@ -15,7 +15,7 @@ Es posible que necesite realizar procedimientos de mantenimiento en el aparato. 
 
 En los procedimientos descritos en esta sección se asume que el dispositivo ya se ha puesto en marcha como nodo de almacenamiento en un sistema StorageGRID.
 
-*Los procedimientos de mantenimiento de la configuración* se realizan mediante el Instalador de dispositivos, Grid Manager o la interfaz de BMC. Estos procedimientos incluyen:
+*Los procedimientos de configuración de mantenimiento* se realizan mediante el Instalador de dispositivos, Grid Manager o la interfaz de BMC. Estos procedimientos incluyen:
 
 * link:turning-sgf6112-identify-led-on-and-off.html["Encienda y apague el LED de identificación del aparato"]
 * link:locating-sgf6112-in-data-center.html["Localice el dispositivo en el centro de datos"]

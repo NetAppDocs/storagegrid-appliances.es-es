@@ -39,7 +39,7 @@ Esta figura muestra la parte frontal del SG100 y el SG1000 con el bisel retirado
 
 image::../media/sg1000_front_with_ssds.png[Frontal con SSD SG100 y SG1000]
 
-Las dos unidades de estado sólido (SSD), indicadas con el esquema naranja, se pueden utilizar para almacenar el sistema operativo StorageGRID y se duplican con RAID 1 para la redundancia. Cuando el dispositivo de servicios SG100 o SG1000 se configura como un nodo de administración, estas unidades se utilizan para almacenar registros de auditoría, métricas y tablas de bases de datos.
+Las dos unidades de estado sólido (SSD), indicadas con el esquema naranja, se utilizan para almacenar el sistema operativo StorageGRID y se duplican con RAID 1 para la redundancia. Cuando el dispositivo de servicios SG100 o SG1000 está configurado como nodo de administración, estas unidades se pueden utilizar para almacenar registros de auditoría, métricas y tablas de bases de datos.
 
 Las ranuras de unidades restantes están vacías.
 

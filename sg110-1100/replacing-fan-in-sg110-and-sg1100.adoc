@@ -1,0 +1,138 @@
+---
+permalink: sg110-1100/replacing-fan-in-sg110-and-sg1100.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, admin appliance, replacing, replace, fan, remove, removing, removal, install, installing 
+summary: Los dispositivos SG110 o SG1100 tienen ocho ventiladores de refrigeración. Si uno de los ventiladores falla, debe reemplazarla por Lo antes posible. para que el dispositivo tenga la refrigeración adecuada. 
+---
+= Reemplace el ventilador en un SG110 o SG1100
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los dispositivos SG110 o SG1100 tienen ocho ventiladores de refrigeración. Si uno de los ventiladores falla, debe reemplazarla por Lo antes posible. para que el dispositivo tenga la refrigeración adecuada.
+
+.Antes de empezar
+* Tiene el ventilador de sustitución correcto.
+* Ya tienes link:verify-component-to-replace.html["determine la ubicación del ventilador que se va a sustituir"].
+* Ya tienes link:locating-sg110-and-sg1100-in-data-center.html["El aparato SG110 o SG1100 se encuentra físicamente"] donde va a sustituir el ventilador en el centro de datos.
++
+
+NOTE: A. link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["apagado controlado del aparato"] es necesario antes de retirar el dispositivo del rack.
+
+* Ha desconectado todos los cables y. link:reinstalling-sg110-and-sg1100-cover.html["ha quitado la cubierta del aparato"].
+* Ha confirmado que los otros ventiladores están instalados y en ejecución.
+
+
+.Acerca de esta tarea
+Para evitar las interrupciones del servicio, confirme que el resto de los nodos de almacenamiento están conectados al grid antes de comenzar a sustituir el ventilador o sustituir el ventilador durante la ventana de mantenimiento programada si se aceptan períodos de interrupción del servicio. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
+
+
+CAUTION: Si alguna vez ha utilizado una regla de ILM que crea solo una copia de un objeto, debe sustituir el ventilador durante una ventana de mantenimiento programada. De lo contrario, es posible que pierda temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
+
+No se podrá acceder al nodo del dispositivo mientras sustituye el ventilador.
+
+La fotografía muestra un ventilador del aparato. Se resalta el conector eléctrico. Se puede acceder a los ventiladores de refrigeración después de retirar la cubierta superior del aparato.
+
+
+NOTE: Cada una de las dos unidades de suministro de alimentación también contiene un ventilador. Los ventiladores de suministro de alimentación no se incluyen en este procedimiento.
+
+image::../media/sgf6112_fan_fru.png[FRU de ventilador]
+
+.Pasos
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Localice el ventilador que debe reemplazar.
++
+Los ocho ventiladores se encuentran en las siguientes posiciones del chasis (se muestra la mitad frontal del dispositivo StorageGRID con la cubierta superior quitada):
+
++
+image::../media/SGF6112-fan-locations.png[Ubicaciones de los ventiladores]
+
+
+
+|===
+
+
+|  | Unidad de ventilador 
+
+
+ a| 
+1
+ a| 
+Ventilador_SYS0
+
+
+
+ a| 
+2
+ a| 
+Ventilador_SYS1
+
+
+
+ a| 
+3
+ a| 
+Ventilador_SYS2
+
+
+
+ a| 
+4
+ a| 
+Ventilador_SYS3
+
+
+
+ a| 
+5
+ a| 
+Ventilador_SYS4
+
+
+
+ a| 
+6
+ a| 
+Ventilador_SYS5
+
+
+
+ a| 
+7
+ a| 
+Ventilador_SYS6
+
+
+
+ a| 
+8
+ a| 
+Ventilador_SYS7
+
+|===
+. Utilice las pestañas azules del ventilador para extraer el ventilador que ha fallado del chasis.
++
+image::../media/fan_removal.png[Extracción del ventilador]
+
+. Deslice el ventilador de repuesto en la ranura abierta del chasis.
++
+Asegúrese de alinear el conector del ventilador con la toma de la placa de circuitos.
+
+. Presione firmemente el conector del ventilador en la placa de circuitos (toma resaltada).
++
+image::../media/sgf6112_fan_socket_check.png[Revisión del conector del ventilador]
+
+
+
+.Después de terminar
+. link:reinstalling-sg110-and-sg1100-cover.html["Vuelva a colocar la cubierta superior en el aparato"]y presione el pestillo hacia abajo para asegurar la cubierta en su lugar.
+. link:power-sg110-and-sg1100-off-on.html["Encienda el aparato"] Y controle los LED del aparato y los códigos de arranque.
++
+Utilice la interfaz de BMC para supervisar el estado de inicio.
+
+. Confirme que el nodo del dispositivo aparece en Grid Manager y que no aparece ninguna alerta.
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.

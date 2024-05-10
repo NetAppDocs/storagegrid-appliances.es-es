@@ -25,6 +25,8 @@ sidebar:
       entries:
       - title: Servicios de aplicaciones SG100 y SG1000
         url: "/installconfig/hardware-description-sg100-and-1000.html"
+      - title: Dispositivos de servicios SG110 y SG1100
+        url: "/installconfig/hardware-description-sg110-and-1100.html"
       - title: Dispositivos de almacenamiento SG5700
         url: "/installconfig/hardware-description-sg5700.html"
       - title: Dispositivos de almacenamiento SG6000
@@ -46,6 +48,7 @@ sidebar:
       - title: Clone el nodo del dispositivo
         url: "/commonhardware/appliance-node-cloning-procedure.html"
     - section: sg100-1000
+    - section: sg110-1100
     - section: sg5600
     - section: sg5700
     - section: sg6000

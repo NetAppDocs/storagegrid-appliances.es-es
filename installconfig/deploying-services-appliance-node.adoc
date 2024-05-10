@@ -1,7 +1,7 @@
 ---
 permalink: installconfig/deploying-services-appliance-node.html 
 sidebar: sidebar 
-keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, deploy node, deploying node, node, deploy, deploying, primary, primary admin node, non-primary admin node, non-primary 
+keywords: storagegrid, sg110, sg1100, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, deploy node, deploying node, node, deploy, deploying, primary, primary admin node, non-primary admin node, non-primary 
 summary: 'Puede implementar un dispositivo de servicios como un nodo de administrador principal, un nodo de administrador que no sea primario o un nodo de puerta de enlace. Todos los dispositivos de servicios pueden funcionar como nodos de puerta de enlace y nodos de administración \(primary o non-primary\) al mismo tiempo.' 
 ---
 = Implemente el nodo del dispositivo de servicios
@@ -105,7 +105,7 @@ Paso a través de las tareas de instalación del nodo de puerta de enlace del di
 
 
 
-NOTE: No ponga en marcha dispositivos de servicio SG100 y SG1000 en el mismo sitio. El rendimiento puede ser impredecible.
+IMPORTANT: Mezclar dispositivos de servicios con diferentes niveles de rendimiento en el mismo sitio, como SG100 o SG110 con SG1000 o SG1100, puede provocar resultados impredecibles e incoherentes cuando se usan varios nodos de un grupo de alta disponibilidad o al equilibrar la carga del cliente en varios dispositivos de servicios.
 
 
 NOTE: Si necesita poner en marcha varios nodos de dispositivos a la vez, puede automatizar el proceso de instalación. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].

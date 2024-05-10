@@ -43,7 +43,9 @@ Para SG6000 y SG5700, configura SANtricity System Manager. El software SANtricit
 Los siguientes dispositivos tienen una interfaz BMC que se debe configurar:
 
 * SG100
+* SG110
 * SG1000
+* SG1100
 * SG6000
 * SG6100
 
@@ -61,7 +63,7 @@ Los siguientes dispositivos tienen una interfaz BMC que se debe configurar:
 
 * Dispositivos de servicios
 +
-** Acceda a la interfaz de BMC para SG100 o SG1000
+** Acceda a la interfaz de BMC para SG100, SG110, SG1000 y SG1100
 
 
 

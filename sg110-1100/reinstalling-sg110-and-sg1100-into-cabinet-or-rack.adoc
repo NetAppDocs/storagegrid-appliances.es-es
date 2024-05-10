@@ -1,0 +1,86 @@
+---
+permalink: sg110-1100/reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, admin node, admin appliance, install, installing, installation, cabinet, rack 
+summary: Retire el SG110 o SG1100 de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente. A continuación, vuelva a instalar el dispositivo en un armario o rack cuando haya finalizado el mantenimiento del hardware. 
+---
+= Reubique SG110 y SG1100 en el armario o rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retire el SG110 o SG1100 de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente. A continuación, vuelva a instalar el dispositivo en un armario o rack cuando haya finalizado el mantenimiento del hardware.
+
+
+
+== Quite SG110 o SG1100 del armario o rack
+
+.Antes de empezar
+* Tiene etiquetas para identificar cada cable que está conectado al SG110 o SG1100.
+* Ya tienes link:locating-sg110-and-sg1100-in-data-center.html["Físicamente ubicado el SG110 o el SG1100"] dónde se realiza el mantenimiento en el centro de datos.
+* Ya tienes link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["Apague el SG110 o el SG1100"].
++
+
+CAUTION: No apague el aparato con el interruptor de alimentación.
+
+
+
+.Pasos
+. Etiquete y desconecte los cables de alimentación del aparato.
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Etiquete y desconecte los cables de datos del dispositivo y los transceptores SFP+ o SFP28.
++
+
+IMPORTANT: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+. Afloje los dos tornillos cautivos del panel frontal del aparato.
++
+image::../media/sg6060_rack_retaining_screws.png[SG110 o SG1100 tornillos de retención del bastidor]
+
+. Deslice el SG110 o el SG1100 hacia delante fuera del rack hasta que los rieles de montaje estén completamente extendidos y oiga un clic en los pestillos de ambos lados.
++
+Se puede acceder a la cubierta superior del aparato.
+
+. Opcional: Si está retirando completamente el dispositivo del armario o rack, siga las instrucciones del kit de guías para quitar el aparato de los rieles.
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+
+
+
+== Vuelva a instalar SG110 o SG1100 en el armario o rack
+
+.Antes de empezar
+Ha vuelto a instalar la cubierta del aparato.
+
+link:reinstalling-sg110-and-sg1100-cover.html["Vuelva a instalar la cubierta SG110 o SG1100"]
+
+.Pasos
+. Presione el carril azul para soltar ambos rieles del bastidor al mismo tiempo y deslice el SG110 o el SG1100 en el bastidor hasta que quede completamente asentado.
++
+Cuando ya no pueda mover la controladora, tire de los pestillos azules de ambos lados del chasis para deslizar la controladora completamente hacia dentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG110 o SG1100 deslizándose sobre rieles]
+
++
+
+NOTE: No conecte el panel frontal hasta que haya encendido la controladora.
+
+. Apriete los tornillos cautivos del panel frontal del controlador para fijar el controlador en el rack.
++
+image::../media/sg6060_rack_retaining_screws.png[SG110 o SG1100 tornillos de retención del bastidor]
+
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. link:../installconfig/cabling-appliance.html["Vuelva a conectar los cables de datos de la controladora y todos los transceptores SFP+ o SFP28"].
++
+
+IMPORTANT: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Vuelva a conectar los cables de alimentación de la controladora"].
+
+
+.Después de terminar
+link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation.html["Reinicie el aparato"].

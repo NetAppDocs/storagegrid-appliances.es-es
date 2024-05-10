@@ -34,9 +34,19 @@ Para acceder inicialmente al instalador de dispositivos StorageGRID, puede utili
 image::../media/sg100_admin_network_port.png[Puerto de red de administración en el SG100]
 
 --
+.SG110
+--
+image::../media/sg6100_admin_network_port.png[Puerto de red de administración en SG110]
+
+--
 .SG1000
 --
 image::../media/sg1000_admin_network_port.png[Puerto de red de administración en SG1000]
+
+--
+.SG1100
+--
+image::../media/sg1100_admin_network_port.png[Puerto de red de administración en SG1100]
 
 --
 .E5700SG
@@ -105,11 +115,25 @@ Conecte un ordenador portátil de servicio directamente al puerto RJ-45 más der
 image::../media/sg100_link_local_port.png[Conexión local de enlace SG100]
 
 --
+.SG110
+--
+Conecte un ordenador portátil de servicio directamente al puerto RJ-45 situado más a la derecha del aparato mediante un cable Ethernet.
+
+image::../media/sg6100_link_local_port.png[SG110 Conexión Link-Local]
+
+--
 .SG1000
 --
 Conecte un ordenador portátil de servicio directamente al puerto RJ-45 más derecho del dispositivo de servicios mediante un cable Ethernet.
 
 image::../media/sg1000_link_local_port.png[Conexión de enlace local SG1000]
+
+--
+.SG1100
+--
+Conecte un ordenador portátil de servicio directamente al puerto RJ-45 situado más a la derecha del aparato mediante un cable Ethernet.
+
+image::../media/sg1100_link_local_port.png[SG1100 Conexión Link-Local]
 
 --
 .E5700SG

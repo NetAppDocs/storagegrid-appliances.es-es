@@ -14,7 +14,9 @@ summary: 'Puede acceder a la interfaz de BMC mediante la dirección IP estática
 Puede acceder a la interfaz de BMC mediante la dirección IP estática o DHCP para el puerto de gestión BMC en los siguientes modelos de dispositivos:
 
 * SG100
+* SG110
 * SG1000
+* SG1100
 * SG6000
 * SG6100
 
@@ -30,9 +32,19 @@ Puede acceder a la interfaz de BMC mediante la dirección IP estática o DHCP pa
 image::../media/sg100_bmc_management_port.png[SG100 puerto de gestión BMC]
 
 --
+.SG110
+--
+image::../media/sgf6112_cn_bmc_management_port.png[Puerto de gestión SG110 de BMC]
+
+--
 .SG1000
 --
 image::../media/sg1000_bmc_management_port.png[Puerto de administración de BMC SG1000]
+
+--
+.SG1100
+--
+image::../media/sg1100_bmc_management_port.png[Puerto de gestión SG1100 de BMC]
 
 --
 .SG6000
