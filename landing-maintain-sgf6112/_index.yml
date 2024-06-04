@@ -37,7 +37,7 @@ indexpage:
       url: "../sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html"
     - title: Reemplazar el suministro de alimentación de la bandeja de controladoras
         de almacenamiento o de la bandeja de expansión (SG6160)
-      url: "/sg6100/replace-6100-cn-power-canister.html"
+      url: "../sg6100/replace-6100-cn-power-canister.html"
     - title: Reemplace el ventilador en SGF6112 o SG6100-CN (SG6160)
       url: "../sg6100/replacing-fan-in-sgf6112.html"
     - title: Sustituir el ventilador de la bandeja de controladoras de almacenamiento
@@ -51,14 +51,15 @@ indexpage:
         bandeja de expansión (SG6160)
       url: "../sg6100/replace-6160-drives-60.html"
     - title: Sustituir NIC interna (SGF6112 y SG6160)
-      url: "/sg6100/replace-nic-in-sgf6112.html"
+      url: "../sg6100/replace-nic-in-sgf6112.html"
     - title: Sustituir NIC externa (SG6160)
-      url: "/sg6100/replace-ocp-nic-in-sg6100-cn.html"
+      url: "../sg6100/replace-ocp-nic-in-sg6100-cn.html"
     - title: Sustituir DIMM (SG6160)
-      url: "/sg6100/replace-dimms-e4000.html"
+      url: "../sg6100/replace-dimms-e4000.html"
     - title: Sustituir las baterías (SG6160)
-      url: "/sg6100/replace-battery-e4000.html"
+      url: "../sg6100/replace-battery-e4000.html"
     - title: Vuelva a colocar la cubierta
+      url: "../sg6100/reinstalling-sgf6112-cover.html"
     - title: Reemplace la batería CMOS
       url: "../sg6100/replace-cmos-in-sgf6112.html"
     - title: Añada una bandeja de expansión a SG6160 puesto en marcha
