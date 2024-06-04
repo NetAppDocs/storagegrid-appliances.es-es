@@ -670,17 +670,8 @@ Se produjo un error en la instalación o la comunicación con la controladora E2
 --
 .SG5800
 --
-Los controladores del aparato incluyen indicadores que le ayudan a determinar el estado del controlador del aparato:
+Los controladores del aparato incluyen indicadores que le ayudan a determinar el estado del controlador del aparato. Use esta información como ayuda link:troubleshooting-hardware-installation.html["Solucionar problemas de instalación de hardware de SG5800"].
 
-* <<status_indicators_SG5800_controller,Indicadores de estado en el controlador SG5800>>
-* <<general_boot_codes_sg5800,códigos generales de arranque>>
-* <<boot_codes_SG5800_controller,Códigos de arranque del controlador SG5800>>
-* <<error_codes_SG5800_controller,Códigos de error del controlador SG5800>>
-
-
-Use esta información como ayuda link:troubleshooting-hardware-installation.html["Solucionar problemas de instalación de hardware de SG5800"].
-
-[[status_indicators_SG5800_controller]]
 Indicadores de estado en el controlador SG5800::
 +
 --

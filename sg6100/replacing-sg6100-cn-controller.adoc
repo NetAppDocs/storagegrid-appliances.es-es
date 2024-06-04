@@ -18,7 +18,7 @@ Es posible que deba reemplazar la controladora SG6100-CN si no funciona de forma
 * Tiene etiquetas para identificar cada cable conectado a la controladora.
 * Localizó físicamente la controladora para reemplazar en el centro de datos.
 +
-link:locating-controller-in-data-center.html["Ubique la controladora en el centro de datos"]
+link:locating-sgf6112-in-data-center.html["Ubique la controladora en el centro de datos"]
 
 
 
@@ -45,7 +45,7 @@ Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para
 .. Introduzca: `*run-host-command ipmitool lan print*` Para mostrar las configuraciones actuales de BMC del dispositivo.
 
 
-. Si el controlador SG6100-CN funciona lo suficiente como para permitir un apagado controlado, link:power-sg6100-cn-controller-off-on.html#shut-down-sg6100-cn-controller["Apague el controlador SG6100-CN"].
+. Si el controlador SG6100-CN funciona lo suficiente como para permitir un apagado controlado, link:power-sgf6112-off-on.html["Apague el controlador SG6100-CN"].
 . Si alguna de las interfaces de red de este dispositivo StorageGRID está configurada para DHCP, es posible que deba actualizar las asignaciones de permisos DHCP permanentes en los servidores DHCP para hacer referencia a las direcciones MAC del dispositivo de reemplazo. La actualización garantiza que el dispositivo tenga asignadas las direcciones IP esperadas.
 . Retire y sustituya el controlador SG6100-CN:
 +

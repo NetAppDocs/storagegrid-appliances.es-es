@@ -30,16 +30,16 @@ De 120 a 240 voltios de CA
 
 
  a| 
-SG5712
- a| 
-120 a 240 voltios CA
-
-
-
- a| 
 SG110 y SG1100
  a| 
 100 a 240 voltios CA
+
+
+
+ a| 
+SG5712
+ a| 
+120 a 240 voltios CA
 
 
 

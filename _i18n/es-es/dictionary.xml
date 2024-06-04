@@ -5061,14 +5061,7 @@ Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta
   <block id="e6c11d6c727d6af4a15aadeb9c8d765c" category="list-text">Conecte el panel frontal a la controladora SG6100-CN si se ha extraído.</block>
   <block id="784b225f130f7d41e24cfeb95e8faec4" category="doc">Configuración del administrador del sistema de SANtricity (SG6160, SG6000, SG5700 y SG5800)</block>
   <block id="e9b0f91353e7e92b0bdad4d600bf8aad" category="inline-xref">Indicadores de estado en el controlador SG5800</block>
-  <block id="33142c71ffb7a820e39e2d8b9b87c90d" category="list-text"><block ref="562ba6ab1f9a30f1dbd536755e8030f3" category="inline-xref-macro-rx"></block></block>
-  <block id="6e2ca3456886b60923634ed7eb9c8d7f" category="list-text"><block ref="4602dd8dedea945665f66e0efb09332c" category="inline-xref-macro-rx"></block></block>
-  <block id="f536acc32b97ad90a5740f9c6acd9249" category="inline-xref">Códigos de arranque del controlador SG5800</block>
-  <block id="5576c47c21553b6c80a9811f4546218f" category="list-text"><block ref="f285587c275058bc7d3d747c12066f52" category="inline-xref-macro-rx"></block></block>
-  <block id="540f46aeae603c2f4426ce72f569d476" category="inline-xref">Códigos de error del controlador SG5800</block>
-  <block id="4657bcb798d90e371448f17714c8c9f9" category="list-text"><block ref="3e9e4f9184270725588680504bdaec1d" category="inline-xref-macro-rx"></block></block>
   <block id="ee0d7ce7f3f04a927e4972f514fd99c9" category="inline-link-macro">Solucionar problemas de instalación de hardware de SG5800</block>
-  <block id="274d64f0b9bfee260adbb6408672a4b0" category="paragraph">Use esta información como ayuda <block ref="e0e94668a35b0e62f1c3c83bc6a3960d" category="inline-link-macro-rx"></block>.</block>
   <block id="6e11a1131d9974f2fd0c9ec0f8b70da1" category="paragraph">Una vez iniciado el instalador de dispositivos StorageGRID, debe revisar periódicamente los indicadores de estado del controlador SG5800.</block>
   <block id="043b3b7e7d1cab87dcb9bbe4e09747f6" category="paragraph">En la siguiente figura, se muestran los indicadores de estado del controlador SG5800.</block>
   <block id="ee19c832192b29abe3714f9cd076b86b" category="paragraph">En la siguiente figura se muestran los indicadores y los botones de los aparatos SG6100.</block>
@@ -5322,19 +5315,7 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="002c473abb16ba8030a796dbd755e33d" category="list-text">Use el asa del compartimento de ventilador para sacar el compartimento de ventilador del dispositivo.</block>
   <block id="64c29ebf8cd32413c80f6ffda96405ee" category="list-text">Deslice el compartimento de ventilador de repuesto por completo hacia el aparato y mueva el asa del compartimento del ventilador hasta que encaje con la pestaña naranja.</block>
   <block id="37a36b8523adcf2cc0873f9e2f41ca9c" category="doc">Sustituya la cubierta SGF6112 o SG6100-CN</block>
-  <block id="854c7629d35948a4df812750dec127ee" category="summary">Quite la controladora SG6100-CN de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente; a continuación, vuelva a instalar la controladora en un armario o rack cuando haya finalizado el mantenimiento del hardware.</block>
-  <block id="5fb243f0f549e18d4924ebf22621bb48" category="doc">Reubique la controladora SG6100-CN en el armario o el rack</block>
-  <block id="abc84ec80690dbc94a66ecc51074d3c0" category="section-title">Quite la controladora SG6100-CN del armario o el rack</block>
-  <block id="881b8f310c4263d181dbaedf240d3d2d" category="paragraph">Retire la controladora SG6100-CN de un armario o rack para acceder a la cubierta superior o para mover la controladora a una ubicación diferente.</block>
-  <block id="907fea185972d8e2b273ebea2808d7f1" category="list-text">Tiene etiquetas para identificar cada cable conectado a la controladora SG6100-CN.</block>
-  <block id="fda31ec860925354771998211c7831af" category="list-text">Había localizado físicamente la controladora SG6100-CN donde realizaba tareas de mantenimiento en el centro de datos.</block>
   <block id="fbc4a37098bcf763b9f98fd0a2884283" category="inline-link-macro">Apague el controlador SG6100-CN</block>
-  <block id="5f63238f202a5cd936c6942641733c6e" category="list-text">Ya tienes <block ref="d00266d0f93b386e66854bd4e0adc388" category="inline-link-macro-rx"></block>.</block>
-  <block id="7e50f59ca73ccb860aa814cfd32bc021" category="list-text">Deslice el controlador SG6100-CN hacia delante fuera del bastidor hasta que los rieles de montaje estén completamente extendidos y oiga un clic en los pestillos de ambos lados.</block>
-  <block id="76d74a3c6e61e29e13b8b398f522989d" category="section-title">Vuelva a instalar el controlador SG6100-CN en el armario o rack</block>
-  <block id="27eee63b8f274f92b6fd34ad72eda57f" category="inline-link-macro">Vuelva a instalar la cubierta del controlador SG6100-CN</block>
-  <block id="8f7788c169aa50f1f1d939333d3f4bcc" category="paragraph"><block ref="8f7788c169aa50f1f1d939333d3f4bcc" category="inline-link-macro-rx"></block></block>
-  <block id="e555012dca3572d0bab17db35a4008d4" category="paragraph"><block ref="e555012dca3572d0bab17db35a4008d4" category="inline-link-macro-rx"></block></block>
   <block id="4cc27b1800a32240f555e0ec4afc5cde" category="summary">Sustituya una unidad de E4000 con una bandeja de 60 unidades.</block>
   <block id="125aeb33ae4459fc8222ee9ed2b717aa" category="doc">Sustituir unidad en la bandeja de controladoras de almacenamiento o la bandeja de expansión (SG6160)</block>
   <block id="5ee472a2b6b33fddd49024587c88b2f3" category="paragraph">Es posible sustituir una unidad en una bandeja de controladoras de almacenamiento SG6160 o una bandeja de expansión (DE460C).</block>
@@ -5466,7 +5447,6 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="75bae77bd5a1e5d5a3fa60c2123780ca" category="summary">Es posible que deba reemplazar la controladora SG6100-CN si no funciona de forma óptima o si falló.</block>
   <block id="34219e12808cfaa75a6d668403e35db8" category="doc">Sustituya el controlador SG6100-CN</block>
   <block id="001591654095885fb8e8bae93eba4b37" category="paragraph">No se podrá acceder al nodo de almacenamiento del dispositivo cuando sustituya la controladora SG6100-CN. Si el controlador SG6100-CN funciona lo suficiente, puede realizar un apagado controlado al inicio de este procedimiento.</block>
-  <block id="10f53149eec912e3988fa735d632dcc9" category="list-text">Si el controlador SG6100-CN funciona lo suficiente como para permitir un apagado controlado, <block ref="06019beeec02ceba6236461f5eafd019" category="inline-link-macro-rx"></block>.</block>
   <block id="c360904142c30f58300519e8c01b32d0" category="list-text">Si alguna de las interfaces de red de este dispositivo StorageGRID está configurada para DHCP, es posible que deba actualizar las asignaciones de permisos DHCP permanentes en los servidores DHCP para hacer referencia a las direcciones MAC del dispositivo de reemplazo. La actualización garantiza que el dispositivo tenga asignadas las direcciones IP esperadas.</block>
   <block id="bc15f2ba1d2a4b957f06af9c2cc3e6d9" category="list-text">Retire y sustituya el controlador SG6100-CN:</block>
   <block id="8145cbfa0e5fc59eb5093d29f4de5483" category="list-text">Etiquete y desconecte los cables.</block>
@@ -5524,4 +5504,6 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="0c5b49805cedde0be71bd8e1248caea5" category="sidebar">CONTROLADORA SG6100-CN (SG6160)</block>
   <block id="109cfb866393048721520c64b6a72dcd" category="sidebar">Controladora E4000 (SG6160)</block>
   <block id="1b137b50e38b53f7a19b8ae2f6114d7d" category="sidebar">Reubique en el rack</block>
+  <block id="d1fc100be07ba82ec7383450a44baff8" category="list-text">Si el controlador SG6100-CN funciona lo suficiente como para permitir un apagado controlado, <block ref="0a3cf65437375f485bddbc72eccdb305" category="inline-link-macro-rx"></block>.</block>
+  <block id="d0f113fd26d2007a359ab568d6af75eb" category="paragraph">Los controladores del aparato incluyen indicadores que le ayudan a determinar el estado del controlador del aparato. Use esta información como ayuda <block ref="e0e94668a35b0e62f1c3c83bc6a3960d" category="inline-link-macro-rx"></block>.</block>
 </blocks>
