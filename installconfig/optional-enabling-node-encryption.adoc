@@ -91,7 +91,14 @@ Puede ver el estado de cifrado de nodo, los detalles de KMS y los certificados e
 
 == Cifrado de unidades
 
-El cifrado de unidades se gestiona en hardware de unidad de autocifrado (SED) durante los procesos de escritura y lectura. El acceso a los datos de estas unidades está controlado por una clave de acceso definida por el usuario. El cifrado de unidades se usa para unidades de estado sólido (SSD) de conexión directa que se utilizan para el almacenamiento en caché en dispositivos StorageGRID.
+El cifrado de unidades se gestiona en hardware de unidad de autocifrado (SED) durante los procesos de escritura y lectura. El acceso a los datos de estas unidades está controlado por una clave de acceso definida por el usuario.
+
+El cifrado de la unidad se puede utilizar para cualquier SSD SED instalado en un SG100, SG1000, SG110, SG1100, SGF6112, o nodo de computación SG6100-CN.
+
+* Para los dispositivos de servicios, los SSD son los discos raíz de nodo.
+* En una controladora SG6100-CN, los SSD se usan para el almacenamiento en caché.
+* En un SGF6112, los SSD son los discos raíz del nodo y se usan para el almacenamiento principal de los datos de objetos.
+
 
 Los SED cifrados se bloquean automáticamente cuando se apaga el aparato o cuando se retira la unidad del aparato. Un SED cifrado permanece bloqueado después de que se restablezca la alimentación hasta que se introduzca la contraseña correcta. Para permitir el acceso a las unidades sin volver a introducir manualmente la clave de acceso, la clave de acceso se almacena en el dispositivo StorageGRID para desbloquear las unidades cifradas que permanecen en el dispositivo cuando se reinicia el dispositivo. Cualquier persona que conozca la frase de acceso puede acceder a las unidades cifradas con una frase de acceso SED.
 

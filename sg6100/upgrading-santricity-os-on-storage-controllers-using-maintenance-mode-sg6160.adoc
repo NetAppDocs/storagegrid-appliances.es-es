@@ -1,0 +1,67 @@
+---
+permalink: sg6100/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6160.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6160, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
+summary: 'Para aplicar una actualización a las controladoras de almacenamiento que actualmente utilizan SANtricity OS con una antigüedad superior a 08.42.20.00 \(11.42\), debe utilizar el procedimiento del modo de mantenimiento.' 
+---
+= Actualice el sistema operativo SANtricity en la controladora de almacenamiento SG6160 usando el modo de mantenimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar el modo de mantenimiento para actualizar SANtricity OS en la controladora SG6160.
+
+Para las controladoras de almacenamiento que utilizan actualmente el sistema operativo SANtricity con una versión anterior a 08.42.20.00 (11.42), debe utilizar el procedimiento del modo de mantenimiento para aplicar una actualización.
+
+
+NOTE: Para las controladoras de almacenamiento que actualmente utilizan un sistema operativo SANtricity posterior a 08.42.20.00 (11,42), se recomienda hacerlo link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Utilice Grid Manager para aplicar una actualización"]. Sin embargo, puede usar el procedimiento de modo de mantenimiento si lo prefiere o si el soporte técnico le indica hacerlo.
+
+.Antes de empezar
+* Ha consultado el https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] Para confirmar que la versión de sistema operativo SANtricity que utiliza para la actualización es compatible con el dispositivo.
+* Debe colocar la controladora SG6160 en link:../commonhardware/placing-appliance-into-maintenance-mode.html["modo de mantenimiento"], Que detiene todas las E/S a los controladores de almacenamiento E4000.
++
+
+NOTE: En raras ocasiones, una vez que se coloca un dispositivo StorageGRID en modo de mantenimiento puede hacer que el dispositivo no esté disponible para el acceso remoto.
+
+
+
+.Acerca de esta tarea
+No actualice el sistema operativo SANtricity o NVSRAM en la controladora de almacenamiento en más de un dispositivo StorageGRID a la vez.
+
+
+CAUTION: Actualizar más de un dispositivo StorageGRID a la vez puede provocar la falta de disponibilidad de los datos, según el modelo de puesta en marcha y las políticas de ILM.
+
+.Pasos
+. Confirme que el aparato está en link:../commonhardware/placing-appliance-into-maintenance-mode.html["modo de mantenimiento"].
+. Desde un ordenador portátil de servicio, acceda a SANtricity System Manager e inicie sesión.
+. Descargue el nuevo archivo de NVSRAM y de software de sistema operativo SANtricity en el cliente de gestión.
++
+
+CAUTION: La NVSRAM es específica del dispositivo StorageGRID. No utilice la descarga de NVSRAM estándar.
+
+. Siga las instrucciones de la guía _Upgrade SANtricity OS_ o la ayuda en línea de SANtricity System Manager para actualizar el firmware y NVSRAM.
++
+
+NOTE: Active los archivos de actualización inmediatamente. No diferir la activación.
+
+. Si este procedimiento se completó correctamente y tiene procedimientos adicionales que realizar mientras el nodo se encuentra en modo de mantenimiento, realice ahora. Cuando haya terminado, o si ha experimentado algún fallo y desea volver a empezar, seleccione *Avanzado* > *Reiniciar controlador* y, a continuación, seleccione una de estas opciones:
++
+** Seleccione *Reiniciar en StorageGRID*
+** Seleccione *Reiniciar en el modo de mantenimiento* para reiniciar el controlador con el nodo restante en modo de mantenimiento.  Seleccione esta opción si ha experimentado algún error durante el procedimiento y desea volver a empezar.  Cuando el nodo termine de reiniciarse en el modo de mantenimiento, reinicie desde el paso adecuado del procedimiento en que falló.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
+
++
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página Nodos debe mostrar el estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo) del nodo del dispositivo, lo que indica que no hay ninguna alerta activa y que el nodo está conectado a la cuadrícula.
+
++
+image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
+
+
+
+
+
+.Información relacionada
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Actualizar el sistema operativo SANtricity en controladoras de almacenamiento mediante Grid Manager"]

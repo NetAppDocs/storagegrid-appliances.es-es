@@ -34,8 +34,15 @@ Este paso es opcional. Sin embargo, la optimización y automatización de los pa
 ** link:installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html["SG100 y SG1000"]
 ** link:installing-appliance-in-cabinet-or-rack-sg110-and-sg1100.html["SG110 y SG1100"]
 ** link:installing-appliance-in-cabinet-or-rack-sg5700.html["SG5700"]
+** link:installing-appliance-in-cabinet-or-rack-sg5800.html["SG5800"]
 ** link:installing-hardware-sg6000.html["SG6000"]
-** link:installing-appliance-in-cabinet-or-rack-sgf6112.html["SG6100"]
+** link:installing-appliance-in-cabinet-or-rack-sgf6112.html["SGF6112"]
+** SG6160 GBE:
++
+*** link:sg6100-cn-installing-into-cabinet-or-rack.html["Controladora SG6100-CN"]
+*** link:sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html["bandejas de 60 unidades"]
+
+
 
 
 . link:cabling-appliance.html["Aparato por cable"]
@@ -57,12 +64,12 @@ Si va a configurar y poner en marcha más de un dispositivo, utilice la herramie
 ** link:verifying-port-level-network-connections.html["Verifique las conexiones de red a nivel de puerto"]
 
 
-. link:accessing-and-configuring-santricity-system-manager.html["Acceda y configure SANtricity System Manager"] (SG5700 y SG6000)
+. link:accessing-and-configuring-santricity-system-manager.html["Acceda y configure SANtricity System Manager"] (SG6160, SG5700, SG5800 Y SG6000)
 . link:configuring-bmc-interface.html["Configure la interfaz de BMC"] (Dispositivos SG6000, SG6100 y servicios)
 . Realice los pasos de configuración opcionales
 +
 ** link:optional-enabling-node-encryption.html["Habilite el cifrado de nodos o unidades"]
-** link:optional-changing-raid-mode.html["Cambio del modo RAID (SG6000 y SG5700)"]
+** link:optional-changing-raid-mode.html["Cambio del modo RAID (SG6160, SG6000, SG5860 y SG5760)"]
 ** link:optional-remapping-network-ports-for-appliance.html["Reasignar puertos de red"]
 
 

@@ -34,7 +34,7 @@ En función de los tipos de dispositivos que esté configurando, es posible que 
 
 === System Manager de SANtricity
 
-Para SG6000 y SG5700, configura SANtricity System Manager. El software SANtricity se utiliza para supervisar el hardware de estos dispositivos.
+Para SG6160, SG6000, SG5800 y SG5700, configure System Manager de SANtricity. El software SANtricity se utiliza para supervisar el hardware de estos dispositivos.
 
 
 
@@ -56,9 +56,9 @@ Los siguientes dispositivos tienen una interfaz BMC que se debe configurar:
 
 * Dispositivos de almacenamiento
 +
-** Configure SANtricity System Manager (SG5700 y SG6000) el software que utilizará para supervisar el hardware
+** Configure el Administrador del sistema de SANtricity (SG5700, SG5800, SG6000 y SG6100) el software que utilizará para supervisar el hardware
 ** Cambie el modo RAID
-** Acceda a la interfaz BMC para la controladora SG6000-CN
+** Acceda a la interfaz BMC para el controlador SG6000-CN o SG6100-CN
 
 
 * Dispositivos de servicios

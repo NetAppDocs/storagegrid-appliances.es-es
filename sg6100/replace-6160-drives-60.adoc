@@ -1,0 +1,160 @@
+---
+permalink: sg6100/replace-6160-drives-60.html 
+sidebar: sidebar 
+keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, sg6160, sg6100cn 
+summary: Sustituya una unidad de E4000 con una bandeja de 60 unidades. 
+---
+= Sustituir unidad en la bandeja de controladoras de almacenamiento o la bandeja de expansión (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible sustituir una unidad en una bandeja de controladoras de almacenamiento SG6160 o una bandeja de expansión (DE460C).
+
+.Acerca de esta tarea
+Grid Manager de StorageGRID supervisa el estado de la cabina de almacenamiento y genera alertas cuando se producen fallos de unidad.  Cuando Grid Manager activa una alerta o en cualquier momento, puede utilizar Recovery Guru en SANtricity System Manager para obtener más información acerca de la unidad específica que ha fallado.  Cuando se produce un fallo en una unidad, el LED de atención ámbar se enciende. Es posible intercambiar en caliente una unidad con error mientras la cabina de almacenamiento recibe I/O.
+
+.Antes de empezar
+* Revise los requisitos de manipulación de unidades.
+* Asegúrese de tener lo siguiente:
++
+** Una unidad de reemplazo que admite NetApp para su bandeja de controladoras o bandeja de unidades.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Acceso a SANtricity System Manager:
++
+*** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información de la controladora se encuentra en la https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+*** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
+
+
+
+
+
+
+
+
+== Paso 1: Preparar la sustitución de la unidad
+
+Para preparar la sustitución de una unidad, compruebe Recovery Guru en SANtricity System Manager y complete los pasos de requisitos previos. A continuación, puede localizar el componente con errores.
+
+.Pasos
+. Si Recovery Guru en SANtricity System Manager le notificó un _error inminente de unidad_, pero la unidad aún no falló, siga las instrucciones en Recovery Guru para conmutar la unidad.
+. Si es necesario, use System Manager de SANtricity para confirmar que tiene una unidad de reemplazo adecuada.
++
+.. Seleccione *hardware*.
+.. Seleccione la unidad con error en el gráfico de bandeja.
+.. Haga clic en la unidad para mostrar el menú contextual y, a continuación, seleccione *Ver configuración*.
+.. Confirme que la unidad de sustitución tiene una capacidad igual o mayor que la unidad que desea reemplazar y que tiene las funciones que espera.
+
+
+. Si es necesario, use System Manager de SANtricity para localizar la unidad dentro de la cabina de almacenamiento.
++
+.. Si la bandeja tiene un panel frontal, retírelo para poder ver los LED.
+.. En el menú contextual de la unidad, seleccione *encender luz de localización*.
++
+El LED de atención del cajón de la unidad (ámbar) parpadea para que se pueda abrir el cajón de la unidad correcto para identificar qué unidad desea reemplazar.
+
+
+
+. Desenganche el cajón de mando tirando de ambas palancas.
++
+.. Con las palancas extendidas, tire con cuidado del cajón de la unidad hasta que se detenga.
+.. Mire la parte superior del cajón de unidades para encontrar el LED de atención delante de cada unidad.
++
+Los LED de atención del cajón de la unidad están en el lado izquierdo de la parte frontal de cada unidad, con un icono de atención en el asa de la unidad justo detrás del LED.
+
+
+
+
+
+
+
+== Paso 2: Quitar la unidad con error
+
+Quite una unidad con error para reemplazarla por una nueva.
+
+.Pasos
+. Desembale la unidad de repuesto y configúrela en una superficie plana y sin estática cerca de la bandeja.
++
+Guarde todos los materiales de embalaje para la próxima vez que tenga que devolver la unidad.
+
+. Suelte las palancas del cajón de mando desde el centro del cajón de unidades apropiado tirando de ambos hacia los lados del cajón.
+. Tire con cuidado de las palancas del cajón de unidades extendidas para sacar el cajón de unidades a su extensión completa sin extraerlo del gabinete.
+. Tire suavemente hacia atrás del pestillo de liberación naranja que está delante de la unidad que desea quitar.
++
+La palanca de leva de los muelles de accionamiento se abre parcialmente y el accionamiento se libera del cajón.
+
+. Abra la palanca de leva y levante ligeramente la transmisión.
+. Espere 30 segundos.
+. Utilice el asa de leva para levantar la unidad de la bandeja.
+. Coloque la unidad sobre una superficie antiestática y amortiguada lejos de los campos magnéticos.
+. Espere 30 segundos hasta que el software reconozca que la unidad se ha quitado.
++
+
+NOTE: Si quita accidentalmente una unidad activa, espere al menos 30 segundos y, a continuación, vuelva a instalarla. Para el procedimiento de recuperación, consulte el software de administración del almacenamiento.
+
+
+
+
+
+== Paso 3: Instale una nueva unidad
+
+Instale una unidad nueva para reemplazar la que presenta errores.
+
+
+CAUTION: Instale la Lo antes posible. de la unidad de reemplazo después de quitar la unidad con error. De lo contrario, existe el riesgo de que el equipo se recaliente.
+
+
+CAUTION: *Posible pérdida de acceso a datos* -- al empujar el cajón de la unidad de nuevo en el gabinete, nunca corte el cajón. Empuje el cajón lentamente para evitar que el cajón se arreste y cause daños a la matriz de almacenamiento.
+
+.Pasos
+. Levante la palanca de leva de la nueva transmisión hasta la posición vertical.
+. Alinee los dos botones elevados de cada lado del portador de unidades con el espacio correspondiente del canal de la unidad en el cajón de la unidad.
+. Baje la unidad en línea recta hacia abajo y, a continuación, gire la palanca de leva hacia abajo hasta que la unidad encaje en su lugar bajo el pestillo de liberación naranja.
+. Empuje con cuidado el cajón de la unidad de nuevo dentro de la carcasa. Empuje el cajón lentamente para evitar que el cajón se arreste y cause daños a la matriz de almacenamiento.
+. Cierre el cajón de mando empujando ambas palancas hacia el centro.
++
+El LED de actividad verde de la unidad reemplazada en la parte frontal del cajón de la unidad se enciende cuando la unidad se inserta correctamente.
+
++
+Según la configuración, es posible que la controladora reconstruya automáticamente datos en la nueva unidad. Si la bandeja utiliza unidades de repuesto, es posible que la controladora tenga que realizar una reconstrucción completa en la pieza de repuesto para poder copiar los datos en la unidad reemplazada. Este proceso de reconstrucción aumenta el tiempo necesario para completar este procedimiento.
+
+
+
+
+
+== Paso 4: Sustitución completa de la unidad
+
+Confirme que la unidad nueva funciona correctamente.
+
+.Pasos
+. Compruebe el LED de encendido y el LED de atención de la unidad que ha sustituido. (Cuando inserte una unidad por primera vez, es posible que el LED de atención esté encendido. Sin embargo, el LED debería apagarse en un minuto.)
++
+** El LED de alimentación está encendido o parpadeando y el LED de atención está apagado: Indica que la unidad nueva funciona correctamente.
+** El LED de alimentación está apagado: Indica que la unidad podría no estar instalada correctamente. Retire la unidad, espere 30 segundos y vuelva a instalarla.
+** El LED de atención está encendido: Indica que la unidad nueva puede tener defectos. Sustitúyalo por otra unidad nueva.
+
+
+. Si Recovery Guru en SANtricity System Manager aún muestra un problema, seleccione *Volver a comprobar* para verificar que se haya resuelto el problema.
+. Si Recovery Guru indica que la reconstrucción de la unidad no se inició automáticamente, inicie la reconstrucción de forma manual de la siguiente manera:
++
+
+NOTE: Realice esta operación solo cuando el soporte técnico o Recovery Guru se lo indiquen.
+
++
+.. Seleccione *hardware*.
+.. Haga clic en la unidad que sustituyó.
+.. En el menú contextual de la unidad, seleccione *reconstruir*.
+.. Confirme que desea llevar a cabo esta operación.
++
+Cuando se completa la reconstrucción de la unidad, el grupo de volúmenes tiene el estado óptima.
+
+
+
+. Si es necesario, vuelva a instalar el bisel.
+. Devuelva la pieza que ha fallado a NetApp, como se describe en las instrucciones de RMA que se suministran con el kit.
+
+
+.El futuro
+Se completó el reemplazo de su unidad. Es posible reanudar las operaciones normales.

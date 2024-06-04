@@ -11,7 +11,7 @@ summary: Para poder acceder a la interfaz de BMC, debe configurar la dirección 
 
 
 [role="lead"]
-Para poder acceder a la interfaz de BMC, configure la dirección IP para el puerto de gestión BMC en las aplicaciones SGF6112, SG6000-CN o de servicios.
+Para poder acceder a la interfaz BMC, configure la dirección IP para el puerto de gestión BMC en las controladoras SGF6112, SG6000-CN, SG6100-CN o de los dispositivos de servicios.
 
 Si utiliza ConfigBuilder para generar un archivo JSON, puede configurar direcciones IP automáticamente. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
 
@@ -49,7 +49,13 @@ image::../media/sg6000_cn_bmc_management_port.gif[Puerto de gestión de BMC en e
 --
 .SG6100
 --
+_SGF6112_:
+
 image::../media/sgf6112_cn_bmc_management_port.png[Puerto de gestión SGF6112 de BMC]
+
+_SG6100-CN_:
+
+image::../media/sg6100_cn_bmc_management_port.png[Puerto de gestión BMC SG610-CN]
 
 --
 ====

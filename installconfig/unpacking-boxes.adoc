@@ -166,6 +166,80 @@ image::../media/fc_cable_and_sfp.gif[Cables ópticos y SFP]
 
 
 --
+.SG5800
+--
+* *Hardware*
++
+Dispositivo SG5812 con 12 unidades instaladas::
++
+--
+image::../media/de212c_table_size.gif[Dispositivo SG5812 2U]
+
+--
+Dispositivo SG5860 sin unidades instaladas::
++
+--
+image::../media/de460c_table_size.gif[Dispositivo SG5860 4U]
+
+--
+Panel frontal para el dispositivo::
++
+--
+image::../media/sg5700_front_bezels.gif[Biseles de SG5812 y SG5860]
+
+
+NOTE: Tus biseles pueden tener un aspecto diferente.
+
+--
+Kit de rieles con instrucciones::
++
+--
+image::../media/rail_kit.gif[Kit de rieles]
+
+--
+SG5860: Sesenta unidades NL-SAS::
++
+--
+image::../media/sg5760_drive.gif[Unidad]
+
+--
+SG5860: Mangos::
++
+--
+image::../media/handles.gif[SG5860 asas]
+
+--
+SG5860: Soportes traseros y tuercas de jaula para la instalación en rack con orificios cuadrados::
++
+--
+image::../media/back_brackets_table_size.gif[Soportes traseros y tuercas de jaula para SG5860]
+
+--
+
+
+* *Cables y conectores*
++
+
+TIP: Es posible que el armario tenga cables de alimentación especiales que utilice en lugar de los cables de alimentación que se suministran con el aparato.
+
++
+Dos cables de alimentación para su país::
++
+--
+image::../media/power_cords.gif[Cables de alimentación]
+
+--
+Dos cables de 25GbE SFP28 GbE para la interconexión de controladoras (iSCSI)::
++
+--
+image::../media/sg5800_25gbe_sfp28_cable.png[Cables 25GbE SFP28]
+
+--
+
+
+
+
+--
 .SG6000
 --
 * *SG6060 hardware*
@@ -323,7 +397,108 @@ image::../media/sas_cable.gif[Cables SAS]
 --
 .SG6100
 --
-* *Hardware*
+* *SG6160 hardware*
++
+Controladora SG6100-CN::
++
+--
+image::../media/sg6000_cn_front_without_bezel.gif[Controladora SG6100-CN]
+
+--
+Bandeja de controladoras E4000 sin unidades instaladas::
++
+--
+image::../media/de460c_table_size.gif[Dispositivo SG5860 4U]
+
+--
+Dos biseles frontales::
++
+--
+image::../media/sg6000_front_bezels_for_table.gif[Bezeles delanteros]
+
+
+NOTE: Tus biseles pueden tener un aspecto diferente.
+
+--
+Kits de dos guías con instrucciones::
++
+--
+image::../media/rail_kit.gif[Kit de rieles]
+
+--
+Unidades NL-SAS de 60 TB::
++
+--
+image::../media/sg5760_drive.gif[Unidad]
+
+--
+Cuatro asas::
++
+--
+image::../media/handles.gif[SG5860 asas]
+
+--
+Soportes traseros y tuercas de jaula para la instalación del bastidor con orificios cuadrados::
++
+--
+image::../media/back_brackets_table_size.gif[Soportes traseros y tuercas de jaula para SG5860]
+
+--
+Un cable de interconexión de puertos de 100 GbE a 4 GbE::
++
+--
+image::../media/sg6100_4x25gbe_spf28_cable.png[Cable de conexión de 100 GbE a 4 GbE]
+
+--
+Cuatro cables de alimentación para su país::
++
+--
+image::../media/power_cords.gif[Cables de alimentación]
+
+--
+
+
+* *SG6160 estante de expansión*
++
+Bandeja de expansión sin unidades instaladas::
++
+--
+image::../media/de460c_table_size.gif[Dispositivo SG5860 4U]
+
+--
+Cubierta frontal::
++
+--
+image::../media/front_bezel_for_table_de460c.gif[Frontal Bezel DE460C]
+
+--
+Unidades NL-SAS de 60 TB::
++
+--
+image::../media/sg5760_drive.gif[Unidad]
+
+--
+Un kit de guías con instrucciones::
++
+--
+image::../media/rail_kit.gif[Kit de rieles]
+
+--
+Cuatro asas::
++
+--
+image::../media/handles.gif[SG5860 asas]
+
+--
+Soportes traseros y tuercas de jaula para la instalación del bastidor con orificios cuadrados::
++
+--
+image::../media/back_brackets_table_size.gif[Soportes traseros y tuercas de jaula para SG5860]
+
+--
+
+
+* *SGF6112 Hardware*
 +
 SGF6112::
 +

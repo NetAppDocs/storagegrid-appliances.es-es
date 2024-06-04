@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, link configuration, link, configure, configuring, ethernet, port bond mode, port bond, network bond mode, network bond, link speed, vlan tagging, vlan tag 
 summary: Puede cambiar la configuración del enlace Ethernet del dispositivo, incluido el modo de enlace de puerto, el modo de enlace de red y la velocidad del enlace. 
 ---
-= Cambie la configuración de enlace del dispositivo SGF6112
+= Cambie la configuración de enlace del dispositivo SGF6112 o del controlador SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

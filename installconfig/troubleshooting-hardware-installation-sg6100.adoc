@@ -1,10 +1,10 @@
 ---
 permalink: installconfig/troubleshooting-hardware-installation-sg6100.html 
 sidebar: sidebar 
-keywords: storagegrid, sg6100, sgf6112,troubleshoot, troubleshooting, hardware, install, installation, boot codes, boot-up codes, start codes, codes, boot, start, bmc, error codes, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection 
+keywords: storagegrid, sg6100, sgf6112, troubleshoot, troubleshooting, hardware, install, installation, boot codes, boot-up codes, start codes, codes, boot, start, bmc, error codes, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection, sg6160, sg5800, e4000 
 summary: Si encuentra problemas durante la instalación, es posible que le sea útil revisar información sobre la solución de problemas relacionados con la configuración del hardware y los problemas de conectividad. 
 ---
-= Solución de problemas de instalación de hardware (SG6100)
+= Solución de problemas de instalación de hardware (SG5800 o SG6100)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ Si encuentra problemas durante la instalación, es posible que le sea útil revi
 
 
 
-== Ver códigos de arranque
+== Ver códigos de arranque (solo SGF6112 y SG6160)
 
 Cuando se enciende el aparato, el BMC registra una serie de códigos de inicio. Puede ver estos códigos en una consola gráfica que está conectada al puerto de gestión del BMC.
 
@@ -52,7 +52,7 @@ KVM
  a| 
 Puerto serie
  a| 
-** Cable serie DB-9
+** Cable USB
 ** Terminal serie virtual
 
 
@@ -91,6 +91,10 @@ SOL
 .. Conéctese a IPMI sol mediante la dirección IP del BMC y las credenciales de inicio de sesión.
 +
 `ipmitool -I lanplus -H _BMC_Port_IP_ -U admin -P _Password_ sol activate`
+
++
+
+NOTE: En algunos casos, el nombre de usuario predeterminado puede ser 'root' en lugar de 'admin'.
 
 .. Ver los códigos en el terminal de serie virtual.
 
@@ -131,6 +135,22 @@ Se completaron las comprobaciones de actualización del firmware del subsistema 
 
 
  a| 
+ÉL
+ a| 
+Solo para SG6160:
+
+El sistema está esperando conectividad con las controladoras de almacenamiento y sincronizarse con el sistema operativo SANtricity.
+
+*Nota*: Si el procedimiento de arranque no avanza más allá de esta etapa, realice estos pasos:
+
+.. Confirmar que los cuatro cables de interconexión entre la controladora SG6100-CN y las dos controladoras de almacenamiento están conectados de forma segura.
+.. Según sea necesario, sustituya uno o más cables y vuelva a intentarlo.
+.. Si esto no se resuelve el problema, póngase en contacto con el soporte técnico.
+
+
+
+
+ a| 
 HC
  a| 
 El sistema comprueba si hay datos de instalación de StorageGRID existentes.
@@ -154,7 +174,7 @@ StorageGRID está ejecutando.
 
 
 
-== Ver códigos de error
+== Ver códigos de error (solo SGF6112 y SG6160)
 
 Si se produce un error de hardware cuando el dispositivo arranca, el BMC registra un código de error. Según sea necesario, puede ver estos códigos de error mediante la interfaz del BMC y, a continuación, trabajar con el soporte técnico para resolver el problema.
 
@@ -525,7 +545,7 @@ MRC: ERR_INTERLEAVE_FAILURE
 Es posible que el instalador de dispositivos StorageGRID no esté disponible si los errores de hardware o de cableado impiden que el dispositivo complete el procesamiento de arranque.
 
 .Pasos
-. Revise los LED del dispositivo y los códigos de inicio y error que aparecen en el BMC.
+. Revise los LED del aparato y/o los códigos de error y arranque mostrados en BMC (si está equipado).
 . Si necesita ayuda para resolver un problema, póngase en contacto con el soporte técnico.
 
 
@@ -533,11 +553,41 @@ Es posible que el instalador de dispositivos StorageGRID no esté disponible si 
 
 == Problemas de conexión
 
-Si no puede conectarse al dispositivo, es posible que haya un problema de red o que la instalación de hardware no se haya completado correctamente.
+
+
+=== Las bandejas de expansión no aparecen en el instalador de dispositivos (SG6160)
+
+Si ha instalado bandejas de ampliación y no aparecen en el instalador de dispositivos de StorageGRID, debe comprobar que las bandejas se hayan instalado completamente y encendido.
+
+.Acerca de esta tarea
+Puede verificar que las bandejas de ampliación están conectadas al dispositivo consultando la siguiente información en el instalador de dispositivos StorageGRID:
+
+* La página *Home* contiene un mensaje sobre las estanterías de expansión.
++
+image::../media/expansion_shelf_home_page_msg.png[Mensaje de bandejas de expansión]
+
+* La página *Avanzado* > *Modo RAID* indica por número de unidades si el dispositivo incluye o no estantes de expansión.
+
+
+Si en las páginas del instalador de dispositivos de StorageGRID no se indica que hay bandejas de ampliación, siga este procedimiento.
+
+.Pasos
+. Compruebe que todos los cables necesarios están conectados firmemente. Consulte link:cabling-appliance.html["Aparato por cable"].
+. Verifique que se hayan encendido las bandejas de expansión. Consulte link:connecting-power-cords-and-applying-power.html["Conectar los cables de alimentación y aplicar alimentación (SG6100)"].
+. Si necesita ayuda para resolver un problema, póngase en contacto con el soporte técnico.
+
+
+
+
+=== No se puede conectar al dispositivo
+
+Si no puede conectarse al dispositivo de almacenamiento, es posible que haya un problema de red o que la instalación de hardware no se haya completado correctamente.
 
 .Pasos
 . Intente hacer ping al dispositivo con la dirección IP del dispositivo : +
-`*ping _appliance_IP_*`
++
+`*ping _appliance/controller_IP_*`
+
 . Si no recibe respuesta del ping, confirme que está utilizando la dirección IP correcta.
 +
 Puede utilizar la dirección IP del dispositivo en la red de grid, la red de administración o la red de cliente.
@@ -548,7 +598,7 @@ Puede utilizar la dirección IP del dispositivo en la red de grid, la red de adm
 Si esto no se resuelve el problema, póngase en contacto con el soporte técnico.
 
 . Si el ping se ha realizado correctamente, abra un explorador Web.
-. Introduzca la URL para el instalador de dispositivos de StorageGRID: +
+. Introduzca la dirección URL del instalador de dispositivos de StorageGRID o del Administrador del sistema de SANtricity: +
 `*https://_appliances_controller_IP_:8443*`
 +
 Aparece la página de inicio.

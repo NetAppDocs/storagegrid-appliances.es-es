@@ -2,7 +2,7 @@
 permalink: installconfig/hardware-description-sg6100.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6100, sgf6112, storage node, storage appliance, appliance models, appliance features, specifications 
-summary: 'El dispositivo StorageGRID SGF6112 funciona como nodo de almacenamiento en un sistema StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales (basados en software).' 
+summary: Los dispositivos de la serie StorageGRID SG6100 funcionan como nodos de almacenamiento en un sistema StorageGRID.  Al igual que todos los dispositivos StorageGRID, se pueden combinar libremente con otros modelos de dispositivo y nodos de solo software en una única implementación. 
 ---
 = Dispositivos SG6100: Información general
 :allow-uri-read: 
@@ -11,47 +11,54 @@ summary: 'El dispositivo StorageGRID SGF6112 funciona como nodo de almacenamient
 
 
 [role="lead"]
-El dispositivo StorageGRID SGF6112 funciona como nodo de almacenamiento en un sistema StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales (basados en software).
+Los dispositivos de la serie StorageGRID SG6100 funcionan como nodos de almacenamiento en un sistema StorageGRID.  Al igual que todos los dispositivos StorageGRID, se pueden combinar libremente con otros modelos de dispositivo y nodos de solo software en una única implementación.
 
-El dispositivo SGF6112 ofrece las siguientes características:
+El dispositivo StorageGRID SG6160 incluye una controladora de computación con un par de SSD NVMe que funcionan como una caché de lectura, y una bandeja de controladoras de almacenamiento que contiene dos controladoras de almacenamiento y 60 unidades de disco duro NL-SAS. Se puede ampliar hasta 180 unidades de disco duro NL-SAS añadiendo hasta dos bandejas de expansión opcionales. El dispositivo StorageGRID SGF6112 es un dispositivo all-flash con un factor de forma 1U compacto que ocupa 12 SSD NVMe.
 
-* 12 unidades SSD NVMe (memoria no volátil rápida) con controladoras de almacenamiento y computación integradas.
+Los dispositivos SGF6112 y SG6160 ofrecen las siguientes características:
+
 * Integra los elementos de computación y almacenamiento para un nodo de almacenamiento de StorageGRID.
 * Incluye el instalador de dispositivos StorageGRID para simplificar la puesta en marcha y la configuración del nodo de almacenamiento.
 * Incluye un controlador de gestión de placa base (BMC) para supervisar y diagnosticar el hardware en la controladora de computación.
-* Admite hasta cuatro conexiones de 10 GbE o 25 GbE a la red Grid y a la red cliente de StorageGRID.
 
 
-
-
-== Descripción del hardware de SGF6112
-
-StorageGRID SGF6112 es un dispositivo all-flash que presenta un diseño compacto con controladora de computación y controladora de almacenamiento integrada en un chasis 1U. El dispositivo admite 12 unidades SSD NVMe con una capacidad de almacenamiento de hasta 15,3 TB por unidad.
-
-
-
-=== Almacenamiento de objetos resiliente
-
-El SGF6112 está diseñado con SSD en un RAID que proporciona las siguientes funciones de protección de datos:
+SGF6112 ofrece las siguientes funciones de protección de datos:
 
 * Capacidad de funcionar después del fallo de un único SSD sin afectar a la disponibilidad del objeto.
 * Capacidad para funcionar tras múltiples fallos de SSD con una reducción mínima necesaria en la disponibilidad de objetos (según el diseño del esquema RAID subyacente).
++
+
+NOTE: En función de la política de ILM que haya configurado, otros nodos pueden atender las solicitudes de objetos que no están disponibles localmente, por lo que normalmente no se produce ninguna reducción en la disponibilidad.
+
 * Totalmente recuperable, mientras está en servicio, de fallos de SSD que no ocasionan un daño extremo al RAID que aloja el volumen raíz del nodo (el sistema operativo StorageGRID).
+* Los datos de objetos se pueden restaurar automáticamente de las copias o de los fragmentos codificados de borrado en otros nodos si varios fallos de SSD causan la pérdida de datos locales.
+
+
+SG6160 ofrece las siguientes funciones de protección de datos:
+
+* Capacidad de funcionar después del fallo de dos unidades de disco duro (HDD) sin impacto en la disponibilidad de objetos.
+* Evacuación y recompilación rápidas de HDD durante eventos de fallo y sustitución (cuando se configura para DDP o DDP16 durante la instalación), lo que mejora la durabilidad de los datos en relación con el RAID6 estándar.
+* Totalmente recuperable, mientras está en servicio, del fallo de dos HDD cualesquiera.
+* Los datos de objetos se pueden restaurar automáticamente a partir de copias o de fragmentos codificados de borrado en otros nodos si varios fallos de las unidades de disco duro provocan la pérdida de datos local.
 
 
 
 
-== SGF6112 componentes de hardware
+== SG6100 componentes de hardware
+
+
+
+=== Dispositivo SGF6112
 
 El dispositivo SGF6112 incluye los siguientes componentes:
 
 Plataforma de almacenamiento y computación:: Un servidor de una unidad de rack (1U) que incluye:
 +
 --
-* Dos procesadores de 165 W a 2,1/2,6 GHz que proporcionan 48 núcleos
+* Dos procesadores de 2,1/2,6 GHz y 165 W que proporcionan 48 núcleos (96 subprocesos)
 * 256 GB DE MEMORIA RAM
 * 2 x 1/10 puertos GBase-T.
-* 4 x puertos Ethernet de 10/25 GbE
+* 4 puertos Ethernet de 10/25 GbE para el tráfico de red Grid/Client
 * Unidad de arranque interna de 1 x 256 GB (incluye software StorageGRID)
 * Controlador de administración en placa base (BMC) que simplifica la administración del hardware
 * Sistemas de alimentación y ventiladores redundantes
@@ -62,7 +69,50 @@ Plataforma de almacenamiento y computación:: Un servidor de una unidad de rack 
 
 
 
-== SGF6112 diagramas
+=== Dispositivo SG6160
+
+El dispositivo SG6160 incluye los siguientes componentes:
+
+Controladora de computación:: La controladora SG6100-CN es un servidor con una unidad de rack (1U) que incluye:
++
+--
+* 48 núcleos (96 subprocesos)
+* 256 GB DE MEMORIA RAM
+* Ancho de banda Ethernet agregado de hasta 4 x 25 GbE (o hasta 4 x 100 GbE con SKU NIC 100g opcional)
+* 1 x interconexión de 100 GbE
+* Controlador de administración en placa base (BMC) que simplifica la administración del hardware
+* Sistemas de alimentación y ventiladores redundantes
+
+
+--
+Bandeja de controladoras de almacenamiento:: La bandeja de controladoras E-Series E4000 (cabina de almacenamiento) es una bandeja 4U que incluye:
++
+--
+* Dos controladoras de la serie E4000 (configuración doble) para admitir la recuperación tras fallos de controladoras de almacenamiento
+* Bandeja de cinco cajones que aloja sesenta unidades NL-SAS de 3,5 pulgadas
+* Sistemas de alimentación y ventiladores redundantes
+
+
+--
+Opcional: Bandejas de ampliación del almacenamiento:: Cada dispositivo SG6160 puede tener una o dos bandejas de expansión para un total de 180 unidades.
++
+--
+
+NOTE: Las bandejas de expansión se pueden instalar durante la puesta en marcha inicial, o bien se pueden añadir más adelante.
+
+El compartimento DE460C de E-Series es una bandeja 4U que incluye:
+
+* Dos módulos de entrada/salida (IOM)
+* Cinco cajones, cada uno de ellos tiene 12 unidades NL-SAS, para un total de 60 unidades
+* Sistemas de alimentación y ventiladores redundantes
+
+
+--
+
+
+
+
+== Diagramas SGF6112 y SG6160
 
 
 
@@ -146,5 +196,279 @@ Opciones:
 * Deje desconectado y disponible para acceso local temporal (IP 169.254.0.1).
 * Durante la instalación, use el puerto 2 para la configuración IP si las direcciones IP asignadas para DHCP no están disponibles.
 
+
+|===
+
+
+=== Vista frontal de SG6160
+
+En esta figura, se muestra el frente de SG6160, que incluye una controladora de computación de 1U y una bandeja de 4U que contiene dos controladoras de almacenamiento y 60 unidades en cinco cajones de unidades.
+
+image::../media/sg6160_front_view_without_bezels.png[Vista frontal de SG6160]
+
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Controladora de computación SG6100-CN con panel frontal quitado
+
+
+
+ a| 
+2
+ a| 
+Bandeja de controladoras E4000 con el panel frontal quitado (la bandeja de expansión opcional aparece idéntica)
+
+|===
+
+
+=== Vista posterior de SG6160
+
+En esta figura, se muestra la parte posterior de SG6160, incluidos las controladoras de computación y de almacenamiento, los ventiladores y las fuentes de alimentación.
+
+image::../media/sg6160_rear_view.png[Vista trasera de SG6160]
+
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Fuente de alimentación (1 de 2) para el controlador de computación SG6100-CN
+
+
+
+ a| 
+2
+ a| 
+Conectores para controlador de computación SG6100-CN
+
+
+
+ a| 
+3
+ a| 
+Ventilador (1 de 2) para la bandeja de controladoras E4000
+
+
+
+ a| 
+4
+ a| 
+La controladora de almacenamiento E400 E-Series (1 de 2) y los conectores
+
+
+
+ a| 
+5
+ a| 
+Sistema de alimentación (1 de 2) para la bandeja de controladoras E4000
+
+|===
+
+
+== SG6100 controladores
+
+
+
+=== Controladora de computación SG6100-CN
+
+* Proporciona recursos de computación para el dispositivo.
+* Incluye el instalador de dispositivos StorageGRID.
++
+
+NOTE: El software StorageGRID no está preinstalado en el dispositivo. Este software se recupera del nodo de administración cuando se implementa el dispositivo.
+
+* Se puede conectar a las tres redes StorageGRID, incluidas la red de cuadrícula, la red de administración y la red de cliente.
+* Se conecta a las controladoras de almacenamiento E-Series y funciona como iniciador.
+
+
+image::../media/sg6100_cn_rear_connectors.png[Conectores traseros SG6100-CN]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de red 1-4
+ a| 
+10 GbE, 25 GbE o 100 GbE basado en tipo de cable o transceptor SFP, velocidad de switch y velocidad de enlace configurada
+ a| 
+Conéctese a la red de red y a la red de cliente para StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Puerto de gestión de BMC
+ a| 
+1 GbE (RJ-45).
+ a| 
+Conéctese al controlador de gestión de la placa base SG6100-CN.
+
+
+
+ a| 
+3
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* VGA
+* USB
+* Puerto de consola Micro-USB
+* Módulo de ranura Micro-SD
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+4
+ a| 
+Puerto de red de administrador 1
+ a| 
+1 U/10 GbE (RJ-45)
+ a| 
+Conecte SG6100-CN a la red de administración de StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Puerto de red de administración 2
+ a| 
+1 U/10 GbE (RJ-45)
+ a| 
+Opciones:
+
+* Bond con el puerto de gestión 1 para una conexión redundante con la red de administrador para StorageGRID.
+* Deje sin cables y disponible para acceso local temporal (IP 169.254.0.1).
+* Durante la instalación, use el puerto 2 para la configuración IP si las direcciones IP asignadas para DHCP no están disponibles.
+
+
+
+
+ a| 
+6
+ a| 
+Puerto de interconexión
+ a| 
+100 GbE
+ a| 
+Conecte la controladora SG6100-CN a las controladoras E4000.
+
+|===
+
+
+=== SG6160: Controladora de almacenamiento E4000
+
+* Dos controladoras para admitir conmutación al nodo de respaldo.
+* Gestione el almacenamiento de datos en las unidades.
+* Funcionan como controladoras E-Series estándar en una configuración doble.
+* Incluya software de sistema operativo SANtricity (firmware de la controladora).
+* Incluir System Manager de SANtricity para supervisar hardware de almacenamiento y gestionar alertas, la función AutoSupport y la función Drive Security.
+* Conéctese a la controladora SG6100-CN y proporcione acceso al almacenamiento.
+
+
+image::../media/e4000_controller_with_callouts.png[Conectores en el controlador E4000]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puerto de gestión 1
+ a| 
+Ethernet de 1 GB (RJ-45)
+ a| 
+* Opciones del puerto 1:
++
+** Conéctese a una red de gestión para habilitar el acceso TCP/IP directo a System Manager de SANtricity
+** Deje sin cables para guardar un puerto del switch y una dirección IP.  Acceda al administrador del sistema de SANtricity mediante Grid Manager o el instalador de Storage Grid Appliance.
+
+
+
+
+*Nota*: Algunas funciones opcionales de SANtricity, como la sincronización NTP para registros de hora precisos, no están disponibles cuando se elige dejar el puerto 1 sin cable.
+
+
+
+ a| 
+2
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* Puerto serie RJ-45
+* Puerto serie micro USB
+* Puerto USB
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+3
+ a| 
+Puertos de expansión de unidad 1 y 2
+ a| 
+SAS de 12 GB/s
+ a| 
+Conecte los puertos con los puertos de expansión de unidades en los IOM de la bandeja de expansión.
+
+
+
+ a| 
+4
+ a| 
+Puertos de interconexión 1 y 2
+ a| 
+25GbE iSCSI
+ a| 
+Conecte cada una de las controladoras E4000 a la controladora SG6100-CN.
+
+Existen cuatro conexiones a la controladora SG6100-CN (dos de cada E4000).
+
+|===
+
+
+=== SG6160: IOM para bandejas de expansión opcionales
+
+La bandeja de expansión contiene dos módulos de I/o (IOM) que se conectan a las controladoras de almacenamiento o a otras bandejas de expansión.
+
+
+
+==== Conectores de IOM
+
+image::../media/iom_connectors.gif[IOM parte trasera]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de expansión de unidades 1-4
+ a| 
+SAS de 12 GB/s
+ a| 
+Conecte cada puerto a las controladoras de almacenamiento o a la bandeja de expansión adicional (si la hubiera).
 
 |===

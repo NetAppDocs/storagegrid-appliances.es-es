@@ -74,9 +74,19 @@ NOTE: Si no se pudo asignar una dirección IP con DHCP, se muestra 0.0.0.0.
 
 
 --
+.SG5800
+--
+image::../media/sg5800_admin_network_port.png[Puerto de red de administración en la controladora SG5800]
+
+--
 .SG6000-CN
 --
 image::../media/sg6000_cn_admin_network_port.png[Puerto de red de administración en el controlador SG6000-CN]
+
+--
+.SG6100-CN
+--
+image::../media/sg6100_cn_admin_network_port.png[Puerto de red de administración en el controlador SG6000-CN]
 
 --
 .SGF6112
@@ -143,11 +153,25 @@ Conecte el portátil de servicio al puerto de gestión 2 de la controladora E570
 image::../media/e5700sg_mgmt_port_2.gif[Ubicación del puerto de gestión 2 en la controladora E5700SG]
 
 --
+.SG5800
+--
+Conecte el portátil de servicio al puerto de administración 1 del controlador SG5800 mediante un cable Ethernet.
+
+image::../media/sg5800_mgmt_port.png[Ubicación del puerto de gestión 1 en la controladora SG5800]
+
+--
 .SG6000-CN
 --
 Conecte un portátil de servicio directamente al puerto RJ-45 más derecho del controlador SG6000-CN mediante un cable Ethernet.
 
 image::../media/sg6000_cn_link_local_port.png[Ubicación del puerto de gestión para SG6000-CN]
+
+--
+.SG6100-CN
+--
+Conecte un portátil de servicio directamente al puerto RJ-45 más derecho del controlador SG6100-CN, mediante un cable Ethernet.
+
+image::../media/sg6100_cn_link_local_port.png[Ubicación del puerto de gestión para SG6100-CN]
 
 --
 .SGF6112

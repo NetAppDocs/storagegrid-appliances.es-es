@@ -326,7 +326,7 @@ Puertos de expansión de unidades
  a| 
 SAS de 12 GB/s
  a| 
-No se utiliza. Los dispositivos StorageGRID no admiten bandejas de unidades de ampliación.
+No se utiliza.
 
 
 
@@ -421,7 +421,7 @@ Ethernet de 1 GB (RJ-45)
 * Opciones del puerto 1:
 +
 ** Conéctese a una red de gestión para habilitar el acceso TCP/IP directo a System Manager de SANtricity
-** Deje sin cables para guardar un puerto del switch y una dirección IP.  Acceda a SANtricity System Manager usando las interfaces de usuario del instalador de Grid Manager o Storage Grid Appliance.
+** Deje sin cables para guardar un puerto del switch y una dirección IP.  Acceda al administrador del sistema de SANtricity mediante Grid Manager o el instalador de Storage Grid Appliance.
 
 
 

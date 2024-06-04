@@ -31,7 +31,7 @@ CAUTION: Si elimina la unidad de trabajo, descerá el nodo del dispositivo. Cons
 
 
 .Pasos
-. Compruebe que el LED izquierdo parpadea en ámbar en la unidad que se va a sustituir. Si se notificó un problema de unidad en los interfaces de usuario de Grid Manager o BMC, HDD02 o HDD2 se refieren a la unidad en la ranura superior y HDD03 o HDD3 se refieren a la unidad en la ranura inferior.
+. Compruebe que el LED izquierdo parpadea en ámbar en la unidad que se va a sustituir. Si se notificó un problema de unidad en la interfaz de usuario de Grid Manager o BMC, HDD02 o HDD2 se refieren a la unidad en la ranura superior y HDD03 o HDD3 se refieren a la unidad en la ranura inferior.
 +
 También puede utilizar Grid Manager para supervisar el estado de los SSD. Selecciona *NODOS*. A continuación, seleccione `*Appliance Node*` > *Hardware*. Si se produce un error en una unidad, el campo Storage RAID Mode contiene un mensaje acerca de qué unidad ha fallado.
 

@@ -487,7 +487,7 @@ Ethernet de 1 GB (RJ-45)
 * Opciones del puerto 1:
 +
 ** Conéctese a una red de gestión para habilitar el acceso TCP/IP directo a System Manager de SANtricity
-** Deje sin cables para guardar un puerto del switch y una dirección IP.  Acceda a SANtricity System Manager usando las interfaces de usuario del instalador de Grid Manager o Storage Grid Appliance.
+** Deje sin cables para guardar un puerto del switch y una dirección IP.  Acceda al administrador del sistema de SANtricity mediante Grid Manager o el instalador de Storage Grid Appliance.
 
 
 
@@ -559,7 +559,7 @@ Ethernet de 1 GB (RJ-45)
 * Opciones del puerto 1:
 +
 ** Conéctese a una red de gestión para habilitar el acceso TCP/IP directo a System Manager de SANtricity
-** Deje sin cables para guardar un puerto del switch y una dirección IP. Acceda a SANtricity System Manager usando las interfaces de usuario del instalador de Grid Manager o Storage Grid Appliance.
+** Deje sin cables para guardar un puerto del switch y una dirección IP. Acceda al administrador del sistema de SANtricity mediante Grid Manager o el instalador de Storage Grid Appliance.
 
 
 

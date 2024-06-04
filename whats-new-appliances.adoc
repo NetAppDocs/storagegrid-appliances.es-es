@@ -18,6 +18,18 @@ Descubra las novedades de los dispositivos StorageGRID.
 
 
 
+== Dispositivos SG5812 y SG5860
+
+Los nuevos dispositivos StorageGRID SG5812 y SG5860 son plataformas informáticas y de almacenamiento integradas que funcionan como nodos de almacenamiento en un grid de StorageGRID. Consulte https://docs.netapp.com/us-en/storagegrid-appliances/installconfig/hardware-description-sg5800.html["Dispositivos SG5800: Información general"] para obtener más información.
+
+
+
+== Dispositivo SG6160
+
+El nuevo dispositivo StorageGRID SG6160 incluye una controladora de computación y una bandeja de controladoras de almacenamiento que contiene dos controladoras de almacenamiento y 60 unidades, así como dos unidades SSD NVMe para almacenamiento en caché. Opcionalmente, se pueden añadir bandejas de ampliación de 60 unidades al SG6160. Consulte link:installconfig/hardware-description-sg6100.html["Dispositivos SGF6100: Información general"] para obtener más información.
+
+
+
 == Dispositivos de servicios SG110 y SG1100
 
-Los nuevos dispositivos de servicios StorageGRID SG110 y SG1100 son una actualización de hardware evolutiva que proporciona un mejor rendimiento administrativo y de equilibrio de carga. Consulte link:./installconfig/hardware-description-sg110-and-1100.html["Dispositivo de servicios SG110 y SG1100: Información general"].
+Los nuevos dispositivos de servicios StorageGRID SG110 y SG1100 son una actualización de hardware evolutiva que proporcionan un mejor rendimiento administrativo y de equilibrio de carga. Consulte link:./installconfig/hardware-description-sg110-and-1100.html["Dispositivo de servicios SG110 y SG1100: Información general"].

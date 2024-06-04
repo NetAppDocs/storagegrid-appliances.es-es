@@ -2,16 +2,16 @@
 permalink: sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6100, sgf6112, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
-summary: Los dispositivos de la serie SG6100 tienen dos fuentes de alimentación por redundancia. Si una de las fuentes de alimentación falla, debe reemplazarla por Lo antes posible. para garantizar que el dispositivo tenga alimentación redundante. Ambas fuentes de alimentación que funcionan en el aparato deben ser del mismo modelo y potencia. 
+summary: El dispositivo SGF6112 y el nodo de computación SG6100-CN tienen dos fuentes de alimentación para redundancia. Si una de las fuentes de alimentación falla, debe reemplazarla por Lo antes posible. para garantizar que el dispositivo tenga alimentación redundante. Ambas fuentes de alimentación que funcionan en el aparato deben ser del mismo modelo y potencia. 
 ---
-= Sustituya una o ambas fuentes de alimentación en SGF6112
+= Sustituya una o ambas fuentes de alimentación en SGF6112 o SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-El dispositivo SGF6112 tiene dos fuentes de alimentación por redundancia. Si una de las fuentes de alimentación falla, debe reemplazarla por Lo antes posible. para garantizar que el dispositivo tenga alimentación redundante. Ambas fuentes de alimentación que funcionan en el aparato deben ser del mismo modelo y potencia.
+El dispositivo SGF6112 y el nodo de computación SG6100-CN tienen dos fuentes de alimentación para redundancia. Si una de las fuentes de alimentación falla, debe reemplazarla por Lo antes posible. para garantizar que el dispositivo tenga alimentación redundante. Ambas fuentes de alimentación que funcionan en el aparato deben ser del mismo modelo y potencia.
 
 .Antes de empezar
 * Ya tienes link:locating-sgf6112-in-data-center.html["ubicación física del aparato"] con la fuente de alimentación que se debe sustituir.
@@ -30,9 +30,9 @@ El dispositivo SGF6112 tiene dos fuentes de alimentación por redundancia. Si un
 
 
 .Acerca de esta tarea
-La figura muestra las dos unidades de suministro de alimentación del SGF6112. Se puede acceder a las fuentes de alimentación desde la parte posterior del aparato.
+En la figura, se muestran las dos unidades de suministro de alimentación para el dispositivo SGF6112 o el nodo de computación SG6100-CN. Se puede acceder a las fuentes de alimentación desde la parte posterior del aparato.
 
-image::../media/sgf6112_power_supplies.png[Parte posterior de SGF6112 con dos fuentes de alimentación]
+image::../media/sgf6112_power_supplies.png[Parte posterior de SGF6112 o SG6100-CN con dos fuentes de alimentación]
 
 .Pasos
 . Si sólo va a sustituir una fuente de alimentación, no es necesario apagar el aparato. Vaya a la <<Unplug_the_power_cord,Desenchufe el cable de alimentación>> paso. Si va a sustituir ambas fuentes de alimentación al mismo tiempo, haga lo siguiente antes de desconectar los cables de alimentación:
@@ -40,7 +40,7 @@ image::../media/sgf6112_power_supplies.png[Parte posterior de SGF6112 con dos fu
 .. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Apague el aparato"].
 +
 
-CAUTION: Si alguna vez ha utilizado una regla de ILM que crea solo una copia de un objeto y va a sustituir ambas fuentes de alimentación al mismo tiempo, debe sustituir las fuentes de alimentación durante una ventana de mantenimiento programada. De lo contrario, es posible que pierda temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
+CAUTION: Si alguna vez utilizó una regla de ILM que crea solo una copia de un objeto y va a sustituir ambas fuentes de alimentación al mismo tiempo, debe sustituir los suministros de alimentación durante una ventana de mantenimiento programada porque podría perder temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
 
 
 

@@ -1,0 +1,204 @@
+---
+permalink: sg6100/adding-expansion-shelf-to-deployed-sg6160.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, sg6160, expansion shelf, expansion, drive, disk, install, installing, installation, add, adding, expand 
+summary: Para aumentar la capacidad de almacenamiento, puede añadir una o dos bandejas de expansión a un SG6160 que se haya puesto en marcha en un sistema StorageGRID. 
+---
+= Añada una bandeja de expansión a SG6160 puesto en marcha
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para aumentar la capacidad de almacenamiento, puede añadir una o dos bandejas de expansión a un SG6160 que ya esté puesto en marcha en un sistema StorageGRID.
+
+.Antes de empezar
+* Debe tener la clave de acceso de aprovisionamiento.
+* Debe ejecutar StorageGRID 11,8 o una versión posterior.
+* Tiene la bandeja de ampliación y dos cables SAS por cada bandeja de ampliación.
+* Ha localizado físicamente el dispositivo de almacenamiento en el que va a añadir la bandeja de ampliación en el centro de datos.
++
+link:locating-sgf6112-in-data-center.html["Ubique la controladora en el centro de datos"]
+
+
+
+.Acerca de esta tarea
+Para añadir una bandeja de expansión, debe realizar estos pasos de alto nivel:
+
+* Instale la tornillería en el armario o rack.
+* Coloque el SG6160 en modo de mantenimiento.
+* Conecte la bandeja de expansión a la bandeja de controladoras E4000 o a otra bandeja de expansión.
+* Inicie la ampliación con el instalador de dispositivos de StorageGRID.
+* Espere hasta que se hayan configurado los nuevos volúmenes.
+
+
+Completar el procedimiento para una o dos bandejas de expansión debe llevar una hora o menos por nodo del dispositivo. Para minimizar el tiempo de inactividad, los pasos siguientes le indican que instale las bandejas y unidades de expansión nuevas antes de colocar el SG6160 en modo de mantenimiento. El resto de los pasos deben tardar entre 20 y 30 minutos aproximadamente por nodo de dispositivo.
+
+.Pasos
+. Siga las instrucciones para link:../installconfig/sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html["instalar bandejas de 60 unidades en un armario o rack"].
+. Desde Grid Manager, link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque la controladora SG6100-CN en modo de mantenimiento"].
+. Conecte cada bandeja de expansión a la bandeja de controladoras E4000 como se muestra en el diagrama.
++
+Este dibujo muestra dos estantes de expansión. Si solamente tiene una, conecte IOM A a la controladora A y conecte el IOM B a la controladora B.
+
++
+image::../media/expansion_shelves_connections_sg6160.png[Conexiones de bandeja de expansión SG6160]
+
++
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+SG6100-CN
+
+
+
+ a| 
+2
+ a| 
+Bandeja de controladora E4000
+
+
+
+ a| 
+3
+ a| 
+Controladora a
+
+
+
+ a| 
+4
+ a| 
+Controladora B
+
+
+
+ a| 
+5
+ a| 
+Bandeja de expansión 1
+
+
+
+ a| 
+6
+ a| 
+IOM A para la bandeja de ampliación 1
+
+
+
+ a| 
+7
+ a| 
+IOM B para la bandeja de expansión 1
+
+
+
+ a| 
+8
+ a| 
+Bandeja de expansión 2
+
+
+
+ a| 
+9
+ a| 
+IOM A para bandeja de expansión 2
+
+
+
+ a| 
+10
+ a| 
+IOM B para la bandeja de ampliación 2
+
+|===
+. Conecte los cables de alimentación y aplique alimentación a las bandejas de expansión.
++
+.. Conecte un cable de alimentación a cada una de las dos unidades de alimentación de cada bandeja de expansión.
+.. Conecte los dos cables de alimentación de cada bandeja de expansión a dos PDU diferentes en el armario o rack.
+.. Encienda los dos switches de alimentación para cada bandeja de expansión.
++
+*** No apague los interruptores de alimentación durante el proceso de encendido.
+*** Es posible que los ventiladores de las bandejas de ampliación sean muy ruidosos cuando se inician por primera vez. El ruido fuerte durante el arranque es normal.
+
+
+
+
+. Supervise la página de inicio del instalador de dispositivos de StorageGRID.
++
+En cinco minutos aproximadamente, las bandejas de expansión finalizan y son detectadas por el sistema. En la página Inicio, se muestra el número de bandejas de expansión nuevas detectadas y el botón Iniciar ampliación está habilitado.
+
++
+La captura de pantalla muestra ejemplos de los mensajes que podrían aparecer en la página de inicio, en función del número de bandejas de expansión existentes o nuevas, como se indica a continuación:
+
++
+** El banner con un círculo en la parte superior de la página indica el número total de bandejas de expansión detectadas.
++
+*** El banner indica el número total de bandejas de expansión, si las bandejas están configuradas y puestas en marcha o nuevas y sin configurar.
+*** Si no se detectan bandejas de expansión, el banner no aparecerá.
+
+
+** El mensaje con un círculo en la parte inferior de la página indica que una expansión está lista para iniciarse.
++
+*** El mensaje indica el número de nuevas bandejas de expansión que StorageGRID detecta. "'adjunto'" indica que se ha detectado el estante. "'Unconfigured'" indica que la bandeja es nueva y aún no se ha configurado mediante el instalador de dispositivos de StorageGRID.
++
+
+NOTE: Las bandejas de expansión que ya están implementadas no se incluyen en este mensaje. Se incluyen en el recuento en el banner en la parte superior de la página.
+
+*** El mensaje no aparecerá si no se detectan las nuevas bandejas de expansión.
++
+image::../media/appl_installer_home_expansion_shelf_ready_to_install.png[Instalación de la bandeja de ampliación]
+
+
+
+
+
+. Si es necesario, resuelva los problemas descritos en los mensajes de la página de inicio.
++
+Por ejemplo, use System Manager de SANtricity para resolver cualquier problema de hardware de almacenamiento.
+
+. Compruebe que la cantidad de bandejas de expansión que se muestra en la página Inicio coincide con la cantidad de bandejas de expansión que se está añadiendo.
++
+
+NOTE: Si no se detectan las bandejas de expansión nuevas, compruebe que se hayan conectado correctamente y que se hayan encendido.
+
+. [[START_Expansion]]haga clic en *Iniciar expansión* para configurar las bandejas de expansión y hacer que estén disponibles para el almacenamiento de objetos.
+. Supervise el progreso de la configuración de la bandeja de ampliación.
++
+Las barras de progreso aparecen en la página Web, igual que durante la instalación inicial.
+
++
+image::../media/monitor_expansion_for_new_appliance_shelf.png[Supervise la configuración de la bandeja de expansión]
+
++
+Una vez completada la configuración, el dispositivo se reinicia automáticamente para salir del modo de mantenimiento y volver a unirse a la cuadrícula. Este proceso puede tardar hasta 20 minutos.
+
++
+
+NOTE: Para volver a intentar la configuración de la bandeja de expansión si falla, vaya al instalador de dispositivos StorageGRID, seleccione * Avanzado * > * Reiniciar controlador * y, a continuación, seleccione * Reiniciar en modo de mantenimiento *. Cuando se haya reiniciado el nodo, vuelva a intentar el <<start_expansion,configuración de la bandeja de ampliación>>.
+
++
+Una vez completado el reinicio, la ficha *tareas* se parece a la siguiente captura de pantalla:
+
++
+image::../media/appliance_installer_reboot_complete.png[Reinicio finalizado]
+
+. Compruebe el estado del nodo de almacenamiento del dispositivo y las nuevas bandejas de ampliación.
++
+.. En Grid Manager, seleccione *NODES* y verifique que el nodo de almacenamiento del dispositivo tenga un icono de marca de verificación verde.
++
+El icono de marca de verificación verde significa que no hay alertas activas y el nodo está conectado a la cuadrícula. Para obtener una descripción de los iconos de nodo, consulte https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Supervise los estados de conexión de los nodos"^].
+
+.. Seleccione la ficha *almacenamiento* y confirme que se muestran 16 almacenes de objetos nuevos en la tabla almacenamiento de objetos para cada bandeja de expansión que agregó.
+.. Compruebe que cada bandeja de expansión nueva tenga el estado de bandeja nominal y un estado de configuración de configurado.
+
+
+

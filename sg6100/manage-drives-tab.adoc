@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sgf6112, manage drives tab, locate drive, fail drive, logically replace drive 
 summary: Puede usar la pestaña Gestionar unidades en Grid Manager para realizar tareas de solución de problemas y mantenimiento en las unidades del dispositivo SGF6112. 
 ---
-= Use la pestaña Gestionar unidades
+= Usar la pestaña Gestionar unidades (SGF6112)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

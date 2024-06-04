@@ -1,0 +1,271 @@
+---
+permalink: sg5800/replace-dimms-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Sustituir DIMM en E4000 (SG5800)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede reemplazar un DIMM en E4000 si tiene un error.
+
+.Acerca de esta tarea
+Para sustituir un DIMM, debe verificar el tamaño de caché de la controladora, colocar la controladora en estado sin conexión, quitar la controladora, quitar los DIMM e instalar los nuevos DIMM en la controladora. Luego puede volver a conectar la controladora y verificar que la cabina de almacenamiento funcione correctamente.
+
+Es posible que no se pueda acceder al nodo de almacenamiento del dispositivo cuando se sustituye la controladora. Si el controlador de la serie E4000 funciona lo suficiente, puede hacerlo link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque la controladora SG5800 en modo de mantenimiento"].
+
+.Antes de empezar
+* Asegúrese de tener lo siguiente:
++
+** Un DIMM de reemplazo.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Un área de trabajo plana y estática libre.
+** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
+
+
+* Acceso a SANtricity System Manager:
++
+** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información de la controladora se encuentra en la https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
++
+
+NOTE: Es posible que no pueda acceder a SANtricity System Manager mediante Grid Manager durante determinados pasos de este procedimiento. Si se apaga la controladora SG5800, deberá acceder a SANtricity System Manager desde el explorador.
+
+** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
+
+
+
+
+
+
+== Paso 1: Determine si necesita sustituir un DIMM
+
+Verifique el tamaño de la caché de la controladora antes de sustituir los DIMM.
+
+.Pasos
+. Acceda al perfil de la cabina de almacenamiento de la controladora. Desde el Administrador del sistema de SANtricity, vaya a *Soporte* › *Centro de soporte*. En la página Recursos de soporte, seleccione *Perfil de matriz de almacenamiento*.
+. Desplácese hacia abajo o utilice el campo Buscar para localizar la información *módulo de caché de datos*.
+. Si hay un DIMM o un DIMM fallido que informa de *Data Cache Module* como no óptimo, anote la ubicación del DIMM y continúe reemplazando los DIMM en su controlador.
+
+
+
+
+== Paso 2: Apague la bandeja de controladoras
+
+Apague la controladora para retirar y sustituir los DIMM de forma segura.
+
+.Pasos
+. En SANtricity System Manager, revise los detalles en Recovery Guru para confirmar que existe un problema con una memoria que no coincide y para garantizar que primero no se deban tratar otros elementos.
+. En el área Detalles de Recovery Guru, determine qué DIMM desea reemplazar.
+. Realice un backup de la base de datos de configuración de la cabina de almacenamiento con SANtricity System Manager.
++
+Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración. El sistema guardará el estado actual de la base de datos de configuración RAID, que incluye todos los datos de los grupos de volúmenes y pools de discos en la controladora.
+
++
+** De System Manager:
++
+... Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+... Seleccione *recopilar datos de configuración*.
+... Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta Descargas de su navegador con el nombre, *ConfigurationData-
+<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Apague el controlador SG5800.
++
+.. Inicie sesión en el nodo de grid:
++
+... Introduzca el siguiente comando: `ssh admin@grid_node_IP`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+... Introduzca el siguiente comando para cambiar a la raíz: `su -`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
++
+Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para `#`.
+
+
+
+.. Apague el controlador SG5800:
++
+*`shutdown -h now`*
+
+.. Espere a que se escriban en las unidades todos los datos de la memoria caché.
++
+El LED verde de caché activa de la parte posterior de la controladora E4000 está encendido cuando los datos almacenados en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
+
+
+
+. En la página de inicio del Administrador del sistema de SANtricity, seleccione *Ver operaciones en curso*.
+. Confirme que todas las operaciones se han completado antes de continuar con el siguiente paso.
+. Apague ambos switches de alimentación de la bandeja de controladoras.
+. Espere a que se apagen todos los LED de la bandeja de controladoras.
+
+
+
+
+== Paso 3: Quite el contenedor de controladora
+
+Quite el compartimento de controladoras del sistema y quite la cubierta del compartimento de controladoras.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Afloje la correa de gancho y bucle que une los cables al dispositivo de gestión de cables y, a continuación, desenchufe los cables del sistema y los SFP (si es necesario) del compartimento del controlador, realizando un seguimiento de dónde se conectaron los cables.
++
+Deje los cables en el dispositivo de administración de cables de manera que cuando vuelva a instalar el dispositivo de administración de cables, los cables estén organizados.
+
+. Quite y aparte los dispositivos de gestión de cables de los lados izquierdo y derecho del compartimento de controladoras.
+. Apriete el pestillo de la manija de leva hasta que se suelte, abra por completo la manija de leva para liberar el compartimento de controladoras del plano medio y luego, con dos manos, saque el compartimento de controladoras del chasis.
+. Voltee el compartimento de controladoras y colóquelo en una superficie plana y estable.
+. Abra la cubierta presionando los botones azules en los lados del contenedor del controlador para liberar la cubierta y luego gire la cubierta hacia arriba y hacia afuera del contenedor del controlador.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra la cubierta del compartimento de controladoras.]
+
+
+
+
+
+== Paso 4: Reemplace los DIMM
+
+Localice el DIMM dentro de la controladora, quítelo y sustitúyalo.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Debe realizar un apagado correcto del sistema antes de sustituir componentes del sistema para evitar perder datos no escritos en la memoria no volátil (NVMEM). El LED se encuentra en la parte posterior del compartimento de controladoras.
+. Si el LED de NVMEM no parpadea, no hay contenido en el NVMEM; puede omitir los pasos siguientes y continuar con la siguiente tarea de este procedimiento.
+. Si el LED de NVMEM está parpadeando, hay datos en el NVMEM y debe desconectar la batería para borrar la memoria:
++
+.. Quite la batería del compartimento de controladoras pulsando el botón azul del lado del compartimento de controladoras.
+.. Deslice la batería hacia arriba hasta que se despeje de los soportes de sujeción y, a continuación, levante la batería para sacarla del compartimento de controladoras.
+.. Localice el cable de la batería, presione el clip del enchufe de la batería para liberar el clip de bloqueo de la toma de enchufe y, a continuación, desenchufe el cable de la batería de la toma.
+.. Confirme que el LED de NVMEM ya no está encendido.
+.. Vuelva a conectar el conector de la batería y vuelva a comprobar el LED de la parte posterior del controlador.
+.. Desenchufe el cable de la batería.
+
+
+. Localice los DIMM en el compartimento de controladoras.
+. Anote la orientación y la ubicación del módulo DIMM en el zócalo para poder insertar el módulo DIMM de repuesto en la orientación correcta.
+. Extraiga el DIMM de su ranura empujando lentamente las dos lengüetas expulsoras del DIMM a ambos lados del DIMM y, a continuación, extraiga el DIMM de la ranura.
++
+El módulo DIMM girará un poco hacia arriba.
+
+. Gire el módulo DIMM hasta el tope y, a continuación, deslice el módulo DIMM para extraerlo del socket.
++
+
+NOTE: Sujete con cuidado el módulo DIMM por los bordes para evitar la presión sobre los componentes de la placa de circuitos DIMM.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Quite LOS DIMM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[icono de leyenda 01]
+| Lengüetas del expulsor de DIMM 
+
+
+ a| 
+image::../media/legend_icon_02.png[icono de leyenda 02]
+| DIMM 
+|===
+. Retire el módulo DIMM de repuesto de la bolsa de transporte antiestática, sujete el módulo DIMM por las esquinas y alinéelo con la ranura.
++
+La muesca entre las patillas del DIMM debe alinearse con la lengüeta del zócalo.
+
+. Inserte el módulo DIMM directamente en la ranura.
++
+El módulo DIMM encaja firmemente en la ranura, pero debe entrar fácilmente. Si no es así, realinee el DIMM con la ranura y vuelva a insertarlo.
+
++
+
+NOTE: Inspeccione visualmente el módulo DIMM para comprobar que está alineado de forma uniforme y completamente insertado en la ranura.
+
+. Empuje con cuidado, pero firmemente, en el borde superior del DIMM hasta que las lengüetas expulsoras encajen en su lugar sobre las muescas de los extremos del DIMM.
+. Vuelva a conectar la batería:
++
+.. Enchufe la batería.
+.. Asegúrese de que el enchufe se bloquea en la toma de corriente de la batería de la placa base.
+.. Alinee la batería con los soportes de sujeción de la pared lateral de chapa metálica.
+.. Deslice la batería hacia abajo hasta que el pestillo de la batería se acople y haga clic en la abertura de la pared lateral.
+
+
+. Vuelva a instalar la cubierta del compartimento del controlador.
+
+
+
+
+== Paso 5: Vuelva a instalar el compartimento de controladoras
+
+Vuelva a instalar el compartimento de controladoras en el chasis.
+
+.Pasos
+. Si usted no está ya conectado a tierra, correctamente tierra usted mismo.
+. Si aún no lo ha hecho, sustituya la cubierta del compartimento del controlador.
+. Vuelva a colocar el compartimento de controladoras y alinee el extremo con la apertura del chasis.
+. Empuje suavemente el compartimento de controladoras a la mitad en el sistema. Alinee el extremo del compartimento de controladoras con la apertura del chasis y empuje suavemente el compartimento de controladoras a la mitad en el sistema.
++
+
+NOTE: No inserte por completo el compartimento de controladoras en el chasis hasta que se lo indique.
+
+. Recuperar el sistema, según sea necesario.
+. Complete la reinstalación del compartimento de controladoras:
++
+.. Con el mango de leva en la posición abierta, empuje firmemente el contenedor del controlador hasta que se encuentre con el plano medio y quede completamente asentado, y luego cierre el mango de leva a la posición de bloqueo.
++
+
+NOTE: No ejerza demasiada fuerza al deslizar el compartimento del controlador en el chasis para evitar dañar los conectores.
+
++
+La controladora comienza a arrancar tan pronto como se encuentra en el chasis.
+
+.. Si aún no lo ha hecho, vuelva a instalar el dispositivo de administración de cables.
+.. Conecte los cables al dispositivo de gestión de cables con la correa de gancho y lazo.
+
+
+. Encienda ambos switches de alimentación de la bandeja de controladoras.
+
+
+
+
+== Paso 6: Complete el reemplazo de DIMM
+
+Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.
+
+.Pasos
+. Cuando se arranque la controladora, compruebe los LED de la controladora.
++
+Cuando se restablece la comunicación con otra controladora:
+
++
+** El LED de atención ámbar permanece encendido.
+** Es posible que los LED del enlace de host estén encendidos, parpadeantes o apagados, según la interfaz del host.
+
+
+. Cuando la controladora vuelva a estar en línea, confirme que su estado sea óptimo y compruebe los LED de atención de la bandeja de controladoras.
++
+Si el estado no es óptimo o si alguno de los LED de atención está encendido, confirme que todos los cables están correctamente asentados y que el compartimento de controladoras esté instalado correctamente. Si es necesario, quite y vuelva a instalar el compartimento de controladoras.
+NOTA: Si no puede resolver el problema, póngase en contacto con el soporte técnico.
+
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Seleccione *Soporte › Centro de soporte › Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Confirme que el reinicio ha finalizado y que el nodo se ha vuelto a unir a la cuadrícula. En Grid Manager, verifique que la página *nodes* muestre un estado normal (marca de verificación verde a la izquierda del nombre del nodo) para el nodo del dispositivo, lo que indica que no hay alertas activas y que el nodo está conectado a la cuadrícula.
++
+
+NOTE: Puede que pasen 20 minutos desde que encienda los interruptores de alimentación hasta que el nodo se vuelva a unir a la cuadrícula y muestre un estado normal en Grid Manager.”
+
+

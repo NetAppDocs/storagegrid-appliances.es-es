@@ -15,7 +15,7 @@ El proceso de clonado puede tardar varios días en transferir datos entre el nod
 
 .Antes de empezar
 * Instaló el dispositivo de destino compatible en un armario o rack, conectó todos los cables y aplicó la alimentación.
-* Ha verificado que la versión del instalador de dispositivos StorageGRID del dispositivo de reemplazo coincide con la versión de software de su sistema StorageGRID. Si es necesario, puede actualizar y cambiar a una versión del firmware del instalador de dispositivos StorageGRID.
+* Ha verificado que la versión del instalador de dispositivos StorageGRID del dispositivo de reemplazo coincide con la versión de software de su sistema StorageGRID, puede actualizar o degradar el firmware del instalador de dispositivos de StorageGRID, si es necesario.
 * Configuró el dispositivo de destino, incluida la configuración de conexiones StorageGRID, SANtricity System Manager (solo dispositivos de almacenamiento) y la interfaz BMC.
 +
 ** Al configurar las conexiones StorageGRID, utilice las direcciones IP temporales.

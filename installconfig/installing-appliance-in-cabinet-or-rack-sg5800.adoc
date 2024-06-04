@@ -1,0 +1,93 @@
+---
+permalink: installconfig/installing-appliance-in-cabinet-or-rack-sg5800.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, sg5812, sg5860, install, cabinet, rack, rails, drives 
+summary: Instale un conjunto de rieles en el armario o rack y, a continuación, deslice el dispositivo sobre los rieles. Si tiene un SG5760, instale las unidades después de instalar el dispositivo. 
+---
+= Instale en el armario o rack (SG5800)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instale un conjunto de rieles en el armario o rack y, a continuación, deslice el dispositivo sobre los rieles. Si tiene un SG5860, instale las unidades después de instalar el dispositivo.
+
+.Antes de empezar
+* Ha revisado el https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avisos de seguridad"^] documente el documento incluido en la caja y comprenda las precauciones para mover e instalar el hardware.
+* Tiene las instrucciones incluidas en el kit de raíl.
+
+
+
+
+== Instale SG5812
+
+Siga estos pasos para instalar un dispositivo SG5812 en un rack o armario.
+
+
+CAUTION: Se requieren dos personas o un elevador mecanizado para mover el SG5812 de forma segura.
+
+
+CAUTION: Instale el hardware desde la parte inferior del rack, armario o rack hasta para evitar que el equipo vuelque.
+
+.Pasos
+. Siga las instrucciones del kit de rieles para instalar los rieles.
+. Coloque la parte posterior del aparato (el extremo con los conectores) en los rieles.
+. Deslice con cuidado el aparato completamente hacia atrás en el armario o rack.
+. Fije el aparato al armario o al bastidor tal y como se indica en las instrucciones del kit de guías.
+. Fije el panel frontal en la parte frontal.
+
+
+
+
+== Instale SG5860
+
+Siga estos pasos para instalar un dispositivo SG5860 y cualquier bandeja de expansión en un rack o armario.
+
+
+CAUTION: Instale el hardware desde la parte inferior del rack, armario o rack hasta para evitar que el equipo vuelque.
+
+
+CAUTION: Se requieren cuatro personas o un ascensor mecanizado para mover con seguridad un SG5860 vacío.
+
+
+CAUTION: Para evitar daños en el hardware, nunca mueva un SG5860 si hay unidades instaladas. Debe quitar todas las unidades antes de mover la bandeja.
+
+.Pasos
+. Siga las instrucciones del kit de raíl para instalar los rieles en su armario o rack.
+. Prepárese para mover el aparato:
++
+.. Retire la caja de embalaje exterior.
+.. Pliegue hacia abajo las solapas de la caja interior.
+.. Si va a levantar el SG5860 con la mano, conecte las cuatro asas a los lados del chasis.
++
+Retire estas asas mientras desliza el aparato sobre los rieles.
+
+
+
+. Si su gabinete tiene orificios cuadrados, instale las tuercas de la jaula para que pueda asegurar la parte delantera y trasera del estante con tornillos.
+. Coloque la parte posterior del aparato (el extremo con los conectores) en los rieles.
+. Sostenga el dispositivo desde la parte inferior, deslícelo en el rack o armario.
++
+Utilice los pestillos para quitar las asas mientras desliza el aparato hacia adentro.
+
+. Fije el aparato a la parte delantera del bastidor insertando dos tornillos en el primer y tercer orificio (contando desde la parte superior) de cada lado.
+. Fije el dispositivo a la parte posterior del rack o armario con los soportes.
+. Instale 12 unidades en cada uno de los cinco cajones de unidades.
++
+Debe instalar las 60 unidades para garantizar que su funcionamiento es correcto.
+
++
+.. Coloque la muñequera ESD y retire los accionamientos de su embalaje.
+.. Suelte las palancas del cajón de mando superior y deslice el cajón hacia fuera con las palancas.
+.. Levante el asa de la unidad a la posición vertical y alinee los botones de la unidad con las muescas del cajón.
++
+image::../media/appliance_drive_insertion.gif[Instale la unidad en el dispositivo de 60 unidades]
+
+.. Al presionar suavemente en la parte superior de la unidad, gire la palanca de mando hacia abajo hasta que la unidad encaje en su lugar.
+.. Después de instalar los primeros 12 mandos, deslice el cajón hacia atrás presionando el centro y cerrando ambas palancas con cuidado.
+.. Repita estos pasos para los otros cuatro cajones.
+
+
+. Acople el panel frontal, si se ha suministrado uno.
+

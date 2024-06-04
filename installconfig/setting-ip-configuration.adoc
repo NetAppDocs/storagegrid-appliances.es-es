@@ -23,6 +23,7 @@ Para cambiar la configuración del vínculo, consulte las siguientes instruccion
 * link:../sg100-1000/changing-link-configuration-of-services-appliance.html["Cambie la configuración de enlace del dispositivo de servicios SG100 o SG1000"]
 * link:../sg110-1100/changing-link-configuration-of-services-appliance.html["Cambie la configuración de enlace del dispositivo de servicios SG110 o SG1100"]
 * link:../sg5700/changing-link-configuration-of-e5700sg-controller.html["Cambie la configuración del enlace de la controladora E5700SG"]
+* link:../sg5800/changing-link-configuration-of-sg5800-controller.html["Cambiar la configuración de enlace del controlador SG5800"]
 * link:../sg6000/changing-link-configuration-of-sg6000-cn-controller.html["Cambie la configuración de enlace del controlador SG6000-CN"]
 * link:../sg6100/changing-link-configuration-of-sgf6112-appliance.html["Cambie la configuración de enlace del dispositivo SG6100"]
 

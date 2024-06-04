@@ -68,6 +68,27 @@ CAUTION: *Riesgo de descarga eléctrica* -- antes de conectar los cables de alim
 
 
 --
+.SG5800
+--
+.Antes de empezar
+Ambos interruptores de alimentación del aparato deben estar apagados antes de conectar la alimentación.
+
+
+CAUTION: *Riesgo de descarga eléctrica* -- antes de conectar los cables de alimentación, asegúrese de que los dos interruptores de alimentación del aparato están apagados.
+
+.Pasos
+. Confirme que los dos interruptores de alimentación del aparato están apagados.
+. Conecte los dos cables de alimentación al aparato.
+. Conecte los dos cables de alimentación a diferentes unidades de distribución de alimentación (PDU) en el armario o rack.
+. Encienda los dos interruptores de alimentación del aparato.
++
+** No apague los interruptores de alimentación durante el proceso de encendido.
+** Los ventiladores son muy ruidosos cuando se ponen en marcha por primera vez. El ruido fuerte durante el arranque es normal.
+
+
+
+
+--
 .SG6000
 --
 .Pasos
@@ -109,18 +130,49 @@ No vuelva a pulsar el botón de encendido durante el proceso de encendido.
 --
 .SG6100
 --
+*SGF6112*:
+
 .Pasos
 . Conecte un cable de alimentación a cada una de las dos unidades de alimentación del aparato.
 . Conecte estos dos cables de alimentación a dos unidades de distribución de alimentación (PDU) diferentes en el armario o rack.
 . Si el botón de encendido de la parte frontal del aparato no está iluminado en azul actualmente, pulse el botón para encender el aparato.
+. No vuelva a pulsar el botón de encendido durante el proceso de encendido.
+. El LED de la fuente de alimentación debe iluminarse en verde sin parpadear.
+. Si se producen errores, corrija los problemas.
+. Coloque el bisel frontal en el aparato si lo ha extraído.
+
+
+*SG6160*:
+
+.Pasos
+. Confirmar que ambas controladoras de la bandeja de controladoras de almacenamiento están desactivadas.
++
+
+CAUTION: *Riesgo de descarga eléctrica* -- antes de conectar los cables de alimentación, asegúrese de que los interruptores de alimentación de cada uno de los dos controladores de almacenamiento están apagados.
+
+. Si tiene bandejas de expansión, confirme que ambos switches de alimentación de IOM están apagados.
++
+
+CAUTION: *Riesgo de descarga eléctrica* -- antes de conectar los cables de alimentación, asegúrese de que los dos interruptores de alimentación de cada uno de los estantes de expansión están apagados.
+
+. Conecte un cable de alimentación a cada una de las dos unidades de alimentación del controlador SG6100-CN.
+. Conecte estos dos cables de alimentación a dos unidades de distribución de alimentación (PDU) diferentes en el armario o rack.
+. Conecte un cable de alimentación a cada una de las dos unidades de alimentación de la bandeja del controlador de almacenamiento.
+. Si dispone de bandejas de expansión, conecte un cable de alimentación a cada una de las dos unidades de alimentación de cada bandeja de expansión.
+. Conecte los dos cables de alimentación de cada bandeja de almacenamiento (incluidas las bandejas de expansión opcionales) a dos PDU diferentes en el armario o rack.
+. Si el botón de encendido de la parte frontal del controlador SG6100-CN no está iluminado en azul, pulse el botón para encender el controlador.
 +
 No vuelva a pulsar el botón de encendido durante el proceso de encendido.
 
+. Encienda los dos switches de alimentación en la parte posterior de la bandeja de controladoras de almacenamiento. Si tiene bandejas de expansión, encienda los dos switches de alimentación de cada bandeja.
 +
-El LED de la fuente de alimentación debe iluminarse en verde sin parpadear.
+** No apague los interruptores de alimentación durante el proceso de encendido.
+** Es posible que los ventiladores de la bandeja de controladoras de almacenamiento y las bandejas de expansión opcionales sean muy ruidosos cuando se inician por primera vez. El ruido fuerte durante el arranque es normal.
 
+
+. Una vez arrancados los componentes, compruebe que el botón de encendido en la parte frontal del controlador SG6100-CN esté encendido.
 . Si se producen errores, corrija los problemas.
-. Coloque el bisel frontal en el aparato si lo ha extraído.
+. Conecte el panel frontal a la controladora SG6100-CN si se ha extraído.
 
 
 --

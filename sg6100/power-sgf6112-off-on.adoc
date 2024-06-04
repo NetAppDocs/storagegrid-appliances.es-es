@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, power off, turn off, shut off, shutdown, shut down, power on, turn on, start 
 summary: Puede apagar el dispositivo SGF6112 y volver a encenderlo para realizar tareas de mantenimiento. 
 ---
-= Apague y encienda el dispositivo SGF6112
+= Encienda y apague el dispositivo SGF6112 o la controladora SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Puede apagar el dispositivo SGF6112 y volver a encenderlo para realizar tareas de mantenimiento.
+Puede apagar el dispositivo SGF6112 o la controladora SG6100-CN y volver a encenderlos para realizar tareas de mantenimiento.
 
 
 
-== Apague el dispositivo SGF6112
+== Apague el dispositivo SGF6112 o el controlador SG6100-CN
 
 Apague el dispositivo para realizar las tareas de mantenimiento del hardware.
 
@@ -61,7 +61,7 @@ Este comando puede tardar hasta 10 minutos en completarse.
 
 
 
-== Encienda el SGF6112 y verifique el funcionamiento
+== Encienda SGF6112 o SG6100-CN y verifique el funcionamiento
 
 Encienda la controladora después de completar el mantenimiento.
 
@@ -71,14 +71,13 @@ Encienda la controladora después de completar el mantenimiento.
 
 
 .Pasos
-. Encienda el aparato.
+. Encienda el aparato:
++
+** Opción 1: Presione el interruptor de encendido en la parte delantera del controlador.
 +
 Es posible que tenga que retirar el bisel para acceder al interruptor de encendido; si es así, recuerde volver a instalarlo después.
 
-. Supervise los LED del controlador y los códigos de arranque mediante uno de los métodos siguientes:
-+
-** Pulse el interruptor de alimentación de la parte frontal del controlador.
-** Use la interfaz del BMC del controlador:
+** Opción 2: Use la interfaz de BMC de la controladora:
 +
 ... link:../installconfig/accessing-bmc-interface.html["Acceda a la interfaz de BMC del controlador"].
 ... Seleccione *Control de alimentación*.

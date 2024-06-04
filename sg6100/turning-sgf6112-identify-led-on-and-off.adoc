@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sgf6112, locate, find, locating, finding, identify, blue led, blue light 
 summary: El LED de identificación azul de la parte frontal del aparato se puede encender para ayudar a localizar el aparato en un centro de datos. 
 ---
-= Encienda y apague el LED de identificación del dispositivo SGF6112
+= Encienda y apague el LED de identificación del dispositivo SGF6112 o el controlador SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

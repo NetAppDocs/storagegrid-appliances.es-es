@@ -25,7 +25,7 @@ image::../media/appliance_label.gif[Etiqueta que incluye el número de serie]
 
 NOTE: Existen varios números de serie en el dispositivo de almacenamiento SG6000. El número de serie de la bandeja de la controladora de almacenamiento es el que debe registrarse y usarse si solicita servicio o soporte al dispositivo SG6000.
 
-. Vaya al sitio de soporte de NetApp en http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Vaya a la http://mysupport.netapp.com/["Sitio de soporte de NetApp"^].
 . Determine si necesita registrar el hardware:
 +
 [cols="1a,2a"]

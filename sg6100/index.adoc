@@ -23,7 +23,7 @@ En los procedimientos descritos en esta sección se asume que el dispositivo ya 
 * link:changing-link-configuration-of-sgf6112-appliance.html["Cambie la configuración de enlace del dispositivo"]
 
 
-*Los procedimientos de mantenimiento del hardware* requieren la manipulación física de componentes específicos de SGF6112.
+*Los procedimientos de mantenimiento del hardware* requieren la manipulación física de componentes específicos SGF6112 o SG6160.
 
 
 

@@ -54,7 +54,13 @@ image::../media/sg6000_cn_bmc_management_port.gif[Puerto de gestión BMC de la c
 --
 .SG6100
 --
-image::../media/sgf6112_cn_bmc_management_port.png[SGF6112 puerto de gestión BMC]
+_SGF6112_:
+
+image::../media/sgf6112_cn_bmc_management_port.png[Puerto de gestión SGF6112 de BMC]
+
+_SG6100-CN_:
+
+image::../media/sg6100_cn_bmc_management_port.png[Puerto de gestión BMC SG610-CN]
 
 --
 ====

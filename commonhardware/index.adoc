@@ -40,6 +40,7 @@ Los procedimientos de mantenimiento específicos para cada tipo de dispositivo S
 
 * link:../sg6100/index.html["Mantenimiento del dispositivo SG6100"]
 * link:../sg6000/index.html["Mantenimiento del dispositivo SG6000"]
+* link:../sg5800/index.html["Mantenimiento del dispositivo SG5800"]
 * link:../sg5700/index.html["Mantenga el dispositivo SG5700"]
 * link:../sg110-1100/index.html["Mantenimiento de los dispositivos SG110 y SG1100"]
 * link:../sg100-1000/index.html["Mantenimiento de los dispositivos SG100 y SG1000"]

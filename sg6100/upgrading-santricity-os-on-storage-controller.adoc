@@ -1,0 +1,34 @@
+---
+permalink: sg6100/upgrading-santricity-os-on-storage-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
+summary: Para garantizar el funcionamiento óptimo de la controladora de almacenamiento, debe actualizarse a la versión de mantenimiento más reciente del sistema operativo SANtricity que esté cualificado para su dispositivo StorageGRID. 
+---
+= Actualice el sistema operativo SANtricity en la controladora de almacenamiento SG6160
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantizar el funcionamiento óptimo de la controladora de almacenamiento, debe actualizarse a la versión de mantenimiento más reciente del sistema operativo SANtricity que esté cualificado para su dispositivo StorageGRID.
+
+Determine si ha consultado la última versión del sistema operativo SANtricity apta para su uso en el dispositivo StorageGRID https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"] y descargarlo si es necesario.
+
+Descargue el nuevo archivo de software de sistema operativo SANtricity desde https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^].
+
+Siga uno de los siguientes procedimientos según la versión de SANtricity OS instalada actualmente:
+
+* Puede utilizar Grid Manager para realizar la actualización.
++
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Actualizar el sistema operativo SANtricity en controladoras de almacenamiento mediante Grid Manager"]
+
+* Puede utilizar el modo de mantenimiento para realizar la actualización.
++
+link:upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html["Actualice el sistema operativo SANtricity en la controladora E4000 usando el modo de mantenimiento"]
+
++
+
+NOTE: Para las controladoras de almacenamiento que actualmente utilizan un sistema operativo SANtricity posterior a 08.42.20.00 (11,42), se recomienda hacerlo link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Utilice Grid Manager para aplicar una actualización"]. Sin embargo, puede usar el procedimiento de modo de mantenimiento si lo prefiere o si el soporte técnico le indica hacerlo.
+
+

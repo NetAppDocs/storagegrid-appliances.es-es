@@ -9,6 +9,25 @@ entries:
 - title: Procedimientos de configuración de mantenimiento
   pdf-filename: Procedimientos de configuración de mantenimiento - SG6100
   entries:
+  - title: Actualizar SANtricity (SG6160)
+    entries:
+    - title: Actualizar el sistema operativo SANtricity en controladoras de almacenamiento
+        mediante Grid Manager
+      url: "/sg6100/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html"
+    - title: Actualice el sistema operativo SANtricity en la controladora SG6160 usando
+        el modo de mantenimiento
+      url: "/sg6100/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6160.html"
+  - title: Actualizar el firmware de la unidad mediante SANtricity System Manager
+      (SG6160)
+    entries:
+    - title: Actualice el firmware de la unidad SG6100 mediante el método en línea
+        de SANtricity System Manager
+      url: "/sg6100/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Actualice el firmware de la unidad SG6100 mediante un método sin conexión
+        SANtricity System Manager
+      url: "/sg6100/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
+    - title: Solucione problemas de errores de actualización del firmware de la unidad
+      url: "/sg6100/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html"
   - title: Use la pestaña Gestionar unidades
     url: "/sg6100/manage-drives-tab.html"
   - title: Encienda y apague el LED de identificación
@@ -24,19 +43,53 @@ entries:
   entries:
   - title: Verifique el componente que desea reemplazar
     url: "/sg6100/verify-component-to-replace.html"
-  - title: Sustituya una o varias fuentes de alimentación
-    url: "/sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html"
   - title: Sustituya el ventilador
-    url: "/sg6100/replacing-fan-in-sgf6112.html"
+    entries:
+    - title: SGF6112 O SG6100-CN (SG6160)
+      url: "/sg6100/replacing-fan-in-sgf6112.html"
+    - title: Bandeja de controladoras de almacenamiento o bandeja de ampliación (SG6160)
+      url: "/sg6100/replace-e4000-fan-canister.html"
+  - title: Sustituya el suministro de alimentación
+    entries:
+    - title: SGF6112 O SG6100-CN (SG6160)
+      url: "/sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html"
+    - title: Bandeja de controladoras de almacenamiento o bandeja de ampliación (SG6160)
+      url: "/sg6100/replace-6100-cn-power-canister.html"
   - title: Sustituya la unidad
-    url: "/sg6100/replacing-drive-in-sgf6112.html"
+    entries:
+    - title: SGF6112
+      url: "/sg6100/replacing-drive-in-sgf6112.html"
+    - title: SG6100-CN (SG6160)
+      url: "/sg6100/replace-drive-sg6100-cn.html"
+    - title: Bandeja de controladoras de almacenamiento o bandeja de ampliación (SG6160)
+      url: "/sg6100/replace-6160-drives-60.html"
   - title: Sustituya la NIC
-    url: "/sg6100/replace-nic-in-sgf6112.html"
+    entries:
+    - title: NIC interna (SGF6112 y SG6160)
+      url: "/sg6100/replace-nic-in-sgf6112.html"
+    - title: NIC externa (SG6160)
+      url: "/sg6100/replace-ocp-nic-in-sg6100-cn.html"
   - title: Reemplace la batería CMOS
     url: "/sg6100/replace-cmos-in-sgf6112.html"
+  - title: Reemplace los DIMM
+    url: "/sg6100/replace-dimms-e4000.html"
+  - title: Reemplace las baterías
+    url: "/sg6100/replace-battery-e4000.html"
   - title: Vuelva a colocar la cubierta
     url: "/sg6100/reinstalling-sgf6112-cover.html"
-  - title: Sustituya el dispositivo SGF6112
-    url: "/sg6100/replacing-sgf6112-appliance.html"
-  - title: Reubique SGF6112 en rack
-    url: "/sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html"
+  - title: Añada una bandeja de expansión a SG6160 puesto en marcha
+    url: "/sg6100/adding-expansion-shelf-to-deployed-sg6160.html"
+  - title: Sustituya el aparato
+    entries:
+    - title: SGF6112
+      url: "/sg6100/replacing-sgf6112-appliance.html"
+    - title: CONTROLADORA SG6100-CN (SG6160)
+      url: "/sg6100/replacing-sg6100-cn-controller.html"
+    - title: Controladora E4000 (SG6160)
+      url: "/sg6100/replace-controller-e4000-duplex.html"
+  - title: Reubique en el rack
+    entries:
+    - title: SGF6112
+      url: "/sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html"
+    - title: CONTROLADORA SG6100-CN (SG6160)
+      url: "/sg6100/reinstalling-sg6100-cn-controller-into-cabinet-or-rack.html"

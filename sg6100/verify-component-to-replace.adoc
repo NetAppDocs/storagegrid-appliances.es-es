@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sgf6112 
 summary: Si no está seguro de qué componente de hardware debe sustituir en el dispositivo, complete este procedimiento para identificar el componente y la ubicación del dispositivo en el centro de datos. 
 ---
-= Verifique el componente que se va a sustituir en el SGF6112
+= Verifique el componente para reemplazar en SGF6112 o SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

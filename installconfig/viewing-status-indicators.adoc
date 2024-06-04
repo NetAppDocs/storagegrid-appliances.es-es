@@ -668,6 +668,95 @@ Se produjo un error en la instalación o la comunicación con la controladora E2
 
 
 --
+.SG5800
+--
+Los controladores del aparato incluyen indicadores que le ayudan a determinar el estado del controlador del aparato:
+
+* <<status_indicators_SG5800_controller,Indicadores de estado en el controlador SG5800>>
+* <<general_boot_codes_sg5800,códigos generales de arranque>>
+* <<boot_codes_SG5800_controller,Códigos de arranque del controlador SG5800>>
+* <<error_codes_SG5800_controller,Códigos de error del controlador SG5800>>
+
+
+Use esta información como ayuda link:troubleshooting-hardware-installation.html["Solucionar problemas de instalación de hardware de SG5800"].
+
+[[status_indicators_SG5800_controller]]
+Indicadores de estado en el controlador SG5800::
++
+--
+Una vez iniciado el instalador de dispositivos StorageGRID, debe revisar periódicamente los indicadores de estado del controlador SG5800.
+
+En la siguiente figura, se muestran los indicadores de estado del controlador SG5800.
+
+image::../media/sg5800_leds.png[Indicadores de estado en el controlador SG5800]
+
+[cols="1a,2a,2a"]
+|===
+| Llamada | Mostrar | Descripción 
+
+
+ a| 
+1
+ a| 
+LED de atención
+ a| 
+Ámbar: El controlador está defectuoso y requiere atención del operador, o no se ha encontrado la secuencia de comandos de instalación.
+
+OFF: La controladora funciona con normalidad.
+
+
+
+ a| 
+2
+ a| 
+Indicadores LED de atención del puerto de expansión
+ a| 
+Ámbar: Estos LED siempre son ámbar (no se ha establecido ningún enlace) porque el aparato no utiliza los puertos de expansión.
+
+
+
+ a| 
+3
+ a| 
+Indicadores LED de estado del enlace de puerto de host
+ a| 
+Verde: El enlace está activo.
+
+Desactivado: El enlace está inactivo.
+
+
+
+ a| 
+4
+ a| 
+LED de estado de conexión Ethernet
+ a| 
+Verde: Se ha establecido un enlace.
+
+Desactivado: No se ha establecido ningún enlace.
+
+
+
+ a| 
+5
+ a| 
+Indicadores LED de actividad Ethernet
+ a| 
+Verde: El enlace entre el puerto de gestión y el dispositivo al que está conectado (como un switch Ethernet) está activo.
+
+Desactivado: No hay ningún enlace entre la controladora y el dispositivo conectado.
+
+Verde parpadeante: Hay actividad Ethernet.
+
+|===
+--
+
+
+.Información relacionada
+* https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^]
+
+
+--
 .SG6000
 --
 Los controladores de dispositivos SG6000 incluyen indicadores que le ayudan a determinar el estado del controlador de dispositivos:
@@ -809,7 +898,7 @@ Use esta información como ayuda link:troubleshooting-hardware-installation-sg61
 Botones e indicadores del aparato::
 +
 --
-En la siguiente figura se muestran los indicadores y los botones del aparato SGF6112.
+En la siguiente figura se muestran los indicadores y los botones de los aparatos SG6100.
 
 image::../media/sgf6112_front_indicators.png[Indicadores delanteros - SGF6112]
 
@@ -871,7 +960,7 @@ LED de estado
  a| 
 PFR
  a| 
-El aparato SGF6112 no utiliza esta luz y permanece apagada.
+Esta luz no es utilizada por los aparatos SG6100 y permanece apagada.
 
 |===
 --
@@ -898,7 +987,7 @@ Para ver los códigos de error y arranque, link:accessing-bmc-interface.html["Ac
 Indicadores de SSD::
 +
 --
-En la siguiente figura se muestran los indicadores de SSD en el dispositivo SGF6112.
+En la siguiente figura se muestran los indicadores SSD en el dispositivo SGF6112 o SG6160.
 
 image::../media/ssd_indicators.png[Indicadores SSD]
 
@@ -917,7 +1006,7 @@ Estado/fallo de la unidad
 * Desactivado: La ranura está vacía
 
 
-* Nota: * Si se inserta una nueva SSD en funcionamiento en un nodo StorageGRID SGF6112 en funcionamiento, los led en la SSD deben parpadear inicialmente, pero dejar de parpadear tan pronto como el sistema determine que la unidad tiene suficiente capacidad y es funcional.
+* Nota: * Si se inserta una nueva SSD en funcionamiento en un nodo StorageGRID SGF6112 o SG6160 en funcionamiento, los LED de la SSD deben parpadear inicialmente, pero dejar de parpadear tan pronto como el sistema determine que la unidad tiene suficiente capacidad y es funcional.
 
 
 
@@ -930,6 +1019,10 @@ Azul (parpadeante): Se está accediendo a la unidad
 
 |===
 --
+
+
+.Información relacionada
+* https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^]
 
 
 --

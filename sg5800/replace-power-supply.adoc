@@ -1,0 +1,166 @@
+---
+permalink: sg5800/replace-power-supply.html 
+sidebar: sidebar 
+keywords: E4000 replace canister, replacing E4000 canister, E4000 replace power supply, replacing E4000 power supply, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
+summary: Puede sustituir una fuente de alimentación en SG5812. 
+---
+= Sustituya la fuente de alimentación en SG5812
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede sustituir un suministro de alimentación de un SG5812.
+
+.Acerca de esta tarea
+Si planea sustituir una fuente de alimentación, tenga en cuenta los siguientes requisitos.
+
+* Debe disponer de un suministro de alimentación de reemplazo que sea compatible con el dispositivo.
+* Tiene una muñequera ESD o ha tomado otras precauciones antiestáticas.
++
+
+NOTE: No mezcle fuentes de alimentación de los diferentes tipos de tensión. Sustituya siempre como por ejemplo.
+
+
+
+.Antes de empezar
+* Revise los detalles en Recovery Guru para confirmar que hay un problema con el suministro de alimentación. Seleccione *Volver a comprobar* en Recovery Guru para asegurarse de que no se deba tratar primero ningún otro elemento.
+* Compruebe que el LED de atención ámbar de la fuente de alimentación está encendido, lo que indica que la fuente de alimentación o el ventilador integrado tienen un fallo. Póngase en contacto con el soporte técnico para obtener ayuda si las dos fuentes de alimentación de la bandeja tienen encendidos los LED de atención ámbar.
+* Asegúrese de tener lo siguiente:
++
+** Un suministro de alimentación de reemplazo que se admite para el modelo de dispositivo controladora.
+** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
+** Acceso a SANtricity System Manager:
++
+*** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información de la controladora se encuentra en la https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+*** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
+
+
+
+
+
+
+
+
+== Paso 1: Prepárese para sustituir la fuente de alimentación
+
+Prepárese para sustituir una fuente de alimentación.
+
+.Pasos
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Selecciona *Soporte > Centro de soporte > Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. En SANtricity System Manager, determine qué suministro de alimentación ha fallado.
++
+Esta información se puede encontrar en el área Detalles de Recovery Guru, o bien se puede revisar la información mostrada para la bandeja.
+
++
+.. Seleccione *hardware*.
+.. Mira la potencia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] y ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Iconos a la derecha de las listas desplegables *Shelf* para determinar qué estante tiene la fuente de alimentación fallida.
++
+Si un componente ha fallado, estos iconos o ambos son de color rojo.
+
+.. Cuando encuentre la bandeja con un icono rojo, seleccione *Mostrar parte posterior de la bandeja*.
+.. Seleccione cualquiera de las fuentes de alimentación.
+.. En las pestañas *fuentes de alimentación* y *ventiladores*, observe los Estados de los contenedores de alimentación-ventiladores, las fuentes de alimentación y los ventiladores para determinar qué fuente de alimentación debe sustituirse.
++
+Es necesario sustituir un componente con un estado *fallido*.
+
++
+
+CAUTION: Si el segundo contenedor de alimentación de la bandeja no tiene el estado *óptimo*, no intente intercambiar en caliente la fuente de alimentación que ha fallado. En su lugar, póngase en contacto con el soporte técnico para obtener ayuda.
+
+
+
+. Desde la parte posterior de la cabina de almacenamiento, observe los LED de atención para localizar el suministro de alimentación que debe quitar.
++
+Debe sustituir la fuente de alimentación que tenga encendido el LED de atención.
+
+
+
+
+
+== Paso 2: Retire la fuente de alimentación defectuosa
+
+Quite una fuente de alimentación con fallos para poder reemplazarla por una nueva.
+
+.Pasos
+. Desembale la nueva fuente de alimentación y configúrela en una superficie nivelada cerca de la bandeja de unidades.
++
+Guarde todos los materiales de embalaje para utilizarlos cuando devuelva la fuente de alimentación fallida.
+
+. Apague la fuente de alimentación y desconecte los cables de alimentación:
++
+.. Apague el interruptor de alimentación de la fuente de alimentación.
+.. Abra el retenedor del cable de alimentación y desconecte el cable de alimentación de la fuente de alimentación.
+.. Desenchufe el cable de alimentación de la fuente de alimentación.
+
+
+. Apriete el pestillo del mango de la leva de la fuente de alimentación y, a continuación, abra el asa de la leva para liberar completamente la fuente de alimentación del plano medio.
+. Utilice el asa de leva para extraer la fuente de alimentación del sistema.
++
+
+CAUTION: Al extraer una fuente de alimentación, utilice siempre dos manos para soportar su peso.
+
+
+
+
+
+== Paso 3: Instale una nueva fuente de alimentación
+
+Instale una fuente de alimentación nueva para sustituir la que ha fallado.
+
+.Pasos
+. Asegúrese de que el interruptor de encendido/apagado de la nueva fuente de alimentación esté en la posición *Off*.
+. Con ambas manos, sujete y alinee los bordes de la fuente de alimentación con la abertura del chasis del sistema y, a continuación, empuje suavemente la fuente de alimentación hacia el chasis con el asa de leva.
++
+Las fuentes de alimentación están codificadas y sólo se pueden instalar de una manera.
+
++
+
+CAUTION: No ejerza demasiada fuerza al deslizar la fuente de alimentación en el sistema, ya que puede dañar el conector.
+
+. Cierre el asa de la leva de forma que el pestillo encaje en la posición de bloqueo y la fuente de alimentación esté completamente asentada.
+. Vuelva a conectar el cableado de la fuente de alimentación:
++
+.. Vuelva a conectar el cable de alimentación a la fuente de alimentación y a la fuente de alimentación.
+.. Fije el cable de alimentación a la fuente de alimentación con el retenedor del cable de alimentación.
+
+
+. Encienda el compartimento de suministro de alimentación nuevo.
+
+
+
+
+== Paso 4: Sustitución completa de la fuente de alimentación
+
+Confirme que el nuevo suministro de alimentación funciona correctamente, recopile datos de soporte y reanude las operaciones normales.
+
+.Pasos
+. En la nueva fuente de alimentación, compruebe que el LED verde de alimentación está encendido y que el LED de atención ámbar está APAGADO.
+. En Recovery Guru en SANtricity System Manager, seleccione *Volver a comprobar* para verificar que se haya resuelto el problema.
+. Si todavía se notifica un suministro de alimentación con errores, repita los pasos en <<Paso 2: Retire la fuente de alimentación defectuosa>>, y en <<Paso 3: Instale una nueva fuente de alimentación>>. Si el problema continúa, póngase en contacto con el soporte técnico.
+. Retire la protección antiestática.
+. Recoja datos de soporte para la cabina de almacenamiento mediante SANtricity System Manager.
++
+.. Selecciona *Soporte > Centro de soporte > Diagnóstico*.
+.. Seleccione *recopilar datos de soporte*.
+.. Haga clic en *recoger*.
++
+El archivo se guarda en la carpeta de descargas del explorador con el nombre *support-data.7z*.
+
+
+
+. Devuelva la pieza que ha fallado a NetApp, como se describe en las instrucciones de RMA que se suministran con el kit.
+
+
+.El futuro
+Se completó la sustitución del suministro de alimentación. Es posible reanudar las operaciones normales.

@@ -25,6 +25,13 @@ Antes de instalar el dispositivo, debe asegurarse de que el sitio y el armario o
  a| 
 SG100 y SG1000
  a| 
+De 120 a 240 voltios de CA
+
+
+
+ a| 
+SG5712
+ a| 
 120 a 240 voltios CA
 
 
@@ -38,6 +45,20 @@ SG110 y SG1100
 
  a| 
 SG5760
+ a| 
+240 VOLTIOS CA
+
+
+
+ a| 
+SG5812
+ a| 
+De 120 a 240 voltios de CA
+
+
+
+ a| 
+SG5860
  a| 
 240 VOLTIOS CA
 
@@ -60,7 +81,14 @@ SG6060
  a| 
 SGF6112
  a| 
-100 a 240 voltios CA
+De 100 a 240 voltios de CA
+
+
+
+ a| 
+SG6160
+ a| 
+240 VOLTIOS CA
 
 |===
 . Obtenga un armario o rack de 19 pulgadas (48,3 cm) para adaptarse a estantes del siguiente tamaño (sin cables).
@@ -172,6 +200,59 @@ SG5760
 
 |===
 --
+.SG5800
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modelo de dispositivo | Altura | Anchura | Profundidad | Peso máximo 
+
+
+ a| 
+SG5812
+
+(12 unidades)
+ a| 
+3,4 pda
+
+(8,6 in)
+ a| 
+17,6 pda
+
+(44,8 in)
+ a| 
+21,1 pda
+
+(53,6 in)
+ a| 
+64,92 lb
+
+(29,45 kg)
+
+
+
+ a| 
+SG5860
+
+(60 unidades)
+ a| 
+7,0 pda
+
+(17,8 in)
+ a| 
+17,6 pda
+
+(44,8 in)
+ a| 
+37,8 pda
+
+(92,2 in)
+ a| 
+253,0 lb
+
+(114,76 kg)
+
+|===
+--
 .SG6000
 --
 [cols="2a,1a,1a,1a,1a"]
@@ -265,19 +346,21 @@ Controladora de computación SG6000-CN
 --
 .SG6100
 --
-[cols="1a,1a,1a,1a"]
+[cols="1a,1a,1a,1a,1a"]
 |===
-| Altura | Anchura | Profundidad | Peso máximo 
+| Modelo/tipo de dispositivo de bandeja | Altura | Anchura | Profundidad | Peso máximo 
 
 
+ a| 
+Dispositivo SGF6112
  a| 
 1,70 pda
 
 (4,31 in)
  a| 
-18,98 pda
+17,32 pda
 
-(48,2 in)
+(44,0 in)
  a| 
 33,11 pda
 
@@ -287,17 +370,80 @@ Controladora de computación SG6000-CN
 
 (19,88 kg)
 
+
+
+ a| 
+Controladora de computación SG6100-CN (SG6160)
+ a| 
+1,70 pda
+
+(4,32 in)
+ a| 
+17,32 pda
+
+(44,0 in)
+ a| 
+33,11 pda
+
+(84,1 in)
+ a| 
+40,98 lb
+
+(18,59 kg)
+
+
+
+ a| 
+Bandeja de controladora E4060 (SG6160)
+ a| 
+6,87 pda
+
+(17,45 in)
+ a| 
+17,64 pda
+
+(44,8 in)
+ a| 
+36,3 pda
+
+(97,16 in)
+ a| 
+223,58 lb
+
+(101,42 kg)
+
+
+
+ a| 
+Bandeja de expansión (SG6160): Opcional
+ a| 
+6,87 pda
+
+(17,45 in)
+ a| 
+17,64 pda
+
+(44,8 in)
+ a| 
+36,3 pda
+
+(97,16 in)
+ a| 
+223,58 lb
+
+(101,42 kg)
+
 |===
 --
 ====
 . Decida dónde va a instalar el aparato.
 +
 
-CAUTION: Al instalar la bandeja de controladoras E2860 o las bandejas de expansión opcionales, instale el hardware desde la parte inferior hasta la parte superior del rack o armario para evitar que el equipo se vuelque. Para garantizar que el equipo más pesado se encuentra en la parte inferior del armario o bastidor, instale el controlador SG6000-CN encima de la bandeja de controladores E2860 y las bandejas de expansión.
+CAUTION: Cuando instale la bandeja de controladoras E2860 o E4000 o las bandejas de expansión opcionales, instale el hardware de la parte inferior a la parte superior del rack o armario para evitar que el equipo se vuelque. Para garantizar que el equipo más pesado se encuentre en la parte inferior del armario o rack, instale la controladora SG6000-CN o SG6100-CN por encima de la bandeja de controladoras E2860 o E4000 y las bandejas de expansión.
 
 +
 
-NOTE: Antes de realizar la instalación, compruebe que los cables ópticos 0,5m que se suministran con un dispositivo SG6000 o los cables que suministre sean lo suficientemente largos para el diseño planificado.
+NOTE: Antes de realizar la instalación, compruebe que los cables que se suministran con un dispositivo SG6000 o SG6100, o los cables que suministra, sean lo suficientemente largos para la disposición planificada.
 
 . Instale los switches de red necesarios. Consulte link:https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp"^] para obtener información sobre compatibilidad.
 

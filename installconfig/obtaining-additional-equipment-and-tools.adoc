@@ -149,6 +149,23 @@ Cables Ethernet:: Elevación mecanizada para SG5760
 
 
 --
+.SG5800
+--
+Necesita el siguiente equipo adicional para instalar y configurar el hardware de SG5800.
+
+Cables y transceptores SFP::
++
+--
+* Cables para los puertos 10/25-GbE que planea utilizar
+* Opcional: Transceptores SFP28 si desea utilizar la velocidad de enlace de 25 GbE y tener cables ópticos
+* Opcional: Transceptores SFP+ si desea utilizar la velocidad de enlace de 10 GbE y tener cables ópticos
+
+
+--
+Cables Ethernet:: Elevación mecanizada para SG5860
+
+
+--
 .SG6000
 --
 Necesita el siguiente equipo adicional para instalar y configurar el hardware de SG6000.
@@ -178,9 +195,9 @@ Herramientas opcionales:: Elevación mecanizada para estantes de 60 unidades
 --
 .SG6100
 --
-Necesita el siguiente equipo adicional para instalar y configurar el hardware de SGF6112.
+Necesita el siguiente equipo adicional para instalar y configurar el hardware de SG6100.
 
-Cables ópticos y transmisores::
+Cables y transmisores::
 +
 --
 * Cables, de 1 a 4 de cualquiera de los dos:
@@ -189,16 +206,18 @@ Cables ópticos y transmisores::
 ** Fibra óptica
 
 
-* Transceptores/adaptadores, de 1 a 4 de cada uno, según la velocidad del enlace (no se admiten velocidades mixtas):
+* Transceptores/adaptadores, de 1 a 8 de cada uno, según la velocidad del enlace (no se admiten velocidades mixtas):
 +
 ** 10 GbE SFP+
 ** 25 GbE SFP28
+** 100 GbE QSFP28
 
 
 
 
 --
 Cables Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+Herramientas opcionales:: Elevación mecanizada para estantes de 60 unidades
 
 
 --

@@ -1,0 +1,85 @@
+---
+permalink: installconfig/sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
+summary: Instale un conjunto de rieles para la bandeja de controladoras E4000 en el armario o rack y, a continuación, deslice la bandeja de controladoras sobre los rieles. Si va a instalar bandejas de expansión de 60 unidades, aplica el mismo procedimiento. 
+---
+= Instalación de las bandejas de 60 unidades (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instale un conjunto de rieles para la bandeja de controladoras E4000 en el armario o rack y, a continuación, deslice la bandeja de controladoras sobre los rieles. Si va a instalar bandejas de expansión de 60 unidades, aplica el mismo procedimiento.
+
+.Antes de empezar
+* Ha revisado el https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avisos de seguridad"^] documente el documento incluido en la caja y comprenda las precauciones para mover e instalar el hardware.
+* Tiene las instrucciones incluidas en el kit de raíl.
+
+
+
+CAUTION: Para evitar que se dañe el hardware, no mueva nunca la bandeja si hay unidades instaladas. Debe quitar todas las unidades antes de mover la bandeja.
+
+
+CAUTION: Cuando instale la bandeja de controladoras E4000 o las bandejas de expansión opcionales, instale el hardware de la parte inferior a la parte superior del rack o armario para evitar que el equipo se vuelque. Para garantizar que el equipo más pesado se encuentre en la parte inferior del armario o rack, instale la controladora SG6100-CN encima de la bandeja de controladoras E4000 y las bandejas de expansión.
+
+
+CAUTION: Antes de realizar la instalación, compruebe que los cables que se suministran con el aparato o los cables que suministra son lo suficientemente largos para el diseño planificado.
+
+.Pasos
+. Siga con cuidado las instrucciones del kit de raíl para instalar los rieles en su armario o rack.
++
+Para armarios con orificios cuadrados, instale primero las tuercas de jaula proporcionadas para fijar la parte delantera y trasera del estante con tornillos.
+
+. Retire la caja de embalaje exterior del aparato. A continuación, pliegue las solapas de la caja interior.
+. Si está levantando el aparato a mano, fije las cuatro asas a los lados del chasis.
++
+Empuje cada asa hasta que encaje en su sitio.
+
++
+image::../media/lift_handles.gif[Levante las asas]
+
+. Coloque la parte posterior de la bandeja (el extremo con los conectores) en los rieles.
+. Apoye la estantería desde la parte inferior y deslícela en el armario. Si está utilizando las asas, utilice los cierres para separar un asa a la vez mientras desliza el estante en.
++
+Para quitar las asas, tire hacia atrás del pestillo de liberación, empuje hacia abajo y tire hacia fuera de la bandeja.
+
+. Fije la bandeja a la parte frontal del armario.
++
+Inserte los tornillos en el primer y tercer orificio de la parte superior de la bandeja en ambos lados.
+
+. Fije la bandeja a la parte posterior del armario.
++
+Coloque dos soportes traseros a cada lado de la parte superior trasera del estante. Inserte los tornillos en el primer y tercer orificio de cada soporte.
+
++
+image::../media/mount_hardware.gif[Monte hardware]
+
+. Repita estos pasos para todas las bandejas de ampliación.
+. Instale 12 unidades NL-SAS en cada uno de los cinco cajones de unidades.
++
+.. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+.. Suelte las palancas del cajón de mando superior y deslice el cajón hacia fuera con las palancas.
+.. Levante cada palanca de mando a una posición vertical.
+.. Coloque con cuidado cada unidad en su ranura y baje el asa de la unidad levantada hasta que encaje en su lugar.
++
+image::../media/install_drives_in_e2860.gif[Instale las unidades]
+
+.. Instale unidades NL-SAS de 12 TB en el cajón superior.
+.. Deslice el cajón hacia atrás presionando el centro y cerrando ambas palancas con cuidado.
++
+
+CAUTION: Deje de empujar el cajón si siente que está agarrotado. Utilice las palancas de liberación de la parte delantera del cajón para desdeslizar el cajón hacia atrás. A continuación, vuelva a insertar con cuidado el cajón en la ranura.
+
+.. Repita estos pasos para instalar las unidades NL-SAS en los otros cuatro cajones.
++
+
+CAUTION: Debe instalar las 60 unidades para garantizar que su funcionamiento es correcto.
+
+.. Conecte el panel frontal a la bandeja, si se proporcionó uno.
+
+
+. Si cuenta con bandejas de expansión, repita estos pasos para instalar 12 unidades NL-SAS en cada cajón de cada bandeja de expansión.
+. Continúe con las instrucciones para instalar SG6100-CN en un armario o rack.
+

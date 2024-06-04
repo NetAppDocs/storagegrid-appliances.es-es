@@ -4,23 +4,23 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, storage node, storage appliance, install, installing, installation, cabinet, rack 
 summary: Retire el SGF6112 de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente. A continuación, vuelva a instalarlo en un armario o rack cuando haya finalizado el mantenimiento del hardware. 
 ---
-= Reubique SGF6112 en el armario o rack
+= Reubique SGF6112 o SG6100-CN en el armario o rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Retire el SGF6112 de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente. A continuación, vuelva a instalarlo en un armario o rack cuando haya finalizado el mantenimiento del hardware.
+Quite el SGF6112 o SG6100-CN de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente; a continuación, vuelva a instalar el dispositivo en un armario o rack cuando haya finalizado el mantenimiento del hardware.
 
 
 
-== Quite SGF6112 del armario o rack
+== Quite SGF6112 o SG6100-CN del armario o rack
 
 .Antes de empezar
-* Tiene etiquetas para identificar cada cable que está conectado al SGF6112.
-* Ya tienes link:locating-sgf6112-in-data-center.html["Físicamente ubicado el SGF6112"] dónde se realiza el mantenimiento en el centro de datos.
-* Ya tienes link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Apague el SGF6112"].
+* Tiene etiquetas para identificar cada cable que está conectado al SGF6112 o SG6100-CN.
+* Ya tienes link:locating-sgf6112-in-data-center.html["Ubicación física del SGF6112 o SG6100-CN"] dónde se realiza el mantenimiento en el centro de datos.
+* Ya tienes link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Apague el SGF6112 o el SG6100-CN"].
 +
 
 CAUTION: No apague el aparato con el interruptor de alimentación.
@@ -37,9 +37,9 @@ NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pis
 
 . Afloje los dos tornillos cautivos del panel frontal del aparato.
 +
-image::../media/sg6060_rack_retaining_screws.png[SGF6112 tornillos de retención del bastidor]
+image::../media/sg6060_rack_retaining_screws.png[Tornillos de retención del rack SGF6112 o SG6100-CN]
 
-. Deslice el SGF6112 hacia delante para sacarlo del rack hasta que los raíles de montaje estén completamente extendidos y oiga un clic en los pestillos de ambos lados.
+. Deslice el SGF6112 o el SG6100-CN hacia delante fuera del bastidor hasta que los rieles de montaje estén completamente extendidos y oiga un clic en los pestillos de ambos lados.
 +
 Se puede acceder a la cubierta superior del aparato.
 
@@ -50,7 +50,7 @@ Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como s
 
 
 
-== Vuelva a instalar SGF6112 en el armario o rack
+== Vuelva a instalar SGF6112 o SG6100-CN en el armario o rack
 
 .Antes de empezar
 Ya tienes link:reinstalling-sgf6112-cover.html["vuelva a instalar la cubierta del aparato"].

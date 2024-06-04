@@ -1,7 +1,7 @@
 ---
 permalink: installconfig/gathering-installation-information-sg6100.html 
 sidebar: sidebar 
-keywords: storagegrid, sg6100, sgf6112, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup 
+keywords: storagegrid, sg6100, sgf6112, SG6160, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup 
 summary: En las siguientes tablas, registre la información necesaria para cada red que conecte al dispositivo. Estos valores son necesarios para instalar y configurar el hardware. 
 ---
 = Recopilar información de red (SG6100)
@@ -20,7 +20,7 @@ TIP: En lugar de utilizar las tablas, utilice el libro de trabajo proporcionado 
 
 == Compruebe la versión de StorageGRID
 
-Antes de instalar un dispositivo SGF6112, confirme que el sistema StorageGRID está usando una versión necesaria del software StorageGRID.
+Antes de instalar un dispositivo SGF6112 o SG6160, confirme que el sistema StorageGRID está usando una versión necesaria del software StorageGRID.
 
 [cols="1a,2a"]
 |===
@@ -32,6 +32,113 @@ SGF6112
  a| 
 11,7 o posterior (se recomienda la última revisión)
 
+
+
+ a| 
+SG6160
+ a| 
+11,8 o posterior (se recomienda la última revisión)
+
+|===
+
+
+== Conéctese a SANtricity System Manager
+
+Usted conecta las dos controladoras de almacenamiento del dispositivo SG6160 a la red de gestión que utilizará para System Manager de SANtricity. La controladora A está en la parte superior y la controladora B en la inferior.
+
+[cols="2a,1a,1a"]
+|===
+| Información necesaria | Su valor para la controladora A | Su valor para la controladora B. 
+
+
+ a| 
+Puerto del switch Ethernet que se conectará al puerto de gestión 1 (con la etiqueta P1 en la controladora)
+ a| 
+ a| 
+
+
+
+ a| 
+Dirección MAC del puerto de gestión 1 (impreso en una etiqueta cerca del puerto P1)
+ a| 
+ a| 
+
+
+
+ a| 
+Dirección IP asignada por DHCP para el puerto de gestión 1, si está disponible después de encenderse
+
+*Nota:* Si la red que va a conectar al controlador de almacenamiento incluye un servidor DHCP, el administrador de red puede utilizar la dirección MAC para determinar la dirección IP asignada por el servidor DHCP.
+ a| 
+ a| 
+
+
+
+ a| 
+Dirección IP estática que planea usar para el dispositivo en la red de gestión
+ a| 
+Para IPv4:
+
+* Dirección IPv4:
+* Máscara de subred:
+* Puerta de enlace:
+
+
+Para IPv6:
+
+* Dirección IPv6:
+* Dirección IP enrutable:
+* Dirección IP del enrutador de la controladora de almacenamiento:
+
+ a| 
+Para IPv4:
+
+* Dirección IPv4:
+* Máscara de subred:
+* Puerta de enlace:
+
+
+Para IPv6:
+
+* Dirección IPv6:
+* Dirección IP enrutable:
+* Dirección IP del enrutador de la controladora de almacenamiento:
+
+
+
+
+ a| 
+Formato de dirección IP
+ a| 
+Elija una opción:
+
+* IPv4
+* IPv6
+
+ a| 
+Elija una opción:
+
+* IPv4
+* IPv6
+
+
+
+
+ a| 
+Velocidad y modo doble
+
+*Nota:* debe asegurarse de que el conmutador Ethernet de la red de administración de SANtricity System Manager está establecido en Negotiate automático.
+ a| 
+Debe ser:
+
+* Autonegociar (predeterminado)
+
+ a| 
+Debe ser:
+
+* Autonegociar (predeterminado)
+
+
 |===
 
 
@@ -39,9 +146,13 @@ SGF6112
 
 La red de administración de StorageGRID es una red opcional que se utiliza para la administración y el mantenimiento del sistema. El dispositivo se conecta a la red de administración a través de los siguientes puertos 1/10 GbE del dispositivo.
 
-En la siguiente figura se muestran los puertos RJ-45 del dispositivo SGF6112.
+Puertos RJ-45 en el dispositivo SGF6112:
 
 image::../media/sg6100_rj_45_ports_circled.png[SGF6112 puertos RJ-45]
+
+Puertos RJ-45 en la controladora SG6100-CN:
+
+image::../media/sg6100_cn_rj_45_ports_circled.png[SG6100-CN PUERTOS RJ-45]
 
 [cols="2a,1a"]
 |===
@@ -123,11 +234,12 @@ Los cuatro puertos de red del dispositivo se conectan a la red Grid de StorageGR
  a| 
 Velocidad de enlace
  a| 
-Para SGF6112, elija una de las siguientes opciones:
+Elija una opción:
 
 * Automático (predeterminado)
 * 10 GbE
 * 25 GbE
+* 100 GbE (solo SG6160)
 
 
 
@@ -318,9 +430,15 @@ NOTE: Es posible habilitar o deshabilitar el acceso IPMI remoto para todos los d
 En Grid Manager, vaya a *CONFIGURACIÓN* > *SEGURIDAD* > *CONFIGURACIÓN DE SEGURIDAD* > *Electrodomésticos* y desactive la casilla de verificación *Habilitar acceso remoto a IPMI*. +
 En la API de administración de grid, utilice el extremo privado: `PUT /private/bmc`.
 
-La siguiente figura muestra el puerto de gestión BMC en el dispositivo SGF6112.
+Las siguientes figuras muestran el puerto de gestión BMC en SGF6112 y SG6100-CN.
 
-image::../media/sgf6112_cn_bmc_management_port.png[Puerto de gestión de SG6100 GbE]
+_SGF6112_
+
+image::../media/sgf6112_cn_bmc_management_port.png[Puerto de gestión de SGF6112 GbE]
+
+_SG6100-CN_
+
+image::../media/sg6100_cn_bmc_management_port.png[Puerto de gestión SG6100-CN]
 
 [cols="2a,1a"]
 |===
@@ -368,7 +486,13 @@ Los puertos de red del dispositivo admiten el modo de enlace de puerto fijo o el
 
 El modo de enlace de puerto fijo es la configuración predeterminada de los puertos de red.
 
+_SGF6112:_
+
 image::../media/sgf6112_fixed_port.png[SGF6112 Modo de enlace de puerto fijo]
+
+_SG6100-CN:_
+
+image::../media/sg6100_cn_fixed_port.png[SG6100-CN Modo de enlace de puerto fijo]
 
 [cols="1a,3a"]
 |===
@@ -403,7 +527,13 @@ NOTE: Si no necesita conexiones redundantes, puede utilizar solo un puerto para 
 
 El modo de enlace de puerto de agregado aumenta de manera significativa el rendimiento de cada red StorageGRID y proporciona rutas de conmutación al respaldo adicionales.
 
-image::../media/sgf6112_aggregate_ports.png[SGF6100 modos de unión de puertos agregados]
+_SGF6112:_
+
+image::../media/sgf6112_aggregate_ports.png[SGF6112 modos de unión de puertos agregados]
+
+_SG6100-CN:_
+
+image::../media/sg6100_cn_aggregate_ports.png[SG6100-CN modo de enlace de puertos de agregados]
 
 [cols="1a,3a"]
 |===
@@ -435,7 +565,13 @@ NOTE: Si decide utilizar menos de cuatro puertos de red, tenga en cuenta que pue
 
 En el caso de los dos puertos de gestión de 1/10 GbE, puede seleccionar el modo de vínculo de red independiente o el modo de vínculo de red Active-Backup para conectarse a la red de administración opcional.
 
-image::../media/sgf6112_bonded_management_ports.png[Puertos de gestión de red]
+_SGF6112:_
+
+image::../media/sgf6112_bonded_management_ports.png[SGF6112 puertos de gestión de red]
+
+_SG6100-CN:_
+
+image::../media/sg6100_cn_bonded_management_ports.png[SG6100-CN Puertos de gestión de red]
 
 [cols="1a,3a"]
 |===

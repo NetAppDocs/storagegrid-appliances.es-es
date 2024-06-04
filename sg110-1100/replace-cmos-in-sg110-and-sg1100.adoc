@@ -37,7 +37,7 @@ NOTE: A. link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-a
 Para evitar interrupciones del servicio, confirme que todos los demás nodos de almacenamiento están conectados a la red antes de iniciar la sustitución de la batería CMOS o reemplace la batería durante una ventana de mantenimiento programada cuando los períodos de interrupción del servicio sean aceptables. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
 
 
-CAUTION: Si alguna vez utilizó una regla de ILM que crea solo una copia de un objeto, debe sustituir la batería durante una ventana de mantenimiento programada. De lo contrario, es posible que pierda temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
+CAUTION: Si alguna vez ha utilizado una regla de ILM que crea solo una copia de un objeto, debe sustituir la batería durante una ventana de mantenimiento programada porque podría perder temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
 
 .Pasos
 . Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.

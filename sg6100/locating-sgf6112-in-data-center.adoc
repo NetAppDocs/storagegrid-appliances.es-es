@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, appliance, locate, find, locating, finding, identify, blue led, blue light 
 summary: Busque el dispositivo para que pueda realizar tareas de mantenimiento o actualizaciones del hardware. 
 ---
-= Localice el dispositivo SGF6112 en el centro de datos
+= Localice el dispositivo SGF6112 o la controladora SG6100-CN en el centro de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -38,6 +38,6 @@ El LED de identificación posterior se encuentra en el centro del aparato, debaj
 
 
 .Después de terminar
-link:turning-sgf6112-identify-led-on-and-off.html["Apague el LED de identificación azul"] si lo ha utilizado para localizar el aparato.
+link:turning-sgf6112-identify-led-on-and-off.html["Apague el LED de identificación azul"] utilice uno de los siguientes métodos si lo ha utilizado para localizar el aparato:
  ** Pulse el interruptor del LED Identify en el panel frontal del aparato.
  ** Utilice la interfaz BMC del dispositivo.

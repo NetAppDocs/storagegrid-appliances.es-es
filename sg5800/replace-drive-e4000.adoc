@@ -1,0 +1,56 @@
+---
+permalink: sg5800/replace-drive-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de reemplazar una unidad de E4000, revise los requisitos y consideraciones. 
+---
+= Sustituya la descripción general de la unidad SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de reemplazar una unidad en SG5812 o SG5860, revise los requisitos y consideraciones.
+
+
+
+== Manejo de unidades
+
+Las unidades del aparato son frágiles. La gestión incorrecta de unidades es una causa principal de fallo de unidad.
+
+Siga estas reglas para evitar dañar las unidades de la cabina de almacenamiento:
+
+* Evitar descargas electrostáticas (ESD):
++
+** Mantenga la unidad en la bolsa ESD hasta que esté listo para instalarla.
+** No inserte una herramienta o cuchilla metálicas en la bolsa ESD.
++
+Abra la bolsa ESD a mano o corte la parte superior con unas tijeras.
+
+** Guarde la bolsa ESD y cualquier material de embalaje en caso de que deba devolver una unidad más tarde.
+** Utilice siempre una muñequera ESD conectada a una superficie sin pintar en el chasis de la caja de almacenamiento.
++
+Si no hay una correa de mano disponible, toque una superficie sin pintar en el chasis de la caja de almacenamiento antes de manejar la unidad.
+
+
+
+* Gestione las unidades con cuidado:
++
+** Utilice siempre dos manos cuando quite, instale o lleve una unidad.
+** Nunca fuerce una unidad hasta que entre en una estantería y utilice una presión suave y firme para acoplar completamente el pestillo de la unidad.
+** Coloque las unidades sobre superficies acolchadas y nunca coloque las unidades sobre las demás.
+** No golpee las unidades contra otras superficies.
+** Antes de quitar una unidad de una bandeja, desenganche el asa y espere 30 segundos para que la unidad reduzca su velocidad de giro.
+** Utilice siempre paquetes aprobados cuando los lleve.
+
+
+* Evite campos magnéticos:
++
+** Mantenga las unidades alejadas de los dispositivos magnéticos.
++
+Los campos magnéticos pueden destruir todos los datos de la unidad y causar daños irreparables en los circuitos de la unidad.
+
+
+
+
