@@ -4921,7 +4921,6 @@ Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta
   <block id="f3a0ab2289e5d894b80255c441fc9f46" category="list-text">Dos puertos 10/25GbE en cada controladora de almacenamiento</block>
   <block id="2e869104086dd4cd2c4b722cc80e77b6" category="paragraph">Conecte cada controladora de almacenamiento a la controladora SG6100-CN.</block>
   <block id="776053d9d5cca53346c2eb33c73396bf" category="paragraph">5 TB (solo SG6160)</block>
-  <block id="d14bfbc5b95f245a7cd1ac38c7f3ce2d" category="list-text">Conecte los dos puertos de interconexión de cada controladora de almacenamiento al puerto 100GbE de la controladora SG6100-CN mediante un cable SFP28 de 100 GbE GSFP28 a 4x25 GbE.</block>
   <block id="fcb7aea9a14248650fc2b4195b723923" category="cell">Velocidad de enlace (GbE)</block>
   <block id="20d4ad7302d59cc00a8fda9a9f549883" category="list-text">Los puertos de red de Grid y cliente se pueden ejecutar a velocidades diferentes solo si se selecciona autonegociación como velocidad de enlace y Fijo como modo de enlace de puerto. De lo contrario, los cuatro puertos se ejecutarán a la misma velocidad.</block>
   <block id="76caeddfbf7a30108ac0c230c0790b19" category="paragraph">Para SG6160, SG6000, SG5800 y SG5700, configure System Manager de SANtricity. El software SANtricity se utiliza para supervisar el hardware de estos dispositivos.</block>
@@ -5506,4 +5505,5 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="1b137b50e38b53f7a19b8ae2f6114d7d" category="sidebar">Reubique en el rack</block>
   <block id="d1fc100be07ba82ec7383450a44baff8" category="list-text">Si el controlador SG6100-CN funciona lo suficiente como para permitir un apagado controlado, <block ref="0a3cf65437375f485bddbc72eccdb305" category="inline-link-macro-rx"></block>.</block>
   <block id="d0f113fd26d2007a359ab568d6af75eb" category="paragraph">Los controladores del aparato incluyen indicadores que le ayudan a determinar el estado del controlador del aparato. Use esta información como ayuda <block ref="e0e94668a35b0e62f1c3c83bc6a3960d" category="inline-link-macro-rx"></block>.</block>
+  <block id="a0fdf2c022cdb2b6d6cca277318ea2b2" category="list-text">Conecte los dos puertos de interconexión de cada controladora de almacenamiento al puerto 100GbE de la controladora SG6100-CN mediante un cable SFP28 de 100 GbE QSFP28 a 4x25 GbE.</block>
 </blocks>

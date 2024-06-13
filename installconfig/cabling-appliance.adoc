@@ -1060,7 +1060,7 @@ Se conecta a la red en la que se accede a System Manager de SANtricity.
 +
 Aunque esta conexión es opcional, se recomienda facilitar el soporte.
 
-. Conecte los dos puertos de interconexión de cada controladora de almacenamiento al puerto 100GbE de la controladora SG6100-CN mediante un cable SFP28 de 100 GbE GSFP28 a 4x25 GbE.
+. Conecte los dos puertos de interconexión de cada controladora de almacenamiento al puerto 100GbE de la controladora SG6100-CN mediante un cable SFP28 de 100 GbE QSFP28 a 4x25 GbE.
 . Conecte los puertos de red del dispositivo a los switches de red adecuados utilizando cables Twinax o cables ópticos y transceptores.
 +
 [cols="2a,2a"]
