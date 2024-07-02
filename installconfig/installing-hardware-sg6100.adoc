@@ -1,0 +1,46 @@
+---
+permalink: installconfig/installing-hardware-sg6100.html 
+sidebar: sidebar 
+keywords: install, sg6100, sg6112, expansion shelf, cabinet, rack, drives 
+summary: Para SG6160 y SGF6112, instale rieles en el armario o rack y deslice la bandeja de controladoras, las bandejas de expansión y la controladora de computación en los rieles. 
+---
+= Instale en el armario o rack (SG6100)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para SG6160 y SGF6112, instale rieles en el armario o rack y deslice la bandeja de controladoras, las bandejas de expansión y la controladora de computación en los rieles.
+
+[cols="1a,2a,2a"]
+|===
+| Modelo | Instale | Para obtener más información 
+
+
+ a| 
+SG6160
+ a| 
+bandeja de controladoras de 60 unidades y cualquier bandeja de expansión de 60 unidades
+ a| 
+link:sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html["Instale las bandejas de 60 unidades"]
+
+
+
+ a| 
+SG6112
+ a| 
+bandeja de dispositivos de 12 unidades
+ a| 
+link:installing-appliance-in-cabinet-or-rack-sgf6112.html["Instale las bandejas de 12 unidades"]
+
+
+
+ a| 
+SG6160
+ a| 
+Controladora de computación SG6100-CN
+ a| 
+link:sg6100-cn-installing-into-cabinet-or-rack.html["Instale el controlador SG6100-CN"]
+
+|===
