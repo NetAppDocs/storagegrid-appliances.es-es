@@ -19,8 +19,8 @@ Para las controladoras de almacenamiento que utilizan actualmente el sistema ope
 NOTE: Para las controladoras de almacenamiento que actualmente utilizan un sistema operativo SANtricity posterior a 08.42.20.00 (11,42), se recomienda hacerlo link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Utilice Grid Manager para aplicar una actualización"]. Sin embargo, puede usar el procedimiento de modo de mantenimiento si lo prefiere o si el soporte técnico le indica hacerlo.
 
 .Antes de empezar
-* Ha consultado el https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] Para confirmar que la versión de sistema operativo SANtricity que utiliza para la actualización es compatible con el dispositivo.
-* Debe colocar la controladora SG5800 en link:../commonhardware/placing-appliance-into-maintenance-mode.html["modo de mantenimiento"], Que interrumpe la conexión al controlador E4000.
+* Si no obtuvo la versión de sistema operativo SANtricity desde la que desea actualizar a. https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^], usted ha consultado https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^] o la https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] Para confirmar que la versión de sistema operativo SANtricity que utiliza para la actualización es compatible con el dispositivo.
+* Debe colocar la controladora SG5800 en link:../commonhardware/placing-appliance-into-maintenance-mode.html["modo de mantenimiento"], lo cual detiene todas las operaciones de I/O en la controladora E4000.
 +
 
 NOTE: En raras ocasiones, una vez que se coloca un dispositivo StorageGRID en modo de mantenimiento puede hacer que el dispositivo no esté disponible para el acceso remoto.

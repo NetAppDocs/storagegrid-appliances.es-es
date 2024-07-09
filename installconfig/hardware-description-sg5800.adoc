@@ -11,13 +11,13 @@ summary: 'El dispositivo SG5800 StorageGRID es una plataforma integrada de almac
 
 
 [role="lead"]
-El dispositivo SG5800 StorageGRID es una plataforma integrada de almacenamiento y computación que funciona como un nodo de almacenamiento en un grid de StorageGRID.
+Los dispositivos StorageGRID de la serie SG5800 son plataformas integradas de almacenamiento y computación que funcionan como nodos de almacenamiento en un grid de StorageGRID.
 
-El dispositivo StorageGRID de la serie SG5800 ofrece las siguientes características:
+Los dispositivos de la serie StorageGRID SG5800 ofrecen las siguientes características:
 
 * Integre los elementos de computación y almacenamiento para un nodo de almacenamiento de StorageGRID.
 * Incluya el instalador de dispositivos StorageGRID para simplificar la puesta en marcha y la configuración del nodo de almacenamiento.
-* Incluye System Manager de la serie E-Series SANtricity para la gestión y supervisión del hardware.
+* Incluya E-Series SANtricity System Manager para la gestión y supervisión de hardware.
 * Admite hasta cuatro conexiones de 10 GbE o 25 GbE a la red Grid y a la red cliente de StorageGRID.
 * Compatible con unidades de cifrado de disco completo (FDE) o FIPS. Cuando estas unidades se usan con la función Drive Security en SANtricity System Manager, se evita el acceso no autorizado a los datos.
 
@@ -274,7 +274,7 @@ Opciones de puerto:
 
 *Nota*: Algunas funciones opcionales de SANtricity, como la sincronización NTP para registros de hora precisos, no están disponibles cuando decide dejar el puerto de administración sin cables.
 
-*Nota*: StorageGRID 11,8 o superior, y SANtricity 11,8 o superior, son necesarios cuando dejas la gestión sin cables.
+*Nota*: StorageGRID 11,8 o superior, y SANtricity 11,8 o superior, son necesarios cuando dejas el puerto de administración sin cables.
 
 
 

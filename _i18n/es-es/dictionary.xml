@@ -4134,7 +4134,6 @@ Consulte la información sobre la gestión de objetos con la gestión del ciclo 
   <block id="d751b295bd431b789da8da77d91a8a1d" category="doc">Mantener el hardware de los dispositivos de servicios SG1100 y SG110</block>
   <block id="70bca0055a2d38054af0059da4e459ed" category="inline-link-macro">SG110 y SG1100</block>
   <block id="9310c6e3b94e3baa60a2b31f7b80cc71" category="list-text"><block ref="9310c6e3b94e3baa60a2b31f7b80cc71" category="inline-link-macro-rx"></block></block>
-  <block id="e3654db4a646d23dc2d3d64204192d91" category="list-text"><block ref="e010cba544d581fc50562d9eaf281bf3" category="inline-link-macro-rx"></block> (Dispositivos SG6000, SG6100 y servicios)</block>
   <block id="aadf1dcd60cf75ec60913a8a677fcd35" category="list-text">Para el SG110, de uno a cuatro transceptores SFP+ o SFP28 si planea utilizar cables ópticos para los puertos.</block>
   <block id="11a92f98e01c18d06291aad0e993ba9b" category="list-text">Para el SG1100, uno a cuatro transceptores QSFP+ o QSFP28 si planea utilizar cables ópticos para los puertos.</block>
   <block id="7be200e96b3561254643e0c9ae88d200" category="paragraph">Conexiones de puerto SG110:</block>
@@ -4577,7 +4576,6 @@ Quite los DIMM del compartimento de la controladora deficiente:</block>
   <block id="ebc31fad1cf84954196a7706294df684" category="paragraph">Este procedimiento se aplica a las bandejas de discos DCM y DCM2.</block>
   <block id="e813fd422366d0dc5a37186d7430e09a" category="list-text">Revise los requisitos de manipulación de unidades.</block>
   <block id="f1563c8d87cc2966328e9cb0166c5704" category="list-text">Una unidad de reemplazo que admite NetApp para su bandeja de controladoras o bandeja de unidades.</block>
-  <block id="12cb93ac5470b7b9ed9a176553005bef" category="list-text">Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)</block>
   <block id="d9de1ae5a4126bb7bbc28768a5dd593d" category="section-title">Paso 1: Preparar la sustitución de la unidad</block>
   <block id="38ee00be25940e25c51d24be5c9b1598" category="paragraph">Para preparar la sustitución de una unidad, compruebe Recovery Guru en SANtricity System Manager y complete los pasos de requisitos previos. A continuación, puede localizar el componente con errores.</block>
   <block id="fd781fa19cba325b3cc9ca7a79f8d928" category="list-text">Si Recovery Guru en SANtricity System Manager le notificó un _error inminente de unidad_, pero la unidad aún no falló, siga las instrucciones en Recovery Guru para conmutar la unidad.</block>
@@ -5180,8 +5178,6 @@ Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta
   <block id="f887919b93b68994cd6d9e7819b5afeb" category="list-text">Para el SG5800, SG6000 o SG6100, seleccione *Auto* en la lista desplegable *Velocidad de enlace*.</block>
   <block id="dcba35698266a429ba97a9df72d33ecb" category="summary">El dispositivo SG5800 StorageGRID es una plataforma integrada de almacenamiento y computación que funciona como un nodo de almacenamiento en un grid de StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales \(basados en software\).</block>
   <block id="64b3db60a66ac8bd04ca4a159cac1af8" category="doc">Dispositivos SG5800: Información general</block>
-  <block id="40b657fa8f8023ed6227dc3d31464c39" category="paragraph">El dispositivo SG5800 StorageGRID es una plataforma integrada de almacenamiento y computación que funciona como un nodo de almacenamiento en un grid de StorageGRID.</block>
-  <block id="9f075e4e966103728835fe79072cf374" category="paragraph">El dispositivo StorageGRID de la serie SG5800 ofrece las siguientes características:</block>
   <block id="bc0affc4503a133a51781ca78ac8bdaa" category="paragraph">El dispositivo SG5800 está disponible en dos modelos: SG5812 y SG5860.</block>
   <block id="1d59ebac544f15dc4241a8a4af7a618d" category="section-title">SG5800 componentes</block>
   <block id="5581a20a3b85686c910dfa4dab223387" category="paragraph">Los modelos SG5800 incluyen los siguientes componentes:</block>
@@ -5217,7 +5213,6 @@ Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta
 ** Conectarse a una red de administración para permitir el acceso directo TCP/IP al Administrador del sistema de SANtricity
 ** Dejar sin cables para guardar un puerto de switch y una dirección IP.  Acceda al administrador del sistema de SANtricity mediante Grid Manager o el instalador de Storage Grid Appliance.</block>
   <block id="fefcafe2d4912066a784d5c93bc050e1" category="paragraph">*Nota*: Algunas funciones opcionales de SANtricity, como la sincronización NTP para registros de hora precisos, no están disponibles cuando decide dejar el puerto de administración sin cables.</block>
-  <block id="57daf9148064308c448c842290992c39" category="paragraph">*Nota*: StorageGRID 11,8 o superior, y SANtricity 11,8 o superior, son necesarios cuando dejas la gestión sin cables.</block>
   <block id="b155aed19819ab0c2d1e71fc3d32850b" category="paragraph">Conecte el controlador E4000 al controlador SG5800.</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">Sitio de soporte de NetApp</block>
   <block id="f5c45bcc73f02c7f2b1398ee78576a7a" category="list-text">Vaya a la<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block>.</block>
@@ -5427,9 +5422,6 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="b362454c1b783a548faa935e3a1610de" category="paragraph">Si no tiene que realizar ningún otro procedimiento de mantenimiento en el dispositivo, devuelva el dispositivo al rack si se ha extraído, conecte los cables y aplique alimentación.</block>
   <block id="787d8857ce0db09ecbf6fe82bbf45a25" category="doc">Encienda y apague el LED de identificación del dispositivo SGF6112 o el controlador SG6100-CN</block>
   <block id="77291750fe959fd9ce173862b4055564" category="doc">Localice el dispositivo SGF6112 o la controladora SG6100-CN en el centro de datos</block>
-  <block id="71070479646e1da5a663f4b00abb5235" category="paragraph"><block ref="106db197e8d447cef2c47289a65f4849" category="inline-link-macro-rx"></block> utilice uno de los siguientes métodos si lo ha utilizado para localizar el aparato:
- ** Pulse el interruptor del LED Identify en el panel frontal del aparato.
- ** Utilice la interfaz BMC del dispositivo.</block>
   <block id="f40a968e022f47cf01d4d58ef9437f0c" category="summary">El dispositivo SGF6112 y el controlador SG6100-CN tienen ocho ventiladores de refrigeración. Si uno de los ventiladores falla, debe reemplazarla por Lo antes posible. para que el dispositivo tenga la refrigeración adecuada.</block>
   <block id="35354d3f59ef76da6c3d8d0aafc491e7" category="doc">Reemplace el ventilador en un SGF6112 o SG6100-CN (SG6160)</block>
   <block id="dff98198bff06709975037453d00df52" category="list-text">Ya tienes <block ref="8a600a3d3695735e4213dc5c6fac3a3e" category="inline-link-macro-rx"></block> donde va a sustituir el ventilador en el centro de datos.</block>
@@ -5512,4 +5504,17 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="7c964abbff6a7b0bbf38565776b7d0b7" category="inline-link-macro">Instale el controlador SG6100-CN</block>
   <block id="0d86c1e5e36df2d42690db9bf7459e93" category="paragraph"><block ref="0d86c1e5e36df2d42690db9bf7459e93" category="inline-link-macro-rx"></block></block>
   <block id="c587a2e85b76aabe41b2ff8e991a2c31" category="sidebar">Instale SG6100 en el armario o rack</block>
+  <block id="8a1c3c9cb6907d54c29c5857f2f86c34" category="paragraph">Los dispositivos StorageGRID de la serie SG5800 son plataformas integradas de almacenamiento y computación que funcionan como nodos de almacenamiento en un grid de StorageGRID.</block>
+  <block id="ce9252228bd4540f9b37b3a78a50b7d7" category="paragraph">Los dispositivos de la serie StorageGRID SG5800 ofrecen las siguientes características:</block>
+  <block id="0c83dd3ac0dc38df69e11e248214a5fe" category="list-text">Incluya E-Series SANtricity System Manager para la gestión y supervisión de hardware.</block>
+  <block id="3127ae9dd7481eac7423d4d4aca523f1" category="paragraph">*Nota*: StorageGRID 11,8 o superior, y SANtricity 11,8 o superior, son necesarios cuando dejas el puerto de administración sin cables.</block>
+  <block id="e6f818c1056fce47a0d96a7d0f54d3da" category="list-text">Dos SSD NVMe para la caché de lectura</block>
+  <block id="53b6162c6d4ba02de60c3ea016e48c8f" category="list-text"><block ref="e010cba544d581fc50562d9eaf281bf3" category="inline-link-macro-rx"></block> (Dispositivos SG6100, SG6000 y servicios)</block>
+  <block id="752e943e864c331f809892c284e5fb33" category="list-text">Cambiar la velocidad de enlace a o desde Auto (recomendado), 10 GbE o 25 GbE.</block>
+  <block id="4918ef1e8a9f60c807f69545e97d3b6f" category="paragraph">Las unidades que pertenecen a volúmenes que no tienen redundancia deben actualizarse con <block ref="179e42b86c56e7fde01fd62621c30190" category="inline-link-macro-rx"></block>.</block>
+  <block id="8770dfe1902bd96b773d5b6fc8f4cf06" category="list-text">Debe colocar la controladora SG5800 en <block ref="66517df9b2a708b9947fc0143b4273f5" category="inline-link-macro-rx"></block>, lo cual detiene todas las operaciones de I/O en la controladora E4000.</block>
+  <block id="94ac91ca1245e36b962d4e80494dde09" category="paragraph"><block ref="106db197e8d447cef2c47289a65f4849" category="inline-link-macro-rx"></block> utilice uno de los siguientes métodos si lo ha utilizado para localizar el aparato:</block>
+  <block id="32560f7f516484a70333e63586d49ee8" category="list-text">Pulse el interruptor del LED Identify del panel frontal del aparato.</block>
+  <block id="84f9f6b07fa3b7c2043dcb10969d9836" category="list-text">Utilice la interfaz BMC del dispositivo.</block>
+  <block id="c3767fd24594af27204c85f38e6485de" category="admonition">Mientras el dispositivo está en modo de mantenimiento, se detiene la actividad de I/O (entrada/salida) en las controladoras de almacenamiento para que las operaciones de almacenamiento disruptivas sean seguras.</block>
 </blocks>

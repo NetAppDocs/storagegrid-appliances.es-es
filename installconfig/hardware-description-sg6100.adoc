@@ -80,6 +80,7 @@ Controladora de computación:: La controladora SG6100-CN es un servidor con una 
 * 256 GB DE MEMORIA RAM
 * Ancho de banda Ethernet agregado de hasta 4 x 25 GbE (o hasta 4 x 100 GbE con SKU NIC 100g opcional)
 * 1 x interconexión de 100 GbE
+* Dos SSD NVMe para la caché de lectura
 * Controlador de administración en placa base (BMC) que simplifica la administración del hardware
 * Sistemas de alimentación y ventiladores redundantes
 

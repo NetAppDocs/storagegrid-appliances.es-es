@@ -39,5 +39,7 @@ El LED de identificación posterior se encuentra en el centro del aparato, debaj
 
 .Después de terminar
 link:turning-sgf6112-identify-led-on-and-off.html["Apague el LED de identificación azul"] utilice uno de los siguientes métodos si lo ha utilizado para localizar el aparato:
- ** Pulse el interruptor del LED Identify en el panel frontal del aparato.
- ** Utilice la interfaz BMC del dispositivo.
+
+* Pulse el interruptor del LED Identify del panel frontal del aparato.
+* Utilice la interfaz BMC del dispositivo.
+

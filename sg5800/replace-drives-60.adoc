@@ -24,7 +24,12 @@ Este procedimiento se aplica a las bandejas de discos DCM y DCM2.
 +
 ** Una unidad de reemplazo que admite NetApp para su bandeja de controladoras o bandeja de unidades.
 ** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
-** Una estación de gestión con un explorador que puede acceder a System Manager de SANtricity para la controladora. (Para abrir la interfaz de System Manager, apunte el explorador al nombre de dominio o la dirección IP de la controladora.)
+** Acceso a SANtricity System Manager:
++
+*** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información de la controladora se encuentra en la https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+*** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
+
+
 
 
 

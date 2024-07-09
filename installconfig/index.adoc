@@ -59,7 +59,7 @@ Si va a configurar y poner en marcha más de un dispositivo, utilice la herramie
 
 
 . link:accessing-and-configuring-santricity-system-manager.html["Acceda y configure SANtricity System Manager"] (SG6160, SG5700, SG5800 Y SG6000)
-. link:configuring-bmc-interface.html["Configure la interfaz de BMC"] (Dispositivos SG6000, SG6100 y servicios)
+. link:configuring-bmc-interface.html["Configure la interfaz de BMC"] (Dispositivos SG6100, SG6000 y servicios)
 . Realice los pasos de configuración opcionales
 +
 ** link:optional-enabling-node-encryption.html["Habilite el cifrado de nodos o unidades"]

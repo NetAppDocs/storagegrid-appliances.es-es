@@ -26,9 +26,7 @@ Las unidades se actualizan una por vez mientras el dispositivo ejecuta I/O. Este
 
 [NOTE]
 ====
-Las unidades que pertenecen a volúmenes que no tienen redundancia deben actualizarse con el link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["método fuera de línea"]. Se debe usar el método sin conexión para cualquier pool o grupo de volúmenes que actualmente se encuentre degradado.
-
-Debe utilizar el link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["método fuera de línea"] Al actualizar unidades SSD.
+Las unidades que pertenecen a volúmenes que no tienen redundancia deben actualizarse con link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["método fuera de línea"].
 
 ====
 .Pasos

@@ -25,7 +25,7 @@ Algunas de las opciones para cambiar la configuración del enlace Ethernet de la
 * Cambiando *modo de enlace de puerto* de fijo a agregado, o de agregado a fijo
 * Cambio del *modo de enlace de red* de Active-Backup a LACP o de LACP a Active-Backup
 * Habilitar o deshabilitar el etiquetado de VLAN, o cambiar el valor de una etiqueta de VLAN
-* Cambio de la velocidad de enlace de 10-GbE a 25-GbE, o de 25-GbE a 10-GbE
+* Cambiar la velocidad de enlace a o desde Auto (recomendado), 10 GbE o 25 GbE.
 
 
 .Pasos
