@@ -1,10 +1,10 @@
 ---
-permalink: sg110-1100/verify-component-to-replace.html 
+permalink: sg100-1000/verify-component-to-replace-sg100-and-sg1000.html 
 sidebar: sidebar 
-keywords: sg110, sg1100 
+keywords: sg100, sg1000 
 summary: Si no está seguro de qué componente de hardware debe sustituir en el dispositivo, complete este procedimiento para identificar el componente y la ubicación del dispositivo en el centro de datos. 
 ---
-= Verifique el componente que se va a sustituir en SG110 o SG1100
+= Verifique el componente para reemplazar en SG100 o SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -68,4 +68,4 @@ Para ayudarle a localizar el dispositivo en el centro de datos, puede utilizar l
 
 
 .Información relacionada
-link:turning-sg110-and-sg1100-identify-led-on-and-off.html["Encienda el LED de identificación del aparato"]
+link:turning-controller-identify-led-on-and-off.html["Encienda el LED de identificación del aparato"]

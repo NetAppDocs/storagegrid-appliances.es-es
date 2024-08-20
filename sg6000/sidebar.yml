@@ -39,6 +39,8 @@ entries:
 - title: Procedimientos de hardware
   pdf-filename: Procedimientos de hardware - SG6000
   entries:
+  - title: Verifique el componente que desea reemplazar
+    url: "/sg6000/verify-component-to-replace-sg6000cn.html"
   - title: Añada la bandeja de expansión al SG6060 implementado
     url: "/sg6000/adding-expansion-shelf-to-deployed-sg6060.html"
   - title: Sustituya la controladora de almacenamiento
@@ -53,6 +55,8 @@ entries:
     url: "/sg6000/replacing-sg6000-cn-controller.html"
   - title: Sustituya una o ambas fuentes de alimentación en el controlador SG6000-CN
     url: "/sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html"
+  - title: Reemplace la batería CMOS en el controlador SG6000-CN
+    url: "/sg6000/replace-cmos-in-sg6000cn.html"
   - title: Sustituya la controladora en el rack
     url: "/sg6000/reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html"
   - title: Vuelva a colocar la cubierta del controlador

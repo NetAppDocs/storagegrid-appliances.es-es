@@ -1,0 +1,99 @@
+---
+permalink: sg100-1000/reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, appliance, install, installing, installation, cabinet, rack, controller, remove, removing, removal 
+summary: Quite el SG100 o SG1000 de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente; a continuación, vuelva a instalar el dispositivo en un armario o rack cuando haya finalizado el mantenimiento del hardware. 
+---
+= Reubique SG100 o SG1000 en el armario o rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retire el dispositivo SG100 o SG1000 de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente. A continuación, vuelva a instalarlo en un armario o rack cuando haya finalizado el mantenimiento del hardware.
+
+
+
+== Quite SG100 o SG1000 del armario o rack
+
+Retire el SG100 o el SG1000 de un armario o rack para acceder a la cubierta superior o para mover el aparato a una ubicación diferente.
+
+.Antes de empezar
+* Tiene etiquetas para identificar cada cable que está conectado al dispositivo SG100 o SG1000.
+* Ha localizado físicamente el dispositivo SG100 o SG1000 donde realiza tareas de mantenimiento en el centro de datos.
++
+link:locating-controller-in-data-center.html["Localice el dispositivo en el centro de datos"]
+
+* Tienes link:shut-down-sg100-and-sg1000.html["Apague el aparato SG100 o SG1000"].
++
+
+CAUTION: No apague el aparato con el interruptor de alimentación.
+
+
+
+.Pasos
+. Etiquete y desconecte los cables de alimentación de la controladora.
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Etiquete y desconecte los cables de datos de la controladora y cualquier transceptor SFP+ o SFP28.
++
+
+NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+. Afloje los dos tornillos cautivos del panel frontal del controlador.
++
+image::../media/sg6060_rack_retaining_screws.png[Tornillos de sujeción del bastidor SG6060]
+
+. Deslice el aparato hacia delante fuera del rack hasta que los raíles de montaje estén completamente extendidos y oiga un clic en los pestillos de ambos lados.
++
+Se puede acceder a la cubierta superior del controlador.
+
+. Opcional: Si está retirando completamente el dispositivo del armario o rack, siga las instrucciones del kit de guías para quitar el aparato de los rieles.
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+
+
+
+== Vuelva a instalar SG100 o SG1000 en el armario o rack
+
+Vuelva a instalar el dispositivo en un armario o rack cuando haya finalizado el mantenimiento del hardware.
+
+.Antes de empezar
+Ha vuelto a instalar la cubierta del aparato.
+
+link:reinstalling-sg100-and-sg1000-controller-cover.html["Vuelva a instalar la cubierta SG100 o SG1000"]
+
+.Pasos
+. Presione el raíl azul para soltar ambos raíles del rack al mismo tiempo y deslice el aparato en el rack hasta que quede completamente asentado.
++
+Cuando no pueda mover el aparato más, tire de los pestillos azules de ambos lados del chasis para deslizar el aparato completamente hacia adentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[Deslizamiento del aparato en los raíles]
+
++
+
+NOTE: No conecte el panel frontal hasta que haya encendido el aparato.
+
+. Apriete los tornillos cautivos del panel frontal del aparato para fijar el aparato en el rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Tornillos de retención del bastidor]
+
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Vuelva a conectar los cables de datos de la controladora y cualquier transceptor SFP+ o SFP28.
++
+
+NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
++
+link:../installconfig/cabling-appliance.html["Aparato por cable"]
+
+. Vuelva a conectar los cables de alimentación del aparato.
++
+link:../installconfig/connecting-power-cords-and-applying-power.html["Conecte los cables de alimentación y aplique alimentación (SG100 V o SG1000 V)"]
+
+
+
+.Después de terminar
+El aparato se puede reiniciar.

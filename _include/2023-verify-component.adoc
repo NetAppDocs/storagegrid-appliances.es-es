@@ -8,7 +8,7 @@
 
 
 .Acerca de esta tarea
-Utilice este procedimiento para identificar el dispositivo con hardware defectuoso y cuáles de los componentes de hardware reemplazables no funcionan correctamente. Los componentes que se pueden identificar para el reemplazo incluyen:
+Utilice este procedimiento para identificar el dispositivo con hardware defectuoso y cuáles de los componentes de hardware reemplazables no funcionan correctamente. Los componentes que se pueden identificar para el reemplazo pueden incluir:
 
 * Fuentes de alimentación
 * Ventiladores
