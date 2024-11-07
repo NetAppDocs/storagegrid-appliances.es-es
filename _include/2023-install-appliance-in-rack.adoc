@@ -3,7 +3,7 @@
 
 
 .Antes de empezar
-* Ha revisado el documento de avisos de seguridad incluido en la caja y comprende las precauciones para mover e instalar el hardware.
+* Ha revisado el https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avisos de seguridad"^] documento incluido en la caja y comprende las precauciones para mover e instalar el hardware.
 * Tiene las instrucciones incluidas en el kit de raíl.
 
 

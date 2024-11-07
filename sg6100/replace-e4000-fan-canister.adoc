@@ -50,7 +50,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 . En SANtricity System Manager, determine qué contenedor de ventilador tiene errores.
 +
 .. Seleccione *hardware*.
-.. Mire el ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Icono a la derecha de las listas desplegables *Shelf* para determinar qué dispositivo tiene el contenedor de ventilador defectuoso.
+.. Mire el icono de ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icono de ventilador"]a la derecha de las listas desplegables *Bandeja* para determinar qué dispositivo tiene el contenedor de ventilador defectuoso.
 +
 Si un componente falla, este icono está en rojo.
 

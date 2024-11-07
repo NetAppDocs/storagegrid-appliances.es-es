@@ -29,9 +29,10 @@ IMPORTANT: Consulte la información sobre la visualización de los indicadores d
 +
 Las unidades se encuentran en las siguientes posiciones en el chasis (se muestra la parte delantera del chasis con el panel frontal quitado):
 
-
-
++
 image::../media/sg1100_front_with_ssds.png[Ubicaciones de SG110 y SG1100 unidades]
+
+
 
 . Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
 . Desembale la unidad de repuesto y configúrela en una superficie nivelada y sin estática cerca del aparato.

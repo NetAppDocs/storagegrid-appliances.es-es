@@ -13,7 +13,7 @@ summary: 'Si habilitó el cifrado de nodos para el dispositivo durante la instal
 [role="lead"]
 Si habilitó el cifrado de nodos para el dispositivo durante la instalación, puede supervisar el estado de cifrado del nodo de cada nodo de dispositivo, incluidos el estado del cifrado del nodo y detalles del servidor de gestión de claves (KMS).
 
-Consulte https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configuración de servidores de gestión de claves"^] Para obtener información sobre la implementación de KMS para dispositivos StorageGRID.
+Consulte https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configuración de servidores de gestión de claves"^] para obtener información sobre la implementación de KMS para dispositivos StorageGRID.
 
 .Antes de empezar
 * Ha habilitado el cifrado de nodos para el dispositivo durante la instalación. No se puede habilitar el cifrado de nodo después de instalar el dispositivo.
@@ -32,7 +32,7 @@ La página cifrado de nodos incluye tres secciones:
 ** El estado de cifrado muestra si el cifrado de nodos está habilitado o deshabilitado para el dispositivo.
 ** Detalles del servidor de gestión de claves muestra información sobre el KMS que se utiliza para cifrar el dispositivo. Puede expandir las secciones de certificados de servidor y cliente para ver los detalles y el estado del certificado.
 +
-*** Para solucionar problemas con los propios certificados, como renovar certificados caducados, consulte https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Instrucciones para configurar KMS"^].
+*** Para solucionar problemas con los propios certificados, como la renovación de certificados caducados, consulte la https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Instrucciones para configurar KMS"^].
 *** Si hay problemas inesperados al conectarse a los hosts KMS, compruebe que link:../commonhardware/checking-dns-server-configuration.html["Los servidores DNS son correctos"] y eso link:../installconfig/configuring-network-links.html["la red del dispositivo está configurada correctamente"].
 *** Si no puede resolver problemas de certificado, póngase en contacto con el soporte técnico.
 
@@ -73,7 +73,7 @@ Si necesita conservar datos en el dispositivo, debe realizar un procedimiento de
 
 CAUTION: Cuando se borra KMS, los datos del dispositivo se eliminan de forma permanente y ya no se puede acceder a ellos. Estos datos no se pueden recuperar.
 
-https://docs.netapp.com/us-en/storagegrid-118/maintain/grid-node-decommissioning.html["Retire el nodo"^] Para mover los datos que contiene a otros nodos en StorageGRID.
+https://docs.netapp.com/us-en/storagegrid/maintain/grid-node-decommissioning.html["Retire el nodo"^] Para mover los datos que contengan a otros nodos en StorageGRID.
 
 .Acerca de esta tarea
 Al borrar la configuración de KMS del dispositivo, se deshabilita el cifrado de nodos y se elimina la asociación entre el nodo del dispositivo y la configuración de KMS del sitio StorageGRID. Los datos del dispositivo se eliminan y el dispositivo se deja en estado previo a la instalación. Este proceso no se puede revertir.
@@ -130,4 +130,4 @@ El cifrado de nodos no se puede volver a habilitar en el dispositivo hasta que s
 
 
 .Después de terminar
-Una vez que el dispositivo se haya reiniciado y haya verificado que se ha borrado KMS y que el dispositivo está en estado previo a la instalación, puede quitar físicamente el dispositivo del sistema de StorageGRID. Consulte https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["instrucciones para preparar el aparato para su reinstalación"^].
+Una vez que el dispositivo se haya reiniciado y haya verificado que se ha borrado KMS y que el dispositivo está en estado previo a la instalación, puede quitar físicamente el dispositivo del sistema de StorageGRID. Consulte la https://docs.netapp.com/us-en/storagegrid/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["instrucciones para preparar el aparato para su reinstalación"^].

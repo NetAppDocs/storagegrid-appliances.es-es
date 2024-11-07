@@ -29,16 +29,13 @@ Utilice estos procedimientos para:
 * Ya tienes link:locating-sg110-and-sg1100-in-data-center.html["El aparato SG110 o SG1100 se encuentra físicamente"] Donde va a sustituir la NIC en el centro de datos.
 +
 
-NOTE: A. link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["apagado controlado del aparato"] es necesario antes de retirar el dispositivo del rack.
+NOTE: A. link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["apagado controlado del aparato"] es necesario antes de retirar el dispositivo del rack.
 
 * Ha desconectado todos los cables y. link:reinstalling-sg110-and-sg1100-cover.html["ha quitado la cubierta del aparato"].
 
 
 .Acerca de esta tarea
-Para evitar interrupciones del servicio, confirme que todos los demás nodos de almacenamiento están conectados a la cuadrícula antes de iniciar la sustitución de la tarjeta de interfaz de red (NIC) o sustituya la NIC durante una ventana de mantenimiento programada cuando se acepten períodos de interrupción del servicio. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
-
-
-CAUTION: Si alguna vez ha utilizado una regla de ILM que crea solo una copia de un objeto, debe sustituir la NIC durante una ventana de mantenimiento programada porque podría perder temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
+Para evitar interrupciones del servicio, confirme que todos los demás nodos de almacenamiento están conectados a la cuadrícula antes de iniciar la sustitución de la tarjeta de interfaz de red (NIC) o sustituya la NIC durante una ventana de mantenimiento programada cuando se acepten períodos de interrupción del servicio. Consulte la información sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
 
 .Pasos
 . Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
@@ -47,7 +44,7 @@ CAUTION: Si alguna vez ha utilizado una regla de ILM que crea solo una copia de 
 Las tres NIC del dispositivo se encuentran en dos conjuntos elevadores en las posiciones del chasis que se muestran en la fotografía (se muestra la parte posterior del dispositivo con la cubierta superior quitada):
 
 +
-image::../media/sgf6112-nic-positions.jpg[Ubicaciones de NIC]
+image::../media/sgf6112-nic-positions.png[Ubicaciones de NIC]
 
 +
 [cols="1a,2a,4a"]

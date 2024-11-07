@@ -24,10 +24,10 @@ NOTE: No confíe en las instrucciones E-Series para sustituir una controladora c
 * Una pulsera ESD, o usted ha tomado precauciones antiestáticas.
 * Etiquetas para identificar cada cable que está conectado a la controladora.
 * Permisos de acceso específicos.
-* Debe iniciar sesión en Grid Manager mediante un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Debe iniciar sesión en Grid Manager mediante una https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 * Acceso a SANtricity System Manager:
 +
-** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información de la controladora se encuentra en la https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"^].
 ** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
 
 
@@ -180,12 +180,12 @@ image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Quite la batería de N
 
 
  a| 
-image::../media/legend_icon_01.png[icono de leyenda 01]
+image::../media/legend_icon_01.png[Referencia de llamada 1]
 | Pestaña de liberación de la batería 
 
 
  a| 
-image::../media/legend_icon_02.png[icono de leyenda 02]
+image::../media/legend_icon_02.png[Referencia de llamada 2]
 | Conector de alimentación de la batería 
 |===
 
@@ -229,12 +229,12 @@ image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Quite LOS DIMM.]
 
 
  a| 
-image::../media/legend_icon_01.png[icono de leyenda 01]
+image::../media/legend_icon_01.png[Referencia de llamada 1]
 | Lengüetas del expulsor de DIMM 
 
 
  a| 
-image::../media/legend_icon_02.png[icono de leyenda 02]
+image::../media/legend_icon_02.png[Referencia de llamada 2]
 | DIMM 
 |===
 

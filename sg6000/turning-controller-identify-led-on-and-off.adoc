@@ -37,8 +37,7 @@ NOTE: Si hay un panel frontal instalado en la controladora, es posible que le re
 
 
 .Información relacionada
-link:reinstalling-fibre-channel-hba.html#verify-fibre-channel-hba-to-replace["Verifique el adaptador de bus de host de Fibre Channel que desea sustituir"]
+* link:reinstalling-fibre-channel-hba.html#verify-fibre-channel-hba-to-replace["Verifique el adaptador de bus de host de Fibre Channel que desea sustituir"]
+* link:locating-controller-in-data-center.html["Ubique la controladora en el centro de datos"]
+* link:../installconfig/accessing-bmc-interface.html["Acceda a la interfaz de BMC"]
 
-link:locating-controller-in-data-center.html["Ubique la controladora en el centro de datos"]
-
-link:../installconfig/accessing-bmc-interface.html["Acceda a la interfaz de BMC"]

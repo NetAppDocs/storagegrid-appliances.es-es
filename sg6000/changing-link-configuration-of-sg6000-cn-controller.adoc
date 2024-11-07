@@ -41,7 +41,7 @@ NOTE: Puede perder la conexión si ha realizado cambios en la red o el enlace qu
 `*https://_Appliance_Controller_IP_:8443*`
 
 +
-Si ha realizado cambios en la configuración de VLAN, es posible que la subred del dispositivo haya cambiado. Si necesita cambiar las direcciones IP del dispositivo, siga el https://docs.netapp.com/us-en/storagegrid-118/maintain/configuring-ip-addresses.html["Configurar las direcciones IP"^] instrucciones.
+Si ha realizado cambios en la configuración de VLAN, es posible que la subred del dispositivo haya cambiado. Si necesita cambiar las direcciones IP del dispositivo, siga https://docs.netapp.com/us-en/storagegrid/maintain/configuring-ip-addresses.html["Configurar las direcciones IP"^] las instrucciones.
 
 +
 link:../installconfig/setting-ip-configuration.html["Configure las direcciones IP de StorageGRID"]

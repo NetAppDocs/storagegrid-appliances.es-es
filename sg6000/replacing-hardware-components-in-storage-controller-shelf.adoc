@@ -24,7 +24,7 @@ link:locating-controller-in-data-center.html["Ubique la controladora en el centr
 .Acerca de esta tarea
 Para sustituir la batería en el controlador de almacenamiento, consulte los pasos de las instrucciones para link:replacing-storage-controller-sg6000.html["reemplazar una controladora de almacenamiento"]. Estas instrucciones describen cómo extraer un controlador del aparato, extraer la batería del controlador, instalar la batería y sustituir el controlador.
 
-Para obtener instrucciones de las otras unidades reemplazables de campo (FRU) en las bandejas de controladoras, acceda a la http://mysupport.netapp.com/info/web/ECMP1658252.html["Procedimientos de E-Series para el mantenimiento del sistema"^].
+Para obtener instrucciones para las demás unidades reemplazables de campo (FRU) de las bandejas de controladoras, acceda a la https://docs.netapp.com/us-en/e-series-family/index.html["Procedimientos de E-Series para el mantenimiento del sistema"^].
 
 [cols="1a,3a"]
 |===

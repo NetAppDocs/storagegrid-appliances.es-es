@@ -14,8 +14,7 @@ summary: Puede cambiar la configuración del enlace Ethernet del dispositivo, in
 Puede cambiar la configuración del enlace Ethernet del dispositivo, incluido el modo de enlace de puerto, el modo de enlace de red y la velocidad del enlace.
 
 .Antes de empezar
-* Ya tienes link:../commonhardware/placing-appliance-into-maintenance-mode.html["puso el aparato en modo de mantenimiento"].
-
+Ya tienes link:../commonhardware/placing-appliance-into-maintenance-mode.html["puso el aparato en modo de mantenimiento"].
 
 
 NOTE: En raras ocasiones, una vez que se coloca un dispositivo StorageGRID en modo de mantenimiento puede hacer que el dispositivo no esté disponible para el acceso remoto.
@@ -28,8 +27,7 @@ Para obtener más información sobre las opciones, consulte link:../installconfi
 
 +
 
-NOTE: Los cambios de configuración IP realizados mientras el dispositivo está en modo de mantenimiento no se aplican al entorno de StorageGRID instalado. Ejecute el
-[`change-ip` Comando] Después de reiniciar el dispositivo en StorageGRID.
+NOTE: Los cambios de configuración IP realizados mientras el dispositivo está en modo de mantenimiento no se aplican al entorno de StorageGRID instalado. Ejecute [`change-ip`el comando] después de reiniciar el dispositivo en StorageGRID.
 
 . Cuando esté satisfecho con sus selecciones, haga clic en *Guardar*.
 +

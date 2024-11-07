@@ -20,7 +20,7 @@ Retire el SG110 o SG1100 de un armario o rack para acceder a la cubierta superio
 .Antes de empezar
 * Tiene etiquetas para identificar cada cable que está conectado al SG110 o SG1100.
 * Ya tienes link:locating-sg110-and-sg1100-in-data-center.html["Físicamente ubicado el SG110 o el SG1100"] dónde se realiza el mantenimiento en el centro de datos.
-* Ya tienes link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["Apague el SG110 o el SG1100"].
+* Tienes link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["Apague el SG110 o el SG1100"].
 +
 
 CAUTION: No apague el aparato con el interruptor de alimentación.
@@ -83,4 +83,4 @@ IMPORTANT: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque n
 
 
 .Después de terminar
-link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation.html["Reinicie el aparato"].
+link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation["Reinicie el aparato"].

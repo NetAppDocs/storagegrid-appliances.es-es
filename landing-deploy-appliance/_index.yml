@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: Ponga en marcha un nodo de dispositivo
+  summary: Ponga en marcha un nodo de dispositivo StorageGRID y verifique su funcionamiento.
+  keywords: storagegrid deployment, deploy storagegrid
+  lead: Ponga en marcha un nodo de dispositivo StorageGRID y verifique su funcionamiento.
   tiles:
   - title: Puesta en marcha del dispositivo
     links:

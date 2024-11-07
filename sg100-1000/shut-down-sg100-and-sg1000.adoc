@@ -14,8 +14,7 @@ summary: Apague el dispositivo de servicios para realizar el mantenimiento del h
 Apague el dispositivo de servicios para realizar el mantenimiento del hardware.
 
 .Antes de empezar
-* Usted tiene físicamente link:locating-controller-in-data-center.html["se encuentra el dispositivo de servicios"] necesidad de mantenimiento en el centro de datos.
-
+Usted tiene físicamente link:locating-controller-in-data-center.html["se encuentra el dispositivo de servicios"] necesidad de mantenimiento en el centro de datos.
 
 .Acerca de esta tarea
 Para evitar interrupciones del servicio, apague el dispositivo de servicios durante un período de mantenimiento programado cuando se acepten períodos de interrupción del servicio.

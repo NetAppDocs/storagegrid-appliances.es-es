@@ -987,8 +987,11 @@ Se conecta a la red en la que se accede a la interfaz del BMC.
  a| 
 2
  a| 
-Cuatro puertos de red 10 GbE/25 GbE en el dispositivo
+Cuatro puertos de red en la controladora SG6100-CN
  a| 
+* Cuatro puertos de red 10 GbE/25 GbE en el dispositivo
+* Cuatro puertos de red de 10/25/40/100 GbE con SKU NIC DE 100g GbE opcional (solo SG6160)
+
  a| 
 Conéctese a la red de red y a la red de cliente para StorageGRID. Consulte link:gathering-installation-information-sg6100.html#port-bond-modes["Modos de enlace de puertos (SG6100)"]
 

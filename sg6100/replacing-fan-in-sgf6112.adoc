@@ -19,21 +19,21 @@ El dispositivo SGF6112 y el controlador SG6100-CN tienen ocho ventiladores de re
 * Ya tienes link:locating-sgf6112-in-data-center.html["Ubicado físicamente el dispositivo SGF6112 o la controladora SG6100-CN"] donde va a sustituir el ventilador en el centro de datos.
 +
 
-NOTE: A. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["apagado controlado del aparato"] es necesario antes de retirar el dispositivo del rack.
+NOTE: Se requiere un link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["apagado controlado del aparato"] antes de retirar el dispositivo del rack.
 
 * Ha desconectado todos los cables y. link:reinstalling-sgf6112-cover.html["ha quitado la cubierta del aparato"].
 * Ha confirmado que los otros ventiladores están instalados y en ejecución.
 
 
 .Acerca de esta tarea
-Para evitar las interrupciones del servicio, confirme que el resto de los nodos de almacenamiento están conectados al grid antes de comenzar a sustituir el ventilador o sustituir el ventilador durante la ventana de mantenimiento programada si se aceptan períodos de interrupción del servicio. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
+Para evitar las interrupciones del servicio, confirme que el resto de los nodos de almacenamiento están conectados al grid antes de comenzar a sustituir el ventilador o sustituir el ventilador durante la ventana de mantenimiento programada si se aceptan períodos de interrupción del servicio. Consulte la información sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
 
 
-CAUTION: Si alguna vez ha utilizado una regla de ILM que crea solo una copia de un objeto, debe sustituir el ventilador durante una ventana de mantenimiento programada porque podría perder temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
+CAUTION: Si alguna vez ha utilizado una regla de ILM que crea solo una copia de un objeto, debe sustituir el ventilador durante una ventana de mantenimiento programada porque podría perder temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información sobre https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
 
 No se podrá acceder al nodo del dispositivo mientras sustituye el ventilador.
 
-La fotografía muestra un ventilador del aparato. Se resalta el conector eléctrico. Se puede acceder a los ventiladores de refrigeración después de retirar la cubierta superior del aparato.
+La imagen muestra un ventilador para el aparato con el conector eléctrico resaltado. Se puede acceder a los ventiladores de refrigeración después de retirar la cubierta superior del aparato.
 
 
 NOTE: Cada una de las dos unidades de suministro de alimentación también contiene un ventilador. Los ventiladores de suministro de alimentación no se incluyen en este procedimiento.
@@ -49,11 +49,8 @@ Los ocho ventiladores se encuentran en las siguientes posiciones del chasis (se 
 +
 image::../media/SGF6112-fan-locations.png[Ubicaciones de los ventiladores]
 
-
-
++
 |===
-
-
 |  | Unidad de ventilador 
 
 

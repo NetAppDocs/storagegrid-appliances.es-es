@@ -52,7 +52,7 @@ KVM
  a| 
 Puerto serie
  a| 
-** Cable serie DB-9
+** Cable USB
 ** Terminal serie virtual
 
 
@@ -103,9 +103,23 @@ SOL
 
 
  a| 
+HT
+ a| 
+El script de inicio maestro está esperando a que finalice el inicio del sistema operativo.
+
+
+
+ a| 
 HOLA
  a| 
 Se ha iniciado la secuencia de comandos de inicio maestra.
+
+
+
+ a| 
+PP
+ a| 
+El sistema comprueba si es necesario actualizar la FPGA.
 
 
 
@@ -156,15 +170,21 @@ StorageGRID está ejecutando.
 
 == Ver códigos de error
 
-Si se produce un error de hardware cuando el dispositivo arranca, el BMC registra un código de error. Según sea necesario, puede ver estos códigos de error mediante la interfaz del BMC y, a continuación, trabajar con el soporte técnico para resolver el problema.
+Si se produce un error de hardware cuando el dispositivo arranca, el BMC registra un código de error. Según sea necesario, puede ver estos códigos de error mediante el puerto serie del dispositivo y, a continuación, trabajar con el soporte técnico para resolver el problema.
 
 .Antes de empezar
-* Sabes cómo hacerlo link:accessing-bmc-interface.html["Acceda al panel de control de BMC"].
+* Reúna el equipo necesario:
++
+** Cable USB
+** Terminal serie virtual
+
+
 
 
 .Pasos
-. En el panel de control del BMC, seleccione *Código POST del BIOS*.
-. Revise la información que se muestra para el código actual y el código anterior.
+. Conéctese al puerto USB serie de la parte posterior del aparato.
+. Utilice la configuración `115200 8-N-1`.
+. Revise la información impresa en el terminal de serie para el código actual y el código anterior.
 +
 Si se muestra alguno de los siguientes códigos de error, trabaje con el soporte técnico para resolver el problema.
 

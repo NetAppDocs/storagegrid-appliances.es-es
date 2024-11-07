@@ -18,13 +18,36 @@ Si utiliza ConfigBuilder para generar un archivo JSON, puede cambiar el modo RAI
 .Acerca de esta tarea
 Si el dispositivo es compatible con él, puede elegir una de las siguientes opciones de configuración de volumen:
 
-* *Dynamic Disk Pools (DDP)*: Este modo utiliza dos unidades de paridad por cada ocho unidades de datos. Éste es el modo predeterminado y recomendado para todos los dispositivos. En comparación con RAID 6, DDP ofrece un mejor rendimiento del sistema, menores tiempos de recompilación tras los fallos de una unidad y facilidad de gestión. DDP también proporciona protección contra pérdida de cajón en dispositivos SG5760, SG5860 y SG6160.
+
+NOTE: Los tamaños de volúmenes no son consistentes en todos los tipos de DDP y RAID. Las variaciones en cómo funcionan DDP y RAID6 provocan distintos tamaños de volumen.
+
+* *Dynamic Disk Pools (DDP)*: Este modo utiliza dos unidades de paridad por cada ocho unidades de datos. Éste es el modo predeterminado y recomendado para todos los dispositivos.
++
+** En comparación con RAID 6, DDP ofrece un mejor rendimiento del sistema, menores tiempos de recompilación tras los fallos de una unidad y facilidad de gestión.
+** Se crea un pool de discos por dispositivo de almacenamiento o bandeja de expansión.
+** DDP proporciona protección contra pérdida de cajón en dispositivos SG5760, SG5860 y SG6160.
 +
 
 NOTE: DDP no proporciona protección contra pérdida de cajón en dispositivos SG6060 debido a los dos SSD. La protección contra pérdida de cajón resulta efectiva en cualquier bandeja de expansión que se añada a un SG6060.
 
-* *DDP16*: Este modo utiliza dos unidades de paridad por cada 16 unidades de datos, lo que da como resultado una mayor eficiencia de almacenamiento en comparación con DDP. En comparación con RAID 6, DDP16 ofrece un mejor rendimiento del sistema, menores tiempos de recompilación tras los fallos de una unidad, facilidad de gestión y eficiencia del almacenamiento comparable. Para utilizar el modo DDP16, la configuración debe contener al menos 20 unidades. DDP16 no ofrece protección contra pérdida de cajón.
+
+
+* *DDP16*: Este modo utiliza dos unidades de paridad por cada 16 unidades de datos, lo que da como resultado una mayor eficiencia de almacenamiento en comparación con DDP.
++
+** En comparación con RAID 6, DDP16 ofrece un mejor rendimiento del sistema, menores tiempos de recompilación tras los fallos de disco, facilidad de gestión y eficiencia del almacenamiento comparable.
+** Para usar el modo DDP16, el dispositivo de almacenamiento debe tener al menos 20 unidades.
+** Se crea un pool de discos por dispositivo de almacenamiento o bandeja de expansión.
+** DDP16 no ofrece protección contra pérdida de cajón.
+
+
 * *RAID6*: Este modo utiliza dos unidades de paridad por cada 16 o más unidades de datos. Se trata de un esquema de protección de hardware que utiliza franjas de paridad en cada disco y permite la aparición de fallos de dos discos en el conjunto de RAID antes de que se pierdan datos. Para utilizar el modo RAID 6, la configuración debe contener al menos 20 unidades. Aunque RAID 6 puede aumentar la eficiencia del almacenamiento del dispositivo en comparación con DDP, no se recomienda para la mayoría de los entornos de StorageGRID.
++
+** RAID 6 proporciona una pieza de repuesto global por bandeja de expansión. Por ejemplo, un SG6160 con dos bandejas de expansión tiene tres piezas de repuesto.
+** En un dispositivo de almacenamiento de 60 unidades, StorageGRID crea tres grupos de volúmenes, cada uno con un mínimo de 18 unidades (16+2) y un tamaño máximo de 21 unidades (19+2).
+** En SGF6024, un grupo de volúmenes RAID 6 es 23 unidades con una pieza de repuesto.
+** Los volúmenes RAID 6 son ligeramente mayores, lo que permite clonar nodos a partir de DDP16 en muchos casos. El tamaño de los volúmenes puede variar entre grupos de volúmenes en una configuración RAID 6.
+
+
 
 
 
@@ -37,7 +60,7 @@ CAUTION: Si alguno de los volúmenes ya está configurado o si StorageGRID se in
 .Antes de empezar
 * Tiene un SG5760 con unidades de 60 TB. Si tiene SG5712, debe usar el modo de DDP predeterminado.
 * Está utilizando cualquier cliente que pueda conectarse a StorageGRID.
-* El cliente tiene un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* El cliente tiene un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 
 
 .Pasos
@@ -57,7 +80,7 @@ Donde `_E5700SG_Controller_IP_` Es cualquiera de las direcciones IP de la contro
 .Antes de empezar
 * Tiene un SG5860 con unidades de 60 TB. Si tiene SG5812, debe usar el modo de DDP predeterminado.
 * Está utilizando cualquier cliente que pueda conectarse a StorageGRID.
-* El cliente tiene un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* El cliente tiene un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 
 
 .Pasos
@@ -76,7 +99,7 @@ Donde `_SG5800_Controller_IP_` Es alguna de las direcciones IP de la controlador
 --
 .Antes de empezar
 * Está utilizando cualquier cliente que pueda conectarse a StorageGRID.
-* El cliente tiene un  https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* El cliente tiene un  https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 
 
 .Pasos
@@ -100,7 +123,7 @@ Aparece la página de inicio del instalador de dispositivos de StorageGRID.
 --
 .Antes de empezar
 * Está utilizando cualquier cliente que pueda conectarse a StorageGRID.
-* El cliente tiene un  https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* El cliente tiene un  https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 
 
 .Pasos

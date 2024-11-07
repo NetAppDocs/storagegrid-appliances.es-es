@@ -37,10 +37,10 @@ image::../media/sgf6112_power_supplies.png[Parte posterior de SGF6112 o SG6100-C
 .Pasos
 . Si sólo va a sustituir una fuente de alimentación, no es necesario apagar el aparato. Vaya a la <<Unplug_the_power_cord,Desenchufe el cable de alimentación>> paso. Si va a sustituir ambas fuentes de alimentación al mismo tiempo, haga lo siguiente antes de desconectar los cables de alimentación:
 +
-.. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Apague el aparato"].
+.. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Apague el aparato"].
 +
 
-CAUTION: Si alguna vez utilizó una regla de ILM que crea solo una copia de un objeto y va a sustituir ambas fuentes de alimentación al mismo tiempo, debe sustituir los suministros de alimentación durante una ventana de mantenimiento programada porque podría perder temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información acerca de https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
+CAUTION: Si alguna vez utilizó una regla de ILM que crea solo una copia de un objeto y va a sustituir ambas fuentes de alimentación al mismo tiempo, debe sustituir los suministros de alimentación durante una ventana de mantenimiento programada porque podría perder temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información sobre https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
 
 
 

@@ -52,7 +52,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 . En SANtricity System Manager, determine qué contenedor de alimentación ha fallado.
 +
 .. Seleccione *hardware*.
-.. Mira la potencia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] Icono situado a la derecha de las listas desplegables * Shelf* para determinar qué bandeja tiene el contenedor de alimentación con error.
+.. Mire el icono de alimentación image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icono de encendido"]a la derecha de las listas desplegables *Bandeja* para determinar qué bandeja tiene el contenedor de alimentación con errores.
 +
 Si un componente falla, este icono está en rojo.
 

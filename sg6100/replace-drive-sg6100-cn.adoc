@@ -57,7 +57,7 @@ CAUTION: No ejerza demasiada fuerza al cerrar el mango.
 Cuando la unidad se inserta por completo, se oye un clic.
 
 +
-Cuando ambas unidades SSD funcionan de manera normal, el sistema restaura automáticamente la funcionalidad de lectura-caché. Puede hacerlo https://docs.netapp.com/us-en/storagegrid-118/monitor/running-diagnostics.html["ejecutar diagnóstico"^] para supervisar la tasa de aciertos en caché de lectura. Como la caché se acaba de recompilar, la tasa de aciertos puede ser baja al principio, pero debería aumentar con el tiempo a medida que los clientes que acceden a los datos de objetos vuelven a rellenar la caché.
+Cuando ambas unidades SSD funcionan de manera normal, el sistema restaura automáticamente la funcionalidad de lectura-caché.  https://docs.netapp.com/us-en/storagegrid/monitor/running-diagnostics.html["ejecutar diagnóstico"^]Puede supervisar la tasa de aciertos en caché de lectura. Como la caché se acaba de recompilar, la tasa de aciertos puede ser baja al principio, pero debería aumentar con el tiempo a medida que los clientes que acceden a los datos de objetos vuelven a rellenar la caché.
 
 
 

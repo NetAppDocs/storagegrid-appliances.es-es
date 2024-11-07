@@ -16,7 +16,7 @@ Para garantizar que los firewalls no obstruyan el acceso entre el instalador del
 .Acerca de esta tarea
 Con la lista de puertos que se incluye en el instalador de dispositivos de StorageGRID, puede probar la conectividad entre el dispositivo y los demás nodos de la red de grid.
 
-Además, puede probar la conectividad en las redes de administración y cliente y en los puertos UDP, como los que se utilizan para servidores NFS o DNS externos. Para ver una lista de estos puertos, consulte https://docs.netapp.com/us-en/storagegrid-118/network/network-port-reference.html["referencia de puerto de red"^].
+Además, puede probar la conectividad en las redes de administración y cliente y en los puertos UDP, como los que se utilizan para servidores NFS o DNS externos. Para obtener una lista de estos puertos, consulte la https://docs.netapp.com/us-en/storagegrid/network/network-port-reference.html["referencia de puerto de red"^].
 
 
 NOTE: Los puertos de red de grid que aparecen en la tabla de conectividad de puertos son válidos sólo para StorageGRID versión 11,7 o posterior. Para verificar qué puertos son correctos para cada tipo de nodo, siempre debe consultar las directrices de red para su versión de StorageGRID.

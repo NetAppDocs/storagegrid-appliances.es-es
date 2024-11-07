@@ -1,9 +1,13 @@
 ---
 indexpage:
+  title: Mantener el hardware de los dispositivos de servicios SG1100 y SG110
+  summary: Mantenga el hardware del dispositivo de servicios SG1100 y SG110.
+  keywords: maintain storagegrid sg110, maintain storagegrid sg1100
+  lead: Mantenga el hardware del dispositivo de servicios SG1100 y SG110.
   tiles:
   - title: Procedimientos realizados con frecuencia
     links:
-    - title: Enciende o apaga el LED de ubicación
+    - title: Encienda o apague el LED de identificación
       url: "../sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html"
     - title: Localice el dispositivo en el centro de datos
       url: "../sg110-1100/locating-sg110-and-sg1100-in-data-center.html"

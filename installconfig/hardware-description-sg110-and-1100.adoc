@@ -43,6 +43,39 @@ Las dos unidades de estado sólido (SSD), indicadas con el esquema naranja, se u
 
 Las ranuras de unidades restantes están vacías.
 
+Esta figura muestra la ubicación del suministro de alimentación e identifica los LED en la parte posterior del SG110 y del SG1100. En los puertos del dispositivo hay indicadores LED adicionales de estado y actividad. Estos LED pueden variar según el modelo de dispositivo.
+
+image::../media/q2024_rear_leds.png[LED traseros SG110 y SG1100]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+
+
+|===
 
 
 == SG110 conectores
@@ -215,13 +248,13 @@ Los siguientes ejemplos describen cómo puede maximizar las funcionalidades del 
 * Utilice dos dispositivos SG110 o dos dispositivos SG1100 para proporcionar servicios de puerta de enlace configurándolos como nodos de puerta de enlace.
 +
 
-IMPORTANT: No ponga en marcha los dispositivos de servicio SG110 y SG1100 en el mismo sitio. El rendimiento puede ser impredecible.
+IMPORTANT: Mezclar dispositivos de servicios con diferentes niveles de rendimiento en el mismo sitio, como SG100 o SG110 con SG1000 o SG1100, puede provocar resultados impredecibles e incoherentes cuando se usan varios nodos de un grupo de alta disponibilidad o al equilibrar la carga del cliente en varios dispositivos de servicios
 
 * Utilice dos dispositivos SG110 o dos dispositivos SG1100 para proporcionar redundancia de algunos servicios de administración de grid. Para ello, configure cada dispositivo como nodos de administración.
 * Utilice dos dispositivos SG110 o dos SG1100 para proporcionar servicios de equilibrio de carga y perfilado de tráfico de alta disponibilidad a los que se accede a través de una o más direcciones IP virtuales. Para ello, configure los dispositivos como cualquier combinación de nodos de administrador o nodos de puerta de enlace y añada ambos nodos al mismo grupo de alta disponibilidad.
 +
 
-IMPORTANT: Si utiliza nodos de administración y nodos de pasarela en el mismo grupo de alta disponibilidad, el puerto de solo nodo de administración no conmutará al nodo de respaldo. Consulte las instrucciones para https://docs.netapp.com/us-en/storagegrid-118/admin/configure-high-availability-group.html["Configurar grupos de alta disponibilidad"^].
+IMPORTANT: Si utiliza nodos de administración y nodos de pasarela en el mismo grupo de alta disponibilidad, el puerto de solo nodo de administración no conmutará al nodo de respaldo. Consulte las instrucciones para https://docs.netapp.com/us-en/storagegrid/admin/configure-high-availability-group.html["Configurar grupos de alta disponibilidad"^].
 
 
 

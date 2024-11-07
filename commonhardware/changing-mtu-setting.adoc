@@ -32,7 +32,7 @@ Si la red de cliente o administrador no se configuró en el instalador de dispos
 Usted tiene la `Passwords.txt` Archivo para utilizar la herramienta Cambiar IP.
 
 .Pasos
-Acceda a la herramienta Cambiar IP y actualice la configuración de MTU como se describe en https://docs.netapp.com/us-en/storagegrid-118/maintain/changing-nodes-network-configuration.html["Cambie la configuración de red de los nodos"^].
+Acceda a la herramienta Change IP y actualice la configuración de MTU como se describe en https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html["Cambie la configuración de red de los nodos"^].
 
 
 

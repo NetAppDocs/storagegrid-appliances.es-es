@@ -29,7 +29,7 @@ Es posible que no se pueda acceder al nodo de almacenamiento del dispositivo cua
 
 * Acceso a SANtricity System Manager:
 +
-** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información de la controladora se encuentra en la https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
 +
 
 NOTE: Es posible que no pueda acceder a SANtricity System Manager mediante Grid Manager durante determinados pasos de este procedimiento. Si se apaga la controladora SG5800, deberá acceder a SANtricity System Manager desde el explorador.
@@ -167,12 +167,12 @@ image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Quite LOS DIMM.]
 
 
  a| 
-image::../media/legend_icon_01.png[icono de leyenda 01]
+image::../media/legend_icon_01.png[Referencia de llamada 1]
 | Lengüetas del expulsor de DIMM 
 
 
  a| 
-image::../media/legend_icon_02.png[icono de leyenda 02]
+image::../media/legend_icon_02.png[Referencia de llamada 2]
 | DIMM 
 |===
 . Retire el módulo DIMM de repuesto de la bolsa de transporte antiestática, sujete el módulo DIMM por las esquinas y alinéelo con la ranura.

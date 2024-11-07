@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: Mantenimiento del hardware del dispositivo
+  summary: Mantener el hardware del dispositivo de almacenamiento o servicios.
+  keywords: maintain storagegrid hardware
+  lead: Mantener el hardware del dispositivo de almacenamiento o servicios.
   tiles:
   - title: Procedimientos realizados con frecuencia
     links:
@@ -11,6 +15,8 @@ indexpage:
       url: "../commonhardware/checking-dns-server-configuration.html"
     - title: Actualice la dirección MAC
       url: "../commonhardware/locate-mac-address.html"
+    - title: Gestionar unidades
+      url: "../commonhardware/manage-drives-tab.html"
     - title: Supervisar el cifrado del nodo
       url: "../commonhardware/monitoring-node-encryption-in-maintenance-mode.html"
   - title: Clonado de nodos

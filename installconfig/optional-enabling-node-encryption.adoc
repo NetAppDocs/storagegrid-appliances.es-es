@@ -19,7 +19,7 @@ Puede habilitar el cifrado en los niveles de nodo y disco para proteger los disc
 
 Es posible realizar ambos niveles de cifrado en las unidades compatibles para mayor seguridad.
 
-Consulte https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Métodos de cifrado de StorageGRID"^] Para obtener información sobre todos los métodos de cifrado disponibles para los dispositivos StorageGRID.
+Consulte https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-encryption-methods.html["Métodos de cifrado de StorageGRID"^] para obtener más información sobre todos los métodos de cifrado disponibles para dispositivos StorageGRID.
 
 
 
@@ -30,7 +30,7 @@ Si habilita el cifrado de nodos, los discos del dispositivo pueden protegerse me
 Si utiliza ConfigBuilder para generar un archivo JSON, puede habilitar el cifrado de nodos automáticamente. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
 
 .Antes de empezar
-Revise la información acerca de https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configurando KMS"^].
+Revise la información sobre https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurando KMS"^].
 
 .Acerca de esta tarea
 Un dispositivo con el cifrado de nodos habilitado se conecta al servidor de gestión de claves (KMS) externo que está configurado para el sitio StorageGRID. Cada KMS (o clúster KMS) administra las claves de cifrado de todos los nodos de dispositivos del sitio. Estas claves cifran y descifran los datos de cada disco de un dispositivo que tiene habilitado el cifrado de nodos.
@@ -42,7 +42,7 @@ Se puede configurar un KMS en Grid Manager antes o después de instalar el dispo
 
 
 
-CAUTION: Cuando se instala un dispositivo con el cifrado de nodo habilitado, se asigna una clave temporal. Los datos del dispositivo no están protegidos hasta que el dispositivo se conecta al sistema de gestión de claves (KMS) y se establece una clave de seguridad KMS. Consulte https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html["Descripción general de la configuración del dispositivo KM"^] para obtener más información.
+CAUTION: Cuando se instala un dispositivo con el cifrado de nodo habilitado, se asigna una clave temporal. Los datos del dispositivo no están protegidos hasta que el dispositivo se conecta al sistema de gestión de claves (KMS) y se establece una clave de seguridad KMS. Consulte la https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html["Descripción general de la configuración del dispositivo KM"^] para obtener información adicional.
 
 Sin la clave KMS necesaria para descifrar el disco, los datos del dispositivo no se pueden recuperar y se pierden efectivamente. Este es el caso cuando la clave de descifrado no se puede recuperar del KMS. La clave se vuelve inaccesible si un cliente borra la configuración de KMS, caduca una clave KMS, se pierde la conexión con el KMS o se elimina el dispositivo del sistema StorageGRID donde se instalan sus claves KMS.
 
@@ -107,7 +107,7 @@ El cifrado de unidades no se aplica a las unidades gestionadas por SANtricity. S
 Puede habilitar el cifrado de unidades durante la instalación inicial del dispositivo antes de cargar Grid Manager. También puede habilitar el cifrado de nodo o cambiar su clave de acceso si coloca el dispositivo en modo de mantenimiento.
 
 .Antes de empezar
-Revise la información acerca de https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Métodos de cifrado de StorageGRID"^].
+Revise la información sobre https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-encryption-methods.html["Métodos de cifrado de StorageGRID"^].
 
 .Acerca de esta tarea
 Una clave de acceso se configura cuando el cifrado de unidad se habilita inicialmente. Si se reemplaza un nodo de computación o se mueve un SED cifrado a un nuevo nodo de computación, debe volver a introducir manualmente la frase de contraseña.

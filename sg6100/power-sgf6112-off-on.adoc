@@ -20,8 +20,7 @@ Puede apagar el dispositivo SGF6112 o la controladora SG6100-CN y volver a encen
 Apague el dispositivo para realizar las tareas de mantenimiento del hardware.
 
 .Antes de empezar
-* Ya tienes link:locating-sgf6112-in-data-center.html["ubicación física del aparato"].
-
+Ya tienes link:locating-sgf6112-in-data-center.html["ubicación física del aparato"].
 
 .Acerca de esta tarea
 Para evitar interrupciones de servicio, apague el aparato durante un período de mantenimiento programado cuando se acepten períodos de interrupción del servicio.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
 summary: Para garantizar el funcionamiento óptimo de la controladora de almacenamiento, debe actualizarse a la versión de mantenimiento más reciente del sistema operativo SANtricity que esté cualificado para su dispositivo StorageGRID. 
 ---
-= Actualice el sistema operativo SANtricity en la controladora de almacenamiento SG5800
+= Acerca de la actualización del sistema operativo SANtricity en una controladora de almacenamiento SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Para garantizar el funcionamiento óptimo de la controladora de almacen
 [role="lead"]
 Para garantizar el funcionamiento óptimo de la controladora de almacenamiento, debe actualizarse a la versión de mantenimiento más reciente del sistema operativo SANtricity que esté cualificado para su dispositivo StorageGRID.
 
-Determine si ha consultado la última versión del sistema operativo SANtricity apta para su uso en el dispositivo StorageGRID https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"] y descargarlo si es necesario.
+Para determinar la versión más reciente de SANtricity OS apta para su uso en el dispositivo StorageGRID, deberá consultarla https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^] y descargarla, en caso necesario.
 
 Descargue el nuevo archivo de software de sistema operativo SANtricity desde https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^].
 

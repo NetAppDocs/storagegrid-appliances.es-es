@@ -46,7 +46,7 @@ SG5712
  a| 
 SG5760
  a| 
-240 VOLTIOS CA
+240 voltios CA
 
 
 
@@ -60,35 +60,153 @@ De 120 a 240 voltios de CA
  a| 
 SG5860
  a| 
-240 VOLTIOS CA
+240 voltios CA
 
 
 
  a| 
 SGF6024
  a| 
-120 VOLTIOS CA
+120 voltios CA
 
 
 
  a| 
 SG6060
  a| 
-240 VOLTIOS CA
+240 voltios CA
 
 
 
  a| 
 SGF6112
  a| 
-De 100 a 240 voltios de CA
+240 voltios CA
 
 
 
  a| 
 SG6160
  a| 
-240 VOLTIOS CA
+240 voltios CA
+
+|===
+. Confirme que su ubicación cumple los requisitos de alimentación del aparato:
++
+
+NOTE: Las fuentes de alimentación de los dispositivos StorageGRID están clasificadas para vatios significativamente superiores a los que utiliza el hardware del dispositivo StorageGRID, incluso durante períodos de consumo máximo de energía. NetApp recomienda utilizar las cifras de la siguiente tabla para determinar si una propuesta de distribución de rack que incluye dispositivos StorageGRID es compatible con el presupuesto de energía de rack.
+
++
+[cols="1a,1a,1a"]
+|===
+| Modelo | Potencia media requerida (W) | Potencia máxima requerida (W) 
+
+
+ a| 
+SG100
+ a| 
+273
+ a| 
+400
+
+
+
+ a| 
+SG1000
+ a| 
+337
+ a| 
+600
+
+
+
+ a| 
+SG110
+ a| 
+352
+ a| 
+500
+
+
+
+ a| 
+SG1100
+ a| 
+422
+ a| 
+700
+
+
+
+ a| 
+SG5712
+ a| 
+578
+ a| 
+700
+
+
+
+ a| 
+SG5760
+ a| 
+1394
+ a| 
+1800
+
+
+
+ a| 
+SG5812
+ a| 
+449
+ a| 
+600
+
+
+
+ a| 
+SG5860
+ a| 
+1048
+ a| 
+1300
+
+
+
+ a| 
+SGF6024
+ a| 
+1027
+ a| 
+1900
+
+
+
+ a| 
+SG6060
+ a| 
+1484
+ a| 
+2300
+
+
+
+ a| 
+SGF6112
+ a| 
+446
+ a| 
+700
+
+
+
+ a| 
+SG6160
+ a| 
+1312
+ a| 
+1800
 
 |===
 . Obtenga un armario o rack de 19 pulgadas (48,3 cm) para adaptarse a estantes del siguiente tamaño (sin cables).

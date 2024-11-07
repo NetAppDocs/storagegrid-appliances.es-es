@@ -107,6 +107,13 @@ NOTE: En algunos casos, el nombre de usuario predeterminado puede ser `root` en 
 
 
  a| 
+HT
+ a| 
+El script de inicio maestro está esperando a que finalice el inicio del sistema operativo.
+
+
+
+ a| 
 HOLA
  a| 
 Se ha iniciado la secuencia de comandos de inicio maestra.
@@ -114,9 +121,23 @@ Se ha iniciado la secuencia de comandos de inicio maestra.
 
 
  a| 
+PP
+ a| 
+El sistema comprueba si es necesario actualizar la FPGA.
+
+
+
+ a| 
 HP
  a| 
 El sistema comprueba si es necesario actualizar el firmware de la tarjeta de interfaz de red (NIC).
+
+
+
+ a| 
+HB
+ a| 
+El sistema comprueba si el firmware de la controladora de 10/25-GbE debe actualizarse.
 
 
 
@@ -160,18 +181,48 @@ StorageGRID está ejecutando.
 
 == Ver códigos de error
 
-Si se produce un error de hardware cuando el dispositivo arranca, el BMC registra un código de error. Según sea necesario, puede ver estos códigos de error mediante la interfaz del BMC y, a continuación, trabajar con el soporte técnico para resolver el problema.
+Si se produce un error de hardware cuando el dispositivo arranca, el BMC registra un código de error. Según sea necesario, puede ver estos códigos de error mediante la interfaz BMC o el puerto serie del dispositivo y, a continuación, trabajar con el soporte técnico para resolver el problema.
 
 .Antes de empezar
-* Sabes cómo hacerlo link:accessing-bmc-interface.html["Acceda al panel de control de BMC"].
+
+NOTE: Si su BMC no tiene un elemento de menú Código POST del BIOS, acceda a los códigos de error mediante el puerto serie del dispositivo.
+
+* Si está utilizando la BMC, sabe cómo link:accessing-bmc-interface.html["Acceda al panel de control de BMC"].
+* Si está utilizando un puerto serie y un terminal, reúna el equipo necesario:
++
+** Cable serie DB-9
+** Terminal serie virtual
+
+
 
 
 .Pasos
-. En el panel de control del BMC, seleccione *Código POST del BIOS*.
-. Revise la información que se muestra para el código actual y el código anterior.
+. Acceda a los códigos de error mediante uno de los siguientes métodos.
 +
-Si se muestra alguno de los siguientes códigos de error, trabaje con el soporte técnico para resolver el problema.
+[role="tabbed-block"]
+====
+.BMC
+--
+Si utiliza BMC, siga estos pasos:
 
+.. link:accessing-bmc-interface.html["Acceda a la consola de BMC"].
+.. En el panel de control del BMC, seleccione *Código POST del BIOS*.
+.. Revise la información que se muestra para el código actual y el código anterior.
+
+
+--
+.Puerto serie
+--
+Si utiliza un puerto serie y un terminal, realice estos pasos para ver los códigos de error. Los códigos POST del BIOS aparecen en la consola de serie cuando se reinicia el aparato.
+
+.. Conecte el puerto serie DB-9 de la parte posterior del dispositivo.
+.. Utilice la configuración `115200 8-N-1`.
+.. Ver los códigos impresos en el terminal de serie.
+
+
+--
+====
+. Si se muestra alguno de los siguientes códigos de error, trabaje con el soporte técnico para resolver el problema.
 +
 [cols="1a,3a"]
 |===

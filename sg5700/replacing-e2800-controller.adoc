@@ -26,7 +26,7 @@ NOTE: No confíe en las instrucciones E-Series para sustituir una controladora c
 CAUTION: No podrá utilizar el aparato hasta que desbloquee las unidades con la tecla guardada.
 
 * Debe tener permisos de acceso específicos.
-* Debe iniciar sesión en Grid Manager mediante un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Debe iniciar sesión en Grid Manager mediante una https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 
 
 .Acerca de esta tarea

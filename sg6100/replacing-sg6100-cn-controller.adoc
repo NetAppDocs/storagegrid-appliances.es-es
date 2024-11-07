@@ -14,7 +14,7 @@ summary: Es posible que deba reemplazar la controladora SG6100-CN si no funciona
 Es posible que deba reemplazar la controladora SG6100-CN si no funciona de forma óptima o si falló.
 
 .Antes de empezar
-* Tiene una controladora de sustitución con el mismo número de pieza que la controladora que desea sustituir.
+* Tiene una controladora de sustitución con el mismo número de pieza que la controladora que desea sustituir. Compruebe las etiquetas adjuntas a la parte frontal de las controladoras para confirmar que los números de pieza coinciden.
 * Tiene etiquetas para identificar cada cable conectado a la controladora.
 * Localizó físicamente la controladora para reemplazar en el centro de datos.
 +
@@ -65,7 +65,7 @@ CAUTION: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni 
 +
 ** link:../installconfig/configuring-network-links.html["Configure los enlaces de red"]
 ** link:../installconfig/setting-ip-configuration.html["Configure las direcciones IP de StorageGRID"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure el cifrado de nodo para el dispositivo"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure el cifrado de nodo para el dispositivo"^]
 
 
 . Inicie sesión en el dispositivo con la controladora reemplazada:

@@ -4,7 +4,7 @@
 
 .Antes de empezar
 * Tiene el número de serie del dispositivo de almacenamiento donde se tiene que reemplazar el componente.
-* Ha iniciado sesión en Grid Manager mediante un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Ha iniciado sesión en Grid Manager mediante una https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 
 
 .Acerca de esta tarea
@@ -31,7 +31,7 @@ NOTE: Seleccione la alerta, no el encabezado de un grupo de alertas.
 
 .. Registre el nombre del nodo y la etiqueta de identificación única del componente que ha fallado.
 +
-image::../media/nic-alert-sgf6112.jpg[Alerta con ID de componente]
+image::../media/nic-alert-sgf6112.png[Alerta con ID de componente]
 
 
 

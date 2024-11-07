@@ -14,7 +14,7 @@ summary: Debe colocar el aparato en modo de mantenimiento antes de realizar proc
 Debe colocar el aparato en modo de mantenimiento antes de realizar procedimientos de mantenimiento específicos.
 
 .Antes de empezar
-* Ha iniciado sesión en Grid Manager mediante un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Ha iniciado sesión en Grid Manager mediante una https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 * Tiene el permiso de mantenimiento o acceso raíz. Para obtener más detalles, consulte las instrucciones para administrar StorageGRID.
 
 

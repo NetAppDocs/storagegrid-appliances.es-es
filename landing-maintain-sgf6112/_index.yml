@@ -1,13 +1,17 @@
 ---
 indexpage:
+  title: Mantener el hardware del dispositivo de almacenamiento SG6100
+  summary: Mantenga el hardware del dispositivo de almacenamiento SG6100.
+  keywords: maintain storagegrid sg6100
+  lead: Mantenga el hardware del dispositivo de almacenamiento SG6100.
   tiles:
   - title: Procedimientos realizados con frecuencia
     links:
-    - title: Actualizar SANtricity (SG6160)
+    - title: Actualice SANtricity
       url: "../sg6100/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html"
     - title: Actualizar el firmware de la unidad (SG6160)
-      url: "../sg6100/upgrading-drive-firmware-using-santricity-system-manager.html"
-    - title: Enciende o apaga el LED de ubicación
+      url: "../sg6100/upgrade-drive-firmware-using-santricity-system-manager.html"
+    - title: Encienda o apague el LED de identificación
       url: "../sg6100/turning-sgf6112-identify-led-on-and-off.html"
     - title: Localice el dispositivo en el centro de datos
       url: "../sg6100/locating-sgf6112-in-data-center.html"
@@ -25,10 +29,8 @@ indexpage:
       url: "../sg6100/replacing-sg6100-cn-controller.html"
     - title: Sustituir la controladora de almacenamiento (SG6160)
       url: "../sg6100/replace-controller-e4000-duplex.html"
-    - title: Reubique SGF6112 en un rack
+    - title: Reubique SGF6112 o SG6100-CN en un rack
       url: "../sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html"
-    - title: Reubique SG6100-CN en un rack
-      url: "../sg6100/reinstalling-sg6100-cn-controller-into-cabinet-or-rack.html"
   - title: Procedimientos de hardware
     links:
     - title: Vuelva a colocar la cubierta
@@ -53,7 +55,7 @@ indexpage:
     - title: Sustituir NIC interna (SGF6112 y SG6160)
       url: "../sg6100/replace-nic-in-sgf6112.html"
     - title: Sustituir NIC externa (SG6160)
-      url: "../sg6100/replace-ocp-nic-in-sg6100-cn.html"
+      url: "../sg6100/replace-ocp-nic-sg6100-cn.html"
     - title: Sustituir DIMM (SG6160)
       url: "../sg6100/replace-dimms-e4000.html"
     - title: Sustituir las baterías (SG6160)

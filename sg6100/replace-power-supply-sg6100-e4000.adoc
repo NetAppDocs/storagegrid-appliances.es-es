@@ -1,5 +1,5 @@
 ---
-permalink: sg6100/replace-power-supply-e4000.html 
+permalink: sg6100/replace-power-supply-sg6100-e4000.html 
 sidebar: sidebar 
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace power supply, replacing E4000 power supply, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Revise los tipos y requisitos de contenedor E4000. 
@@ -33,7 +33,7 @@ NOTE: No mezcle fuentes de alimentación de los diferentes tipos de tensión. Su
 ** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
 ** Acceso a SANtricity System Manager:
 +
-*** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información de la controladora se encuentra en la https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+*** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
 *** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
 
 
@@ -64,7 +64,7 @@ Esta información se puede encontrar en el área Detalles de Recovery Guru, o bi
 
 +
 .. Seleccione *hardware*.
-.. Mira la potencia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] y ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Iconos a la derecha de las listas desplegables *Shelf* para determinar qué estante tiene la fuente de alimentación fallida.
+.. Observe los iconos de alimentación image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icono de encendido"] y ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icono de ventilador"]situados a la derecha de las listas desplegables de *Bandeja* para determinar qué bandeja tiene el suministro de alimentación fallido.
 +
 Si un componente ha fallado, estos iconos o ambos son de color rojo.
 

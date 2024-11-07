@@ -14,7 +14,7 @@ summary: Es posible que deba sustituir el aparato si no funciona de forma óptim
 Es posible que deba sustituir el aparato si no funciona de forma óptima o si ha fallado.
 
 .Antes de empezar
-* Tiene un aparato de repuesto con el mismo número de pieza que el aparato que va a sustituir.
+* Tiene un aparato de repuesto con el mismo número de pieza que el aparato que va a sustituir. Compruebe las etiquetas adjuntas a la parte frontal de los aparatos para confirmar que los números de pieza coinciden.
 * Tiene etiquetas para identificar cada cable que está conectado al dispositivo.
 * Ya tienes link:locating-sgf6112-in-data-center.html["ubicación física del aparato"].
 
@@ -42,7 +42,7 @@ Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para
 .. Introduzca: `*run-host-command ipmitool lan print*` Para mostrar las configuraciones actuales de BMC del dispositivo.
 
 
-. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Apague el aparato"].
+. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Apague el aparato"].
 . Si alguna de las interfaces de red de este dispositivo StorageGRID está configurada para DHCP, debe actualizar las asignaciones de permisos DHCP permanentes en los servidores DHCP para hacer referencia a las direcciones MAC del dispositivo de reemplazo. Esto garantiza que el dispositivo tenga asignadas las direcciones IP esperadas.
 +
 Póngase en contacto con el administrador de la red o del servidor DHCP para actualizar las asignaciones de concesión DHCP permanentes. El administrador puede determinar las direcciones MAC del dispositivo de reemplazo desde los registros del servidor DHCP o inspeccionando las tablas de direcciones MAC en los switches a los que están conectados los puertos Ethernet del dispositivo.
@@ -163,7 +163,7 @@ CAUTION: Si desea conservar los datos en las unidades, asegúrese de insertar la
 
 
 . Encienda el aparato.
-. Si el dispositivo que sustituyó tenía activado el cifrado de unidades de hardware para las unidades SED, debe hacerlo link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["introduzca la clave de acceso de cifrado de la unidad"] para acceder a las unidades cifradas cuando se inicia el dispositivo de sustitución por primera vez.
+. Si el dispositivo que sustituyó tenía activada la función de cifrado de unidades de hardware para las unidades SED, consulte link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["Acceda a una unidad cifrada"]. Siga las instrucciones para acceder a la unidad cifrada cuando el dispositivo de reemplazo se inicie por primera vez. Será necesario reiniciar para completar el procedimiento.
 . Espere a que el aparato vuelva a unirse a la red. Si el dispositivo no se vuelve a unir a la cuadrícula, siga las instrucciones de la página de inicio del instalador de dispositivos de StorageGRID para solucionar cualquier problema.
 +
 
@@ -172,7 +172,7 @@ WARNING: Para evitar la pérdida de datos si el instalador del dispositivo indic
 . Si el dispositivo que sustituyó utilizó un servidor de gestión de claves (KMS) para gestionar claves de cifrado para el cifrado de nodos, es posible que se necesite una configuración adicional para que el nodo pueda unirse al grid. Si el nodo no se une automáticamente a la cuadrícula, asegúrese de que estas opciones de configuración se hayan transferido al nuevo dispositivo y configure manualmente cualquier configuración que no tenga la configuración esperada:
 +
 ** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configure las conexiones StorageGRID"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure el cifrado de nodo para el dispositivo"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure el cifrado de nodo para el dispositivo"^]
 
 
 . Inicie sesión en el dispositivo sustituido:
@@ -217,6 +217,6 @@ WARNING: Para evitar la pérdida de datos si el instalador del dispositivo indic
 Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
 
 .Información relacionada
-link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+* link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+* link:../installconfig/troubleshooting-hardware-installation-sg6100.html#view-boot-codes["Ver los códigos de arranque del dispositivo"]
 
-link:../installconfig/troubleshooting-hardware-installation-sg6100.html#view-error-codes["Ver los códigos de arranque del dispositivo"]

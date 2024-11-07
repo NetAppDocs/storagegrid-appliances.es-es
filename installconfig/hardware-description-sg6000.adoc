@@ -108,6 +108,39 @@ Se ha eliminado el controlador informático SG6000-CN con marco frontal
 Bandeja de controladoras E2860 con cubierta protectora frontal retirada (la bandeja de expansión opcional muestra idéntica)
 
 |===
+En esta figura, se muestra la ubicación del suministro de alimentación e identifica los LED en la parte posterior de la controladora de computación SG6000-CN utilizada en los sistemas SG6060 y SG6060X. En los puertos del dispositivo hay indicadores LED adicionales de estado y actividad. Estos LED pueden variar según el modelo de dispositivo.
+
+image::../media/q2023_rear_leds.png[LED traseros SG6000-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+
+
+|===
 
 
 === Vista posterior de SG6060
@@ -259,7 +292,7 @@ NOTE: El software StorageGRID no está preinstalado en el dispositivo. Este soft
 
 ==== Conectores SG6000-CN
 
-image::../media/sg6000_cn_rear_connectors.gif[Conectores posteriores SG6000-CN]
+image::../media/sg6000_cn_rear_connectors.png[Conectores posteriores SG6000-CN]
 
 [cols="1a,2a,2a,3a"]
 |===

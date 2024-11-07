@@ -38,48 +38,9 @@ Al instalar el dispositivo de repuesto, debe especificar direcciones IP temporal
 
 
 
-== Compatibilidad con el dispositivo de destino
-
-Los dispositivos de reemplazo deben ser del mismo tipo que el nodo origen que sustituyen y ambos deben formar parte del mismo sitio lógico de StorageGRID.
-
-* Un dispositivo de servicios de sustitución puede ser diferente al nodo de administración o al nodo de puerta de enlace que va a sustituir.
-+
-** Puede clonar un dispositivo de nodo de origen SG100 en un dispositivo de destino de servicios SG110, SG1000 o SG1100. La clonación del SG100 a un dispositivo de destino de servicios SG1000 o SG1100 proporciona al nodo de administración o al nodo de pasarela una mayor capacidad.
-** Puede clonar un dispositivo de nodo de origen SG110 en un destino de dispositivo de servicios SG1100 para dar mayor capacidad al nodo de administración o al nodo de pasarela.
-** Puede clonar un dispositivo de nodo de origen SG1000 en un dispositivo de destino de servicios SG100, SG110 o SG1100. Clonar SG1000 a un dispositivo objetivo de servicios SG100 o SG110 le permite volver a poner en marcha SG1000 para una aplicación más exigente.
-** Puede clonar un dispositivo de nodo de origen SG1100 en un dispositivo de destino de servicios SG110 para volver a poner en marcha SG1100 para una aplicación más exigente.
-+
-Por ejemplo, si se usa un dispositivo de nodo de origen SG1100 o SG1000 como nodo de administración y se quiere usar como nodo de equilibrio de carga dedicado.
-
-** Reemplazar un dispositivo de nodo de origen SG1100 por un dispositivo de destino de servicios SG110 reduce la velocidad máxima de los puertos de red de 100 GbE a 25 GbE.
-** La sustitución de un dispositivo de nodo de origen SG1000 por un dispositivo de destino de servicios SG100 reduce la velocidad máxima de los puertos de red de 100-GbE a 25-GbE.
-** Los dispositivos de servicios tienen diferentes conectores de red. Puede que sea necesario cambiar el tipo de dispositivo reemplazando los cables o los módulos SFP.
-
-
-* Un dispositivo de almacenamiento de sustitución debe tener mayor capacidad que el nodo de almacenamiento que sustituye.
-+
-** Si el dispositivo de almacenamiento objetivo tiene la misma cantidad de unidades que el nodo de origen, las unidades del dispositivo objetivo deben tener mayor capacidad (en TB).
-** Si tiene previsto utilizar el mismo modo RAID en el nodo de destino que se utilizó en el nodo de origen, O un modo RAID menos eficiente del almacenamiento (por ejemplo, cambiar de RAID 6 a DDP), las unidades del dispositivo de destino deben ser mayores (en TB) que las unidades del dispositivo de origen.
-** Si la cantidad de unidades estándar instaladas en un dispositivo de almacenamiento de destino es menor que la cantidad de unidades en el nodo de origen, debido a la instalación de unidades de estado sólido (SSD), la capacidad de almacenamiento general de las unidades estándar en el dispositivo de destino (en TB). Debe superar la capacidad total de la unidad funcional de todas las unidades en el nodo de almacenamiento de origen.
-+
-Por ejemplo, al clonar un dispositivo con nodos de almacenamiento de origen de SG5760 TB con 60 unidades a un dispositivo de destino SG6060 con 58 unidades estándar, deben instalarse unidades más grandes en el dispositivo de destino SG6060 antes de clonar para mantener la capacidad de almacenamiento. (Las dos ranuras de unidad que contienen SSD en el dispositivo de destino no se incluyen en la capacidad total de almacenamiento del dispositivo).
-
-+
-Sin embargo, si un dispositivo de nodo de origen SG5760 de 60 unidades está configurado con los pools de discos dinámicos SANtricity DDP-8, configurar un dispositivo de destino SG6060 de 58 unidades del mismo tamaño con DDP-16 podría convertir al dispositivo SG6060 en un destino clonado válido debido a la eficiencia mejorada del almacenamiento.
-
-+
-Puede ver información acerca del modo RAID actual del nodo del dispositivo de origen en la página *NODES* de Grid Manager. Seleccione la ficha *almacenamiento* del dispositivo.
-
-
-
-* La cantidad de volúmenes en un dispositivo de almacenamiento de destino debe ser mayor o igual que la cantidad de volúmenes en el nodo de origen. No se puede clonar un nodo de origen con volúmenes de almacenamiento de objetos 16 (rangedb) en un dispositivo de almacenamiento de destino con volúmenes de almacenamiento de objetos 12, incluso si el dispositivo de destino tiene más capacidad que el nodo de origen. La mayoría de los dispositivos de almacenamiento tienen volúmenes de almacenamiento de objetos de 16 TB, excepto el dispositivo de almacenamiento SGF6112 que solo tiene 12 volúmenes de almacenamiento de objetos.
-
-
-
-
 == ¿Qué información no se clona?
 
-Las siguientes configuraciones de dispositivos no se transfieren al dispositivo de reemplazo durante el clonado. Debe configurarlos durante la configuración inicial del dispositivo de reemplazo.
+Las siguientes configuraciones de dispositivos no se transfieren al dispositivo de reemplazo durante el clonado. Debe configurarlas durante la configuración inicial del dispositivo de sustitución.
 
 * Interfaz de BMC
 * Enlaces de red
@@ -101,3 +62,120 @@ Si se encuentra alguno de los siguientes problemas durante la clonado, el proces
 
 
 Debe resolver cada problema para que la clonación continúe.
+
+
+
+== Compatibilidad con el dispositivo de destino
+
+Los dispositivos de reemplazo deben ser del mismo tipo que el nodo origen que sustituyen y ambos deben formar parte del mismo sitio lógico de StorageGRID.
+
+Revise las consideraciones generales de clonación e información específica de clonación y las restricciones para cada tipo de dispositivo antes de clonar.
+
+
+
+=== Consideraciones generales sobre la clonación de dispositivos de servicios
+
+* Un dispositivo de servicios de sustitución puede ser un modelo diferente al nodo de administración o nodo de puerta de enlace que está sustituyendo.
+* Los dispositivos de servicios tienen diferentes conectores de red. Puede que sea necesario cambiar el tipo de dispositivo reemplazando los cables o los módulos SFP.
+
+
+
+
+=== Consideraciones generales sobre la clonación de dispositivos de almacenamiento
+
+* Un dispositivo de almacenamiento de sustitución debe tener mayor capacidad que el nodo de almacenamiento que sustituye.
++
+** Si el dispositivo de almacenamiento objetivo tiene la misma cantidad de unidades que el nodo de origen, las unidades del dispositivo objetivo deben tener mayor capacidad (en TB).
+** Si tiene previsto utilizar el mismo modo RAID en el nodo de destino que se utilizó en el nodo de origen, O un modo RAID menos eficiente del almacenamiento (por ejemplo, cambiar de RAID 6 a DDP), las unidades del dispositivo de destino deben ser mayores (en TB) que las unidades del dispositivo de origen.
+** Algunas excepciones a las consideraciones de clonación en dispositivos de almacenamiento generales son:
++
+*** Si la cantidad de unidades estándar instaladas en un dispositivo de almacenamiento de destino es menor que la cantidad de unidades en el nodo de origen, debido a la instalación de unidades de estado sólido (SSD), la capacidad de almacenamiento general de las unidades estándar en el dispositivo de destino (en TB). Debe superar la capacidad total de la unidad funcional de todas las unidades en el nodo de almacenamiento de origen.
++
+Por ejemplo, al clonar un dispositivo con nodos de almacenamiento de origen de SG5760 TB con 60 unidades a un dispositivo de destino SG6060 con 58 unidades estándar, deben instalarse unidades más grandes en el dispositivo de destino SG6060 antes de clonar para mantener la capacidad de almacenamiento. (Las dos ranuras de unidad que contienen SSD en el dispositivo de destino no se incluyen en la capacidad total de almacenamiento del dispositivo).
+
++
+Sin embargo, si un dispositivo de nodo de origen SG5760 de 60 unidades está configurado con SANtricity Dynamic Disk Pools DDP-8 (DDP), configurar un dispositivo de destino SG6060 de 58 unidades del mismo tamaño con DDP-16 podría convertir al dispositivo SG6060 en un destino clonado válido debido a la eficiencia del almacenamiento mejorada.
+
++
+Puede ver información acerca del modo RAID actual del nodo del dispositivo de origen en la página *NODES* de Grid Manager. Seleccione la ficha *almacenamiento* del dispositivo.
+
+*** La cantidad de volúmenes en un dispositivo de almacenamiento de destino debe ser mayor o igual que la cantidad de volúmenes en el nodo de origen. No se puede clonar un nodo de origen con volúmenes de almacenamiento de objetos 16 (rangedb) en un dispositivo de almacenamiento de destino con volúmenes de almacenamiento de objetos 12, incluso si el dispositivo de destino tiene más capacidad que el nodo de origen. La mayoría de los dispositivos de almacenamiento tienen volúmenes de almacenamiento de objetos de 16 TB, excepto el dispositivo de almacenamiento SGF6112 que solo tiene 12 volúmenes de almacenamiento de objetos.
+
+
+
+
+
+
+
+
+=== Información y restricciones de clonación de dispositivos SG100
+
+Puede clonar un dispositivo de nodo de origen SG100 en un dispositivo de destino de servicios SG110, SG1000 o SG1100. La clonación del SG100 a un dispositivo de destino de servicios SG1000 o SG1100 proporciona al nodo de administración o al nodo de pasarela una mayor capacidad.
+
+
+
+=== Información y restricciones de clonación de dispositivos SG110
+
+Puede clonar un dispositivo de nodo de origen SG110 en un destino de dispositivo de servicios SG1100 para dar mayor capacidad al nodo de administración o al nodo de pasarela.
+
+
+
+=== Información y restricciones de clonación de dispositivos SG1000
+
+Puede clonar un dispositivo de nodo de origen SG1000 en un dispositivo de destino de servicios SG100, SG110 o SG1100.
+
+* Clonar SG1000 a un dispositivo objetivo de servicios SG100 o SG110 le permite volver a poner en marcha SG1000 para una aplicación más exigente.
+* La sustitución de un dispositivo de nodo de origen SG1000 por un dispositivo de destino de servicios SG100 reduce la velocidad máxima de los puertos de red de 100-GbE a 25-GbE.
+
+
+
+
+=== Información y restricciones de clonación de dispositivos SG1100
+
+Puede clonar un dispositivo de nodo de origen SG1100 en un dispositivo de destino de servicios SG110.
+
+* Clonar el SG1100 a un dispositivo de destino de servicios SG110 le permite volver a poner en marcha el SG1100 para una aplicación más exigente. Por ejemplo, si un dispositivo de nodo de origen SG1100 se está utilizando como nodo de administración y desea utilizarlo como nodo de equilibrio de carga dedicado.
+* Reemplazar un dispositivo de nodo de origen SG1100 por un dispositivo de destino de servicios SG110 reduce la velocidad máxima de los puertos de red de 100 GbE a 25 GbE.
+
+
+
+
+=== Información y restricciones de clonación de dispositivos SG5712
+
+Puede clonar un dispositivo de nodo de origen SG5712 configurado con DDP en un dispositivo de destino de almacenamiento SG5812.
+
+
+
+=== Información y restricciones de clonación de dispositivos SG5760
+
+* Puede clonar un dispositivo de nodo de origen SG5760 configurado con DDP16 a un dispositivo de destino de almacenamiento SG5860 configurado con DDP16.
+* Un dispositivo de nodo de origen SG5760 configurado con DDP _no puede_ clonarse en un dispositivo de destino de almacenamiento SG5860 configurado con DDP.
+* Un dispositivo de nodo de origen SG5760 configurado con DDP o DDP-16 _no se puede clonar en un dispositivo de destino de almacenamiento SG6160 con un modo RAID coincidente.
+
+
+
+
+=== Información y restricciones de clonación de dispositivos SG5812
+
+Puede clonar correctamente un dispositivo SG5812 como origen o destino.
+
+
+
+=== Información y restricciones de clonación de dispositivos SG5860
+
+Puede clonar correctamente un dispositivo SG5860 como origen o destino con algunas restricciones (que se enumeran en la información de clonación del dispositivo y restricciones para cada fuente).
+
+
+
+=== Información y restricciones de clonación de dispositivos SG6060
+
+* Puede clonar un dispositivo de nodo de origen SG6060 configurado con DDP o DDP16 en un dispositivo de destino de almacenamiento SG5860 con un modo RAID coincidente.
+* Puede clonar un dispositivo de nodo de origen SG6060 sin ninguna bandeja de ampliación a un dispositivo de destino de almacenamiento SG6160 sin bandejas de expansión si los tamaños de las unidades y los modos de RAID son iguales.
+* Un dispositivo de nodo de origen SG6060 con cualquier número de bandejas de expansión _no_ se puede clonar en un dispositivo de destino de almacenamiento SG6160 incluso si el número de bandejas de expansión, tamaños de unidades y modos RAID son iguales.
+
+
+
+
+=== Información y restricciones de clonación de dispositivos SG6160
+
+Puede clonar correctamente un dispositivo SG6160 como origen o destino con algunas restricciones (que se enumeran en la información de clonación del dispositivo y restricciones para cada fuente).

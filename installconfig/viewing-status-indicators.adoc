@@ -30,7 +30,7 @@ Use esta información como ayuda link:troubleshooting-hardware-installation-sg10
 Botones e indicadores del aparato::
 +
 --
-En la siguiente figura se muestran los botones e indicadores de estado de los modelos SG100 y SG1000.
+La siguiente figura muestra los indicadores y botones de estado en la parte frontal de los modelos SG100 y SG1000.
 
 image::../media/sg6000_cn_front_indicators.gif[Indicadores delanteros - SG1000]
 
@@ -89,6 +89,39 @@ LED de alarma
 --
 
 
+La siguiente figura muestra la ubicación del suministro de alimentación e identifica los LED en la parte posterior del SG100 y del SG1000. En los puertos del dispositivo hay indicadores LED adicionales de estado y actividad. Estos LED pueden variar según el modelo de dispositivo.
+
+image::../media/q2023_rear_leds.png[LED traseros SG100 y SG1000]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+
+
+|===
 [[general_boot_codes_SG100_1000]]
 códigos generales de arranque::
 +
@@ -159,7 +192,7 @@ Use esta información como ayuda link:troubleshooting-hardware-installation-sg11
 Botones e indicadores del aparato::
 +
 --
-En la siguiente figura se muestran los indicadores y los botones de los aparatos SG110 y SG1100.
+La siguiente figura muestra los indicadores y botones en la parte frontal de los aparatos SG110 y SG1100.
 
 image::../media/sgf6112_front_indicators.png[Indicadores delanteros - SG110 y SG1100]
 
@@ -227,6 +260,39 @@ Esta luz no es utilizada por los aparatos SG110 y SG1100 y permanece apagada.
 --
 
 
+La siguiente figura muestra la ubicación del suministro de alimentación e identifica los LED en la parte posterior del SG110 y del SG1100. En los puertos del dispositivo hay indicadores LED adicionales de estado y actividad. Estos LED pueden variar según el modelo de dispositivo.
+
+image::../media/q2024_rear_leds.png[LED traseros SG110 y SG1100]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+
+
+|===
 [[general_boot_codes]]
 códigos generales de arranque::
 +
@@ -475,6 +541,13 @@ Durante un arranque normal del dispositivo, la pantalla de siete segmentos del c
 [cols="1a,3a"]
 |===
 | Codificación | Lo que indica 
+
+
+ a| 
+HT
+ a| 
+El script de inicio maestro está esperando a que finalice el inicio del sistema operativo.
+
 
 
  a| 
@@ -744,8 +817,7 @@ Verde parpadeante: Hay actividad Ethernet.
 
 
 .Información relacionada
-* https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^]
-
+link:https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^]
 
 --
 .SG6000
@@ -765,7 +837,7 @@ Indicadores de estado y botones en el controlador SG6000-CN::
 --
 El controlador SG6000-CN incluye indicadores que ayudan a determinar el estado del controlador, incluidos los siguientes indicadores y botones.
 
-En la siguiente figura se muestran los indicadores y botones de estado del controlador SG6000-CN.
+La siguiente figura muestra los indicadores y botones de estado en la parte delantera del controlador SG6000-CN.
 
 image::../media/sg6000_cn_front_indicators.gif[Indicadores delanteros - SG6000-CN]
 
@@ -825,6 +897,39 @@ LED de alarma
 --
 
 
+La figura siguiente muestra la ubicación del suministro de alimentación e identifica los LED en la parte posterior del controlador SG6000-CN. En los puertos del dispositivo hay indicadores LED adicionales de estado y actividad. Estos LED pueden variar según el modelo de dispositivo.
+
+image::../media/q2023_rear_leds.png[LED traseros SG6000-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+
+
+|===
 [[general_boot_codes_sg6000]]
 códigos generales de arranque::
 +
@@ -889,7 +994,7 @@ Use esta información como ayuda link:troubleshooting-hardware-installation-sg61
 Botones e indicadores del aparato::
 +
 --
-En la siguiente figura se muestran los indicadores y los botones de los aparatos SG6100.
+La siguiente figura muestra los indicadores y botones en la parte frontal de los aparatos SG6100.
 
 image::../media/sgf6112_front_indicators.png[Indicadores delanteros - SGF6112]
 
@@ -957,6 +1062,39 @@ Esta luz no es utilizada por los aparatos SG6100 y permanece apagada.
 --
 
 
+La siguiente figura muestra la ubicación del suministro de alimentación e identifica los LED en la parte posterior de SGF6112 y SG6100-CN. En los puertos del dispositivo hay indicadores LED adicionales de estado y actividad. Estos LED pueden variar según el modelo de dispositivo.
+
+image::../media/q2024_rear_leds.png[LED traseros SGF6112 y SG6100-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+
+
+|===
 [[general_boot_codes_SG6100]]
 códigos generales de arranque::
 +
@@ -1013,8 +1151,7 @@ Azul (parpadeante): Se está accediendo a la unidad
 
 
 .Información relacionada
-* https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^]
-
+https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^]
 
 --
 ====

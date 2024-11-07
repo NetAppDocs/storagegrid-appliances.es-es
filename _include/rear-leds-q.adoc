@@ -1,0 +1,33 @@
+= 
+:allow-uri-read: 
+
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+
+
+|===

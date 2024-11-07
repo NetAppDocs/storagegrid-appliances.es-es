@@ -18,15 +18,21 @@ Descubra las novedades de los dispositivos StorageGRID.
 
 
 
+== Información para BMC
+
+Ya está disponible información detallada sobre cómo usar la interfaz BMC del dispositivo StorageGRID. Consulte link:./commonhardware/use-bmc.html["Utilice el controlador de gestión (BMC) de la placa base del dispositivo StorageGRID."].
+
+
+
 == Dispositivos SG5812 y SG5860
 
-Los nuevos dispositivos StorageGRID SG5812 y SG5860 son plataformas informáticas y de almacenamiento integradas que funcionan como nodos de almacenamiento en un grid de StorageGRID. Consulte https://docs.netapp.com/us-en/storagegrid-appliances/installconfig/hardware-description-sg5800.html["Dispositivos SG5800: Información general"] para obtener más información.
+Los nuevos dispositivos StorageGRID SG5812 y SG5860 son plataformas informáticas y de almacenamiento integradas que funcionan como nodos de almacenamiento en un grid de StorageGRID. Consulte link:./installconfig/hardware-description-sg5800.html["Dispositivos SG5800: Información general"]para obtener más información.
 
 
 
 == Dispositivo SG6160
 
-El nuevo dispositivo StorageGRID SG6160 incluye una controladora de computación y una bandeja de controladoras de almacenamiento que contiene dos controladoras de almacenamiento y 60 unidades, así como dos unidades SSD NVMe para almacenamiento en caché. Opcionalmente, se pueden añadir bandejas de ampliación de 60 unidades al SG6160. Consulte link:installconfig/hardware-description-sg6100.html["Dispositivos SGF6100: Información general"] para obtener más información.
+El nuevo dispositivo StorageGRID SG6160 incluye una controladora de computación y una bandeja de controladoras de almacenamiento que contiene dos controladoras de almacenamiento y 60 unidades, así como dos unidades SSD NVMe para almacenamiento en caché. Opcionalmente, se pueden añadir bandejas de ampliación de 60 unidades al SG6160. Consulte link:./installconfig/hardware-description-sg6100.html["Dispositivos SGF6100: Información general"] para obtener más información.
 
 
 

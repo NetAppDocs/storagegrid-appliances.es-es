@@ -88,7 +88,7 @@ Durante esta fase, el instalador copia la imagen del sistema operativo base para
 
 . Continúe supervisando el progreso de la instalación hasta que se produzca uno de los siguientes procesos:
 +
-** Para todos los nodos de la aplicación, excepto el nodo de administración principal, la etapa de instalación de StorageGRID se detiene y aparece un mensaje en la consola incrustada, solicitándole que apruebe este nodo en el nodo de administración mediante https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Administrador de grid"^]. Vaya al paso siguiente.
+** Para todos los nodos de la aplicación, excepto el nodo de administración principal, la etapa de instalación de StorageGRID se detiene y aparece un mensaje en la consola incrustada, solicitándole que apruebe este nodo en el nodo de administración mediante la https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Administrador de grid"^]. Vaya al paso siguiente.
 ** Para la instalación del nodo de administración principal del dispositivo, no es necesario aprobar el nodo. El dispositivo se reinicia. Puede omitir el paso siguiente.
 +
 
@@ -99,7 +99,7 @@ image::../media/monitor_installation_install_sgws.gif[Esta imagen se explica por
 
 
 
-. https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Vaya a Grid Manager"^] Del nodo de administración principal, apruebe el nodo de cuadrícula pendiente y complete el proceso de instalación de StorageGRID.
+. https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Vaya a Grid Manager"^] Del nodo de administración principal, apruebe el nodo de cuadrícula pendiente y complete el proceso de instalación de StorageGRID.
 +
 Al hacer clic en *instalar* desde Grid Manager, se completa la fase 3 y comienza la fase 4, *Finalizar instalación*. Cuando finalice la fase 4, el dispositivo se reiniciará.
 

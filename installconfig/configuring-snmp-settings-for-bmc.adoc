@@ -13,8 +13,57 @@ summary: Si está familiarizado con la configuración de SNMP para hardware, pue
 [role="lead"]
 Si está familiarizado con la configuración de SNMP para hardware, puede usar la interfaz de BMC para configurar los ajustes de SNMP de los dispositivos SG6100, SG6000 y servicios. Puede proporcionar cadenas de comunidad seguras, habilitar capturas SNMP y especificar hasta cinco destinos SNMP.
 
+[role="tabbed-block"]
+====
+.SG110 DE FEBRERO DE SG1100, SG6100-CN SGF6112
+--
 .Antes de empezar
-* Sabe cómo acceder al panel de BMC.
+* Sabes cómo hacerlo link:../installconfig/accessing-bmc-interface.html["Acceda al panel de control de BMC"].
+* Tiene experiencia en la configuración de los ajustes SNMP para el equipo SNMPv3.
+
+
+
+NOTE: Es posible que los ajustes del BMC realizados con este procedimiento no se conserven si el aparato falla y se tiene que sustituir.  Asegúrese de que tiene un registro de todos los ajustes que ha aplicado, para que se puedan volver a aplicar fácilmente después de reemplazar el hardware si es necesario.
+
+Estas instrucciones muestran la versión más reciente del firmware de BMC disponible para algunos dispositivos StorageGRID. Su dispositivo StorageGRID puede tener una versión de firmware del BMC que sea ligeramente diferente.
+
+* La última versión del firmware de BMC admite solo SNMPv3.
+* El firmware de BMC se actualiza durante las actualizaciones del software de StorageGRID. Si no está ejecutando la última versión del software StorageGRID, puede actualizar el dispositivo a la última versión de StorageGRID para instalar el https://docs.netapp.com/us-en/storagegrid/upgrade/how-your-system-is-affected-during-upgrade.html#appliance-firmware-is-upgraded["La versión más reciente de firmware de BMC disponible para el dispositivo"].
+* Si su BMC aparece diferente antes o después de una actualización de StorageGRID:
++
+** Consulte las instrucciones de la ficha SG100, SG1000, SG6000-CN.
+** link:../commonhardware/use-bmc.html["Utilice la StorageGRID BMC"] Puede que también tenga información que le ayude a adaptar estas instrucciones para su versión de BMC.
+
+
+
+
+.Pasos
+. Configure las capturas SNMP como uno o más destinos LAN.
++
+.. En el panel de BMC, selecciona *Configuración* > *Filtros de eventos de plataforma* > *Destinos LAN*.
+.. Para Tipo de destino, seleccione *SNMP Trap*.
+.. Para SNMP Destination Address, introduzca la dirección IP de destino.
++
+
+NOTE: Use una dirección IP para la dirección de destino SNMP. Los nombres DNS no son compatibles.
+
+.. Seleccione *Guardar*.
+
+
+. Si utiliza las capturas SNMP para enviar notificaciones de alerta, consulte la sección Filtros de eventos de plataforma de la https://kb.netapp.com/hybrid/StorageGRID/Platforms/How_to_use_StorageGRID_Appliance_BMC_with_vendor_supplied_user_guide["Guía del usuario de BMC"^] para obtener información sobre el uso de BMC para configurar políticas de alerta y filtros de eventos.
+. (Opcional) Habilite y configure SNMP para un usuario de BMC.
++
+.. En el panel de control de BMC, selecciona *Configuración* > *Gestión de usuarios*; luego, selecciona un usuario de BMC.
+.. Consulte la sección Gestión de usuarios de https://kb.netapp.com/hybrid/StorageGRID/Platforms/How_to_use_StorageGRID_Appliance_BMC_with_vendor_supplied_user_guide["Guía del usuario de BMC"^] para obtener información acerca de la configuración de SNMP para un usuario de BMC.
+
+
+
+
+--
+.SG100, SG1000, SG6000-CN
+--
+.Antes de empezar
+* Sabes cómo hacerlo link:../installconfig/accessing-bmc-interface.html["Acceda al panel de control de BMC"].
 * Tiene experiencia en la configuración de la configuración de SNMP para el equipo SNMPv1-v2c.
 
 
@@ -38,3 +87,6 @@ Habilite traps si desea que el dispositivo envíe notificaciones inmediatas a un
 . Opcionalmente, haga clic en *Enviar captura de prueba* para probar la configuración.
 . Si la configuración es correcta, haga clic en *Guardar*.
 
+
+--
+====

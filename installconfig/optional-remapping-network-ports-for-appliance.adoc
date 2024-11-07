@@ -14,11 +14,10 @@ summary: Opcionalmente, puede volver a asignar los puertos internos de un nodo d
 Opcionalmente, puede volver a asignar los puertos internos de un nodo de dispositivo a diferentes puertos externos. Por ejemplo, es posible que tenga que reasignar puertos debido a un problema de firewall.
 
 .Antes de empezar
-* Ya ha accedido anteriormente al instalador de dispositivos de StorageGRID.
-
+Ya ha accedido anteriormente al instalador de dispositivos de StorageGRID.
 
 .Acerca de esta tarea
-No puede utilizar puertos reasignados para puntos finales de equilibrio de carga. Si necesita quitar un puerto reasignado, siga los pasos de https://docs.netapp.com/us-en/storagegrid-118/maintain/removing-port-remaps.html["Eliminar reasignaciones de puertos"^].
+No puede utilizar puertos reasignados para puntos finales de equilibrio de carga. Si necesita quitar un puerto reasignado, siga los pasos de https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Eliminar reasignaciones de puertos"^].
 
 .Pasos
 . En el instalador de dispositivos StorageGRID, seleccione *Configurar red* > *Puertos de reinstalación*.

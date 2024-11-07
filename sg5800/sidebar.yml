@@ -10,8 +10,10 @@ entries:
   pdf-filename: Procedimientos de configuración de mantenimiento - SG5800
   entries:
   - title: Actualizar el sistema operativo SANtricity en la controladora de almacenamiento
-    url: "/sg5800/upgrading-santricity-os-on-storage-controller.html"
     entries:
+    - title: Acerca de la actualización del sistema operativo SANtricity en una controladora
+        de almacenamiento SG5800
+      url: "/sg5800/upgrading-santricity-os-on-storage-controller.html"
     - title: Actualizar el sistema operativo SANtricity en controladoras de almacenamiento
         mediante Grid Manager
       url: "/sg5800/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html"
@@ -34,7 +36,7 @@ entries:
   pdf-filename: Procedimientos de hardware - SG5800
   entries:
   - title: Sustituya el controlador SG5800
-    url: "/sg5800/replace-controller-sg5800.html"
+    url: "/sg5800/replace-controller-5800sg.html"
   - title: Sustituya el controlador E4000
     url: "/sg5800/replace-controller-e4000-simplex.html"
   - title: Sustituya el ventilador (SG5860)

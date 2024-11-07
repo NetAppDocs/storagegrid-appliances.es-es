@@ -38,8 +38,8 @@ NOTE: Si necesita implementar varios nodos de dispositivos a la vez, puede autom
 
 * Si va a realizar una operación de expansión o recuperación, siga las instrucciones correspondientes:
 +
-** Para añadir un nodo de almacenamiento de dispositivo a un sistema StorageGRID existente, consulte las instrucciones de https://docs.netapp.com/us-en/storagegrid-118/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["adición de nodos de cuadrícula"^].
-** Para implementar un nodo de almacenamiento del dispositivo como parte de una operación de recuperación, consulte las instrucciones https://docs.netapp.com/us-en/storagegrid-118/maintain/recovering-storagegrid-appliance-storage-node.html["Recuperar un nodo de almacenamiento del dispositivo"^].
+** Para añadir un nodo de almacenamiento de dispositivo a un sistema StorageGRID existente, consulte las instrucciones de https://docs.netapp.com/us-en/storagegrid/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["adición de nodos de cuadrícula"^].
+** Para implementar un nodo de almacenamiento del dispositivo como parte de una operación de recuperación, consulte las instrucciones https://docs.netapp.com/us-en/storagegrid/maintain/recovering-storagegrid-appliance-storage-node.html["Recuperar un nodo de almacenamiento del dispositivo"^].
 
 
 
@@ -50,8 +50,14 @@ NOTE: Si necesita implementar varios nodos de dispositivos a la vez, puede autom
 +
 Aparece la página de inicio del instalador de dispositivos de StorageGRID.
 
+. Seleccione el *Tipo de nodo*. Para obtener más información, consulte https://docs.netapp.com/us-en/storagegrid/primer/what-storage-node-is.html#types-of-storage-nodes["Tipos de nodos de almacenamiento"].
 +
-image::../media/appliance_installer_home_start_installation_enabled.gif[Página de inicio de Appliance Installer para otros tipos de nodo (además de nodos de administración)]
+
+NOTE: Sólo se pueden seleccionar metadatos durante el despliegue del dispositivo. Si se selecciona Sólo metadatos como tipo de nodo de almacenamiento, no se podrá cambiar después de desplegar el dispositivo.
+
+. En el campo *Nombre del nodo*, proporcione el nombre del sistema que desea utilizar para este nodo del dispositivo y haga clic en *Guardar*.
++
+El nombre que aparece aquí será el nombre del sistema del nodo del dispositivo. Los nombres del sistema son necesarios para las operaciones internas de StorageGRID y no se pueden cambiar.
 
 . En la sección *Conexión del nodo de administración principal*, determine si necesita especificar la dirección IP para el nodo de administración principal.
 +
@@ -86,10 +92,6 @@ Detección automática de todos los nodos principales de administración conecta
 
 
 |===
-. En el campo *Nombre del nodo*, proporcione el nombre del sistema que desea utilizar para este nodo del dispositivo y haga clic en *Guardar*.
-+
-El nombre que aparece aquí será el nombre del sistema del nodo del dispositivo. Los nombres del sistema son necesarios para las operaciones internas de StorageGRID y no se pueden cambiar.
-
 . En la sección *instalación*, confirme que el estado actual es "Listo para iniciar la instalación de `_node name_` En el grid con el nodo de administrador principal `_admin_ip_` " Y que el botón *Iniciar instalación* está activado.
 +
 Si el botón *Iniciar instalación* no está activado, es posible que deba cambiar la configuración de red o la configuración del puerto. Para obtener instrucciones, consulte las instrucciones de mantenimiento de su aparato.

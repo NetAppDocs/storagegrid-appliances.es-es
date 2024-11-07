@@ -50,7 +50,8 @@ Para acceder a la documentación de la API, vaya al instalador del dispositivo S
 La API del instalador de dispositivos de StorageGRID incluye las siguientes secciones:
 
 * *Clone*: Operaciones para configurar y controlar la clonación de nodos.
-* *Encriptación*: Operaciones para administrar el cifrado y ver el estado de cifrado.
+* *Drive-encryption* (StorageGRID 11,8 y posterior): Operaciones para administrar el cifrado de la unidad y ver el estado de cifrado de la unidad.
+* *Encriptación*: Operaciones para administrar el cifrado de nodos y ver el estado de cifrado de nodos.
 * *CONFIG DE HARDWARE*: Operaciones para configurar los ajustes del sistema en el hardware conectado.
 * *INSTALACIÓN*: Operaciones para iniciar la instalación del aparato y para monitorear el estado de la instalación.
 * *Networking*: Operaciones relacionadas con la configuración de red de red, administración y red de cliente para un dispositivo StorageGRID y la configuración de puerto del dispositivo.

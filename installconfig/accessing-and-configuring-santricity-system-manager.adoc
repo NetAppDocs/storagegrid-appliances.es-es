@@ -20,7 +20,7 @@ Puede usar System Manager de SANtricity para supervisar el estado de las control
 Es posible que tenga que acceder a System Manager de SANtricity en la controladora de almacenamiento para supervisar el hardware de la bandeja de controladoras de almacenamiento o configurar AutoSupport de E-Series.
 
 .Antes de empezar
-* Está utilizando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Está utilizando una https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 * Para acceder a SANtricity System Manager a través de Grid Manager, instaló StorageGRID y tiene los permisos de administrador o de acceso raíz de la aplicación de almacenamiento.
 * Para acceder a System Manager de SANtricity mediante el instalador de dispositivos de StorageGRID, tiene el nombre de usuario y la contraseña de administrador de SANtricity.
 * Para acceder a SANtricity System Manager directamente mediante un explorador web, tiene el nombre de usuario y la contraseña de administrador de SANtricity System Manager.
@@ -61,7 +61,7 @@ Puede usar System Manager de SANtricity para configurar las siguientes opciones:
 * Alertas por correo electrónico, alertas SNMP o alertas de syslog para los componentes de la bandeja de controladoras de almacenamiento
 * Configuración de AutoSupport de E-Series para los componentes de la bandeja de la controladora de almacenamiento.
 +
-Si quiere más información sobre E-Series AutoSupport, consulte http://mysupport.netapp.com/info/web/ECMP1658252.html["Sitio de documentación para sistemas E-Series y EF-Series de NetApp"^].
+Si quiere más información sobre los AutoSupport de E-Series, consulte https://docs.netapp.com/us-en/e-series-family/index.html["Documentación de E-Series de NetApp"^] .
 
 * Claves Drive Security, que se necesitan para desbloquear unidades seguras (este paso es necesario si la función Drive Security está habilitada)
 * Contraseña de administrador para acceder a System Manager de SANtricity
@@ -106,24 +106,58 @@ image::../media/sam_home_page.gif[Captura de pantalla de la página de inicio de
 .. Utilice la sección *SUPPORT* > *Support Center* de la ayuda en línea para obtener más información sobre la función AutoSupport.
 .. Siga las instrucciones «¿Cómo?» para gestionar AutoSupport.
 +
-Para obtener instrucciones específicas sobre cómo configurar un proxy de StorageGRID para enviar mensajes de AutoSupport de E-Series sin utilizar el puerto de gestión, vaya a la https://docs.netapp.com/us-en/storagegrid-118/admin/configuring-storage-proxy-settings.html["instrucciones para configurar la configuración del proxy de almacenamiento"^].
+Para obtener instrucciones específicas sobre cómo configurar un proxy StorageGRID para enviar mensajes AutoSupport de E-Series sin utilizar el puerto de gestión, vaya a https://docs.netapp.com/us-en/storagegrid/admin/configuring-storage-proxy-settings.html["instrucciones para configurar la configuración del proxy de almacenamiento"^] .
 
 
 
-. Si la función Drive Security está habilitada para el dispositivo, cree y gestione la clave de seguridad.
+. Si https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html#what-is-drive-security["Drive Security"^] está habilitado para el dispositivo, cree y gestione la clave de seguridad.
 +
-.. Seleccione *Ayuda* para acceder a la ayuda en línea del Administrador del sistema de SANtricity.
-.. Utilice la sección *Configuración* > *sistema* > *Gestión de claves de seguridad* de la ayuda en línea para obtener información sobre Drive Security.
-.. Siga las instrucciones de «Cómo» para crear y gestionar la clave de seguridad.
+[role="tabbed-block"]
+====
+.SG5700 y SG5800
+--
+En el caso de los dispositivos de almacenamiento SG5700 y SG5800, siga los pasos generales que se indican https://docs.netapp.com/us-en/e-series-santricity/sm-settings/how-the-drive-security-feature-works.html#how-to-implement-drive-security["implemente la seguridad de las unidades"^] en SANtricity System Manager.
 
+--
+.SG6060
+--
+En el dispositivo de almacenamiento SG6060, la seguridad de unidades se puede habilitar automáticamente en las unidades SSD solo si se configuró la gestión de claves antes de instalar el dispositivo de almacenamiento.
 
-. Si lo desea, puede cambiar la contraseña del administrador.
+.. Equipe la cabina de almacenamiento con unidades compatibles con la función de seguridad (unidades FDE o FIPS).
 +
-.. Seleccione *Ayuda* para acceder a la ayuda en línea del Administrador del sistema de SANtricity.
-.. Utilice la sección *Inicio* > *Administración de matrices de almacenamiento* de la ayuda en línea para obtener información sobre la contraseña de administrador.
-.. Siga las instrucciones de "'Cómo'" para cambiar la contraseña.
+*** Para los volúmenes que requieren compatibilidad FIPS, se deben utilizar solo unidades FIPS.
+*** Si se mezclan unidades FIPS y FDE en un grupo de volúmenes o un pool, todas las unidades se tratan como unidades FDE.
+*** No se puede agregar una unidad FDE ni utilizarse como reserva en un pool o grupo de volúmenes FIPS.
 
 
+.. Para la bandeja de controladoras E4000, cree una clave de seguridad (una cadena de caracteres compartida por la controladora y las unidades para acceso de lectura y escritura).
++
+*** Es https://docs.netapp.com/us-en/e-series-santricity/sm-settings/create-internal-security-key.html["cree una clave interna"^] posible desde la memoria persistente de la controladora o usar una clave externa proporcionada por un servidor de gestión de claves.
+*** Para usar una clave externa proporcionada por un servidor de gestión de claves, primero se debe https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html["establezca la autenticación con un servidor de gestión de claves"^] en SANtricity System Manager.
+
+
+.. link:deploying-appliance-storage-node.html["Inicie la instalación"] del aparato.
+.. Una vez finalizada la instalación del dispositivo, confirme que la seguridad de la unidad estaba habilitada para la caché flash de StorageGRID y habilite la seguridad de la unidad para todos los pools de discos o grupos de volúmenes restantes (consulte https://docs.netapp.com/us-en/e-series-santricity/sm-storage/enable-security.html["Habilite la seguridad para un pool o un grupo de volúmenes"^] en SANtricity System Manager).
+
+
+--
+.SG6160
+--
+El dispositivo de almacenamiento SG6160 se puede equipar con unidades compatibles con FIPS tanto en la controladora de computación SG6100-CN como en la bandeja de controladora E4000. El cifrado de unidades se configura por separado para las unidades SG6100-CN y E4000 unidades.
+
+.. link:optional-enabling-node-encryption.html#drive-encryption["Habilite el cifrado de unidades"] Para los SSD SED instalados en el nodo de computación SG6100-CN.
+.. Crear una clave de seguridad (una cadena de caracteres compartida por la controladora y las unidades para acceso de lectura/escritura).
++
+*** Es https://docs.netapp.com/us-en/e-series-santricity/sm-settings/create-internal-security-key.html["cree una clave interna"^] posible desde la memoria persistente de la controladora o usar una clave externa proporcionada por un servidor de gestión de claves.
+*** Para usar una clave externa proporcionada por un servidor de gestión de claves, primero se debe https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html["establezca la autenticación con un servidor de gestión de claves"^] en SANtricity System Manager.
+
+
+.. link:deploying-appliance-storage-node.html["Inicie la instalación"] del aparato.
+.. Una vez completada la instalación, https://docs.netapp.com/us-en/e-series-santricity/sm-storage/enable-security.html["habilite drive security"^] en SANtricity System Manager para todos los pools de discos o los grupos de volúmenes.
+
+
+--
+====
 
 
 
@@ -133,7 +167,7 @@ Para obtener instrucciones específicas sobre cómo configurar un proxy de Stora
 Puede usar System Manager de SANtricity para supervisar y gestionar componentes de hardware individuales de la bandeja de controladoras de almacenamiento y para revisar la información medioambiental y los diagnósticos de hardware, como la temperatura de los componentes, así como los problemas relacionados con las unidades.
 
 .Antes de empezar
-* Está utilizando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Está utilizando una https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 * Para acceder a SANtricity System Manager mediante Grid Manager, tiene el permiso de administrador de dispositivos de almacenamiento o permiso de acceso de raíz.
 * Para acceder a System Manager de SANtricity mediante el instalador de dispositivos de StorageGRID, tiene el nombre de usuario y la contraseña de administrador de SANtricity.
 * Para acceder a SANtricity System Manager directamente mediante un explorador web, tiene el nombre de usuario y la contraseña de administrador de SANtricity System Manager.

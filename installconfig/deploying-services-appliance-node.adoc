@@ -22,7 +22,7 @@ Al poner en marcha un dispositivo de servicios como nodo administrador principal
 .Antes de empezar
 * El dispositivo se ha instalado en un rack o armario, conectado a las redes y encendido.
 * Se han configurado los enlaces de red, las direcciones IP y la reasignación de puertos (si fuera necesario) para el dispositivo con el instalador de dispositivos de StorageGRID.
-* Tiene un ordenador portátil de servicio con un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Usted tiene un portátil de servicio con un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 * Conoce una de las direcciones IP asignadas al dispositivo. Puede usar la dirección IP para cualquier red StorageGRID conectada.
 
 
@@ -90,7 +90,7 @@ Cuando se implementa un dispositivo de servicios como nodo de puerta de enlace o
 * Se han configurado los enlaces de red, las direcciones IP y la reasignación de puertos (si fuera necesario) para el dispositivo con el instalador de dispositivos de StorageGRID.
 * Se puso en marcha el nodo de administración principal del sistema StorageGRID.
 * Todas las subredes de red de cuadrícula que aparecen en la página Configuración de IP del instalador de dispositivos StorageGRID se definieron en la lista de subredes de redes de cuadrícula del nodo de administración principal.
-* Tiene un ordenador portátil de servicio con un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* Usted tiene un portátil de servicio con un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 * Conoce la dirección IP asignada al dispositivo. Puede usar la dirección IP para cualquier red StorageGRID conectada.
 
 

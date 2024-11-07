@@ -195,7 +195,7 @@ image::../media/appliance_installer_reboot_complete.png[Reinicio finalizado]
 +
 .. En Grid Manager, seleccione *NODES* y verifique que el nodo de almacenamiento del dispositivo tenga un icono de marca de verificación verde.
 +
-El icono de marca de verificación verde significa que no hay alertas activas y el nodo está conectado a la cuadrícula. Para obtener una descripción de los iconos de nodo, consulte https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Supervise los estados de conexión de los nodos"^].
+El icono de marca de verificación verde significa que no hay alertas activas y el nodo está conectado a la cuadrícula. Para obtener una descripción de los iconos de nodo, consulte https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Supervise los estados de conexión de los nodos"^].
 
 .. Seleccione la ficha *almacenamiento* y confirme que se muestran 16 almacenes de objetos nuevos en la tabla almacenamiento de objetos para cada bandeja de expansión que agregó.
 .. Compruebe que cada bandeja de expansión nueva tenga el estado de bandeja nominal y un estado de configuración de configurado.

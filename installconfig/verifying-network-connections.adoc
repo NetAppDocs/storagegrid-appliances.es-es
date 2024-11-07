@@ -35,7 +35,7 @@ Por ejemplo, puede probar la ruta entre el nodo del dispositivo y un nodo en un 
 Si la conexión de red es válida, aparece el mensaje "Ping test pased", con la salida del comando ping en la lista.
 
 +
-image::../media/ping_test_passed.png[Captura de pantalla de los resultados de la prueba de ping en el instalador de dispositivos de StorageGRID Webscale]
+image::../media/ping_test_passed.png[Captura de pantalla de los resultados de la prueba de ping en el instalador de dispositivos StorageGRID]
 
 
 

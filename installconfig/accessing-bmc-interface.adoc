@@ -22,7 +22,7 @@ Puede acceder a la interfaz de BMC mediante la dirección IP estática o DHCP pa
 
 
 .Antes de empezar
-* El cliente de gestión está usando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador web compatible"^].
+* El cliente de gestión está utilizando https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 * El puerto de gestión BMC en el dispositivo está conectado a la red de gestión que planea utilizar.
 +
 [role="tabbed-block"]

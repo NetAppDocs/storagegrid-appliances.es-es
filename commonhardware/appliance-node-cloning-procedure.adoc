@@ -98,7 +98,7 @@ Cuando finalice correctamente la clonación:
 
 
 * El nodo de destino sale del modo de mantenimiento y se une a StorageGRID, sustituyendo el nodo de origen.
-* El dispositivo de origen está en estado preinstalado, como si lo hubiera hecho https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["lo preparó para su reinstalación"^].
+* El dispositivo de origen está en un estado preinstalado, como si tuviera https://docs.netapp.com/us-en/storagegrid/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["lo preparó para su reinstalación"^].
 
 
 

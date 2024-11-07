@@ -21,7 +21,7 @@ Puede que necesite sustituir una batería de controladora, una unidad, un ventil
 .Acerca de esta tarea
 Para sustituir la batería del controlador E2800, consulte las instrucciones de estas instrucciones para link:replacing-e2800-controller.html["Reemplazar el controlador E2800"]. Estas instrucciones describen cómo extraer el controlador del aparato, extraer la batería del controlador, instalar la batería y sustituir el controlador.
 
-Para reemplazar una unidad, un contenedor de alimentación/ventilador, un contenedor de ventilador, un contenedor de alimentación o un cajón de unidades en el dispositivo, acceda a la http://mysupport.netapp.com/info/web/ECMP1658252.html["Procedimientos de E-Series para mantener el hardware de E2800"^].
+Para sustituir una unidad, un contenedor de alimentación/ventilador, un contenedor de ventilador, un contenedor de alimentación o un cajón de unidades en el dispositivo, acceda a la https://docs.netapp.com/us-en/e-series-family/index.html["Procedimientos de E-Series para mantener el hardware de E2800"^].
 
 
 

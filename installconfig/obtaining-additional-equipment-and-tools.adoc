@@ -30,7 +30,7 @@ Destornilladores::
 Muñequera ESD::
 +
 --
-* https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Navegador web compatible"^]
+* https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Navegador web compatible"^]
 * Cliente SSH, como PuTTY
 * Puerto 1-GbE (RJ-45)
 

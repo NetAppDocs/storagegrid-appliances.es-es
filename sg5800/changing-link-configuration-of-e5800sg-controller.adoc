@@ -47,7 +47,7 @@ NOTE: Puede perder la conexión si ha realizado cambios en la red o el enlace qu
 Si ha realizado cambios en la configuración de VLAN, es posible que la subred del dispositivo haya cambiado. Si necesita cambiar las direcciones IP del dispositivo, siga el link:../installconfig/setting-ip-configuration.html["Configure las direcciones IP de StorageGRID"] instrucciones.
 
 . En el instalador del dispositivo StorageGRID, seleccione *Configurar redes* > *Prueba de ping*.
-. Utilice la herramienta Ping Test para comprobar la conectividad a las direcciones IP en cualquier red que pudiera haber sido afectada por los cambios de configuración de vínculos realizados en  <<change_link_configuration_sg5700,Cambiar la configuración del enlace>> paso.
+. Utilice la herramienta Ping Test para comprobar la conectividad a las direcciones IP en cualquier red que pueda haber sido afectada por los cambios de configuración de enlace realizados en el <<change_link_configuration_sg5800,Cambiar la configuración del enlace>> paso.
 +
 Además de todas las pruebas que elija realizar, confirme que puede hacer ping a la dirección IP de grid del nodo de administración principal y a la dirección IP de grid del al menos otro nodo de almacenamiento. Si es necesario, corrija los problemas de configuración de los enlaces.
 

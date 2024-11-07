@@ -2,7 +2,7 @@
 permalink: sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html 
 sidebar: sidebar 
 keywords: sg110, sg1100, locate, find, locating, finding, identify, blue led, blue light 
-summary: El LED de identificación azul de la parte frontal del aparato se puede encender para ayudar a localizar el aparato en un centro de datos. 
+summary: El LED de identificación azul de la parte frontal y posterior del aparato se puede encender para ayudar a localizar el aparato en un centro de datos. 
 ---
 = Enciende y apaga el LED de identificación SG110 o SG1100
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: El LED de identificación azul de la parte frontal del aparato se puede
 
 
 [role="lead"]
-El LED de identificación azul de la parte frontal y posterior del dispositivo se puede encender para ayudar a localizar el dispositivo en un centro de datos.
+El LED de identificación azul de la parte frontal y posterior del aparato se puede encender para ayudar a localizar el aparato en un centro de datos.
 
 .Antes de empezar
 Tiene la dirección IP de BMC del dispositivo que desea identificar.

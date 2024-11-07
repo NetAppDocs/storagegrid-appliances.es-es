@@ -20,7 +20,7 @@ Quite el SGF6112 o SG6100-CN de un armario o rack para acceder a la cubierta sup
 .Antes de empezar
 * Tiene etiquetas para identificar cada cable que está conectado al SGF6112 o SG6100-CN.
 * Ya tienes link:locating-sgf6112-in-data-center.html["Ubicación física del SGF6112 o SG6100-CN"] dónde se realiza el mantenimiento en el centro de datos.
-* Ya tienes link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Apague el SGF6112 o el SG6100-CN"].
+* Tienes link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Apague el SGF6112 o el SG6100-CN"].
 +
 
 CAUTION: No apague el aparato con el interruptor de alimentación.
@@ -81,4 +81,4 @@ NOTE: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pis
 
 
 .Después de terminar
-link:power-sgf6112-off-on.html#power-on-sgf6112-and-verify-operation["Reinicie el aparato"].
+link:power-sgf6112-off-on.html#power-on-sgf6112-or-sg6100-cn-and-verify-operation["Reinicie el aparato"].
