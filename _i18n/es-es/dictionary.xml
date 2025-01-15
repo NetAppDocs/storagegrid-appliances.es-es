@@ -5648,7 +5648,6 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="2060996e4ea036c84fe524f4bb640ff0" category="list-text">*Red de gestión para SANtricity* (opcional para dispositivos de almacenamiento, no necesario para el SGF6112): Esta red proporciona acceso al Administrador del sistema de SANtricity, lo que le permite supervisar y gestionar los componentes de hardware en el dispositivo y el estante del controlador de almacenamiento. Esta red de gestión puede ser la misma que la Red de administración para StorageGRID, o bien puede ser una red de gestión independiente.</block>
   <block id="e6b3f8c787f110e738041acfec63cd45" category="admonition">Para obtener información detallada sobre las redes StorageGRID, consulte la<block ref="c9a67c39cb366102345c95ea9d802249" category="inline-link-rx"></block>.</block>
   <block id="79ffe998f527a3998a83d054ff067c7e" category="list-text"><block ref="79ffe998f527a3998a83d054ff067c7e" category="inline-link-macro-rx"></block></block>
-  <block id="44ef269732748f70c763abafc0361990" category="list-text"><block ref="44ef269732748f70c763abafc0361990" category="inline-link-macro-rx"></block></block>
   <block id="2b5994be0ad1518a670726d49503aef3" category="admonition">Es posible que la configuración de BMC realizada mediante este procedimiento no se conserve si falla una controladora o un dispositivo y debe sustituirse. Asegúrese de que tiene un registro de todos los ajustes que ha aplicado, para que se puedan volver a aplicar fácilmente después de reemplazar el hardware si es necesario.</block>
   <block id="156e455630a4e49e7afff2a829c35531" category="open-title">StorageGRID 11,9 y versiones posteriores</block>
   <block id="1433f3dea3005561ee1f9e94e4de877d" category="paragraph">En la interfaz de BMC, utilice las opciones *Administración de usuarios* y *Filtros de eventos de plataforma* en la página Configuración para configurar las notificaciones por correo electrónico.</block>
@@ -5761,4 +5760,5 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="4f45c0c0b55884bea7e7649654813e35" category="sidebar">Gestionar unidades (SG110, SG1100, SGF6112 y SG6160)</block>
   <block id="3f7fe61f120f9ba5cf2d622ad7597a37" category="sidebar">Utilice la interfaz de BMC</block>
   <block id="6aa2cc2f099a383774f35aa72c7c8c6d" category="paragraph"><block ref="6aa2cc2f099a383774f35aa72c7c8c6d" category="inline-link-rx"></block></block>
+  <block id="06670f0887e1e6231759b0c18c236453" category="list-text"><block ref="06670f0887e1e6231759b0c18c236453" category="inline-link-macro-rx"></block></block>
 </blocks>
