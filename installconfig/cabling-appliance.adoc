@@ -1124,6 +1124,7 @@ Red Grid
 
 
 . Si tiene previsto utilizar la Red de administración para StorageGRID, conecte el puerto Red de administración del dispositivo a la Red de administración mediante un cable Ethernet.
+. Si el dispositivo incluye una bandeja de expansión, consulte la link:../sg6100/adding-expansion-shelf-to-deployed-sg6160.html["Instrucciones para añadir una bandeja de expansión a SG6160 puesto en marcha"] para obtener información sobre cableado.
 
 
 --
