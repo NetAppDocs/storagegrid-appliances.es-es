@@ -5763,4 +5763,6 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="06670f0887e1e6231759b0c18c236453" category="list-text"><block ref="06670f0887e1e6231759b0c18c236453" category="inline-link-macro-rx"></block></block>
   <block id="125c3dfed61415188958ef328818fc0b" category="inline-link-macro">Instrucciones para añadir una bandeja de expansión a SG6160 puesto en marcha</block>
   <block id="813eb6e57b4706c7df0e13ae0defacd8" category="list-text">Si el dispositivo incluye una bandeja de expansión, consulte la <block ref="ba1bb7195a934f0a465563dc7e705dd7" category="inline-link-macro-rx"></block> para obtener información sobre cableado.</block>
+  <block id="c6ce792d1a06c8b72936713f0001140a" category="list-text">Registró la configuración actual de BMC del dispositivo, si sigue disponible.</block>
+  <block id="df5c8b40026819d555dd6dbdc002fb3e" category="list-text">Introduzca<block ref="73a1c7bb6f54767f7e51d6973cad4923" prefix=" " category="inline-code"></block>: Para mostrar la configuración actual de BMC del dispositivo.</block>
 </blocks>
