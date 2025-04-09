@@ -57,7 +57,7 @@ Se muestra el panel de detalles de la unidad.
 
 . Seleccione *Encender la luz localizadora*.
 +
-** Un icono de bombilla image:../media/icon_drive-light-bulb.png["bombilla de la luz de conducción"] aparece para la unidad.
+** Aparece un icono de bombilla image:../media/icon_drive-light-bulb.png["bombilla de la luz de conducción"]para la unidad.
 ** Un LED ámbar parpadea en la unidad física.
 
 

@@ -13,7 +13,7 @@ summary: Siga estos pasos de alto nivel para instalar y configurar un dispositiv
 [role="lead"]
 Siga estos pasos de alto nivel para instalar y configurar un dispositivo StorageGRID e implementarlo como nodo en su sistema StorageGRID.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Preparación de la instalación
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Prepare la instalación
 [role="quick-margin-list"]
 . Trabaje con su consultor de Servicios profesionales de NetApp para automatizar la instalación y la configuración. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
 +
@@ -26,7 +26,7 @@ Este paso es opcional. Sin embargo, la optimización y automatización de los pa
 . link:reviewing-appliance-network-connections.html["Recopile información de red"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Instale el hardware
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Instale la tornillería
 [role="quick-margin-list"]
 . link:registering-hardware.html["Registre el hardware"]
 . Instale en el armario o rack

@@ -114,7 +114,7 @@ image::../media/sg5860_front_and_back_views.png[Parte delantera y trasera del di
 
 SG5860 incluye dos controladoras, dos contenedores de ventilador y dos contenedores de alimentación.
 
-image::../media/sg5860_with_callouts.png[Controladoras,fan canisters,and power canisters in SG5860 appliance]
+image::../media/sg5860_with_callouts.png[Controladoras, contenedores de ventilador y contenedores de alimentación en dispositivo SG5860]
 
 [cols="1a,2a"]
 |===

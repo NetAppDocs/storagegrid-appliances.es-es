@@ -67,8 +67,8 @@ Si tiene subredes de cuadrícula, se requiere la puerta de enlace de red de cuad
 NOTE: La ruta predeterminada no aparece en la lista. Si la red de cliente no está activada, la ruta predeterminada utilizará la puerta de enlace de red de cuadrícula.
 
 +
-*** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"] a la derecha de la última entrada.
-*** Para eliminar una subred no utilizada, haga clic en el icono de eliminación image:../media/icon_nms_delete_new.gif["icono de eliminar"].
+*** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"]situado a la derecha de la última entrada.
+*** Para eliminar una subred no utilizada, haga clic en el icono Suprimir image:../media/icon_nms_delete_new.gif["icono de eliminar"].
 
 
 .. Haga clic en *Guardar*.
@@ -92,8 +92,8 @@ Si tiene subredes de cuadrícula, se requiere la puerta de enlace de red de cuad
 NOTE: La ruta predeterminada no aparece en la lista. Si la red de cliente no está activada, la ruta predeterminada utilizará la puerta de enlace de red de cuadrícula.
 
 +
-*** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"] a la derecha de la última entrada.
-*** Para eliminar una subred no utilizada, haga clic en el icono de eliminación image:../media/icon_nms_delete_new.gif["icono de eliminar"].
+*** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"]situado a la derecha de la última entrada.
+*** Para eliminar una subred no utilizada, haga clic en el icono Suprimir image:../media/icon_nms_delete_new.gif["icono de eliminar"].
 
 
 .. Si desea utilizar tramas gigantes, cambie el campo MTU a un valor adecuado para tramas gigantes, como 9000. De lo contrario, mantenga el valor predeterminado de 1500.
@@ -148,8 +148,8 @@ Debe verificar que se pueda acceder a todas las subredes mediante la puerta de e
 NOTE: La ruta predeterminada no se puede realizar para utilizar la puerta de enlace de la red de administración.
 
 +
-*** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"] a la derecha de la última entrada.
-*** Para eliminar una subred no utilizada, haga clic en el icono de eliminación image:../media/icon_nms_delete_new.gif["icono de eliminar"].
+*** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"]situado a la derecha de la última entrada.
+*** Para eliminar una subred no utilizada, haga clic en el icono Suprimir image:../media/icon_nms_delete_new.gif["icono de eliminar"].
 
 
 .. Haga clic en *Guardar*.
@@ -173,8 +173,8 @@ Debe verificar que se pueda acceder a todas las subredes mediante la puerta de e
 NOTE: La ruta predeterminada no se puede realizar para utilizar la puerta de enlace de la red de administración.
 
 +
-*** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"] a la derecha de la última entrada.
-*** Para eliminar una subred no utilizada, haga clic en el icono de eliminación image:../media/icon_nms_delete_new.gif["icono de eliminar"].
+*** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"]situado a la derecha de la última entrada.
+*** Para eliminar una subred no utilizada, haga clic en el icono Suprimir image:../media/icon_nms_delete_new.gif["icono de eliminar"].
 
 
 .. Si desea utilizar tramas gigantes, cambie el campo MTU a un valor adecuado para tramas gigantes, como 9000. De lo contrario, mantenga el valor predeterminado de 1500.

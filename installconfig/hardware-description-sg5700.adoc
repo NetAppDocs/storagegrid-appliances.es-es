@@ -175,7 +175,7 @@ image::../media/sg5760_front_and_back_views.gif[Parte delantera y trasera del di
 
 El SG5760 incluye dos controladoras, dos contenedores de ventilador y dos contenedores de alimentación.
 
-image::../media/sg5760_with_callouts.gif[Controladoras,fan canisters,and power canisters in SG5760 appliance]
+image::../media/sg5760_with_callouts.gif[Controladoras, contenedores de ventilador y contenedores de alimentación en dispositivo SG5760]
 
 [cols="1a,2a"]
 |===
@@ -223,7 +223,7 @@ image::../media/sg5760x_front_and_back_views.gif[Parte delantera y trasera del d
 
 SG5760X incluye dos controladoras, dos contenedores de ventilador y dos contenedores de alimentación.
 
-image::../media/sg5760x_with_callouts.gif[Controladoras,fan canisters,and power canisters in SG5760X appliance]
+image::../media/sg5760x_with_callouts.gif[Controladoras, contenedores de ventilador y contenedores de alimentación en dispositivo SG5760X]
 
 [cols="1a,3a"]
 |===

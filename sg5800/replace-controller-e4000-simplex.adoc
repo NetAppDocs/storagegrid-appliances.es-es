@@ -361,7 +361,7 @@ image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controla
 +
 El dispositivo se reinicia y vuelve a unir la cuadrícula. Este proceso puede tardar hasta 20 minutos.
 
-. Confirme que el reinicio ha finalizado y que el nodo se ha vuelto a unir a la cuadrícula. En Grid Manager, compruebe que la página Nodos muestra un estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo) del nodo del dispositivo, lo que indica que no hay ninguna alerta activa y que el nodo está conectado a la cuadrícula.
+. Confirme que el reinicio ha finalizado y que el nodo se ha vuelto a unir a la cuadrícula. En Grid Manager, compruebe que la página Nodos muestra un estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"]a la izquierda del nombre del nodo) para el nodo del dispositivo, lo que indica que no hay alertas activas y que el nodo está conectado a la cuadrícula.
 +
 image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
 

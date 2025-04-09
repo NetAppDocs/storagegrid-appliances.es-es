@@ -260,7 +260,7 @@ image::../media/sg1100_aggregate_ports.png[Modo de enlace de puerto agregado SG1
 
 SG110 GBE:
 
-image::../media/sgf6112_aggregate_ports.png[SG110 Modo de enlace de puertos agregados]
+image::../media/sgf6112_aggregate_ports.png[SG110 Modo de enlace de puertos del agregado]
 
 [cols="1a,3a"]
 |===
@@ -718,7 +718,7 @@ En la figura, se muestra cómo están unidos los cuatro puertos de red en el mod
 
 *SGF6112*:
 
-image::../media/sgf6112_aggregate_ports.png[SGF6112 Modo de enlace de puertos agregados]
+image::../media/sgf6112_aggregate_ports.png[SGF6112 Modo de enlace de puertos del agregado]
 
 *SG6100*:
 

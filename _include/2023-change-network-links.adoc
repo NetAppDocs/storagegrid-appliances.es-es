@@ -40,7 +40,7 @@ Además de cualquier otra prueba que elija realizar, confirme que puede hacer pi
 image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
 
 +
-El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página Nodos debe mostrar el estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo) del nodo del dispositivo, lo que indica que no hay ninguna alerta activa y que el nodo está conectado a la cuadrícula.
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página Nodos debe mostrar un estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"]a la izquierda del nombre del nodo) para el nodo del dispositivo, lo que indica que no hay ninguna alerta activa y que el nodo está conectado a la cuadrícula.
 
 +
 image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
