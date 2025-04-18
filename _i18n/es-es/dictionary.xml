@@ -2865,7 +2865,6 @@ Después de completar la actualización actual, descargue el archivo de sistema 
   <block id="9bb391312ffed336cc1adbf60045dba8" category="list-text">Compruebe que las etiquetas de la parte frontal del aparato tengan el mismo número de pieza para confirmar que ha encontrado el aparato correcto.</block>
   <block id="d3cb531b4f9c05d46c6be8f0489a9b86" category="list-text">Retire el marco frontal, si hay uno instalado, para acceder a los controles e indicadores del panel frontal.</block>
   <block id="8727881150b0ace8b598a648cdfcd4e1" category="summary">StorageGRID de NetApp es una suite de almacenamiento de objetos definido por software que admite diferentes casos de uso en entornos de multinube pública, privada e híbrida. StorageGRID ofrece compatibilidad nativa con la API de Amazon S3 y proporciona innovaciones líderes en el sector, como la gestión automatizada del ciclo de vida, para almacenar, proteger y conservar datos no estructurados de forma rentable durante largos periodos.</block>
-  <block id="4fab2171e21f4258294a2a074494fa18" category="doc">Documentación del dispositivo StorageGRID</block>
   <block id="2e1c8345a49fcd97288e52caaad82a49" category="summary">En algunos casos, es posible que necesite actualizar las referencias de direcciones MAC después de reemplazar un dispositivo.</block>
   <block id="8731fac4810f4eee46647147bd16bf3d" category="paragraph">Si alguna de las interfaces de red de un dispositivo que va a sustituir está configurada para DHCP, es posible que deba actualizar las asignaciones de permisos DHCP permanentes en los servidores DHCP para hacer referencia a las direcciones MAC del dispositivo de reemplazo. La actualización garantiza que el dispositivo de reemplazo tenga asignadas las direcciones IP esperadas.</block>
   <block id="5d98e441c401a29a6e5bb2f1212a7a15" category="list-text">Localice la etiqueta en la parte frontal del aparato. La etiqueta enumera la dirección MAC del puerto de gestión BMC del dispositivo.</block>
@@ -3865,7 +3864,6 @@ Consulte la información sobre la gestión de objetos con la gestión del ciclo 
   <block id="8ef596bf4eb7277f78ad1d7ad4cc04de" category="sidebar">Base de conocimientos de StorageGRID</block>
   <block id="c2d388654878e1108f99fdeaa465fcac" category="sidebar">Blog de NetApp</block>
   <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">Comunidad de NetApp</block>
-  <block id="69d1c297210c956cee51bf4ccf9dc0d1" category="sidebar">Documentos de dispositivos StorageGRID</block>
   <block id="42201415720ad552ae0536ddda18b94e" category="sidebar">Obtenga más información sobre los dispositivos StorageGRID</block>
   <block id="b7cd29c1531745149a88d6056a6c42c4" category="sidebar">Clonado de nodos de dispositivos</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">Descripción general</block>
@@ -5762,4 +5760,5 @@ Muestra Sí, lo que indica que es seguro eliminar este componente.</block>
   <block id="0160256cfe219f6b22fa00049dc8b08b" category="list-text">Mire el icono de ventilador <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>a la derecha de las listas desplegables *Bandeja* para determinar qué dispositivo tiene el contenedor de ventilador defectuoso.</block>
   <block id="1a41776500a52e28aa05db3c32dfc47a" category="sidebar">Actualizar firmware de la unidad (método en línea SG6160)</block>
   <block id="2c8a2ef75a9a05ce84a4b89f17f20322" category="sidebar">Actualizar el firmware de la unidad (método SG6160 sin conexión)</block>
+  <block id="d07792f91c33735c12a1ce89b21df7a3" category="sidebar">Documentación del dispositivo StorageGRID</block>
 </blocks>
