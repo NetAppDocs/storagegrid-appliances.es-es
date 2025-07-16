@@ -252,6 +252,27 @@ Connecting to +https://10.224.2.30:8443+ (Checking version and connectivity.)
 +
 `./configure-sga.py configure --admin-ip 172.16.2.99 _SGA-INSTALL-IP_`
 
++
+[NOTE]
+====
+No utilice subredes que contengan las siguientes direcciones IPv4 para la red de cuadrícula, la red de administración o la red de cliente de ningún nodo:
+
+** 192.168.130.101
+** 192.168.131.101
+** 192.168.130.102
+** 192.168.131.102
+** 198.51.100.2
+** 198.51.100.4
+
+
+Por ejemplo, no utilice los siguientes rangos de subred para la red de cuadrícula, la red de administración o la red de cliente de ningún nodo:
+
+** 192.168.130.0/24 porque este rango de subred contiene las direcciones IP 192.168.130.101 y 192.168.130.102
+** 192.168.131.0/24 porque este rango de subred contiene las direcciones IP 192.168.131.101 y 192.168.131.102
+** 198.51.100.0/24 porque este rango de subred contiene las direcciones IP 198.51.100.2 y 198.51.100.4
+
+
+====
 . [[Back-up-appliance-config]] Si desea realizar una copia de seguridad de la configuración del dispositivo en un archivo JSON, utilice el AND avanzado `backup-file` subcomandos. Por ejemplo, si desea realizar una copia de seguridad de la configuración de un dispositivo con dirección IP `_SGA-INSTALL-IP_` a un archivo llamado `appliance-SG1000.json`, introduzca lo siguiente: +
 `./configure-sga.py advanced --backup-file appliance-SG1000.json _SGA-INSTALL-IP_`
 +
