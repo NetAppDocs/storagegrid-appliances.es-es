@@ -4,7 +4,7 @@ permalink: whats-new-appliances.html
 keywords: storagegrid, appliance, whats new 
 summary: Conozca las novedades de este sitio de documentación. 
 ---
-= Novedades para los dispositivos
+= Novedades en los dispositivos StorageGRID
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,28 +14,40 @@ summary: Conozca las novedades de este sitio de documentación.
 
 
 [role="lead"]
-Descubra las novedades de los dispositivos StorageGRID.
+Conozca las novedades en los dispositivos StorageGRID .
+
+
+
+== La red del cliente se puede configurar sin una dirección IP
+
+Ahora puede habilitar la red de cliente sin especificar una dirección IP.  Esto permite que la red del cliente tenga interfaces VLAN configuradas en StorageGRID sin requerir una dirección IP adicional para la interfaz en sí. Consulte link:.//installconfig/setting-ip-configuration.html["Configure las direcciones IP de StorageGRID"] .
+
+
+
+== Los números de versión del software StorageGRID y el instalador del dispositivo están alineados
+
+Con la versión 12.0 de StorgeGRID, el número de versión del instalador del dispositivo StorageGRID coincide con la versión del software StorageGRID .  Los usuarios ya no necesitan averiguar qué versiones funcionan juntas. Consulte link:./installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html["Comprobar y actualizar la versión de StorageGRID Appliance Installer"] .
 
 
 
 == Información para BMC
 
-Ya está disponible información detallada sobre cómo usar la interfaz BMC del dispositivo StorageGRID. Consulte link:./commonhardware/use-bmc.html["Utilice el controlador de gestión (BMC) de la placa base del dispositivo StorageGRID."].
+Ahora está disponible información detallada sobre el uso de la interfaz BMC del dispositivo StorageGRID . Consulte link:./commonhardware/use-bmc.html["Utilice el controlador de gestión (BMC) de la placa base del dispositivo StorageGRID."] .
 
 
 
 == Dispositivos SG5812 y SG5860
 
-Los nuevos dispositivos StorageGRID SG5812 y SG5860 son plataformas informáticas y de almacenamiento integradas que funcionan como nodos de almacenamiento en un grid de StorageGRID. Consulte link:./installconfig/hardware-description-sg5800.html["Dispositivos SG5800: Información general"]para obtener más información.
+Los dispositivos StorageGRID SG5812 y SG5860 son plataformas integradas de almacenamiento y computación que funcionan como nodos de almacenamiento en una red StorageGRID .  Consulte lalink:./installconfig/hardware-description-sg5800.html["Dispositivos SG5800: Información general"] Para saber más.
 
 
 
 == Dispositivo SG6160
 
-El nuevo dispositivo StorageGRID SG6160 incluye una controladora de computación y una bandeja de controladoras de almacenamiento que contiene dos controladoras de almacenamiento y 60 unidades, así como dos unidades SSD NVMe para almacenamiento en caché. Opcionalmente, se pueden añadir bandejas de ampliación de 60 unidades al SG6160. Consulte link:./installconfig/hardware-description-sg6100.html["Dispositivos SGF6100: Información general"] para obtener más información.
+El nuevo dispositivo StorageGRID SG6160 incluye un controlador de cómputo y un estante de controlador de almacenamiento que contiene dos controladores de almacenamiento y 60 unidades, así como dos unidades SSD NVMe para almacenamiento en caché.  Opcionalmente, se pueden agregar estantes de expansión de 60 unidades al SG6160.  Referirse alink:./installconfig/hardware-description-sg6100.html["Dispositivos SGF6100: Información general"] Para saber más.
 
 
 
 == Dispositivos de servicios SG110 y SG1100
 
-Los nuevos dispositivos de servicios StorageGRID SG110 y SG1100 son una actualización de hardware evolutiva que proporcionan un mejor rendimiento administrativo y de equilibrio de carga. Consulte link:./installconfig/hardware-description-sg110-and-1100.html["Dispositivo de servicios SG110 y SG1100: Información general"].
+Los nuevos dispositivos de servicios StorageGRID SG110 y SG1100 son una actualización de hardware evolutiva que proporciona un mejor rendimiento administrativo y de equilibrio de carga. Consulte link:./installconfig/hardware-description-sg110-and-1100.html["Dispositivo de servicios SG110 y SG1100: Información general"] .

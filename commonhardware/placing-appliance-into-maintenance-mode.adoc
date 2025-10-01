@@ -48,18 +48,14 @@ Si es posible, utilice la dirección URL que contiene la dirección IP del puert
 NOTE: Si tiene una conexión directa con el puerto de gestión del dispositivo, utilice `+https://169.254.0.1:8443+` Para acceder a la página del instalador de dispositivos de StorageGRID.
 
 . En el instalador de dispositivos StorageGRID, confirme que el dispositivo está en modo de mantenimiento.
-+
-image::../media/maintenance_mode_notification_bar.png[mensaje del modo de mantenimiento]
-
 . Realice las tareas de mantenimiento necesarias.
 . Después de completar las tareas de mantenimiento, salga del modo de mantenimiento y reanude el funcionamiento normal del nodo. En el instalador del dispositivo StorageGRID, seleccione *Avanzado* > *Reiniciar controlador* y, a continuación, seleccione *Reiniciar en StorageGRID*.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y reincorporarse a la red.  Para confirmar que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 
 +
-El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página *NODES* debe mostrar un estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"]a la izquierda del nombre del nodo) para el nodo del dispositivo, lo que indica que no hay alertas activas y que el nodo está conectado a la cuadrícula.
+.. En el Administrador de cuadrícula, seleccione *NODOS*.
+.. Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 
-+
-image::../media/nodes_menu.png[Estado normal de la página nodos]
 
 

@@ -4,7 +4,7 @@ permalink: storagegrid-enable.html
 keywords: storagegrid, how to enable, third-party solutions, tools, applications, examples 
 summary: Obtenga información sobre cómo probar y habilitar las aplicaciones en su entorno de StorageGRID. 
 ---
-= Cómo habilitar StorageGRID en su entorno
+= Soluciones y recursos de StorageGRID
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: Obtenga información sobre cómo probar y habilitar las aplicaciones en
 
 
 [role="lead"]
-Vaya a. https://docs.netapp.com/us-en/storagegrid-enable/index.html["Cómo habilitar StorageGRID en su entorno"^] Para obtener más información sobre cómo probar y habilitar las aplicaciones en su entorno StorageGRID.
+Ir a https://docs.netapp.com/us-en/storagegrid-enable/index.html["Soluciones y recursos de StorageGRID"^] para aprender a probar y habilitar aplicaciones en su entorno StorageGRID .
 
-El sitio de documentación *storagegrid-enable* proporciona ejemplos y libros de cocina que se expanden sobre la documentación del producto en este sitio, y describe algunos pasos siguientes para evaluar e integrar con StorageGRID.
+*Soluciones y recursos de StorageGRID * proporciona ejemplos y libros de recetas que amplían la documentación del producto en este sitio y describe algunos de los próximos pasos para evaluar e integrar con StorageGRID.
 
 Parte de la información incluía:
 

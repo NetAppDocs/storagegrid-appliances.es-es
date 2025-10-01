@@ -14,6 +14,9 @@ summary: Antes de clonar un nodo de dispositivo, debe comprender las consideraci
 Antes de clonar un nodo de dispositivo, debe comprender las consideraciones y los requisitos.
 
 
+TIP: La clonación de nodos está deshabilitada para los nodos de puerta de enlace.  Para reemplazar un nodo de puerta de enlace, desactívelo y luego realice una expansión para agregar un nuevo nodo de puerta de enlace del dispositivo.  El procedimiento de desmantelamiento y expansión es mucho más rápido para un nodo de puerta de enlace que para un nodo de almacenamiento.
+
+
 
 == Requisitos de hardware para el dispositivo de sustitución
 
@@ -21,11 +24,11 @@ Asegúrese de que el aparato de sustitución cumple los siguientes criterios:
 
 * El nodo de origen (dispositivo que se va a reemplazar) y el dispositivo de destino (nuevo) deben ser del mismo tipo de dispositivo:
 +
-** Solo puede clonar un dispositivo Admin Node o un dispositivo Gateway Node en un dispositivo de servicios nuevo.
+** Solo se puede clonar un dispositivo de nodo de administración en un nuevo dispositivo de servicios.
 ** Solo puede clonar un dispositivo Storage Node en un dispositivo de almacenamiento nuevo.
 
 
-* Para los dispositivos de nodo de administración o nodo de pasarela, el dispositivo de nodo de origen y el dispositivo de destino no necesitan ser el mismo modelo de dispositivo; sin embargo, para cambiar el modelo de dispositivo, es posible que sea necesario sustituir los cables o los módulos SFP.
+* Para un dispositivo de nodo de administración, no es necesario que el dispositivo del nodo de origen y el dispositivo de destino sean del mismo modelo; sin embargo, cambiar el modelo del dispositivo puede requerir reemplazar los cables o los módulos SFP.
 +
 Por ejemplo, puede sustituir un dispositivo de nodo SG1000 por un SG100 o sustituir un dispositivo SG100 por un dispositivo SG1000.
 
@@ -37,7 +40,7 @@ Por ejemplo, puede reemplazar un dispositivo de nodos SG5700 por un dispositivo 
 
 ** El dispositivo objetivo debe tener una cantidad de volúmenes de almacenamiento de objetos igual o superior a la del dispositivo de origen.
 +
-Por ejemplo, no se puede reemplazar un dispositivo de SG6000 nodos (volúmenes de almacenamiento de objetos 16) por un dispositivo SGF6112 (volúmenes de almacenamiento de objetos 12).
+Por ejemplo, no se puede reemplazar un dispositivo de nodo SG6000 (16 volúmenes de almacenamiento de objetos) con un dispositivo SGF6112 (12 volúmenes de almacenamiento de objetos).
 
 
 
@@ -60,9 +63,18 @@ Las direcciones IP temporales suelen estar en la misma subred que el dispositivo
 
 NOTE: El uso de la red de administrador de 1 GbE para la transferencia de datos de clones provoca una clonación más lenta.
 
-* Determinar si se usará el cifrado de nodos con un servidor de gestión de claves (KMS) en el dispositivo de destino, de manera que pueda habilitar el cifrado de nodos durante la instalación inicial del dispositivo de destino antes de realizar el clonado. Puede comprobar si el cifrado de nodo está activado en el nodo del dispositivo de origen como se describe en link:../installconfig/optional-enabling-node-encryption.html["habilitar el cifrado de nodo"].
+* Determine si utilizará el cifrado de nodo mediante un servidor de administración de claves (KMS) en el dispositivo de destino, de modo que pueda habilitar el cifrado de nodo durante la instalación inicial del dispositivo de destino antes de la clonación.  Puede verificar si el cifrado de nodo está habilitado en el nodo del dispositivo de origen como se describe enlink:../installconfig/optional-enabling-node-encryption.html["habilitar el cifrado de nodo"] .
 +
-El nodo de origen y el dispositivo de destino pueden tener diferentes configuraciones de cifrado del nodo. El cifrado y el descifrado de datos se realizan automáticamente durante la transferencia de datos y cuando el nodo objetivo se reinicia y se une a la cuadrícula.
+El nodo de origen y el dispositivo de destino pueden tener diferentes configuraciones de cifrado de nodo con las siguientes excepciones.  No se admite la clonación de nodos desde orígenes de nodos no cifrados a destinos con nodos cifrados para los siguientes dispositivos:
+
++
+** Un dispositivo de nodo SGF6112 sin cifrado de nodo a un dispositivo SGF6112 con cifrado de nodo
+** Un dispositivo de nodo SG1100 sin cifrado de nodo a un dispositivo SG1100 con cifrado de nodo
+** Un dispositivo de nodo SG110 sin cifrado de nodo a un dispositivo SG110 con cifrado de nodo
+
+
++
+El cifrado y descifrado de datos se realiza automáticamente durante la transferencia de datos y cuando el nodo de destino se reinicia y se une a la red.
 
 * Determine si el modo RAID del dispositivo de destino debe cambiarse desde su configuración predeterminada, por lo que puede especificar esta información durante la instalación inicial del dispositivo de destino antes de realizar la clonación. Puede ver información acerca del modo RAID actual del nodo del dispositivo de origen en la página *NODES* de Grid Manager. Seleccione la pestaña *Hardware* del aparato.
 +

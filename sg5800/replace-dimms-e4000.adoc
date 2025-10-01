@@ -263,9 +263,14 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 
 
-. Confirme que el reinicio ha finalizado y que el nodo se ha vuelto a unir a la cuadrícula. En Grid Manager, verifique que la página *nodes* muestre un estado normal (marca de verificación verde a la izquierda del nombre del nodo) para el nodo del dispositivo, lo que indica que no hay alertas activas y que el nodo está conectado a la cuadrícula.
+. Confirme que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
++
+.. En el Administrador de cuadrícula, seleccione *NODOS*.
+.. Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 +
 
-NOTE: Puede que pasen 20 minutos desde que encienda los interruptores de alimentación hasta que el nodo se vuelva a unir a la cuadrícula y muestre un estado normal en Grid Manager.”
+NOTE: Pueden pasar 20 minutos desde que enciende los interruptores de energía hasta que el nodo se reincorpora a la red y muestra un estado normal en el Administrador de red.
+
+
 
 

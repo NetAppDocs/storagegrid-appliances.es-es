@@ -552,7 +552,6 @@ El puerto de la izquierda está conectado a la red de administración. El puerto
 .Información relacionada
 * link:../installconfig/hardware-description-sg6000.html#sg6000-controllers["SG6000 controladores"]
 * link:../installconfig/reviewing-appliance-network-connections.html["Determine las conexiones de red del dispositivo"]
-* link:../installconfig/gathering-installation-information-sg6000.html#port-bond-modes["Modos de enlace de puertos (controladora SG6000-CN)"]
 * link:cabling-appliance.html["Aparato por cable"]
 * link:../installconfig/setting-ip-configuration.html["Configure las direcciones IP de StorageGRID"]
 

@@ -23,7 +23,7 @@ Para aplicar una actualización, se deben usar Grid Manager para las controlador
 .Acerca de esta tarea
 No puede realizar otras actualizaciones de software (actualización de software StorageGRID o una corrección urgente) mientras hay en curso una actualización del sistema operativo SANtricity. Si intenta iniciar una revisión o una actualización de software de StorageGRID antes de que haya finalizado el proceso de actualización de SANtricity OS, se le redirigirá a la página de actualización de SANtricity OS.
 
-No se completará el procedimiento hasta que la actualización del sistema operativo SANtricity se haya aplicado correctamente a todos los nodos aplicables seleccionados para la actualización. Es posible que tardar más de 30 minutos cargar el sistema operativo SANtricity en cada nodo (de forma secuencial) y hasta 90 minutos para reiniciar cada dispositivo de almacenamiento StorageGRID. Cualquier nodo del grid que no utilice SANtricity OS no se verá afectado por este procedimiento.
+El procedimiento no estará completo hasta que la actualización del sistema operativo SANtricity se haya aplicado con éxito a todos los nodos aplicables que se hayan seleccionado para la actualización.  Puede tomar más de 30 minutos cargar el sistema operativo SANtricity en cada nodo (secuencialmente) y hasta 90 minutos reiniciar cada dispositivo de almacenamiento StorageGRID .  Los nodos de su red que no utilizan SANtricity OS no se verán afectados por este procedimiento.
 
 
 CAUTION: Los siguientes pasos sólo son aplicables cuando se utiliza Grid Manager para realizar la actualización. Las controladoras de almacenamiento en el dispositivo no se pueden actualizar mediante Grid Manager cuando las controladoras utilizan un sistema operativo SANtricity anterior a 08.42.20.00 (11,42).
@@ -32,12 +32,12 @@ CAUTION: Los siguientes pasos sólo son aplicables cuando se utiliza Grid Manage
 NOTE: Este procedimiento actualizará automáticamente la NVSRAM a la versión más reciente asociada con la actualización del sistema operativo SANtricity. No es necesario aplicar un archivo de actualización de NVSRAM independiente.
 
 
-NOTE: Asegúrese de aplicar la revisión de StorageGRID más reciente antes de comenzar este procedimiento. Consulte https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["Procedimiento de revisión de StorageGRID"^] para obtener más información.
+NOTE: Aplique la última revisión de StorageGRID antes de comenzar este procedimiento. Ver https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["Procedimiento de revisión de StorageGRID"^] Para más detalles.
 
 .Pasos
 . [[download-santricity-os]] Descargue el nuevo archivo de software de sistema operativo SANtricity de https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^].
 +
-Asegúrese de elegir la versión de sistema operativo SANtricity para las controladoras de almacenamiento.
+Elija la versión del sistema operativo SANtricity para sus controladores de almacenamiento.
 
 . Seleccione *MANTENIMIENTO* > *sistema* > *actualización de software*.
 +
@@ -187,14 +187,14 @@ NOTE: Los nodos ya aprobados y actualizados sin errores siguen actualizando.
 
 
 
-. Repita este procedimiento de actualización para todos los nodos con una etapa de finalización que requieran un archivo de actualización de sistema operativo SANtricity diferente.
+. Repita este procedimiento de actualización para los nodos con una etapa de Completado que requieran un archivo de actualización del sistema operativo SANtricity diferente.
 +
 
-NOTE: Para cualquier nodo con el estado necesita atención, utilice el modo de mantenimiento para realizar la actualización.
+NOTE: Para los nodos con un estado de Necesita atención, utilice el modo de mantenimiento para realizar la actualización.
 
 
 
 .Información relacionada
-* link:https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^]
+* https://mysupport.netapp.com/matrix["Herramienta de matriz de interoperabilidad de NetApp"^]
 * link:upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html["Actualice el sistema operativo SANtricity en la controladora E2800 mediante modo de mantenimiento"]
 

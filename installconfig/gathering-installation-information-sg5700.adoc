@@ -464,6 +464,5 @@ image::../media/e5700sg_bonded_management_ports.gif[Puerto de gestión con enlac
 
 .Información relacionada
 * link:cabling-appliance-sg5700.html["Dispositivo de cable (SG5700)"]
-* link:gathering-installation-information-sg5700.html#port-bond-modes["Modos de enlace de puertos (controladora E5700SG)"]
 * link:configuring-hardware.html["Configurar hardware (SG5700)"]
 

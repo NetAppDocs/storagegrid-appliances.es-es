@@ -423,6 +423,5 @@ NOTE: Si decide utilizar menos de cuatro puertos, tenga en cuenta que una o más
 
 .Información relacionada
 * link:cabling-appliance.html["Aparato por cable (SG5800)"]
-* link:gathering-installation-information-sg5800.html#port-bond-modes["Modos de enlace de puertos (controladora SG5800)"]
 * link:configuring-hardware.html["Configurar hardware (SG5800)"]
 

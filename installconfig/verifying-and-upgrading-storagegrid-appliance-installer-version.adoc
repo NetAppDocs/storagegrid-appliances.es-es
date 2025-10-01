@@ -23,10 +23,7 @@ El instalador de dispositivos de StorageGRID se actualiza automáticamente cuand
 
 .Pasos
 . En el instalador del dispositivo StorageGRID, seleccione *Avanzado* > *Actualizar firmware*.
-. Compare la versión actual del firmware con la versión de software instalada en el sistema StorageGRID. (En la parte superior de Grid Manager, seleccione el icono de ayuda y seleccione *Acerca de*).
-+
-El segundo dígito de las dos versiones debe coincidir. Por ejemplo, si el sistema StorageGRID está ejecutando la versión 11.*6*._x_._y_, la versión del instalador de dispositivos StorageGRID debe ser 3.*6*._z_.
-
+. Asegúrese de que la versión de firmware actual coincida con la versión de software instalada en su sistema StorageGRID .  (Desde la parte superior del Administrador de cuadrícula, seleccione el ícono de ayuda y seleccione *Acerca de*).
 . Si el dispositivo tiene una versión de nivel inferior del instalador de dispositivos de StorageGRID, vaya a. https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^].
 +
 Inicie sesión con el nombre de usuario y la contraseña de su cuenta de NetApp.

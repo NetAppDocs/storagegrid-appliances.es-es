@@ -137,16 +137,16 @@ IOM B para la bandeja de ampliación 2
 En cinco minutos aproximadamente, las bandejas de expansión finalizan y son detectadas por el sistema. En la página Inicio, se muestra el número de bandejas de expansión nuevas detectadas y el botón Iniciar ampliación está habilitado.
 
 +
-La captura de pantalla muestra ejemplos de los mensajes que podrían aparecer en la página de inicio, en función del número de bandejas de expansión existentes o nuevas, como se indica a continuación:
+Ejemplos de los mensajes que podrían aparecer en la página de inicio, dependiendo del número de estantes de expansión existentes o nuevos:
 
 +
-** El banner con un círculo en la parte superior de la página indica el número total de bandejas de expansión detectadas.
+** Un banner que aparece en la parte superior de la página indica el número total de estantes de expansión detectados.
 +
 *** El banner indica el número total de bandejas de expansión, si las bandejas están configuradas y puestas en marcha o nuevas y sin configurar.
 *** Si no se detectan bandejas de expansión, el banner no aparecerá.
 
 
-** El mensaje con un círculo en la parte inferior de la página indica que una expansión está lista para iniciarse.
+** Un mensaje en la parte inferior de la página indica que una expansión está lista para iniciarse.
 +
 *** El mensaje indica el número de nuevas bandejas de expansión que StorageGRID detecta. "'adjunto'" indica que se ha detectado el estante. "'Unconfigured'" indica que la bandeja es nueva y aún no se ha configurado mediante el instalador de dispositivos de StorageGRID.
 +
@@ -154,9 +154,6 @@ La captura de pantalla muestra ejemplos de los mensajes que podrían aparecer en
 NOTE: Las bandejas de expansión que ya están implementadas no se incluyen en este mensaje. Se incluyen en el recuento en el banner en la parte superior de la página.
 
 *** El mensaje no aparecerá si no se detectan las nuevas bandejas de expansión.
-+
-image::../media/appl_installer_home_expansion_shelf_ready_to_install.png[Instalación de la bandeja de ampliación]
-
 
 
 
@@ -176,9 +173,6 @@ NOTE: Si no se detectan las bandejas de expansión nuevas, compruebe que se haya
 Las barras de progreso aparecen en la página Web, igual que durante la instalación inicial.
 
 +
-image::../media/monitor_expansion_for_new_appliance_shelf.png[Supervise la configuración de la bandeja de expansión]
-
-+
 Una vez completada la configuración, el dispositivo se reinicia automáticamente para salir del modo de mantenimiento y volver a unirse a la cuadrícula. Este proceso puede tardar hasta 20 minutos.
 
 +
@@ -186,10 +180,7 @@ Una vez completada la configuración, el dispositivo se reinicia automáticament
 NOTE: Para volver a intentar la configuración de la bandeja de expansión si falla, vaya al instalador de dispositivos StorageGRID, seleccione * Avanzado * > * Reiniciar controlador * y, a continuación, seleccione * Reiniciar en modo de mantenimiento *. Cuando se haya reiniciado el nodo, vuelva a intentar el <<start_expansion,configuración de la bandeja de ampliación>>.
 
 +
-Una vez completado el reinicio, la ficha *tareas* se parece a la siguiente captura de pantalla:
-
-+
-image::../media/appliance_installer_reboot_complete.png[Reinicio finalizado]
+Cuando se completa el reinicio, se muestra la pestaña *Tareas* con selecciones para reiniciar el nodo o colocar el dispositivo en modo de mantenimiento.
 
 . Compruebe el estado del nodo de almacenamiento del dispositivo y las nuevas bandejas de ampliación.
 +

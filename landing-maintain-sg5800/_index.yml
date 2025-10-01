@@ -8,9 +8,11 @@ indexpage:
   - title: Procedimientos realizados con frecuencia
     links:
     - title: Cambiar la configuración del enlace
-      url: "../sg5800/changing-link-configuration-of-e5800sg-controller.html"
+      url: "../sg5800/changing-link-configuration-of-sg5800-controller.html"
     - title: Actualice SANtricity
       url: "../sg5800/upgrading-santricity-os-on-storage-controller.html"
+    - title: Actualizar el firmware de la unidad (método de reinicio automático)
+      url: "../sg5800/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Actualizar firmware de la unidad (método en línea)
       url: "../sg5800/upgrading-drive-firmware-using-santricity-system-manager-online.html"
     - title: Actualizar firmware de la unidad (método sin conexión)

@@ -1,0 +1,59 @@
+---
+permalink: sg6000/replacing-fan-in-sg6000cn.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000-cn, storage node, storage appliance, replacing, replace, fan, remove, removing, removal, install, installing, installation 
+summary: El controlador de cómputo SG6000-CN tiene ocho ventiladores de refrigeración.  Si uno de los ventiladores falla, debes reemplazarlo lo antes posible para garantizar que el controlador tenga una refrigeración adecuada. 
+---
+= Reemplazar el ventilador en el controlador de cómputo SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El controlador de cómputo SG6000-CN tiene ocho ventiladores de refrigeración.  Si uno de los ventiladores falla, debes reemplazarlo lo antes posible para garantizar que el controlador tenga una refrigeración adecuada.
+
+.Antes de empezar
+* Ha desembalado el ventilador de repuesto.
+* Ya tienes link:locating-controller-in-data-center.html["ubicación física del aparato"].
+* Ha confirmado que los otros ventiladores están instalados y en ejecución.
+
+
+.Acerca de esta tarea
+No se podrá acceder al nodo de almacenamiento mientras reemplaza el ventilador.
+
+La fotografía muestra un ventilador para el controlador de cómputo SG6000-CN.  Se puede acceder a los ventiladores de enfriamiento después de quitar la cubierta superior del controlador.
+
+
+NOTE: Cada una de las dos unidades de suministro de alimentación también contiene un ventilador. Esos ventiladores no están incluidos en este procedimiento.
+
+image::../media/fan_fru.png[FRU de ventilador]
+
+.Pasos
+. link:power-sg6000-cn-controller-off-on.html["Apague el controlador SG6000-CN"] .
+. Levante el pestillo de la cubierta superior y retire la cubierta del aparato.
+. Localice el ventilador que falló.
++
+image::../media/fan_location.png[Ubicación de ventiladores]
+
+. Levante el ventilador fallido para sacarlo del chasis.
++
+image::../media/fan_removal.png[Extracción del ventilador]
+
+. Deslice el ventilador de repuesto en la ranura abierta del chasis.
++
+Alinee el borde del ventilador con el pasador guía. El pasador está en un círculo en la fotografía.
+
++
+image::../media/fan_guide_pin.png[Pasador guía del ventilador]
+
+. Presione firmemente el conector del ventilador en la placa de circuitos.
++
+image::../media/fan_connector_check.png[Revisión del conector del ventilador]
+
+. Vuelva a colocar la cubierta superior en el aparato y presione el pestillo hacia abajo para fijar la cubierta en su lugar.
+. link:power-sg6000-cn-controller-off-on.html#poweron["Encienda el controlador SG6000-CN"] .
+. Confirme que el nodo del dispositivo aparece en Grid Manager y que no aparece ninguna alerta.
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.

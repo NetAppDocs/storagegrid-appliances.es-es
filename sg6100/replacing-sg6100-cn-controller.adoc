@@ -54,9 +54,42 @@ Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para
 
 CAUTION: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
 
-.. Quite la controladora que ha fallado del armario o rack.
-.. Instale la controladora de reemplazo en el armario o rack.
-.. Sustituya los cables.
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Retire el controlador averiado del gabinete o rack"] .
+.. Tenga en cuenta la posición de los componentes reemplazables (dos fuentes de alimentación, tres NIC y dos SSD) en el controlador fallido.
++
+Las dos unidades se encuentran en las siguientes posiciones del chasis (se muestra la parte delantera del chasis con el panel frontal quitado):
+
++
+image::../media/sg6100cn_ssds_locations.png[Ubicaciones de unidades]
+
++
+|===
+|  | Unidad 
+
+
+ a| 
+1
+ a| 
+HDD00
+
+
+
+ a| 
+2
+ a| 
+HDD01
+
+|===
+.. Transfiera los componentes reemplazables al controlador de reemplazo.
++
+Siga las instrucciones de mantenimiento suministradas para volver a instalar los componentes reemplazables.
+
++
+
+CAUTION: Si desea conservar los datos en las unidades, inserte las unidades SSD en las mismas ranuras que ocupaban en el dispositivo fallido.  Si no lo hace, el instalador del dispositivo mostrará una advertencia y tendrá que colocar las unidades en las ranuras correctas y reiniciar el controlador antes de que este pueda volver a unirse a la red.
+
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Instale el controlador de reemplazo en el gabinete o rack"] .
+.. Reemplace los cables y cualquier transceptor óptico.
 .. Encienda la controladora y supervise los LED de la controladora.
 
 

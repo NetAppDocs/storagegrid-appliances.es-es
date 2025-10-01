@@ -20,8 +20,7 @@ Puede apagar la controladora SG6000-CN y encenderla nuevamente para realizar tar
 Apague el controlador SG6000-CN para realizar el mantenimiento de hardware.
 
 .Antes de empezar
-* Ha localizado físicamente el controlador SG6000-CN que requiere mantenimiento en el centro de datos. Consulte link:locating-controller-in-data-center.html["Ubique la controladora en el centro de datos"].
-
+Ha localizado físicamente el controlador SG6000-CN que requiere mantenimiento en el centro de datos. Consulte link:locating-controller-in-data-center.html["Ubique la controladora en el centro de datos"].
 
 .Acerca de esta tarea
 Para evitar interrupciones del servicio, confirme que todos los demás nodos de almacenamiento están conectados al grid antes de apagar la controladora o apagar la controladora durante una ventana de mantenimiento programada cuando sea posible periodos de interrupción del servicio. Consulte la información sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
@@ -84,7 +83,7 @@ image::../media/bmc_power_control_page_controller_off.png[Página de control de 
 
 
 
-== Encienda el controlador SG6000-CN y compruebe el funcionamiento
+== [[poweron]]Encienda el controlador SG6000-CN y verifique su funcionamiento
 
 Encienda la controladora después de completar el mantenimiento.
 

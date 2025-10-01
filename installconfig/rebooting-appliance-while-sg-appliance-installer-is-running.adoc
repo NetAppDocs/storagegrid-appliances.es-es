@@ -21,12 +21,6 @@ Este procedimiento solo se aplica cuando el dispositivo ejecuta el instalador de
 +
 ** Seleccione *Reiniciar en StorageGRID* para reiniciar el controlador con el nodo que vuelve a unir la cuadrícula. Seleccione esta opción si hizo trabajo en modo de mantenimiento y está listo para devolver el nodo a su funcionamiento normal.
 ** Seleccione *Reiniciar en el modo de mantenimiento* para reiniciar el controlador con el nodo restante en modo de mantenimiento. (Esta opción solo está disponible si la controladora se encuentra en modo de mantenimiento). Seleccione esta opción si hay otras operaciones de mantenimiento que debe realizar en el nodo antes de volver a unir la cuadrícula.
-+
-image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
-
-+
-El dispositivo se reinicia.
-
 
 
 

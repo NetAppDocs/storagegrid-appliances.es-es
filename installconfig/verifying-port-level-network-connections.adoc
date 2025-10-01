@@ -33,40 +33,22 @@ La tabla de conectividad de puertos enumera los tipos de nodos que requieren con
 Puede probar la conectividad entre los puertos del dispositivo que aparecen en la tabla y los demás nodos de la red de grid.
 
 . En el menú desplegable *Red*, seleccione la red que desea probar: *Grid*, *Admin* o *Cliente*.
-. Especifique un rango de direcciones IPv4 para los hosts en esa red.
-+
-Por ejemplo, es posible que desee sondear la puerta de enlace en la red o en el nodo de administración principal.
-
-+
-Especifique un rango utilizando un guión, como se muestra en el ejemplo.
-
+. Especifique una lista separada por espacios o un rango de direcciones IPv4 para los hosts en esa red.
 . Introduzca un número de puerto TCP, una lista de puertos separados por comas o un intervalo de puertos.
-+
-image::../media/port_connectivity_test_start.png[Prueba de conectividad de puertos]
-
 . Haga clic en *probar conectividad*.
 +
-** Si las conexiones de red a nivel de puerto seleccionadas son válidas, el mensaje "'Prueba de conectividad de puerto superada'" aparece en un banner verde. El resultado del comando nmap se muestra debajo del banner.
-+
-image::../media/port_connectivity_test_passed.png[Prueba de conectividad de puerto superada]
-
-** Si se realiza una conexión de red a nivel de puerto al host remoto, pero el host no escucha en uno o más de los puertos seleccionados, el mensaje "'error de prueba de conectividad de puerto'" aparece en un banner amarillo. El resultado del comando nmap se muestra debajo del banner.
+** Si las conexiones de red a nivel de puerto seleccionadas son válidas, aparece el mensaje "`Prueba de conectividad de puerto aprobada`" en un banner verde.  La salida del comando nmap se muestra debajo del banner.  Los hosts inalcanzables no aparecerán en la salida del comando nmap.
+** Si se establece una conexión de red a nivel de puerto con el host remoto, pero el host no está escuchando en uno o más de los puertos seleccionados, aparece el mensaje "`Error en la prueba de conectividad del puerto`" en un banner amarillo.  La salida del comando nmap se muestra debajo del banner.  Los hosts inalcanzables no aparecerán en la salida del comando nmap.
 +
 Cualquier puerto remoto al que no esté escuchando el host tiene un estado de "'cerrado'". Por ejemplo, puede ver este banner amarillo cuando el nodo al que intenta conectarse está en estado preinstalado y el servicio NMS de StorageGRID aún no se está ejecutando en ese nodo.
 
-+
-image::../media/nmap_test_yellow_banner.png[Banner amarillo de prueba DE NMAP]
-
-** Si no se puede realizar una conexión de red a nivel de puerto para uno o más puertos seleccionados, el mensaje ««Error de prueba de conectividad de puerto» aparece en un banner rojo. El resultado del comando nmap se muestra debajo del banner.
+** Si no se puede realizar una conexión de red a nivel de puerto para uno o más puertos seleccionados, aparece el mensaje "`Error en la prueba de conectividad del puerto`" en un banner rojo.  La salida del comando nmap se muestra debajo del banner.  Los hosts inalcanzables no aparecerán en la salida del comando nmap.
 +
 El banner rojo indica que se ha realizado un intento de conexión TCP a un puerto en el host remoto, pero no se ha devuelto nada al remitente. Cuando no se devuelve ninguna respuesta, el puerto tiene un estado de "filtrado" y es probable que sea bloqueado por un firewall.
 
 +
 
 NOTE: También se enumeran los puertos con «'cerrado'».
-
-+
-image::../media/nmap_test_red_banner.png[Banner rojo de prueba DE NMAP]
 
 
 

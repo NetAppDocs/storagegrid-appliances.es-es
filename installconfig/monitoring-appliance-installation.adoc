@@ -23,9 +23,6 @@ El instalador del dispositivo StorageGRID proporciona el estado hasta que se com
 La página Monitor Installation (instalación del monitor) muestra el progreso de la instalación.
 
 +
-image::../media/monitor_installation_configure_storage.gif[Página de instalación del monitor]
-
-+
 La barra de estado azul indica qué tarea está en curso actualmente. Las barras de estado verdes indican tareas que se han completado correctamente.
 
 +
@@ -45,11 +42,8 @@ En esta etapa, el instalador se conecta a la controladora de almacenamiento, bor
 +
 Durante esta fase, el instalador copia la imagen del sistema operativo base para StorageGRID en el dispositivo.
 
-. Continúe supervisando el progreso de la instalación hasta que la etapa *instalar StorageGRID* se detenga y aparezca un mensaje en la consola integrada, solicitándole que apruebe este nodo en el nodo de administración mediante el Administrador de grid. Vaya al paso siguiente.
-+
-image::../media/monitor_installation_install_sgws.gif[Página de instalación del monitor]
-
-. Vaya a Grid Manager del nodo Primary Admin, apruebe el nodo de almacenamiento pendiente y complete el proceso de instalación de StorageGRID.
+. Continúe monitoreando el progreso de la instalación hasta que la etapa *Instalar StorageGRID* se pause y aparezca un mensaje en la consola integrada que le solicite que apruebe este nodo en el Nodo de administración mediante el Administrador de Grid; luego, vaya al siguiente paso.
+. https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Vaya a Grid Manager"^]del nodo de administración principal, apruebe el nodo de almacenamiento pendiente y complete el proceso de instalación de StorageGRID .
 +
 Al hacer clic en *instalar* desde Grid Manager, se completa la fase 3 y comienza la fase 4, *Finalizar instalación*. Cuando finaliza la etapa 4, se reinicia la controladora.
 
@@ -60,12 +54,9 @@ Cierre la ventana una vez finalizadas todas las etapas de instalación.
 --
 .Dispositivo de servicios
 --
-. Para supervisar el progreso de la instalación, haga clic en *instalación del monitor* en la barra de menús.
+. Para supervisar el progreso de la instalación, haga clic en *instalación del monitor*.
 +
 La página Monitor Installation (instalación del monitor) muestra el progreso de la instalación.
-
-+
-image::../media/monitor_installation_services_appl.png[Instalación del monitor - aplicación Servicios]
 
 +
 La barra de estado azul indica qué tarea está en curso actualmente. Las barras de estado verdes indican tareas que se han completado correctamente.
@@ -76,26 +67,24 @@ NOTE: Installer garantiza que las tareas completadas en una instalación anterio
 
 . Revise el progreso de las dos primeras etapas de instalación.
 +
-** *1. Configurar almacenamiento*
+*1. Configurar almacenamiento*
+
 +
 Durante esta fase, el instalador borra toda la configuración existente de las unidades del dispositivo y configura la configuración del host.
 
-** *2. Instalar OS*
++
+*2. Instalar OS*
+
 +
 Durante esta fase, el instalador copia la imagen del sistema operativo base para StorageGRID en el dispositivo.
 
-
-
 . Continúe supervisando el progreso de la instalación hasta que se produzca uno de los siguientes procesos:
 +
-** Para todos los nodos de la aplicación, excepto el nodo de administración principal, la etapa de instalación de StorageGRID se detiene y aparece un mensaje en la consola incrustada, solicitándole que apruebe este nodo en el nodo de administración mediante la https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Administrador de grid"^]. Vaya al paso siguiente.
+** Para todos los nodos del dispositivo, excepto el nodo de administración principal, la etapa de instalación de StorageGRID se pausa y aparece un mensaje en la consola integrada que le solicita que apruebe este nodo en el nodo de administración mediante el botón https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Administrador de grid"^] ; luego, pase al siguiente paso.
 ** Para la instalación del nodo de administración principal del dispositivo, no es necesario aprobar el nodo. El dispositivo se reinicia. Puede omitir el paso siguiente.
 +
 
 NOTE: Durante la instalación de un nodo de administración principal del dispositivo, aparece una quinta fase para cargar el instalador de StorageGRID (la captura de pantalla de ejemplo muestra solo las primeras cuatro fases). Si se está cargando el instalador de StorageGRID (quinta fase) durante más de 10 minutos, actualice la página web manualmente.
-
-+
-image::../media/monitor_installation_install_sgws.gif[Página de instalación del monitor]
 
 
 

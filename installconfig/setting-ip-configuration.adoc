@@ -11,14 +11,14 @@ summary: Puede usar el instalador de dispositivos de StorageGRID para configurar
 
 
 [role="lead"]
-Puede usar el instalador de dispositivos de StorageGRID para configurar las direcciones IP y la información de enrutamiento utilizada para el nodo de almacenamiento del dispositivo o el dispositivo de servicios en las redes de grid, de administración y de cliente de StorageGRID.
+Utilice el instalador del dispositivo StorageGRID para configurar las direcciones IP y el enrutamiento para el dispositivo de servicios o el nodo de almacenamiento en las redes Grid, Admin y Client.
 
 Si utiliza ConfigBuilder para generar un archivo JSON, puede configurar direcciones IP automáticamente. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
 
 .Acerca de esta tarea
-Debe asignar una IP estática al dispositivo en cada red conectada o asignar una concesión permanente a la dirección del servidor DHCP.
+Debe asignar una dirección IP estática para el dispositivo en cada red o red administrativa conectada o asignar una concesión permanente para la dirección en el servidor DHCP.  La dirección IP estática o la configuración DHCP son opcionales para una red de cliente conectada.
 
-Para cambiar la configuración del vínculo, consulte las siguientes instrucciones:
+Para habilitar o deshabilitar un enlace o cambiar la configuración del enlace, consulte las siguientes instrucciones:
 
 * link:../sg100-1000/changing-link-configuration-of-services-appliance.html["Cambie la configuración de enlace del dispositivo de servicios SG100 o SG1000"]
 * link:../sg110-1100/changing-link-configuration-of-sg110-and-sg1100-appliance.html["Cambie la configuración de enlace del dispositivo de servicios SG110 o SG1100"]
@@ -53,9 +53,14 @@ Por ejemplo, no utilice los siguientes rangos de subred para la red de cuadrícu
 +
 Aparece la página Configuración de IP.
 
-. Para configurar Grid Network, seleccione *Static* o *DHCP* en la sección *Grid Network* de la página.
-. Si ha seleccionado *estático*, siga estos pasos para configurar la red de cuadrícula:
+. Para configurar la red de cuadrícula, seleccione *Estática* o *DHCP* en la sección *Red de cuadrícula* de la página y luego ingrese la configuración de su red.
 +
+[role="tabbed-block"]
+====
+.Estático
+--
+Si ha seleccionado *estático*, siga estos pasos para configurar la red de cuadrícula:
+
 .. Introduzca la dirección IPv4 estática utilizando la notación CIDR.
 .. Introduzca la puerta de enlace.
 +
@@ -84,18 +89,20 @@ Si tiene subredes de cuadrícula, se requiere la puerta de enlace de red de cuad
 
 +
 
-NOTE: La ruta predeterminada no aparece en la lista. Si la red de cliente no está activada, la ruta predeterminada utilizará la puerta de enlace de red de cuadrícula.
+NOTE: Si la red del cliente no está habilitada, la ruta predeterminada utilizará la puerta de enlace de la red Grid.
 
 +
 *** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"]situado a la derecha de la última entrada.
 *** Para eliminar una subred no utilizada, haga clic en el icono Suprimir image:../media/icon_nms_delete_new.gif["icono de eliminar"].
 
 
-.. Haga clic en *Guardar*.
 
 
-. Si ha seleccionado *DHCP*, siga estos pasos para configurar Grid Network:
-+
+--
+.DHCP
+--
+Si ha seleccionado *DHCP*, siga estos pasos para configurar Grid Network:
+
 .. Después de seleccionar el botón de opción *DHCP*, haga clic en *Guardar*.
 +
 Los campos *Dirección IPv4*, *Puerta de enlace* y *subredes* se rellenan automáticamente. Si el servidor DHCP está configurado para asignar un valor MTU, el campo *MTU* se rellena con ese valor y el campo pasa a ser de sólo lectura.
@@ -109,7 +116,7 @@ Si tiene subredes de cuadrícula, se requiere la puerta de enlace de red de cuad
 
 +
 
-NOTE: La ruta predeterminada no aparece en la lista. Si la red de cliente no está activada, la ruta predeterminada utilizará la puerta de enlace de red de cuadrícula.
+NOTE: Si la red del cliente no está habilitada, la ruta predeterminada utilizará la puerta de enlace de la red Grid.
 
 +
 *** Para agregar una subred, haga clic en el icono de inserción image:../media/icon_plus_sign_black_on_white.gif["insertar icono"]situado a la derecha de la última entrada.
@@ -128,19 +135,23 @@ NOTE: Para obtener el mejor rendimiento de red, todos los nodos deben configurar
 .. Haga clic en *Guardar*.
 
 
-. Para configurar la red administrativa, seleccione *Static* o *DHCP* en la sección *Admin Network* de la página.
+--
+====
+. Para configurar la red de administración, seleccione *Estática* o *DHCP* en la sección *Red de administración* de la página y luego ingrese la configuración de su red.
 +
 
 NOTE: Para configurar la red de administración, active la red de administración en la página Configuración de enlaces.
 
 +
-image::../media/admin_network_static.png[IP de red de administrador]
+[role="tabbed-block"]
+====
+.Estático
+--
+Si ha seleccionado *estático*, siga estos pasos para configurar la red de administración:
 
-. Si ha seleccionado *estático*, siga estos pasos para configurar la red de administración:
-+
 .. Introduzca la dirección IPv4 estática, mediante la notación CIDR, para el puerto de gestión 1 del dispositivo.
 +
-El puerto de gestión 1 está a la izquierda de los dos puertos RJ45 de 1-GbE del extremo derecho del dispositivo.
+Verlink:../installconfig/cabling-appliance.html["Aparato por cable"] para la ubicación del puerto de administración 1 en su dispositivo.
 
 .. Introduzca la puerta de enlace.
 +
@@ -172,11 +183,13 @@ NOTE: La ruta predeterminada no se puede realizar para utilizar la puerta de enl
 *** Para eliminar una subred no utilizada, haga clic en el icono Suprimir image:../media/icon_nms_delete_new.gif["icono de eliminar"].
 
 
-.. Haga clic en *Guardar*.
 
 
-. Si ha seleccionado *DHCP*, siga estos pasos para configurar la red de administración:
-+
+--
+.DHCP
+--
+Si ha seleccionado *DHCP*, siga estos pasos para configurar la red de administración:
+
 .. Después de seleccionar el botón de opción *DHCP*, haga clic en *Guardar*.
 +
 Los campos *Dirección IPv4*, *Puerta de enlace* y *subredes* se rellenan automáticamente. Si el servidor DHCP está configurado para asignar un valor MTU, el campo *MTU* se rellena con ese valor y el campo pasa a ser de sólo lectura.
@@ -205,16 +218,20 @@ CAUTION: El valor de MTU de la red debe coincidir con el valor configurado en el
 .. Haga clic en *Guardar*.
 
 
-. Para configurar la red de cliente, seleccione *Static* o *DHCP* en la sección *Client Network* de la página.
+--
+====
+. Para configurar la red del cliente, seleccione *Estática*, *DHCP* o *Ninguna* en la sección *Red del cliente* de la página y luego ingrese la configuración de su red.
 +
 
-NOTE: Para configurar la red cliente, active la red cliente en la página Configuración de enlaces.
+NOTE: Para configurar la red del cliente, asegúrese de que la red del cliente esté habilitada en la página Configuración de enlace.
 
 +
-image::../media/client_network_static.png[IP de red de cliente]
+[role="tabbed-block"]
+====
+.Estático
+--
+Si ha seleccionado *estático*, siga estos pasos para configurar la red de cliente:
 
-. Si ha seleccionado *estático*, siga estos pasos para configurar la red de cliente:
-+
 .. Introduzca la dirección IPv4 estática utilizando la notación CIDR.
 .. Haga clic en *Guardar*.
 .. Confirme que la dirección IP de la puerta de enlace de red de cliente es correcta.
@@ -230,8 +247,11 @@ CAUTION: El valor de MTU de la red debe coincidir con el valor configurado en el
 .. Haga clic en *Guardar*.
 
 
-. Si ha seleccionado *DHCP*, siga estos pasos para configurar la red de cliente:
-+
+--
+.DHCP
+--
+Si ha seleccionado *DHCP*, siga estos pasos para configurar la red de cliente:
+
 .. Después de seleccionar el botón de opción *DHCP*, haga clic en *Guardar*.
 +
 Los campos *Dirección IPv4* y *Puerta de enlace* se rellenan automáticamente. Si el servidor DHCP está configurado para asignar un valor MTU, el campo *MTU* se rellena con ese valor y el campo pasa a ser de sólo lectura.
@@ -251,4 +271,11 @@ CAUTION: El valor de MTU de la red debe coincidir con el valor configurado en el
 
 
 
+--
+.Ninguno
+--
+Seleccione *Ninguno* para habilitar la red del cliente sin especificar una dirección IP.  La red del cliente solo necesita una dirección IP para el acceso directo.  Al habilitar la red de cliente sin una dirección IP, podrá configurar las interfaces VLAN de la red de cliente en StorageGRID.
+
+--
+====
 

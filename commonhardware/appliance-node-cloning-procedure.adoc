@@ -40,9 +40,6 @@ Solo debe clonar un nodo de dispositivo cada vez para mantener el rendimiento de
 +
 La sección Primary Admin Node Connection se reemplaza por la sección Clone target node connection.
 
-+
-image::../media/clone_peer_node_connection_section.png[Clone la sección de conexión del nodo de destino]
-
 . Para *Clone el nodo de destino IP*, introduzca la dirección IP temporal asignada al nodo de destino para que la red la utilice para clonar el tráfico de transferencia de datos y, a continuación, seleccione *Guardar*.
 +
 Normalmente, introduzca la dirección IP para la red de cuadrícula, pero si necesita utilizar una red diferente para clonar tráfico de transferencia de datos, introduzca la dirección IP del nodo de destino en esa red.
@@ -64,9 +61,6 @@ Cuando se activa *Iniciar clonación*, el *estado actual* indica la red StorageG
 . Supervise el progreso de la clonación con el instalador de dispositivos de StorageGRID en el nodo de origen o de destino.
 +
 El instalador de dispositivos StorageGRID en los nodos de origen y destino indica un estado similar.
-
-+
-image::../media/cloning_progress.png[Progreso del clonado]
 
 +
 La página Monitor Cloning ofrece un progreso detallado de cada etapa del proceso de clonación:

@@ -23,9 +23,6 @@ Consulte https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["C
 .Pasos
 . En el instalador del dispositivo StorageGRID, seleccione *Configurar hardware* > *cifrado de nodos*.
 +
-image::../media/fde_monitor_in_maint_mode.png[Configuración de KMS Borrar]
-
-+
 La página cifrado de nodos incluye tres secciones:
 
 +
@@ -49,13 +46,12 @@ CAUTION: Al borrar la configuración de KMS se eliminan los datos del dispositiv
 ** Seleccione *Reiniciar en StorageGRID* para reiniciar el controlador con el nodo que vuelve a unir la cuadrícula. Seleccione esta opción si hizo trabajo en modo de mantenimiento y está listo para devolver el nodo a su funcionamiento normal.
 ** Seleccione *Reiniciar en el modo de mantenimiento* para reiniciar el controlador con el nodo restante en modo de mantenimiento. (Esta opción solo está disponible si la controladora se encuentra en modo de mantenimiento). Seleccione esta opción si hay otras operaciones de mantenimiento que debe realizar en el nodo antes de volver a unir la cuadrícula.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y reincorporarse a la red.  Para confirmar que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 
 +
-El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página *NODES* debe mostrar un estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"]a la izquierda del nombre del nodo) para el nodo del dispositivo, lo que indica que no hay alertas activas y que el nodo está conectado a la cuadrícula.
+... En el Administrador de cuadrícula, seleccione *NODOS*.
+... Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 
-+
-image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
 
 
 
@@ -87,7 +83,7 @@ CAUTION: No borre la configuración de KMS si planea reinstalar un nodo de dispo
 
 * Antes de poder recuperar y volver a instalar un nodo en el que se perdió la configuración de KMS y la clave KMS no se puede recuperar.
 * Antes de devolver cualquier aparato que se haya utilizado anteriormente en su centro.
-* Después de retirar un dispositivo con el cifrado de nodos habilitado.
+* Después de desmantelar un dispositivo que tenía habilitado el cifrado de nodo.
 
 
 
@@ -112,7 +108,7 @@ CAUTION: Si se borra la configuración de KMS, los datos del dispositivo se elim
 . En la parte inferior de la ventana, seleccione *Borrar clave KMS y Eliminar datos*.
 . Si está seguro de que desea borrar la configuración de KMS, escriba `*clear*` En el cuadro de diálogo de advertencia y seleccione *Borrar clave KMS y Eliminar datos*.
 +
-La clave de cifrado KMS y todos los datos se eliminan del nodo y el dispositivo se reinicia. Esto puede tardar hasta 20 minutos.
+La clave de cifrado KMS y todos los datos se eliminan del nodo y el dispositivo se reinicia.  Aparece un cuadro de diálogo mientras se reinicia el dispositivo, lo que puede tardar hasta 20 minutos.
 
 . Abra un explorador e introduzca una de las direcciones IP para la controladora de computación del dispositivo. +
 `*https://_Controller_IP_:8443*`

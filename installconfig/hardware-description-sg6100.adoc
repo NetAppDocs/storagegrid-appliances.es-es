@@ -32,6 +32,7 @@ NOTE: En función de la política de ILM que haya configurado, otros nodos puede
 
 * Totalmente recuperable, mientras está en servicio, de fallos de SSD que no ocasionan un daño extremo al RAID que aloja el volumen raíz del nodo (el sistema operativo StorageGRID).
 * Los datos de objetos se pueden restaurar automáticamente de las copias o de los fragmentos codificados de borrado en otros nodos si varios fallos de SSD causan la pérdida de datos locales.
+* Capacidad para operar como https://docs.netapp.com/us-en/storagegrid/admin/managing-load-balancing.html["Nodo de puerta de enlace con almacenamiento en caché"^] .
 
 
 SG6160 ofrece las siguientes funciones de protección de datos:

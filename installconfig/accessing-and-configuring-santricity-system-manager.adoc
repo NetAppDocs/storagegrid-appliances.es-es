@@ -121,7 +121,7 @@ En el caso de los dispositivos de almacenamiento SG5700 y SG5800, siga los pasos
 --
 .SG6060
 --
-En el dispositivo de almacenamiento SG6060, la seguridad de unidades se puede habilitar automáticamente en las unidades SSD solo si se configuró la gestión de claves antes de instalar el dispositivo de almacenamiento.
+Para el dispositivo de almacenamiento SG6060, la seguridad de la unidad se puede habilitar automáticamente en las unidades SSD solo si la administración de claves se configuró antes de instalar el dispositivo de almacenamiento.
 
 .. Equipe la cabina de almacenamiento con unidades compatibles con la función de seguridad (unidades FDE o FIPS).
 +
@@ -130,7 +130,7 @@ En el dispositivo de almacenamiento SG6060, la seguridad de unidades se puede ha
 *** No se puede agregar una unidad FDE ni utilizarse como reserva en un pool o grupo de volúmenes FIPS.
 
 
-.. Para la bandeja de controladoras E4000, cree una clave de seguridad (una cadena de caracteres compartida por la controladora y las unidades para acceso de lectura y escritura).
+.. Para el estante del controlador E2800, cree una clave de seguridad (una cadena de caracteres que comparten el controlador y las unidades para acceso de lectura y escritura).
 +
 *** Es https://docs.netapp.com/us-en/e-series-santricity/sm-settings/create-internal-security-key.html["cree una clave interna"^] posible desde la memoria persistente de la controladora o usar una clave externa proporcionada por un servidor de gestión de claves.
 *** Para usar una clave externa proporcionada por un servidor de gestión de claves, primero se debe https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html["establezca la autenticación con un servidor de gestión de claves"^] en SANtricity System Manager.
@@ -250,9 +250,6 @@ DHCP es el método predeterminado para asignar una dirección IP al puerto de ge
 
 NOTE: Puede que los valores de DHCP deban tardar varios minutos en aparecer.
 
-+
-image::../media/storage_controller_network_config_ipv4.gif[IPv4 de configuración de red de la controladora de almacenamiento]
-
 . De manera opcional, configurar una dirección IP estática para el puerto de gestión de la controladora de almacenamiento.
 +
 
@@ -262,9 +259,6 @@ NOTE: Debe asignar una IP estática al puerto de gestión o una concesión perma
 .. Seleccione *estático*.
 .. Introduzca la dirección IPv4 mediante la notación CIDR.
 .. Introduzca la pasarela predeterminada.
-+
-image::../media/storage_controller_ipv4_and_def_gateway.gif[Configuración de red de la controladora de almacenamiento IPv4 y puerta de enlace predeterminada]
-
 .. Haga clic en *Guardar*.
 +
 Puede que los cambios se apliquen en unos minutos.

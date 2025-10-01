@@ -22,6 +22,10 @@ Al poner en marcha un dispositivo de servicios como nodo administrador principal
 .Antes de empezar
 * El dispositivo se ha instalado en un rack o armario, conectado a las redes y encendido.
 * Se han configurado los enlaces de red, las direcciones IP y la reasignación de puertos (si fuera necesario) para el dispositivo con el instalador de dispositivos de StorageGRID.
++
+
+NOTE: La compatibilidad con la reasignación de puertos está obsoleta y se eliminará en una versión futura.  Para eliminar los puertos reasignados, consulte https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Eliminar reasignaciones de puertos en dispositivos StorageGRID"^] .
+
 * Usted tiene un portátil de servicio con un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 * Conoce una de las direcciones IP asignadas al dispositivo. Puede usar la dirección IP para cualquier red StorageGRID conectada.
 
@@ -54,9 +58,6 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab
 .. Extraiga el archivo.
 .. En el instalador de dispositivos StorageGRID, seleccione *Avanzado* > *Cargar software StorageGRID*.
 .. Haga clic en *Eliminar* para eliminar el paquete de software actual.
-+
-image::../media/appliance_installer_rmv_current_software.png[Instalador del dispositivo: Eliminar el software actual]
-
 .. Haga clic en *Browse* para ver el paquete de software que descargó y extrajo. Seleccione la `storagegrid-webscale-images-_version_.deb` paquete.
 .. Seleccione *Inicio* para volver a la página de inicio.
 
@@ -67,9 +68,6 @@ image::../media/appliance_installer_rmv_current_software.png[Instalador del disp
 NOTE: Si va a implementar el dispositivo del nodo de administración como destino de clonación de nodos, detenga el proceso de despliegue aquí y continúe con el link:../commonhardware/appliance-node-cloning-procedure.html["procedimiento de clonación de nodos"].
 
 . En la página de inicio del instalador de dispositivos StorageGRID, haga clic en *Iniciar instalación*.
-+
-image::../media/appliance_installer_home_start_installation_enabled_primary_an.png[Instalación del nodo de administración principal del dispositivo]
-
 +
 El estado actual cambia a "'instalación en curso'" y se muestra la página de instalación del monitor.
 
@@ -88,6 +86,10 @@ Cuando se implementa un dispositivo de servicios como nodo de puerta de enlace o
 .Antes de empezar
 * El dispositivo se ha instalado en un rack o armario, conectado a las redes y encendido.
 * Se han configurado los enlaces de red, las direcciones IP y la reasignación de puertos (si fuera necesario) para el dispositivo con el instalador de dispositivos de StorageGRID.
++
+
+NOTE: La compatibilidad con la reasignación de puertos está obsoleta y se eliminará en una versión futura.  Para eliminar los puertos reasignados, consulte https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Eliminar reasignaciones de puertos en dispositivos StorageGRID"^] .
+
 * Se puso en marcha el nodo de administración principal del sistema StorageGRID.
 * Todas las subredes de red de cuadrícula que aparecen en la página Configuración de IP del instalador de dispositivos StorageGRID se definieron en la lista de subredes de redes de cuadrícula del nodo de administración principal.
 * Usted tiene un portátil de servicio con un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
@@ -145,7 +147,7 @@ Detección automática de todos los nodos principales de administración conecta
  a| 
 .. Seleccione la casilla de verificación *Enable Admin Node discovery*.
 .. Espere a que se muestre la lista de direcciones IP detectadas.
-.. Seleccione el nodo de administrador principal para la cuadrícula en la que se pondrá en marcha este nodo de almacenamiento del dispositivo.
+.. Seleccione el nodo de administración principal para la red donde se implementará este dispositivo Gateway o nodo de administración no principal.
 .. Haga clic en *Guardar*.
 .. Espere a que el estado de la conexión para que la nueva dirección IP se prepare.
 
@@ -153,7 +155,7 @@ Detección automática de todos los nodos principales de administración conecta
 |===
 . En el campo *Nombre del nodo*, proporcione el nombre del sistema que desea utilizar para este nodo del dispositivo y haga clic en *Guardar*.
 +
-El nombre que aparece aquí será el nombre del sistema del nodo del dispositivo. Los nombres del sistema son necesarios para las operaciones internas de StorageGRID y no se pueden cambiar.
+El nombre que aparece aquí será el nombre del sistema del nodo del dispositivo.  Los nombres de sistema son necesarios para las operaciones internas de StorageGRID y no se pueden cambiar.  Para cambiar el nombre para mostrar de un nodo de dispositivo, consulte https://docs.netapp.com/us-en/storagegrid/maintain/rename-grid-site-node.html#how-to-rename-grid-sites-or-nodes["Cómo cambiar el nombre de una cuadrícula, sitios o nodos"^] .
 
 . Opcionalmente, para instalar una versión diferente del software StorageGRID, siga estos pasos:
 +
@@ -164,9 +166,6 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab
 .. Extraiga el archivo.
 .. En el instalador de dispositivos StorageGRID, seleccione *Avanzado* > *Cargar software StorageGRID*.
 .. Haga clic en *Eliminar* para eliminar el paquete de software actual.
-+
-image::../media/appliance_installer_rmv_current_software.png[Instalador del dispositivo: Eliminar el software actual]
-
 .. Haga clic en *Browse* para ver el paquete de software que descargó y extrajo. Seleccione la `storagegrid-webscale-images-_version_.deb` paquete.
 .. Seleccione *Inicio* para volver a la página de inicio.
 

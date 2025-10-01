@@ -109,9 +109,6 @@ La alerta no aparecerá la próxima vez que acceda a esta URL.
 +
 Aparece la página de inicio del instalador de dispositivos de StorageGRID. La información y los mensajes que se muestran cuando accede por primera vez a esta página dependen de cómo el dispositivo está conectado actualmente a redes StorageGRID. Pueden aparecer mensajes de error que se resolverán en pasos posteriores.
 
-+
-image::../media/appliance_installer_home_5700_5600.png[Captura de pantalla de la parte superior de la página de inicio del instalador de dispositivos StorageGRID]
-
 
 
 . Si no puede obtener una dirección IP mediante DHCP, puede utilizar una conexión de enlace local.
@@ -205,7 +202,4 @@ Tras acceder al instalador de dispositivos de StorageGRID:
 link:verifying-and-upgrading-storagegrid-appliance-installer-version.html["Comprobar y actualizar la versión de StorageGRID Appliance Installer"]
 
 * Revise los mensajes que se muestran en la página principal del instalador de dispositivos de StorageGRID y configure la configuración del enlace y la configuración IP, según sea necesario.
-+
-image::../media/appliance_installer_home_services_appliance.png[Inicio del instalador del aparato]
-
 

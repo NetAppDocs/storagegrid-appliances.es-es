@@ -118,6 +118,8 @@ Puede clonar un dispositivo de nodo de origen SG100 en un dispositivo de destino
 
 Puede clonar un dispositivo de nodo de origen SG110 en un destino de dispositivo de servicios SG1100 para dar mayor capacidad al nodo de administración o al nodo de pasarela.
 
+No se admite la clonación de nodos desde un dispositivo de nodo de origen SG110 sin cifrado de nodo a un dispositivo de destino SG110 con cifrado de nodo.
+
 
 
 === Información y restricciones de clonación de dispositivos SG1000
@@ -137,6 +139,8 @@ Puede clonar un dispositivo de nodo de origen SG1100 en un dispositivo de destin
 * Clonar el SG1100 a un dispositivo de destino de servicios SG110 le permite volver a poner en marcha el SG1100 para una aplicación más exigente. Por ejemplo, si un dispositivo de nodo de origen SG1100 se está utilizando como nodo de administración y desea utilizarlo como nodo de equilibrio de carga dedicado.
 * Reemplazar un dispositivo de nodo de origen SG1100 por un dispositivo de destino de servicios SG110 reduce la velocidad máxima de los puertos de red de 100 GbE a 25 GbE.
 
+
+No se admite la clonación de nodos desde un dispositivo de nodo de origen SG1100 sin cifrado de nodo a un dispositivo de destino SG1100 con cifrado de nodo.
 
 
 
@@ -173,6 +177,12 @@ Puede clonar correctamente un dispositivo SG5860 como origen o destino con algun
 * Puede clonar un dispositivo de nodo de origen SG6060 sin ninguna bandeja de ampliación a un dispositivo de destino de almacenamiento SG6160 sin bandejas de expansión si los tamaños de las unidades y los modos de RAID son iguales.
 * Un dispositivo de nodo de origen SG6060 con cualquier número de bandejas de expansión _no_ se puede clonar en un dispositivo de destino de almacenamiento SG6160 incluso si el número de bandejas de expansión, tamaños de unidades y modos RAID son iguales.
 
+
+
+
+=== Información y restricciones sobre la clonación del dispositivo SGF6112
+
+No se admite la clonación de nodos desde un dispositivo de nodo de origen SGF6112 sin cifrado de nodo a un dispositivo de destino SGF6112 con cifrado de nodo.
 
 
 

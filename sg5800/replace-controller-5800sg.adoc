@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sustituya el controlador SG5800
+= Reemplazar el controlador StorageGRID SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,7 +19,7 @@ Es posible que deba reemplazar la controladora SG5800 si no funciona de forma ó
 
 
 .Acerca de esta tarea
-No se podrá acceder al nodo de almacenamiento del dispositivo cuando se sustituye la controladora. Si el controlador SG5800 funciona lo suficiente, puede realizar un apagado controlado al inicio de este procedimiento.
+No podrá acceder al nodo de almacenamiento del dispositivo cuando reemplace el controlador.  Si el controlador SG5800 funciona suficientemente, puede realizar un apagado controlado al comienzo de este procedimiento.
 
 
 NOTE: Si va a sustituir la controladora antes de instalar el software StorageGRID, es posible que no pueda acceder al instalador de dispositivos de StorageGRID inmediatamente después de completar este procedimiento. Aunque puede acceder al instalador de dispositivos de StorageGRID desde otros hosts en la misma subred que el dispositivo, no puede acceder a él desde hosts en otras subredes. Esta condición debe resolverse dentro de los 15 minutos (cuando se agota cualquier entrada de caché ARP para el tiempo de espera original de la controladora); asimismo, puede borrar la condición de inmediato mediante la purga manual de todas las entradas antiguas de la caché ARP desde el enrutador o la puerta de enlace local.
@@ -38,23 +38,11 @@ Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para
 
 
 
-.. Apague el controlador SG5800:
+
+
+. Apague el controlador SG5800:
 +
 *`shutdown -h now`*
-
-.. Espere a que se escriban en las unidades todos los datos de la memoria caché.
-+
-El LED verde de caché activa de la parte posterior de la controladora E4000 está encendido cuando los datos almacenados en caché deben escribirse en las unidades. Debe esperar a que se apague este LED.
-
-
-
-. Apague la alimentación.
-+
-.. En la página de inicio de SANtricity System Manager, seleccione Ver operaciones en curso.
-.. Confirmar que se han completado todas las operaciones.
-.. Apague los dos interruptores de alimentación del aparato.
-.. Espere a que se apagen todos los LED.
-
 
 . Si las redes StorageGRID conectadas a la controladora utilizan servidores DHCP:
 +
@@ -62,7 +50,7 @@ El LED verde de caché activa de la parte posterior de la controladora E4000 est
 .. Solicite al administrador de red que actualice la configuración de la dirección IP de la controladora original para reflejar las direcciones MAC de la controladora de reemplazo.
 +
 
-NOTE: Debe asegurarse de que las direcciones IP de la controladora original se hayan actualizado antes de aplicar alimentación a la controladora de reemplazo. De lo contrario, la controladora obtendrá nuevas direcciones IP de DHCP cuando se arranca y es posible que no pueda volver a conectarse a StorageGRID. Este paso se aplica a todas las redes StorageGRID conectadas a la controladora.
+NOTE: Debe asegurarse de que las direcciones IP del controlador original se hayan actualizado antes de insertar el controlador de reemplazo en el dispositivo.  De lo contrario, el controlador obtendrá nuevas direcciones IP DHCP cuando se inicie y es posible que no pueda volver a conectarse a StorageGRID.  Este paso se aplica a todas las redes StorageGRID que están conectadas al controlador.
 
 
 
@@ -90,8 +78,7 @@ NOTE: Utilice siempre dos manos para soportar el peso del controlador.
 .. Sustituya los cables.
 
 
-. Encienda el dispositivo y supervise los LED de la controladora.
-. Confirme que el nodo de almacenamiento del dispositivo aparece en Grid Manager y que no aparece ninguna alarma.
+. Después de que el controlador se reinicie y el dispositivo se vuelva a unir a la red, confirme que el nodo de almacenamiento del dispositivo aparezca en el Administrador de red y que no aparezcan alarmas.
 
 
 Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"] para obtener más información.

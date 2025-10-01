@@ -24,15 +24,13 @@ Algunas de las opciones para cambiar la configuración del enlace Ethernet de la
 
 * Cambiando *modo de enlace de puerto* de fijo a agregado, o de agregado a fijo
 * Cambio del *modo de enlace de red* de Active-Backup a LACP o de LACP a Active-Backup
+* Cambiar los valores de la *política hash de transmisión LACP* y la *tasa de PDU LACP*
 * Habilitar o deshabilitar el etiquetado de VLAN, o cambiar el valor de una etiqueta de VLAN
 * Cambiar la velocidad de enlace a o desde Auto (recomendado), 10 GbE o 25 GbE.
 
 
 .Pasos
 . Seleccione *Configurar red* > *Configuración de enlace* en el menú.
-+
-image::../media/link_configuration_option.gif[Configuración de enlace]
-
 . [[CHANGE_LINK_CONFIGURATION_sg5800, START=2]]Realice los cambios deseados en la configuración del enlace.
 +
 Para obtener más información sobre las opciones, consulte link:../installconfig/configuring-network-links.html["Configure los enlaces de red"].
@@ -53,12 +51,11 @@ Además de todas las pruebas que elija realizar, confirme que puede hacer ping a
 
 . Una vez que esté satisfecho de que los cambios en la configuración del enlace funcionan, reinicie el nodo. En el instalador del dispositivo StorageGRID, seleccione *Avanzado* > *Reiniciar controlador* y, a continuación, seleccione *Reiniciar en StorageGRID*.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Reinicie la controladora en modo de mantenimiento]
+El dispositivo puede tardar hasta 20 minutos en reiniciarse y reincorporarse a la red.  Para confirmar que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 
 +
-El dispositivo puede tardar hasta 20 minutos en reiniciarse y volver a unirse a la cuadrícula. Para confirmar que el reinicio ha finalizado y que el nodo ha vuelto a unirse a la cuadrícula, vuelva a Grid Manager. La página *NODES* debe mostrar un estado normal (icono de marca de verificación verde image:../media/icon_alert_green_checkmark.png["marca de verificación verde"]a la izquierda del nombre del nodo) para el nodo del dispositivo, lo que indica que no hay alertas activas y que el nodo está conectado a la cuadrícula.
+.. En el Administrador de cuadrícula, seleccione *NODOS*.
+.. Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 
-+
-image::../media/nodes_menu.png[El nodo del dispositivo se ha vuelto a unir a la cuadrícula]
 
 

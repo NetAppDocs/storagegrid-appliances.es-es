@@ -31,12 +31,12 @@ Si planea utilizar el modo de enlace de puerto de agregado, el modo de enlace de
 
 
 .Acerca de esta tarea
-Sólo tiene que configurar los ajustes en la página Configuración de vínculos si desea utilizar un valor no predeterminado.
+Solo necesita configurar los ajustes en la página Configuración de enlace si desea utilizar valores distintos a los<<default_values,configuración predeterminada>> .
 
 
-NOTE: La política hash de transmisión de LACP es layer2+3.
+NOTE: Los cambios en la velocidad de PDU de LACP que se realizan siguiendo estas instrucciones permanecen persistentes en el entorno de StorageGRID .  Para realizar cambios temporales en la tasa de PDU de LACP al realizar operaciones de mantenimiento en los componentes de red instalados en su dispositivo, consulte https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html#temporarily-changing-the-lacp-pdu-rate["Cambio temporal de la velocidad de PDU de LACP"^] .
 
-En las figuras y las tablas se resumen las opciones del modo de enlace de puerto y el modo de enlace de red para cada dispositivo. En la siguiente sección, se ofrece más información:
+[[port_config_tables]]Las figuras y tablas resumen las opciones para el modo de enlace de puerto y el modo de enlace de red para cada dispositivo.  Para obtener más información, consulte lo siguiente:
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Modos de enlace de puertos (SG1000 y SG100)"]
 * link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Modos de enlace de puertos (SG1100 y SG110)"]
@@ -85,7 +85,7 @@ La tabla resume las opciones para configurar los cuatro puertos de red. Sólo ti
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -109,11 +109,13 @@ LACP (802,3ad)
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 no se utilizan.
 * Una etiqueta de VLAN es opcional.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Red de cuadrícula.
 
  a| 
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 utilizan un enlace LACP para la red de cliente.
 * Las etiquetas de VLAN se pueden especificar para ambas redes, por conveniencia del administrador de red.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en las secciones Red de cuadrícula y Red de cliente.
 
 
 |===
@@ -146,7 +148,7 @@ La tabla resume las opciones para configurar los cuatro puertos de red. Sólo ti
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -154,10 +156,12 @@ Solo LACP (802.3ad)
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid.
 * Una única etiqueta VLAN identifica los paquetes de red Grid.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid y la red de cliente.
 * Dos etiquetas VLAN permiten que los paquetes de red de cuadrícula se separen de los paquetes de red de cliente.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
 
 |===
@@ -216,7 +220,7 @@ La tabla resume las opciones para configurar los cuatro puertos de red. Sólo ti
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -240,11 +244,13 @@ LACP (802,3ad)
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 no se utilizan.
 * Una etiqueta de VLAN es opcional.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Red de cuadrícula.
 
  a| 
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 utilizan un enlace LACP para la red de cliente.
 * Las etiquetas de VLAN se pueden especificar para ambas redes, por conveniencia del administrador de red.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en las secciones Red de cuadrícula y Red de cliente.
 
 
 |===
@@ -277,7 +283,7 @@ La tabla resume las opciones para configurar los puertos de red. Sólo tiene que
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -285,10 +291,12 @@ Solo LACP (802.3ad)
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid.
 * Una única etiqueta VLAN identifica los paquetes de red Grid.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid y la red de cliente.
 * Dos etiquetas VLAN permiten que los paquetes de red de cuadrícula se separen de los paquetes de red de cliente.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
 
 |===
@@ -341,7 +349,7 @@ La tabla resume las opciones para configurar los cuatro puertos 10/25-GbE. Sólo
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -365,11 +373,13 @@ LACP (802,3ad)
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 no se utilizan.
 * Una etiqueta de VLAN es opcional.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Red de cuadrícula.
 
  a| 
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 utilizan un enlace LACP para la red de cliente.
 * Las etiquetas de VLAN se pueden especificar para ambas redes, por conveniencia del administrador de red.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en las secciones Red de cuadrícula y Red de cliente.
 
 
 |===
@@ -396,7 +406,7 @@ La tabla resume las opciones para configurar los cuatro puertos 10/25-GbE. Sólo
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -404,10 +414,12 @@ Solo LACP (802.3ad)
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid.
 * Una única etiqueta VLAN identifica los paquetes de red Grid.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid y la red de cliente.
 * Dos etiquetas VLAN permiten que los paquetes de red de cuadrícula se separen de los paquetes de red de cliente.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
 
 |===
@@ -454,7 +466,7 @@ La tabla resume las opciones para configurar los cuatro puertos 10/25-GbE. Sólo
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -478,11 +490,13 @@ LACP (802,3ad)
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 no se utilizan.
 * Una etiqueta de VLAN es opcional.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Red de cuadrícula.
 
  a| 
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 utilizan un enlace LACP para la red de cliente.
 * Las etiquetas de VLAN se pueden especificar para ambas redes, por conveniencia del administrador de red.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en las secciones Red de cuadrícula y Red de cliente.
 
 
 |===
@@ -509,7 +523,7 @@ La tabla resume las opciones para configurar los cuatro puertos 10/25-GbE. Sólo
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -517,10 +531,12 @@ Solo LACP (802.3ad)
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid.
 * Una única etiqueta VLAN identifica los paquetes de red Grid.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid y la red de cliente.
 * Dos etiquetas VLAN permiten que los paquetes de red de cuadrícula se separen de los paquetes de red de cliente.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
 
 |===
@@ -559,7 +575,7 @@ La tabla resume las opciones para configurar los puertos de red. Sólo tiene que
 
 [cols="1a,3a,3a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -583,11 +599,13 @@ LACP (802,3ad)
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 no se utilizan.
 * Una etiqueta de VLAN es opcional.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Red de cuadrícula.
 
  a| 
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 utilizan un enlace LACP para la red de cliente.
 * Las etiquetas de VLAN se pueden especificar para ambas redes, por conveniencia del administrador de red.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en las secciones Red de cuadrícula y Red de cliente.
 
 
 |===
@@ -614,7 +632,7 @@ La tabla resume las opciones para configurar los puertos de red. Sólo tiene que
 
 [cols="1a,3a,3a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -622,10 +640,12 @@ Solo LACP (802.3ad)
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid.
 * Una única etiqueta VLAN identifica los paquetes de red Grid.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid y la red de cliente.
 * Dos etiquetas VLAN permiten que los paquetes de red de cuadrícula se separen de los paquetes de red de cliente.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
 
 |===
@@ -678,7 +698,7 @@ La tabla resume las opciones para configurar los puertos de red. Sólo tiene que
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -702,11 +722,13 @@ LACP (802,3ad)
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 no se utilizan.
 * Una etiqueta de VLAN es opcional.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Red de cuadrícula.
 
  a| 
 * Los puertos 2 y 4 utilizan un enlace LACP para la red de grid.
 * Los puertos 1 y 3 utilizan un enlace LACP para la red de cliente.
 * Las etiquetas de VLAN se pueden especificar para ambas redes, por conveniencia del administrador de red.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en las secciones Red de cuadrícula y Red de cliente.
 
 
 |===
@@ -739,7 +761,7 @@ La tabla resume las opciones para configurar los puertos de red. Sólo tiene que
 
 [cols="1a,2a,2a"]
 |===
-| Modo de enlace de red | Red de cliente desactivada (predeterminada) | Red de cliente habilitada 
+| Modo de enlace de red | Red de cliente deshabilitada | Red de cliente habilitada (predeterminado) 
 
 
  a| 
@@ -747,10 +769,12 @@ Solo LACP (802.3ad)
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid.
 * Una única etiqueta VLAN identifica los paquetes de red Grid.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
  a| 
 * Los puertos 1-4 utilizan un enlace LACP único para la red de grid y la red de cliente.
 * Dos etiquetas VLAN permiten que los paquetes de red de cuadrícula se separen de los paquetes de red de cliente.
+* La tasa de PDU de LACP y los valores de la política de hash de transmisión de LACP se pueden especificar en la sección Configuración de enlace.
 
 
 |===
@@ -782,14 +806,20 @@ La página Network Link Configuration muestra un diagrama del dispositivo con lo
 La tabla Estado del enlace muestra el estado del enlace, la velocidad del enlace y otras estadísticas de los puertos numerados.
 
 +
-La primera vez que acceda a esta página:
+
+NOTE: Para el SG5800, el estado del enlace del puerto 1 no está disponible en el software y debe verificarse físicamente utilizando el LED de estado en el controlador SG5800.
+
++
+[[valores_predeterminados]]La primera vez que acceda a esta página, los valores predeterminados son:
 
 +
 ** *Velocidad de enlace* se ajusta en *Auto*.
 ** *El modo de enlace de puerto* está establecido en *fijo*.
+** La *política hash de transmisión LACP* está establecida en *Capa2+3*.
+** La *velocidad PDU LACP* está configurada en *Rápida*.
 ** *El modo de enlace de red* se establece en *Active-Backup* para la red de cuadrícula.
 ** La *Red de administración* está activada y el modo de enlace de red se establece en *independiente*.
-** La *Red cliente* está desactivada.
+** La *Red de clientes* está habilitada.
 
 
 . Seleccione la velocidad de enlace para los puertos de red en la lista desplegable *velocidad de enlace*.
@@ -817,17 +847,9 @@ Ahora se muestra la configuración de la red de cliente para los puertos NIC de 
 
 
 
-. Consulte la tabla y configure el modo de enlace de puerto y el modo de enlace de red.
+. Consulte la<<port_config_tables,Tabla de configuración del modo de enlace de puerto fijo y agregado>> para cada tipo de dispositivo y configure el modo de enlace de puerto y el modo de enlace de red para que coincidan con su configuración de red.
 +
-Este ejemplo muestra:
-
-+
-** *Agregado* y *LACP* seleccionados para la red Grid y las redes cliente. Debe especificar una etiqueta de VLAN exclusiva para cada red. Puede seleccionar valores entre 0 y 4095.
-** *Active-Backup* seleccionado para la red de administración.
-+
-image::../media/sg1000_network_link_configuration_aggregate.png[Agregado de configuración de Network Link]
-
-
+Debe especificar etiquetas VLAN únicas para la red y las redes del cliente.  Puede seleccionar valores entre 0 y 4095.
 
 . Cuando esté satisfecho con sus selecciones, haga clic en *Guardar*.
 +

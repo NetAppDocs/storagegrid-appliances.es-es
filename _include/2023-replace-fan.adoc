@@ -77,7 +77,7 @@ image::../media/fan_removal.png[Extracción del ventilador]
 
 . Deslice el ventilador de repuesto en la ranura abierta del chasis.
 +
-Asegúrese de alinear el conector del ventilador con la toma de la placa de circuitos.
+Alinee el conector del ventilador con el zócalo en la placa de circuito.
 
 . Presione firmemente el conector del ventilador en la placa de circuitos (toma resaltada).
 +

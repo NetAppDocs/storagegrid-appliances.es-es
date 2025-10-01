@@ -29,6 +29,8 @@ Si habilita el cifrado de nodos, los discos del dispositivo pueden protegerse me
 
 Si utiliza ConfigBuilder para generar un archivo JSON, puede habilitar el cifrado de nodos automáticamente. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
 
+Además, cuando habilita el modo FIPS después de habilitar el cifrado de nodo, se utiliza el módulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 para el cifrado de datos en reposo. Referirse a https://review.docs.netapp.com/us-en/storagegrid_storagegrid-120-dev/admin/manage-tls-ssh-policy.html#select-a-security-policy["Seleccione una política de seguridad"^] Para más información.
+
 .Antes de empezar
 Revise la información sobre https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurando KMS"^].
 
@@ -42,7 +44,7 @@ Se puede configurar un KMS en Grid Manager antes o después de instalar el dispo
 
 
 
-CAUTION: Cuando se instala un dispositivo con el cifrado de nodo habilitado, se asigna una clave temporal. Los datos del dispositivo no están protegidos hasta que el dispositivo se conecta al sistema de gestión de claves (KMS) y se establece una clave de seguridad KMS. Consulte la https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html["Descripción general de la configuración del dispositivo KM"^] para obtener información adicional.
+CAUTION: Cuando se instala un dispositivo con el cifrado de nodo habilitado, se asigna una clave temporal.  Los datos del dispositivo no están protegidos hasta que el dispositivo se conecta al Sistema de administración de claves (KMS) y se configura una clave de seguridad KMS.  Consulte la https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html["Descripción general de la configuración del dispositivo KM"^] Para obtener información adicional.
 
 Sin la clave KMS necesaria para descifrar el disco, los datos del dispositivo no se pueden recuperar y se pierden efectivamente. Este es el caso cuando la clave de descifrado no se puede recuperar del KMS. La clave se vuelve inaccesible si un cliente borra la configuración de KMS, caduca una clave KMS, se pierde la conexión con el KMS o se elimina el dispositivo del sistema StorageGRID donde se instalan sus claves KMS.
 
@@ -62,9 +64,6 @@ Aparece la página de inicio del instalador de dispositivos de StorageGRID.
 CAUTION: Después de que el dispositivo se haya cifrado con una clave KMS, los discos del dispositivo no se pueden descifrar sin usar la misma clave KMS.
 
 . Seleccione *Configurar hardware* > *cifrado de nodos*.
-+
-image::../media/kms_fde_enabled.png[KMS FDE habilitado]
-
 . Seleccione *Activar cifrado de nodo*.
 +
 Antes de la instalación del aparato, puede borrar *Habilitar cifrado de nodo* sin riesgo de pérdida de datos. Cuando comienza la instalación, el nodo del dispositivo accede a las claves de cifrado KMS en su sistema StorageGRID e inicia el cifrado del disco. Después de instalar el dispositivo, no se puede deshabilitar el cifrado de nodo.
@@ -104,7 +103,9 @@ Los SED cifrados se bloquean automáticamente cuando se apaga el aparato o cuand
 
 El cifrado de unidades no se aplica a las unidades gestionadas por SANtricity. Si tiene un dispositivo StorageGRID con SED y controladores SANtricity, puede habilitar la seguridad de unidades en link:../installconfig/accessing-and-configuring-santricity-system-manager.html["System Manager de SANtricity"].
 
-Puede habilitar el cifrado de unidades durante la instalación inicial del dispositivo antes de cargar Grid Manager. También puede habilitar el cifrado de nodo o cambiar su clave de acceso si coloca el dispositivo en modo de mantenimiento.
+Cuando habilita el cifrado de unidad para un dispositivo StorageGRID con unidades FIPS, el cifrado FIPS proporcionado por las unidades FIPS se utiliza para el cifrado de datos en reposo.
+
+Puede habilitar el cifrado de la unidad durante la instalación inicial del dispositivo antes de cargar Grid Manager.  También puede habilitar el cifrado de la unidad o cambiar su contraseña colocando el dispositivo en modo de mantenimiento.
 
 .Antes de empezar
 Revise la información sobre https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-encryption-methods.html["Métodos de cifrado de StorageGRID"^].
@@ -121,14 +122,14 @@ CAUTION: Asegúrese de almacenar la clave de acceso de cifrado de unidades en un
 
 . Acceda al instalador de dispositivos de StorageGRID.
 +
-** Durante la instalación inicial del dispositivo, abra un explorador e introduzca una de las direcciones IP para la controladora de computación del dispositivo.
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque el dispositivo en modo de mantenimiento"].
+** Abra un explorador e introduzca una de las direcciones IP de la controladora de computación del dispositivo.
 +
 `*https://_Controller_IP_:8443*`
 
 +
 `_Controller_IP_` Es la dirección IP de la controladora de computación (no la controladora de almacenamiento) en cualquiera de las tres redes StorageGRID.
 
-** Para un dispositivo StorageGRID existente, link:../commonhardware/placing-appliance-into-maintenance-mode.html["ponga el aparato en modo de mantenimiento"].
 
 
 . En la página de inicio del instalador de dispositivos StorageGRID, seleccione *Configurar hardware* > *Cifrado de unidades*.
@@ -169,6 +170,7 @@ Debe introducir la clave de acceso para acceder a una unidad cifrada después de
 
 . Acceda al instalador de dispositivos de StorageGRID.
 +
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque el dispositivo en modo de mantenimiento"].
 ** Abra un explorador e introduzca una de las direcciones IP de la controladora de computación del dispositivo.
 +
 `*https://_Controller_IP_:8443*`
@@ -176,7 +178,6 @@ Debe introducir la clave de acceso para acceder a una unidad cifrada después de
 +
 `_Controller_IP_` Es la dirección IP de la controladora de computación (no la controladora de almacenamiento) en cualquiera de las tres redes StorageGRID.
 
-** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque el dispositivo en modo de mantenimiento"].
 
 
 . En el instalador de dispositivos StorageGRID, seleccione el enlace *Cifrado de unidades* en el banner de advertencia.
@@ -199,6 +200,7 @@ Los banners de advertencia ya no se mostrarán cuando se desbloqueen las unidade
 
 . Acceda al instalador de dispositivos de StorageGRID.
 +
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque el dispositivo en modo de mantenimiento"].
 ** Abra un explorador e introduzca una de las direcciones IP de la controladora de computación del dispositivo.
 +
 `*https://_Controller_IP_:8443*`
@@ -206,7 +208,6 @@ Los banners de advertencia ya no se mostrarán cuando se desbloqueen las unidade
 +
 `_Controller_IP_` Es la dirección IP de la controladora de computación (no la controladora de almacenamiento) en cualquiera de las tres redes StorageGRID.
 
-** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque el dispositivo en modo de mantenimiento"].
 
 
 . En el instalador de dispositivos StorageGRID, seleccione *Configurar hardware* > *Cifrado de unidades*.
@@ -230,6 +231,7 @@ CAUTION: Después de configurar una nueva frase de acceso, las unidades cifradas
 
 . Acceda al instalador de dispositivos de StorageGRID.
 +
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque el dispositivo en modo de mantenimiento"].
 ** Abra un explorador e introduzca una de las direcciones IP de la controladora de computación del dispositivo.
 +
 `*https://_Controller_IP_:8443*`
@@ -237,7 +239,6 @@ CAUTION: Después de configurar una nueva frase de acceso, las unidades cifradas
 +
 `_Controller_IP_` Es la dirección IP de la controladora de computación (no la controladora de almacenamiento) en cualquiera de las tres redes StorageGRID.
 
-** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque el dispositivo en modo de mantenimiento"].
 
 
 . En el instalador de dispositivos StorageGRID, seleccione *Configurar hardware* > *Cifrado de unidades*.

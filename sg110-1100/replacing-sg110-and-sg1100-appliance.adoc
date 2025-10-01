@@ -86,7 +86,7 @@ Siga las instrucciones de mantenimiento suministradas para volver a instalar los
 
 +
 
-CAUTION: Si desea conservar los datos en las unidades, asegúrese de insertar las unidades SSD en las mismas ranuras de la unidad que ocupaban en el dispositivo con error. Si no lo hace, el instalador de dispositivos mostrará un mensaje de advertencia y deberá colocar las unidades en las ranuras correctas y reiniciar el dispositivo para que el dispositivo pueda volver a unirse a la cuadrícula.
+CAUTION: Si desea conservar los datos en las unidades, inserte las unidades SSD en las mismas ranuras que ocupaban en el dispositivo fallido.  Si no lo hace, el instalador del dispositivo mostrará una advertencia y tendrá que colocar las unidades en las ranuras correctas y reiniciar el dispositivo antes de que este pueda volver a unirse a la red.
 
 .. link:reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html["Instale el dispositivo de reemplazo en el armario o rack"].
 .. Reemplace los cables y cualquier transceptor óptico.

@@ -20,8 +20,11 @@ entries:
     - title: Actualice el sistema operativo SANtricity en la controladora E2800 mediante
         modo de mantenimiento
       url: "/sg5700/upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html"
-  - title: Actualizar el firmware de la unidad mediante System Manager de SANtricity
+  - title: Actualizar el firmware de la unidad
     entries:
+    - title: Actualice el firmware de la unidad SG5700 automáticamente durante el
+        reinicio del dispositivo
+      url: "/sg5700/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Actualice el firmware de la unidad mediante SANtricity System Manager
         mediante un método en línea
       url: "/sg5700/upgrading-drive-firmware-using-santricity-system-manager-online.html"
