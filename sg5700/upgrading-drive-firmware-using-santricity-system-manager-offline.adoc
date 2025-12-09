@@ -11,7 +11,7 @@ summary: El firmware de la unidad se actualiza para asegurarse de tener todas la
 
 
 [role="lead"]
-Use el método en línea de SANtricity System Manager para actualizar el firmware en las unidades del dispositivo con el fin de asegurarse de contar con todas las funciones y correcciones de errores más recientes.
+Use el método SANtricity System Manager sin conexión para actualizar el firmware en las unidades del dispositivo con el fin de asegurarse de contar con todas las funciones y correcciones de errores más recientes.
 
 .Antes de empezar
 * El dispositivo de almacenamiento tiene el estado Optimal.

@@ -296,7 +296,7 @@ Ventilador (1 de 2) para la bandeja de controladoras E4000
  a| 
 4
  a| 
-La controladora de almacenamiento E400 E-Series (1 de 2) y los conectores
+Controlador de almacenamiento E-Series E4000 (1 de 2) y conectores
 
 
 
