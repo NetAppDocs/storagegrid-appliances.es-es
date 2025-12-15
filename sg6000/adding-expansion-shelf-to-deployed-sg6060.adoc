@@ -16,7 +16,7 @@ Para aumentar la capacidad de almacenamiento, puede añadir una o dos bandejas d
 .Antes de empezar
 * Debe tener la clave de acceso de aprovisionamiento.
 * Debe ejecutar StorageGRID 11.4 o una versión posterior.
-* Tiene la bandeja de ampliación y dos cables SAS por cada bandeja de ampliación.
+* Tiene el estante de expansión y cuatro cables SAS para cada estante de expansión.
 * Ha localizado físicamente el dispositivo de almacenamiento en el que va a añadir la bandeja de ampliación en el centro de datos.
 +
 link:locating-controller-in-data-center.html["Ubique la controladora en el centro de datos"]

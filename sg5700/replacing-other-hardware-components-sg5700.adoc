@@ -35,14 +35,14 @@ Para sustituir una unidad, un contenedor de alimentación/ventilador, un contene
  a| 
 Unidad
  a| 
-Reemplazar una unidad en bandejas de 12 o 24 unidades E2800
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-12-24-supertask-task.html["Reemplazar una unidad en bandejas de 12 o 24 unidades E2800"^]
 
 
 
  a| 
 Contenedor de alimentación/ventilador
  a| 
-Reemplazar un contenedor de alimentación-ventilador en bandejas E2800
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supertask-task.html["Reemplazar un contenedor de alimentación-ventilador en bandejas E2800"^]
 
 |===
 
@@ -57,27 +57,27 @@ Reemplazar un contenedor de alimentación-ventilador en bandejas E2800
  a| 
 Unidad
  a| 
-Reemplazar una unidad en bandejas E2860
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-12-24-supertask-task.html["Reemplazar una unidad en bandejas E2860"^]
 
 
 
  a| 
 Contenedor de alimentación
  a| 
-Reemplazar un contenedor de alimentación en bandejas E2860
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-60-replace-power-task.html["Reemplazar un contenedor de alimentación en bandejas E2860"^]
 
 
 
  a| 
 Contenedor de ventilador
  a| 
-Reemplazar un contenedor de ventiladores en bandejas E2860
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supertask-task.html["Reemplazar un contenedor de ventiladores en bandejas E2860"^]
 
 
 
  a| 
 Cajón de unidades
  a| 
-Reemplazar un cajón de unidades en bandejas E2860
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-60-supertask-task.html["Reemplazar un cajón de unidades en bandejas E2860"^]
 
 |===
