@@ -1,0 +1,106 @@
+---
+permalink: sg5800/replace-cmos-battery-sg5800.html 
+sidebar: sidebar 
+keywords: cmos, battery, replace, sg5800, controller 
+summary: Puede que necesites reemplazar la batería CMOS en el controlador SG5800 para que los servicios y aplicaciones de tu sistema tengan una sincronización horaria precisa y sigan funcionando con normalidad. 
+---
+= Reemplazar batería CMOS en el controlador SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede que necesites reemplazar la batería CMOS en el controlador SG5800 para que los servicios y aplicaciones de tu sistema tengan una sincronización horaria precisa y sigan funcionando con normalidad.
+
+.Acerca de esta tarea
+No podrás acceder al Storage Node del appliance cuando reemplaces la batería CMOS. Para evitar interrupciones del servicio, confirma que todos los demás Storage Nodes están conectados a la grid antes de empezar el reemplazo de la batería CMOS o reemplaza la batería durante una ventana de mantenimiento programada cuando los periodos de interrupción del servicio sean aceptables.
+
+
+
+== Paso 1: apaga el controlador SG5800
+
+.Pasos
+. Inicie sesión en el nodo de grid:
++
+.. Introduzca el siguiente comando: `ssh admin@grid_node_IP`
+.. Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+.. Introduzca el siguiente comando para cambiar a la raíz: `su -`
+.. Introduzca la contraseña que aparece en `Passwords.txt` archivo.
++
+Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para `#`.
+
+
+
+. Apague el controlador SG5800:
++
+*`shutdown -h now`*
+
+
+
+
+
+== Paso 2: quita el controlador del aparato
+
+.Pasos
+. Coloque una muñequera ESD o tome otras precauciones antiestáticas.
+. Etiquete los cables y desconecte los cables y SFP.
++
+
+NOTE: Para evitar el rendimiento degradado, no retuerzas, dobles, pellizques ni pises los cables.
+
+. Suelte el controlador del aparato apretando el pestillo del asa de la leva hasta que se suelte y, a continuación, abra el asa de leva a la derecha.
+. Con dos manos y el mango de la leva, deslice el controlador para sacarlo del aparato.
++
+
+NOTE: Utilice siempre dos manos para soportar el peso del controlador.
+
+. Dale la vuelta al módulo controlador y colócalo sobre una superficie plana y estable.
+. Abre la tapa presionando los botones azules en los lados del módulo controlador y luego gira la tapa hacia arriba y quítala del módulo controlador.
++
+image::../media/drw_sg5800_open_controller_module_cover_IEOPS-695.svg[Abre la cubierta del módulo controlador SG5800]
+
+
+
+
+
+== Paso 3: reemplaza la batería CMOS
+
+.Pasos
+. Ubica la batería CMOS.
++
+image::../media/drw_sg5800_replace_rtc_battery_IEOPS-701.svg[Reemplaza la ubicación de la batería CMOS en el controlador SG5800]
+
++
+
+NOTE: Es posible que tu controlador tenga un aspecto diferente al que se muestra en la ilustración. Sin embargo, la ubicación de la batería CMOS es la misma.
+
+. Empuja y gira suavemente la batería para separarla del soporte y luego sáquela del aparato.
++
+
+NOTE: Observa la polaridad de la batería al sacarla del soporte. La batería está marcada con un signo más y debe colocarse en el soporte correctamente. Un signo más cerca del soporte te indica cómo debe colocarse la batería.
+
+. Saca la batería de repuesto de la bolsa antiestática de envío.
+. Ubica el portabaterías vacío en el módulo del controlador.
+. Observa la polaridad de la batería CMOS y luego insértala en el soporte inclinando la batería en un ángulo y presionando hacia abajo.
+. Inspecciona visualmente la batería para asegurarte de que está completamente instalada en el soporte y que la polaridad es correcta.
+. Vuelve a instalar la cubierta del controlador.
+
+
+
+
+== Paso 4: vuelve a instalar el controlador en el aparato
+
+.Pasos
+. Instala el controlador en el aparato:
++
+.. Dale la vuelta al mando para que la tapa extraíble quede hacia abajo.
+.. Con el mango de la leva en la posición abierta, deslice el controlador completamente en el aparato.
+.. Mueva la palanca de leva hacia la izquierda para bloquear el controlador en su sitio.
+.. Vuelve a conectar los cables.
+
+
+. Después de que el controlador se reinicie y el dispositivo se vuelva a unir a la red, confirme que el nodo de almacenamiento del dispositivo aparezca en el Administrador de red y que no aparezcan alarmas.
+
+
+Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"] para obtener más información.
