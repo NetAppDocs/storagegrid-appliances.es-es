@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sg100, sg1000 
 summary: Si no está seguro de qué componente de hardware debe sustituir en el dispositivo, complete este procedimiento para identificar el componente y la ubicación del dispositivo en el centro de datos. 
 ---
-= Verifique el componente para reemplazar en SG100 o SG1000
+= Verifica el componente a sustituir en el SG100 o SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,12 +14,12 @@ summary: Si no está seguro de qué componente de hardware debe sustituir en el 
 Si no está seguro de qué componente de hardware debe sustituir en el dispositivo, complete este procedimiento para identificar el componente y la ubicación del dispositivo en el centro de datos.
 
 .Antes de empezar
-* Tiene el número de serie del dispositivo de almacenamiento donde se tiene que reemplazar el componente.
+* Tienes el número de serie del appliance donde se debe reemplazar el componente.
 * Ha iniciado sesión en Grid Manager mediante una https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 
 
 .Acerca de esta tarea
-Utilice este procedimiento para identificar el dispositivo con hardware defectuoso y cuáles de los componentes de hardware reemplazables no funcionan correctamente. Los componentes que se pueden identificar para el reemplazo pueden incluir:
+Usa este procedimiento para identificar el dispositivo con hardware defectuoso y cuál de los componentes de hardware reemplazables no está funcionando correctamente. Los componentes que podrían identificarse para reemplazo pueden incluir:
 
 * Fuentes de alimentación
 * Ventiladores
@@ -48,14 +48,14 @@ image::../media/nic-alert-sgf6112.png[Alerta con ID de componente]
 
 . Identifique el chasis con el componente que se debe reemplazar.
 +
-.. En Grid Manager, seleccione *NODES*.
-.. En la tabla de la página Nodes, seleccione el nombre del nodo de almacenamiento del dispositivo con el componente con errores.
+.. Desde el Grid Manager, selecciona *Nodes*.
+.. En la tabla de la página Nodos, selecciona el nombre del dispositivo StorageGRID con el componente que ha fallado.
 .. Seleccione la ficha *hardware*.
 +
 Compruebe el *Número de serie del controlador de cómputo* en la sección del dispositivo StorageGRID. Compruebe si el número de serie coincide con el número de serie del dispositivo de almacenamiento en el que va a sustituir el componente. Si el número de serie coincide, ha encontrado el aparato correcto.
 
 +
-*** Si la sección StorageGRID Appliance en Grid Manager no se muestra, el nodo seleccionado no es un dispositivo StorageGRID. Seleccione un nodo diferente en la vista de árbol.
+*** Si no aparece la sección StorageGRID Appliance en Grid Manager, el nodo seleccionado no es un dispositivo StorageGRID. Selecciona un nodo diferente en la vista de árbol.
 *** Si los números de serie no coinciden, seleccione un nodo diferente en la vista de árbol.
 
 

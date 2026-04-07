@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, power supply, remove, removing, removal, install, installing, installation 
 summary: El controlador SG6000-CN tiene dos fuentes de alimentación para redundancia. Si uno de los suministros de alimentación falla, debe reemplazarla por Lo antes posible. para garantizar que la controladora de computación tenga alimentación redundante. 
 ---
-= Sustituya la fuente de alimentación del controlador SG6000-CN
+= Sustituir una fuente de alimentación en un controlador SG6000-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, appliance node cloning, appliance node clone 
 summary: Puede clonar un nodo de dispositivo en StorageGRID para usar un dispositivo de diseño más reciente o más capacidades. La clonación transfiere toda la información sobre el nodo existente al nuevo dispositivo, proporciona un proceso de actualización de hardware fácil de llevar a cabo y ofrece una alternativa al decomisionado y la expansión para reemplazar dispositivos. 
 ---
-= Clonación de nodos del dispositivo: Información general
+= Cómo funciona la clonación de nodos de dispositivos StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -87,6 +87,7 @@ Revise las consideraciones generales de clonación e información específica de
 +
 ** Si el dispositivo de almacenamiento objetivo tiene la misma cantidad de unidades que el nodo de origen, las unidades del dispositivo objetivo deben tener mayor capacidad (en TB).
 ** Si tiene previsto utilizar el mismo modo RAID en el nodo de destino que se utilizó en el nodo de origen, O un modo RAID menos eficiente del almacenamiento (por ejemplo, cambiar de RAID 6 a DDP), las unidades del dispositivo de destino deben ser mayores (en TB) que las unidades del dispositivo de origen.
+** El número de volúmenes en un dispositivo de almacenamiento de destino debe ser mayor o igual que el número de volúmenes en el nodo de origen. El SGF6112 tiene 12 volúmenes, y el SGF6212 tiene 13 volúmenes. Todos los demás dispositivos de almacenamiento tienen 16 volúmenes.
 ** Algunas excepciones a las consideraciones de clonación en dispositivos de almacenamiento generales son:
 +
 *** Si la cantidad de unidades estándar instaladas en un dispositivo de almacenamiento de destino es menor que la cantidad de unidades en el nodo de origen, debido a la instalación de unidades de estado sólido (SSD), la capacidad de almacenamiento general de las unidades estándar en el dispositivo de destino (en TB). Debe superar la capacidad total de la unidad funcional de todas las unidades en el nodo de almacenamiento de origen.
@@ -97,9 +98,9 @@ Por ejemplo, al clonar un dispositivo con nodos de almacenamiento de origen de S
 Sin embargo, si un dispositivo de nodo de origen SG5760 de 60 unidades está configurado con SANtricity Dynamic Disk Pools DDP-8 (DDP), configurar un dispositivo de destino SG6060 de 58 unidades del mismo tamaño con DDP-16 podría convertir al dispositivo SG6060 en un destino clonado válido debido a la eficiencia del almacenamiento mejorada.
 
 +
-Puede ver información acerca del modo RAID actual del nodo del dispositivo de origen en la página *NODES* de Grid Manager. Seleccione la ficha *almacenamiento* del dispositivo.
+Puedes ver información sobre el modo RAID actual del nodo del dispositivo de origen en la página *Nodos* de Grid Manager. Selecciona la pestaña *Almacenamiento* del dispositivo.
 
-*** La cantidad de volúmenes en un dispositivo de almacenamiento de destino debe ser mayor o igual que la cantidad de volúmenes en el nodo de origen. No se puede clonar un nodo de origen con volúmenes de almacenamiento de objetos 16 (rangedb) en un dispositivo de almacenamiento de destino con volúmenes de almacenamiento de objetos 12, incluso si el dispositivo de destino tiene más capacidad que el nodo de origen. La mayoría de los dispositivos de almacenamiento tienen volúmenes de almacenamiento de objetos de 16 TB, excepto el dispositivo de almacenamiento SGF6112 que solo tiene 12 volúmenes de almacenamiento de objetos.
+*** No puedes clonar un nodo de origen con 16 volúmenes de almacén de objetos (rangedb) a un dispositivo de almacenamiento de destino con menos volúmenes de almacén de objetos, incluso si el dispositivo de destino tiene mayor capacidad que el nodo de origen.
 
 
 
@@ -119,6 +120,14 @@ Puede clonar un dispositivo de nodo de origen SG100 en un dispositivo de destino
 Puede clonar un dispositivo de nodo de origen SG110 en un destino de dispositivo de servicios SG1100 para dar mayor capacidad al nodo de administración o al nodo de pasarela.
 
 No se admite la clonación de nodos desde un dispositivo de nodo de origen SG110 sin cifrado de nodo a un dispositivo de destino SG110 con cifrado de nodo.
+
+
+
+=== Información y restricciones de la clonación de la appliance SG120
+
+Puedes clonar un dispositivo de nodo de origen SG120 en un dispositivo de destino de servicios SG1200 para darle al nodo de administración o al nodo de puerta de enlace mayor capacidad.
+
+No se admite la clonación de nodos desde un appliance de nodo SG120 de origen sin cifrado de nodo a un appliance SG120 de destino con cifrado de nodo.
 
 
 
@@ -144,6 +153,18 @@ No se admite la clonación de nodos desde un dispositivo de nodo de origen SG110
 
 
 
+=== Información y restricciones de la clonación del appliance SG1200
+
+Puedes clonar un dispositivo de nodo de origen SG1200 en un dispositivo de destino de servicios SG120.
+
+* La clonación del SG1200 en un dispositivo de destino de servicios SG120 te permite volver a desplegar el SG1200 para una aplicación más exigente. Por ejemplo, si un dispositivo de nodo de origen SG1200 se está utilizando como Admin Node y quieres usarlo como un nodo dedicado de equilibrio de carga.
+* La sustitución de un dispositivo de nodo de origen SG1200 por un dispositivo de destino de servicios SG120 reduce la velocidad máxima de los puertos de red de 100-GbE a 25-GbE.
+
+
+No se admite la clonación de nodos desde un appliance de nodo SG1200 de origen sin cifrado de nodo a un appliance SG1200 de destino con cifrado de nodo.
+
+
+
 === Información y restricciones de clonación de dispositivos SG5712
 
 Puede clonar un dispositivo de nodo de origen SG5712 configurado con DDP en un dispositivo de destino de almacenamiento SG5812.
@@ -154,7 +175,7 @@ Puede clonar un dispositivo de nodo de origen SG5712 configurado con DDP en un d
 
 * Puede clonar un dispositivo de nodo de origen SG5760 configurado con DDP16 a un dispositivo de destino de almacenamiento SG5860 configurado con DDP16.
 * Un dispositivo de nodo de origen SG5760 configurado con DDP _no puede_ clonarse en un dispositivo de destino de almacenamiento SG5860 configurado con DDP.
-* Un dispositivo de nodo de origen SG5760 configurado con DDP o DDP-16 _no se puede clonar en un dispositivo de destino de almacenamiento SG6160 con un modo RAID coincidente.
+* Un dispositivo de nodo de origen SG5760 configurado con DDP o DDP-16 _no_ puede clonarse en un dispositivo de destino de almacenamiento SG6160 o SG6260 con un modo RAID coincidente.
 
 
 
@@ -174,18 +195,18 @@ Puede clonar correctamente un dispositivo SG5860 como origen o destino con algun
 === Información y restricciones de clonación de dispositivos SG6060
 
 * Puede clonar un dispositivo de nodo de origen SG6060 configurado con DDP o DDP16 en un dispositivo de destino de almacenamiento SG5860 con un modo RAID coincidente.
-* Puede clonar un dispositivo de nodo de origen SG6060 sin ninguna bandeja de ampliación a un dispositivo de destino de almacenamiento SG6160 sin bandejas de expansión si los tamaños de las unidades y los modos de RAID son iguales.
-* Un dispositivo de nodo de origen SG6060 con cualquier número de bandejas de expansión _no_ se puede clonar en un dispositivo de destino de almacenamiento SG6160 incluso si el número de bandejas de expansión, tamaños de unidades y modos RAID son iguales.
+* Puedes clonar un dispositivo de nodo de origen SG6060 sin ninguna bandeja de expansión a un dispositivo de almacenamiento de destino SG6160 o SG6260 sin ninguna bandeja de expansión si los tamaños de las unidades y los modos RAID son los mismos.
+* Un dispositivo de nodo de origen SG6060 con cualquier número de bandejas de expansión _no_ puede clonarse en un dispositivo de destino de almacenamiento SG6160 o SG6260 aunque el número de bandejas de expansión, los tamaños de unidad y los modos RAID sean los mismos.
 
 
 
 
 === Información y restricciones sobre la clonación del dispositivo SGF6112
 
-No se admite la clonación de nodos desde un dispositivo de nodo de origen SGF6112 sin cifrado de nodo a un dispositivo de destino SGF6112 con cifrado de nodo.
+No se admite la clonación de nodos desde un appliance de nodo de origen SGF6112 sin cifrado de nodo a un appliance de destino SGF6112 o SGF6212 con cifrado de nodo.
 
 
 
-=== Información y restricciones de clonación de dispositivos SG6160
+=== Información y restricciones de la clonación de las appliances SG6160 y SG6260
 
 Puede clonar correctamente un dispositivo SG6160 como origen o destino con algunas restricciones (que se enumeran en la información de clonación del dispositivo y restricciones para cada fuente).

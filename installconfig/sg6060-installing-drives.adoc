@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, drives, drive, disk, disks, install, installing, installation 
 summary: Después de instalar la bandeja de 60 unidades en un armario o rack, instale todas las unidades 60 en la bandeja. El envío para la bandeja de controladoras E2860 incluye dos unidades SSD, que debe instalarse en el cajón superior de la bandeja de controladoras. Cada bandeja de expansión opcional incluye 60 unidades de disco duro y sin unidades SSD. 
 ---
-= Instalar las unidades (SG6060)
+= Instala las unidades en las bandejas de unidades del SG6060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, SGF6112, storage node, storage appliance, Replacing, replace, CMOS, battery, sg6160 
 summary: Utilice este procedimiento para sustituir la batería de botón CMOS de la placa del sistema. 
 ---
-= Reemplace la batería CMOS SGF6112 o SG6100-CN
+= Reemplaza una batería CMOS en un SGF6112 o SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
 summary: Instale un conjunto de rieles para la bandeja de controladoras E2860 en el armario o rack y, a continuación, deslice la bandeja de controladoras sobre los rieles. Si va a instalar bandejas de expansión de 60 unidades, aplica el mismo procedimiento. 
 ---
-= Instalación de las bandejas de 60 unidades (SG6060)
+= Instala las bandejas de 60 unidades para un SG6060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

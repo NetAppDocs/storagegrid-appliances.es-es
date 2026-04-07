@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sg5800, sg5812, sg5860, storage appliance 
 summary: 'El dispositivo SG5800 StorageGRID es una plataforma integrada de almacenamiento y computación que funciona como un nodo de almacenamiento en un grid de StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales \(basados en software\).' 
 ---
-= Dispositivos SG5800: Información general
+= Dispositivos StorageGRID SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

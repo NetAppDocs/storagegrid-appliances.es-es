@@ -1,0 +1,46 @@
+---
+permalink: installconfig/installing-hardware-sg6200.html 
+sidebar: sidebar 
+keywords: install, sg6200, sg6212, expansion shelf, cabinet, rack, drives 
+summary: Para el SG6260 y el SGF6212, instalas los raíles en tu armario o bastidor y deslizas el estante del controlador, cualquier estante de expansión y el controlador informático sobre los raíles. 
+---
+= Instala el SG6200 en un armario o rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para el SG6260 y el SGF6212, instalas los raíles en tu armario o bastidor y deslizas el estante del controlador, cualquier estante de expansión y el controlador informático sobre los raíles.
+
+[cols="1a,2a,2a"]
+|===
+| Modelo | Instale | Para obtener más información 
+
+
+ a| 
+SG6260
+ a| 
+bandeja de controladoras de 60 unidades y cualquier bandeja de expansión de 60 unidades
+ a| 
+link:sg6260-installing-60-drive-shelves-into-cabinet-or-rack.html["Instale las bandejas de 60 unidades"]
+
+
+
+ a| 
+SG6212
+ a| 
+bandeja de dispositivos de 12 unidades
+ a| 
+link:installing-appliance-in-cabinet-or-rack-sgf6212.html["Instale las bandejas de 12 unidades"]
+
+
+
+ a| 
+SG6260
+ a| 
+Controlador informático SG6200-CN
+ a| 
+link:sg6200-cn-installing-into-cabinet-or-rack.html["Instalar controlador SG6200-CN"]
+
+|===

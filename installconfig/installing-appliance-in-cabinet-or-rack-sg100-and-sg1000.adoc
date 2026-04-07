@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, installing, installation, cabinet, rack, rail, rails 
 summary: Instala un conjunto de rieles para el dispositivo en el armario o rack y, a continuación, desliza el dispositivo sobre los rieles. 
 ---
-= Instale en el armario o rack (SG100 y SG1000)
+= Instala el SG100 o SG1000 en un armario o rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

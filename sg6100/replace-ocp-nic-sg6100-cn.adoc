@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, Replacing, replace, NIC, network interface card 
 summary: 'Es posible que deba reemplazar una tarjeta de interfaz de red \(NIC\) en el SG6100-CN si no funciona de forma óptima o si ha fallado.' 
 ---
-= Sustituya la NIC externa en el SG6100-CN
+= Reemplaza una NIC externa en un SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -68,4 +68,4 @@ CAUTION: El intercambio en caliente es *not* compatible para este procedimiento.
 .Después de terminar
 Si no tiene que realizar ningún otro procedimiento de mantenimiento en el dispositivo, devuelva el dispositivo al rack si se ha extraído, conecte los cables y aplique alimentación.
 
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

@@ -1,0 +1,76 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Localice el ventilador que debe reemplazar.
++
+Los siete ventiladores se encuentran en las siguientes posiciones en el chasis (se muestra la mitad frontal del dispositivo StorageGRID con la cubierta superior retirada):
+
++
+image::../media/drw_fan_position_ieops-2614.svg[Posiciones de los ventiladores en el chasis del dispositivo StorageGRID]
+
++
+|===
+| Posición del chasis | Unidad de ventilador 
+
+
+ a| 
+1
+ a| 
+Ventilador_SYS0
+
+
+
+ a| 
+2
+ a| 
+Ventilador_SYS1
+
+
+
+ a| 
+3
+ a| 
+Ventilador_SYS2
+
+
+
+ a| 
+4
+ a| 
+Ventilador_SYS3
+
+
+
+ a| 
+5
+ a| 
+Ventilador_SYS4
+
+
+
+ a| 
+6
+ a| 
+Ventilador_SYS5
+
+
+
+ a| 
+7
+ a| 
+Ventilador_SYS6
+
+|===
+. Utilice las pestañas azules del ventilador para extraer el ventilador que ha fallado del chasis.
++
+image:../media/drw_s2025_fan_replace_ieops-2552.svg["Extracción de un ventilador del chasis"]
+
+. Deslice el ventilador de repuesto en la ranura abierta del chasis.
++
+Alinee el conector del ventilador con el zócalo en la placa de circuito.
+
+. Presione firmemente el conector del ventilador en la placa de circuitos.
+

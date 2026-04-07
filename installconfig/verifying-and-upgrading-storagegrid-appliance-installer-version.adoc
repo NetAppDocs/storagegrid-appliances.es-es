@@ -13,13 +13,13 @@ summary: La versión de instalador del dispositivo StorageGRID en el dispositivo
 [role="lead"]
 La versión de instalador del dispositivo StorageGRID en el dispositivo debe coincidir con la versión de software instalada en el sistema StorageGRID para garantizar que todas las funciones de StorageGRID sean compatibles.
 
-.Antes de empezar
-Ha accedido al instalador de dispositivos de StorageGRID.
-
 .Acerca de esta tarea
 Los dispositivos StorageGRID vienen de fábrica preinstalados con el instalador de dispositivos StorageGRID. Si va a añadir un dispositivo a un sistema StorageGRID actualizado recientemente, es posible que deba actualizar manualmente el instalador de dispositivos StorageGRID antes de instalar el dispositivo como un nodo nuevo.
 
 El instalador de dispositivos de StorageGRID se actualiza automáticamente cuando se actualiza a una nueva versión de StorageGRID. No es necesario que actualice el instalador de dispositivos StorageGRID en los nodos de dispositivos instalados. Este procedimiento sólo es necesario cuando se instala un dispositivo que contiene una versión anterior del instalador de dispositivos de StorageGRID.
+
+.Antes de empezar
+Ha accedido al instalador de dispositivos de StorageGRID.
 
 .Pasos
 . En el instalador del dispositivo StorageGRID, seleccione *Avanzado* > *Actualizar firmware*.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, registering, registration, support 
 summary: El registro del hardware del dispositivo proporciona ventajas de asistencia. 
 ---
-= Registre el hardware
+= Registrar el hardware del dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

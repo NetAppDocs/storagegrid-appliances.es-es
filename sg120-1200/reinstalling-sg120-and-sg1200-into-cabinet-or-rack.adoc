@@ -1,0 +1,80 @@
+---
+permalink: sg120-1200/reinstalling-sg120-and-sg1200-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, admin node, admin appliance, install, installing, installation, cabinet, rack 
+summary: Retira el SG120 o SG1200 de un armario o rack para acceder a la cubierta superior o para mover el appliance a una ubicación diferente, y luego vuelve a instalar el appliance en un armario o rack cuando el mantenimiento de hardware esté completo. 
+---
+= Reubicar SG120 y SG1200 en armario o rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retira el SG120 o SG1200 de un armario o rack para acceder a la cubierta superior o para mover el appliance a una ubicación diferente, y luego vuelve a instalar el appliance en un armario o rack cuando el mantenimiento de hardware esté completo.
+
+.Antes de empezar
+* Tienes etiquetas para identificar cada cable que está conectado al SG120 o SG1200.
+* Tienes link:locating-sg120-and-sg1200-in-data-center.html["ubicado físicamente el SG120 o SG1200"] donde estás realizando el mantenimiento en el centro de datos.
+* Tienes link:power-sg120-and-sg1200-off-on.html#shut-down-the-sg120-or-sg1200-appliance["apagar el SG120 o SG1200"].
++
+
+CAUTION: No apague el aparato con el interruptor de alimentación.
+
+
+
+
+
+== Paso 1: Retirar el SG120 o SG1200 del armario o rack
+
+.Pasos
+. Etiquete y desconecte los cables de alimentación del aparato.
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Etiqueta y luego desconecta los cables de datos del dispositivo y cualquier transceptor SFP+, SFP28 o SFP56.
++
+
+IMPORTANT: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+. Afloje los dos tornillos cautivos del panel frontal del aparato.
++
+image::../media/sg120_sg1200_rack_retaining_screws.png[Tornillos de sujeción del bastidor SG120 o SG1200]
+
+. Desliza el SG120 o SG1200 hacia delante fuera del rack hasta que los raíles de montaje estén completamente extendidos y escuches que los pestillos de ambos lados hacen clic.
++
+Se puede acceder a la cubierta superior del aparato.
+
++
+
+NOTE: Si vas a retirar completamente el aparato del armario o bastidor, sigue las instrucciones del kit de raíles para retirar el aparato de los raíles.
+
+
+
+
+
+== Paso 2: Reinstalar SG120 o SG1200 en el armario o rack
+
+.Pasos
+. Presiona al mismo tiempo los desbloqueadores azules de ambos raíles del rack y desliza el SG120 o SG1200 en el rack hasta que quede totalmente asentado.
++
+Cuando ya no pueda mover la controladora, tire de los pestillos azules de ambos lados del chasis para deslizar la controladora completamente hacia dentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG120 o SG1200 deslizante sobre raíles]
+
++
+
+NOTE: No conecte el panel frontal hasta que haya encendido la controladora.
+
+. Apriete los tornillos cautivos del panel frontal del controlador para fijar el controlador en el rack.
++
+image::../media/sg120_sg1200_rack_retaining_screws.png[Tornillos de sujeción del bastidor SG120 o SG1200]
+
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. link:../installconfig/cabling-appliance.html["Vuelve a conectar los cables de datos del controlador y cualquier transceptor SFP"].
++
+
+IMPORTANT: Para evitar un rendimiento degradado, no tuerza, pliegue, pellizque ni pise los cables.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Vuelva a conectar los cables de alimentación de la controladora"].
+. link:power-sg120-and-sg1200-off-on.html#power-on-sg120-or-sg1200-and-verify-operation["Reinicie el aparato"].
+

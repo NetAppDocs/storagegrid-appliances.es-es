@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, storage node, storage appliance, upgrade, firmware, drive, disk, automatic 
 summary: El instalador del dispositivo StorageGRID instala automáticamente los últimos archivos de firmware de la unidad E-Series durante el reinicio del dispositivo. 
 ---
-= Actualice el firmware de la unidad SG5800 automáticamente durante el reinicio del dispositivo
+= Actualiza el firmware de la unidad SG5800 automáticamente durante el reinicio
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

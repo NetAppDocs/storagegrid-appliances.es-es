@@ -1,0 +1,109 @@
+---
+permalink: sg120-1200/replace-cmos-in-sg120-and-sg1200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, admin node, admin appliance, replacing, replace, CMOS, battery 
+summary: Utilice este procedimiento para sustituir la batería de botón CMOS de la placa del sistema. 
+---
+= Sustituir las baterías CMOS en un SG120 o SG1200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usa este procedimiento para reemplazar las dos baterías de botón CMOS en la placa del sistema.
+
+.Acerca de esta tarea
+Para evitar interrupciones del servicio, confirma que todos los demás appliances de servicios están conectados a la grid y que los grupos de alta disponibilidad se han configurado (si aplica) antes de empezar el reemplazo de la batería CMOS o reemplaza las baterías durante una ventana de mantenimiento programada cuando los periodos de interrupción del servicio sean aceptables. Consulta la información sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
+
+.Antes de empezar
+* Tienes link:verify-component-to-replace.html["verificado el SG120 o SG1200 donde es necesario reemplazar las baterías CMOS"].
+* Has obtenido las baterías CMOS de repuesto correctas (CR2032).
+* Tienes link:locating-sg120-and-sg1200-in-data-center.html["ubicado físicamente el appliance SG120 o SG1200"] donde estás reemplazando las baterías CMOS en el centro de datos.
+* Registró la configuración actual de BMC del dispositivo, si sigue disponible.
++
+.. Inicie sesión en el dispositivo que se va a sustituir:
++
+... Introduzca el siguiente comando: `ssh admin@_grid_node_IP_`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+... Introduzca el siguiente comando para cambiar a la raíz: `su -`
+... Introduzca la contraseña que aparece en `Passwords.txt` archivo.
++
+Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para `#`.
+
+
+
+.. Introduzca `*run-host-command ipmitool lan print*`: Para mostrar la configuración actual de BMC del dispositivo.
++
+
+NOTE: Se requiere un link:power-sg120-and-sg1200-off-on.html#shut-down-the-sg120-or-sg1200-appliance["apagado controlado del aparato"] antes de retirar el aparato del bastidor.
+
+
+
+* Has desconectado todos los cables y link:reinstalling-sg120-and-sg1200-cover.html["ha quitado la cubierta del aparato"].
+
+
+.Pasos
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Quita la primera batería CMOS.
++
+.. Localiza la batería CMOS en la placa del sistema.
+.. Utilice un dedo o una herramienta de palanca de plástico para empujar el clip de retención hacia fuera de la batería y así soltarlo de la toma.
++
+image::../media/drw_s2025_cmos_battery_replace_ieops-2558.svg[Extracción de una batería CMOS de la placa del sistema]
+
+.. Retire la batería y deséchela correctamente.
+
+
+. Instala la batería CMOS de repuesto.
++
+.. Saca la batería CMOS de repuesto de su embalaje.
+.. Presione la batería de repuesto en la toma vacía de la placa del sistema con el lado positivo (+) hacia arriba hasta que la batería encaje en su sitio.
+
+
+. Repite estos pasos para la segunda batería CMOS.
+. Si no tiene que realizar ningún otro procedimiento de mantenimiento en el aparato, vuelva a instalar la cubierta del aparato, vuelva a colocar el aparato en el bastidor, conecte los cables y conecte la alimentación.
+. Si el dispositivo que sustituyó tenía activado el cifrado de unidades para las unidades SED, debe hacerlo link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["introduzca la clave de acceso de cifrado de la unidad"] para acceder a las unidades cifradas cuando se inicia el dispositivo de sustitución por primera vez.
+. Si el dispositivo que sustituyó utilizó un servidor de gestión de claves (KMS) para gestionar claves de cifrado para el cifrado de nodos, es posible que se necesite una configuración adicional para que el nodo pueda unirse al grid. Si el nodo no se une automáticamente a la cuadrícula, asegúrese de que estas opciones de configuración se hayan transferido al nuevo dispositivo y configure manualmente cualquier configuración que no tenga la configuración esperada:
++
+** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configure las conexiones StorageGRID"]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure el cifrado de nodo para el dispositivo"^]
+
+
+. Inicie sesión en el dispositivo:
++
+.. Introduzca el siguiente comando: `ssh admin@_grid_node_IP_`
+.. Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+.. Introduzca el siguiente comando para cambiar a la raíz: `su -`
+.. Introduzca la contraseña que aparece en `Passwords.txt` archivo.
+
+
+. Restaura la conectividad de red BMC para el dispositivo usando una de las siguientes opciones:
++
+** Utilice IP estáticas, máscara de red y puerta de enlace
+** Utilice DHCP para obtener una IP, una máscara de red y una puerta de enlace
++
+... Para restaurar la configuración de BMC para utilizar una IP estática, una máscara de red y una puerta de enlace, escriba los siguientes comandos:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Para restaurar la configuración de BMC a fin de utilizar DHCP a fin de obtener una IP, una máscara de red y una puerta de enlace, introduzca el siguiente comando:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Después de restaurar la conectividad de red de BMC, conéctese a la interfaz de BMC para auditar y restaurar cualquier configuración de BMC personalizada adicional que pueda haber aplicado. Por ejemplo, se debe confirmar la configuración de los destinos de capturas SNMP y las notificaciones por correo electrónico. Consulte link:../installconfig/configuring-bmc-interface.html["Configurar la interfaz de BMC"].
+. Confirme que el nodo del dispositivo aparece en Grid Manager y que no aparece ninguna alerta.
+

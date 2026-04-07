@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace power supply, replacing E4000 power supply, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Revise los tipos y requisitos de contenedor E4000. 
 ---
-= Reemplazar el suministro de alimentación de la bandeja de controladoras de almacenamiento (SG6160)
+= Reemplaza una fuente de alimentación en una bandeja de controlador de almacenamiento SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,7 +33,7 @@ NOTE: No mezcle fuentes de alimentación de los diferentes tipos de tensión. Su
 ** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
 ** Acceso a SANtricity System Manager:
 +
-*** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+*** En Grid Manager, selecciona *Nodes* > *_appliance node_* > *SANtricity System Manager*. La información del controlador está en https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
 *** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
 
 

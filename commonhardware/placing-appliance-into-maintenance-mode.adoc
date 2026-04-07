@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, maintenance mode 
 summary: Debe colocar el aparato en modo de mantenimiento antes de realizar procedimientos de mantenimiento específicos. 
 ---
-= Coloque el dispositivo en modo de mantenimiento
+= Poner un dispositivo StorageGRID en modo mantenimiento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,7 +25,7 @@ En raras ocasiones, una vez que se coloca un dispositivo StorageGRID en modo de 
 NOTE: La contraseña de la cuenta de administrador y las claves de host SSH para un dispositivo StorageGRID en modo de mantenimiento siguen siendo las mismas que en el momento en que el dispositivo estaba en servicio.
 
 .Pasos
-. En Grid Manager, seleccione *NODES*.
+. Desde el Grid Manager, selecciona *Nodes*.
 . En la vista de árbol de la página Nodes, seleccione Appliance Storage Node.
 . Seleccione *tareas*.
 . Seleccione *modo de mantenimiento*. Se muestra un cuadro de diálogo de confirmación.
@@ -54,7 +54,7 @@ NOTE: Si tiene una conexión directa con el puerto de gestión del dispositivo, 
 El dispositivo puede tardar hasta 20 minutos en reiniciarse y reincorporarse a la red.  Para confirmar que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 
 +
-.. En el Administrador de cuadrícula, seleccione *NODOS*.
+.. En el Grid Manager, selecciona *Nodos*.
 .. Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 
 

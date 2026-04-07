@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100 storage appliance, SGF6112 storage appliance, maintain, maintaining, hardware, procedures, tasks 
 summary: Es posible que necesite realizar procedimientos de mantenimiento en el aparato. Los procedimientos específicos para el mantenimiento de su aparato SG6100 se encuentran en esta sección. 
 ---
-= Mantenimiento del dispositivo SG6100
+= Mantén los dispositivos SG6100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

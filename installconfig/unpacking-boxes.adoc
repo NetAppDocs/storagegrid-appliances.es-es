@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unpack, unbox, prepare, inventory, components, contents 
 summary: Antes de instalar el aparato StorageGRID, desembale todas las cajas y compare el contenido con los artículos del recibo de embalaje. 
 ---
-= Desempaquetar cajas
+= Desempaqueta las cajas de los dispositivos StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -72,6 +72,42 @@ Cubierta frontal::
 image::../media/sgf_6112_front_bezel.png[Cubierta frontal]
 
 --
+
+
+* * Cables de alimentación *
++
+
+TIP: Es posible que el armario tenga cables de alimentación especiales que utilice en lugar de los cables de alimentación que se suministran con el aparato.
+
++
+Dos cables de alimentación para su país::
++
+--
+image::../media/power_cords.gif[Cables de alimentación]
+
+--
+
+
+
+
+--
+.SG120 y SG1200
+--
+* *Hardware*
++
+SG120 o SG1200::
++
+--
+image::../media/sg120_front_view.png[Unidades frontales SG120 y SG1200 appliances]
+
+--
+Kit de rieles con instrucciones::
++
+--
+image::../media/rail_kit.gif[Kit de rieles]
+
+--
+Frontal (no se muestra)::
 
 
 * * Cables de alimentación *
@@ -518,6 +554,128 @@ Cubierta frontal::
 image::../media/sgf_6112_front_bezel.png[Cubierta frontal]
 
 --
+
+
+* * Cables de alimentación *
++
+
+TIP: Es posible que el armario tenga cables de alimentación especiales que utilice en lugar de los cables de alimentación que se suministran con el aparato.
+
++
+Dos cables de alimentación para su país::
++
+--
+image::../media/power_cords.gif[Cables de alimentación]
+
+--
+
+
+
+
+--
+.SG6200
+--
+* *Hardware SG6260*
++
+Controlador SG6200-CN::
++
+--
+image::../media/s25_front_with_ssds.png[Controlador SG6200-CN]
+
+--
+Bandeja de controladoras E4000 sin unidades instaladas::
++
+--
+image::../media/de460c_table_size.gif[Controlador E4000 4U]
+
+--
+Dos frontales (No mostrados)::
++
+--
+image::../media/rail_kit.gif[Kit de rieles]
+
+--
+Unidades NL-SAS de 60 TB::
++
+--
+image::../media/sg5760_drive.gif[Unidades NL-SAS de 60 TB]
+
+--
+Cuatro asas::
++
+--
+image::../media/handles.gif[Asas E4000]
+
+--
+Soportes traseros y tuercas de jaula para la instalación del bastidor con orificios cuadrados::
++
+--
+image::../media/back_brackets_table_size.gif[Soportes traseros y tuercas de jaula para SG5860]
+
+--
+Un cable de interconexión de puertos de 100 GbE a 4 GbE::
++
+--
+image::../media/sg6100_4x25gbe_spf28_cable.png[Cable de conexión de 100 GbE a 4 GbE]
+
+--
+Cuatro cables de alimentación para su país::
++
+--
+image::../media/power_cords.gif[Cables de alimentación]
+
+--
+
+
+* *SG6260 bandeja de expansión*
++
+Bandeja de expansión sin unidades instaladas::
++
+--
+image::../media/de460c_table_size.gif[Controlador E4000 4U]
+
+--
+Frontal (No se muestra)::
++
+--
+image::../media/sg5760_drive.gif[Unidad]
+
+--
+Un kit de guías con instrucciones::
++
+--
+image::../media/rail_kit.gif[Kit de rieles]
+
+--
+Cuatro asas::
++
+--
+image::../media/handles.gif[Asas E4000]
+
+--
+Soportes traseros y tuercas de jaula para la instalación del bastidor con orificios cuadrados::
++
+--
+image::../media/back_brackets_table_size.gif[Soportes traseros y tuercas de jaula para SG5860]
+
+--
+
+
+* *Hardware SGF6212*
++
+SGF6212::
++
+--
+image::../media/s25_front_with_ssds.png[Unidades frontales SGF6212 appliance]
+
+--
+Kit de rieles con instrucciones::
++
+--
+image::../media/rail_kit.gif[Kit de rieles]
+
+--
+Frontal (No se muestra)::
 
 
 * * Cables de alimentación *

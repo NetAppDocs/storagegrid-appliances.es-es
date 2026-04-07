@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: email, notifications, alerts, set up, setup, configure, configuration, bmc 
 summary: Si desea que las notificaciones por correo electrónico se envíen cuando se produzcan alertas, utilice la interfaz de BMC para configurar los ajustes SMTP, los usuarios, los destinos LAN, las políticas de alertas y los filtros de eventos. 
 ---
-= Configurar notificaciones por correo electrónico para las alertas de BMC
+= Configura las notificaciones por correo electrónico para alertas de BMC en un dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

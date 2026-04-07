@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, troubleshoot, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Solucione los errores que se pueden producir al usar SANtricity System Manager para actualizar el firmware en las unidades del dispositivo. 
 ---
-= Solucionar problemas de errores de actualización de firmware de la unidad (SG6160)
+= Soluciona errores de actualización del firmware de la unidad SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

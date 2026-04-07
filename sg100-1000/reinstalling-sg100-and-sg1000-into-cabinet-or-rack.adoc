@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, appliance, install, installing, installation, cabinet, rack, controller, remove, removing, removal 
 summary: Quite el SG100 o SG1000 de un armario o rack para acceder a la cubierta superior o para mover el dispositivo a una ubicación diferente; a continuación, vuelva a instalar el dispositivo en un armario o rack cuando haya finalizado el mantenimiento del hardware. 
 ---
-= Reubique SG100 o SG1000 en el armario o rack
+= Reubicar un SG100 o SG1000 en un armario o rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -51,7 +51,7 @@ Se puede acceder a la cubierta superior del controlador.
 . Opcional: Si está retirando completamente el dispositivo del armario o rack, siga las instrucciones del kit de guías para quitar el aparato de los rieles.
 
 
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.
 
 
 

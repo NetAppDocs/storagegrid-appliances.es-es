@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, sgf6112, troubleshoot, troubleshooting, hardware, install, installation, boot codes, boot-up codes, start codes, codes, boot, start, bmc, error codes, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection, sg6160, sg5800, e4000 
 summary: Si encuentra problemas durante la instalación, es posible que le sea útil revisar información sobre la solución de problemas relacionados con la configuración del hardware y los problemas de conectividad. 
 ---
-= Solución de problemas de instalación de hardware (SG5800 o SG6100)
+= Soluciona problemas de instalación de hardware para un SG5800 o SG6100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

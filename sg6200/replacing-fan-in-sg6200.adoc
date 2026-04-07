@@ -1,0 +1,118 @@
+---
+permalink: sg6200/replacing-fan-in-sg6200.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6212, sg6200-cn, sg6260, storage appliance, Replacing, replace, fan, remove, removing, removal, install, installing 
+summary: El aparato SGF6212 y el controlador SG6200-CN disponen de siete ventiladores de refrigeración. Si falla uno de los ventiladores, debes reemplazarlo lo antes posible para asegurarte de que el aparato tenga una refrigeración adecuada. 
+---
+= Sustituir ventilador en un SGF6212 o SG6200-CN (SG6260)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El aparato SGF6212 y el controlador SG6200-CN disponen de siete ventiladores de refrigeración. Si falla uno de los ventiladores, debes reemplazarlo lo antes posible para asegurarte de que el aparato tenga una refrigeración adecuada.
+
+.Acerca de esta tarea
+Para evitar las interrupciones del servicio, confirme que el resto de los nodos de almacenamiento están conectados al grid antes de comenzar a sustituir el ventilador o sustituir el ventilador durante la ventana de mantenimiento programada si se aceptan períodos de interrupción del servicio. Consulte la información sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
+
+
+CAUTION: Si alguna vez ha utilizado una regla de ILM que crea solo una copia de un objeto, debe sustituir el ventilador durante una ventana de mantenimiento programada porque podría perder temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información sobre https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
+
+No se podrá acceder al nodo del dispositivo mientras sustituye el ventilador.
+
+
+NOTE: Cada una de las dos unidades de suministro de alimentación también contiene un ventilador. Los ventiladores de suministro de alimentación no se incluyen en este procedimiento.
+
+.Antes de empezar
+* Tiene el ventilador de sustitución correcto.
+* Ya tienes link:verify-component-to-replace.html["determine la ubicación del ventilador que se va a sustituir"].
+* Tienes link:locating-sg6200-in-data-center.html["ubicó físicamente el dispositivo SGF6212 o el controlador SG6200-CN"] donde estás reemplazando el ventilador en el centro de datos.
++
+
+NOTE: Se requiere un link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["apagado controlado del aparato"] antes de retirar el aparato del bastidor.
+
+* Has desconectado todos los cables y link:reinstalling-sg6200-cover.html["ha quitado la cubierta del aparato"].
+* Ha confirmado que los otros ventiladores están instalados y en ejecución.
+
+
+.Pasos
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Localice el ventilador que debe reemplazar.
++
+Los siete ventiladores se encuentran en las siguientes posiciones en el chasis (se muestra la mitad frontal del dispositivo StorageGRID con la cubierta superior retirada):
+
++
+image::../media/drw_fan_position_ieops-2614.svg[Posiciones de los ventiladores en el chasis del dispositivo StorageGRID]
+
++
+|===
+| Posición del chasis | Unidad de ventilador 
+
+
+ a| 
+1
+ a| 
+Ventilador_SYS0
+
+
+
+ a| 
+2
+ a| 
+Ventilador_SYS1
+
+
+
+ a| 
+3
+ a| 
+Ventilador_SYS2
+
+
+
+ a| 
+4
+ a| 
+Ventilador_SYS3
+
+
+
+ a| 
+5
+ a| 
+Ventilador_SYS4
+
+
+
+ a| 
+6
+ a| 
+Ventilador_SYS5
+
+
+
+ a| 
+7
+ a| 
+Ventilador_SYS6
+
+|===
+. Utilice las pestañas azules del ventilador para extraer el ventilador que ha fallado del chasis.
++
+image:../media/drw_s2025_fan_replace_ieops-2552.svg["Extracción de un ventilador del chasis"]
+
+. Deslice el ventilador de repuesto en la ranura abierta del chasis.
++
+Alinee el conector del ventilador con el zócalo en la placa de circuito.
+
+. Presione firmemente el conector del ventilador en la placa de circuitos.
+. link:reinstalling-sg6200-cover.html["Vuelva a colocar la cubierta superior en el aparato"], y presiona el pestillo hacia abajo para fijar la tapa en su sitio.
+. link:power-sg6200-off-on.html["Encienda el aparato"] y supervisa los LED del appliance y los códigos de arranque.
++
+Utilice la interfaz de BMC para supervisar el estado de inicio.
+
+. Confirme que el nodo del dispositivo aparece en Grid Manager y que no aparece ninguna alerta.
+
+
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

@@ -1,0 +1,554 @@
+---
+permalink: installconfig/hardware-description-sg6200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200, sgf6212, storage node, storage appliance, appliance models, appliance features, specifications 
+summary: Los dispositivos de la serie StorageGRID SG6200 funcionan como nodos de almacenamiento en un sistema StorageGRID. Como todos los dispositivos StorageGRID, pueden mezclarse libremente con otros modelos de dispositivos y nodos exclusivamente de software en una única implementación. 
+---
+= Dispositivos StorageGRID SG6200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los dispositivos de la serie StorageGRID SG6200 funcionan como nodos de almacenamiento en un sistema StorageGRID. Como todos los dispositivos StorageGRID, pueden mezclarse libremente con otros modelos de dispositivos y nodos exclusivamente de software en una única implementación.
+
+El dispositivo StorageGRID SG6260 incluye un controlador informático con un par de unidades SSD NVMe que funcionan como caché de lectura y un estante de controlador de almacenamiento que contiene dos controladores de almacenamiento y 60 unidades de disco duro NL-SAS. Se puede ampliar hasta 180 unidades de disco duro NL-SAS mediante la adición de hasta dos estantes de expansión opcionales. El dispositivo StorageGRID SGF6212 es un dispositivo all-flash con un factor de forma 1U compacto poblado con 12 unidades SSD NVMe.
+
+
+
+== Funciones de los dispositivos
+
+
+
+=== Características generales
+
+Los dispositivos SGF6212 y SG6260 ofrecen las siguientes funciones:
+
+* Integra los elementos de computación y almacenamiento para un nodo de almacenamiento de StorageGRID.
+* Incluye el instalador de dispositivos StorageGRID para simplificar la puesta en marcha y la configuración del nodo de almacenamiento.
+* Incluye un controlador de gestión de placa base (BMC) para supervisar y diagnosticar el hardware en la controladora de computación.
+
+
+
+
+=== Funciones de protección de datos
+
+El SGF6212 proporciona las siguientes funciones de protección de datos:
+
+* Capacidad de funcionar después del fallo de un único SSD sin afectar a la disponibilidad del objeto.
+* Capacidad para funcionar tras múltiples fallos de SSD con una reducción mínima necesaria en la disponibilidad de objetos (según el diseño del esquema RAID subyacente).
++
+
+NOTE: En función de la política de ILM que haya configurado, otros nodos pueden atender las solicitudes de objetos que no están disponibles localmente, por lo que normalmente no se produce ninguna reducción en la disponibilidad.
+
+* Totalmente recuperable, mientras está en servicio, de fallos de SSD que no ocasionan un daño extremo al RAID que aloja el volumen raíz del nodo (el sistema operativo StorageGRID).
+* Los datos de objetos se pueden restaurar automáticamente de las copias o de los fragmentos codificados de borrado en otros nodos si varios fallos de SSD causan la pérdida de datos locales.
+* Capacidad para operar como https://docs.netapp.com/us-en/storagegrid/admin/managing-load-balancing.html["Nodo de puerta de enlace con almacenamiento en caché"^] .
+
+
+El SG6260 proporciona las siguientes funciones de protección de datos:
+
+* Capacidad de funcionar después del fallo de dos unidades de disco duro (HDD) sin impacto en la disponibilidad de objetos.
+* Evacuación y recompilación rápidas de HDD durante eventos de fallo y sustitución (cuando se configura para DDP o DDP16 durante la instalación), lo que mejora la durabilidad de los datos en relación con el RAID6 estándar.
+* Totalmente recuperable, mientras está en servicio, del fallo de dos HDD cualesquiera.
+* Los datos de objetos se pueden restaurar automáticamente a partir de copias o de fragmentos codificados de borrado en otros nodos si varios fallos de las unidades de disco duro provocan la pérdida de datos local.
+
+
+
+
+== Componentes de hardware del SG6200
+
+
+
+=== Dispositivo SGF6212
+
+El dispositivo SGF6212 incluye los siguientes componentes:
+
+Plataforma de almacenamiento y computación:: Un servidor de una unidad de rack (1U) que incluye:
++
+--
+* 256 GB DE MEMORIA RAM
+* unidad de arranque interna de 240 GB (incluye software StorageGRID)
+* 2 x 1/10 puertos GBase-T.
+* 4 puertos Ethernet 10/25/40/100GbE para tráfico de red Grid/Client (o 4 x 200GbE con NIC de 200GbE opcional)
+* 12 unidades SSD NVMe para almacenamiento de datos
+* Controlador de administración en placa base (BMC) que simplifica la administración del hardware
+* Sistemas de alimentación y ventiladores redundantes
+
+
+--
+
+
+
+
+=== Dispositivo SG6260
+
+El dispositivo SG6260 incluye los siguientes componentes:
+
+Controladora de computación:: El controlador SG6200-CN es un servidor de una unidad rack (1U) que incluye:
++
+--
+* 256 GB DE MEMORIA RAM
+* unidad de arranque interna de 240 GB (incluye software StorageGRID)
+* 2 x 1/10 puertos GBase-T.
+* 4 puertos Ethernet 10/25/40/100GbE para tráfico de red Grid/Client (o 4 x 200GbE con NIC de 200GbE opcional)
+* 1 puerto de interconexión de almacenamiento de 100 GbE
+* Dos SSD NVMe para la caché de lectura
+* Controlador de administración en placa base (BMC) que simplifica la administración del hardware
+* Sistemas de alimentación y ventiladores redundantes
+
+
+--
+Bandeja de controladoras de almacenamiento:: La bandeja de controladoras E-Series E4000 (cabina de almacenamiento) es una bandeja 4U que incluye:
++
+--
+* Dos controladoras de la serie E4000 (configuración doble) para admitir la recuperación tras fallos de controladoras de almacenamiento
+* Bandeja de cinco cajones que aloja sesenta unidades NL-SAS de 3,5 pulgadas
+* Sistemas de alimentación y ventiladores redundantes
+
+
+--
+Opcional: Bandejas de ampliación del almacenamiento:: Cada dispositivo SG6260 puede tener una o dos bandejas de expansión para un total de 180 unidades. Las bandejas de expansión pueden instalarse durante el despliegue inicial o añadirse posteriormente.
++
+--
+El compartimento DE460C de E-Series es una bandeja 4U que incluye:
+
+* Dos módulos de entrada/salida (IOM)
+* Cinco cajones, cada uno de ellos tiene 12 unidades NL-SAS, para un total de 60 unidades
+* Sistemas de alimentación y ventiladores redundantes
+
+
+--
+
+
+
+
+== Diagramas SGF6212 y SG6260
+
+
+
+=== SGF6212 vista frontal
+
+Esta figura muestra el frontal del SGF6212 sin el frontal. El dispositivo incluye una plataforma informática y de almacenamiento 1U que contiene 12 unidades SSD.
+
+image::../media/s25_front_with_ssds.png[SGF6212 Vista frontal]
+
+
+
+=== SGF6212 vista trasera
+
+Esta figura muestra la parte posterior del SGF6212, incluidos los puertos, ventiladores y fuentes de alimentación.
+
+image::../media/sgf6212_rear_connectors.png[SGF6212 Vista trasera]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de red 1-4
+ a| 
+10/25/40/100/200-GbE, en función del tipo de cable o transceptor, la velocidad del switch y la velocidad de enlace configurada.
+
+QSFP56 (máx. 200GbE/puerto), QSFP28 (máx. 100GbE/puerto) y QSFP+ (40GbE) son compatibles de forma nativa (las velocidades de 200GbE requieren la opción de NIC de 200GbE). Se pueden utilizar transceptores SFP+ (10GbE) o SFP28 (25GbE) opcionales con un QSA (se venden por separado).
+ a| 
+Conéctese a la red de red y a la red de cliente para StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Puerto de gestión de BMC
+ a| 
+1 GbE (RJ-45).
+ a| 
+Conéctese al controlador de administración de la placa base del dispositivo.
+
+
+
+ a| 
+3
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* Puerto mini display
+* Puerto USB 3.0
+* Puerto de consola Micro-USB
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+4
+ a| 
+Puerto de red de administrador 1
+ a| 
+1 U/10 GbE (RJ-45)
+ a| 
+Conecte el dispositivo a la red de administración para StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Puerto de red de administración 2
+ a| 
+1 U/10 GbE (RJ-45)
+ a| 
+Opciones:
+
+* Vínculo con el puerto de red de administración 1 para una conexión redundante a la red de administración de StorageGRID.
+* Deje desconectado y disponible para acceso local temporal (IP 169.254.0.1).
+* Durante la instalación, use el puerto 2 para la configuración IP si las direcciones IP asignadas para DHCP no están disponibles.
+
+
+|===
+Esta figura muestra la ubicación de la fuente de alimentación y los LED de identificación en la parte posterior del SGF6212. En los puertos del appliance hay LED de estado y actividad adicionales. Estos LED pueden variar según el modelo de appliance.
+
+image::../media/s25_rear_leds.png[LEDs traseros SGF6212]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
+
+
+|===
+
+
+=== SG6260 vista frontal
+
+Esta figura muestra la parte frontal del SG6260, que incluye un controlador informático de 1U y un estante de 4U que contiene dos controladores de almacenamiento y 60 unidades en cinco cajones de unidades.
+
+image::../media/sg6260_front_view_without_bezels.png[SG6260 Vista frontal]
+
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Controlador informático SG6200-CN con el frontal desmontado
+
+
+
+ a| 
+2
+ a| 
+Bandeja de controladoras E4000 con el panel frontal quitado (la bandeja de expansión opcional aparece idéntica)
+
+|===
+
+
+=== SG6260 vista trasera
+
+Esta figura muestra la parte posterior del SG6260, incluidos los controladores de computación y almacenamiento, los ventiladores y las fuentes de alimentación.
+
+image::../media/sg6260_rear_view.png[SG6260 Vista trasera]
+
+[cols="1a,2a"]
+|===
+| Llamada | Descripción 
+
+
+ a| 
+1
+ a| 
+Fuente de alimentación (1 de 2) para controlador informático SG6200-CN
+
+
+
+ a| 
+2
+ a| 
+Conectores para el controlador de cómputo SG6200-CN
+
+
+
+ a| 
+3
+ a| 
+Ventilador (1 de 2) para la bandeja de controladoras E4000
+
+
+
+ a| 
+4
+ a| 
+Controlador de almacenamiento E-Series E400 (1 de 2) y conectores
+
+
+
+ a| 
+5
+ a| 
+Sistema de alimentación (1 de 2) para la bandeja de controladoras E4000
+
+|===
+
+
+== Controladores SG6200
+
+
+
+=== Controlador informático SG6200-CN
+
+* Proporciona recursos de computación para el dispositivo.
+* Incluye el instalador de dispositivos StorageGRID.
++
+
+NOTE: El software StorageGRID no está preinstalado en el dispositivo. Este software se recupera del nodo de administración cuando se implementa el dispositivo.
+
+* Se puede conectar a las tres redes StorageGRID, incluidas la red de cuadrícula, la red de administración y la red de cliente.
+* Se conecta a las controladoras de almacenamiento E-Series y funciona como iniciador.
+
+
+Esta figura muestra los puertos en la parte posterior del controlador informático SG6200-CN.
+
+image::../media/sg6200_cn_rear_connectors.png[Conectores traseros SG6200-CN]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de red 1-4
+ a| 
+10/25/40/100/200-GbE, en función del tipo de cable o transceptor, la velocidad del conmutador y la velocidad de enlace configurada. Se admiten de forma nativa QSFP56 (máx. 200GbE/puerto), QSFP28 (máx. 100GbE/puerto) y QSFP+ (40GbE) (las velocidades de 200GbE requieren la opción de NIC de 200GbE). Se pueden utilizar transceptores SFP+ (10GbE) o SFP28 (25GbE) opcionales con un QSA (se venden por separado).
+ a| 
+Conéctese a la red de red y a la red de cliente para StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Puerto de gestión de BMC
+ a| 
+1 GbE (RJ-45).
+ a| 
+Conéctate al controlador de gestión de la placa base SG6200-CN.
+
+
+
+ a| 
+3
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* Puerto mini display
+* Puerto USB 3.0
+* Puerto de consola Micro-USB
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+4
+ a| 
+Puerto de red de administrador 1
+ a| 
+1 U/10 GbE (RJ-45)
+ a| 
+Conecta el SG6200-CN a la red de administración de StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Puerto de red de administración 2
+ a| 
+1 U/10 GbE (RJ-45)
+ a| 
+Opciones:
+
+* Bond con el puerto de gestión 1 para una conexión redundante con la red de administrador para StorageGRID.
+* Deje sin cables y disponible para acceso local temporal (IP 169.254.0.1).
+* Durante la instalación, use el puerto 2 para la configuración IP si las direcciones IP asignadas para DHCP no están disponibles.
+
+
+
+
+ a| 
+6
+ a| 
+Puerto de interconexión
+ a| 
+100 GbE
+ a| 
+Conecta el controlador SG6200-CN a los controladores E4000.
+
+|===
+Esta figura muestra la ubicación de la fuente de alimentación y los LED de identificación en la parte posterior del controlador de cómputo SG6200-CN. LED de estado y actividad adicionales están en los puertos del dispositivo. Estos LED pueden variar según el modelo de dispositivo.
+
+image::../media/s25_rear_leds.png[LEDs traseros SG6200-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
+
+
+|===
+
+
+=== SG6260: Controlador de almacenamiento E4000
+
+* Dos controladoras para admitir conmutación al nodo de respaldo.
+* Gestione el almacenamiento de datos en las unidades.
+* Funcionan como controladoras E-Series estándar en una configuración doble.
+* Incluya software de sistema operativo SANtricity (firmware de la controladora).
+* Incluir System Manager de SANtricity para supervisar hardware de almacenamiento y gestionar alertas, la función AutoSupport y la función Drive Security.
+* Conéctate al controlador SG6200-CN y proporciona acceso al almacenamiento.
+
+
+image::../media/e4000_controller_with_callouts.png[Conectores en el controlador E4000]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puerto de gestión 1
+ a| 
+Ethernet de 1 GB (RJ-45)
+ a| 
+* Opciones del puerto 1:
++
+** Conéctese a una red de gestión para habilitar el acceso TCP/IP directo a System Manager de SANtricity
+** Deje sin cables para guardar un puerto del switch y una dirección IP.  Acceda al administrador del sistema de SANtricity mediante Grid Manager o el instalador de Storage Grid Appliance.
+
+
+
+
+*Nota*: Algunas funciones opcionales de SANtricity, como la sincronización NTP para registros de hora precisos, no están disponibles cuando se elige dejar el puerto 1 sin cable.
+
+
+
+ a| 
+2
+ a| 
+Puertos de diagnóstico y soporte
+ a| 
+* Puerto serie RJ-45
+* Puerto serie micro USB
+* Puerto USB
+
+ a| 
+Reservado para uso del soporte técnico.
+
+
+
+ a| 
+3
+ a| 
+Puertos de expansión de unidad 1 y 2
+ a| 
+SAS de 12 GB/s
+ a| 
+Conecte los puertos con los puertos de expansión de unidades en los IOM de la bandeja de expansión.
+
+
+
+ a| 
+4
+ a| 
+Puertos de interconexión 1 y 2
+ a| 
+25GbE iSCSI
+ a| 
+Conecta cada uno de los controladores E4000 al controlador SG6200-CN.
+
+Hay cuatro conexiones al controlador SG6200-CN (dos desde cada E4000).
+
+|===
+
+
+=== SG6260: IOMs para bandejas de expansión opcionales
+
+La bandeja de expansión contiene dos módulos de I/o (IOM) que se conectan a las controladoras de almacenamiento o a otras bandejas de expansión.
+
+
+
+==== Conectores de IOM
+
+image::../media/iom_connectors.gif[IOM parte trasera]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo | Uso 
+
+
+ a| 
+1
+ a| 
+Puertos de expansión de unidades 1-4
+ a| 
+SAS de 12 GB/s
+ a| 
+Conecte cada puerto a las controladoras de almacenamiento o a la bandeja de expansión adicional (si la hubiera).
+
+|===

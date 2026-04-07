@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, ports, port, port-level, port level, test, testing, udp, Client Network, Admin Network 
 summary: Para garantizar que los firewalls no obstruyan el acceso entre el instalador del dispositivo StorageGRID y otros nodos, confirme que el instalador del dispositivo StorageGRID puede conectarse a un puerto TCP o a un conjunto de puertos en la dirección IP o el rango de direcciones especificados. 
 ---
-= Verifique las conexiones de red a nivel de puerto
+= Verifica las conexiones de red a nivel de puerto en los dispositivos StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

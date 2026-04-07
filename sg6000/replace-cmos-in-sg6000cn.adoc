@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000-cn, storage node, storage appliance, Replacing, replace, CMOS, battery 
 summary: Utilice este procedimiento para sustituir la batería de botón CMOS de la placa del sistema. 
 ---
-= Reemplace la batería CMOS SG6000-CN
+= Sustituir la batería CMOS del SG6000-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

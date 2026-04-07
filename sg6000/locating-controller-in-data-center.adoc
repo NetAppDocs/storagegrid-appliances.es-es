@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, locate, find, locating, finding, identify, blue led, blue light 
 summary: Localice la controladora para que pueda realizar tareas de mantenimiento o actualizaciones del hardware. 
 ---
-= Localice la controladora SG6000-CN en el centro de datos
+= Ubica el controlador SG6000-CN en el centro de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

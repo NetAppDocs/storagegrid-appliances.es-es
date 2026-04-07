@@ -1,0 +1,44 @@
+---
+permalink: installconfig/sg6200-cn-installing-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6200-cn, rail, rails, sg6260 
+summary: Instalas un conjunto de raíles para el controlador SG6200-CN en tu armario o rack y luego deslizas el controlador sobre los raíles. 
+---
+= Instalar el controlador SG6200-CN para un SG6260
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instalas un conjunto de raíles para el controlador SG6200-CN en tu armario o rack y luego deslizas el controlador sobre los raíles.
+
+.Antes de empezar
+* Ha revisado el https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avisos de seguridad"^] documente el documento incluido en la caja y comprenda las precauciones para mover e instalar el hardware.
+* Tiene las instrucciones incluidas en el kit de raíl.
+* Instaló la bandeja de controladoras E4000 y las unidades.
+
+
+.Pasos
+. Siga con cuidado las instrucciones del kit de raíl para instalar los rieles en su armario o rack.
+. En los dos rieles instalados en el armario o rack, extienda las partes móviles de los rieles hasta que oiga un clic.
++
+image::../media/rails_extended_out.gif[SG6200 Raíles]
+
+. Inserta el controlador SG6200-CN en los raíles.
+. Deslice el controlador en el armario o rack.
++
+Cuando ya no pueda mover la controladora, tire de los pestillos azules de ambos lados del chasis para deslizar la controladora completamente hacia dentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6200 Deslizamiento sobre raíles]
+
++
+
+NOTE: No conecte el panel frontal hasta que haya encendido la controladora.
+
+. Apriete los tornillos cautivos del panel frontal del controlador para fijar el controlador en el rack.
++
+image::../media/s25_rack_retaining_screws.png[Tornillos de sujeción del rack SG6260]
+
+

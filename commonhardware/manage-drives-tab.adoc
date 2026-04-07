@@ -1,10 +1,10 @@
 ---
 permalink: commonhardware/manage-drives-tab.html 
 sidebar: sidebar 
-keywords: sgf6112, sg110, sg1100, sg6160, manage drives tab, locate drive, fail drive, logically replace drive 
+keywords: sgf6112, sg110, sg1100, sg6160, sg6200, sg6260, sgf6212 manage drives tab, locate drive, fail drive, logically replace drive 
 summary: Puede utilizar la pestaña Gestionar unidades de Grid Manager para realizar tareas de solución de problemas y mantenimiento en las unidades para dispositivos que admiten esta función. 
 ---
-= Usar la pestaña Gestionar unidades (SG110, SG1100, SGF6112 y SG6160)
+= Usa la pestaña Gestionar unidades para los dispositivos StorageGRID SG110, SG120, SG1100, SG1200, SG6100 y SG6200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,7 +50,7 @@ image:../media/manage_drives_tab_details.png["Pestaña Gestionar unidades Detall
 
 Para localizar físicamente una unidad en el dispositivo:
 
-. En Grid Manager, selecciona *NODES* > *_data center_*.
+. Desde el Grid Manager, selecciona *Nodes* > *_data center_*.
 . Seleccione *_appliance storage node_* > *Administrar unidades* > *Layout* > *_drive_*.
 +
 Se muestra el panel de detalles de la unidad.
@@ -70,7 +70,7 @@ Se muestra el panel de detalles de la unidad.
 
 Si se debe reconstruir o reinicializar una unidad del dispositivo de almacenamiento:
 
-. En Grid Manager, selecciona *NODES* > *_data center_*.
+. Desde el Grid Manager, selecciona *Nodes* > *_data center_*.
 . Seleccione *_appliance storage node_* > *Administrar unidades* > *Layout* > *_drive_*.
 +
 Se muestra el panel de detalles de la unidad.
@@ -87,7 +87,7 @@ En el panel de detalles de la unidad, el estado de la unidad indica _rebuild_. L
 
 Para la solución de problemas, puede «conmutar» manualmente una unidad que sospecha que está defectuosa. El sistema se ejecutará sin esa unidad.
 
-. En Grid Manager, selecciona *NODES* > *_data center_*.
+. Desde el Grid Manager, selecciona *Nodes* > *_data center_*.
 . Seleccione *_appliance storage node_* > *Administrar unidades* > *Layout* > *_drive_*.
 +
 Se muestra el panel de detalles de la unidad.

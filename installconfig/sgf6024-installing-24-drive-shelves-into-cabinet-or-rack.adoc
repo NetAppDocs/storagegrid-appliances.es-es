@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, drive shelf, drive shelves, 24-drive, shelf, shelves, rail, rails 
 summary: Instale un conjunto de rieles para la bandeja de controladoras EF570 en el armario o rack y, a continuación, deslice la cabina sobre los rieles. 
 ---
-= Instalación de las bandejas de 24 unidades (SGF6024)
+= Instala las bandejas de 24 unidades para un SGF6024
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

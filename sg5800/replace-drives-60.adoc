@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, sg5860 
 summary: Es posible sustituir una unidad en el SG5860. 
 ---
-= Reemplace la unidad en SG5860
+= Sustituir una unidad en el SG5860
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,7 +26,7 @@ Este procedimiento se aplica a las bandejas de discos DCM y DCM2.
 ** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
 ** Acceso a SANtricity System Manager:
 +
-*** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+*** En Grid Manager, selecciona *Nodes* > *_appliance node_* > *SANtricity System Manager*. La información del controlador está en https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
 *** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
 
 

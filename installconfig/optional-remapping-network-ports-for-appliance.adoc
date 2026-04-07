@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remap appliance ports, network, internal to external port mapping 
 summary: Opcionalmente, puede volver a asignar los puertos internos de un nodo de dispositivo a diferentes puertos externos. Por ejemplo, es posible que tenga que reasignar puertos debido a un problema de firewall. 
 ---
-= Opcional: Reasignar puertos de red para el dispositivo
+= Vuelve a asignar los puertos de red para los dispositivos StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

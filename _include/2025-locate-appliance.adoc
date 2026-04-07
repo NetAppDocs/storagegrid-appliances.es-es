@@ -1,0 +1,22 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. Encuentre el dispositivo en el centro de datos.
++
+** Busque un LED de identificación azul encendido en la parte frontal o trasera del aparato.
++
+El LED de identificación frontal está detrás del panel frontal y puede resultar difícil ver si se ha instalado el panel frontal.
+
++
+image::../media/s25_front_identify_led.png[LED de identificación frontal: Encendido]
+
++
+El LED de identificación trasero se encuentra en el centro del appliance, junto a la ranura Micro-SD.
+
+** Compruebe que las etiquetas de la parte frontal del aparato tengan el mismo número de pieza para confirmar que ha encontrado el aparato correcto.
+
+
+. Retire el marco frontal, si hay uno instalado, para acceder a los controles e indicadores del panel frontal.
+

@@ -1,0 +1,66 @@
+---
+permalink: sg120-1200/replacing-one-or-more-power-supplies-in-sg120-and-sg1200-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
+summary: Los aparatos SG120 y SG1200 disponen de dos fuentes de alimentación para redundancia. Si una de las fuentes de alimentación falla, debes sustituirla lo antes posible para garantizar que el aparato disponga de alimentación redundante. Ambas fuentes de alimentación que funcionen en el aparato deben ser del mismo modelo y potencia. 
+---
+= Sustituir una o ambas fuentes de alimentación en el SG120 o SG1200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los aparatos SG120 y SG1200 disponen de dos fuentes de alimentación para redundancia. Si una de las fuentes de alimentación falla, debes sustituirla lo antes posible para garantizar que el aparato disponga de alimentación redundante. Ambas fuentes de alimentación que funcionen en el aparato deben ser del mismo modelo y potencia.
+
+.Acerca de esta tarea
+La figura muestra las dos fuentes de alimentación para el SG120 y el SG1200. Las fuentes de alimentación son accesibles desde la parte posterior del aparato.
+
+image::../media/sg120_sg1200_power_supplies.png[Parte posterior del SG120/Sg1200 con dos fuentes de alimentación]
+
+.Antes de empezar
+* Tienes link:locating-sg120-and-sg1200-in-data-center.html["ubicación física del aparato"] con la fuente de alimentación que se va a reemplazar.
+* Ya tienes link:verify-component-to-replace.html["se determina la ubicación de la fuente de alimentación que se va a sustituir"].
+* Si solo va a sustituir un suministro de alimentación:
++
+** Ha desembalado la unidad de suministro de alimentación de repuesto y se ha asegurado de que es el mismo modelo y vataje que la unidad de suministro de alimentación que desea sustituir.
+** Ha confirmado que la otra fuente de alimentación está instalada y en funcionamiento.
+
+
+* Si vas a sustituir las dos fuentes de alimentación al mismo tiempo, asegúrate de que sean del mismo modelo y potencia.
+
+
+.Pasos
+. Si solo vas a sustituir una fuente de alimentación, no necesitas apagar el appliance. Ve al paso <<Unplug_the_power_cord,Desenchufe el cable de alimentación>>. Si vas a sustituir ambas fuentes de alimentación al mismo tiempo, link:power-sg120-and-sg1200-off-on.html#shut-down-the-sg120-or-sg1200-appliance["Apague el aparato"] antes de desenchufar los cables de alimentación.
+. [[Unplug_the_power_cord, start=2]]desenchufe el cable de alimentación de cada fuente de alimentación que vaya a sustituirse.
++
+Cuando se ve desde la parte posterior del aparato, la fuente de alimentación A (PSU0) está a la derecha y la fuente de alimentación B (PSU1) a la izquierda.
+
+. Levante el asa del primer suministro que se va a sustituir.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Levantar el asa para extraer la fuente de alimentación]
+
+. Presione el pestillo azul y saque la fuente de alimentación.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Quitar una fuente de alimentación]
+
+. Con el pestillo azul a la derecha, deslice la fuente de alimentación de repuesto hacia el chasis.
++
+
+IMPORTANT: Las dos fuentes de alimentación instaladas deben ser del mismo modelo y potencia.
+
++
+Asegúrese de que el pestillo azul está en el lado derecho cuando deslice la unidad de sustitución en.
+
++
+Notará un clic cuando la fuente de alimentación esté bloqueada en su lugar.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Alimentación deslizante hacia adentro]
+
+. Empuje el asa hacia abajo contra el cuerpo de la PSU.
+. Si va a sustituir ambas fuentes de alimentación, repita los pasos 2 a 6 para sustituir la segunda fuente de alimentación.
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Conecte los cables de alimentación a las unidades sustituidas y aplique alimentación"].
+
+
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

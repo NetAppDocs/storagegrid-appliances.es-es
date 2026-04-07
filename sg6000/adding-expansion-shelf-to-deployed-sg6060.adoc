@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, expansion shelf, expansion, drive, disk, install, installing, installation, add, adding, expand 
 summary: Para aumentar la capacidad de almacenamiento, se pueden añadir una o dos bandejas de expansión a un SG6060 que se pone en marcha en un sistema StorageGRID. 
 ---
-= Añada la bandeja de expansión al SG6060 implementado
+= Agrega una bandeja de expansión a un dispositivo SG6060 ya implementado
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -185,7 +185,7 @@ Cuando se completa el reinicio, se muestra la pestaña *Tareas* con selecciones 
 
 . Compruebe el estado del nodo de almacenamiento del dispositivo y las nuevas bandejas de ampliación.
 +
-.. En Grid Manager, seleccione *NODES* y verifique que el nodo de almacenamiento del dispositivo tenga un icono de marca de verificación verde.
+.. En el Grid Manager, selecciona *Nodes* y verifica que el Storage Node del appliance tenga un icono de marca de verificación verde.
 +
 El icono de marca de verificación verde significa que no hay alertas activas y el nodo está conectado a la cuadrícula. Para obtener una descripción de los iconos de nodo, consulte https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Supervise los estados de conexión de los nodos"^].
 

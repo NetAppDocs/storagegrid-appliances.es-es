@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
 summary: 'Para los controladores de almacenamiento que actualmente utilizan SANtricity OS 08.42.20.00 \(11.42\) o posterior, debe utilizar Grid Manager para aplicar una actualización.' 
 ---
-= Actualice el sistema operativo SANtricity en las controladoras de almacenamiento SG6000 mediante Grid Manager
+= Actualiza el SO SANtricity en los controladores de almacenamiento SG6000 con Grid Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -114,7 +114,7 @@ CAUTION: No apruebe la actualización del sistema operativo SANtricity para un n
 
 NOTE: Si es importante el orden en el que se actualizan los nodos, apruebe los nodos o grupos de nodos de uno en uno y espere hasta que se complete la actualización en cada nodo antes de aprobar el siguiente.
 
-** Seleccione uno o más botones *aprobar* para agregar uno o más nodos a la cola de actualización de SANtricity OS. El botón *Aprobar* está desactivado si el estado no es nominal.
+** Selecciona uno o varios botones *Aprobar* para añadir uno o varios nodos a la cola de actualización del SO SANtricity. El botón *Aprobar* está desactivado si el estado no es Nominal.
 +
 Después de seleccionar *aprobar*, el proceso de actualización determina si se puede actualizar el nodo. Si se puede actualizar un nodo, se agrega a la cola de actualización.
 
@@ -167,7 +167,7 @@ El nodo no tiene una controladora de almacenamiento que pueda gestionar el siste
 
 
  a| 
-El archivo del sistema operativo SANtricity no es compatible con este nodo.
+El archivo SANtricity OS no es compatible con este nodo.
  a| 
 El nodo requiere un archivo de sistema operativo SANtricity diferente al que seleccionó.
 Después de completar la actualización actual, descargue el archivo de sistema operativo SANtricity correcto para el nodo y repita el proceso de actualización.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, storage node, storage appliance, controller, e2800, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
 summary: 'Para aplicar una actualización a las controladoras de almacenamiento que actualmente utilizan SANtricity OS con una antigüedad superior a 08.42.20.00 \(11.42\), debe utilizar el procedimiento del modo de mantenimiento.' 
 ---
-= Actualice el sistema operativo SANtricity en la controladora E4000 usando el modo de mantenimiento
+= Actualiza el sistema operativo SANtricity en el controlador SG5800 E4000 usando el modo de mantenimiento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: 'Para aplicar una actualización a las controladoras de almacenamiento 
 
 [role="lead"]
 Puede usar el modo de mantenimiento para actualizar SANtricity OS en la controladora E4000.
-
-Para las controladoras de almacenamiento que utilizan actualmente el sistema operativo SANtricity con una versión anterior a 08.42.20.00 (11.42), debe utilizar el procedimiento del modo de mantenimiento para aplicar una actualización.
 
 
 NOTE: Para las controladoras de almacenamiento que actualmente utilizan un sistema operativo SANtricity posterior a 08.42.20.00 (11,42), se recomienda hacerlo link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Utilice Grid Manager para aplicar una actualización"]. Sin embargo, puede usar el procedimiento de modo de mantenimiento si lo prefiere o si el soporte técnico le indica hacerlo.
@@ -54,7 +52,7 @@ NOTE: Active los archivos de actualización inmediatamente. No diferir la activa
 El dispositivo puede tardar hasta 20 minutos en reiniciarse y reincorporarse a la red.  Para confirmar que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 
 +
-... En el Administrador de cuadrícula, seleccione *NODOS*.
+... En el Grid Manager, selecciona *Nodos*.
 ... Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg1000, SG100, power off, turn off, shut off, shutdown, shut down, 
 summary: Apague el dispositivo de servicios para realizar el mantenimiento del hardware. 
 ---
-= Apague el SG100 o el SG1000
+= Apagar el dispositivo de servicios SG100 o SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

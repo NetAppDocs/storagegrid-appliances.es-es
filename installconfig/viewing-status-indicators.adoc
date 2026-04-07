@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: status, indicators, lights, leds, light, led, display, switch , button, power, reset, identify, alarm, ssd, indicator, boot codes, boot, code, start, startup, start up, start-up, progress 
 summary: Los aparatos y controladores incluyen indicadores que le ayudan a determinar el estado de los componentes del aparato. 
 ---
-= Ver códigos e indicadores de estado
+= Ver los indicadores de estado y los códigos de los dispositivos StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -118,7 +118,7 @@ Identifique el LED
  a| 
 * Azul, parpadeando: Identifica el dispositivo en el armario o rack.
 * Azul, sólido: Identifica el dispositivo en el armario o rack.
-* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
 
 
 |===
@@ -289,7 +289,7 @@ Identifique el LED
  a| 
 * Azul, parpadeando: Identifica el dispositivo en el armario o rack.
 * Azul, sólido: Identifica el dispositivo en el armario o rack.
-* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
 
 
 |===
@@ -315,6 +315,176 @@ Indicadores de SSD::
 +
 --
 En la siguiente figura se muestran los indicadores SSD en los dispositivos SG110 y SG1100.
+
+image::../media/ssd_indicators.png[Indicadores SSD]
+
+[cols="1a,2a,2a"]
+|===
+| LED | Mostrar | Estado 
+
+
+ a| 
+1
+ a| 
+Estado/fallo de la unidad
+ a| 
+* Azul (sólido): La unidad está en línea
+* Ámbar (sólido): Fallo de la unidad
+* Desactivado: La ranura está vacía
+
+
+
+
+ a| 
+2
+ a| 
+Unidad activa
+ a| 
+Azul (parpadeante): Se está accediendo a la unidad
+
+|===
+--
+
+
+--
+.SG120 y SG1200
+--
+El dispositivo incluye indicadores que le ayudan a determinar el estado del controlador del dispositivo y de los SSD:
+
+* <<appliance_indicators_sg120_sg1200,Botones e indicadores del aparato>>
+* <<general_boot_codes_sg120_sg1200,códigos generales de arranque>>
+* <<ssd_indicators_sg120_sg1200,Indicadores de SSD>>
+
+
+Usa esta información para ayudar a link:troubleshooting-hardware-installation-sg120-and-sg1200.html["solucionar problemas de instalación de hardware de SG120 y SG1200"].
+
+[[appliance_indicators_sg120_sg1200]]
+Botones e indicadores del aparato::
++
+--
+La siguiente figura muestra los indicadores y botones de la parte frontal de los dispositivos SG120 y SG1200.
+
+image::../media/sg120_sg1200_front_indicators.png[Indicadores frontales - SG120 y SG1200]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | Mostrar | Estado 
+
+
+ a| 
+1
+ a| 
+Botón de encendido
+ a| 
+* Azul: El aparato está encendido.
+* Apagado: El aparato está apagado.
+
+
+
+
+ a| 
+2
+ a| 
+Botón de reinicio
+ a| 
+Utilice este botón para realizar un restablecimiento completo del controlador.
+
+
+
+ a| 
+3
+ a| 
+Botón identificar
+ a| 
+Con BMC, este botón se puede configurar en Blink, On (Sólido) o Off.
+
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+
+
+
+
+ a| 
+4
+ a| 
+LED de estado
+ a| 
+* Ámbar, sólido: Se ha producido un error.
++
+*Nota:* para ver los códigos de arranque y error, link:accessing-bmc-interface.html["Acceda a la interfaz de BMC"].
+
+* Desactivado: No hay errores.
+
+
+
+
+ a| 
+5
+ a| 
+PFR
+ a| 
+Esta luz no es utilizada por los appliances SG120 y SG1200 y permanece apagada.
+
+|===
+--
+
+
+La siguiente figura muestra la ubicación de la fuente de alimentación y los LED de identificación en la parte posterior del SG120 y el SG1200. En los puertos del appliance hay LED de estado y actividad adicionales. Estos LED pueden variar según el modelo de appliance.
+
+image::../media/sg120_sg1200_rear_leds.png[LEDs traseros SG120 y SG1200]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
+
+
+|===
+[[general_boot_codes_sg120_sg1200]]
+códigos generales de arranque::
++
+--
+Durante el arranque o después de un reinicio duro del aparato, ocurre lo siguiente:
+
+. El controlador de administración de la placa base (BMC) registra los códigos de la secuencia de arranque, incluidos los errores que se produzcan.
+. El botón de encendido se ilumina.
+. Si se produce algún error durante el arranque, el LED de alarma se enciende.
++
+Para ver los códigos de error y arranque, link:accessing-bmc-interface.html["Acceda a la interfaz de BMC"].
+
+
+
+--
+
+
+[[ssd_indicators_sg120_sg1200]]
+Indicadores de SSD::
++
+--
+La siguiente figura muestra los indicadores SSD en los dispositivos SG120 y SG1200.
 
 image::../media/ssd_indicators.png[Indicadores SSD]
 
@@ -926,7 +1096,7 @@ Identifique el LED
  a| 
 * Azul, parpadeando: Identifica el dispositivo en el armario o rack.
 * Azul, sólido: Identifica el dispositivo en el armario o rack.
-* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
 
 
 |===
@@ -1091,7 +1261,7 @@ Identifique el LED
  a| 
 * Azul, parpadeando: Identifica el dispositivo en el armario o rack.
 * Azul, sólido: Identifica el dispositivo en el armario o rack.
-* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
 
 
 |===
@@ -1136,6 +1306,181 @@ Estado/fallo de la unidad
 
 
 * Nota: * Si se inserta una nueva SSD en funcionamiento en un nodo StorageGRID SGF6112 o SG6160 en funcionamiento, los LED de la SSD deben parpadear inicialmente, pero dejar de parpadear tan pronto como el sistema determine que la unidad tiene suficiente capacidad y es funcional.
+
+
+
+ a| 
+2
+ a| 
+Unidad activa
+ a| 
+Azul (parpadeante): Se está accediendo a la unidad
+
+|===
+--
+
+
+.Información relacionada
+https://mysupport.netapp.com/site/global/dashboard["Soporte de NetApp"^]
+
+--
+.SG6200
+--
+El dispositivo incluye indicadores que le ayudan a determinar el estado del controlador del dispositivo y de los SSD:
+
+* <<appliance_indicators_SG6200,Botones e indicadores del aparato>>
+* <<general_boot_codes_SG6200,códigos generales de arranque>>
+* <<ssd_indicators_SG6200,Indicadores de SSD>>
+
+
+Usa esta información para ayudar a link:troubleshooting-hardware-installation-sg6200.html["solucionar problemas de instalación del hardware SG6200"].
+
+[[appliance_indicators_SG6200]]
+Botones e indicadores del aparato::
++
+--
+La siguiente figura muestra los indicadores y botones de la parte frontal de los dispositivos SG6200.
+
+image::../media/s25_front_indicators.png[Indicadores frontales - SG6200]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | Mostrar | Estado 
+
+
+ a| 
+1
+ a| 
+Botón de encendido
+ a| 
+* Azul: El aparato está encendido.
+* Apagado: El aparato está apagado.
+
+
+
+
+ a| 
+2
+ a| 
+Botón de reinicio
+ a| 
+Utilice este botón para realizar un restablecimiento completo del controlador.
+
+
+
+ a| 
+3
+ a| 
+Botón identificar
+ a| 
+Con BMC, este botón se puede configurar en Blink, On (Sólido) o Off.
+
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+
+
+
+
+ a| 
+4
+ a| 
+LED de estado
+ a| 
+* Ámbar, sólido: Se ha producido un error.
++
+*Nota:* para ver los códigos de arranque y error, link:accessing-bmc-interface.html["Acceda a la interfaz de BMC"].
+
+* Desactivado: No hay errores.
+
+
+
+
+ a| 
+5
+ a| 
+PFR
+ a| 
+Esta luz no es utilizada por los appliances SG6200 y permanece apagada.
+
+|===
+--
+
+
+La siguiente figura muestra la ubicación de la fuente de alimentación y los LED de identificación en la parte posterior del SGF6212 y SG6200-CN. En los puertos del appliance hay LED de estado y actividad adicionales. Estos LED pueden variar según el modelo de appliance.
+
+image::../media/s25_rear_leds.png[LEDs traseros SGF6212 y SG6200-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Llamada | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED de fuente de alimentación
+ a| 
+* Verde, sólido: Alimentación aplicada al aparato, el botón de encendido está encendido.
+* Verde, parpadeante: Se ha aplicado la alimentación al aparato, el botón de encendido está apagado.
+* Apagado: No se ha aplicado alimentación al aparato.
+* Ámbar: Fallo en la fuente de alimentación.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique el LED
+ a| 
+* Azul, parpadeando: Identifica el dispositivo en el armario o rack.
+* Azul, sólido: Identifica el dispositivo en el armario o rack.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
+
+
+|===
+[[general_boot_codes_SG6200]]
+códigos generales de arranque::
++
+--
+Durante el arranque o después de un reinicio duro del aparato, ocurre lo siguiente:
+
+. El controlador de administración de la placa base (BMC) registra los códigos de la secuencia de arranque, incluidos los errores que se produzcan.
+. El botón de encendido se ilumina.
+. Si se produce algún error durante el arranque, el LED de alarma se enciende.
++
+Para ver los códigos de error y arranque, link:accessing-bmc-interface.html["Acceda a la interfaz de BMC"].
+
+
+
+--
+
+
+[[ssd_indicators_SG6200]]
+Indicadores de SSD::
++
+--
+La siguiente figura muestra los indicadores de SSD en el dispositivo SGF6212 o SG6260.
+
+image::../media/ssd_indicators.png[Indicadores SSD]
+
+[cols="1a,2a,2a"]
+|===
+| LED | Mostrar | Estado 
+
+
+ a| 
+1
+ a| 
+Estado/fallo de la unidad
+ a| 
+* Azul (sólido): La unidad está en línea
+* Ámbar (sólido): Fallo de la unidad
+* Desactivado: La ranura está vacía
+
+
+*Nota:* Si se inserta una nueva unidad SSD en funcionamiento en un nodo StorageGRID SGF6212 o SG6260 en funcionamiento, los LED de la unidad SSD deberían parpadear inicialmente, pero dejarán de hacerlo en cuanto el sistema determine que la unidad tiene capacidad suficiente y es funcional.
 
 
 

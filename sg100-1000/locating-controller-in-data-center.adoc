@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, locate, find, locating, finding, identify, blue led, blue light 
 summary: Localice la controladora para que pueda realizar tareas de mantenimiento o actualizaciones del hardware. 
 ---
-= Localice SG100 o SG1000 en el centro de datos
+= Ubicar un SG100 o SG1000 en un centro de datos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

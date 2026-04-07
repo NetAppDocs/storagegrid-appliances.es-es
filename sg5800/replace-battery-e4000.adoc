@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sustituya la batería en E4000 (SG5800)
+= Sustituir la batería del controlador E4000 en un SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,7 +23,7 @@ Si piensa sustituir una batería con errores, debe tener:
 * Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
 * Acceso a SANtricity System Manager:
 +
-** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+** En Grid Manager, selecciona *Nodes* > *_appliance node_* > *SANtricity System Manager*. La información del controlador está en https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
 ** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
 
 
@@ -245,7 +245,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 . Confirme que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 +
-.. En el Administrador de cuadrícula, seleccione *NODOS*.
+.. En el Grid Manager, selecciona *Nodos*.
 .. Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 +
 

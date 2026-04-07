@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sg5700, sg5712, sg5712x, sg5760, sg5760x, storage appliance 
 summary: 'El dispositivo SG5700 StorageGRID es una plataforma informática y de almacenamiento integrada que funciona como nodo de almacenamiento en un grid StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales \(basados en software\).' 
 ---
-= Dispositivos SG5700: Información general
+= Dispositivos StorageGRID SG5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

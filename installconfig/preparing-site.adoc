@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: site prep, site preparation, preparing site, site requirements, requirements, site, dimensions, weight, weights, temperature, humidity, altitude, airflow, heat, wiring, power, grounding, facility 
 summary: Antes de instalar el dispositivo, debe asegurarse de que el sitio y el armario o rack que desee usar cumplan con las especificaciones de un dispositivo StorageGRID. 
 ---
-= Prepare el sitio
+= Prepara el sitio para la instalación del dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,6 +33,13 @@ De 120 a 240 voltios de CA
 SG110 y SG1100
  a| 
 100 a 240 voltios CA
+
+
+
+ a| 
+SG120 y SG1200
+ a| 
+240 voltios CA
 
 
 
@@ -90,12 +97,22 @@ SG6160
  a| 
 240 voltios CA
 
+
+
+ a| 
+SGF6212
+ a| 
+240 voltios CA
+
+
+
+ a| 
+SG6260
+ a| 
+240 voltios CA
+
 |===
 . Confirme que su ubicación cumple los requisitos de alimentación del aparato:
-+
-
-NOTE: Las fuentes de alimentación de los dispositivos StorageGRID están clasificadas para vatios significativamente superiores a los que utiliza el hardware del dispositivo StorageGRID, incluso durante períodos de consumo máximo de energía. NetApp recomienda utilizar las cifras de la siguiente tabla para determinar si una propuesta de distribución de rack que incluye dispositivos StorageGRID es compatible con el presupuesto de energía de rack.
-
 +
 [cols="1a,1a,1a"]
 |===
@@ -135,6 +152,24 @@ SG1100
 422
  a| 
 700
+
+
+
+ a| 
+SG120
+ a| 
+432
+ a| 
+519
+
+
+
+ a| 
+SG1200
+ a| 
+557
+ a| 
+668
 
 
 
@@ -208,7 +243,29 @@ SG6160
  a| 
 1800
 
+
+
+ a| 
+SGF6212
+ a| 
+673
+ a| 
+808
+
+
+
+ a| 
+SG6260
+ a| 
+580
+ a| 
+696
+
 |===
++
+
+NOTE: Las fuentes de alimentación de los dispositivos StorageGRID tienen una potencia nominal significativamente superior a la que utiliza el hardware de los dispositivos StorageGRID, incluso durante los periodos de máximo consumo de energía. NetApp recomienda utilizar https://hwu.netapp.com["Hardware Universe de NetApp"^] para determinar si una disposición de bastidor propuesta que incluya dispositivos StorageGRID es compatible con el presupuesto de energía de tu bastidor.
+
 . Obtenga un armario o rack de 19 pulgadas (48,3 cm) para adaptarse a estantes del siguiente tamaño (sin cables).
 +
 [role="tabbed-block"]
@@ -262,6 +319,55 @@ SG6160
 43,83 lb
 
 (19,88 kg)
+
+|===
+--
+.SG120 y SG1200
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modelo de dispositivo | Altura | Anchura | Profundidad | Peso máximo 
+
+
+ a| 
+SG120
+ a| 
+1,70 pda
+
+(4,32 in)
+ a| 
+18,98 pda
+
+(48,21 cm)
+ a| 
+30.56 pulg.
+
+(77,62 cm)
+ a| 
+42.13 lb.
+
+(19,11 kg)
+
+
+
+ a| 
+SG1200
+ a| 
+1,70 pda
+
+(4,32 in)
+ a| 
+18,98 pda
+
+(48,21 cm)
+ a| 
+30.56 pulg.
+
+(77,62 cm)
+ a| 
+43.43 lb.
+
+(19,70 kg)
 
 |===
 --
@@ -553,15 +659,90 @@ Bandeja de expansión (SG6160): Opcional
 
 |===
 --
+.SG6200
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modelo/tipo de dispositivo de bandeja | Altura | Anchura | Profundidad | Peso máximo 
+
+
+ a| 
+Dispositivo SGF6212
+ a| 
+1,70 pulg. (4,32 cm)
+ a| 
+18,98 pulg. (48,21 cm)
+ a| 
+30,56 pulg. (77,62 cm)
+ a| 
+55,98 lb (25,39 kg)
+
+
+
+ a| 
+Controlador de computación SG6200-CN (SG6260)
+ a| 
+1,70 pulg. (4,32 cm)
+ a| 
+18,98 pulg. (48,21 cm)
+ a| 
+30,56 pulg. (77,62 cm)
+ a| 
+44,0 lb (19,70 kg)
+
+
+
+ a| 
+Estante controlador E4060 (SG6260)
+ a| 
+6,87 pda
+
+(17,45 in)
+ a| 
+17,64 pda
+
+(44,8 in)
+ a| 
+36,3 pda
+
+(97,16 in)
+ a| 
+223,58 lb
+
+(101,42 kg)
+
+
+
+ a| 
+Bandeja de expansión (SG6260) - Opcional
+ a| 
+6,87 pda
+
+(17,45 in)
+ a| 
+17,64 pda
+
+(44,8 in)
+ a| 
+36,3 pda
+
+(97,16 in)
+ a| 
+223,58 lb
+
+(101,42 kg)
+
+|===
+--
 ====
 . Decida dónde va a instalar el aparato.
 +
 
-CAUTION: Cuando instale la bandeja de controladoras E2860 o E4000 o las bandejas de expansión opcionales, instale el hardware de la parte inferior a la parte superior del rack o armario para evitar que el equipo se vuelque. Para garantizar que el equipo más pesado se encuentre en la parte inferior del armario o rack, instale la controladora SG6000-CN o SG6100-CN por encima de la bandeja de controladoras E2860 o E4000 y las bandejas de expansión.
+CAUTION: Cuando instales el estante del controlador E2860 o E4000 o las bandejas de expansión opcionales, instala el hardware desde la parte inferior hasta la superior del rack o gabinete para evitar que el equipo se vuelque. Para asegurarte de que el equipo más pesado esté en la parte inferior del gabinete o rack, instala el controlador SG6000-CN, SG6100-CN o SG6200-CN encima del estante del controlador E2860 o E4000 y de las bandejas de expansión.
 
 +
 
-NOTE: Antes de realizar la instalación, compruebe que los cables que se suministran con un dispositivo SG6000 o SG6100, o los cables que suministra, sean lo suficientemente largos para la disposición planificada.
+NOTE: Antes de proceder a la instalación, verifica que los cables suministrados con los dispositivos SG6000, SG6100 o SG6200, o los cables que tú proporciones, sean lo suficientemente largos para la disposición prevista.
 
 . Instale los switches de red necesarios. Consulte link:https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp"^] para obtener información sobre compatibilidad.
 

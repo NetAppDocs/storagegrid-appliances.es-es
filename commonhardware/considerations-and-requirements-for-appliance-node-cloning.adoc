@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, clone appliance node, cloning appliance node 
 summary: Antes de clonar un nodo de dispositivo, debe comprender las consideraciones y los requisitos. 
 ---
-= Consideraciones y requisitos para el clonado de nodos de dispositivos
+= Requisitos para la clonación de nodos de dispositivos StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -65,18 +65,20 @@ NOTE: El uso de la red de administrador de 1 GbE para la transferencia de datos 
 
 * Determine si utilizará el cifrado de nodo mediante un servidor de administración de claves (KMS) en el dispositivo de destino, de modo que pueda habilitar el cifrado de nodo durante la instalación inicial del dispositivo de destino antes de la clonación.  Puede verificar si el cifrado de nodo está habilitado en el nodo del dispositivo de origen como se describe enlink:../installconfig/optional-enabling-node-encryption.html["habilitar el cifrado de nodo"] .
 +
-El nodo de origen y el dispositivo de destino pueden tener diferentes configuraciones de cifrado de nodo con las siguientes excepciones.  No se admite la clonación de nodos desde orígenes de nodos no cifrados a destinos con nodos cifrados para los siguientes dispositivos:
+El nodo de origen y el dispositivo de destino pueden tener diferentes configuraciones de cifrado de nodos con las siguientes excepciones. La clonación de nodos no está soportada desde orígenes de nodos no cifrados a destinos de nodos cifrados para los siguientes dispositivos:
 
 +
 ** Un dispositivo de nodo SGF6112 sin cifrado de nodo a un dispositivo SGF6112 con cifrado de nodo
 ** Un dispositivo de nodo SG1100 sin cifrado de nodo a un dispositivo SG1100 con cifrado de nodo
+** Un dispositivo de nodo SG1200 sin cifrado de nodo a un dispositivo de nodo SG1200 con cifrado de nodo
 ** Un dispositivo de nodo SG110 sin cifrado de nodo a un dispositivo SG110 con cifrado de nodo
+** Un dispositivo de nodo SG120 sin cifrado de nodo a un dispositivo de nodo SG120 con cifrado de nodo
 
 
 +
 El cifrado y descifrado de datos se realiza automáticamente durante la transferencia de datos y cuando el nodo de destino se reinicia y se une a la red.
 
-* Determine si el modo RAID del dispositivo de destino debe cambiarse desde su configuración predeterminada, por lo que puede especificar esta información durante la instalación inicial del dispositivo de destino antes de realizar la clonación. Puede ver información acerca del modo RAID actual del nodo del dispositivo de origen en la página *NODES* de Grid Manager. Seleccione la pestaña *Hardware* del aparato.
+* Determina si el modo RAID en el dispositivo de destino debe cambiarse de su configuración predeterminada, para que puedas especificar esta información durante la instalación inicial del dispositivo de destino antes de la clonación. Puedes ver información sobre el modo RAID actual del nodo del dispositivo de origen en la página *Nodes* de Grid Manager. Selecciona la pestaña *Hardware* para el dispositivo.
 +
 El nodo de origen y el dispositivo de destino pueden tener diferentes ajustes de RAID.
 

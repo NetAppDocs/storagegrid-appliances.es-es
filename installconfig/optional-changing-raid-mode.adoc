@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, raid, raid mode, change, changing, modify, DDP, ddp16, RAID 6 
 summary: En algunos modelos de dispositivos, puede cambiar a un modo RAID diferente en el dispositivo para satisfacer los requisitos de almacenamiento y recuperación. Solo puede cambiar el modo antes de implementar el nodo de almacenamiento del dispositivo. 
 ---
-= Opcional: Cambio del modo RAID (SG5760, SG5860, SG6000 y SG6160)
+= Cambiar el modo RAID para un SG5760, SG5860, SG6000, SG6160 o SG6260
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,16 @@ summary: En algunos modelos de dispositivos, puede cambiar a un modo RAID difere
 En algunos modelos de dispositivos, puede cambiar a un modo RAID diferente en el dispositivo para satisfacer los requisitos de almacenamiento y recuperación. Solo puede cambiar el modo antes de implementar el nodo de almacenamiento del dispositivo.
 
 Si utiliza ConfigBuilder para generar un archivo JSON, puede cambiar el modo RAID automáticamente. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
+
+Puedes cambiar el modo RAID en los siguientes dispositivos:
+
+* SG5760
+* SG5860
+* SGF6024
+* SG6060
+* SG6160
+* SG6260
+
 
 .Acerca de esta tarea
 Si el dispositivo es compatible con él, puede elegir una de las siguientes opciones de configuración de volumen:
@@ -25,7 +35,7 @@ NOTE: Los tamaños de volúmenes no son consistentes en todos los tipos de DDP y
 +
 ** En comparación con RAID 6, DDP ofrece un mejor rendimiento del sistema, menores tiempos de recompilación tras los fallos de una unidad y facilidad de gestión.
 ** Se crea un pool de discos por dispositivo de almacenamiento o bandeja de expansión.
-** DDP proporciona protección contra pérdida de cajón en dispositivos SG5760, SG5860 y SG6160.
+** DDP proporciona protección contra la pérdida de cajones en los appliances SG5760, SG5860, SG6160 y SG6260.
 +
 
 NOTE: DDP no proporciona protección contra pérdida de cajón en dispositivos SG6060 debido a los dos SSD. La protección contra pérdida de cajón resulta efectiva en cualquier bandeja de expansión que se añada a un SG6060.
@@ -120,6 +130,30 @@ Aparece la página de inicio del instalador de dispositivos de StorageGRID.
 
 --
 .SG6160
+--
+.Antes de empezar
+* Está utilizando cualquier cliente que pueda conectarse a StorageGRID.
+* El cliente tiene un  https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
+
+
+.Pasos
+. Abra un explorador e introduzca una de las direcciones IP para la controladora de computación del dispositivo.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` Es la dirección IP de la controladora de computación (no la controladora de almacenamiento) en cualquiera de las tres redes StorageGRID.
+
++
+Aparece la página de inicio del instalador de dispositivos de StorageGRID.
+
+. Seleccione *Avanzado* > *modo RAID*.
+. En la página *Configurar el modo RAID*, seleccione el modo RAID deseado en la lista desplegable modo.
+. Haga clic en *Guardar*.
+
+
+--
+.SG6260
 --
 .Antes de empezar
 * Está utilizando cualquier cliente que pueda conectarse a StorageGRID.

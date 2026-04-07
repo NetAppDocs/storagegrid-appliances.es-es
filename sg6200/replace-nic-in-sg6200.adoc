@@ -1,0 +1,152 @@
+---
+permalink: sg6200/replace-nic-in-sg6200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200, storage node, storage appliance, Replacing, replace, NIC, network interface card 
+summary: 'Es posible que tengas que sustituir una tarjeta de interfaz de red (NIC) en el SGF6212 si no funciona de forma óptima o si ha fallado.' 
+---
+= Sustituye el NIC interno en el SGF6212 o SG6200-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que tengas que sustituir una tarjeta de interfaz de red (NIC) interna en el SGF6212 o SG6200-CN si no está funcionando de forma óptima o si ha fallado.
+
+.Acerca de esta tarea
+Para evitar interrupciones del servicio, confirme que todos los demás nodos de almacenamiento están conectados a la cuadrícula antes de iniciar la sustitución de la tarjeta de interfaz de red (NIC) o sustituya la NIC durante una ventana de mantenimiento programada cuando se acepten períodos de interrupción del servicio. Consulte la información sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["supervisar los estados de conexión de los nodos"^].
+
+
+CAUTION: Si alguna vez ha utilizado una regla de ILM que crea solo una copia de un objeto, debe sustituir la NIC durante una ventana de mantenimiento programada porque podría perder temporalmente el acceso a esos objetos durante este procedimiento. Consulte la información sobre https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"^].
+
+.Antes de empezar
+* Tiene la NIC de sustitución correcta.
+* Tienes link:locating-sg6200-in-data-center.html["ubicó físicamente el dispositivo SGF6212 o el controlador SG6200-CN"] donde estás reemplazando la NIC en el centro de datos.
++
+
+NOTE: Se requiere un link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["apagado controlado del aparato"] antes de retirar el aparato del bastidor.
+
+* Has desconectado todos los cables y link:reinstalling-sg6200-cover.html["ha quitado la cubierta del aparato"].
+* Usted ha determinado el link:verify-component-to-replace.html["Ubicación de la NIC que se va a sustituir"].
++
+Las tres NIC del dispositivo están en tres conjuntos de elevadores en las siguientes posiciones del chasis (parte trasera del dispositivo con la cubierta superior retirada, como se muestra):
+
++
+image:../media/drw_s2025_io_numbers_ieops-2554.svg["Ubicación de los NIC en el dispositivo"]
+
+
+
+
+
+== Paso 1: quitar la NIC
+
+[role="tabbed-block"]
+====
+.NIC 1/NIC 2
+--
+.Pasos
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Localice el conjunto elevador que contiene la NIC en la parte posterior del aparato.
+. Gira el pestillo de bloqueo azul del elevador con la NIC averiada hacia arriba y ábrelo.
++
+image:../media/drw_s2025_io_1_2_replace_ieops-2555.svg["Extracción de NIC 1 o NIC 2 del conjunto del elevador"]
+
+. Levanta con cuidado el conjunto del elevador con la NIC averiada utilizando los orificios marcados en azul. Mueve el conjunto del elevador hacia la parte frontal del chasis mientras lo levantas para permitir que los conectores externos de la NIC instalada salgan del chasis.
+. Coloca el elevador sobre una superficie plana antiestática con el marco metálico hacia abajo para acceder a la NIC.
+. Abre el pestillo azul de la tarjeta NIC averiada y extráela con cuidado del conjunto del elevador. Balancea ligeramente la tarjeta NIC para ayudar a extraerla de su conector. No uses fuerza excesiva.
++
+image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Extracción de una tarjeta IO del conjunto elevador"]
+
+. Coloca el riser y la NIC sobre una superficie plana antiestática.
+
+
+--
+.NIC 3
+--
+.Pasos
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Gira el bloqueo azul del elevador con la NIC averiada a la posición abierta.
++
+image:../media/drw_s2025_io_3_replace_ieops-2556.svg["Extracción de la NIC 3 del conjunto del elevador"]
+
+. Levanta con cuidado el ensamblaje del elevador hacia arriba usando el orificio marcado en azul y el borde del elevador. Mueve el ensamblaje del elevador hacia la parte frontal del chasis mientras lo levantas para permitir que los conectores externos de la NIC instalada salgan del chasis.
+. Coloca el elevador sobre una superficie plana antiestática con el marco metálico hacia abajo para acceder a la NIC.
+. Abre el pestillo azul de la tarjeta NIC averiada y extráela con cuidado del conjunto del elevador. Balancea ligeramente la tarjeta NIC para ayudar a extraerla de su conector. No uses fuerza excesiva.
++
+image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Extracción de una tarjeta IO del conjunto elevador"]
+
+. Coloca el riser y la NIC sobre una superficie plana antiestática.
+
+
+--
+====
+
+
+== Paso 2: reinstalar el NIC interno
+
+Instale la NIC de reemplazo en la misma ubicación que la que se quitó.
+
+[role="tabbed-block"]
+====
+.NIC 1/NIC 2
+--
+.Pasos
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Retire la NIC de repuesto de su embalaje.
+. Instala la NIC de repuesto en el conjunto del elevador.
++
+.. Asegúrese de que el pestillo azul está en la posición abierta.
++
+image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Instalar una tarjeta IO en el conjunto elevador"]
+
+.. Alinea la NIC con su conector en el conjunto del elevador. Presiona con cuidado la NIC en el conector hasta que quede completamente asentada y luego cierra el pestillo azul.
+
+
+. Vuelve a instalar el conjunto del elevador en el chasis.
++
+.. Localiza el orificio de alineación en el ensamblaje del elevador que se alinea con un pasador guía en la placa del sistema para asegurar la correcta colocación del ensamblaje del elevador.
++
+image:../media/drw_s2025_io_1_2_reinstall_ieops-2685.svg["Sustitución de NIC 1 o NIC 2 en el conjunto del elevador"]
+
+.. Coloque el conjunto de elevador en el chasis, asegurándose de que esté alineado con el conector de la placa del sistema y el pasador guía.
+.. Presione con cuidado el conjunto de la tarjeta vertical en su lugar a lo largo de su línea central, junto a los orificios marcados en azul, hasta que esté completamente asentado.
+
+
+. Si no tiene que realizar ningún otro procedimiento de mantenimiento en el aparato, vuelva a instalar la cubierta del aparato, vuelva a colocar el aparato en el bastidor, conecte los cables y conecte la alimentación.
+
+
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.
+
+--
+.NIC 3
+--
+.Pasos
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Retire la NIC de repuesto de su embalaje.
+. Instala la NIC de repuesto en el conjunto del elevador.
++
+.. Asegúrese de que el pestillo azul está en la posición abierta.
++
+image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Instalar una tarjeta IO en el conjunto elevador"]
+
+.. Alinea la NIC con su conector en el conjunto del elevador. Presiona con cuidado la NIC en el conector hasta que quede completamente asentada y luego cierra el pestillo azul.
+
+
+. Vuelve a instalar el conjunto del elevador en el chasis.
++
+.. Coloca el conjunto del elevador en el chasis, asegurándote de que los bordes del conjunto del elevador se alineen correctamente con los bordes del chasis.
++
+image:../media/drw_s2025_IO_3_replace_ieops-2686.svg["Sustitución de NIC 3 en el conjunto del riser"]
+
+.. Presiona con cuidado el conjunto del elevador en su lugar a lo largo de su línea central, junto al orificio marcado en azul, hasta que esté completamente asentado.
+.. Gira el cierre azul del elevador a la posición de cerrado.
+
+
+. Retire las tapas protectoras de los puertos NIC en los que va a volver a instalar los cables.
+. Si no tiene que realizar ningún otro procedimiento de mantenimiento en el aparato, vuelva a instalar la cubierta del aparato, vuelva a colocar el aparato en el bastidor, conecte los cables y conecte la alimentación.
+
+
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.
+
+--
+====

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, cabling, wiring, connecting, cable, wire, connect 
 summary: Conecte los puertos de red del dispositivo o la controladora a la red de grid y la red de cliente opcional para StorageGRID. Para algunos dispositivos, también debe conectar el puerto de gestión del dispositivo al portátil de servicio o realizar conexiones entre los puertos de gestión de la controladora. 
 ---
-= Aparato por cable
+= Cablea un dispositivo o controlador StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -156,7 +156,7 @@ Transceptor QSFP+
  a| 
 100
  a| 
-Transceptor QFSP28
+Transceptor QSFP28
 
 |===
 +
@@ -344,7 +344,218 @@ Transceptor QSFP+
  a| 
 100
  a| 
-Transceptor QFSP28
+Transceptor QSFP28
+
+|===
++
+** En los modelos que admiten autonegociación como opción de velocidad de puerto, si se selecciona el modo de enlace de puerto fijo, puede ejecutar los puertos dedicados a la red de red de StorageGRID a una velocidad diferente a la de los puertos dedicados a la red cliente.
+** En los modelos que no admiten autonegociación como opción de velocidad de puerto, los cuatro puertos de red deben usar la misma velocidad de enlace.
+** Si piensa utilizar el modo de enlace de puerto fijo (predeterminado), conecte los puertos a la red de StorageGRID y a las redes de cliente, como se muestra en la tabla.
++
+[cols="1a,2a"]
+|===
+| Puerto | Conecta a... 
+
+
+ a| 
+Puerto 1
+ a| 
+Red de cliente (opcional)
+
+
+
+ a| 
+Puerto 2
+ a| 
+Red Grid
+
+
+
+ a| 
+Puerto 3
+ a| 
+Red de cliente (opcional)
+
+
+
+ a| 
+Puerto 4
+ a| 
+Red Grid
+
+|===
+** Si planea utilizar el modo de enlace de puerto agregado, conecte uno o varios puertos de red a uno o varios switches. Debe conectar al menos dos de los cuatro puertos para evitar tener un único punto de error. Si utiliza más de un switch para un único vínculo LACP, los switches deben ser compatibles con MLAG o equivalente.
+
+
+. Si tiene previsto utilizar la Red de administración para StorageGRID, conecte el puerto Red de administración del dispositivo a la Red de administración mediante un cable Ethernet.
+
+
+--
+.SG120 y SG1200
+--
+El puerto de gestión del dispositivo se conecta al portátil de servicio y los puertos de red del dispositivo a la red de grid y a la red de cliente opcional para StorageGRID.
+
+.Antes de empezar
+* Tiene un cable Ethernet RJ-45 para conectar el puerto de administración.
+* Tiene una de las siguientes opciones para los puertos de red. Estos elementos no se suministran con el aparato.
++
+** De uno a cuatro cables Twinax para conectar los cuatro puertos de red.
+** Para el SG120, de uno a cuatro transceptores SFP+ o SFP28 si planeas usar cables ópticos para los puertos.
+** Para el SG1200, de uno a cuatro transceptores QSFP+, QSFP28 o QSFP56 (solo NIC 200GbE) si planeas usar cables ópticos para los puertos.
+
+
+
+
+
+CAUTION: *Riesgo de exposición a la radiación láser* -- No desmonte ni retire ninguna parte de un transceptor SFP o QSFP. Puede que esté expuesto a la radiación láser.
+
+.Acerca de esta tarea
+Las siguientes figuras muestran los puertos de la parte posterior del aparato.
+
+Conexiones de puerto SG120:
+
+image::../media/sg120_connections.png[Conectores traseros SG120]
+
+Conexiones de puerto SG1200:
+
+image::../media/sg1200_connections.png[Conexiones de puerto SG1200]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo de puerto | Uso 
+
+
+ a| 
+1
+ a| 
+Puerto de gestión BMC en el dispositivo
+ a| 
+1 GbE (RJ-45).
+ a| 
+Se conecta a la red en la que se accede a la interfaz del BMC.
+
+
+
+ a| 
+2
+ a| 
+Cuatro puertos de red en el dispositivo
+ a| 
+Para el SG120:
+
+* 10/25 GbE
+
+
+Para el SG1200:
+
+* 10/25/40/100-GbE con NIC de 100G
+* 10/25/50/100/200-GbE (solo 200GbE NIC)
+
+ a| 
+Conéctate a la red Grid y a la red cliente para StorageGRID. Consulta link:gathering-installation-information-sg120-and-sg1200.html#port-bond-modes["Modos de enlace de puertos (SG120 y SG1200)"]
+
+
+
+ a| 
+3
+ a| 
+Puerto de red de administración en el dispositivo
+ a| 
+1 GbE (RJ-45).
+
+*Importante:* Este puerto funciona solo a 1/10-GbE (RJ-45) y no admite velocidades de 100 megabits.
+ a| 
+Conecta el dispositivo a la red de administración para StorageGRID.
+
+
+
+ a| 
+ a| 
+El puerto RJ-45 más a la derecha del aparato
+ a| 
+1 GbE (RJ-45).
+
+*Importante:* Este puerto funciona solo a 1/10-GbE (RJ-45) y no admite velocidades de 100 megabits.
+ a| 
+* Se puede unir al puerto de administración 1 si desea una conexión redundante a la red de administración.
+* Se puede dejar desconectado y disponible para acceso local temporal (IP 169.254.0.1).
+* Durante la instalación, se puede usar para conectar el dispositivo a un portátil de servicio si las direcciones IP asignadas por DHCP no están disponibles.
+
+
+|===
+.Pasos
+. Conecte el puerto de gestión BMC del dispositivo a la red de gestión mediante un cable Ethernet.
++
+Aunque esta conexión es opcional, se recomienda facilitar el soporte.
+
+. Conecte los puertos de red del dispositivo a los switches de red adecuados utilizando cables Twinax o cables ópticos y transceptores.
++
+Consulte la siguiente tabla para conocer el equipo necesario para su hardware y velocidad de enlace.
+
++
+[cols="2a,2a"]
+|===
+| Velocidad de enlace SG120 (GbE) | Equipo necesario 
+
+
+ a| 
+10
+ a| 
+Transceptor SFP+
+
+
+
+ a| 
+25
+ a| 
+Transceptor SFP28
+
+|===
++
+[cols="2a,2a"]
+|===
+| Velocidad de enlace SG1200 (GbE) | Equipo necesario 
+
+
+ a| 
+10
+ a| 
+Transceptor QSA y SFP+
+
+
+
+ a| 
+25
+ a| 
+Transceptor QSA y SFP28
+
+
+
+ a| 
+40
+ a| 
+Transceptor QSFP+
+
+
+
+ a| 
+50
+ a| 
+Transceptor QSFP56
+
+
+
+ a| 
+100
+ a| 
+Transceptor QSFP28
+
+
+
+ a| 
+200 (sólo NIC de 200GbE)
+ a| 
+Transceptor QSFP56
 
 |===
 +
@@ -1129,6 +1340,220 @@ Red Grid
 
 . Si tiene previsto utilizar la Red de administración para StorageGRID, conecte el puerto Red de administración del dispositivo a la Red de administración mediante un cable Ethernet.
 . Si el dispositivo incluye una bandeja de expansión, consulte la link:../sg6100/adding-expansion-shelf-to-deployed-sg6160.html["Instrucciones para añadir una bandeja de expansión a SG6160 puesto en marcha"] para obtener información sobre cableado.
+
+
+--
+.SG6200
+--
+El puerto de gestión del dispositivo se conecta al portátil de servicio y los puertos de red del dispositivo a la red de grid y a la red de cliente opcional para StorageGRID.
+
+.Antes de empezar
+* Sólo SG6200: tienes el cable multiconector de 100GbE a 4x25GbE suministrado con el dispositivo para conectar los dos controladores de almacenamiento al controlador SG6200-CN.
+* Tiene cables Ethernet RJ-45:
++
+** Un cable RJ-45 para conectar el puerto de administración.
+** Sólo SG6200: Hasta cuatro cables Ethernet RJ-45 adicionales para los puertos opcionales que planees usar, incluidos el segundo puerto Admin y el puerto BMC en el SG6200-CN, y los puertos de mantenimiento en cada uno de los dos controladores E4000.
+
+
+* Tiene una de las siguientes opciones para los puertos de red. Estos elementos no se suministran con el aparato.
++
+** De uno a cuatro cables Twinax para conectar los cuatro puertos de red.
+** De uno a ocho transceptores SFP+, SFP28, QSFP+, QSFP28 o QSFP56 si planeas usar cables ópticos para los puertos.
+
+
+
+
+
+CAUTION: *Riesgo de exposición a la radiación láser* -- No desmonte ni retire ninguna parte de un transceptor SFP. Puede que esté expuesto a la radiación láser.
+
+.Acerca de esta tarea
+Las siguientes figuras muestran los puertos en la parte posterior del SGF6212 y los tres controladores en el appliance SG6200. El appliance SG6200 incluye un controlador de cómputo SG6200-CN en la parte superior y dos controladores de almacenamiento E4000 en la parte inferior.
+
+Conexiones SGF6212:
+
+image::../media/sgf6212_connections.png[Conectores traseros SGF6212]
+
+Conexiones SG6260:
+
+image::../media/sg6200_e4000_connections.png[Conexiones de SG6200-CN a E4000]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Llamada | Puerto | Tipo de puerto | Uso 
+
+
+ a| 
+1
+ a| 
+Puerto de gestión BMC en el dispositivo
+ a| 
+1 GbE (RJ-45).
+ a| 
+Se conecta a la red en la que se accede a la interfaz del BMC.
+
+
+
+ a| 
+2
+ a| 
+Cuatro puertos de red en el controlador SG6200-CN
+ a| 
+* Cuatro puertos de red 10/25/40/100-GbE o 200-GbE con SKU NIC 200G opcional
+
+ a| 
+Conéctate a la red Grid y a la red cliente para StorageGRID. Ver link:gathering-installation-information-sg6200.html#port-bond-modes["Modos de enlace de puertos (SG6200)"]
+
+
+
+ a| 
+3
+ a| 
+Puerto de red de administración en el dispositivo (con la etiqueta P1 en la figura)
+ a| 
+1 U/10 GbE (RJ-45)
+
+*Importante:* Este puerto funciona solo a 1/10-GbE (RJ-45) y no admite velocidades de 100 megabits.
+ a| 
+Conecta el dispositivo a la red de administración para StorageGRID.
+
+
+
+ a| 
+ a| 
+El puerto RJ-45 más a la derecha del aparato
+ a| 
+1 U/10 GbE (RJ-45)
+
+*Precaución:* Este puerto funciona solo a 1/10-GbE (RJ-45) y no admite velocidades de 100 megabits.
+ a| 
+* Se puede unir al puerto de administración 1 si desea una conexión redundante a la red de administración.
+* Se puede dejar desconectado y disponible para acceso local temporal (IP 169.254.0.1).
+* Durante la instalación, se puede usar para conectar el dispositivo a un portátil de servicio si las direcciones IP asignadas por DHCP no están disponibles.
+
+
+
+
+ a| 
+4 (solo SG6260)
+ a| 
+Cinco puertos de conexión en total
+ a| 
+* Un puerto 100GbE en el SG6200-CN
+* Dos puertos 10/25GbE en cada controladora de almacenamiento
+
+ a| 
+Conecta cada controlador de almacenamiento al controlador SG6200-CN.
+
+
+
+ a| 
+5 (solo SG6260)
+ a| 
+Puerto de gestión 1 en cada controladora de almacenamiento
+ a| 
+1 GbE (RJ-45).
+ a| 
+Se conecta a la red en la que se accede a System Manager de SANtricity.
+
+
+
+ a| 
+ a| 
+Puerto de gestión 2 en cada controladora de almacenamiento
+ a| 
+1 GbE (RJ-45).
+ a| 
+Se conecta a la red en la que se accede a System Manager de SANtricity.
+
+|===
+.Pasos
+. Conecte el puerto de gestión BMC del dispositivo a la red de gestión mediante un cable Ethernet.
++
+Aunque esta conexión es opcional, se recomienda facilitar el soporte.
+
+. Conecta los dos puertos de interconexión de cada controlador de almacenamiento al puerto de 100GbE del controlador SG6200-CN, usando un cable QSFP28 de 100GbE a 4x25GbE SFP28.
+. Conecte los puertos de red del dispositivo a los switches de red adecuados utilizando cables Twinax o cables ópticos y transceptores.
++
+[cols="2a,2a"]
+|===
+| Velocidad de enlace (GbE) | Equipo necesario 
+
+
+ a| 
+10
+ a| 
+Transceptor SFP+
+
+
+
+ a| 
+25
+ a| 
+Transceptor SFP28
+
+
+
+ a| 
+40
+ a| 
+Transceptor QSFP+
+
+
+
+ a| 
+100
+ a| 
+Transceptor QSFP28
+
+
+
+ a| 
+200 (sólo NIC de 200GbE)
+ a| 
+Transceptor QSFP56
+
+|===
++
+** Los puertos de red de Grid y cliente se pueden ejecutar a velocidades diferentes solo si se selecciona autonegociación como velocidad de enlace y Fijo como modo de enlace de puerto. De lo contrario, los cuatro puertos se ejecutarán a la misma velocidad.
+** Si piensa utilizar el modo de enlace de puerto fijo (predeterminado), conecte los puertos a la red de StorageGRID y a las redes de cliente, como se muestra en la tabla.
++
+[cols="1a,2a"]
+|===
+| Puerto | Conecta a... 
+
+
+ a| 
+Puerto 1
+ a| 
+Red de cliente (opcional)
+
+
+
+ a| 
+Puerto 2
+ a| 
+Red Grid
+
+
+
+ a| 
+Puerto 3
+ a| 
+Red de cliente (opcional)
+
+
+
+ a| 
+Puerto 4
+ a| 
+Red Grid
+
+|===
+** Si planea utilizar el modo de enlace de puerto agregado, conecte uno o varios puertos de red a uno o varios switches. Debe conectar al menos dos de los cuatro puertos para evitar tener un único punto de error. Si utiliza más de un switch para un único vínculo LACP, los switches deben ser compatibles con MLAG o equivalente.
+
+
+. Si tiene previsto utilizar la Red de administración para StorageGRID, conecte el puerto Red de administración del dispositivo a la Red de administración mediante un cable Ethernet.
+. Si tu aparato incluye una bandeja de expansión, consulta la link:../sg6200/adding-expansion-shelf-to-deployed-sg6260.html["instrucciones para añadir una bandeja de expansión a un SG6200 desplegado"] para obtener información sobre el cableado.
 
 
 --

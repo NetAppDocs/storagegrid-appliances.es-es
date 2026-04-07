@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, controller, e4000, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
 summary: Puede usar el modo de mantenimiento para actualizar SANtricity OS en la controladora E4000. 
 ---
-= Actualización del sistema operativo SANtricity de la controladora E4000 usando el modo de mantenimiento (SG6160)
+= Actualiza el SO SANtricity en un SG6160 E4000 en modo de mantenimiento
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ NOTE: Active los archivos de actualización inmediatamente. No diferir la activa
 El dispositivo puede tardar hasta 20 minutos en reiniciarse y reincorporarse a la red.  Para confirmar que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 
 +
-... En el Administrador de cuadrícula, seleccione *NODOS*.
+... En el Grid Manager, selecciona *Nodos*.
 ... Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 
 

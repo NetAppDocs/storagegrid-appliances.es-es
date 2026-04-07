@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: El firmware de la unidad se actualiza para asegurarse de tener todas las funciones y correcciones de errores más recientes. 
 ---
-= Actualizar el firmware de la unidad SG6100 mediante el método en línea SANtricity System Manager (SG6160)
+= Actualiza el firmware de la unidad SG6160 con el método en línea de SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -36,7 +36,7 @@ Las unidades que pertenecen a volúmenes que no tienen redundancia deben actuali
 . Acceda a System Manager de SANtricity mediante uno de estos métodos:
 +
 ** Utilice el instalador del dispositivo StorageGRID y seleccione *Avanzado* > *Administrador del sistema SANtricity*
-** Utilice Grid Manager y seleccione *NODOS* > *_Nodo de almacenamiento_* > *Administrador del sistema de SANtricity*
+** Usa el Grid Manager y selecciona *Nodes* > *_Storage Node_* > *SANtricity System Manager*
 ** Use SANtricity System Manager. Para ello, vaya a la IP de la controladora de almacenamiento:
 +
 `*https://_Storage_Controller_IP_*`

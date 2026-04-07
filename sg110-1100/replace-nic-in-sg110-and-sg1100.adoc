@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, admin node, admin appliance, replacing, replace, NIC, network interface card 
 summary: 'Es posible que deba sustituir una tarjeta de interfaz de red \(NIC\) en el SG110 o SG1100 si no funciona de forma óptima o si ha fallado.' 
 ---
-= Sustituya NIC en un SG110 o SG1100
+= Sustituir una NIC en un SG110 o SG1100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -171,4 +171,4 @@ image::../media/sgf6112_one-slot-riser_system-pin.png[Pasador guía en el conjun
 .Después de terminar
 Si no tiene que realizar ningún otro procedimiento de mantenimiento en el aparato, vuelva a instalar la cubierta del aparato, vuelva a colocar el aparato en el bastidor, conecte los cables y conecte la alimentación.
 
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

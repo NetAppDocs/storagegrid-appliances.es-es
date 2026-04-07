@@ -1,0 +1,43 @@
+---
+permalink: installconfig/installing-appliance-in-cabinet-or-rack-sg120-and-sg1200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, storage node, install, installing, installation, cabinet, rack, rail, rails 
+summary: Instala un conjunto de rieles para el dispositivo en el armario o rack y, a continuación, desliza el dispositivo sobre los rieles. 
+---
+= Instala el SG120 o SG1200 en un armario o rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instala un conjunto de rieles para el dispositivo en el armario o rack y, a continuación, desliza el dispositivo sobre los rieles.
+
+.Antes de empezar
+* Ha revisado el https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avisos de seguridad"^] documento incluido en la caja y comprende las precauciones para mover e instalar el hardware.
+* Tiene las instrucciones incluidas en el kit de raíl.
+
+
+.Pasos
+. Siga con cuidado las instrucciones del kit de raíl para instalar los rieles en su armario o rack.
+. En los dos rieles instalados en el armario o rack, extienda las partes móviles de los rieles hasta que oiga un clic.
++
+image::../media/rails_extended_out.gif[Raíles para aparatos extendidos]
+
+. Inserte el aparato en los rieles.
+. Deslice el aparato en el armario o rack.
++
+Cuando no pueda mover el aparato más, tire de los pestillos azules de ambos lados del chasis para deslizar el aparato completamente hacia adentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[Deslizamiento del aparato en los raíles]
+
+. Apriete los tornillos cautivos del panel frontal del aparato para fijar el aparato en el rack.
++
+image::../media/sg120_sg1200_rack_retaining_screws.png[Tornillos de sujeción del bastidor del dispositivo]
+
++
+
+NOTE: No conecte el panel frontal hasta que haya encendido el aparato.
+
+

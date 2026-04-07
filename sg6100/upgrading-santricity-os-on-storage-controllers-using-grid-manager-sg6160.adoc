@@ -2,16 +2,16 @@
 permalink: sg6100/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html 
 sidebar: sidebar 
 keywords: storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
-summary: 'En el caso de las controladoras de almacenamiento que utilicen actualmente SANtricity OS 08.42.20.00 \(11,42\) o una versión posterior, puede usar Grid Manager o el modo de mantenimiento para aplicar una actualización.' 
+summary: Puedes usar el Grid Manager o el modo de mantenimiento para aplicar una actualización. 
 ---
-= Actualice el sistema operativo SANtricity en las controladoras de almacenamiento SG6100 mediante Grid Manager
+= Actualiza el SO SANtricity en los controladores de almacenamiento SG6160 usando Grid Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Para las controladoras de almacenamiento que actualmente utilicen SANtricity OS 08.42.20.00 (11,42) o posterior, se puede usar Grid Manager o el modo de mantenimiento para aplicar una actualización.
+Puedes usar el Grid Manager o el modo de mantenimiento para aplicar una actualización.
 
 .Antes de empezar
 * Si no obtuvo la versión de sistema operativo SANtricity desde la que desea actualizar a. https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^], usted ha consultado https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Descargas de NetApp: Dispositivo de StorageGRID"^] o la https://imt.netapp.com/matrix/#welcome["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] Para confirmar que la versión de sistema operativo SANtricity que utiliza para la actualización es compatible con el dispositivo.
@@ -114,7 +114,7 @@ CAUTION: No apruebe la actualización del sistema operativo SANtricity para un n
 
 NOTE: Si es importante el orden en el que se actualizan los nodos, apruebe los nodos o grupos de nodos de uno en uno y espere hasta que se complete la actualización en cada nodo antes de aprobar el siguiente.
 
-** Seleccione uno o más botones *aprobar* para agregar uno o más nodos a la cola de actualización de SANtricity OS. El botón *Aprobar* está desactivado si el estado no es nominal.
+** Selecciona uno o varios botones *Aprobar* para añadir uno o varios nodos a la cola de actualización del SO SANtricity. El botón *Aprobar* está desactivado si el estado no es Nominal.
 +
 Después de seleccionar *aprobar*, el proceso de actualización determina si se puede actualizar el nodo. Si se puede actualizar un nodo, se agrega a la cola de actualización.
 
@@ -167,7 +167,7 @@ El nodo no tiene una controladora de almacenamiento que pueda gestionar el siste
 
 
  a| 
-El archivo del sistema operativo SANtricity no es compatible con este nodo.
+El archivo SANtricity OS no es compatible con este nodo.
  a| 
 El nodo requiere un archivo de sistema operativo SANtricity diferente al que seleccionó.
 Después de completar la actualización actual, descargue el archivo de sistema operativo SANtricity correcto para el nodo y repita el proceso de actualización.

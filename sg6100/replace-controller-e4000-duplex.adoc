@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sustituir la controladora de almacenamiento E4000 (SG6160)
+= Reemplaza un controlador de almacenamiento E4000 en un SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -313,7 +313,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 . Si colocó el dispositivo en modo de mantenimiento durante este procedimiento, salga del modo de mantenimiento y espere a que el nodo se reinicie y se vuelva a unir a la red.  Este proceso puede tardar hasta 20 minutos.  Para confirmar que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 +
-.. En el Administrador de cuadrícula, seleccione *NODOS*.
+.. En el Grid Manager, selecciona *Nodos*.
 .. Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 
 
@@ -322,4 +322,4 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 .El futuro
 Se completó el reemplazo de una controladora. Es posible reanudar las operaciones normales.
 
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

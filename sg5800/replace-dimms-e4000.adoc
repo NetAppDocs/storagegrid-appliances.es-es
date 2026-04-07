@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sustituir DIMM en E4000 (SG5800)
+= Reemplaza los DIMM en el controlador E4000 de un SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,7 +29,7 @@ Es posible que no se pueda acceder al nodo de almacenamiento del dispositivo cua
 
 * Acceso a SANtricity System Manager:
 +
-** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+** En Grid Manager, selecciona *Nodes* > *_appliance node_* > *SANtricity System Manager*. La información del controlador está en https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
 +
 
 NOTE: Es posible que no pueda acceder a SANtricity System Manager mediante Grid Manager durante determinados pasos de este procedimiento. Si se apaga la controladora SG5800, deberá acceder a SANtricity System Manager desde el explorador.
@@ -265,7 +265,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 . Confirme que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 +
-.. En el Administrador de cuadrícula, seleccione *NODOS*.
+.. En el Grid Manager, selecciona *Nodos*.
 .. Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 +
 

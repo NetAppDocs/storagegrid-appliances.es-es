@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, storage controller shelf, Battery, Drive, Power canister, power supply, Fan canister, fan, Drive drawer 
 summary: Si se produce un problema de hardware, es posible que deba sustituir un componente de la bandeja de controladoras de almacenamiento. 
 ---
-= Reemplace los componentes de hardware de la bandeja de controladoras de almacenamiento SG6000
+= Reemplaza los componentes de hardware en la bandeja del controlador de almacenamiento SG6000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -73,4 +73,4 @@ Cajón de unidades (solo bandejas de 60 unidades)
 E-Series: Sustitución del cajón de unidades (60 unidades)
 
 |===
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

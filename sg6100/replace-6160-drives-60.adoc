@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, sg6160, sg6100cn 
 summary: Sustituya una unidad de E4000 con una bandeja de 60 unidades. 
 ---
-= Sustituir unidad en la bandeja de controladoras de almacenamiento o la bandeja de expansión (SG6160)
+= Sustituye una unidad en una bandeja de controlador de almacenamiento SG6160 o en una bandeja de expansión
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,7 +24,7 @@ Grid Manager de StorageGRID supervisa el estado de la cabina de almacenamiento y
 ** Una muñequera ESD, o usted ha tomado otras precauciones antiestáticas.
 ** Acceso a SANtricity System Manager:
 +
-*** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+*** En Grid Manager, selecciona *Nodes* > *_appliance node_* > *SANtricity System Manager*. La información del controlador está en https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
 *** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
 
 

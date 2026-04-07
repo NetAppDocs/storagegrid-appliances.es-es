@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Revise los tipos y requisitos de contenedor E4000. 
 ---
-= Sustituir el compartimento de ventiladores de la bandeja de controladoras de almacenamiento o la bandeja de expansión (SG6160)
+= Sustituye un depósito de ventiladores en un controlador de almacenamiento SG6160 o una bandeja de expansión
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

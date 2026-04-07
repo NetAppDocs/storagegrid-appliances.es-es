@@ -1,0 +1,44 @@
+---
+permalink: sg120-1200/locating-sg120-and-sg1200-in-data-center.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, appliance, locate, find, locating, finding, identify, blue led, blue light 
+summary: Busque el dispositivo para que pueda realizar tareas de mantenimiento o actualizaciones del hardware. 
+---
+= Ubicar SG120 o SG1200 en el centro de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Busque el dispositivo para que pueda realizar tareas de mantenimiento o actualizaciones del hardware.
+
+.Antes de empezar
+* Ha determinado qué aparato requiere mantenimiento.
+* Para ayudarte a localizar el appliance en tu centro de datos, link:turning-sg120-and-sg1200-identify-led-on-and-off.html["Encienda el LED de identificación azul"].
+
+
+.Pasos
+. Encuentre el dispositivo en el centro de datos.
++
+** Busque un LED de identificación azul encendido en la parte frontal o trasera del aparato.
++
+El LED de identificación frontal está detrás del panel frontal y puede resultar difícil ver si se ha instalado el panel frontal.
+
++
+image::../media/s25_front_identify_led.png[LED de identificación frontal: Encendido]
+
++
+El LED de identificación trasero se encuentra en el centro del appliance, junto a la ranura Micro-SD.
+
+** Compruebe que las etiquetas de la parte frontal del aparato tengan el mismo número de pieza para confirmar que ha encontrado el aparato correcto.
+
+
+. Retire el marco frontal, si hay uno instalado, para acceder a los controles e indicadores del panel frontal.
+. link:turning-sg120-and-sg1200-identify-led-on-and-off.html["Apague el LED de identificación azul"] si lo utilizaste para localizar el appliance.
++
+** Pulse el interruptor del LED Identify del panel frontal del aparato.
+** Utilice la interfaz BMC del dispositivo.
+
+
+

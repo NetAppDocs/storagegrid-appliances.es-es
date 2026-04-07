@@ -63,8 +63,8 @@ IMPORTANT: No ejerza demasiada fuerza al cerrar el mango.
 Cuando la unidad se inserta por completo, se oye un clic.
 
 +
-La unidad sustituida se reconstruye automáticamente con datos reflejados de la unidad de trabajo.  Puede comprobar el estado de la reconstrucción mediante Grid Manager. Vaya a *NODOS* > `*Appliance Node*` > *Hardware*. El campo Modo RAID de almacenamiento contiene un mensaje de «reconstrucción» hasta que la unidad se reconstruya por completo.
+La unidad sustituida se reconstruye automáticamente con datos reflejados de la unidad de trabajo. Puedes comprobar el estado de la reconstrucción usando el Grid Manager. Ve a *Nodos* > `*Appliance Node*` > *Hardware*. El campo Storage RAID Mode contiene un mensaje de “rebuilding” hasta que la unidad se reconstruya por completo.
 
 
 
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

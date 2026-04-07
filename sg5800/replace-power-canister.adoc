@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
 summary: Sustituya una bandeja de controladoras o una bandeja de unidades de 60 unidades, que incluye dos contenedores de alimentación por motivos de redundancia de alimentación. 
 ---
-= Sustituya el contenedor de alimentación en SG5860
+= Sustituye un contenedor de energía en el SG5860
 :allow-uri-read: 
 :experimental: 
 :icons: font

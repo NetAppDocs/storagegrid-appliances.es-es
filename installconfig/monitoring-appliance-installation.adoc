@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: appliance, installation, install, progress, monitor, status 
 summary: El instalador del dispositivo StorageGRID proporciona el estado hasta que se completa la instalación. Una vez finalizada la instalación del software, el dispositivo se reinicia. 
 ---
-= Supervise la instalación del dispositivo
+= Supervisar la instalación del dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

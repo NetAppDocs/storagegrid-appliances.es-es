@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: automate, automating, automation, automatic, install, installation, configuration, configure 
 summary: Automatizar la instalación y la configuración puede ser útil para poner en marcha varias instancias de StorageGRID o una instancia de StorageGRID grande y compleja. 
 ---
-= Automatice la instalación y configuración de los dispositivos
+= Automatiza la instalación y configuración de dispositivos StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

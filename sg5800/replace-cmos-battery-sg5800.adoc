@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cmos, battery, replace, sg5800, controller 
 summary: Puede que necesites reemplazar la batería CMOS en el controlador SG5800 para que los servicios y aplicaciones de tu sistema tengan una sincronización horaria precisa y sigan funcionando con normalidad. 
 ---
-= Reemplazar batería CMOS en el controlador SG5800
+= Sustituir la batería CMOS en el controlador SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

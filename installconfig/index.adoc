@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Installation, deployment, Install, deploy, Installing, deploying 
 summary: Siga estos pasos de alto nivel para instalar y configurar un dispositivo StorageGRID e implementarlo como nodo en su sistema StorageGRID. 
 ---
-= Inicio rápido para la instalación del dispositivo
+= Inicio rápido para la instalación del dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,10 +33,12 @@ Este paso es opcional. Sin embargo, la optimización y automatización de los pa
 +
 ** link:installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html["SG100 y SG1000"]
 ** link:installing-appliance-in-cabinet-or-rack-sg110-and-sg1100.html["SG110 y SG1100"]
+** link:installing-appliance-in-cabinet-or-rack-sg120-and-sg1200.html["SG120 y SG1200"]
 ** link:installing-appliance-in-cabinet-or-rack-sg5700.html["SG5700"]
 ** link:installing-appliance-in-cabinet-or-rack-sg5800.html["SG5800"]
 ** link:installing-hardware-sg6000.html["SG6000"]
 ** link:installing-hardware-sg6100.html["SG6100"]
+** link:installing-hardware-sg6200.html["SG6200"]
 
 
 . link:cabling-appliance.html["Aparato por cable"]
@@ -58,12 +60,12 @@ Si va a configurar y poner en marcha más de un dispositivo, utilice la herramie
 ** link:verifying-port-level-network-connections.html["Verifique las conexiones de red a nivel de puerto"]
 
 
-. link:accessing-and-configuring-santricity-system-manager.html["Acceda y configure SANtricity System Manager"] (SG6160, SG5700, SG5800 Y SG6000)
-. link:configuring-bmc-interface.html["Configure la interfaz de BMC"] (Dispositivos SG6100, SG6000 y servicios)
+. link:accessing-and-configuring-santricity-system-manager.html["Acceda y configure SANtricity System Manager"] (SG6260, SG6160, SG5700, SG5800 y SG6000)
+. link:configuring-bmc-interface.html["Configure la interfaz de BMC"] (SG6200, SG6100, SG6000 y servicios appliances)
 . Realice los pasos de configuración opcionales
 +
 ** link:optional-enabling-node-encryption.html["Habilite el cifrado de nodos o unidades"]
-** link:optional-changing-raid-mode.html["Cambio del modo RAID (SG6160, SG6000, SG5860 y SG5760)"]
+** link:optional-changing-raid-mode.html["Cambiar el modo RAID"] (SG6260, SG6160, SG6000, SG5860 y SG5760)
 ** link:optional-remapping-network-ports-for-appliance.html["Reasignar puertos de red"]
 
 

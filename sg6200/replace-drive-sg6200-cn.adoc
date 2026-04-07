@@ -1,0 +1,61 @@
+---
+permalink: sg6200/replace-drive-sg6200-cn.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6260, sg6200, service appliance, services appliance, gateway Node, admin node, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: El dispositivo SG6260 contiene dos unidades SSD en el controlador SG6200-CN que funcionan como caché de lectura. Si una de estas unidades falla, debes reemplazarla lo antes posible para minimizar el posible impacto en el rendimiento. 
+---
+= Sustituir unidad en SG6200-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El dispositivo SG6260 contiene dos unidades SSD en el controlador SG6200-CN que funcionan como caché de lectura. Si una de estas unidades falla, debes reemplazarla lo antes posible para minimizar el posible impacto en el rendimiento.
+
+.Antes de empezar
+* Tienes link:locating-sg6200-in-data-center.html["ubicación física del aparato"].
+* Ha verificado qué unidad ha fallado al señalar que su LED izquierdo es ámbar fijo o utilizando Grid Manager a. link:verify-component-to-replace.html["vea la alerta causada por la unidad con error"].
+* Ha obtenido la unidad de reemplazo.
+* Ha obtenido la protección ESD adecuada.
+
+
+.Pasos
+. Compruebe que el LED de fallo izquierdo de la unidad esté en color ámbar o utilice el ID de ranura de unidad de la alerta para localizar la unidad.
++
+Las unidades se encuentran en las siguientes posiciones en el chasis (se muestra la parte delantera del chasis con el panel frontal quitado).
+
++
+image::../media/sg6260_front_with_ssds.png[Ubicación de la SSD en SG6260]
+
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Desembale la unidad de repuesto y configúrela en una superficie nivelada y sin estática cerca del aparato.
++
+Guarde todos los materiales de embalaje.
+
+. Pulse el botón de liberación de la unidad con error.
++
+image:../media/drw_s2025_drive_replace_ieops-2553.svg["Extracción de una unidad del chasis"]
+
++
+La palanca de los muelles de accionamiento se abre parcialmente y la unidad se libera de la ranura.
+
+. Abra el asa, deslice la unidad hacia fuera y colóquela en una superficie nivelada y sin estática.
+. Presione el botón de liberación de la unidad de reemplazo antes de insertarla en la ranura de la unidad.
++
+Los muelles de pestillo se abren.
+
+. Inserte la unidad de reemplazo en la ranura y, a continuación, cierre el asa de la unidad.
++
+
+CAUTION: No ejerza demasiada fuerza al cerrar el mango.
+
++
+Cuando la unidad se inserta por completo, se oye un clic.
+
++
+Cuando ambas unidades SSD funcionan de manera normal, el sistema restaura automáticamente la funcionalidad de lectura-caché.  https://docs.netapp.com/us-en/storagegrid/monitor/running-diagnostics.html["ejecutar diagnóstico"^]Puede supervisar la tasa de aciertos en caché de lectura. Como la caché se acaba de recompilar, la tasa de aciertos puede ser baja al principio, pero debería aumentar con el tiempo a medida que los clientes que acceden a los datos de objetos vuelven a rellenar la caché.
+
+
+
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

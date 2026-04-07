@@ -1,0 +1,71 @@
+---
+permalink: sg120-1200/replacing-drive-in-sg120-and-sg1200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Los dispositivos de servicios SG120 y SG1200 contienen dos unidades SSD. Las unidades se reflejan utilizando RAID1 para redundancia. Si una de las unidades falla, debes reemplazarla lo antes posible para garantizar la redundancia. 
+---
+= Reemplaza las unidades en el SG120 o SG1200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los dispositivos de servicios SG120 y SG1200 contienen dos unidades SSD. Las unidades se reflejan utilizando RAID1 para redundancia. Si una de las unidades falla, debes reemplazarla lo antes posible para garantizar la redundancia.
+
+.Antes de empezar
+* Tienes link:locating-sg120-and-sg1200-in-data-center.html["ubicación física del aparato"].
+* Ha verificado qué unidad ha fallado al señalar que el LED izquierdo de la unidad es ámbar fijo o utilizar Grid Manager a. link:verify-component-to-replace.html["vea la alerta causada por la unidad con error"].
++
+
+IMPORTANT: Consulte la información sobre la visualización de los indicadores de estado para verificar el fallo.
+
+* Ha obtenido la unidad de reemplazo.
+* Ha obtenido la protección ESD adecuada.
+
+
+.Pasos
+. Compruebe que el LED de fallo izquierdo de la unidad esté en color ámbar o utilice el ID de ranura de unidad de la alerta para localizar la unidad.
++
+Las unidades se encuentran en las siguientes posiciones en el chasis (se muestra la parte delantera del chasis con el panel frontal quitado):
+
++
+image::../media/sg120_sg1200_front_with_ssds.png[Ubicación de las unidades SG120 y SG1200]
+
+
+
+. Envuelva el extremo de la correa de la muñequera ESD alrededor de su muñeca y fije el extremo de la pinza a una masa metálica para evitar descargas estáticas.
+. Desembale la unidad de repuesto y configúrela en una superficie nivelada y sin estática cerca del aparato.
++
+Guarde todos los materiales de embalaje.
+
+. Pulse el botón de liberación de la unidad con error.
++
+image::../media/drw_s2025_drive_replace_ieops-2553.svg[Extracción de una unidad del chasis]
+
++
+La palanca de los muelles de accionamiento se abre parcialmente y la unidad se libera de la ranura.
+
+. Abra el asa, deslice la unidad hacia fuera y colóquela en una superficie nivelada y sin estática.
++
+
+NOTE: Verifica que el asa de la bandeja esté completamente abierta antes de intentar extraer la unidad.
+
+. Presione el botón de liberación de la unidad de reemplazo antes de insertarla en la ranura de la unidad.
++
+Los muelles de pestillo se abren.
+
+. Inserte la unidad de reemplazo en la ranura y, a continuación, cierre el asa de la unidad.
++
+
+IMPORTANT: No ejerza demasiada fuerza al cerrar el mango.
+
++
+Cuando la unidad se inserta por completo, se oye un clic.
+
++
+La unidad sustituida se reconstruye automáticamente con datos reflejados de la unidad de trabajo. Puedes comprobar el estado de la reconstrucción usando el Grid Manager. Ve a *Nodos* > `*Appliance Node*` > *Hardware*. El campo Storage RAID Mode contiene un mensaje de “rebuilding” hasta que la unidad se reconstruya por completo.
+
+
+
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

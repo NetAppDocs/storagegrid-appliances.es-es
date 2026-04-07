@@ -1,0 +1,22 @@
+= Paso 2: reinstalar la cubierta
+:allow-uri-read: 
+
+
+. Desbloquea el pestillo de la tapa presionando el botón azul de bloqueo en la tapa del aparato.
++
+image:../media/drw_s2025_cover_replace_ieops-2559.svg["Desbloqueo y extracción de la tapa del aparato"]
+
+. Gire el pestillo hacia arriba y hacia atrás hacia la parte trasera del chasis del aparato hasta que se detenga; a continuación, levante con cuidado la cubierta del chasis y déjela a un lado.
+
+
+
+
+== Paso 2: reinstalar la cubierta
+
+.Pasos
+. Con el pestillo de la cubierta abierto, alinea la cubierta sobre el chasis y bájala con cuidado.
+. Gire el pestillo de la cubierta hacia adelante y hacia abajo hasta que se detenga y la cubierta se asiente completamente en el chasis. Compruebe que no hay separaciones a lo largo del borde delantero de la cubierta.
++
+Si la cubierta no está completamente asentada, es posible que no pueda introducir el aparato en el rack.
+
+

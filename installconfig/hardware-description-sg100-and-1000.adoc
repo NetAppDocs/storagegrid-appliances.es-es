@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
 summary: 'La aplicación de servicios SG100 de StorageGRID y la aplicación de servicios SG1000 pueden funcionar como nodo de puerta de enlace y como nodo de administración para ofrecer servicios de equilibrio de carga de alta disponibilidad en un sistema StorageGRID. Ambos dispositivos pueden funcionar como nodos de puerta de enlace y nodos de administración \(principal o no primario\) al mismo tiempo.' 
 ---
-= Dispositivos SG100 y SG1000: Descripción general
+= Dispositivos StorageGRID SG100 y SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -72,7 +72,7 @@ Identifique el LED
  a| 
 * Azul, parpadeando: Identifica el dispositivo en el armario o rack.
 * Azul, sólido: Identifica el dispositivo en el armario o rack.
-* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
 
 
 |===

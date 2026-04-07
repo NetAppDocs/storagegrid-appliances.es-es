@@ -1,0 +1,65 @@
+---
+permalink: sg6200/replace-ocp-nic-sg6200-cn.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200, storage node, storage appliance, Replacing, replace, NIC, network interface card 
+summary: 'Es posible que tengas que sustituir una tarjeta de interfaz de red (NIC) en el SG6200-CN si no funciona de forma óptima o si ha fallado.' 
+---
+= Sustituye el NIC externo en el SG6200-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que tengas que sustituir una tarjeta de interfaz de red (NIC) externa en el SG6200-CN si no está funcionando de forma óptima o si ha fallado.
+
+.Acerca de esta tarea
+Para evitar interrupciones del servicio, confirma que todos los demás Storage Nodes están conectados a la grid antes de iniciar la sustitución de la Network Interface Card (NIC) o reemplaza la NIC durante una ventana de mantenimiento programada cuando los periodos de interrupción del servicio sean aceptables. Consulta la información sobre link:https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["montioring de estados de conexión de nodo"].
+
+
+CAUTION: Si alguna vez has utilizado una regla ILM que crea solo una copia de un objeto, debes reemplazar el NIC durante una ventana de mantenimiento programada porque podrías perder temporalmente el acceso a esos objetos durante este procedimiento. Consulta la información sobre link:https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por qué no debe utilizar replicación de copia única"].
+
+.Antes de empezar
+* Tiene la NIC de sustitución correcta.
+* Usted ha determinado el link:verify-component-to-replace.html["Ubicación de la NIC que se va a sustituir"].
++
+image::../media/sg6200_cn_ocp_nic_location.png[Placa frontal de NIC.]
+
+* Tienes link:locating-sg6200-in-data-center.html["ubicado físicamente el controlador SG6200-CN"] donde estás reemplazando la NIC en el centro de datos.
++
+
+NOTE: El intercambio en caliente *no* es compatible con este procedimiento. Se necesita un link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["apagado controlado del aparato"] antes de desconectar los cables y extraer la NIC.
+
+* Has desconectado todos los cables, incluidos los dos cables de alimentación del SG6200-CN.
+* *Opcional*: Ha quitado el controlador del rack si así lo exige la normativa local. No es necesario eliminar la NIC porque se puede acceder a ella desde el exterior.
+
+
+
+
+== Paso 1: quitar el NIC externo
+
+.Pasos
+. Envuelva el extremo de la correa de una pulsera ESD alrededor de la muñeca y fije el extremo del clip a un suelo metálico para evitar la descarga estática.
+. Utilice un destornillador para aflojar el tornillo de la placa frontal del NIC.
++
+
+CAUTION: El intercambio en caliente es *not* compatible para este procedimiento. El controlador debe estar desconectado de la alimentación antes de extraer la NIC.
+
+. Retire con cuidado el NIC tirando del asa de la placa frontal. Coloque el NIC en una superficie plana y antiestática.
+
+
+
+
+== Paso 2: reinstalar el NIC externo
+
+.Pasos
+. Envuelva el extremo de la correa de una pulsera ESD alrededor de la muñeca y fije el extremo del clip a un suelo metálico para evitar la descarga estática.
+. Retire la NIC de repuesto de su embalaje.
+. Alinee el NIC con la abertura del chasis y empújelo con cuidado hasta que quede completamente asentado.
+. Apriete el tornillo de la placa frontal del NIC.
+
+
+.Después de terminar
+Si no tiene que realizar ningún otro procedimiento de mantenimiento en el dispositivo, devuelva el dispositivo al rack si se ha extraído, conecte los cables y aplique alimentación.
+
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

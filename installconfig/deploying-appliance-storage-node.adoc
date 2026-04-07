@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, deploy node, deploying node, node, deploy, deploying 
 summary: Después de instalar y configurar el dispositivo de almacenamiento, puede ponerlo en marcha como un nodo de almacenamiento en un sistema StorageGRID. Al poner en marcha un dispositivo como nodo de almacenamiento, utiliza el instalador de dispositivos de StorageGRID que se incluye en el dispositivo. 
 ---
-= Ponga en marcha el nodo de almacenamiento del dispositivo
+= Implementa un StorageGRID appliance Storage Node
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

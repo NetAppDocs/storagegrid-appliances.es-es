@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, storage node, storage appliance, Replacing, replace, e4000, controller, remove, removing, removal, install, installing, installation 
 summary: Es posible que deba reemplazar la controladora E4000 si no funciona de forma óptima o si falló. 
 ---
-= Sustituir el controlador E4000 (SG5800)
+= Reemplaza el controlador E4000 en un SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,7 +27,7 @@ NOTE: No confíe en las instrucciones E-Series para sustituir una controladora c
 * Debe iniciar sesión en Grid Manager mediante una https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
 * Acceso a SANtricity System Manager:
 +
-** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"^].
+** En Grid Manager, selecciona *Nodes* > *_appliance node_* > *SANtricity System Manager*. La información del controlador está en https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"^].
 ** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
 
 
@@ -360,7 +360,7 @@ El dispositivo se reinicia y vuelve a unir la cuadrícula. Este proceso puede ta
 
 . Confirme que el reinicio se ha completado y que el nodo se ha reincorporado a la red:
 +
-.. En el Administrador de cuadrícula, seleccione *NODOS*.
+.. En el Grid Manager, selecciona *Nodos*.
 .. Verifique que el nodo del dispositivo tenga un estado normal (ícono de marca de verificación verde)image:../media/icon_alert_green_checkmark.png["marca de verificación verde"] a la izquierda del nombre del nodo), lo que indica que no hay alertas activas y el nodo está conectado a la red.
 
 
@@ -387,4 +387,4 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 
 .El futuro
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

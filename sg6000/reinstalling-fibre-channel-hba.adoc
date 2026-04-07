@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, sg6000-cn, hba, host bus adapter, fibre channel, fiber channel, install, installing, installation, reinstall, reinstalling, reinstallation, remove, removing, removal, locate, identify, find 
 summary: Es posible que deba reemplazar un HBA Fibre Channel si no funciona de forma óptima o si falló. 
 ---
-= Reemplace el HBA de Fibre Channel en SG6000
+= Sustituye el HBA de canal de fibra en el controlador SG6000-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,7 +29,7 @@ NOTE: Si el número de serie del dispositivo de almacenamiento que contiene el H
 
 
 .Pasos
-. En Grid Manager, seleccione *NODES*.
+. Desde el Grid Manager, selecciona *Nodes*.
 . En la tabla de la página Nodes, seleccione un dispositivo Storage Node.
 . Seleccione la ficha *hardware*.
 +
@@ -96,7 +96,7 @@ El conjunto de tarjeta vertical tiene dos adaptadores: Un HBA Fibre Channel y un
 .Después de terminar
 link:reinstalling-fibre-channel-hba.html["Instale el HBA Fibre Channel de repuesto"].
 
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.
 
 
 

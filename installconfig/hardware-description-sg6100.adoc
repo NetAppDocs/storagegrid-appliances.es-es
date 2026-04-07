@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, sgf6112, storage node, storage appliance, appliance models, appliance features, specifications 
 summary: Los dispositivos de la serie StorageGRID SG6100 funcionan como nodos de almacenamiento en un sistema StorageGRID.  Al igual que todos los dispositivos StorageGRID, se pueden combinar libremente con otros modelos de dispositivo y nodos de solo software en una única implementación. 
 ---
-= Dispositivos SG6100: Información general
+= Dispositivos StorageGRID SG6100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -59,7 +59,7 @@ Plataforma de almacenamiento y computación:: Un servidor de una unidad de rack 
 * Dos procesadores de 2,1/2,6 GHz y 165 W que proporcionan 48 núcleos (96 subprocesos)
 * 256 GB DE MEMORIA RAM
 * 2 x 1/10 puertos GBase-T.
-* 4 puertos Ethernet de 10/25 GbE para el tráfico de red Grid/Client
+* 4 × 10/25 GbE Ethernet ports para tráfico de red Grid/Client (o hasta 4 × 100 GbE con SKU de NIC de 100G opcional)
 * Unidad de arranque interna de 1 x 256 GB (incluye software StorageGRID)
 * Controlador de administración en placa base (BMC) que simplifica la administración del hardware
 * Sistemas de alimentación y ventiladores redundantes
@@ -229,7 +229,7 @@ Identifique el LED
  a| 
 * Azul, parpadeando: Identifica el dispositivo en el armario o rack.
 * Azul, sólido: Identifica el dispositivo en el armario o rack.
-* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
 
 
 |===
@@ -438,7 +438,7 @@ Identifique el LED
  a| 
 * Azul, parpadeando: Identifica el dispositivo en el armario o rack.
 * Azul, sólido: Identifica el dispositivo en el armario o rack.
-* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
 
 
 |===

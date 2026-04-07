@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, sg6000-cn, controller, cover, install, installing, installation, reinstall, reinstalling, reinstallation, remove, removing, removal 
 summary: Retire la cubierta del aparato para acceder a los componentes internos para realizar tareas de mantenimiento y vuelva a colocarla cuando haya terminado. 
 ---
-= Vuelva a colocar la cubierta del controlador SG6000
+= Vuelve a colocar la cubierta del controlador SG6000-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -36,7 +36,7 @@ CAUTION: Envuelva el extremo de la correa de una muñequera ESD alrededor de la 
 
 
 
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.
 
 
 

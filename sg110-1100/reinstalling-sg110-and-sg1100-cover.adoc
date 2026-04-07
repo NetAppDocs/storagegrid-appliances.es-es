@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, storage node, admin appliance, cover, install, installing, installation, reinstall, reinstalling, reinstallation 
 summary: Retire la cubierta del aparato para acceder a los componentes internos para realizar tareas de mantenimiento y vuelva a colocarla cuando haya terminado. 
 ---
-= Vuelva a colocar la cubierta SG110 y SG1100
+= Sustituir la tapa de un appliance SG110 o SG1100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,7 +21,7 @@ Retire la cubierta del aparato para acceder a los componentes internos para real
 link:reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html["Retire el dispositivo del armario o rack"] para acceder a la cubierta superior.
 
 .Pasos
-. Asegúrese de que el pestillo de la cubierta del aparato no está bloqueado. Si es necesario, gire un cuarto de vuelta el cierre de plástico azul en la dirección de desbloqueo, como se muestra en el bloqueo del pestillo.
+. Asegúrate de que el pestillo de la tapa del appliance no esté bloqueado. Si es necesario, gira el pestillo de plástico azul un cuarto de vuelta en la dirección de desbloqueo, como se muestra en el pestillo de bloqueo.
 . Gire el pestillo hacia arriba y hacia atrás hacia la parte trasera del chasis del aparato hasta que se detenga; a continuación, levante con cuidado la cubierta del chasis y déjela a un lado.
 +
 image::../media/sg6060_cover_latch_open.jpg[Pestillo de la cubierta del aparato abierto]
@@ -46,7 +46,7 @@ image::../media/sg6060_cover_latch_alignment_pin.jpg[Pasador de alineación del 
 
 . Gire el pestillo de la cubierta hacia adelante y hacia abajo hasta que se detenga y la cubierta se asiente completamente en el chasis. Compruebe que no hay separaciones a lo largo del borde delantero de la cubierta.
 +
-Si la cubierta no está completamente asentada, es posible que no pueda introducir el aparato en el rack.
+Si la cubierta no está completamente asentada, es posible que no puedas deslizar el aparato en el bastidor.
 
 . Opcional: Gire un cuarto de vuelta el cierre de plástico azul en el sentido de bloqueo, como se muestra en el bloqueo del pestillo, para bloquearlo.
 

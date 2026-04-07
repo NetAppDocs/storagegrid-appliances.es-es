@@ -73,14 +73,14 @@ Cuando el pestillo hace clic en su lugar, la parte inferior del pestillo se enga
 . Dé la vuelta al controlador para confirmar que la batería está instalada correctamente.
 +
 
-CAUTION: *Posible daño de hardware* -- la brida metálica de la parte frontal de la batería debe estar completamente insertada en la ranura del controlador (como se muestra en la primera figura). Si la batería no está instalada correctamente (como se muestra en la segunda figura), la brida metálica podría entrar en contacto con la placa del controlador, causando daños.
+CAUTION: *Posibles daños en el hardware* -- La pestaña metálica de la parte delantera de la batería debe estar completamente insertada en la ranura del controlador (como se muestra en la primera figura). Si la batería no está instalada correctamente (como se muestra en la segunda figura), la pestaña metálica podría entrar en contacto con la placa del controlador, causando daños.
 
 +
 ** *Correcto -- la brida metálica de la batería está completamente insertada en la ranura del controlador:*
 +
 image::../media/e2800_battery_flange_ok.gif[Brida de la batería correcta]
 
-** *Incorrecto -- la brida metálica de la batería no está insertada en la ranura del controlador:*
+** *Incorrecto -- La pestaña metálica de la batería no está insertada en la ranura del controlador:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Brida de la batería incorrecta]
 

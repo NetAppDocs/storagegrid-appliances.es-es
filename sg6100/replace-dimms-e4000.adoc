@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Reemplazar DIMM en la bandeja de controladoras de almacenamiento (SG6160)
+= Reemplaza los DIMM en una bandeja de controlador de almacenamiento SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,7 +25,7 @@ Para sustituir un DIMM, debe verificar el tamaño de caché de la controladora, 
 ** Las etiquetas para identificar cada cable que está conectado al compartimento de controladoras.
 ** Acceso a SANtricity System Manager:
 +
-*** En el Administrador de grid, seleccione *NODOS* > *_NODO_* > *Administrador del sistema de SANtricity*. La información del controlador está en la https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
+*** En Grid Manager, selecciona *Nodes* > *_appliance node_* > *SANtricity System Manager*. La información del controlador está en https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Pestaña Administrador del sistema de SANtricity"].
 *** Dirija un explorador de la estación de gestión al nombre de dominio o la dirección IP de la controladora.
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
 summary: El dispositivo de almacenamiento SGF6112 contiene 12 unidades SSD. Los datos en las unidades se protegen por un esquema de RAID que permite que el dispositivo se recupere de cualquier fallo de unidad sin tener que copiar datos de otro nodo.  
 ---
-= Sustituya las unidades en SGF6112
+= Sustituir las unidades en un SGF6112
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -123,7 +123,7 @@ HDD11
 
 |===
 +
-También puede utilizar Grid Manager para supervisar el estado de las unidades SSD. Selecciona *NODOS*. A continuación, seleccione `*Storage Node*` > *Hardware*. Si se produce un error en una unidad, el campo Storage RAID Mode contiene un mensaje acerca de qué unidad ha fallado.
+También puedes usar el Grid Manager para supervisar el estado de las unidades SSD. Selecciona *Nodos*. Luego selecciona `*Storage Node*` > *Hardware*. Si una unidad ha fallado, el campo Storage RAID Mode contiene un mensaje sobre qué unidad ha fallado.
 
 
 
@@ -161,8 +161,8 @@ La unidad sustituida se reconstruye automáticamente con datos reflejados de las
 +
 Puede comprobar el estado de la reconstrucción mediante Grid Manager.
 
-. Si se produjo un error en más de una unidad y se reemplazó, es posible que haya alertas que indican que algunos volúmenes deben restaurarse datos en ellos. Si recibe una alerta, antes de intentar recuperar el volumen, seleccione *NODOS* > `*appliance Storage Node*` > *Hardware*. En la sección StorageGRID Appliance de la página, compruebe que el modo RAID de almacenamiento esté en buen estado o recompilándose. Si el estado enumera una o varias unidades con errores, corrija esta condición antes de intentar restaurar volúmenes.
-. En Grid Manager, vaya a *NODES* > `*appliance Storage Node*` > *Hardware*. En la sección StorageGRID Appliance de la página, compruebe que el modo RAID de almacenamiento esté en buen estado.
+. Si han fallado más de una unidad y se han reemplazado, podrías tener alertas que indican que algunos volúmenes necesitan que se les restaure la información. Si recibes una alerta, antes de intentar la recuperación del volumen, selecciona *Nodos* > `*appliance Storage Node*` > *Hardware*. En la sección StorageGRID Appliance de la página, verifica que el modo Storage RAID esté saludable o en proceso de reconstrucción. Si el estado muestra una o más unidades fallidas, corrige esta condición antes de intentar la restauración del volumen.
+. En el Administrador de Grid, ve a *Nodos* > `*appliance Storage Node*` > *Hardware*. En la sección StorageGRID Appliance de la página, verifica que el modo RAID de almacenamiento esté en buen estado.
 
 
-Tras sustituir la pieza, devuelva la pieza que ha fallado a NetApp, tal y como se describe en las instrucciones de RMA incluidas con el kit. Consulte https://mysupport.netapp.com/site/info/rma["Repuestos de  de devolución de piezas"^] para obtener más información.
+Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se describe en las instrucciones de RMA enviadas con el kit. Consulta la  https://mysupport.netapp.com/site/info/rma["Devolución de piezas  sustituciones"^] página para más información.

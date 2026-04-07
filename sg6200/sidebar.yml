@@ -1,0 +1,91 @@
+---
+section: sg6200
+title: Mantén el hardware del SG6200
+url: "/landing-maintain-sg6200/index.html"
+entries:
+- title: Descripción general
+  pdf-filename: Mantenimiento del hardware del SG6200
+  url: "/sg6200/index.html"
+- title: Procedimientos de configuración de mantenimiento
+  pdf-filename: Procedimientos de configuración de mantenimiento - SG6200
+  entries:
+  - title: Actualiza SANtricity (SG6260)
+    entries:
+    - title: Actualizar el sistema operativo SANtricity en controladoras de almacenamiento
+        mediante Grid Manager
+      url: "/sg6200/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6260.html"
+    - title: Actualiza el sistema operativo SANtricity en el controlador SG6260 usando
+        el modo de mantenimiento
+      url: "/sg6200/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6260.html"
+  - title: Actualiza el firmware de la unidad usando SANtricity System Manager (SG6260)
+    entries:
+    - title: Actualiza el firmware de la unidad SG6260 automáticamente durante el
+        reinicio del dispositivo
+      url: "/sg6200/upgrading-drive-firmware-using-auto-reboot.html"
+    - title: Actualiza el firmware de la unidad SG6260 usando el método en línea de
+        SANtricity System Manager
+      url: "/sg6200/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Actualiza el firmware de la unidad SG6260 usando el método sin conexión
+        de SANtricity System Manager
+      url: "/sg6200/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
+    - title: Solucione problemas de errores de actualización del firmware de la unidad
+      url: "/sg6200/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html"
+  - title: Encienda y apague el LED de identificación
+    url: "/sg6200/turning-sg6200-identify-led-on-and-off.html"
+  - title: Localice el dispositivo en el centro de datos
+    url: "/sg6200/locating-sg6200-in-data-center.html"
+  - title: Apague y encienda el aparato
+    url: "/sg6200/power-sg6200-off-on.html"
+  - title: Cambiar la configuración del enlace
+    url: "/sg6200/changing-link-configuration-of-sg6200-appliance.html"
+- title: Procedimientos de mantenimiento de hardware
+  pdf-filename: Procedimientos de mantenimiento del hardware - SG6200
+  entries:
+  - title: Verifique el componente que desea reemplazar
+    url: "/sg6200/verify-component-to-replace.html"
+  - title: Sustituya el ventilador
+    entries:
+    - title: SGF6212 o SG6200-CN (SG6260)
+      url: "/sg6200/replacing-fan-in-sg6200.html"
+    - title: Controlador de almacenamiento o bandeja de expansión (SG6260)
+      url: "/sg6200/replace-e4000-fan-canister.html"
+  - title: Sustituya el suministro de alimentación
+    entries:
+    - title: SGF6212 o SG6200-CN (SG6260)
+      url: "/sg6200/replacing-one-or-more-power-supplies-in-sg6200-appliance.html"
+    - title: Controlador de almacenamiento o bandeja de expansión (SG6260)
+      url: "/sg6200/replace-e4000-power-canister.html"
+  - title: Sustituya la unidad
+    entries:
+    - title: SGF6212
+      url: "/sg6200/replacing-drive-in-sgf6212.html"
+    - title: SG6200-CN (SG6260)
+      url: "/sg6200/replace-drive-sg6200-cn.html"
+    - title: Controlador de almacenamiento o bandeja de expansión (SG6260)
+      url: "/sg6200/replace-6260-drives-60.html"
+  - title: Sustituya la NIC
+    entries:
+    - title: NIC interno (SGF6212 y SG6260)
+      url: "/sg6200/replace-nic-in-sg6200.html"
+    - title: NIC externo (SG6260)
+      url: "/sg6200/replace-ocp-nic-sg6200-cn.html"
+  - title: Reemplace la batería CMOS
+    url: "/sg6200/replace-cmos-in-sg6200.html"
+  - title: Reemplace los DIMM
+    url: "/sg6200/replace-dimms-e4000.html"
+  - title: Reemplace las baterías
+    url: "/sg6200/replace-battery-e4000.html"
+  - title: Vuelva a colocar la cubierta
+    url: "/sg6200/reinstalling-sg6200-cover.html"
+  - title: Agregar bandeja de expansión a SG6260 desplegado
+    url: "/sg6200/adding-expansion-shelf-to-deployed-sg6260.html"
+  - title: Sustituya el aparato
+    entries:
+    - title: SGF6212
+      url: "/sg6200/replacing-sgf6212-appliance.html"
+    - title: Controlador SG6200-CN (SG6260)
+      url: "/sg6200/replacing-sg6200-cn-controller.html"
+    - title: Controlador E4000 (SG6260)
+      url: "/sg6200/replace-controller-e4000-duplex.html"
+  - title: Reubique en el rack
+    url: "/sg6200/reinstalling-sg6200-into-cabinet-or-rack.html"

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, hardware, configure, configuration, set up, setup, network, networking 
 summary: Después de aplicar la alimentación al dispositivo, configure las conexiones de red que utilizará StorageGRID.  
 ---
-= Configurar hardware: Descripción general
+= Configura el hardware del dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,55 +15,94 @@ Después de aplicar la alimentación al dispositivo, configure las conexiones de
 
 
 
-== Configure las conexiones de red necesarias
-
-Para todos los dispositivos, debe realizar varias tareas para configurar las conexiones de red necesarias, como:
-
-* Acceda al instalador del dispositivo
-* Configure los enlaces de red
-* Verifique las conexiones de red a nivel de puerto
+== Configuraciones de hardware necesarias
 
 
 
+=== Conexiones de red
 
-== Configuración adicional que puede ser necesaria
+Debes configurar y verificar las conexiones de red necesarias para todos los dispositivos:
 
-En función de los tipos de dispositivos que esté configurando, es posible que sea necesaria una configuración de hardware adicional.
+* link:../installconfig/accessing-storagegrid-appliance-installer.html["Acceda al instalador del dispositivo"]
+* link:../installconfig/configuring-network-links.html["Configure los enlaces de red"]
+* link:../installconfig/verifying-port-level-network-connections.html["Verifique las conexiones de red a nivel de puerto"]
 
-
-
-=== System Manager de SANtricity
-
-Para SG6160, SG6000, SG5800 y SG5700, configure System Manager de SANtricity. El software SANtricity se utiliza para supervisar el hardware de estos dispositivos.
 
 
 
 === Interfaz de BMC
 
-Los siguientes dispositivos tienen una interfaz BMC que se debe configurar:
+Debes link:../installconfig/configuring-bmc-interface.html["configurar la interfaz del controlador de gestión de placa base (BMC)"] si vas a instalar uno de los siguientes appliances:
 
 * SG100
 * SG110
+* SG120
 * SG1000
 * SG1100
-* SG6000
-* SG6100
+* SG1200
+* SGF6024
+* SGF6112
+* SGF6212
+* SG6060
+* SG6160
+* SG6260
+
+
+Puedes usar la interfaz BMC para configurar SNMP y otros ajustes de bajo nivel para tus appliances. También te permite solucionar problemas de la instalación de hardware, determinar el estado de alimentación de tu appliance y controlar el LED de identificación en tu appliance.
+
+Para obtener más información sobre las funciones que puedes utilizar con el BMC, consulta link:../commonhardware/use-bmc.html["Utilice la interfaz de BMC"].
+
+
+
+== Configuraciones de hardware opcionales
+
+
+
+=== System Manager de SANtricity
+
+Puedes link:../installconfig/accessing-and-configuring-santricity-system-manager.html["configurar SANtricity System Manager"] si tienes uno de los siguientes appliances:
+
+* SG5712
+* SG5760
+* SG5812
+* SG5860
+* SGF6024
+* SG6060
+* SG6160
+* SG6260
+
+
+El software SANtricity System Manager te permite:
+
+* Supervisa los datos de rendimiento del sistema, el estado de los componentes de hardware y las funciones de soporte de tu appliance
+* Gestiona las claves de seguridad de las unidades, las alertas SNMP y syslofg y las contraseñas de administrador para acceder a SANtricity System Manager
+* Configura el acceso a E-Series AutoSupport
 
 
 
 
-== Configuración opcional
+=== Habilite el cifrado de nodos o unidades
 
-* Dispositivos de almacenamiento
-+
-** Configure el Administrador del sistema de SANtricity (SG5700, SG5800, SG6000 y SG6100) el software que utilizará para supervisar el hardware
-** Cambie el modo RAID
-** link:../installconfig/accessing-bmc-interface.html["Acceda a la interfaz de BMC"] Para las controladoras SG6000-CN o SG6100-CN
-
-
-* Dispositivos de servicios
-+
-** link:../installconfig/accessing-bmc-interface.html["Acceda a la interfaz de BMC"] Para SG100, SG110, SG1000 y SG1100
+Puedes link:../installconfig/optional-enabling-node-encryption.html["activar el cifrado de nodos o unidades"] para proteger las unidades y los discos de tu dispositivo.
 
 
 
+=== Cambiar el modo RAID
+
+Puedes link:../installconfig/optional-changing-raid-mode.html["cambiar el modo RAID de tu dispositivo de almacenamiento"] para adaptarte a tus necesidades de almacenamiento y recuperación.
+
+Los siguientes dispositivos permiten cambiar el modo RAID:
+
+* SG5760
+* SG5860
+* SGF6024
+* SG6060
+* SG6160
+* SG6260
+
+
+
+
+=== Reasignar puertos de red
+
+Puedes link:../installconfig/optional-remapping-network-ports-for-appliance.html["reasigna los puertos de red de tu appliance"] para optimizar tus conexiones de red.

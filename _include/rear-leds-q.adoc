@@ -27,7 +27,7 @@ Identifique el LED
  a| 
 * Azul, parpadeando: Identifica el dispositivo en el armario o rack.
 * Azul, sólido: Identifica el dispositivo en el armario o rack.
-* Desactivado: El aparato no se puede identificar visualmente en el armario o bastidor.
+* Apagado: El appliance no es identificable visualmente en el cabinet o rack.
 
 
 |===

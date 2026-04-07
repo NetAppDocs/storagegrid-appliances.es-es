@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, mtu, test, testing 
 summary: Debe confirmar que puede acceder a las redes StorageGRID que está utilizando desde el dispositivo. Para validar el enrutamiento mediante puertas de enlace de red, debe probar la conectividad entre el instalador de dispositivos de StorageGRID y las direcciones IP en subredes diferentes. También puede verificar la configuración de MTU. 
 ---
-= Compruebe las conexiones de red
+= Verifica las conexiones de red en los dispositivos StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

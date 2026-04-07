@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Mantenimiento del dispositivo SG5800
+= Mantén el dispositivo SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

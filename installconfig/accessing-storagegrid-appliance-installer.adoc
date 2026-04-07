@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: appliance installer, installer, access, accessing, start, starting 
 summary: 'Debe acceder al instalador de dispositivos de StorageGRID para comprobar la versión del instalador y configurar las conexiones entre el dispositivo y las tres redes StorageGRID: La red de grid, la red de administración \(opcional\) y la red de cliente \(opcional\).' 
 ---
-= Acceda al instalador de dispositivos de StorageGRID
+= Accede al instalador del dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,6 +13,9 @@ summary: 'Debe acceder al instalador de dispositivos de StorageGRID para comprob
 [role="lead"]
 Debe acceder al instalador de dispositivos de StorageGRID para verificar la versión del instalador y configurar las conexiones entre el dispositivo y las tres redes StorageGRID: La red de grid, la red de administración (opcional) y la red de cliente (opcional).
 
+.Acerca de esta tarea
+Para acceder inicialmente al instalador de dispositivos StorageGRID, puede utilizar la dirección IP asignada por DHCP para el puerto de la red de administración del dispositivo de servicios o del controlador del dispositivo de almacenamiento (suponiendo que esté conectado a la red de administración), también puede conectar un portátil de servicio directamente al dispositivo de servicios o al controlador del dispositivo de almacenamiento.
+
 .Antes de empezar
 * Está utilizando cualquier cliente de gestión que pueda conectarse a la red de administración de StorageGRID o que tenga un portátil de servicio.
 * El cliente o servicio portátil tiene un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador web compatible"^].
@@ -20,9 +23,6 @@ Debe acceder al instalador de dispositivos de StorageGRID para verificar la vers
 * Conoce la dirección IP, la puerta de enlace y la subred del dispositivo de servicios o la controladora del dispositivo de almacenamiento de estas redes.
 * Configuró los switches de red que planea utilizar.
 
-
-.Acerca de esta tarea
-Para acceder inicialmente al instalador de dispositivos StorageGRID, puede utilizar la dirección IP asignada por DHCP para el puerto de la red de administración del dispositivo de servicios o del controlador del dispositivo de almacenamiento (suponiendo que esté conectado a la red de administración), también puede conectar un portátil de servicio directamente al dispositivo de servicios o al controlador del dispositivo de almacenamiento.
 
 .Pasos
 . Si es posible, utilice la dirección DHCP para el puerto de red de administración en el controlador del dispositivo de servicios o del dispositivo de almacenamiento. El puerto de la red de administración se resalta en la siguiente figura. (Utilice la dirección IP en la red de grid si la red de administración no está conectada).
@@ -39,6 +39,11 @@ image::../media/sg100_admin_network_port.png[Puerto de red de administración en
 image::../media/sg6100_admin_network_port.png[Puerto de red de administración en SG110]
 
 --
+.SG120
+--
+image::../media/sg120_admin_network_port.png[Puerto de red de administración en el SG120]
+
+--
 .SG1000
 --
 image::../media/sg1000_admin_network_port.png[Puerto de red de administración en SG1000]
@@ -47,6 +52,11 @@ image::../media/sg1000_admin_network_port.png[Puerto de red de administración e
 .SG1100
 --
 image::../media/sg1100_admin_network_port.png[Puerto de red de administración en SG1100]
+
+--
+.SG1200
+--
+image::../media/sg1200_admin_network_port.png[Puerto de red de administración en el SG1200]
 
 --
 .E5700SG
@@ -89,9 +99,19 @@ image::../media/sg6000_cn_admin_network_port.png[Puerto de red de administració
 image::../media/sg6100_cn_admin_network_port.png[Puerto de red de administración en el controlador SG6000-CN]
 
 --
+.SG6200-CN
+--
+image::../media/sg6200_cn_admin_network_port.png[Puerto de red de administración en el controlador SG6200-CN]
+
+--
 .SGF6112
 --
 image::../media/sg6100_admin_network_port.png[Puerto de red de administración en SGF6112]
+
+--
+.SGF6212
+--
+image::../media/sgf6212_admin_network_port.png[Puerto de red de administración en el SGF6212]
 
 --
 ====
@@ -129,6 +149,13 @@ Conecte un ordenador portátil de servicio directamente al puerto RJ-45 situado 
 image::../media/sg6100_link_local_port.png[SG110 Conexión Link-Local]
 
 --
+.SG120
+--
+Conecte un ordenador portátil de servicio directamente al puerto RJ-45 situado más a la derecha del aparato mediante un cable Ethernet.
+
+image::../media/sg120_link_local_port.png[SG120 Conexión Link-Local]
+
+--
 .SG1000
 --
 Conecte un ordenador portátil de servicio directamente al puerto RJ-45 más derecho del dispositivo de servicios mediante un cable Ethernet.
@@ -141,6 +168,13 @@ image::../media/sg1000_link_local_port.png[Conexión de enlace local SG1000]
 Conecte un ordenador portátil de servicio directamente al puerto RJ-45 situado más a la derecha del aparato mediante un cable Ethernet.
 
 image::../media/sg1100_link_local_port.png[SG1100 Conexión Link-Local]
+
+--
+.SG1200
+--
+Conecte un ordenador portátil de servicio directamente al puerto RJ-45 situado más a la derecha del aparato mediante un cable Ethernet.
+
+image::../media/sg1200_link_local_port.png[Conexión Link-Local SG1200]
 
 --
 .E5700SG
@@ -171,11 +205,25 @@ Conecte un portátil de servicio directamente al puerto RJ-45 más derecho del c
 image::../media/sg6100_cn_link_local_port.png[Ubicación del puerto de gestión para SG6100-CN]
 
 --
+.SG6200-CN
+--
+Conecta un ordenador portátil de servicio directamente al puerto RJ-45 situado más a la derecha del controlador SG6200-CN, usando un cable Ethernet.
+
+image::../media/sg6200_cn_link_local_port.png[Ubicación del puerto de gestión para SG6200-CN]
+
+--
 .SGF6112
 --
 Conecte un ordenador portátil de servicio directamente al puerto RJ-45 situado más a la derecha del aparato mediante un cable Ethernet.
 
 image::../media/sg6100_link_local_port.png[SGF6112 Conexión Link-Local]
+
+--
+.SGF6212
+--
+Conecte un ordenador portátil de servicio directamente al puerto RJ-45 situado más a la derecha del aparato mediante un cable Ethernet.
+
+image::../media/sgf6212_link_local_port.png[SGF6212 Conexión Link-Local]
 
 --
 ====
