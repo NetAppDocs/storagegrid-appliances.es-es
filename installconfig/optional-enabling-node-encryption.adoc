@@ -29,7 +29,7 @@ Si habilita el cifrado de nodos, los discos del dispositivo pueden protegerse me
 
 Si utiliza ConfigBuilder para generar un archivo JSON, puede habilitar el cifrado de nodos automáticamente. Consulte link:automating-appliance-installation-and-configuration.html["Automatice la instalación y configuración de los dispositivos"].
 
-Además, cuando habilita el modo FIPS después de habilitar el cifrado de nodo, se utiliza el módulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 para el cifrado de datos en reposo. Referirse a https://review.docs.netapp.com/us-en/storagegrid_storagegrid-120-dev/admin/manage-tls-ssh-policy.html#select-a-security-policy["Seleccione una política de seguridad"^] Para más información.
+Además, cuando activas el modo FIPS después de activar el cifrado de nodos, se utiliza el módulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 para el cifrado de datos en reposo. Consulta https://docs.netapp.com/us-en/storagegrid/admin/manage-tls-ssh-policy.html#select-a-security-policy["Seleccione una política de seguridad"^] para más información.
 
 .Antes de empezar
 Revise la información sobre https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurando KMS"^].
