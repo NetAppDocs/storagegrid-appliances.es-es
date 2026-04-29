@@ -83,7 +83,7 @@ image::../media/bmc_power_control_page_controller_off.png[Página de control de 
 
 
 
-== Encienda el controlador SG6000-CN y compruebe el funcionamiento
+== [[poweron]]Enciende el controlador SG6000-CN y verifica el funcionamiento
 
 Encienda la controladora después de completar el mantenimiento.
 
