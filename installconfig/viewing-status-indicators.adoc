@@ -330,6 +330,7 @@ Estado/fallo de la unidad
  a| 
 * Azul (sólido): La unidad está en línea
 * Ámbar (sólido): Fallo de la unidad
+* Ámbar (parpadeante): Luz localizadora de la unidad encendida
 * Desactivado: La ranura está vacía
 
 
@@ -1302,6 +1303,7 @@ Estado/fallo de la unidad
  a| 
 * Azul (sólido): La unidad está en línea
 * Ámbar (sólido): Fallo de la unidad
+* Ámbar (parpadeante): Luz localizadora de la unidad encendida
 * Desactivado: La ranura está vacía
 
 
