@@ -2,7 +2,7 @@
 permalink: commonhardware/appliance-node-cloning-procedure.html 
 sidebar: sidebar 
 keywords: storagegrid, appliance node clone, appliance node cloning, node clone, node cloning 
-summary: 'El proceso de clonado puede tardar varios días en transferir datos entre el nodo de origen \(dispositivo que se va a sustituir\) y el dispositivo de destino \(nuevo\).' 
+summary: 'El proceso de clonado puede tardar varios días en transferir datos entre el nodo de origen (dispositivo que se va a reemplazar) y el dispositivo de destino (nuevo).' 
 ---
 = Clonar un nodo de dispositivo StorageGRID
 :allow-uri-read: 
@@ -19,6 +19,7 @@ El proceso de clonado puede tardar varios días en transferir datos entre el nod
 * Configuró el dispositivo de destino, incluida la configuración de conexiones StorageGRID, SANtricity System Manager (solo dispositivos de almacenamiento) y la interfaz BMC.
 +
 ** Al configurar las conexiones StorageGRID, utilice las direcciones IP temporales.
+** Si vas a habilitar DHCP en cualquier puerto del nodo de destino que se haya configurado como estático en el nodo de origen, asegúrate de que no haya asignaciones DHCP permanentes para ninguna de las direcciones MAC del nodo de origen. Si no lo haces, podría producirse un conflicto de dirección IP al final del proceso de clonación.
 ** Al configurar los enlaces de red, utilice la configuración del enlace final.
 
 
@@ -88,6 +89,10 @@ Cuando finalice correctamente la clonación:
 * Los nodos de origen y destino intercambian direcciones IP:
 +
 ** El nodo de destino utiliza ahora las direcciones IP asignadas originalmente al nodo de origen para las redes Grid, Admin y Client.
++
+
+NOTE: Si te encuentras con un conflicto de dirección IP al final del proceso de clonación, asegúrate de que no hubiera concesiones DHCP permanentes asignadas a ninguna de las direcciones MAC de los puertos que tenían direcciones IP estáticas en el nodo de origen y que estaban habilitados para DHCP en el nodo de destino. Elimina o actualiza las concesiones DHCP permanentes en el servidor DHCP para resolver este conflicto.
+
 ** El nodo de origen ahora utiliza la dirección IP temporal asignada inicialmente al nodo de destino.
 
 

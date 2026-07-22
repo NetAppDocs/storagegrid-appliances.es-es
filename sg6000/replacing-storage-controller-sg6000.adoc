@@ -57,6 +57,7 @@ NOTE: Las controladoras de almacenamiento en la mayoría de los modelos de dispo
 
 
 
+[[step-1-prepare-the-replacement-controller]]
 == Paso 1: Prepare el controlador de reemplazo
 
 Prepare el controlador E2800A o E2800B de reemplazo.
@@ -114,6 +115,7 @@ La tarjeta de interfaz del host (HIC) de 4 puertos. Esta tarjeta se debe mover a
 |===
 
 
+[[step-2-take-the-controller-offline]]
 == Paso 2: Desconecte la controladora
 
 Prepare para extraer la controladora que ha fallado y desconectarla.
@@ -146,6 +148,7 @@ NOTE: La recogida de datos de soporte antes y después de sustituir un component
 
 
 
+[[step-3-remove-the-controller]]
 == Paso 3: Retire el controlador
 
 Retire el controlador que ha fallado del dispositivo.
@@ -169,6 +172,7 @@ CAUTION: Utilice siempre dos manos para soportar el peso del controlador.
 
 
 
+[[step-4-move-battery-to-the-new-controller]]
 == Paso 4: Mueva la batería al nuevo controlador
 
 Retire la batería de la controladora que ha fallado e instálela en la controladora de reemplazo.
@@ -256,6 +260,7 @@ image::../media/e2800_battery_flange_not_ok.gif[Brida de la batería incorrecta]
 
 
 
+[[step-5-move-hic-to-new-controller-if-needed]]
 == Paso 5: Mueva HIC a una nueva controladora, si es necesario
 
 Si la controladora con errores incluye una tarjeta de interfaz del host (HIC), mueva la HIC de la controladora con error a la controladora de reemplazo.
@@ -364,6 +369,8 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800A tornill
 ====
 
 
+[[step-6-replace-controller]]
+[[step6_replace_controller]]
 == Paso 6: Reemplace el controlador
 
 Instale el controlador de sustitución y compruebe que se ha vuelto a unir a la cuadrícula.

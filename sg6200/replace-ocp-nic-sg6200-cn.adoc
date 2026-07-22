@@ -2,7 +2,7 @@
 permalink: sg6200/replace-ocp-nic-sg6200-cn.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6200, storage node, storage appliance, Replacing, replace, NIC, network interface card 
-summary: 'Es posible que tengas que sustituir una tarjeta de interfaz de red (NIC) en el SG6200-CN si no funciona de forma óptima o si ha fallado.' 
+summary: 'Es posible que tengas que sustituir una tarjeta de interfaz de red (NIC) en el SG6200-CN si no funciona correctamente o si se ha averiado.' 
 ---
 = Sustituye el NIC externo en el SG6200-CN
 :allow-uri-read: 
@@ -36,6 +36,7 @@ NOTE: El intercambio en caliente *no* es compatible con este procedimiento. Se n
 
 
 
+[[step-1-remove-the-external-nic]]
 == Paso 1: quitar el NIC externo
 
 .Pasos
@@ -50,6 +51,7 @@ CAUTION: El intercambio en caliente es *not* compatible para este procedimiento.
 
 
 
+[[step-2-reinstall-the-external-nic]]
 == Paso 2: reinstalar el NIC externo
 
 .Pasos

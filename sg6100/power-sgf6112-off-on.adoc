@@ -15,6 +15,7 @@ Puede apagar el dispositivo SGF6112 o la controladora SG6100-CN y volver a encen
 
 
 
+[[shut-down-the-sgf6112-appliance-or-sg6100-cn-controller]]
 == Apague el dispositivo SGF6112 o el controlador SG6100-CN
 
 Apague el dispositivo para realizar las tareas de mantenimiento del hardware.
@@ -60,6 +61,7 @@ Este comando puede tardar hasta 10 minutos en completarse.
 
 
 
+[[power-on-sgf6112-or-sg6100-cn-and-verify-operation]]
 == Encienda SGF6112 o SG6100-CN y verifique el funcionamiento
 
 Encienda la controladora después de completar el mantenimiento.

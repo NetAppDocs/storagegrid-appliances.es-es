@@ -4,6 +4,7 @@
 
 
 
+[[step-3-remove-the-controller]]
 == Paso 3: Retire el controlador
 
 Retire el controlador que ha fallado del dispositivo.

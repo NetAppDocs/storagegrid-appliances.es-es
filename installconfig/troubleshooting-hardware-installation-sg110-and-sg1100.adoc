@@ -15,6 +15,7 @@ Si encuentra problemas durante la instalación, es posible que le sea útil revi
 
 
 
+[[view-boot-up-codes]]
 == Ver códigos de arranque
 
 Cuando se enciende el aparato, el BMC registra una serie de códigos de inicio. Puede ver estos códigos en una consola gráfica que está conectada al puerto de gestión del BMC.
@@ -168,6 +169,7 @@ StorageGRID está ejecutando.
 
 
 
+[[view-error-codes]]
 == Ver códigos de error
 
 Si se produce un error de hardware cuando el dispositivo arranca, el BMC registra un código de error. Según sea necesario, puede ver estos códigos de error mediante el puerto serie del dispositivo y, a continuación, trabajar con el soporte técnico para resolver el problema.
@@ -540,6 +542,8 @@ MRC: ERR_INTERLEAVE_FAILURE
 
 
 
+[[hardware-setup-appears-to-hang]]
+[[hardware-setup-hangs]]
 == La configuración del hardware parece que se bloquea
 
 Es posible que el instalador de dispositivos StorageGRID no esté disponible si los errores de hardware o de cableado impiden que el dispositivo complete el procesamiento de arranque.
@@ -551,6 +555,7 @@ Es posible que el instalador de dispositivos StorageGRID no esté disponible si 
 
 
 
+[[connection-issues]]
 == Problemas de conexión
 
 Si no puede conectarse a la aplicación de servicios, es posible que haya un problema de red o que la instalación de hardware no se haya completado correctamente.

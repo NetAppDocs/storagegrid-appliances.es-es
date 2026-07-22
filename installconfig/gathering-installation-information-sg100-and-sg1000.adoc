@@ -18,6 +18,7 @@ TIP: En lugar de utilizar las tablas, utilice el libro de trabajo proporcionado 
 
 
 
+[[check-storagegrid-version]]
 == Compruebe la versión de StorageGRID
 
 Antes de instalar un dispositivo de servicios SG100 o SG1000, confirme que el sistema StorageGRID está usando una versión necesaria del software StorageGRID.
@@ -42,6 +43,7 @@ SG100
 |===
 
 
+[[administration-and-maintenance-ports]]
 == Puertos de administración y mantenimiento
 
 La red de administración de StorageGRID es una red opcional que se utiliza para la administración y el mantenimiento del sistema. El dispositivo se conecta a la red de administración mediante los siguientes puertos de gestión de 1 GbE del dispositivo.
@@ -130,6 +132,7 @@ Subredes de red de administración (CIDR)
 |===
 
 
+[[networking-ports]]
 == Puertos de red
 
 Los cuatro puertos de red del dispositivo se conectan a la red Grid de StorageGRID y a la red de cliente opcional.
@@ -198,6 +201,7 @@ Puerto de switch para el puerto 4 (Red de red para el modo fijo)
 |===
 
 
+[[grid-network-ports]]
 == Puertos de red de grid
 
 Grid Network para StorageGRID es una red necesaria que se utiliza para todo el tráfico interno de StorageGRID. El dispositivo se conecta a la red de cuadrícula mediante los cuatro puertos de red.
@@ -269,6 +273,7 @@ Configuración de unidad de transmisión máxima (MTU) (opcional)puede utilizar 
 |===
 
 
+[[client-network-ports]]
 == Puertos de red del cliente
 
 La red de cliente para StorageGRID es una red opcional que se suele utilizar para proporcionar acceso al protocolo de cliente al grid. El dispositivo se conecta a la red cliente mediante los cuatro puertos de red.
@@ -339,6 +344,7 @@ Dirección IP estática que se va a usar para el nodo del dispositivo en la red 
 |===
 
 
+[[bmc-management-network-ports]]
 == Puertos de red de gestión de BMC
 
 Puede acceder a la interfaz del BMC en el dispositivo de servicios mediante el puerto de gestión de 1-GbE rodeado por un círculo en el diagrama. Este puerto admite la gestión remota del hardware de la controladora a través de Ethernet mediante el estándar de interfaz de gestión de plataforma inteligente (IPMI).
@@ -386,12 +392,14 @@ La dirección IP estática que planea usar para el puerto de gestión de BMC
 |===
 
 
+[[port-bond-modes]]
 == Modos de enlace de puerto
 
 Al configurar enlaces de red para los dispositivos SG100 y SG1000, puede utilizar conexiones de puertos para los puertos que se conectan a la red Grid y a la red de clientes opcional, así como puertos de gestión de 1 GbE que se conectan a la red de administración opcional. El enlace de puertos ayuda a proteger los datos proporcionando rutas redundantes entre las redes StorageGRID y el dispositivo.
 
 
 
+[[network-bond-modes]]
 === Modos de enlace de red
 
 Los puertos de red del dispositivo de servicios admiten el modo de enlace de puerto fijo o el modo de enlace de puerto agregado para las conexiones de red de cliente y red de grid.
@@ -477,6 +485,7 @@ NOTE: Si decide utilizar menos de cuatro puertos de red, tenga en cuenta que pue
 
 
 
+[[network-bond-modes-for-management-ports]]
 === Modos de enlace de red para los puertos de gestión
 
 Para los dos puertos de gestión de 1-GbE en el dispositivo de servicios, puede elegir el modo de enlace de red independiente o el modo de enlace de red Active-Backup para conectarse a la red de administración opcional. Estas cifras muestran cómo los puertos de gestión en los dispositivos están unidos en modo de enlace de red para la red de administración.

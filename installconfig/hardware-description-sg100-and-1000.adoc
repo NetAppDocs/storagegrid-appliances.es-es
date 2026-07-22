@@ -2,7 +2,7 @@
 permalink: installconfig/hardware-description-sg100-and-1000.html 
 sidebar: sidebar 
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
-summary: 'La aplicación de servicios SG100 de StorageGRID y la aplicación de servicios SG1000 pueden funcionar como nodo de puerta de enlace y como nodo de administración para ofrecer servicios de equilibrio de carga de alta disponibilidad en un sistema StorageGRID. Ambos dispositivos pueden funcionar como nodos de puerta de enlace y nodos de administración \(principal o no primario\) al mismo tiempo.' 
+summary: 'La aplicación de servicios SG100 de StorageGRID y la aplicación de servicios SG1000 pueden funcionar como nodo de puerta de enlace y como nodo de administración para ofrecer servicios de equilibrio de carga de alta disponibilidad en un sistema StorageGRID. Ambos dispositivos pueden funcionar como nodos de puerta de enlace y nodos de administración (primarios o no primarios) al mismo tiempo.' 
 ---
 = Dispositivos StorageGRID SG100 y SG1000
 :allow-uri-read: 
@@ -15,6 +15,7 @@ La aplicación de servicios SG100 de StorageGRID y la aplicación de servicios S
 
 
 
+[[appliance-features]]
 == Funciones de los dispositivos
 
 Ambos modelos del dispositivo de servicios ofrecen las siguientes características:
@@ -33,6 +34,7 @@ Ambos modelos del dispositivo de servicios ofrecen las siguientes característic
 
 
 
+[[sg100-and-sg1000-diagrams]]
 == Diagramas SG100 y SG1000
 
 Esta figura muestra la parte frontal del SG100 y el SG1000 con el bisel retirado. Desde la parte frontal, los dos aparatos son idénticos a excepción del nombre del producto en el bisel.
@@ -78,6 +80,7 @@ Identifique el LED
 |===
 
 
+[[sg100-connectors]]
 == SG100 conectores
 
 Esta figura muestra los conectores en la parte posterior del SG100.
@@ -153,6 +156,7 @@ Opciones:
 |===
 
 
+[[sg1000-connectors]]
 == SG1000 conectores
 
 Esta figura muestra los conectores en la parte posterior del SG1000.
@@ -228,6 +232,7 @@ Opciones:
 |===
 
 
+[[sg100-and-sg1000-applications]]
 == Aplicaciones SG100 y SG1000
 
 Puede configurar los dispositivos de servicios StorageGRID de diversas formas para proporcionar servicios de puerta de enlace, así como redundancia de algunos servicios de administración de grid.

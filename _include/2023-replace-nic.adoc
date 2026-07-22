@@ -80,6 +80,7 @@ image::../media/one-slot-assembly-sgf6112.png[NIC en el conjunto de elevador de 
 
 
 
+[[reinstall-the-internal-nic]]
 == Vuelva a instalar la NIC interna
 
 Instale la NIC de reemplazo en la misma ubicación que la que se quitó.

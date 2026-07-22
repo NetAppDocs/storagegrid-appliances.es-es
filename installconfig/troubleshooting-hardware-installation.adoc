@@ -15,6 +15,8 @@ Si encuentra problemas durante la instalación, es posible que le sea útil revi
 
 
 
+[[view-boot-up-codes-sg6000-cn-controller]]
+[[view-boot-codes]]
 == Ver códigos de arranque (controlador SG6000-CN)
 
 Cuando se enciende el aparato, el BMC registra una serie de códigos de inicio para el controlador SG6000-CN. Puede ver estos códigos de varias maneras.
@@ -188,6 +190,8 @@ StorageGRID está ejecutando.
 
 
 
+[[view-error-codes-sg6000-cn-controller]]
+[[error-codes]]
 == Ver códigos de error (controlador SG6000-CN)
 
 Si se produce un error de hardware cuando se inicia el controlador SG6000-CN, el BMC registra un código de error. Según sea necesario, puede ver estos códigos de error mediante la interfaz BMC o el puerto serie del dispositivo y, a continuación, trabajar con el soporte técnico para resolver el problema.
@@ -584,6 +588,8 @@ MRC: ERR_INTERLEAVE_FAILURE
 
 
 
+[[hardware-setup-appears-to-hang-sg6000-or-sg5700]]
+[[hardware-setup-hangs]]
 == La configuración de hardware parece bloquearse (SG6000 o SG5700)
 
 Es posible que el instalador de dispositivos de StorageGRID no esté disponible si errores de cableado o errores de hardware impidan que las controladoras de almacenamiento o la controladora del dispositivo completen el procesamiento de arranque.
@@ -647,12 +653,15 @@ Mientras el hardware se está inicializando durante el encendido, las dos pantal
 ====
 
 
+[[connection-issues-sg5700-or-sg6000]]
+[[connection-issues]]
 == Problemas de conexión (SG5700 o SG6000)
 
 Si tiene problemas de conexión durante la instalación del dispositivo StorageGRID, debe ejecutar los pasos de acción correctiva indicados.
 
 
 
+[[unable-to-connect-to-sg6000-appliance]]
 === No se puede conectar al dispositivo SG6000
 
 Si no puede conectarse al dispositivo, es posible que haya un problema de red o que la instalación de hardware no se haya completado correctamente.
@@ -703,6 +712,7 @@ Aparece la página de inicio.
 
 
 
+[[sg6060-expansion-shelves-dont-appear-in-appliance-installer]]
 === Las bandejas de expansión SG6060 no se muestran en el instalador de dispositivos
 
 Si instaló bandejas de ampliación para SG6060 y estas no aparecen en el instalador de dispositivos de StorageGRID, debe comprobar que las bandejas se hayan instalado completamente y estén encendidas.
@@ -729,6 +739,7 @@ Si en las páginas del instalador de dispositivos de StorageGRID no se indica qu
 
 
 
+[[unable-to-connect-to-sg5700-appliance]]
 === No se puede conectar al dispositivo SG5700
 
 Si no puede conectarse al dispositivo, es posible que haya un problema de red o que la instalación de hardware no se haya completado correctamente.
@@ -778,6 +789,8 @@ Aparece la página de inicio.
 
 
 
+[[he-error-error-synchronizing-with-santricity-os-software-sg5700]]
+[[he-error]]
 == ERROR HE: Error al sincronizar con el software de sistema operativo SANtricity (SG5700)
 
 La pantalla de siete segmentos en la controladora de computación muestra un código de ERROR HE si el instalador del dispositivo de StorageGRID no puede sincronizar con el software de sistema operativo SANtricity.

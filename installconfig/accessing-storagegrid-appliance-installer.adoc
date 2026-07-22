@@ -2,7 +2,7 @@
 permalink: installconfig/accessing-storagegrid-appliance-installer.html 
 sidebar: sidebar 
 keywords: appliance installer, installer, access, accessing, start, starting 
-summary: 'Debe acceder al instalador de dispositivos de StorageGRID para comprobar la versión del instalador y configurar las conexiones entre el dispositivo y las tres redes StorageGRID: La red de grid, la red de administración \(opcional\) y la red de cliente \(opcional\).' 
+summary: 'Debes acceder al instalador de StorageGRID Appliance para comprobar la versión del instalador y configurar las conexiones entre el dispositivo y las tres redes de StorageGRID: la Grid Network, la Admin Network (opcional) y la Client Network (opcional).' 
 ---
 = Accede al instalador del dispositivo StorageGRID
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: installconfig/hardware-description-sg5800.html 
 sidebar: sidebar 
 keywords: sg5800, sg5812, sg5860, storage appliance 
-summary: 'El dispositivo SG5800 StorageGRID es una plataforma integrada de almacenamiento y computación que funciona como un nodo de almacenamiento en un grid de StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales \(basados en software\).' 
+summary: 'El dispositivo SG5800 StorageGRID es una plataforma integrada de almacenamiento y procesamiento que funciona como un nodo de almacenamiento en una grid StorageGRID. El dispositivo puede usarse en un entorno de grid híbrido que combina nodos de almacenamiento de dispositivo y nodos de almacenamiento virtuales (basados en software).' 
 ---
 = Dispositivos StorageGRID SG5800
 :allow-uri-read: 
@@ -26,6 +26,7 @@ El dispositivo SG5800 está disponible en dos modelos: SG5812 y SG5860.
 
 
 
+[[sg5800-components]]
 == SG5800 componentes
 
 Los modelos SG5800 incluyen los siguientes componentes:
@@ -57,10 +58,12 @@ El almacenamiento bruto máximo disponible en el dispositivo StorageGRID es fijo
 
 
 
+[[sg5800-diagrams]]
 == SG5800 diagramas
 
 
 
+[[sg5812-front-and-rear-views]]
 === Vistas frontal y trasera de SG5812
 
 Las cifras muestran la parte frontal y posterior del SG5812, un compartimento 2U con capacidad para 12 unidades.
@@ -69,6 +72,7 @@ image::../media/sg5812_front_and_back_views.png[La parte frontal y posterior del
 
 
 
+[[sg5812-components]]
 === SG5812 componentes
 
 SG5812 incluye dos controladoras y dos contenedores de alimentación/ventiladores.
@@ -102,6 +106,7 @@ Contenedores de alimentación/ventilador
 |===
 
 
+[[sg5860-front-and-rear-views]]
 === Vistas frontal y trasera de SG5860
 
 Las cifras muestran la parte frontal y posterior del modelo SG5860, un compartimento 4U con capacidad para 60 unidades en 5 cajones de unidades.
@@ -110,6 +115,7 @@ image::../media/sg5860_front_and_back_views.png[Parte delantera y trasera del di
 
 
 
+[[sg5860-components]]
 === SG5860 componentes
 
 SG5860 incluye dos controladoras, dos contenedores de ventilador y dos contenedores de alimentación.
@@ -150,12 +156,14 @@ Contenedor de alimentación (1 de 2)
 |===
 
 
+[[sg5800-controller]]
 == Controlador SG5800
 
 Los modelos SG5812 de 12 unidades y SG5860 de 60 unidades del dispositivo StorageGRID incluyen una controladora de computación SG5800 y una controladora de almacenamiento E-Series E4000.
 
 
 
+[[sg5800-compute-controller]]
 === Controladora de computación de SG5800
 
 * Funciona como servidor de computación del dispositivo.
@@ -238,6 +246,7 @@ Conéctese a la red de red y a la red de cliente para StorageGRID.
 |===
 
 
+[[e4000-storage-controller]]
 === Controladora de almacenamiento E4000
 
 La controladora de almacenamiento de la serie E4000 tiene las siguientes especificaciones:

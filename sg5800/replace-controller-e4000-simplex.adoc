@@ -44,6 +44,7 @@ No se podrá acceder al nodo de almacenamiento del dispositivo cuando se sustitu
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Paso 1: Preparar la sustitución de la controladora
 
 Para preparar el reemplazo de un contenedor de controladora, guarde la clave de seguridad de la unidad, realice un backup de la configuración y recoja datos de soporte. Luego, es posible detener las operaciones de I/o del host y apagar la bandeja de controladoras.
@@ -105,6 +106,7 @@ El archivo se guarda en la carpeta de descargas del explorador con el nombre *su
 
 
 
+[[step-2-place-the-controller-offline]]
 == Paso 2: Coloque la controladora en estado sin conexión
 
 Desconecte la controladora y confirme que se hayan completado todas las operaciones.
@@ -127,6 +129,7 @@ El LED verde de caché activa de la parte posterior de la controladora está enc
 
 
 
+[[step-3-remove-e4000-controller-canister]]
 == Paso 3: Quite el compartimento de controladora E4000
 
 Quite un compartimento de controladoras E4000.
@@ -146,6 +149,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 
 
 
+[[step-4-determine-parts-to-transfer-to-replacement-controller]]
 == Paso 4: Determine las piezas que se deben transferir al controlador de reemplazo
 
 El controlador de repuesto puede venir con las piezas preinstaladas. Determine qué piezas deben transferirse al compartimento de la controladora de reemplazo.
@@ -162,6 +166,8 @@ El controlador de repuesto puede venir con las piezas preinstaladas. Determine q
 
 
 
+[[step-5-remove-the-battery]]
+[[step5_remove_battery]]
 == Paso 5: Retire la batería
 
 Ha extraído la batería del controlador defectuoso e instálela en el controlador de sustitución.
@@ -200,6 +206,8 @@ image::../media/legend_icon_02.png[Referencia de llamada 2]
 
 
 
+[[step-6-move-the-dimms]]
+[[step6_remove_dimm]]
 == Paso 6: Mueva los DIMM
 
 Quite los DIMM del compartimento de controladora deficiente e instálelos en el compartimento de controladora de reemplazo.
@@ -258,6 +266,8 @@ NOTE: Inspeccione visualmente el módulo DIMM para comprobar que está alineado 
 
 
 
+[[step-7-install-the-battery]]
+[[step7_install_battery]]
 == Paso 7: Instale la batería
 
 Instale la batería en el compartimento de controladoras de reemplazo.
@@ -274,6 +284,8 @@ Asegúrese de que el enchufe se bloquea en la toma de la batería de la placa ba
 
 
 
+[[step-8-replace-controller]]
+[[step8_replace_controller]]
 == Paso 8: Reemplace el controlador
 
 Instale la controladora de reemplazo y compruebe que el nodo ha vuelto a unirse al grid.

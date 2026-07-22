@@ -27,6 +27,7 @@ En los procedimientos descritos en esta sección se asume que el dispositivo ya 
 
 
 
+[[drive-firmware-upgrade]]
 == Actualización del firmware de la unidad
 
 El firmware de las unidades en el y SG6260 se comprueba automáticamente cada vez que se reinicia el dispositivo. Cuando es necesario, el firmware se actualiza automáticamente a la versión esperada por la versión actual de StorageGRID. Normalmente, las actualizaciones de firmware ocurren durante las actualizaciones de software de StorageGRID. Cualquier actualización necesaria del firmware de la unidad para las versiones existentes de StorageGRID se incluirá en correcciones urgentes. Sigue las instrucciones proporcionadas con cada corrección urgente para asegurarte de que la actualización se aplica a todas las unidades que podrían beneficiarse de ella.
@@ -38,6 +39,7 @@ NOTE: SANtricity System Manager no es necesario para mantener el dispositivo SGF
 
 
 
+[[general-maintenance-procedures]]
 == Procedimientos generales de mantenimiento
 
 Consulte link:../commonhardware/index.html["Procedimientos de mantenimiento comunes"] para procedimientos que son los mismos para todos los dispositivos, como aplicar una revisión, recuperar un nodo o sitio y realizar el mantenimiento de la red.

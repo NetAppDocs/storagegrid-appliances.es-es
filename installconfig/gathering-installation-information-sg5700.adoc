@@ -1,7 +1,7 @@
 ---
 permalink: installconfig/gathering-installation-information-sg5700.html 
 sidebar: sidebar 
-keywords: storagegrid, sg5700, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10/25-gbe, 10/25 gbe, e5700sg, independent, active-backup, active backup, 1-gbe, 1 gbe 
+keywords: storagegrid, sg5700, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10-gbe, 10 gbe, 25-gbe, 25 gbe, e5700sg, independent, active-backup, active backup, 1-gbe, 1 gbe 
 summary: En las tablas, registre la información necesaria para cada red que conecte al dispositivo. Estos valores son necesarios para instalar y configurar el hardware. 
 ---
 = Recopila información de red para el SG5700
@@ -18,6 +18,7 @@ TIP: En lugar de utilizar las tablas, utilice el libro de trabajo proporcionado 
 
 
 
+[[information-needed-to-connect-to-santricity-system-manager-on-e2800-controller]]
 == La información necesaria para conectarse a System Manager de SANtricity en la controladora E2800
 
 Se conecta la controladora de la serie E2800 a la red de gestión que se utilizará para SANtricity System Manager.
@@ -90,6 +91,7 @@ Para IPv6:
 |===
 
 
+[[information-needed-to-connect-e5700sg-controller-to-admin-network]]
 == Información necesaria para conectar el controlador E5700SG a la red de administración
 
 La red de administración de StorageGRID es una red opcional que se utiliza para la administración y el mantenimiento del sistema. El dispositivo se conecta a la red de administrador mediante los puertos de gestión de 1-GbE en la controladora E5700SG.
@@ -162,6 +164,7 @@ Subredes de red de administración (CIDR)
 |===
 
 
+[[information-needed-to-connect-and-configure-1025-gbe-ports-on-e5700sg-controller]]
 == La información necesaria para conectar y configurar puertos 10/25-GbE en la controladora E5700SG
 
 Los cuatro puertos 10/25-GbE del controlador E5700SG se conectan a la red de grid y la red de cliente de StorageGRID.
@@ -223,6 +226,7 @@ Puerto del switch para el puerto 4 (red Grid)
 |===
 
 
+[[information-needed-to-connect-e5700sg-controller-to-grid-network]]
 == Información necesaria para conectar el controlador E5700SG a Grid Network
 
 Grid Network para StorageGRID es una red necesaria que se utiliza para todo el tráfico interno de StorageGRID. El dispositivo se conecta a la red Grid mediante los puertos 10/25-GbE en la controladora E5700SG.
@@ -295,6 +299,7 @@ Subredes de red de cuadrícula (CIDR)
 |===
 
 
+[[information-needed-to-connect-e5700sg-controller-to-client-network]]
 == Información necesaria para conectar el controlador E5700SG a la red cliente
 
 La red de cliente para StorageGRID es una red opcional que se suele utilizar para proporcionar acceso al protocolo de cliente al grid. El dispositivo se conecta a la red cliente mediante los puertos 10/25-GbE en la controladora E5700SG.
@@ -370,12 +375,14 @@ Dirección IP estática que tiene previsto usar para el nodo de almacenamiento d
 |===
 
 
+[[port-bond-modes]]
 == Modos de enlace de puerto
 
 Cuando link:configuring-network-links.html["configurar enlaces de red"] Para el controlador E5700SG, puede utilizar unión de puertos para los puertos 10/25 GbE que se conectan a la red de grid y la red cliente opcional, y los puertos de gestión de 1 GbE que se conectan a la red de administración opcional. El enlace de puertos ayuda a proteger los datos proporcionando rutas redundantes entre las redes StorageGRID y el dispositivo.
 
 
 
+[[network-bond-modes-for-1025-gbe-ports]]
 === Modos de enlace de red para puertos 10/25-GbE
 
 Los puertos de red 10/25-GbE de la controladora E5700SG admiten el modo de enlace de puerto fijo o el modo de enlace de puerto agregado para las conexiones de red de Grid y de cliente.
@@ -449,6 +456,7 @@ NOTE: Si decide utilizar menos de cuatro puertos, tenga en cuenta que una o más
 
 
 
+[[network-bond-modes-for-1-gbe-management-ports]]
 === Modos de enlace de red para puertos de gestión de 1 GbE
 
 Para los dos puertos de gestión de 1 GbE en la controladora E5700SG, puede elegir el modo de enlace de red independiente o el modo de enlace de red Active-Backup para conectarse a la red opcional Admin Network.

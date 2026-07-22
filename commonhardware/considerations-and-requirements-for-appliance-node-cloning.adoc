@@ -18,6 +18,7 @@ TIP: La clonación de nodos está deshabilitada para los nodos de puerta de enla
 
 
 
+[[hardware-requirements-for-the-replacement-appliance]]
 == Requisitos de hardware para el dispositivo de sustitución
 
 Asegúrese de que el aparato de sustitución cumple los siguientes criterios:
@@ -50,6 +51,7 @@ Póngase en contacto con su representante de ventas de StorageGRID, para obtener
 
 
 
+[[prepare-to-clone-an-appliance-node]]
 == Prepare para clonar un nodo de dispositivo
 
 Debe tener la siguiente información antes de clonar un nodo de dispositivo:
@@ -58,6 +60,7 @@ Debe tener la siguiente información antes de clonar un nodo de dispositivo:
 +
 Las direcciones IP temporales suelen estar en la misma subred que el dispositivo de nodo de origen que se clona y no son necesarias una vez finalizada la clonación. Los dispositivos de origen y destino deben conectarse al nodo de administrador principal de la StorageGRID para establecer una conexión de clonado.
 
+* Si vas a habilitar DHCP en cualquier puerto del nodo de destino que se haya configurado como estático en el nodo de origen, asegúrate de que no haya asignaciones DHCP permanentes para ninguna de las direcciones MAC del nodo de origen. Si no lo haces, podría producirse un conflicto de dirección IP al final del proceso de clonación.
 * Determine qué red se utilizará para clonar tráfico de transferencia de datos que ofrezca el mejor rendimiento de transferencia de datos sin perjudicar el rendimiento de la red de StorageGRID ni la disponibilidad de los datos.
 +
 

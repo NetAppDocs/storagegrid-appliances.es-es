@@ -34,6 +34,7 @@ StorageGRID Grid Manager supervisa el estado del dispositivo y emite alertas cua
 
 
 
+[[step-1-prepare-to-replace-drive]]
 == Paso 1: Preparar la sustitución de la unidad
 
 Para preparar la sustitución de una unidad, compruebe Recovery Guru en SANtricity System Manager y complete los pasos de requisitos previos. A continuación, puede localizar el componente con errores.
@@ -63,6 +64,7 @@ NOTE: Si va a sustituir una unidad de una bandeja que tiene un panel frontal, de
 
 
 
+[[step-2-remove-failed-drive]]
 == Paso 2: Quitar la unidad con error
 
 Quite una unidad con error para reemplazarla por una nueva.
@@ -86,6 +88,7 @@ NOTE: Si quita accidentalmente una unidad activa, espere al menos 30 segundos y,
 
 
 
+[[step-3-install-new-drive]]
 == Paso 3: Instale una nueva unidad
 
 Instale una unidad nueva para reemplazar la que presenta errores.
@@ -108,6 +111,7 @@ NOTE: Según la configuración, es posible que la controladora reconstruya autom
 
 
 
+[[step-4-complete-drive-replacement]]
 == Paso 4: Sustitución completa de la unidad
 
 Complete la sustitución de la unidad para confirmar que la unidad nueva funciona correctamente.

@@ -17,6 +17,7 @@ Opcionalmente, se pueden añadir bandejas de expansión de 60 unidades a ambos d
 
 
 
+[[sg6060-and-sg6060x-components]]
 == Componentes SG6060 y SG6060X
 
 Los dispositivos SG6060 y SG6060X incluyen los componentes siguientes:
@@ -64,12 +65,14 @@ El compartimento DE460C de E-Series es una bandeja 4U que incluye:
 
 
 
+[[sg6060-and-sg6060x-diagrams]]
 == Diagramas SG6060 y SG6060X
 
 Los frentes del SG6060 y del SG6060X son idénticos.
 
 
 
+[[sg6060-or-sg6060x-front-view]]
 === Vista frontal de SG6060 o SG6060X
 
 En esta figura, se muestra el frente de SG6060 o SG6060X, que incluye una controladora de computación 1U y una bandeja 4U que contiene dos controladoras de almacenamiento y 60 unidades en cinco cajones de unidades.
@@ -143,6 +146,7 @@ Identifique el LED
 |===
 
 
+[[sg6060-rear-view]]
 === Vista posterior de SG6060
 
 Esta figura muestra la parte posterior del SG6060, incluidas las controladoras de almacenamiento y computación, los ventiladores y los suministros de alimentación.
@@ -190,6 +194,7 @@ Suministro de alimentación (1 de 2) para la bandeja de controladoras E2860
 |===
 
 
+[[sg6060x-rear-view]]
 === Vista posterior de SG6060X
 
 Esta figura muestra la parte posterior del SG6060X.
@@ -237,6 +242,7 @@ Suministro de alimentación (1 de 2) para la bandeja de controladoras E2860
 |===
 
 
+[[expansion-shelf]]
 === Bandeja de expansión
 
 En esta figura, se muestra la parte posterior de la bandeja de expansión opcional para el SG6060 y SG6060X, incluidos los módulos de entrada/salida (IOM), los ventiladores y los suministros de alimentación. Cada SG6060 se puede instalar con una o dos bandejas de expansión, que se pueden incluir en la instalación inicial o añadir más adelante.
@@ -270,12 +276,14 @@ Fuente de alimentación (1 de 2) para la bandeja de expansión
 |===
 
 
+[[sg6000-controllers]]
 == SG6000 controladores
 
 Cada modelo del dispositivo SG6000 de StorageGRID incluye un controlador de computación SG6000-CN en un compartimento 1U y controladoras de almacenamiento E-Series dúplex en una carcasa 2U o 4U, según el modelo. Revise los diagramas para obtener más información sobre cada tipo de controladora.
 
 
 
+[[sg6000-cn-compute-controller]]
 === Controladora de computación SG6000-CN
 
 * Proporciona recursos de computación para el dispositivo.
@@ -374,6 +382,7 @@ Opciones:
 |===
 
 
+[[sgf6024-ef570-storage-controllers]]
 === SGF6024: Controladores de almacenamiento EF570
 
 * Dos controladoras para admitir conmutación al nodo de respaldo.
@@ -447,6 +456,7 @@ Ethernet de 1 GB (RJ-45)
 |===
 
 
+[[sg6060-and-sg6060x-e2800-storage-controllers]]
 === SG6060 y SG6060X: E2800 controladoras de almacenamiento
 
 * Dos controladoras para admitir conmutación al nodo de respaldo.
@@ -632,6 +642,7 @@ Conecte los puertos con los puertos de expansión de unidades en los IOM de la b
 |===
 
 
+[[sg6060-and-sg6060x-ioms-for-optional-expansion-shelves]]
 === SG6060 y SG6060X: IOM para bandejas de expansión opcionales
 
 La bandeja de expansión contiene dos módulos de I/o (IOM) que se conectan a las controladoras de almacenamiento o a otras bandejas de expansión.

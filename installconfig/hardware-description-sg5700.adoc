@@ -2,7 +2,7 @@
 permalink: installconfig/hardware-description-sg5700.html 
 sidebar: sidebar 
 keywords: sg5700, sg5712, sg5712x, sg5760, sg5760x, storage appliance 
-summary: 'El dispositivo SG5700 StorageGRID es una plataforma informática y de almacenamiento integrada que funciona como nodo de almacenamiento en un grid StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales \(basados en software\).' 
+summary: 'El dispositivo SG5700 StorageGRID es una plataforma informática y de almacenamiento integrada que funciona como nodo de almacenamiento en un grid StorageGRID. El dispositivo se puede utilizar en un entorno de grid híbrido que combina los nodos de almacenamiento del dispositivo y los nodos de almacenamiento virtuales (basados en software).' 
 ---
 = Dispositivos StorageGRID SG5700
 :allow-uri-read: 
@@ -26,6 +26,7 @@ El dispositivo SG5700 está disponible en cuatro modelos: SG5712 y SG5712X, así
 
 
 
+[[sg5700-components]]
 == SG5700 componentes
 
 Los modelos SG5700 incluyen los siguientes componentes:
@@ -77,10 +78,12 @@ El almacenamiento bruto máximo disponible en el dispositivo StorageGRID es fijo
 
 
 
+[[sg5700-diagrams]]
 == SG5700 diagramas
 
 
 
+[[sg5712-front-and-rear-views]]
 === Vistas frontal y trasera de SG5712
 
 Las cifras muestran la parte frontal y posterior del SG5712, un compartimento 2U con capacidad para 12 unidades.
@@ -89,6 +92,7 @@ image::../media/sg5712_front_and_back_views.gif[La parte frontal y posterior del
 
 
 
+[[sg5712-components]]
 === SG5712 componentes
 
 El SG5712 incluye dos controladoras y dos contenedores de alimentación/ventilador.
@@ -122,6 +126,7 @@ Contenedores de alimentación/ventilador
 |===
 
 
+[[sg5712x-front-and-rear-views]]
 === Vistas frontal y trasera de SG5712X
 
 Las cifras muestran la parte frontal y posterior del SG5712X, un compartimento 2U con capacidad para 12 unidades.
@@ -130,6 +135,7 @@ image::../media/sg5712x_front_and_back_views.gif[La parte frontal y posterior de
 
 
 
+[[sg5712x-components]]
 === SG5712X componentes
 
 SG5712X incluye dos controladoras y dos contenedores de alimentación/ventiladores.
@@ -163,6 +169,7 @@ Contenedores de alimentación/ventilador
 |===
 
 
+[[sg5760-front-and-rear-views]]
 === Vistas frontal y trasera de SG5760
 
 Las cifras muestran la parte frontal y posterior del modelo SG5760, un compartimento 4U con capacidad para 60 unidades en 5 cajones de unidades.
@@ -171,6 +178,7 @@ image::../media/sg5760_front_and_back_views.gif[Parte delantera y trasera del di
 
 
 
+[[sg5760-components]]
 === SG5760 componentes
 
 El SG5760 incluye dos controladoras, dos contenedores de ventilador y dos contenedores de alimentación.
@@ -211,6 +219,7 @@ Contenedor de alimentación (1 de 2)
 |===
 
 
+[[sg5760x-front-and-rear-views]]
 === Vistas frontal y trasera de SG5760X
 
 Las cifras muestran la parte frontal y posterior del modelo SG5760X, un compartimento 4U con capacidad para 60 unidades en 5 cajones de unidades.
@@ -219,6 +228,7 @@ image::../media/sg5760x_front_and_back_views.gif[Parte delantera y trasera del d
 
 
 
+[[sg5760x-components]]
 === SG5760X componentes
 
 SG5760X incluye dos controladoras, dos contenedores de ventilador y dos contenedores de alimentación.
@@ -259,6 +269,7 @@ Contenedor de alimentación (1 de 2)
 |===
 
 
+[[sg5700-controllers]]
 == SG5700 controladores
 
 Los modelos SG5712 y SG5712X de 12 unidades, así como los modelos SG5760 y SG5760X de 60 unidades del dispositivo StorageGRID, incluyen una controladora de computación E5700SG y una controladora de almacenamiento E2800 E-Series.
@@ -271,6 +282,7 @@ Las controladoras E2800A y E2800B son idénticas en especificación y funcionami
 
 
 
+[[e5700sg-compute-controller]]
 === Controladora de computación de E5700SG
 
 * Funciona como servidor de computación del dispositivo.
@@ -369,6 +381,7 @@ Opciones:
 |===
 
 
+[[e2800-storage-controller]]
 === Controladora de almacenamiento E2800
 
 Existen dos versiones de la controladora de almacenamiento E2800 que se utilizan en los dispositivos SG5700: E2800A y E2800B. El E2800A no tiene HIC, y el E2800B tiene una HIC de cuatro puertos. Las dos versiones de controlador tienen especificaciones y funciones idénticas a excepción de la ubicación de los puertos de interconexión.

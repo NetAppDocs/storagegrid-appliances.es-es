@@ -15,6 +15,7 @@ Puedes apagar el appliance SG120 o SG1200 y volver a encenderlo para realizar el
 
 
 
+[[shut-down-the-sg120-or-sg1200-appliance]]
 == Apaga el appliance SG120 o SG1200
 
 Apague el dispositivo para realizar las tareas de mantenimiento del hardware.
@@ -60,6 +61,7 @@ Este comando puede tardar hasta 10 minutos en completarse.
 
 
 
+[[power-on-sg120-or-sg1200-and-verify-operation]]
 == Enciende el SG120 o SG1200 y verifica su funcionamiento
 
 Encienda la controladora después de completar el mantenimiento.

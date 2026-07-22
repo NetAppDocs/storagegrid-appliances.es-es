@@ -15,6 +15,7 @@ Antes de reemplazar una unidad en SG5812 o SG5860, revise los requisitos y consi
 
 
 
+[[drive-handling]]
 == Manejo de unidades
 
 Las unidades del aparato son frágiles. La gestión incorrecta de unidades es una causa principal de fallo de unidad.

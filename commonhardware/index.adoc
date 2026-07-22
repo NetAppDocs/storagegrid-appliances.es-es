@@ -15,6 +15,7 @@ Siga estas instrucciones para mantener su sistema StorageGRID.
 
 
 
+[[about-these-instructions]]
 == Acerca de estas instrucciones
 
 En estas instrucciones se describen procedimientos comunes a todos los nodos, como la aplicación de una revisión de software, la recuperación de nodos de grid, la recuperación de un sitio con fallos, la retirada de nodos de grid o de un sitio entero, el mantenimiento de la red, la realización de procedimientos de mantenimiento de middleware y de nivel de host y la realización de procedimientos de nodos de grid.
@@ -24,6 +25,7 @@ NOTE: En estas instrucciones, “Linux” se refiere a una implementación de Re
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 * Debe conocer en gran medida el sistema StorageGRID.
@@ -34,6 +36,7 @@ NOTE: En estas instrucciones, “Linux” se refiere a una implementación de Re
 
 
 
+[[maintenance-procedures-for-appliances]]
 == Procedimientos de mantenimiento para aparatos
 
 Los procedimientos de mantenimiento específicos para cada tipo de dispositivo StorageGRID se encuentran en las secciones de mantenimiento del dispositivo:

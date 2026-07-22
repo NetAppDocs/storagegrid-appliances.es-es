@@ -4,6 +4,7 @@
 
 
 
+[[step-5-move-hic-to-new-controller-if-needed]]
 == Paso 5: Mueva HIC a una nueva controladora, si es necesario
 
 Si la controladora con errores incluye una tarjeta de interfaz del host (HIC), mueva la HIC de la controladora con error a la controladora de reemplazo.

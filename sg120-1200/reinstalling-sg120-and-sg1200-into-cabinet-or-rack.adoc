@@ -25,6 +25,8 @@ CAUTION: No apague el aparato con el interruptor de alimentación.
 
 
 
+[[step-1-remove-sg120-or-sg1200-from-cabinet-or-rack]]
+[[remove-from-rack]]
 == Paso 1: Retirar el SG120 o SG1200 del armario o rack
 
 .Pasos
@@ -51,6 +53,7 @@ NOTE: Si vas a retirar completamente el aparato del armario o bastidor, sigue la
 
 
 
+[[step-2-reinstall-sg120-or-sg1200-into-cabinet-or-rack]]
 == Paso 2: Reinstalar SG120 o SG1200 en el armario o rack
 
 .Pasos

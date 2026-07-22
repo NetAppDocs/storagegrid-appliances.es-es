@@ -34,6 +34,7 @@ Mientras realiza esta tarea, el otro contenedor de alimentación proporciona ali
 
 
 
+[[step-1-prepare-to-replace-power-canister]]
 == Paso 1: Prepararse para sustituir el compartimento de alimentación
 
 Prepare para sustituir un contenedor de alimentación.
@@ -80,6 +81,7 @@ Debe sustituir el contenedor de alimentación que tiene encendido el LED de aten
 
 
 
+[[step-2-remove-failed-power-canister]]
 == Paso 2: Quite el contenedor de alimentación con errores
 
 Quite un contenedor de alimentación con errores para que pueda reemplazarlo por uno nuevo.
@@ -102,6 +104,7 @@ CAUTION: Al extraer un contenedor de alimentación, utilice siempre dos manos pa
 
 
 
+[[step-3-install-new-power-canister]]
 == Paso 3: Instale un nuevo compartimento de alimentación
 
 Instale un compartimento de alimentación nuevo para sustituir el que presenta errores.
@@ -120,6 +123,7 @@ CAUTION: No ejerza una fuerza excesiva al deslizar el contenedor de alimentació
 
 
 
+[[step-4-complete-power-canister-replacement]]
 == Paso 4: Sustitución completa del contenedor de alimentación
 
 Confirme que el contenedor de alimentación nuevo funciona correctamente, recopile datos de soporte y reanude las operaciones normales.

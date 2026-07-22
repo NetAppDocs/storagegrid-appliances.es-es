@@ -26,6 +26,7 @@ Si la red de cliente o administrador no se configuró en el instalador de dispos
 
 
 
+[[change-the-mtu-setting-using-the-change-ip-tool]]
 == Cambie la configuración de MTU mediante la herramienta Cambiar IP
 
 .Antes de empezar
@@ -36,6 +37,7 @@ Acceda a la herramienta Change IP y actualice la configuración de MTU como se d
 
 
 
+[[change-the-mtu-setting-using-maintenance-mode]]
 == Cambie la configuración de MTU con el modo de mantenimiento
 
 Cambie la configuración de MTU mediante el modo de mantenimiento si no puede acceder a estas opciones con la herramienta Cambiar IP.

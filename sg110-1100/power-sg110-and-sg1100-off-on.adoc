@@ -15,6 +15,7 @@ Puede apagar el dispositivo SG110 o SG1100 y volver a encenderlo para realizar t
 
 
 
+[[shut-down-the-sg110-or-sg1100-appliance]]
 == Apague el aparato SG110 o SG1100
 
 Apague el dispositivo para realizar las tareas de mantenimiento del hardware.
@@ -60,6 +61,7 @@ Este comando puede tardar hasta 10 minutos en completarse.
 
 
 
+[[power-on-sg110-or-sg1100-and-verify-operation]]
 == Encienda SG110 o SG1100 y verifique el funcionamiento
 
 Encienda la controladora después de completar el mantenimiento.

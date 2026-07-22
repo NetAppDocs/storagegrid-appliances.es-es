@@ -16,6 +16,7 @@ CAUTION: Envuelva el extremo de la correa de una pulsera ESD alrededor de la mu√
 
 
 
+[[reinstall-cover]]
 == Vuelva a instalar la cubierta
 
 .Antes de empezar

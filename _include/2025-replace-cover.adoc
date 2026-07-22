@@ -11,6 +11,7 @@ image:../media/drw_s2025_cover_replace_ieops-2559.svg["Desbloqueo y extracción 
 
 
 
+[[step-2-reinstall-cover]]
 == Paso 2: reinstalar la cubierta
 
 .Pasos

@@ -2,7 +2,7 @@
 permalink: sg6200/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6260.html 
 sidebar: sidebar 
 keywords: storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
-summary: 'En el caso de las controladoras de almacenamiento que utilicen actualmente SANtricity OS 08.42.20.00 \(11,42\) o una versión posterior, puede usar Grid Manager o el modo de mantenimiento para aplicar una actualización.' 
+summary: 'En el caso de los controladores de almacenamiento que actualmente utilicen SANtricity OS 08.42.20.00 (11.42) o una versión posterior, puedes usar Grid Manager o el modo de mantenimiento para aplicar una actualización.' 
 ---
 = Actualiza SANtricity OS en los controladores de almacenamiento SG6200 usando Grid Manager
 :allow-uri-read: 

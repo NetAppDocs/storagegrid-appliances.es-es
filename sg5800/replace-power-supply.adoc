@@ -43,6 +43,7 @@ NOTE: No mezcle fuentes de alimentación de los diferentes tipos de tensión. Su
 
 
 
+[[step-1-prepare-to-replace-power-supply]]
 == Paso 1: Prepárese para sustituir la fuente de alimentación
 
 Prepárese para sustituir una fuente de alimentación.
@@ -88,6 +89,7 @@ Debe sustituir la fuente de alimentación que tenga encendido el LED de atenció
 
 
 
+[[step-2-remove-failed-power-supply]]
 == Paso 2: Retire la fuente de alimentación defectuosa
 
 Quite una fuente de alimentación con fallos para poder reemplazarla por una nueva.
@@ -114,6 +116,7 @@ CAUTION: Al extraer una fuente de alimentación, utilice siempre dos manos para 
 
 
 
+[[step-3-install-new-power-supply]]
 == Paso 3: Instale una nueva fuente de alimentación
 
 Instale una fuente de alimentación nueva para sustituir la que ha fallado.
@@ -140,6 +143,7 @@ CAUTION: No ejerza demasiada fuerza al deslizar la fuente de alimentación en el
 
 
 
+[[step-4-complete-power-supply-replacement]]
 == Paso 4: Sustitución completa de la fuente de alimentación
 
 Confirme que el nuevo suministro de alimentación funciona correctamente, recopile datos de soporte y reanude las operaciones normales.

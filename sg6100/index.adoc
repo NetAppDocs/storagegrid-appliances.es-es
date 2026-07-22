@@ -27,6 +27,7 @@ En los procedimientos descritos en esta sección se asume que el dispositivo ya 
 
 
 
+[[drive-firmware-upgrade]]
 == Actualización del firmware de la unidad
 
 El firmware de las unidades en el SGF6112 se comprueba automáticamente cada vez que se reinicia el dispositivo. Cuando es necesario, el firmware se actualiza automáticamente a la versión esperada por la versión de StorageGRID actual. En general, las actualizaciones de firmware se producen durante las actualizaciones del software StorageGRID. Todas las actualizaciones de firmware de la unidad necesarias para versiones de StorageGRID existentes se incluirán en las correcciones urgentes. Siga las instrucciones proporcionadas con cada revisión para asegurarse de que la actualización se aplica a todas las unidades que podrían beneficiarse de ella.
@@ -36,6 +37,7 @@ NOTE: No es necesario SANtricity System Manager para mantener el dispositivo SGF
 
 
 
+[[general-maintenance-procedures]]
 == Procedimientos generales de mantenimiento
 
 Consulte link:../commonhardware/index.html["Procedimientos de mantenimiento comunes"] para procedimientos que son los mismos para todos los dispositivos, como aplicar una revisión, recuperar un nodo o sitio y realizar el mantenimiento de la red.

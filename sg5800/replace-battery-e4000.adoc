@@ -31,6 +31,7 @@ Si piensa sustituir una batería con errores, debe tener:
 
 
 
+[[step-1-prepare-to-replace-battery]]
 == Paso 1: Prepárese para reemplazar la batería
 
 Apague la bandeja de controladoras para quitar con seguridad la batería con errores.
@@ -101,6 +102,7 @@ El LED verde de caché activa de la parte posterior de la controladora E4000 est
 
 
 
+[[step-2-remove-e4000-controller-canister]]
 == Paso 2: Quite el compartimento de controladora E4000
 
 Debe quitar el compartimento de controladoras de la bandeja de controladoras para poder quitar la batería.
@@ -125,6 +127,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 
 
 
+[[step-3-install-the-new-battery]]
 == Paso 3: Instale la batería nueva
 
 Debe quitar la batería con errores y sustituirla.
@@ -181,6 +184,7 @@ Asegúrese de que el enchufe se bloquea en la toma de la batería de la placa ba
 
 
 
+[[step-4-reinstall-the-controller-canister]]
 == Paso 4: Vuelva a instalar el compartimento de controladoras
 
 Después de sustituir los componentes en el compartimento de controladoras, vuelva a instalarlo en el chasis.
@@ -213,6 +217,7 @@ La controladora comienza a arrancar tan pronto como se encuentra en el chasis.
 
 
 
+[[step-5-complete-battery-replacement]]
 == Paso 5: Sustitución completa de la batería
 
 Encienda la controladora.

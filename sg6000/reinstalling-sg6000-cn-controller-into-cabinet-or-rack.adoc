@@ -15,6 +15,7 @@ Quite la controladora SG6000-CN de un armario o rack para acceder a la cubierta 
 
 
 
+[[remove-sg6000-cn-controller-from-cabinet-or-rack]]
 == Retire el controlador SG6000-CN del armario o bastidor
 
 Retire el controlador SG6000-CN de un armario o rack para acceder a la cubierta superior o para mover el controlador a una ubicación diferente.
@@ -55,6 +56,7 @@ Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se d
 
 
 
+[[reinstall-sg6000-cn-controller-into-cabinet-or-rack]]
 == Vuelva a instalar el controlador SG6000-CN en el armario o bastidor
 
 Vuelva a instalar la controladora en un armario o rack cuando finalice el mantenimiento del hardware.

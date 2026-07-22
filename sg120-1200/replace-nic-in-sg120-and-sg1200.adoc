@@ -2,7 +2,7 @@
 permalink: sg120-1200/replace-nic-in-sg120-and-sg1200.html 
 sidebar: sidebar 
 keywords: storagegrid, sg120, sg1200, admin node, admin appliance, replacing, replace, NIC, network interface card 
-summary: 'Es posible que tengas que sustituir una tarjeta de interfaz de red (NIC) en el SG120 o SG1200 si no está funcionando de manera óptima o si ha fallado.' 
+summary: 'Es posible que tengas que sustituir una tarjeta de interfaz de red (NIC) en el SG120 o SG1200 si no funciona de forma óptima o si ha fallado.' 
 ---
 = Sustituir NIC en un SG120 o SG1200
 :allow-uri-read: 
@@ -31,10 +31,47 @@ Las tres NIC del dispositivo están en tres conjuntos de elevadores en las sigui
 +
 image::../media/drw_s2025_io_numbers_ieops-2554.svg[ubicaciones de NIC internas en el chasis del dispositivo StorageGRID]
 
++
+[cols="1a,3a,5a"]
+|===
+|  | Nombre del dispositivo o de la pieza | Descripción 
+
+
+ a| 
+1
+ a| 
+NIC 1 en el conjunto de elevador de una ranura
+ a| 
+Puertos de red Ethernet de 10/25 GbE para Grid y Client Networks
+
+
+
+ a| 
+2
+ a| 
+NIC 2 en el conjunto de elevador de una ranura
+ a| 
+Puertos de red Ethernet de 1/10 GbE para la red de administración
+
+
+
+ a| 
+3
+ a| 
+NIC 3 en el conjunto de elevador de una ranura
+ a| 
+Puertos de red Ethernet de 10/25 GbE para Grid y Client Networks
+
+|===
++
+
+NOTE: El dispositivo SG1200 admite puertos de red de alta velocidad y puede tener instaladas tarjetas de red de alta velocidad.
 
 
 
 
+
+[[step-1-remove-the-nic]]
 == Paso 1: quitar la NIC
 
 [role="tabbed-block"]
@@ -79,6 +116,7 @@ image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Extracción de una tarj
 ====
 
 
+[[step-2-reinstall-the-internal-nic]]
 == Paso 2: reinstalar el NIC interno
 
 Instale la NIC de reemplazo en la misma ubicación que la que se quitó.

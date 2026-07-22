@@ -32,6 +32,7 @@ Si piensa sustituir una batería con errores, debe tener:
 
 
 
+[[step-1-prepare-to-replace-battery]]
 == Paso 1: Prepárese para reemplazar la batería
 
 Debe colocar la controladora afectada en estado sin conexión para poder quitar de forma segura la batería con errores. La controladora que no se coloca en estado sin conexión debe estar en línea (en el estado óptimo).
@@ -100,6 +101,7 @@ NOTE: Si accede a System Manager de SANtricity con la controladora que intenta d
 
 
 
+[[step-2-remove-e4000-controller-canister]]
 == Paso 2: Quite el compartimento de controladora E4000
 
 Debe quitar el compartimento de controladoras de la bandeja de controladoras para poder quitar la batería.
@@ -124,6 +126,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 
 
 
+[[step-3-install-the-new-battery]]
 == Paso 3: Instale la batería nueva
 
 Debe quitar la batería con errores y sustituirla.
@@ -180,6 +183,7 @@ Asegúrese de que el enchufe se bloquea en la toma de la batería de la placa ba
 
 
 
+[[step-4-reinstall-the-controller-canister]]
 == Paso 4: Vuelva a instalar el compartimento de controladoras
 
 Después de sustituir los componentes en el compartimento de controladoras, vuelva a instalarlo en el chasis.
@@ -212,6 +216,7 @@ La controladora comienza a arrancar tan pronto como se encuentra en el chasis.
 
 
 
+[[step-5-complete-battery-replacement]]
 == Paso 5: Sustitución completa de la batería
 
 Coloque la controladora en línea.

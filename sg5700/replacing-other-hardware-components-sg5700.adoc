@@ -25,6 +25,7 @@ Para sustituir una unidad, un contenedor de alimentación/ventilador, un contene
 
 
 
+[[sg5712-component-replacement-instructions]]
 == Instrucciones para la sustitución de componentes SG5712
 
 [cols="1a,3a"]
@@ -47,6 +48,7 @@ link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supe
 |===
 
 
+[[sg5760-component-replacement-instructions]]
 == Instrucciones de sustitución de componentes de SG5760
 
 [cols="1a,3a"]

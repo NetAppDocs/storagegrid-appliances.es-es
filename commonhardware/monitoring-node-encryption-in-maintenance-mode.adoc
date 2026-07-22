@@ -2,7 +2,7 @@
 permalink: commonhardware/monitoring-node-encryption-in-maintenance-mode.html 
 sidebar: sidebar 
 keywords: kms, key management server, monitor, monitoring, status, encryption 
-summary: 'Si habilitó el cifrado de nodos para el dispositivo durante la instalación, puede supervisar el estado de cifrado del nodo de cada nodo de dispositivo, incluidos el estado del cifrado del nodo y los detalles del servidor de gestión de claves \(KMS\).' 
+summary: 'Si habilitó el cifrado de nodos para el dispositivo durante la instalación, puede supervisar el estado de cifrado del nodo de cada nodo de dispositivo, incluidos el estado del cifrado del nodo y detalles del servidor de gestión de claves (KMS).' 
 ---
 = Supervisar el cifrado de nodos para un dispositivo StorageGRID en modo de mantenimiento
 :allow-uri-read: 
@@ -59,6 +59,7 @@ El dispositivo puede tardar hasta 20 minutos en reiniciarse y reincorporarse a l
 
 
 
+[[clear-key-management-server-configuration]]
 == Borrar configuración de servidor de gestión de claves
 
 Al borrar la configuración del servidor de gestión de claves (KMS), se deshabilita el cifrado de nodos en el dispositivo. Tras borrar la configuración de KMS, los datos del dispositivo se eliminan de forma permanente y ya no se puede acceder a ellos. Estos datos no se pueden recuperar.

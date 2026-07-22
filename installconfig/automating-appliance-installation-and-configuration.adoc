@@ -31,11 +31,12 @@ Puede automatizar la configuración de lo siguiente:
 
 
 
+[[automation-options]]
 == Opciones de automatización
 
 Para automatizar la instalación y la configuración del dispositivo, use una o varias de las siguientes opciones:
 
-* Genere un archivo JSON que contenga detalles de configuración. Trabaje con su consultor de Servicios Profesionales de NetApp para utilizar el link:https://configbuilder.netapp.com/index.aspx["Herramienta ConfigBuilder de NetApp"^] para realizar estos pasos:
+* Genera un archivo JSON que contenga los detalles de configuración. Colabora con tu asesor de Servicios Profesionales de NetApp para utilizar link:https://configbuilder.netapp.com/Index.aspx["Herramienta ConfigBuilder de NetApp"^] (se requiere iniciar sesión) para completar estos pasos:
 +
 .. Consulte con los Servicios profesionales de NetApp para obtener un número de pedido de venta.
 .. Obtenga el libro de trabajo de ConfigBuilder.
@@ -69,6 +70,8 @@ NOTE: Puede utilizar directamente los scripts Python de automatización de Stora
 
 
 
+[[automate-appliance-configuration-using-storagegrid-appliance-installer]]
+[[automate-with-appliance-installer]]
 == Automatice la configuración del dispositivo con StorageGRID Appliance Installer
 
 Después de generar un archivo JSON, puede automatizar la configuración de uno o varios dispositivos mediante el instalador de dispositivos StorageGRID para cargar el archivo JSON.
@@ -109,6 +112,8 @@ La configuración se aplica al nodo seleccionado.
 
 
 
+[[automate-appliance-installation-and-configuration-using-configure-sga-py-script]]
+[[automate-with-configure-sga-py-script]]
 == Automatice la instalación y configuración del dispositivo con un script configure-sga.py
 
 Si es un usuario avanzado, puede utilizar el `configure-sga.py` Script para automatizar muchas de las tareas de instalación y configuración para los nodos del dispositivo StorageGRID, incluida la instalación y configuración de un nodo de administración principal. Esta secuencia de comandos puede ser útil si tiene un gran número de dispositivos que configurar.

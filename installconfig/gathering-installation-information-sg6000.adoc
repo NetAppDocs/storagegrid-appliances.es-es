@@ -18,6 +18,7 @@ TIP: En lugar de utilizar las tablas, utilice el libro de trabajo proporcionado 
 
 
 
+[[information-needed-to-connect-to-santricity-system-manager-on-storage-controllers]]
 == La información necesaria para conectarse con System Manager de SANtricity en controladoras de almacenamiento
 
 Conecte las dos controladoras de almacenamiento del dispositivo (ya sea las controladoras de la serie E2800 o las controladoras EF570) a la red de gestión que utilizará para System Manager de SANtricity. Los controladores se encuentran en cada dispositivo de la siguiente manera:
@@ -122,6 +123,7 @@ Debe ser:
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-admin-network]]
 == Información necesaria para conectar el controlador SG6000-CN a la red Admin
 
 La red de administración de StorageGRID es una red opcional que se utiliza para la administración y el mantenimiento del sistema. El dispositivo se conecta a la red Admin mediante los siguientes puertos de gestión de 1 GbE en el controlador SG6000-CN.
@@ -204,6 +206,7 @@ Subredes de red de administración (CIDR)
 |===
 
 
+[[information-needed-to-connect-and-configure-1025-gbe-ports-on-sg6000-cn-controller]]
 == Información necesaria para conectar y configurar puertos 10/25-GbE en el controlador SG6000-CN
 
 Los cuatro puertos 10/25-GbE del controlador SG6000-CN se conectan a la red de red StorageGRID y a la red de cliente opcional.
@@ -261,6 +264,7 @@ Puerto de switch para el puerto 4 (Red de red para el modo fijo)
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-grid-network]]
 == Información necesaria para conectar el controlador SG6000-CN a la red Grid
 
 Grid Network para StorageGRID es una red necesaria que se utiliza para todo el tráfico interno de StorageGRID. El dispositivo se conecta a la red Grid mediante los puertos 10/25-GbE del controlador SG6000-CN.
@@ -326,6 +330,7 @@ Subredes de red de cuadrícula (CIDR)
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-client-network]]
 == La información necesaria para conectar el controlador SG6000-CN a la red cliente
 
 La red de cliente para StorageGRID es una red opcional que se suele utilizar para proporcionar acceso al protocolo de cliente al grid. El dispositivo se conecta a la red cliente mediante los puertos 10/25-GbE del controlador SG6000-CN.
@@ -396,6 +401,7 @@ Dirección IP estática que tiene previsto usar para el nodo de almacenamiento d
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-bmc-management-network]]
 == Información necesaria para conectar el controlador SG6000-CN a la red de gestión BMC
 
 Puede acceder a la interfaz del BMC en el controlador SG6000-CN utilizando el siguiente puerto de gestión de 1 GbE. Este puerto admite la gestión remota del hardware de la controladora a través de Ethernet mediante el estándar de interfaz de gestión de plataforma inteligente (IPMI).
@@ -437,12 +443,14 @@ La dirección IP estática que planea usar para el puerto de gestión de BMC
 |===
 
 
+[[port-bond-modes]]
 == Modos de enlace de puerto
 
 Cuando link:configuring-network-links.html["configurar enlaces de red"] Para el controlador SG6000-CN, puede utilizar la unión de puertos para los puertos 10/25 GbE que se conectan a la red de grid y la red cliente opcional, y los puertos de administración de 1 GbE que se conectan a la red de administración opcional. El enlace de puertos ayuda a proteger los datos proporcionando rutas redundantes entre las redes StorageGRID y el dispositivo.
 
 
 
+[[network-bond-modes-for-1025-gbe-ports]]
 === Modos de enlace de red para puertos 10/25-GbE
 
 Los puertos de red de 10/25 GbE del controlador SG6000-CN admiten el modo de enlace de puerto fijo o el modo de enlace de puerto agregado para las conexiones de red de red de Grid y de red de cliente.
@@ -518,6 +526,7 @@ NOTE: Si decide utilizar menos de cuatro puertos, tenga en cuenta que una o más
 
 
 
+[[network-bond-modes-for-1-gbe-management-ports]]
 === Modos de enlace de red para puertos de gestión de 1 GbE
 
 Para los dos puertos de gestión de 1 GbE del controlador SG6000-CN, puede elegir el modo de enlace de red independiente o el modo de enlace de red Active-Backup para conectarse a la red de administración opcional.

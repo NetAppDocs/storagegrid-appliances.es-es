@@ -15,6 +15,7 @@ Retire la cubierta del aparato para acceder a los componentes internos para real
 
 
 
+[[remove-sg100-or-sg1000-appliance-cover]]
 == Retire la cubierta del aparato SG100 o SG1000
 
 Retire la cubierta del aparato para acceder a los componentes internos para realizar tareas de mantenimiento.
@@ -40,6 +41,7 @@ Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se d
 
 
 
+[[reinstall-sg100-or-sg1000-appliance-cover]]
 == Vuelva a instalar la cubierta del aparato SG100 o SG1000
 
 Vuelva a instalar la cubierta del aparato cuando haya finalizado el mantenimiento interno del hardware.

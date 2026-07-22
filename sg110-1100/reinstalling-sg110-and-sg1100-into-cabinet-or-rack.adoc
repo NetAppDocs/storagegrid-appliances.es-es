@@ -15,6 +15,8 @@ Retire el SG110 o SG1100 de un armario o rack para acceder a la cubierta superio
 
 
 
+[[remove-sg110-or-sg1100-from-cabinet-or-rack]]
+[[remove-from-rack]]
 == Quite SG110 o SG1100 del armario o rack
 
 .Antes de empezar
@@ -50,6 +52,7 @@ Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se d
 
 
 
+[[reinstall-sg110-or-sg1100-into-cabinet-or-rack]]
 == Vuelva a instalar SG110 o SG1100 en el armario o rack
 
 .Antes de empezar

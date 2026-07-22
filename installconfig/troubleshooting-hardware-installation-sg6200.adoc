@@ -15,6 +15,7 @@ Si encuentra problemas durante la instalación, es posible que le sea útil revi
 
 
 
+[[view-boot-codesview-boot-up-codes-sgf6212-and-sg6260-only]]
 == [[view-boot-codes]]Ver códigos de arranque (solo SGF6212 y SG6260)
 
 Cuando se enciende el aparato, el BMC registra una serie de códigos de inicio. Puede ver estos códigos en una consola gráfica que está conectada al puerto de gestión del BMC.
@@ -188,6 +189,7 @@ StorageGRID está ejecutando.
 
 
 
+[[view-error-codesview-error-codes-sgf6212-and-sg6260-only]]
 == [[view-error-codes]]Ver códigos de error (solo SGF6212 y SG6260)
 
 Si se produce un error de hardware cuando el dispositivo arranca, el BMC registra un código de error. Según sea necesario, puede ver estos códigos de error mediante el puerto serie del dispositivo y, a continuación, trabajar con el soporte técnico para resolver el problema.
@@ -560,6 +562,8 @@ MRC: ERR_INTERLEAVE_FAILURE
 
 
 
+[[hardware-setup-appears-to-hang]]
+[[hardware-setup-hangs]]
 == La configuración del hardware parece que se bloquea
 
 Es posible que el instalador de dispositivos StorageGRID no esté disponible si los errores de hardware o de cableado impiden que el dispositivo complete el procesamiento de arranque.
@@ -571,10 +575,12 @@ Es posible que el instalador de dispositivos StorageGRID no esté disponible si 
 
 
 
+[[connection-issues]]
 == Problemas de conexión
 
 
 
+[[expansion-shelves-dont-appear-in-appliance-installer-sg6260]]
 === Las bandejas de expansión no aparecen en Appliance Installer (SG6260)
 
 Si ha instalado bandejas de ampliación y no aparecen en el instalador de dispositivos de StorageGRID, debe comprobar que las bandejas se hayan instalado completamente y encendido.
@@ -599,6 +605,7 @@ Si en las páginas del instalador de dispositivos de StorageGRID no se indica qu
 
 
 
+[[unable-to-connect-to-appliance]]
 === No se puede conectar al dispositivo
 
 Si no puede conectarse al dispositivo de almacenamiento, es posible que haya un problema de red o que la instalación de hardware no se haya completado correctamente.

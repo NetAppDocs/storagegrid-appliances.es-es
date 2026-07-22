@@ -15,6 +15,7 @@ Retire la cubierta del aparato para acceder a los componentes internos para real
 
 
 
+[[remove-sg6000-cn-controller-cover]]
 == Retire la cubierta del controlador SG6000-CN
 
 Retire la cubierta del controlador para acceder a los componentes internos para realizar tareas de mantenimiento.
@@ -40,6 +41,7 @@ Después de sustituir la pieza, devuelve la pieza defectuosa a NetApp, como se d
 
 
 
+[[reinstall-sg6000-cn-controller-cover]]
 == Vuelva a instalar la cubierta del controlador SG6000-CN
 
 Vuelva a instalar la cubierta del controlador cuando finalice el mantenimiento interno del hardware.

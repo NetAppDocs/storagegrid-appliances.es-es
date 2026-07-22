@@ -15,6 +15,7 @@ Puede apagar la controladora SG6000-CN y encenderla nuevamente para realizar tar
 
 
 
+[[shut-down-sg6000-cn-controller]]
 == Apague el controlador SG6000-CN
 
 Apague el controlador SG6000-CN para realizar el mantenimiento de hardware.
@@ -83,6 +84,7 @@ image::../media/bmc_power_control_page_controller_off.png[Página de control de 
 
 
 
+[[poweronpower-on-sg6000-cn-controller-and-verify-operation]]
 == [[poweron]]Enciende el controlador SG6000-CN y verifica el funcionamiento
 
 Encienda la controladora después de completar el mantenimiento.

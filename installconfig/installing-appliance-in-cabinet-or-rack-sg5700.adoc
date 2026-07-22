@@ -20,6 +20,7 @@ Instale un conjunto de rieles en el armario o rack y, a continuación, deslice e
 
 
 
+[[install-sg5712]]
 == Instale SG5712
 
 Siga estos pasos para instalar un dispositivo SG5712 en un rack o armario.
@@ -40,6 +41,7 @@ CAUTION: Instale el hardware desde la parte inferior del rack, armario o rack ha
 
 
 
+[[install-sg5760]]
 == Instale SG5760
 
 Siga estos pasos para instalar un dispositivo SG5760 y cualquier bandeja de expansión en un rack o armario.

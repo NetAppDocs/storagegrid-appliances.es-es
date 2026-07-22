@@ -23,6 +23,7 @@ Consulte https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-e
 
 
 
+[[enable-node-encryption]]
 == Habilite el cifrado del nodo
 
 Si habilita el cifrado de nodos, los discos del dispositivo pueden protegerse mediante el cifrado del servidor de gestión de claves seguro (KMS) contra la pérdida física o la eliminación del sitio. Debe seleccionar y habilitar el cifrado de nodos durante la instalación del dispositivo. No puede desactivar el cifrado de nodo después de que se inicie el proceso de cifrado de KMS.
@@ -88,6 +89,7 @@ Puede ver el estado de cifrado de nodo, los detalles de KMS y los certificados e
 
 
 
+[[drive-encryption]]
 == Cifrado de unidades
 
 El cifrado de unidades se gestiona en hardware de unidad de autocifrado (SED) durante los procesos de escritura y lectura. El acceso a los datos de estas unidades está controlado por una clave de acceso definida por el usuario.
@@ -118,6 +120,7 @@ CAUTION: Asegúrese de almacenar la clave de acceso de cifrado de unidades en un
 
 
 
+[[enable-drive-encryption]]
 === Habilite el cifrado de unidades
 
 . Acceda al instalador de dispositivos de StorageGRID.
@@ -156,6 +159,7 @@ Guarde el texto de visualización de la frase de acceso y la frase de contraseñ
 
 
 
+[[view-drive-encryption-status]]
 === Vea el estado de cifrado de unidades
 
 . link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque el dispositivo en modo de mantenimiento"].
@@ -164,6 +168,7 @@ Guarde el texto de visualización de la frase de acceso y la frase de contraseñ
 
 
 
+[[access-an-encrypted-drive]]
 === Acceda a una unidad cifrada
 
 Debe introducir la clave de acceso para acceder a una unidad cifrada después de reemplazar un nodo de computación o después de mover una unidad a un nodo de computación nuevo.
@@ -196,6 +201,7 @@ Los banners de advertencia ya no se mostrarán cuando se desbloqueen las unidade
 
 
 
+[[change-the-drive-encryption-passphrase]]
 === Cambie la clave de acceso de cifrado de la unidad
 
 . Acceda al instalador de dispositivos de StorageGRID.
@@ -227,6 +233,7 @@ CAUTION: Después de configurar una nueva frase de acceso, las unidades cifradas
 
 
 
+[[disable-drive-encryption]]
 === Deshabilite el cifrado de unidades
 
 . Acceda al instalador de dispositivos de StorageGRID.

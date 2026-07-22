@@ -46,6 +46,7 @@ image:../media/manage_drives_tab_details.png["Pestaña Gestionar unidades Detall
 
 
 
+[[turn-locator-light-on-or-off]]
 == Encender o apagar la luz localizadora
 
 Para localizar físicamente una unidad en el dispositivo:
@@ -66,6 +67,7 @@ Se muestra el panel de detalles de la unidad.
 
 
 
+[[logically-replace-drivelogically-replace-drive]]
 == [[lógicamente-replace-drive]]Sustituya lógicamente la unidad
 
 Si se debe reconstruir o reinicializar una unidad del dispositivo de almacenamiento:
@@ -83,6 +85,7 @@ En el panel de detalles de la unidad, el estado de la unidad indica _rebuild_. L
 
 
 
+[[fail-drive]]
 == Hacer que una unidad falle
 
 Para la solución de problemas, puede «conmutar» manualmente una unidad que sospecha que está defectuosa. El sistema se ejecutará sin esa unidad.

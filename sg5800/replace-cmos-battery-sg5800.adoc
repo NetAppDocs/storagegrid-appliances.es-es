@@ -18,6 +18,7 @@ No podrás acceder al Storage Node del appliance cuando reemplaces la batería C
 
 
 
+[[step-1-shut-down-the-sg5800-controller]]
 == Paso 1: apaga el controlador SG5800
 
 .Pasos
@@ -40,6 +41,7 @@ Cuando ha iniciado sesión como root, el símbolo del sistema cambia de `$` para
 
 
 
+[[step-2-remove-the-controller-from-the-appliance]]
 == Paso 2: quita el controlador del aparato
 
 .Pasos
@@ -64,6 +66,7 @@ image::../media/drw_sg5800_open_controller_module_cover_IEOPS-695.svg[Abre la cu
 
 
 
+[[step-3-replace-the-cmos-battery]]
 == Paso 3: reemplaza la batería CMOS
 
 .Pasos
@@ -89,6 +92,7 @@ NOTE: Observa la polaridad de la batería al sacarla del soporte. La batería es
 
 
 
+[[step-4-reinstall-the-controller-into-the-appliance]]
 == Paso 4: vuelve a instalar el controlador en el aparato
 
 .Pasos

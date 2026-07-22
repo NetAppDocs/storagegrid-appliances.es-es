@@ -4,6 +4,7 @@
 
 
 
+[[step-1-remove-the-nic]]
 == Paso 1: quitar la NIC
 
 [role="tabbed-block"]
@@ -48,6 +49,7 @@ image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Extracción de una tarj
 ====
 
 
+[[step-2-reinstall-the-internal-nic]]
 == Paso 2: reinstalar el NIC interno
 
 Instale la NIC de reemplazo en la misma ubicación que la que se quitó.

@@ -32,6 +32,7 @@ CAUTION: *Posible daño en el equipo* -- Si realiza este procedimiento con la al
 
 
 
+[[step-1-prepare-to-replace-fan-canister]]
 == Paso 1: Preparar la sustitución del contenedor de ventilador
 
 Prepare para sustituir un compartimento de ventiladores recogiendo datos de soporte sobre el dispositivo y localizando el componente con errores.
@@ -77,6 +78,7 @@ Debe sustituir el contenedor de ventilador que tiene encendido el LED de atenci�
 
 
 
+[[step-2-remove-failed-fan-canister-and-install-new-one]]
 == Paso 2: Quite el contenedor de ventilador con errores e instale uno nuevo
 
 Quite un contenedor de ventilador con errores para que pueda reemplazarlo por un nuevo.
@@ -96,6 +98,7 @@ Guarde todo el material de embalaje para utilizarlo cuando devuelva el ventilado
 
 
 
+[[step-3-complete-fan-canister-replacement]]
 == Paso 3: Sustitución completa del contenedor de ventilador
 
 Confirme que el contenedor de ventilador nuevo funciona correctamente, recopile datos de soporte y reanude las operaciones normales.

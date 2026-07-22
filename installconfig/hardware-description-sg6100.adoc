@@ -45,10 +45,12 @@ SG6160 ofrece las siguientes funciones de protección de datos:
 
 
 
+[[sg6100-hardware-components]]
 == SG6100 componentes de hardware
 
 
 
+[[sgf6112-appliance]]
 === Dispositivo SGF6112
 
 El dispositivo SGF6112 incluye los siguientes componentes:
@@ -70,6 +72,7 @@ Plataforma de almacenamiento y computación:: Un servidor de una unidad de rack 
 
 
 
+[[sg6160-appliance]]
 === Dispositivo SG6160
 
 El dispositivo SG6160 incluye los siguientes componentes:
@@ -114,10 +117,12 @@ El compartimento DE460C de E-Series es una bandeja 4U que incluye:
 
 
 
+[[sgf6112-and-sg6160-diagrams]]
 == Diagramas SGF6112 y SG6160
 
 
 
+[[sgf6112-front-view]]
 === Vista frontal de SGF6112
 
 En esta figura se muestra el frente de SGF6112 sin el panel frontal. El dispositivo incluye una plataforma de computación y almacenamiento de 1U que contiene 12 unidades SSD.
@@ -126,6 +131,7 @@ image::../media/sgf6112_front_with_ssds.png[Vista frontal de SGF6112]
 
 
 
+[[sgf6112-rear-view]]
 === Vista posterior de SGF6112
 
 Esta figura muestra la parte posterior de SGF6112, incluidos los puertos, los ventiladores y los suministros de alimentación.
@@ -235,6 +241,7 @@ Identifique el LED
 |===
 
 
+[[sg6160-front-view]]
 === Vista frontal de SG6160
 
 En esta figura, se muestra el frente de SG6160, que incluye una controladora de computación de 1U y una bandeja de 4U que contiene dos controladoras de almacenamiento y 60 unidades en cinco cajones de unidades.
@@ -261,6 +268,7 @@ Bandeja de controladoras E4000 con el panel frontal quitado (la bandeja de expan
 |===
 
 
+[[sg6160-rear-view]]
 === Vista posterior de SG6160
 
 En esta figura, se muestra la parte posterior de SG6160, incluidos las controladoras de computación y de almacenamiento, los ventiladores y las fuentes de alimentación.
@@ -308,10 +316,12 @@ Sistema de alimentación (1 de 2) para la bandeja de controladoras E4000
 |===
 
 
+[[sg6100-controllers]]
 == SG6100 controladores
 
 
 
+[[sg6100-cn-compute-controller]]
 === Controladora de computación SG6100-CN
 
 * Proporciona recursos de computación para el dispositivo.
@@ -444,6 +454,7 @@ Identifique el LED
 |===
 
 
+[[sg6160-e4000-storage-controller]]
 === SG6160: Controladora de almacenamiento E4000
 
 * Dos controladoras para admitir conmutación al nodo de respaldo.
@@ -519,6 +530,7 @@ Existen cuatro conexiones a la controladora SG6100-CN (dos de cada E4000).
 |===
 
 
+[[sg6160-ioms-for-optional-expansion-shelves]]
 === SG6160: IOM para bandejas de expansión opcionales
 
 La bandeja de expansión contiene dos módulos de I/o (IOM) que se conectan a las controladoras de almacenamiento o a otras bandejas de expansión.

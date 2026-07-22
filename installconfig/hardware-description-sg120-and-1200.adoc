@@ -2,7 +2,7 @@
 permalink: installconfig/hardware-description-sg120-and-1200.html 
 sidebar: sidebar 
 keywords: storagegrid, sg120, sg1200, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
-summary: 'El dispositivo de servicios StorageGRID SG120 y el dispositivo de servicios SG1200 pueden funcionar como Gateway Node y como Admin Node para proporcionar servicios de equilibrio de carga de alta disponibilidad en un sistema StorageGRID. Ambos dispositivos pueden funcionar como Gateway Nodes y Admin Nodes (primary o non-primary) al mismo tiempo.' 
+summary: 'El dispositivo de servicios StorageGRID SG120 y el dispositivo de servicios SG1200 pueden funcionar como Nodo de puerta de enlace y como Nodo de administración para proporcionar servicios de equilibrio de carga de alta disponibilidad en un sistema StorageGRID. Ambos dispositivos pueden funcionar como Nodos de puerta de enlace y Nodos de administración (primarios o no primarios) al mismo tiempo.' 
 ---
 = Dispositivos StorageGRID SG120 y SG1200
 :allow-uri-read: 
@@ -15,6 +15,7 @@ El dispositivo de servicios StorageGRID SG120 y el dispositivo de servicios SG12
 
 
 
+[[appliance-features]]
 == Funciones de los dispositivos
 
 Los dispositivos SG120 y SG1200 ofrecen las siguientes características:
@@ -22,6 +23,7 @@ Los dispositivos SG120 y SG1200 ofrecen las siguientes características:
 * Funciones del nodo de puerta de enlace o del nodo de administración para un sistema StorageGRID.
 * El instalador de dispositivos StorageGRID para simplificar la puesta en marcha y la configuración de nodos.
 * Cuando se implementa, puede acceder al software StorageGRID desde un nodo de administración existente o desde el software descargado en una unidad local. Para simplificar aún más el proceso de implementación, se incluye una versión reciente del software en el dispositivo durante la fabricación.
+* Un procesador AMD a 3,65 GHz con 16 núcleos (32 hilos)
 * Un controlador de administración en placa base (BMC) para supervisar y diagnosticar parte del hardware del dispositivo.
 * La capacidad de conectarse a las tres redes StorageGRID, incluidas la red de grid, la red de administración y la red de cliente:
 +
@@ -33,6 +35,7 @@ Los dispositivos SG120 y SG1200 ofrecen las siguientes características:
 
 
 
+[[sg120-and-sg1200-diagrams]]
 == Diagramas SG120 y SG1200
 
 Esta figura muestra la parte frontal del SG120 y el SG1200 con el frontal retirado. Desde la parte frontal, los dos appliances son idénticos excepto por el nombre del producto en el frontal.
@@ -76,6 +79,7 @@ Identifique el LED
 |===
 
 
+[[sg120-connectors]]
 == Conectores SG120
 
 Esta figura muestra la parte posterior del SG120, incluyendo los puertos, ventiladores y fuentes de alimentación.
@@ -151,6 +155,7 @@ Opciones:
 |===
 
 
+[[sg1200-connectors]]
 == Conectores SG1200
 
 Esta figura muestra los conectores de la parte posterior del SG1200.
@@ -228,6 +233,7 @@ Opciones:
 |===
 
 
+[[sg120-and-sg1200-applications]]
 == Aplicaciones SG120 y SG1200
 
 Puedes configurar los dispositivos de servicios StorageGRID de las siguientes formas para proporcionar servicios de gateway, así como redundancia de algunos servicios de administración de grid.

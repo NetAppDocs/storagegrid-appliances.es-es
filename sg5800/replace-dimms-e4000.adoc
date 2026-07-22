@@ -41,6 +41,7 @@ NOTE: Es posible que no pueda acceder a SANtricity System Manager mediante Grid 
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Paso 1: Determine si necesita sustituir un DIMM
 
 Verifique el tamaño de la caché de la controladora antes de sustituir los DIMM.
@@ -53,6 +54,7 @@ Verifique el tamaño de la caché de la controladora antes de sustituir los DIMM
 
 
 
+[[step-2-power-down-the-controller-shelf]]
 == Paso 2: Apague la bandeja de controladoras
 
 Apague la controladora para retirar y sustituir los DIMM de forma segura.
@@ -109,6 +111,7 @@ El LED verde de caché activa de la parte posterior de la controladora E4000 est
 
 
 
+[[step-3-remove-controller-canister]]
 == Paso 3: Quite el contenedor de controladora
 
 Quite el compartimento de controladoras del sistema y quite la cubierta del compartimento de controladoras.
@@ -130,6 +133,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra la cub
 
 
 
+[[step-4-replace-the-dimms]]
 == Paso 4: Reemplace los DIMM
 
 Localice el DIMM dentro de la controladora, quítelo y sustitúyalo.
@@ -201,6 +205,7 @@ NOTE: Inspeccione visualmente el módulo DIMM para comprobar que está alineado 
 
 
 
+[[step-5-reinstall-the-controller-canister]]
 == Paso 5: Vuelva a instalar el compartimento de controladoras
 
 Vuelva a instalar el compartimento de controladoras en el chasis.
@@ -234,6 +239,7 @@ La controladora comienza a arrancar tan pronto como se encuentra en el chasis.
 
 
 
+[[step-6-complete-dimms-replacement]]
 == Paso 6: Complete el reemplazo de DIMM
 
 Coloque la controladora en línea, recoja datos de soporte y reanude operaciones.

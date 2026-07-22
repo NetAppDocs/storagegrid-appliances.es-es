@@ -1,7 +1,7 @@
 ---
 permalink: installconfig/gathering-installation-information-sg5800.html 
 sidebar: sidebar 
-keywords: storagegrid, sg5800, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10/25-gbe, 10/25 gbe, SG5800, independent, active-backup, active backup, 1-gbe, 1 gbe 
+keywords: storagegrid, sg5800, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10-gbe, 10 gbe, 25-gbe, 25 gbe, SG5800, independent, active-backup, active backup, 1-gbe, 1 gbe 
 summary: En las tablas, registre la información necesaria para cada red que conecte al dispositivo. Estos valores son necesarios para instalar y configurar el hardware. 
 ---
 = Recopila información de red para el SG5800
@@ -18,6 +18,7 @@ TIP: En lugar de utilizar las tablas, utilice el libro de trabajo proporcionado 
 
 
 
+[[information-needed-to-connect-to-santricity-system-manager-on-e4000-controller]]
 == Información necesaria para conectarse a SANtricity System Manager en la controladora E4000
 
 Usará System Manager de SANtricity para conectar la controladora serie E4000 a la red de gestión.
@@ -90,6 +91,7 @@ Para IPv6:
 |===
 
 
+[[information-needed-to-connect-sg5800-controller-to-admin-network]]
 == La información necesaria para conectar el controlador SG5800 a la red de administración
 
 La red de administración de StorageGRID es una red opcional que se utiliza para la administración y el mantenimiento del sistema. El dispositivo se conecta a la red de administración mediante el puerto de gestión 1 GbE en la controladora SG5800.
@@ -145,6 +147,7 @@ Subredes de red de administración (CIDR)
 |===
 
 
+[[information-needed-to-connect-and-configure-1025-gbe-ports-on-sg5800-controller]]
 == Información necesaria para conectar y configurar puertos 10/25 GbE en el controlador SG5800
 
 Los cuatro puertos 10/25 GbE del controlador SG5800 se conectan a la red de grid y la red de cliente de StorageGRID.
@@ -205,6 +208,7 @@ Puerto del switch para el puerto 4 (red Grid)
 |===
 
 
+[[information-needed-to-connect-sg5800-controller-to-grid-network]]
 == Información necesaria para conectar el controlador SG5800 a la red de red
 
 Grid Network para StorageGRID es una red necesaria que se utiliza para todo el tráfico interno de StorageGRID. El dispositivo se conecta a la red Grid usando los puertos 10/25 GbE de la controladora SG5800.
@@ -275,6 +279,7 @@ Subredes de red de cuadrícula (CIDR)
 |===
 
 
+[[information-needed-to-connect-sg5800-controller-to-client-network]]
 == Información necesaria para conectar el controlador SG5800 a la red cliente
 
 La red de cliente para StorageGRID es una red opcional que se suele utilizar para proporcionar acceso al protocolo de cliente al grid. El dispositivo se conecta a la red cliente mediante los puertos 10/25 GbE de la controladora SG5800.
@@ -350,12 +355,14 @@ Dirección IP estática que tiene previsto usar para el nodo de almacenamiento d
 |===
 
 
+[[port-bond-modes]]
 == Modos de enlace de puerto
 
 Cuando link:configuring-network-links.html["configurar enlaces de red"] Para el controlador SG5800, puede utilizar la vinculación de puertos para los puertos 10/25-GbE que se conectan a la red de grid y a la red cliente opcional. El enlace de puertos ayuda a proteger los datos proporcionando rutas redundantes entre las redes StorageGRID y el dispositivo. Los puertos de red 10/25 GbE en la controladora SG5800 admiten el modo de enlace de puerto fijo o el modo de unión de puerto agregado para las conexiones red de grid y red de cliente.
 
 
 
+[[fixed-port-bond-mode]]
 === Modo de enlace de puerto fijo
 
 El modo fijo es la configuración predeterminada para los puertos de red de 10/25-GbE.
@@ -391,6 +398,7 @@ NOTE: Si no necesita conexiones redundantes, puede utilizar solo un puerto para 
 
 
 
+[[aggregate-port-bond-mode]]
 === Modo de enlace de puerto agregado
 
 El modo de enlace de puerto de agregado aumenta de forma significativa las mejoras en cada red StorageGRID y proporciona rutas de conmutación al nodo de respaldo adicionales.
