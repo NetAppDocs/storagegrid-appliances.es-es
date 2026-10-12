@@ -67,7 +67,7 @@ Guarde los materiales de embalaje que se van a utilizar durante el envío del co
 [[step-2-take-the-controller-offline]]
 == Paso 2: Desconecte la controladora
 
-Prepare para extraer la controladora que ha fallado y desconectarla. Puede usar SANtricity System Manager para realizar estos pasos.
+Prepárate para retirar el controlador averiado y desconectarlo. Puedes usar SANtricity System Manager para llevar a cabo estos pasos.
 
 .Pasos
 . Confirmar que el número de pieza de repuesto de la controladora con errores es el mismo que el número de pieza de FRU de la controladora de reemplazo.

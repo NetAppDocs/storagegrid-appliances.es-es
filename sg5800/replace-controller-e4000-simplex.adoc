@@ -154,6 +154,7 @@ CAUTION: Para evitar un rendimiento degradado, no gire, pliegue, pellizque ni pe
 
 El controlador de repuesto puede venir con las piezas preinstaladas. Determine qué piezas deben transferirse al compartimento de la controladora de reemplazo.
 
+.Pasos
 . Coloque el controlador de repuesto en una superficie plana y libre de estática con la cubierta extraíble hacia arriba.
 . Abra la cubierta presionando los botones azules en los lados del contenedor del controlador para liberar la cubierta y luego gire la cubierta hacia arriba y hacia afuera del contenedor del controlador.
 . Determine si la controladora de reemplazo contiene una batería y/o DIMM. Si es así, vuelva a instalar la cubierta del controlador y vaya a. <<step8_replace_controller,Paso 8: Reemplace el controlador>>. De lo contrario:

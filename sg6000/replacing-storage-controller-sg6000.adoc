@@ -118,12 +118,10 @@ La tarjeta de interfaz del host (HIC) de 4 puertos. Esta tarjeta se debe mover a
 [[step-2-take-the-controller-offline]]
 == Paso 2: Desconecte la controladora
 
-Prepare para extraer la controladora que ha fallado y desconectarla.
+Prepárate para retirar el controlador averiado y desconectarlo. Usa SANtricity System Manager para llevar a cabo estos pasos.
 
 .Pasos
-. Prepárese para quitar el controlador. SANtricity System Manager se utiliza para realizar estos pasos.
-+
-.. Confirmar que el número de pieza de repuesto de la controladora con errores es el mismo que el número de pieza de FRU de la controladora de reemplazo.
+. Confirmar que el número de pieza de repuesto de la controladora con errores es el mismo que el número de pieza de FRU de la controladora de reemplazo.
 +
 Cuando una controladora tiene un error y se debe sustituir, el número de pieza de repuesto se muestra en el área Detalles de Recovery Guru. Si necesita encontrar este número manualmente, puede buscar en la ficha *base* del controlador.
 
@@ -131,19 +129,16 @@ Cuando una controladora tiene un error y se debe sustituir, el número de pieza 
 
 CAUTION: *Posible pérdida de acceso a los datos &#8212;* Si los dos números de pieza no son los mismos, no intente este procedimiento.
 
-.. Realice un backup de la base de datos de configuración.
+. Realice un backup de la base de datos de configuración.
 +
 Si se produce un problema al quitar una controladora, puede usar el archivo guardado para restaurar la configuración.
 
-.. Recopile datos de soporte del dispositivo.
+. Recopile datos de soporte del dispositivo.
 +
 
 NOTE: La recogida de datos de soporte antes y después de sustituir un componente, garantiza que pueda enviar un conjunto de registros completo al soporte técnico si el reemplazo no resuelve el problema.
 
-.. Cambie la controladora que desea sustituir sin conexión.
-
-
-. Apague la bandeja de controladoras.
+. Cambie la controladora que desea sustituir sin conexión.
 
 
 
